@@ -1,0 +1,31 @@
+name: objc_appkit
+description: Full Objective-C bindings for AppKit.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  code_assets: ^1.0.0
+  hooks: ^1.0.0
+  logging: ^1.3.0
+  native_toolchain_c: ^0.17.4
+  flutter:
+    sdk: flutter
+  ffi: ^2.2.0
+  objective_c:
+    path: ../../ffigen/pkgs/objective_c
+
+dev_dependencies:
+  ffigen:
+    path: ../../ffigen/pkgs/ffigen
+  lints: ^6.0.0
+
+dependency_overrides:
+  code_assets:
+    path: ../../ffigen/pkgs/code_assets
+  hooks:
+    path: ../../ffigen/pkgs/hooks
+  native_toolchain_c:
+    path: ../../ffigen/pkgs/native_toolchain_c

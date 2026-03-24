@@ -1,0 +1,4 @@
+[submodule "ffigen"]
+	path = ffigen
+	url = https://github.com/DjDeveloperr/native.git
+	branch = objc-interop

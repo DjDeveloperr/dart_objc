@@ -1,0 +1,26 @@
+name: flutter_objc_appkit_embed
+description: "Flutter Darwin test app embedding Dart-built AppKit and UIKit host views."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  ffi: ^2.1.4
+  flutter:
+    sdk: flutter
+  objc_appkit:
+    path: ../../packages/objc-appkit
+  objc_uikit:
+    path: ../../packages/objc-uikit
+  objective_c:
+    path: ../../ffigen/pkgs/objective_c
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

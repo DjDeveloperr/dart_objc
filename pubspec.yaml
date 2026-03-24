@@ -1,0 +1,33 @@
+name: objc_test
+description: A sample command-line application.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.11.1
+
+# Add regular dependencies here.
+dependencies:
+  ffi: ^2.2.0
+  objective_c: ^9.3.0
+  objc_appkit:
+    path: packages/objc-appkit
+  objc_foundation:
+    path: packages/objc-foundation
+  objc_metal:
+    path: packages/objc-metal
+  objc_metalkit:
+    path: packages/objc-metalkit
+  path: ^1.9.0
+
+dependency_overrides:
+  ffi:
+    path: ffigen/pkgs/ffi
+  objective_c:
+    path: ffigen/pkgs/objective_c
+
+dev_dependencies:
+  ffigen:
+    path: ffigen/pkgs/ffigen
+  lints: ^6.0.0
+  test: ^1.25.6

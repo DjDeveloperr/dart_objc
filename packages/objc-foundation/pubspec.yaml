@@ -1,0 +1,17 @@
+name: objc_foundation
+description: Full Objective-C bindings for Foundation.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  ffi: ^2.2.0
+  objective_c:
+    path: ../../ffigen/pkgs/objective_c
+
+dev_dependencies:
+  ffigen:
+    path: ../../ffigen/pkgs/ffigen
+  lints: ^6.0.0

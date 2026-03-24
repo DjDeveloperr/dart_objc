@@ -1,0 +1,25 @@
+# Dart / Flutter
+.dart_tool/
+**/.dart_tool/
+build/
+**/build/
+.build/
+**/.build/
+
+# Xcode / CocoaPods
+DerivedData/
+**/DerivedData/
+Pods/
+**/Pods/
+**/.idea/
+**/*.iml
+**/Flutter/Generated.xcconfig
+**/Flutter/flutter_export_environment.sh
+**/GeneratedPluginRegistrant.*
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Local package lockfiles
+packages/**/pubspec.lock
