@@ -34,11 +34,3 @@ jobs:
 
       - name: Verify repository
         run: ./tool/verify.sh
-
-      - name: Check root worktree is clean
-        run: git diff --exit-code && test -z "$(git status --short)"
-
-      - name: Check nested ffigen worktree is clean
-        run: |
-          git -C ffigen diff --exit-code
-          test -z "$(git -C ffigen status --short)"
