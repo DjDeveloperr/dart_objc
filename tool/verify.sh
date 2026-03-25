@@ -54,7 +54,7 @@ dart analyze "${analysis_paths[@]}"
 echo "==> analyze Flutter example surface"
 (
   cd examples/flutter
-  dart analyze lib
+  flutter analyze lib
 )
 
 echo "==> compile embedded Dart kernel"
