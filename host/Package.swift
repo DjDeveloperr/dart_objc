@@ -5,6 +5,7 @@ import PackageDescription
 let env = ProcessInfo.processInfo.environment
 let includeCandidates: [String] = [
     env["DART_SDK_INCLUDE"],
+    env["FLUTTER_ROOT"].map { "\($0)/bin/cache/dart-sdk/include" },
     "/opt/homebrew/opt/dart-sdk/libexec/include",
     "/usr/local/opt/dart-sdk/libexec/include",
 ].compactMap { $0 }

@@ -7,12 +7,54 @@ cd "$ROOT"
 SKIP_BOOTSTRAP=${SKIP_BOOTSTRAP:-0}
 SKIP_IOS=${SKIP_IOS:-0}
 
+find_dart_sdk_root() {
+  local dart_bin dart_real target bin_dir repo_root
+  dart_bin=${DART_BIN:-$(command -v dart || true)}
+  if [[ -z "$dart_bin" ]]; then
+    echo "dart not found on PATH" >&2
+    return 1
+  fi
+
+  if [[ -L "$dart_bin" ]]; then
+    target=$(readlink "$dart_bin")
+    if [[ "$target" = /* ]]; then
+      dart_real="$target"
+    else
+      dart_real="$(cd "$(dirname "$dart_bin")" && cd "$(dirname "$target")" && pwd)/$(basename "$target")"
+    fi
+  else
+    dart_real="$dart_bin"
+  fi
+
+  bin_dir=$(cd "$(dirname "$dart_real")" && pwd)
+  repo_root=$(cd "$bin_dir/.." && pwd)
+
+  local candidates=(
+    "$repo_root"
+    "$repo_root/libexec"
+    "$repo_root/bin/cache/dart-sdk"
+    "$bin_dir/../cache/dart-sdk"
+  )
+  local candidate
+  for candidate in "${candidates[@]}"; do
+    if [[ -f "$candidate/include/dart_api.h" && -x "$candidate/bin/dartvm" ]]; then
+      echo "$candidate"
+      return 0
+    fi
+  done
+
+  echo "$repo_root"
+}
+
 if [[ "$SKIP_BOOTSTRAP" != "1" ]]; then
   ./tool/bootstrap.sh
 fi
 
 echo "==> verify host embedder prerequisites"
 ./host/check_embedder.sh
+SDK_ROOT=$(find_dart_sdk_root)
+export DART_SDK_INCLUDE="${DART_SDK_INCLUDE:-$SDK_ROOT/include}"
+export DART_VM_BIN="${DART_VM_BIN:-$SDK_ROOT/bin/dartvm}"
 
 echo "==> verify Objective-C runtime/generator tests"
 ffigen_pre_test_status=$(git -C "$ROOT/ffigen" status --porcelain)
