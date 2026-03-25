@@ -12,27 +12,6 @@ const _kContentTopPadding = 28.0;
 const _kContentBottomPadding = 24.0;
 const _kDemoSurfaceColor = Color(0xFFF6F2EB);
 
-UIColor _uiKitDemoTintColor() => UIColor.colorWithRedGreenBlueAlpha(
-  31 / 255,
-  green: 111 / 255,
-  blue: 84 / 255,
-  alpha: 1,
-);
-
-UIColor _uiKitDemoMutedTintColor() => UIColor.colorWithRedGreenBlueAlpha(
-  104 / 255,
-  green: 112 / 255,
-  blue: 108 / 255,
-  alpha: 1,
-);
-
-UIColor _uiKitDemoHairlineColor() => UIColor.colorWithRedGreenBlueAlpha(
-  31 / 255,
-  green: 111 / 255,
-  blue: 84 / 255,
-  alpha: 0.16,
-);
-
 class ObjcUiKitTabShell extends StatefulWidget {
   const ObjcUiKitTabShell({super.key});
 
@@ -602,13 +581,10 @@ final class ObjcUiKitTabBarScene {
       UIBlurEffectStyle.UIBlurEffectStyleSystemChromeMaterialLight,
     );
     appearance.backgroundColor = UIColor.getClearColor();
-    appearance.shadowColor = _uiKitDemoHairlineColor();
     tabBar.backgroundColor = UIColor.getClearColor();
     tabBar.isOpaque = false;
     tabBar.isTranslucent = true;
     tabBar.clipsToBounds = false;
-    tabBar.tintColor = _uiKitDemoTintColor();
-    tabBar.unselectedItemTintColor = _uiKitDemoMutedTintColor();
     tabBar.itemPositioning =
         UITabBarItemPositioning.UITabBarItemPositioningFill;
     tabBar.standardAppearance = appearance;
