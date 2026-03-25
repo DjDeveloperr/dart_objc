@@ -35,7 +35,6 @@ analysis_paths=(
   bin
   lib
   tool
-  examples/flutter/lib
   packages/objc-appkit/lib/objc_appkit.dart
   packages/objc-appkit/lib/flutter_views.dart
   packages/objc-appkit/lib/src/flutter_views.dart
@@ -51,6 +50,12 @@ analysis_paths=(
   packages/objc-uikit/hook/build.dart
 )
 dart analyze "${analysis_paths[@]}"
+
+echo "==> analyze Flutter example surface"
+(
+  cd examples/flutter
+  dart analyze lib
+)
 
 echo "==> compile embedded Dart kernel"
 mkdir -p host/build

@@ -336,7 +336,12 @@ include: package:lints/recommended.yaml
 ''';
 
 String _libraryExports(_FrameworkSpec spec) {
-  return "export 'src/${spec.generatedBase}_bindings.dart';\n";
+  final buffer = StringBuffer()
+    ..writeln("export 'src/${spec.generatedBase}_bindings.dart';");
+  if (spec.key == 'appkit') {
+    buffer.writeln("export 'src/target_action.dart';");
+  }
+  return buffer.toString();
 }
 
 String _flutterViewsLibraryExports() => "export 'src/flutter_views.dart';\n";

@@ -515,11 +515,11 @@ extension type MTKMesh._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static MTKMesh allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static MTKMesh allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_MTKMesh,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return MTKMesh.fromPointer($ret, retain: false, release: true);
   }
@@ -696,11 +696,11 @@ extension type MTKMeshBuffer._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static MTKMeshBuffer allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static MTKMeshBuffer allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_MTKMeshBuffer,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return MTKMeshBuffer.fromPointer($ret, retain: false, release: true);
   }
@@ -892,11 +892,11 @@ extension type MTKMeshBufferAllocator._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static MTKMeshBufferAllocator allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static MTKMeshBufferAllocator allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_MTKMeshBufferAllocator,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return MTKMeshBufferAllocator.fromPointer(
       $ret,
@@ -1117,11 +1117,11 @@ extension type MTKSubmesh._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static MTKSubmesh allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static MTKSubmesh allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_MTKSubmesh,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return MTKSubmesh.fromPointer($ret, retain: false, release: true);
   }
@@ -1257,11 +1257,11 @@ extension type MTKTextureLoader._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static MTKTextureLoader allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static MTKTextureLoader allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_MTKTextureLoader,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return MTKTextureLoader.fromPointer($ret, retain: false, release: true);
   }
@@ -1769,11 +1769,11 @@ extension type MTKView._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static MTKView allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static MTKView allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_MTKView,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return MTKView.fromPointer($ret, retain: false, release: true);
   }
@@ -4118,11 +4118,11 @@ extension type NSResponder._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static NSResponder allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static NSResponder allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_NSResponder,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return NSResponder.fromPointer($ret, retain: false, release: true);
   }
@@ -5018,11 +5018,11 @@ extension type NSView._(objc.ObjCObject object$)
   }
 
   /// allocWithZone:
-  static NSView allocWithZone(ffi.Pointer<objc.NSZone> zone$1) {
+  static NSView allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_NSView,
       _sel_allocWithZone_,
-      zone$1,
+      zone,
     );
     return NSView.fromPointer($ret, retain: false, release: true);
   }

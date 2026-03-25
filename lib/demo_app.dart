@@ -412,7 +412,7 @@ NSButton _buttonWithTitleAction(
 }) {
   return NSButton.buttonWithTitleTargetAction(
     title.toNSString(),
-    target$1: target,
-    action$1: action,
+    target: target,
+    action: action,
   );
 }
