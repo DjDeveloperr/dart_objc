@@ -6,7 +6,6 @@ import 'package:flutter/widgets.dart';
 import 'package:objective_c/objective_c.dart' as objc;
 
 import 'flutter_views_bindings.dart' as c;
-import 'appkit_bindings.dart';
 
 typedef _ObjectPtr = ffi.Pointer<objc.ObjCObjectImpl>;
 typedef _SelectorPtr = ffi.Pointer<objc.ObjCSelector>;
@@ -55,7 +54,7 @@ int transferPlatformView(ffi.Pointer<objc.ObjCObjectImpl> viewPointer) {
   return token;
 }
 
-int transferPlatformViewObject(NSView view) =>
+int transferPlatformViewObject(objc.ObjCObject view) =>
     transferPlatformView(view.ref.pointer);
 
 objc.ObjCObject _newTransferredPlatformViewFactory() {
@@ -120,7 +119,7 @@ objc.ObjCObject _sendClassObject(String className, _SelectorPtr selector) =>
       release: true,
     );
 
-int _newTransferToken(NSView view) => transferPlatformViewObject(view);
+int _newTransferToken(objc.ObjCObject view) => transferPlatformViewObject(view);
 
 class ObjCAppKitHostView extends StatefulWidget {
   const ObjCAppKitHostView({
@@ -132,7 +131,7 @@ class ObjCAppKitHostView extends StatefulWidget {
   });
 
   final String viewType;
-  final NSView view;
+  final objc.ObjCObject view;
   final TextDirection layoutDirection;
   final MessageCodec<Object?> creationParamsCodec;
 
