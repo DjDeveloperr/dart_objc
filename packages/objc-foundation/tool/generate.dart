@@ -1,9 +1,9 @@
 import 'dart:io';
 
-Future<void> main() async {
+Future<void> main(List<String> args) async {
   final result = await Process.run(
     'dart',
-    ['run', '../../tool/gen_objc_packages.dart', 'foundation'],
+    ['run', '../../tool/gen_objc_packages.dart', ...args, 'foundation'],
     runInShell: true,
   );
   stdout.write(result.stdout);

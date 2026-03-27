@@ -11,6 +11,12 @@ From the repository root:
 dart run tool/gen_objc_packages.dart metalkit
 ```
 
+To generate the smaller tooling-focused profile instead:
+
+```bash
+dart run tool/gen_objc_packages.dart --profile lean metalkit
+```
+
 To regenerate all packages used by the demos:
 
 ```bash

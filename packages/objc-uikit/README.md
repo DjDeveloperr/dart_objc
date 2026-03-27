@@ -18,6 +18,12 @@ From the repository root:
 dart run tool/gen_objc_packages.dart uikit
 ```
 
+To generate the smaller tooling-focused profile instead:
+
+```bash
+dart run tool/gen_objc_packages.dart --profile lean uikit
+```
+
 To regenerate all packages used by the demos:
 
 ```bash
