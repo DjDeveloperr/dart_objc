@@ -1,14 +1,53 @@
+// ignore_for_file: depend_on_referenced_packages, deprecated_member_use
+
 import 'dart:io';
 
 import 'package:ffigen/ffigen.dart';
+import 'package:ffigen/src/config_provider/spec_utils.dart' as spec_utils;
+import 'package:logging/logging.dart';
 
 enum _GenerationProfile { full, lean }
+enum _GenerationLayout { monolith, split }
+enum _SplitRootSurface { umbrella, coreOnly }
 
 final class _ResolvedInvocation {
-  const _ResolvedInvocation({required this.targets, required this.profile});
+  const _ResolvedInvocation({
+    required this.targets,
+    required this.profile,
+    required this.layout,
+    required this.splitRootSurface,
+  });
 
   final List<String> targets;
   final _GenerationProfile profile;
+  final _GenerationLayout layout;
+  final _SplitRootSurface splitRootSurface;
+}
+
+final class _SplitUnit {
+  const _SplitUnit({
+    required this.key,
+    required this.libraryStem,
+    required this.includeDeclaration,
+  });
+
+  final String key;
+  final String libraryStem;
+  final bool Function(Declaration declaration) includeDeclaration;
+}
+
+final class _SplitPackageSpec {
+  const _SplitPackageSpec({
+    required this.packageDir,
+    required this.packageName,
+    required this.rootUnitKey,
+    required this.units,
+  });
+
+  final String packageDir;
+  final String packageName;
+  final String rootUnitKey;
+  final List<_SplitUnit> units;
 }
 
 final _frameworks = <String, _FrameworkSpec>{
@@ -89,6 +128,27 @@ final _frameworks = <String, _FrameworkSpec>{
   ),
 };
 
+final _splitPackages = <String, _SplitPackageSpec>{
+  'appkit': const _SplitPackageSpec(
+    packageDir: 'objc-appkit-split',
+    packageName: 'objc_appkit_split',
+    rootUnitKey: 'core',
+    units: _appkitSplitUnits,
+  ),
+  'metal': const _SplitPackageSpec(
+    packageDir: 'objc-metal-split',
+    packageName: 'objc_metal_split',
+    rootUnitKey: 'core',
+    units: _metalSplitUnits,
+  ),
+  'uikit': const _SplitPackageSpec(
+    packageDir: 'objc-uikit-split',
+    packageName: 'objc_uikit_split',
+    rootUnitKey: 'core',
+    units: _uikitSplitUnits,
+  ),
+};
+
 Future<void> main(List<String> args) async {
   final invocation = _resolveInvocation(args);
   final rootDir = Directory.current.absolute;
@@ -98,22 +158,100 @@ Future<void> main(List<String> args) async {
   for (final key in invocation.targets) {
     final spec = _frameworks[key]!;
     final sdkPath = _sdkPathFor(spec.sdk);
-    final pkgDir = Directory('${packagesDir.path}/${spec.packageDir}');
-    await _scaffoldPackage(spec, pkgDir);
-    _generateBindings(spec, pkgDir, sdkPath, invocation.profile);
-    stdout.writeln('Generated ${spec.packageName} at ${pkgDir.path}');
+    final packageDirName = _packageDirFor(spec, invocation.layout);
+    final packageName = _packageNameFor(spec, invocation.layout);
+    final pkgDir = Directory('${packagesDir.path}/$packageDirName');
+    if (invocation.layout == _GenerationLayout.split && pkgDir.existsSync()) {
+      _cleanSplitPackageOutputs(spec, pkgDir);
+    }
+    await _scaffoldPackage(
+      spec,
+      pkgDir,
+      packageName: packageName,
+      layout: invocation.layout,
+    );
+    _generateBindings(
+      spec,
+      pkgDir,
+      sdkPath,
+      invocation.profile,
+      invocation.layout,
+      invocation.splitRootSurface,
+      packageName: packageName,
+    );
+    stdout.writeln('Generated $packageName at ${pkgDir.path}');
   }
+}
+
+void _cleanSplitPackageOutputs(_FrameworkSpec spec, Directory pkgDir) {
+  final libDir = Directory('${pkgDir.path}/lib');
+  if (libDir.existsSync()) {
+    for (final entity in libDir.listSync(followLinks: false)) {
+      if (entity is File && entity.path.endsWith('.dart')) {
+        entity.deleteSync();
+      }
+    }
+  }
+
+  final srcDir = Directory('${pkgDir.path}/lib/src');
+  if (srcDir.existsSync()) {
+    for (final entity in srcDir.listSync(followLinks: false)) {
+      if (entity is! File) continue;
+      final name = entity.uri.pathSegments.last;
+      final isGeneratedBinding = name.startsWith('${spec.generatedBase}_') &&
+          (name.endsWith('_bindings.dart') || name.endsWith('_symbols.yaml'));
+      if (isGeneratedBinding) {
+        entity.deleteSync();
+      }
+    }
+  }
+
+  final nativeDir = Directory('${pkgDir.path}/native');
+  if (nativeDir.existsSync()) {
+    for (final entity in nativeDir.listSync(followLinks: false)) {
+      if (entity is! File) continue;
+      final name = entity.uri.pathSegments.last;
+      final isGeneratedObjc = name.startsWith('${spec.generatedBase}_') &&
+          name.endsWith('_bindings.m');
+      if (isGeneratedObjc) {
+        entity.deleteSync();
+      }
+    }
+  }
+}
+
+String _packageDirFor(_FrameworkSpec spec, _GenerationLayout layout) {
+  if (layout == _GenerationLayout.split) {
+    final splitSpec = _splitPackages[spec.key];
+    if (splitSpec != null) {
+      return splitSpec.packageDir;
+    }
+  }
+  return spec.packageDir;
+}
+
+String _packageNameFor(_FrameworkSpec spec, _GenerationLayout layout) {
+  if (layout == _GenerationLayout.split) {
+    final splitSpec = _splitPackages[spec.key];
+    if (splitSpec != null) {
+      return splitSpec.packageName;
+    }
+  }
+  return spec.packageName;
 }
 
 _ResolvedInvocation _resolveInvocation(List<String> args) {
   var profile = _GenerationProfile.full;
+  var layout = _GenerationLayout.monolith;
+  var splitRootSurface = _SplitRootSurface.coreOnly;
   final targets = <String>[];
 
   for (var i = 0; i < args.length; i++) {
     final arg = args[i];
     if (arg == '--help' || arg == '-h') {
       stdout.writeln('''
-Usage: dart run tool/gen_objc_packages.dart [--profile full|lean] [targets...]
+Usage: dart tool/gen_objc_packages.dart [--profile full|lean] [targets...]
+       dart tool/gen_objc_packages.dart [--layout monolith|split] [--split-root umbrella|core-only] [targets...]
 
 Targets:
   ${_frameworks.keys.join(', ')}
@@ -121,6 +259,14 @@ Targets:
 Profiles:
   full  Generate the current full transitive surface.
   lean  Generate a smaller, less-transitive surface for faster tooling.
+
+Layouts:
+  monolith  Generate one bindings library per framework package.
+  split     Generate multiple family libraries with an umbrella export.
+
+Split root surfaces:
+  umbrella   Root library re-exports all generated family libraries via all.dart.
+  core-only  Root library exports only core.dart; family APIs rely on direct imports or auto-import.
 ''');
       exit(0);
     }
@@ -137,6 +283,38 @@ Profiles:
       profile = _parseProfile(arg.substring('--profile='.length));
       continue;
     }
+    if (arg == '--layout') {
+      if (i + 1 >= args.length) {
+        stderr.writeln(
+          'Missing value for --layout. Use "monolith" or "split".',
+        );
+        exitCode = 64;
+        exit(exitCode);
+      }
+      layout = _parseLayout(args[++i]);
+      continue;
+    }
+    if (arg.startsWith('--layout=')) {
+      layout = _parseLayout(arg.substring('--layout='.length));
+      continue;
+    }
+    if (arg == '--split-root') {
+      if (i + 1 >= args.length) {
+        stderr.writeln(
+          'Missing value for --split-root. Use "umbrella" or "core-only".',
+        );
+        exitCode = 64;
+        exit(exitCode);
+      }
+      splitRootSurface = _parseSplitRootSurface(args[++i]);
+      continue;
+    }
+    if (arg.startsWith('--split-root=')) {
+      splitRootSurface = _parseSplitRootSurface(
+        arg.substring('--split-root='.length),
+      );
+      continue;
+    }
     targets.add(arg);
   }
 
@@ -144,6 +322,8 @@ Profiles:
     return _ResolvedInvocation(
       targets: _frameworks.keys.toList(growable: false),
       profile: profile,
+      layout: layout,
+      splitRootSurface: splitRootSurface,
     );
   }
 
@@ -157,7 +337,12 @@ Profiles:
       exit(exitCode);
     }
   }
-  return _ResolvedInvocation(targets: lowered, profile: profile);
+  return _ResolvedInvocation(
+    targets: lowered,
+    profile: profile,
+    layout: layout,
+    splitRootSurface: splitRootSurface,
+  );
 }
 
 _GenerationProfile _parseProfile(String value) {
@@ -172,12 +357,55 @@ _GenerationProfile _parseProfile(String value) {
   };
 }
 
+_GenerationLayout _parseLayout(String value) {
+  return switch (value.toLowerCase()) {
+    'monolith' => _GenerationLayout.monolith,
+    'split' => _GenerationLayout.split,
+    _ => () {
+      stderr.writeln(
+        'Unknown layout "$value". Valid layouts: monolith, split',
+      );
+      exitCode = 64;
+      exit(exitCode);
+    }(),
+  };
+}
+
+_SplitRootSurface _parseSplitRootSurface(String value) {
+  return switch (value.toLowerCase()) {
+    'umbrella' => _SplitRootSurface.umbrella,
+    'core-only' => _SplitRootSurface.coreOnly,
+    _ => () {
+      stderr.writeln(
+        'Unknown split root surface "$value". Valid values: umbrella, core-only',
+      );
+      exitCode = 64;
+      exit(exitCode);
+    }(),
+  };
+}
+
 void _generateBindings(
   _FrameworkSpec spec,
   Directory pkgDir,
   String sdkPath,
   _GenerationProfile profile,
+  _GenerationLayout layout,
+  _SplitRootSurface splitRootSurface,
+  {required String packageName}
 ) {
+  if (layout == _GenerationLayout.split) {
+    _generateSplitBindings(
+      spec,
+      pkgDir,
+      sdkPath,
+      profile,
+      splitRootSurface: splitRootSurface,
+      packageName: packageName,
+    );
+    return;
+  }
+
   final header = Uri.file(
     '$sdkPath/System/Library/Frameworks/${spec.framework}.framework/Headers/${spec.umbrellaHeader}',
   );
@@ -206,14 +434,607 @@ void _generateBindings(
           '// ${profile.name} ${spec.framework} bindings generated by tool/gen_objc_packages.dart',
       style: _usesBundledBindingsAsset(spec)
           ? NativeExternalBindings(
-              assetId:
-                  'package:${spec.packageName}/${_bindingsAssetName(spec)}',
+              assetId: 'package:$packageName/${_bindingsAssetName(spec)}',
             )
           : const NativeExternalBindings(),
     ),
   );
   generator.generate();
 }
+
+void _generateSplitBindings(
+  _FrameworkSpec spec,
+  Directory pkgDir,
+  String sdkPath,
+  _GenerationProfile profile,
+  {required _SplitRootSurface splitRootSurface,
+  required String packageName}
+) {
+  if (profile != _GenerationProfile.full) {
+    throw UnsupportedError(
+      'Split layout currently only supports the full profile.',
+    );
+  }
+  final splitSpec = _splitPackages[spec.key];
+  if (splitSpec == null) {
+    throw UnsupportedError(
+      'Split layout is currently implemented for: ${_splitPackages.keys.join(', ')}.',
+    );
+  }
+
+  final logger = Logger('gen_objc_packages.split');
+  Logger.root.level = Level.OFF;
+  final importLibraries = <String, LibraryImport>{};
+  final importedTypesByUsr = <String, ImportedType>{};
+  final generatedFiles = <String, File>{};
+
+  for (final unit in splitSpec.units) {
+    final symbolFile = File('${pkgDir.path}/lib/src/${unit.libraryStem}_symbols.yaml');
+    _makeSplitGenerator(
+      spec: spec,
+      pkgDir: pkgDir,
+      sdkPath: sdkPath,
+      packageName: packageName,
+      libraryStem: unit.libraryStem,
+      includeDeclaration: unit.includeDeclaration,
+      importedTypesByUsr: Map<String, ImportedType>.from(importedTypesByUsr),
+      libraryImports: importLibraries.values.toList(),
+      symbolFile: SymbolFile(
+        Uri.parse('package:$packageName/src/${unit.libraryStem}_bindings.dart'),
+        symbolFile.uri,
+      ),
+    ).generate(logger: logger);
+
+    generatedFiles[unit.key] = File(
+      '${pkgDir.path}/lib/src/${unit.libraryStem}_bindings.dart',
+    );
+
+    final newlyImported = spec_utils.symbolFileImportExtractor(
+      logger,
+      [symbolFile.path],
+      importLibraries,
+      null,
+      null,
+    );
+    importedTypesByUsr.addAll(newlyImported);
+  }
+
+  final owners = <String, String>{};
+  final ownerIsStub = <String, bool>{};
+  for (final unit in splitSpec.units) {
+    final typeStates = _topLevelTypeStates(generatedFiles[unit.key]!);
+    for (final entry in typeStates.entries) {
+      final existingOwner = owners[entry.key];
+      if (existingOwner == null) {
+        owners[entry.key] = unit.key;
+        ownerIsStub[entry.key] = entry.value;
+        continue;
+      }
+      if (ownerIsStub[entry.key]! && !entry.value) {
+        owners[entry.key] = unit.key;
+        ownerIsStub[entry.key] = false;
+      }
+    }
+  }
+
+  for (final unit in splitSpec.units) {
+    final hiddenNames =
+        _topLevelTypeNames(generatedFiles[unit.key]!)
+            .where((name) => owners[name] != unit.key)
+            .toList()
+          ..sort();
+    final unitBuffer = StringBuffer()
+      ..writeln(
+        "export 'src/${unit.libraryStem}_bindings.dart'${_hideClause(hiddenNames)};",
+      );
+    if (spec.key == 'appkit' && unit.key == 'core') {
+      unitBuffer.writeln("export 'src/target_action.dart';");
+    }
+    File('${pkgDir.path}/lib/${unit.key}.dart').writeAsStringSync(
+      unitBuffer.toString(),
+    );
+  }
+
+  final allBuffer = StringBuffer();
+  for (final unit in splitSpec.units) {
+    allBuffer.writeln("export '${unit.key}.dart';");
+  }
+  File('${pkgDir.path}/lib/all.dart').writeAsStringSync(allBuffer.toString());
+
+  final rootLibrary = splitRootSurface == _SplitRootSurface.coreOnly
+      ? '${splitSpec.rootUnitKey}.dart'
+      : 'all.dart';
+  File('${pkgDir.path}/lib/$packageName.dart').writeAsStringSync(
+    "export '$rootLibrary';\n",
+  );
+}
+
+Set<String> _topLevelTypeNames(File file) {
+  final text = file.readAsStringSync();
+  final regex = RegExp(
+    r'^\s*(?:extension type|extension|final class|abstract final class|sealed class|enum|typedef|mixin|abstract interface class|interface class)\s+([A-Za-z0-9_$]+)',
+    multiLine: true,
+  );
+  return regex.allMatches(text).map((match) => match.group(1)!).toSet();
+}
+
+Map<String, bool> _topLevelTypeStates(File file) {
+  final names = _topLevelTypeNames(file);
+  final text = file.readAsStringSync();
+  final stubRegex = RegExp(
+    r'^/// WARNING: ([A-Za-z0-9_$]+) is a stub\.',
+    multiLine: true,
+  );
+  final stubNames = stubRegex
+      .allMatches(text)
+      .map((match) => match.group(1)!)
+      .toSet();
+  return {
+    for (final name in names) name: stubNames.contains(name),
+  };
+}
+
+String _hideClause(List<String> names) =>
+    names.isEmpty ? '' : ' hide ${names.join(', ')}';
+
+FfiGenerator _makeSplitGenerator({
+  required _FrameworkSpec spec,
+  required Directory pkgDir,
+  required String sdkPath,
+  required String packageName,
+  required String libraryStem,
+  required bool Function(Declaration declaration) includeDeclaration,
+  required Map<String, ImportedType> importedTypesByUsr,
+  required List<LibraryImport> libraryImports,
+  SymbolFile? symbolFile,
+}) {
+  return FfiGenerator(
+    headers: Headers(
+      entryPoints: [
+        Uri.file(
+          '$sdkPath/System/Library/Frameworks/${spec.framework}.framework/Headers/${spec.umbrellaHeader}',
+        ),
+      ],
+      compilerOptions: _compilerOptionsFor(spec, sdkPath),
+      ignoreSourceErrors: true,
+    ),
+    objectiveC: _splitObjectiveCConfig(spec, includeDeclaration),
+    output: Output(
+      dartFile: Uri.file('${pkgDir.path}/lib/src/${libraryStem}_bindings.dart'),
+      objectiveCFile: Uri.file('${pkgDir.path}/native/${libraryStem}_bindings.m'),
+      symbolFile: symbolFile,
+      commentType: const CommentType.none(),
+      preamble:
+          '// split ${spec.framework} bindings generated by tool/gen_objc_packages.dart for $packageName/$libraryStem.',
+      style: const NativeExternalBindings(),
+    ),
+    importedTypesByUsr: importedTypesByUsr,
+    libraryImports: libraryImports,
+  );
+}
+
+ObjectiveC _splitObjectiveCConfig(
+  _FrameworkSpec spec,
+  bool Function(Declaration declaration) includeDeclaration,
+) {
+  if (spec.key == 'appkit') {
+    bool includeSubclassHelpers(Declaration decl) =>
+        decl.originalName == 'NSViewController';
+
+    return ObjectiveC(
+      interfaces: Interfaces(
+        include: includeDeclaration,
+        includeTransitive: false,
+        includeSubclassHelpers: includeSubclassHelpers,
+      ),
+      protocols: Protocols(
+        include: includeDeclaration,
+        includeTransitive: false,
+      ),
+      categories: Categories(
+        include: includeDeclaration,
+        includeTransitive: false,
+      ),
+    );
+  }
+  if (spec.key == 'uikit') {
+    bool includeSubclassHelpers(Declaration decl) =>
+        decl.originalName == 'UIViewController';
+    bool includeMember(Declaration decl, String member) {
+      if (decl.originalName == 'UIViewController' &&
+          member == 'preferredContainerBackgroundStyle') {
+        return false;
+      }
+      if (decl.originalName == 'CIImageProcessorKernel' &&
+          (member == 'outputIsOpaque' || member == 'synchronizeInputs')) {
+        return false;
+      }
+      return true;
+    }
+
+    return ObjectiveC(
+      interfaces: Interfaces(
+        include: includeDeclaration,
+        includeTransitive: false,
+        includeSubclassHelpers: includeSubclassHelpers,
+        includeMember: includeMember,
+      ),
+      protocols: Protocols(
+        include: includeDeclaration,
+        includeTransitive: false,
+      ),
+      categories: Categories(
+        include: includeDeclaration,
+        includeTransitive: false,
+      ),
+    );
+  }
+
+  return ObjectiveC(
+    interfaces: Interfaces(
+      include: includeDeclaration,
+      includeTransitive: false,
+    ),
+    protocols: Protocols(
+      include: includeDeclaration,
+      includeTransitive: false,
+    ),
+    categories: Categories(
+      include: includeDeclaration,
+      includeTransitive: false,
+    ),
+  );
+}
+
+bool _isMetalArchiveDeclaration(Declaration declaration) =>
+    declaration.originalName == 'MTL4Archive';
+
+bool _isMetalArchiveBaseDeclaration(Declaration declaration) {
+  final name = declaration.originalName;
+  return name.startsWith('MTL4BinaryFunction') ||
+      name == 'MTL4FunctionDescriptor' ||
+      name.startsWith('MTL4ComputePipelineDescriptor') ||
+      name == 'MTL4PipelineDescriptor' ||
+      name == 'MTL4PipelineStageDynamicLinkingDescriptor' ||
+      name == 'MTL4RenderPipelineDynamicLinkingDescriptor';
+}
+
+bool _isMetalCoreDeclaration(Declaration declaration) =>
+    declaration.originalName.startsWith('MTL') &&
+    !_isMetalArchiveBaseDeclaration(declaration) &&
+    !_isMetalArchiveDeclaration(declaration);
+
+const _metalSplitUnits = <_SplitUnit>[
+  _SplitUnit(
+    key: 'archive_base',
+    libraryStem: 'metal_archive_base',
+    includeDeclaration: _isMetalArchiveBaseDeclaration,
+  ),
+  _SplitUnit(
+    key: 'archive',
+    libraryStem: 'metal_archive',
+    includeDeclaration: _isMetalArchiveDeclaration,
+  ),
+  _SplitUnit(
+    key: 'core',
+    libraryStem: 'metal_core',
+    includeDeclaration: _isMetalCoreDeclaration,
+  ),
+];
+
+const _appKitCoreExactNames = <String>{
+  'NSApplication',
+  'NSApplicationDelegate',
+  'NSButton',
+  'NSButtonTargetAction',
+  'NSBox',
+  'NSColor',
+  'NSFont',
+  'NSNotification',
+  'NSResponder',
+  'NSTextField',
+  'NSView',
+  'NSViewController',
+  'NSVisualEffectView',
+  'NSWindow',
+};
+
+const _appKitCorePrefixes = <String>[
+  'NSApplicationActivationPolicy',
+  'NSApplicationTerminateReply',
+  'NSAutoresizing',
+  'NSBacking',
+  'NSBezel',
+  'NSBoxType',
+  'NSColor',
+  'NSControl',
+  'NSFont',
+  'NSText',
+  'NSTitle',
+  'NSView',
+  'NSVisualEffect',
+  'NSWindow',
+];
+
+bool _isAppKitCoreDeclaration(Declaration declaration) {
+  final name = declaration.originalName;
+  return _matchesAnyExact(name, _appKitCoreExactNames) ||
+      _matchesAnyPrefix(name, _appKitCorePrefixes);
+}
+
+bool _isAppKitMiscDeclaration(Declaration declaration) =>
+    declaration.originalName.startsWith('NS') &&
+    !_isAppKitCoreDeclaration(declaration);
+
+const _appkitSplitUnits = <_SplitUnit>[
+  _SplitUnit(
+    key: 'core',
+    libraryStem: 'appkit_core',
+    includeDeclaration: _isAppKitCoreDeclaration,
+  ),
+  _SplitUnit(
+    key: 'misc',
+    libraryStem: 'appkit_misc',
+    includeDeclaration: _isAppKitMiscDeclaration,
+  ),
+];
+
+bool _isUiKitGestureBaseDeclaration(Declaration declaration) {
+  final name = declaration.originalName;
+  return name.startsWith('UIGestureRecognizer') &&
+      !_isUiKitGestureDeclaration(declaration);
+}
+
+bool _isUiKitGestureDeclaration(Declaration declaration) {
+  final name = declaration.originalName;
+  return name == 'UILongPressGestureRecognizer' ||
+      name == 'UIPanGestureRecognizer' ||
+      name == 'UIPinchGestureRecognizer' ||
+      name == 'UIRotationGestureRecognizer' ||
+      name == 'UIScreenEdgePanGestureRecognizer' ||
+      name == 'UISwipeGestureRecognizer' ||
+      name.startsWith('UISwipeGestureRecognizerDirection') ||
+      name == 'UITapGestureRecognizer';
+}
+
+bool _matchesAnyPrefix(String name, List<String> prefixes) =>
+    prefixes.any(name.startsWith);
+
+bool _matchesAnyExact(String name, Set<String> exactNames) =>
+    exactNames.contains(name);
+
+const _uiKitCoreExactNames = <String>{
+  'UIAppearance',
+  'UIAppearanceContainer',
+  'UIApplicationShortcutItem',
+  'UIApplicationShortcutWidget',
+  'UIApplicationShortcutIcon',
+  'UIContentContainer',
+  'UICoordinateSpace',
+  'UIDevice',
+  'UIEvent',
+  'UIPress',
+  'UIResponder',
+  'UIScreen',
+  'UIScene',
+  'UISceneActivationConditions',
+  'UISceneActivationRequestOptions',
+  'UISceneConfiguration',
+  'UISceneConnectionOptions',
+  'UISceneDestructionRequestOptions',
+  'UISceneOpenExternalURLOptions',
+  'UISceneSession',
+  'UITimingCurveProvider',
+  'UITouch',
+  'UITraitCollection',
+  'UIView',
+  'UIViewController',
+  'UIWindow',
+  'UIWindowScene',
+};
+
+const _uiKitCorePrefixes = <String>[
+  'UIApplication',
+  'UIContent',
+  'UIDevice',
+  'UIEdgeInsets',
+  'UIFocus',
+  'UIInterfaceOrientation',
+  'UILayout',
+  'UIRect',
+  'UIScene',
+  'UIScreen',
+  'UISpringTiming',
+  'UITrait',
+  'UIView',
+  'UIWindow',
+];
+
+bool _isUiKitCoreDeclaration(Declaration declaration) {
+  final name = declaration.originalName;
+  return _matchesAnyExact(name, _uiKitCoreExactNames) ||
+      _matchesAnyPrefix(name, _uiKitCorePrefixes);
+}
+
+const _uiKitScrollPrefixes = <String>[
+  'UIScroll',
+  'UIRefreshControl',
+];
+
+bool _isUiKitScrollDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitScrollPrefixes);
+
+const _uiKitControlPrefixes = <String>[
+  'UIAction',
+  'UIButton',
+  'UICommand',
+  'UIControl',
+  'UIDatePicker',
+  'UIPageControl',
+  'UIPicker',
+  'UISegmentedControl',
+  'UISlider',
+  'UIStepper',
+  'UISwitch',
+];
+
+bool _isUiKitControlDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitControlPrefixes);
+
+const _uiKitTextPrefixes = <String>[
+  'UIEditMenu',
+  'UIFind',
+  'UIFontPicker',
+  'UILabel',
+  'UIText',
+];
+
+bool _isUiKitTextDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitTextPrefixes);
+
+const _uiKitTablePrefixes = <String>['UITable'];
+
+bool _isUiKitTableDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitTablePrefixes);
+
+const _uiKitCollectionPrefixes = <String>[
+  'UICollection',
+  'UICell',
+  'UIList',
+];
+
+bool _isUiKitCollectionDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitCollectionPrefixes);
+
+const _uiKitBarsPrefixes = <String>[
+  'UIAlert',
+  'UIBar',
+  'UIContextMenu',
+  'UIMenu',
+  'UINavigation',
+  'UIPopover',
+  'UISearch',
+  'UISheet',
+  'UISplit',
+  'UITab',
+  'UIToolbar',
+];
+
+bool _isUiKitBarsDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitBarsPrefixes);
+
+const _uiKitDrawingPrefixes = <String>[
+  'UIBezier',
+  'UIColor',
+  'UIFont',
+  'UIGraphics',
+  'UIImage',
+  'UISymbol',
+];
+
+bool _isUiKitDrawingDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitDrawingPrefixes);
+
+const _uiKitInteractionPrefixes = <String>[
+  'UIAccessibility',
+  'UIActivity',
+  'UICalendar',
+  'UIDocument',
+  'UIDrag',
+  'UIDrop',
+  'UIHover',
+  'UIIndirect',
+  'UIInput',
+  'UIKey',
+  'UIPaste',
+  'UIPencil',
+  'UIPointer',
+  'UIPreview',
+  'UIPrint',
+  'UIScreenshot',
+  'UIScribble',
+  'UIUser',
+  'UIWriting',
+];
+
+bool _isUiKitInteractionDeclaration(Declaration declaration) =>
+    _matchesAnyPrefix(declaration.originalName, _uiKitInteractionPrefixes);
+
+bool _isUiKitMiscDeclaration(Declaration declaration) =>
+    !_isUiKitCoreDeclaration(declaration) &&
+    !_isUiKitGestureBaseDeclaration(declaration) &&
+    !_isUiKitGestureDeclaration(declaration) &&
+    !_isUiKitScrollDeclaration(declaration) &&
+    !_isUiKitControlDeclaration(declaration) &&
+    !_isUiKitTextDeclaration(declaration) &&
+    !_isUiKitTableDeclaration(declaration) &&
+    !_isUiKitCollectionDeclaration(declaration) &&
+    !_isUiKitBarsDeclaration(declaration) &&
+    !_isUiKitDrawingDeclaration(declaration) &&
+    !_isUiKitInteractionDeclaration(declaration);
+
+const _uikitSplitUnits = <_SplitUnit>[
+  _SplitUnit(
+    key: 'core',
+    libraryStem: 'uikit_core',
+    includeDeclaration: _isUiKitCoreDeclaration,
+  ),
+  _SplitUnit(
+    key: 'gesture_base',
+    libraryStem: 'uikit_gesture_base',
+    includeDeclaration: _isUiKitGestureBaseDeclaration,
+  ),
+  _SplitUnit(
+    key: 'gestures',
+    libraryStem: 'uikit_gestures',
+    includeDeclaration: _isUiKitGestureDeclaration,
+  ),
+  _SplitUnit(
+    key: 'scroll',
+    libraryStem: 'uikit_scroll',
+    includeDeclaration: _isUiKitScrollDeclaration,
+  ),
+  _SplitUnit(
+    key: 'controls',
+    libraryStem: 'uikit_controls',
+    includeDeclaration: _isUiKitControlDeclaration,
+  ),
+  _SplitUnit(
+    key: 'text',
+    libraryStem: 'uikit_text',
+    includeDeclaration: _isUiKitTextDeclaration,
+  ),
+  _SplitUnit(
+    key: 'table',
+    libraryStem: 'uikit_table',
+    includeDeclaration: _isUiKitTableDeclaration,
+  ),
+  _SplitUnit(
+    key: 'collection',
+    libraryStem: 'uikit_collection',
+    includeDeclaration: _isUiKitCollectionDeclaration,
+  ),
+  _SplitUnit(
+    key: 'bars',
+    libraryStem: 'uikit_bars',
+    includeDeclaration: _isUiKitBarsDeclaration,
+  ),
+  _SplitUnit(
+    key: 'drawing',
+    libraryStem: 'uikit_drawing',
+    includeDeclaration: _isUiKitDrawingDeclaration,
+  ),
+  _SplitUnit(
+    key: 'interaction',
+    libraryStem: 'uikit_interaction',
+    includeDeclaration: _isUiKitInteractionDeclaration,
+  ),
+  _SplitUnit(
+    key: 'misc',
+    libraryStem: 'uikit_misc',
+    includeDeclaration: _isUiKitMiscDeclaration,
+  ),
+];
 
 List<String> _compilerOptionsFor(_FrameworkSpec spec, String sdkPath) {
   return ['-isysroot', sdkPath, '-F$sdkPath/System/Library/Frameworks'];
@@ -379,41 +1200,66 @@ ObjectiveC _fullObjectiveCConfig(_FrameworkSpec spec) {
   );
 }
 
-Future<void> _scaffoldPackage(_FrameworkSpec spec, Directory pkgDir) async {
+Future<void> _scaffoldPackage(
+  _FrameworkSpec spec,
+  Directory pkgDir, {
+  required String packageName,
+  required _GenerationLayout layout,
+}) async {
   await Directory('${pkgDir.path}/lib/src').create(recursive: true);
   await Directory('${pkgDir.path}/native').create(recursive: true);
   await Directory('${pkgDir.path}/tool').create(recursive: true);
-  if (_needsBuildHook(spec)) {
+  if (_needsBuildHook(spec, layout)) {
     await Directory('${pkgDir.path}/hook').create(recursive: true);
   }
 
-  await File('${pkgDir.path}/pubspec.yaml').writeAsString(_pubspecFor(spec));
+  await File(
+    '${pkgDir.path}/pubspec.yaml',
+  ).writeAsString(_pubspecFor(spec, packageName: packageName, layout: layout));
   await File(
     '${pkgDir.path}/analysis_options.yaml',
   ).writeAsString(_analysisOptions);
-  await File('${pkgDir.path}/README.md').writeAsString(_readmeFor(spec));
-  await File('${pkgDir.path}/.gitignore').writeAsString(_gitIgnore);
   await File(
-    '${pkgDir.path}/lib/${spec.packageName}.dart',
-  ).writeAsString(_libraryExports(spec));
-  if (_hasFlutterViews(spec)) {
+    '${pkgDir.path}/README.md',
+  ).writeAsString(_readmeFor(spec, packageName: packageName, layout: layout));
+  await File('${pkgDir.path}/.gitignore').writeAsString(_gitIgnore);
+  if (layout == _GenerationLayout.split && spec.key == 'appkit') {
+    await File(
+      '${pkgDir.path}/lib/src/target_action.dart',
+    ).writeAsString(_appKitTargetActionSource('appkit_core_bindings.dart'));
+  }
+  if (layout == _GenerationLayout.monolith) {
+    await File(
+      '${pkgDir.path}/lib/$packageName.dart',
+    ).writeAsString(_libraryExports(spec));
+  }
+  if (_hasFlutterViews(spec, layout)) {
     await File(
       '${pkgDir.path}/lib/flutter_views.dart',
     ).writeAsString(_flutterViewsLibraryExports());
   }
   await File(
     '${pkgDir.path}/tool/generate.dart',
-  ).writeAsString(_packageGenerateTool(spec));
-  if (_needsBuildHook(spec)) {
+  ).writeAsString(
+    _packageGenerateTool(spec, packageName: packageName, layout: layout),
+  );
+  if (_needsBuildHook(spec, layout)) {
     await File(
       '${pkgDir.path}/hook/build.dart',
-    ).writeAsString(_buildHookFor(spec));
+    ).writeAsString(_buildHookFor(spec, packageName: packageName));
   }
 }
 
-String _pubspecFor(_FrameworkSpec spec) {
-  final includeFlutterHelpers = _hasFlutterViews(spec);
-  final includeBuildHookDeps = _needsBuildHook(spec);
+String _pubspecFor(
+  _FrameworkSpec spec, {
+  required String packageName,
+  required _GenerationLayout layout,
+}) {
+  final includeFlutterHelpers = _hasFlutterViews(spec, layout);
+  final includeBuildHookDeps = _needsBuildHook(spec, layout);
+  final description = layout == _GenerationLayout.split
+      ? 'Split Objective-C bindings for ${spec.framework}.'
+      : 'Full Objective-C bindings for ${spec.framework}.';
   final extraDeps = includeBuildHookDeps
       ? '''
   code_assets: ^1.0.0
@@ -435,8 +1281,8 @@ dependency_overrides:
 '''
       : '';
   return '''
-name: ${spec.packageName}
-description: Full Objective-C bindings for ${spec.framework}.
+name: $packageName
+description: $description
 version: 0.1.0
 publish_to: none
 
@@ -474,8 +1320,14 @@ String _libraryExports(_FrameworkSpec spec) {
 
 String _flutterViewsLibraryExports() => "export 'src/flutter_views.dart';\n";
 
-String _readmeFor(_FrameworkSpec spec) {
-  final flutterHelpers = switch (spec.key) {
+String _readmeFor(
+  _FrameworkSpec spec, {
+  required String packageName,
+  required _GenerationLayout layout,
+}) {
+  final flutterHelpers = !_hasFlutterViews(spec, layout)
+      ? ''
+      : switch (spec.key) {
     'appkit' =>
       '''
 
@@ -498,10 +1350,16 @@ demo app:
 ''',
     _ => '',
   };
+  final regenerateCommand = layout == _GenerationLayout.split
+      ? 'dart tool/gen_objc_packages.dart --layout split ${spec.key}'
+      : 'dart tool/gen_objc_packages.dart ${spec.key}';
+  final scopeDescription = layout == _GenerationLayout.split
+      ? 'split-family'
+      : 'generated';
   return '''
-# ${spec.packageName}
+# $packageName
 
-Generated Objective-C bindings for `${spec.framework}` using the local
+${scopeDescription[0].toUpperCase()}${scopeDescription.substring(1)} Objective-C bindings for `${spec.framework}` using the local
 `ffigen` fork in `../ffigen`.$flutterHelpers
 
 ## Regenerate
@@ -509,31 +1367,52 @@ Generated Objective-C bindings for `${spec.framework}` using the local
 From the repository root:
 
 ```bash
-dart run tool/gen_objc_packages.dart ${spec.key}
+$regenerateCommand
 ```
 
 To generate the smaller tooling-focused profile instead:
 
 ```bash
-dart run tool/gen_objc_packages.dart --profile lean ${spec.key}
+dart tool/gen_objc_packages.dart --profile lean ${spec.key}
 ```
+
+${layout == _GenerationLayout.split ? '''To regenerate the split package with a core-only root surface:
+
+```bash
+dart tool/gen_objc_packages.dart --layout split --split-root core-only ${spec.key}
+```
+
+This split package also emits:
+
+- `all.dart` for the full umbrella export
+- `${_splitPackages[spec.key]?.rootUnitKey ?? 'core'}.dart` as the cheap default root surface
+''' : ''} 
 
 To regenerate all packages used by the demos:
 
 ```bash
-dart run tool/gen_objc_packages.dart foundation appkit uikit metal metalkit
+dart tool/gen_objc_packages.dart foundation appkit uikit metal metalkit
 ```
 ''';
 }
 
-String _packageGenerateTool(_FrameworkSpec spec) {
+String _packageGenerateTool(
+  _FrameworkSpec spec, {
+  required String packageName,
+  required _GenerationLayout layout,
+}) {
+  final baseArgs = <String>[
+    '../../tool/gen_objc_packages.dart',
+    if (layout == _GenerationLayout.split) '--layout',
+    if (layout == _GenerationLayout.split) 'split',
+  ];
   return '''
 import 'dart:io';
 
 Future<void> main(List<String> args) async {
   final result = await Process.run(
     'dart',
-    ['run', '../../tool/gen_objc_packages.dart', ...args, '${spec.key}'],
+    [${baseArgs.map((arg) => "'$arg'").join(', ')}, ...args, '${spec.key}'],
     runInShell: true,
   );
   stdout.write(result.stdout);
@@ -546,12 +1425,61 @@ Future<void> main(List<String> args) async {
 const _gitIgnore = '''
 .dart_tool/
 build/
+pubspec.lock
 ''';
 
-bool _hasFlutterViews(_FrameworkSpec spec) =>
-    spec.key == 'appkit' || spec.key == 'uikit';
+String _appKitTargetActionSource(String bindingsImport) => '''
+import 'dart:ffi';
 
-bool _needsBuildHook(_FrameworkSpec spec) => _hasFlutterViews(spec);
+import 'package:ffi/ffi.dart';
+import 'package:objective_c/objective_c.dart' as objc;
+
+import '$bindingsImport';
+
+/// A small helper for wiring AppKit target/action callbacks from Dart.
+final class NSButtonTargetAction {
+  NSButtonTargetAction._(this.target, this.action);
+
+  final objc.NSObject target;
+  final Pointer<objc.ObjCSelector> action;
+
+  factory NSButtonTargetAction.listener(
+    void Function() onPressed, {
+    String selectorName = 'handlePress:',
+    String debugName = 'NSButtonTargetAction',
+  }) {
+    final action = objc.registerName(selectorName);
+    final builder = objc.ObjCSubclassBuilder(
+      superclassName: 'NSObject',
+      debugName: debugName,
+    );
+    final signature = 'v@:@'.toNativeUtf8();
+    builder.implementMethod(
+      action,
+      signature.cast(),
+      ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl.protocolTrampoline,
+      ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl.listener((
+        Pointer<Void> _,
+        objc.ObjCObject? sender,
+      ) {
+        if (sender == null) {
+          return;
+        }
+        onPressed();
+      }),
+    );
+    calloc.free(signature);
+    return NSButtonTargetAction._(objc.NSObject.as(builder.build()), action);
+  }
+}
+''';
+
+bool _hasFlutterViews(_FrameworkSpec spec, _GenerationLayout layout) =>
+    layout == _GenerationLayout.monolith &&
+    (spec.key == 'appkit' || spec.key == 'uikit');
+
+bool _needsBuildHook(_FrameworkSpec spec, _GenerationLayout layout) =>
+    _hasFlutterViews(spec, layout);
 
 bool _usesBundledBindingsAsset(_FrameworkSpec spec) =>
     spec.key == 'appkit' || spec.key == 'uikit';
@@ -569,8 +1497,11 @@ String _frameworkLinkFlags(_FrameworkSpec spec) => spec.frameworkLoadOrder
     .map((framework) => "      '-framework',\n      '$framework',")
     .join('\n');
 
-String _buildHookFor(_FrameworkSpec spec) {
-  final includeFlutterViews = _hasFlutterViews(spec);
+String _buildHookFor(
+  _FrameworkSpec spec, {
+  required String packageName,
+}) {
+  final includeFlutterViews = spec.key == 'appkit' || spec.key == 'uikit';
   final includeBindingsAsset = _usesBundledBindingsAsset(spec);
   final bindingsBlock = includeBindingsAsset
       ? '''
@@ -632,7 +1563,7 @@ import 'package:native_toolchain_c/src/cbuilder/compiler_resolver.dart';
 
 const objCFlags = ['-x', 'objective-c', '-fobjc-arc'];
 ${includeBindingsAsset ? "const bindingsAssetName = '${_bindingsAssetName(spec)}';" : ''}
-${includeFlutterViews ? "const flutterViewsAssetName = '${spec.packageName}_flutter_views.dylib';" : ''}
+${includeFlutterViews ? "const flutterViewsAssetName = '${packageName}_flutter_views.dylib';" : ''}
 
 final logger = Logger('')
   ..level = Level.INFO

@@ -1,0 +1,1871 @@
+format_version: 1.2.0
+files:
+  package:objc_uikit_split/src/uikit_bars_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@UIAlertActionStyle:
+        kind: enum
+        name: UIAlertActionStyle
+        c-type: ffi.Long
+        dart-type: UIAlertActionStyle
+        ffi-dart-type: int
+      c:@E@UIAlertControllerSeverity:
+        kind: enum
+        name: UIAlertControllerSeverity
+        c-type: ffi.Long
+        dart-type: UIAlertControllerSeverity
+        ffi-dart-type: int
+      c:@E@UIAlertControllerStyle:
+        kind: enum
+        name: UIAlertControllerStyle
+        c-type: ffi.Long
+        dart-type: UIAlertControllerStyle
+        ffi-dart-type: int
+      c:@E@UIAlertViewStyle:
+        kind: enum
+        name: UIAlertViewStyle
+        c-type: ffi.Long
+        dart-type: UIAlertViewStyle
+        ffi-dart-type: int
+      c:@E@UIBarButtonItemStyle:
+        kind: enum
+        name: UIBarButtonItemStyle
+        c-type: ffi.Long
+        dart-type: UIBarButtonItemStyle
+        ffi-dart-type: int
+      c:@E@UIBarButtonSystemItem:
+        kind: enum
+        name: UIBarButtonSystemItem
+        c-type: ffi.Long
+        dart-type: UIBarButtonSystemItem
+        ffi-dart-type: int
+      c:@E@UIBarPosition:
+        kind: enum
+        name: UIBarPosition
+        c-type: ffi.Long
+        dart-type: UIBarPosition
+        ffi-dart-type: int
+      c:@E@UIBarStyle:
+        kind: enum
+        name: UIBarStyle
+        c-type: ffi.Long
+        dart-type: UIBarStyle
+        ffi-dart-type: int
+      c:@E@UIBehavioralStyle:
+        kind: enum
+        name: UIBehavioralStyle
+        c-type: ffi.UnsignedLong
+        dart-type: UIBehavioralStyle
+        ffi-dart-type: int
+      c:@E@UIContextMenuInteractionAppearance:
+        kind: enum
+        name: UIContextMenuInteractionAppearance
+        c-type: ffi.Long
+        dart-type: UIContextMenuInteractionAppearance
+        ffi-dart-type: int
+      c:@E@UIContextMenuInteractionCommitStyle:
+        kind: enum
+        name: UIContextMenuInteractionCommitStyle
+        c-type: ffi.Long
+        dart-type: UIContextMenuInteractionCommitStyle
+        ffi-dart-type: int
+      c:@E@UIMenuControllerArrowDirection:
+        kind: enum
+        name: UIMenuControllerArrowDirection
+        c-type: ffi.Long
+        dart-type: UIMenuControllerArrowDirection
+        ffi-dart-type: int
+      c:@E@UIMenuElementSize:
+        kind: enum
+        name: UIMenuElementSize
+        c-type: ffi.Long
+        dart-type: UIMenuElementSize
+        ffi-dart-type: int
+      c:@E@UIMenuOptions:
+        kind: enum
+        name: UIMenuOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UIMenuSystemFindElementGroupConfigurationStyle:
+        kind: enum
+        name: UIMenuSystemFindElementGroupConfigurationStyle
+        c-type: ffi.Long
+        dart-type: UIMenuSystemFindElementGroupConfigurationStyle
+        ffi-dart-type: int
+      c:@E@UINavigationBarNSToolbarSection:
+        kind: enum
+        name: UINavigationBarNSToolbarSection
+        c-type: ffi.Long
+        dart-type: UINavigationBarNSToolbarSection
+        ffi-dart-type: int
+      c:@E@UINavigationControllerOperation:
+        kind: enum
+        name: UINavigationControllerOperation
+        c-type: ffi.Long
+        dart-type: UINavigationControllerOperation
+        ffi-dart-type: int
+      c:@E@UINavigationItemBackButtonDisplayMode:
+        kind: enum
+        name: UINavigationItemBackButtonDisplayMode
+        c-type: ffi.Long
+        dart-type: UINavigationItemBackButtonDisplayMode
+        ffi-dart-type: int
+      c:@E@UINavigationItemLargeTitleDisplayMode:
+        kind: enum
+        name: UINavigationItemLargeTitleDisplayMode
+        c-type: ffi.Long
+        dart-type: UINavigationItemLargeTitleDisplayMode
+        ffi-dart-type: int
+      c:@E@UINavigationItemSearchBarPlacement:
+        kind: enum
+        name: UINavigationItemSearchBarPlacement
+        c-type: ffi.Long
+        dart-type: UINavigationItemSearchBarPlacement
+        ffi-dart-type: int
+      c:@E@UINavigationItemStyle:
+        kind: enum
+        name: UINavigationItemStyle
+        c-type: ffi.Long
+        dart-type: UINavigationItemStyle
+        ffi-dart-type: int
+      c:@E@UIPopoverArrowDirection:
+        kind: enum
+        name: UIPopoverArrowDirection
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UISearchBarIcon:
+        kind: enum
+        name: UISearchBarIcon
+        c-type: ffi.Long
+        dart-type: UISearchBarIcon
+        ffi-dart-type: int
+      c:@E@UISearchBarStyle:
+        kind: enum
+        name: UISearchBarStyle
+        c-type: ffi.UnsignedLong
+        dart-type: UISearchBarStyle
+        ffi-dart-type: int
+      c:@E@UISearchControllerScopeBarActivation:
+        kind: enum
+        name: UISearchControllerScopeBarActivation
+        c-type: ffi.Long
+        dart-type: UISearchControllerScopeBarActivation
+        ffi-dart-type: int
+      c:@E@UISplitViewControllerBackgroundStyle:
+        kind: enum
+        name: UISplitViewControllerBackgroundStyle
+        c-type: ffi.Long
+        dart-type: UISplitViewControllerBackgroundStyle
+        ffi-dart-type: int
+      c:@E@UISplitViewControllerColumn:
+        kind: enum
+        name: UISplitViewControllerColumn
+        c-type: ffi.Long
+        dart-type: UISplitViewControllerColumn
+        ffi-dart-type: int
+      c:@E@UISplitViewControllerDisplayMode:
+        kind: enum
+        name: UISplitViewControllerDisplayMode
+        c-type: ffi.Long
+        dart-type: UISplitViewControllerDisplayMode
+        ffi-dart-type: int
+      c:@E@UISplitViewControllerDisplayModeButtonVisibility:
+        kind: enum
+        name: UISplitViewControllerDisplayModeButtonVisibility
+        c-type: ffi.Long
+        dart-type: UISplitViewControllerDisplayModeButtonVisibility
+        ffi-dart-type: int
+      c:@E@UISplitViewControllerPrimaryEdge:
+        kind: enum
+        name: UISplitViewControllerPrimaryEdge
+        c-type: ffi.Long
+        dart-type: UISplitViewControllerPrimaryEdge
+        ffi-dart-type: int
+      c:@E@UISplitViewControllerSplitBehavior:
+        kind: enum
+        name: UISplitViewControllerSplitBehavior
+        c-type: ffi.Long
+        dart-type: UISplitViewControllerSplitBehavior
+        ffi-dart-type: int
+      c:@E@UISplitViewControllerStyle:
+        kind: enum
+        name: UISplitViewControllerStyle
+        c-type: ffi.Long
+        dart-type: UISplitViewControllerStyle
+        ffi-dart-type: int
+      c:@E@UITabBarControllerMode:
+        kind: enum
+        name: UITabBarControllerMode
+        c-type: ffi.Long
+        dart-type: UITabBarControllerMode
+        ffi-dart-type: int
+      c:@E@UITabBarControllerSidebarLayout:
+        kind: enum
+        name: UITabBarControllerSidebarLayout
+        c-type: ffi.Long
+        dart-type: UITabBarControllerSidebarLayout
+        ffi-dart-type: int
+      c:@E@UITabBarItemAppearanceStyle:
+        kind: enum
+        name: UITabBarItemAppearanceStyle
+        c-type: ffi.Long
+        dart-type: UITabBarItemAppearanceStyle
+        ffi-dart-type: int
+      c:@E@UITabBarItemPositioning:
+        kind: enum
+        name: UITabBarItemPositioning
+        c-type: ffi.Long
+        dart-type: UITabBarItemPositioning
+        ffi-dart-type: int
+      c:@E@UITabBarMinimizeBehavior:
+        kind: enum
+        name: UITabBarMinimizeBehavior
+        c-type: ffi.Long
+        dart-type: UITabBarMinimizeBehavior
+        ffi-dart-type: int
+      c:@E@UITabBarSystemItem:
+        kind: enum
+        name: UITabBarSystemItem
+        c-type: ffi.Long
+        dart-type: UITabBarSystemItem
+        ffi-dart-type: int
+      c:@E@UITabGroupSidebarAppearance:
+        kind: enum
+        name: UITabGroupSidebarAppearance
+        c-type: ffi.UnsignedLong
+        dart-type: UITabGroupSidebarAppearance
+        ffi-dart-type: int
+      c:@E@UITabPlacement:
+        kind: enum
+        name: UITabPlacement
+        c-type: ffi.Long
+        dart-type: UITabPlacement
+        ffi-dart-type: int
+      c:objc(cs)NSSymbolContentTransition:
+        kind: objc-interface
+        name: NSSymbolContentTransition
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSSymbolContentTransition
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSSymbolEffect:
+        kind: objc-interface
+        name: NSSymbolEffect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSSymbolEffect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSSymbolEffectOptions:
+        kind: objc-interface
+        name: NSSymbolEffectOptions
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSSymbolEffectOptions
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIAlertAction:
+        kind: objc-interface
+        name: UIAlertAction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIAlertAction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIAlertController:
+        kind: objc-interface
+        name: UIAlertController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIAlertController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIAlertView:
+        kind: objc-interface
+        name: UIAlertView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIAlertView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBarAppearance:
+        kind: objc-interface
+        name: UIBarAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBarButtonItem:
+        kind: objc-interface
+        name: UIBarButtonItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarButtonItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBarButtonItemAppearance:
+        kind: objc-interface
+        name: UIBarButtonItemAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarButtonItemAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBarButtonItemBadge:
+        kind: objc-interface
+        name: UIBarButtonItemBadge
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarButtonItemBadge
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBarButtonItemGroup:
+        kind: objc-interface
+        name: UIBarButtonItemGroup
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarButtonItemGroup
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBarButtonItemStateAppearance:
+        kind: objc-interface
+        name: UIBarButtonItemStateAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarButtonItemStateAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBarItem:
+        kind: objc-interface
+        name: UIBarItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBlurEffect:
+        kind: objc-interface
+        name: UIBlurEffect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBlurEffect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIContextMenuConfiguration:
+        kind: objc-interface
+        name: UIContextMenuConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIContextMenuConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIContextMenuInteraction:
+        kind: objc-interface
+        name: UIContextMenuInteraction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIContextMenuInteraction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIContextMenuSystem:
+        kind: objc-interface
+        name: UIContextMenuSystem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIContextMenuSystem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDocumentProperties:
+        kind: objc-interface
+        name: UIDocumentProperties
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDocumentProperties
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIMenu:
+        kind: objc-interface
+        name: UIMenu
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenu
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIMenuController:
+        kind: objc-interface
+        name: UIMenuController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIMenuDisplayPreferences:
+        kind: objc-interface
+        name: UIMenuDisplayPreferences
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuDisplayPreferences
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIMenuElement:
+        kind: objc-interface
+        name: UIMenuElement
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuElement
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIMenuItem:
+        kind: objc-interface
+        name: UIMenuItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIMenuSystem:
+        kind: objc-interface
+        name: UIMenuSystem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuSystem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIMenuSystemFindElementGroupConfiguration:
+        kind: objc-interface
+        name: UIMenuSystemFindElementGroupConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuSystemFindElementGroupConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UINavigationBar:
+        kind: objc-interface
+        name: UINavigationBar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINavigationBar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UINavigationBarAppearance:
+        kind: objc-interface
+        name: UINavigationBarAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINavigationBarAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UINavigationController:
+        kind: objc-interface
+        name: UINavigationController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINavigationController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UINavigationItem:
+        kind: objc-interface
+        name: UINavigationItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINavigationItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPopoverBackgroundView:
+        kind: objc-interface
+        name: UIPopoverBackgroundView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPopoverBackgroundView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPopoverController:
+        kind: objc-interface
+        name: UIPopoverController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPopoverController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPopoverPresentationController:
+        kind: objc-interface
+        name: UIPopoverPresentationController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPopoverPresentationController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchBar:
+        kind: objc-interface
+        name: UISearchBar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchBar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchContainerViewController:
+        kind: objc-interface
+        name: UISearchContainerViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchContainerViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchController:
+        kind: objc-interface
+        name: UISearchController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchDisplayController:
+        kind: objc-interface
+        name: UISearchDisplayController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchDisplayController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchSuggestionItem:
+        kind: objc-interface
+        name: UISearchSuggestionItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchSuggestionItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchTab:
+        kind: objc-interface
+        name: UISearchTab
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchTab
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchTextField:
+        kind: objc-interface
+        name: UISearchTextField
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchTextField
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISearchToken:
+        kind: objc-interface
+        name: UISearchToken
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchToken
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISheetPresentationController:
+        kind: objc-interface
+        name: UISheetPresentationController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISheetPresentationController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISheetPresentationControllerDetent:
+        kind: objc-interface
+        name: UISheetPresentationControllerDetent
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISheetPresentationControllerDetent
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISplitViewController:
+        kind: objc-interface
+        name: UISplitViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISplitViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITab:
+        kind: objc-interface
+        name: UITab
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITab
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabAccessory:
+        kind: objc-interface
+        name: UITabAccessory
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabAccessory
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBar:
+        kind: objc-interface
+        name: UITabBar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBarAppearance:
+        kind: objc-interface
+        name: UITabBarAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBarController:
+        kind: objc-interface
+        name: UITabBarController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBarControllerSidebar:
+        kind: objc-interface
+        name: UITabBarControllerSidebar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarControllerSidebar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBarItem:
+        kind: objc-interface
+        name: UITabBarItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBarItemAppearance:
+        kind: objc-interface
+        name: UITabBarItemAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarItemAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBarItemStateAppearance:
+        kind: objc-interface
+        name: UITabBarItemStateAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarItemStateAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabGroup:
+        kind: objc-interface
+        name: UITabGroup
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabGroup
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabSidebarItem:
+        kind: objc-interface
+        name: UITabSidebarItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabSidebarItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabSidebarItemRequest:
+        kind: objc-interface
+        name: UITabSidebarItemRequest
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabSidebarItemRequest
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabSidebarScrollTarget:
+        kind: objc-interface
+        name: UITabSidebarScrollTarget
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabSidebarScrollTarget
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableView:
+        kind: objc-interface
+        name: UITableView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewCell:
+        kind: objc-interface
+        name: UITableViewCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewController:
+        kind: objc-interface
+        name: UITableViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewDiffableDataSource:
+        kind: objc-interface
+        name: UITableViewDiffableDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDiffableDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewDropPlaceholder:
+        kind: objc-interface
+        name: UITableViewDropPlaceholder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropPlaceholder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewDropProposal:
+        kind: objc-interface
+        name: UITableViewDropProposal
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropProposal
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewFocusUpdateContext:
+        kind: objc-interface
+        name: UITableViewFocusUpdateContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewFocusUpdateContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewHeaderFooterView:
+        kind: objc-interface
+        name: UITableViewHeaderFooterView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewHeaderFooterView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewPlaceholder:
+        kind: objc-interface
+        name: UITableViewPlaceholder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewPlaceholder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewRowAction:
+        kind: objc-interface
+        name: UITableViewRowAction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewRowAction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIToolbar:
+        kind: objc-interface
+        name: UIToolbar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIToolbar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIToolbarAppearance:
+        kind: objc-interface
+        name: UIToolbarAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIToolbarAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cy)UIBarButtonItem@UIBarButtonItemGroup:
+        kind: type
+        name: UIBarButtonItemGroup$1
+      c:objc(cy)UIBarButtonItem@UIPopoverPresentationControllerSourceItem:
+        kind: type
+        name: UIPopoverPresentationControllerSourceItem$1
+      c:objc(cy)UILayoutGuide@UIPopoverPresentationControllerSourceItem:
+        kind: type
+        name: UIPopoverPresentationControllerSourceItem$5
+      c:objc(cy)UITab@UIPopoverPresentationControllerSourceItem:
+        kind: type
+        name: UIPopoverPresentationControllerSourceItem$2
+      c:objc(cy)UITabBarItem@UIPopoverPresentationControllerSourceItem:
+        kind: type
+        name: UIPopoverPresentationControllerSourceItem$3
+      c:objc(cy)UIView@UIPopoverPresentationControllerSourceItem:
+        kind: type
+        name: UIPopoverPresentationControllerSourceItem$4
+      c:objc(cy)UIViewController@UINavigationControllerContextualToolbarItems:
+        kind: type
+        name: UINavigationControllerContextualToolbarItems
+      c:objc(cy)UIViewController@UINavigationControllerItem:
+        kind: type
+        name: UINavigationControllerItem
+      c:objc(cy)UIViewController@UIPopoverController:
+        kind: type
+        name: UIPopoverController$1
+      c:objc(cy)UIViewController@UISearchDisplayControllerSupport:
+        kind: type
+        name: UISearchDisplayControllerSupport
+      c:objc(cy)UIViewController@UISplitViewController:
+        kind: type
+        name: UISplitViewController$1
+      c:objc(cy)UIViewController@UITab:
+        kind: type
+        name: UITab$1
+      c:objc(cy)UIViewController@UITabBarControllerItem:
+        kind: type
+        name: UITabBarControllerItem
+      c:objc(pl)UIAdaptivePresentationControllerDelegate:
+        kind: objc-protocol
+        name: UIAdaptivePresentationControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIAdaptivePresentationControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIAlertViewDelegate:
+        kind: objc-protocol
+        name: UIAlertViewDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIAlertViewDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIBarPositioning:
+        kind: objc-protocol
+        name: UIBarPositioning
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarPositioning
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIBarPositioningDelegate:
+        kind: objc-protocol
+        name: UIBarPositioningDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarPositioningDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIContextMenuInteractionAnimating:
+        kind: objc-protocol
+        name: UIContextMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIContextMenuInteractionAnimating
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIContextMenuInteractionCommitAnimating:
+        kind: objc-protocol
+        name: UIContextMenuInteractionCommitAnimating
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIContextMenuInteractionCommitAnimating
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIContextMenuInteractionDelegate:
+        kind: objc-protocol
+        name: UIContextMenuInteractionDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIContextMenuInteractionDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UILookToDictateCapable:
+        kind: objc-protocol
+        name: UILookToDictateCapable
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UILookToDictateCapable
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIMenuBuilder:
+        kind: objc-protocol
+        name: UIMenuBuilder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuBuilder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIMenuLeaf:
+        kind: objc-protocol
+        name: UIMenuLeaf
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIMenuLeaf
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UINavigationBarDelegate:
+        kind: objc-protocol
+        name: UINavigationBarDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINavigationBarDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UINavigationControllerDelegate:
+        kind: objc-protocol
+        name: UINavigationControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINavigationControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UINavigationItemRenameDelegate:
+        kind: objc-protocol
+        name: UINavigationItemRenameDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINavigationItemRenameDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPopoverBackgroundViewMethods:
+        kind: objc-protocol
+        name: UIPopoverBackgroundViewMethods
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPopoverBackgroundViewMethods
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPopoverControllerDelegate:
+        kind: objc-protocol
+        name: UIPopoverControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPopoverControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPopoverPresentationControllerDelegate:
+        kind: objc-protocol
+        name: UIPopoverPresentationControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPopoverPresentationControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPopoverPresentationControllerSourceItem:
+        kind: objc-protocol
+        name: UIPopoverPresentationControllerSourceItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPopoverPresentationControllerSourceItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISearchBarDelegate:
+        kind: objc-protocol
+        name: UISearchBarDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchBarDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISearchControllerDelegate:
+        kind: objc-protocol
+        name: UISearchControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISearchDisplayDelegate:
+        kind: objc-protocol
+        name: UISearchDisplayDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchDisplayDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISearchResultsUpdating:
+        kind: objc-protocol
+        name: UISearchResultsUpdating
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchResultsUpdating
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISearchSuggestion:
+        kind: objc-protocol
+        name: UISearchSuggestion
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchSuggestion
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISearchTextFieldDelegate:
+        kind: objc-protocol
+        name: UISearchTextFieldDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchTextFieldDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISearchTextFieldPasteItem:
+        kind: objc-protocol
+        name: UISearchTextFieldPasteItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISearchTextFieldPasteItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISheetPresentationControllerDelegate:
+        kind: objc-protocol
+        name: UISheetPresentationControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISheetPresentationControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISheetPresentationControllerDetentResolutionContext:
+        kind: objc-protocol
+        name: UISheetPresentationControllerDetentResolutionContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISheetPresentationControllerDetentResolutionContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISplitViewControllerDelegate:
+        kind: objc-protocol
+        name: UISplitViewControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISplitViewControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITabBarControllerDelegate:
+        kind: objc-protocol
+        name: UITabBarControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITabBarControllerSidebarAnimating:
+        kind: objc-protocol
+        name: UITabBarControllerSidebarAnimating
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarControllerSidebarAnimating
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITabBarControllerSidebarDelegate:
+        kind: objc-protocol
+        name: UITabBarControllerSidebarDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarControllerSidebarDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITabBarDelegate:
+        kind: objc-protocol
+        name: UITabBarDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBarDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDataSource:
+        kind: objc-protocol
+        name: UITableViewDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDataSourcePrefetching:
+        kind: objc-protocol
+        name: UITableViewDataSourcePrefetching
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDataSourcePrefetching
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDelegate:
+        kind: objc-protocol
+        name: UITableViewDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDragDelegate:
+        kind: objc-protocol
+        name: UITableViewDragDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDragDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropCoordinator:
+        kind: objc-protocol
+        name: UITableViewDropCoordinator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropCoordinator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropDelegate:
+        kind: objc-protocol
+        name: UITableViewDropDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropItem:
+        kind: objc-protocol
+        name: UITableViewDropItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropPlaceholderContext:
+        kind: objc-protocol
+        name: UITableViewDropPlaceholderContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropPlaceholderContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIToolbarDelegate:
+        kind: objc-protocol
+        name: UIToolbarDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIToolbarDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 2vxpah  id<ObjCProtocol(c:objc(pl)UISheetPresentationControllerDetentResolutionContext)> ":
+        kind: objc-block
+        name: ObjCBlock_CGFloat_idUISheetPresentationControllerDetentResolutionContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Double Function(ffi.Pointer<objc.ObjCObjectImpl>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Double Function(ffi.Pointer<objc.ObjCObjectImpl>)>
+      "~ objcBlock: 2xdhqt  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController) ":
+        kind: objc-block
+        name: ObjCBlock_UISplitViewControllerDisplayMode_ffiVoid_UISplitViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+      "~ objcBlock: 2xdhqt  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  2xdhqt ":
+        kind: objc-block
+        name: ObjCBlock_UISplitViewControllerDisplayMode_ffiVoid_UISplitViewController_UISplitViewControllerDisplayMode
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+      "~ objcBlock: 4m4mar  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_UIContextMenuInteractionCommitStyle_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 4t8jeq  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_CGSize_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 7etsgm  7etsgm*  4m4mar ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIContextMenuInteractionCommitStyle
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  6xn2ih*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  6xn2ih*?  6xn2ih*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ImportedEnum(imp$1.UIMenuElementRepeatBehavior) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIMenuElementRepeatBehavior
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ImportedEnum(imp$1.UIMenuElementState) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIMenuElementState
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSArray_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray, objc.NSString)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)NSArray)  cj5vv2*  6xn2ih*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSArray_objcObjCSelector_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)NSString)  ObjCBlock(~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSArray) ) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIMenuIdentifier_NSArrayNSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.ObjCBlock<objc.NSArray Function(objc.NSArray)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.ObjCBlock<objc.NSArray Function(objc.NSArray)>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSArray)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)UIMenu) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIMenuIdentifier_UIMenu
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, UIMenu)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, UIMenu)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIAlertView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIAlertView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIAlertView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIAlertView)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIAlertView)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIAlertView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIAlertView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIAlertView, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIContextMenuInteraction)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  id<ObjCProtocol(c:objc(pl)UIContextMenuInteractionAnimating)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIContextMenuInteraction_UIContextMenuConfiguration_idUIContextMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIContextMenuInteraction)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  id<ObjCProtocol(c:objc(pl)UIContextMenuInteractionCommitAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIContextMenuInteraction_UIContextMenuConfiguration_idUIContextMenuInteractionCommitAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIImage)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIImage
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIImage?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIImage?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIMenu)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIMenu_UIMenuIdentifier
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIMenu, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIMenu, objc.NSString)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UINavigationBar)  ObjCInterface(c:objc(cs)UINavigationItem) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UINavigationBar_UINavigationItem
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UINavigationBar, UINavigationItem)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UINavigationBar, UINavigationItem)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UINavigationController)  ObjCInterface(c:objc(cs)UIViewController)  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UINavigationController_UIViewController_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UINavigationController, imp$1.UIViewController, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UINavigationController, imp$1.UIViewController, ffi.Bool)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UINavigationItem)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UINavigationItem_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UINavigationItem, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UINavigationItem, objc.NSString)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPopoverController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPopoverController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPopoverController)  8d1i6x*  ObjCInterface(c:objc(cs)UIView)* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPopoverController_CGRect_UIView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverController, ffi.Pointer<objc.CGRect>, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverController, ffi.Pointer<objc.CGRect>, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPopoverPresentationController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPopoverPresentationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverPresentationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverPresentationController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPopoverPresentationController)  8d1i6x*  ObjCInterface(c:objc(cs)UIView)* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPopoverPresentationController_CGRect_UIView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverPresentationController, ffi.Pointer<objc.CGRect>, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPopoverPresentationController, ffi.Pointer<objc.CGRect>, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPresentationController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPresentationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPresentationController)  ImportedEnum(imp$1.UIModalPresentationStyle)  id<ObjCProtocol(c:objc(pl)UIViewControllerTransitionCoordinator)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPresentationController_UIModalPresentationStyle_idUIViewControllerTransitionCoordinator
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, ffi.Long, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, ffi.Long, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPresentationController)  ObjCInterface(c:objc(cs)UIPresentationController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPresentationController_UIPresentationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, imp$1.UIPresentationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, imp$1.UIPresentationController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchBar) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchBar
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchBar)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchBar)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchBar)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchBar_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchBar, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchBar, objc.NSString)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchBar)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchBar_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchBar, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchBar, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchController)  g3l45h ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchController_UINavigationItemSearchBarPlacement
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchController, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchController)  id<ObjCProtocol(c:objc(pl)UISearchSuggestion)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchController_idUISearchSuggestion
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchController, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchController, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchDisplayController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchDisplayController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchDisplayController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchDisplayController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchDisplayController)  ObjCInterface(c:objc(cs)UITableView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchDisplayController_UITableView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchDisplayController, UITableView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchDisplayController, UITableView)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchTextField)  id<ObjCProtocol(c:objc(pl)UISearchSuggestion)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchTextField_idUISearchSuggestion
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchTextField, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchTextField, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISearchToken) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISearchToken
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchToken)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISearchToken)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISheetPresentationController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISheetPresentationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISheetPresentationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISheetPresentationController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISplitViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  2xdhqt ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISplitViewController_UISplitViewControllerDisplayMode
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  ObjCInterface(c:objc(cs)UIPopoverController)  ObjCInterface(c:objc(cs)UIViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISplitViewController_UIPopoverController_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, UIPopoverController, imp$1.UIViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, UIPopoverController, imp$1.UIViewController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  ObjCInterface(c:objc(cs)UIViewController)  ObjCInterface(c:objc(cs)UIBarButtonItem) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISplitViewController_UIViewController_UIBarButtonItem
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, UIBarButtonItem)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, UIBarButtonItem)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  ObjCInterface(c:objc(cs)UIViewController)  ObjCInterface(c:objc(cs)UIBarButtonItem)  ObjCInterface(c:objc(cs)UIPopoverController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISplitViewController_UIViewController_UIBarButtonItem_UIPopoverController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, UIBarButtonItem, UIPopoverController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, UIBarButtonItem, UIPopoverController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  aqiq16 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UISplitViewController_UISplitViewControllerColumn
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBar)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBar_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBar, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBar, objc.NSArray)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBar)  ObjCInterface(c:objc(cs)NSArray)  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBar_NSArray_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBar, objc.NSArray, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBar, objc.NSArray, ffi.Bool)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBar)  ObjCInterface(c:objc(cs)UITabBarItem) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBar_UITabBarItem
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBar, UITabBarItem)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBar, UITabBarItem)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, objc.NSArray)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)NSArray)  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_NSArray_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, objc.NSArray, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, objc.NSArray, ffi.Bool)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITab)  ObjCInterface(c:objc(cs)UITab)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UITab_UITab
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, UITab?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, UITab?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITab)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UITab_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  ObjCInterface(c:objc(cs)UIAction)  ObjCInterface(c:objc(cs)UITabGroup)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UITabBarControllerSidebar_UIAction_UITabGroup_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, imp$5.UIAction, UITabGroup, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, imp$5.UIAction, UITabGroup, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  ObjCInterface(c:objc(cs)UITab) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UITabBarControllerSidebar_UITab
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITab)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITab)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  ObjCInterface(c:objc(cs)UITabSidebarItem) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UITabBarControllerSidebar_UITabSidebarItem
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITabSidebarItem)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITabSidebarItem)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  id<ObjCProtocol(c:objc(pl)UITabBarControllerSidebarAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UITabBarControllerSidebar_idUITabBarControllerSidebarAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabGroup) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UITabGroup
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabGroup)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabGroup)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UIViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITabBarController_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, imp$1.UIViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITabBarController, imp$1.UIViewController)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UITableView)  ImportedEnum(imp$7.UITableViewCellEditingStyle)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_UITableViewCellEditingStyle_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long, imp$7.NSIndexPath)>"
+      "~ objcBlock: 7etsgm  7etsgm*  cj5vv2*  6xn2ih*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCSelector_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 7etsgm  7etsgm*  cj5vv2*  6xn2ih*?  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCSelector_objcObjCObjectImpl_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?, objc.NSArray)>"
+      "~ objcBlock: 7etsgm  ObjCInterface(c:objc(cs)UIAlertAction) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIAlertAction
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UIAlertAction)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UIAlertAction)>
+      "~ objcBlock: 7etsgm  ObjCInterface(c:objc(cs)UITextField) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UITextField
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(imp$6.UITextField)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(imp$6.UITextField)>
+      "~ objcBlock: 8d1i6x  7etsgm*  ObjCInterface(c:objc(cs)UIView) ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_UIView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, imp$1.UIView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, imp$1.UIView)>"
+      "~ objcBlock: ImportedEnum(imp$1.UIInterfaceOrientation)  7etsgm*  ObjCInterface(c:objc(cs)UINavigationController) ":
+        kind: objc-block
+        name: ObjCBlock_UIInterfaceOrientation_ffiVoid_UINavigationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UINavigationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UINavigationController)>"
+      "~ objcBlock: ImportedEnum(imp$1.UIInterfaceOrientation)  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController) ":
+        kind: objc-block
+        name: ObjCBlock_UIInterfaceOrientation_ffiVoid_UISplitViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+      "~ objcBlock: ImportedEnum(imp$1.UIInterfaceOrientation)  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController) ":
+        kind: objc-block
+        name: ObjCBlock_UIInterfaceOrientation_ffiVoid_UITabBarController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITabBarController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITabBarController)>"
+      "~ objcBlock: ImportedEnum(imp$1.UIMenuElementRepeatBehavior)  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_UIMenuElementRepeatBehavior_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ImportedEnum(imp$1.UIMenuElementState)  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_UIMenuElementState_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ImportedEnum(imp$1.UIModalPresentationStyle)  7etsgm*  ObjCInterface(c:objc(cs)UIPresentationController) ":
+        kind: objc-block
+        name: ObjCBlock_UIModalPresentationStyle_ffiVoid_UIPresentationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController)>"
+      "~ objcBlock: ImportedEnum(imp$1.UIModalPresentationStyle)  7etsgm*  ObjCInterface(c:objc(cs)UIPresentationController)  ObjCInterface(c:objc(cs)UITraitCollection) ":
+        kind: objc-block
+        name: ObjCBlock_UIModalPresentationStyle_ffiVoid_UIPresentationController_UITraitCollection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, imp$1.UITraitCollection)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, imp$1.UITraitCollection)>"
+      "~ objcBlock: ImportedEnum(imp$6.UIDropOperation)  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITab)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_UIDropOperation_ffiVoid_UITabBarController_UITab_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ImportedEnum(imp$6.UIDropOperation)  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  ObjCInterface(c:objc(cs)UIAction)  ObjCInterface(c:objc(cs)UITabGroup)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_UIDropOperation_ffiVoid_UITabBarController_UITabBarControllerSidebar_UIAction_UITabGroup_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, imp$5.UIAction, UITabGroup, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, imp$5.UIAction, UITabGroup, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ImportedEnum(imp$7.UITableViewCellAccessoryType)  7etsgm*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewCellAccessoryType_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, imp$7.NSIndexPath)>"
+      "~ objcBlock: ImportedEnum(imp$7.UITableViewCellEditingStyle)  7etsgm*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewCellEditingStyle_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITab)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITabBarController_UITab_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  id<ObjCProtocol(c:objc(pl)UIDragSession)>  ObjCInterface(c:objc(cs)UITab) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITabBarController_UITabBarControllerSidebar_idUIDragSession_UITab
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, ffi.Pointer<objc.ObjCObjectImpl>, UITab)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, ffi.Pointer<objc.ObjCObjectImpl>, UITab)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  7etsgm*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDragSession)>  ObjCInterface(c:objc(cs)NSIndexPath)  caordw ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITableView_idUIDragSession_NSIndexPath_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSArray Function(objc.NSArray)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSArray Function(objc.NSArray)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)?  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSItemProvider)  7etsgm*  ObjCInterface(c:objc(cs)UISearchTextField)  ObjCInterface(c:objc(cs)UISearchToken) ":
+        kind: objc-block
+        name: ObjCBlock_NSItemProvider_ffiVoid_UISearchTextField_UISearchToken
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSItemProvider Function(ffi.Pointer<ffi.Void>, UISearchTextField, UISearchToken)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSItemProvider Function(ffi.Pointer<ffi.Void>, UISearchTextField, UISearchToken)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)  7etsgm*  ObjCInterface(c:objc(cs)UINavigationItem)  ObjCInterface(c:objc(cs)NSString)  63g8et* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_UINavigationItem_NSString_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>, UINavigationItem, objc.NSString, ffi.Pointer<objc.NSRange>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>, UINavigationItem, objc.NSString, ffi.Pointer<objc.NSRange>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIAction)?  7etsgm*  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_UIAction_ffiVoid_UIActionIdentifier
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$5.UIAction? Function(ffi.Pointer<ffi.Void>, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$5.UIAction? Function(ffi.Pointer<ffi.Void>, objc.NSString)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICommand)?  7etsgm*  cj5vv2*  6xn2ih*? ":
+        kind: objc-block
+        name: ObjCBlock_UICommand_ffiVoid_objcObjCSelector_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$5.UICommand? Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$5.UICommand? Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIContextMenuConfiguration)?  7etsgm*  ObjCInterface(c:objc(cs)UIContextMenuInteraction)  caordw ":
+        kind: objc-block
+        name: ObjCBlock_UIContextMenuConfiguration_ffiVoid_UIContextMenuInteraction_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIContextMenuConfiguration)?  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  ObjCInterface(c:objc(cs)UITab) ":
+        kind: objc-block
+        name: ObjCBlock_UIContextMenuConfiguration_ffiVoid_UITabBarController_UITabBarControllerSidebar_UITab
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITab)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITab)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIContextMenuConfiguration)?  7etsgm*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath)  caordw ":
+        kind: objc-block
+        name: ObjCBlock_UIContextMenuConfiguration_ffiVoid_UITableView_NSIndexPath_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITableView, imp$7.NSIndexPath, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITableView, imp$7.NSIndexPath, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIImage)?  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_UIImage_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIImage? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIImage? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)  ObjCInterface(c:objc(cs)UIMenu) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_UIMenu
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UIMenu Function(UIMenu)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UIMenu Function(UIMenu)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  7etsgm*  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_ffiVoid_UIMenuIdentifier
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIMenu? Function(ffi.Pointer<ffi.Void>, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIMenu? Function(ffi.Pointer<ffi.Void>, objc.NSString)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenuSystem)  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_UIMenuSystem_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UIMenuSystem Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UIMenuSystem Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UISwipeActionsConfiguration)?  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  ObjCInterface(c:objc(cs)UITab) ":
+        kind: objc-block
+        name: ObjCBlock_UISwipeActionsConfiguration_ffiVoid_UITabBarController_UITabBarControllerSidebar_UITab
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$7.UISwipeActionsConfiguration? Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITab)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$7.UISwipeActionsConfiguration? Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITab)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITabSidebarItem)  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITabBarControllerSidebar)  ObjCInterface(c:objc(cs)UITabSidebarItemRequest) ":
+        kind: objc-block
+        name: ObjCBlock_UITabSidebarItem_ffiVoid_UITabBarController_UITabBarControllerSidebar_UITabSidebarItemRequest
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITabSidebarItem Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITabSidebarItemRequest)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITabSidebarItem Function(ffi.Pointer<ffi.Void>, UITabBarController, UITabBarControllerSidebar, UITabSidebarItemRequest)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITargetedPreview)?  7etsgm*  ObjCInterface(c:objc(cs)UIContextMenuInteraction)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration) ":
+        kind: objc-block
+        name: ObjCBlock_UITargetedPreview_ffiVoid_UIContextMenuInteraction_UIContextMenuConfiguration
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITargetedPreview)?  7etsgm*  ObjCInterface(c:objc(cs)UIContextMenuInteraction)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  id<ObjCProtocol(c:objc(pl)NSCopying)> ":
+        kind: objc-block
+        name: ObjCBlock_UITargetedPreview_ffiVoid_UIContextMenuInteraction_UIContextMenuConfiguration_idNSCopying
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UIContextMenuInteraction, UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIViewController)  ObjCInterface(c:objc(cs)UITab) ":
+        kind: objc-block
+        name: ObjCBlock_UIViewController_UITab
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIViewController Function(UITab)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIViewController Function(UITab)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIViewController)? ":
+        kind: objc-block
+        name: ObjCBlock_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIViewController? Function()>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIViewController? Function()>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIViewController)?  7etsgm*  ObjCInterface(c:objc(cs)UIPresentationController)  ImportedEnum(imp$1.UIModalPresentationStyle) ":
+        kind: objc-block
+        name: ObjCBlock_UIViewController_ffiVoid_UIPresentationController_UIModalPresentationStyle
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIViewController? Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIViewController? Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIViewController)?  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController) ":
+        kind: objc-block
+        name: ObjCBlock_UIViewController_ffiVoid_UISplitViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIViewController? Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIViewController? Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIViewController)?  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  ObjCInterface(c:objc(cs)UIViewController) ":
+        kind: objc-block
+        name: ObjCBlock_UIViewController_ffiVoid_UISplitViewController_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIViewController? Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIViewController? Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController)>"
+      "~ objcBlock: aqiq16  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  aqiq16 ":
+        kind: objc-block
+        name: ObjCBlock_UISplitViewControllerColumn_ffiVoid_UISplitViewController_UISplitViewControllerColumn
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UISplitViewController, ffi.Long)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UIAlertView) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UIAlertView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIAlertView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIAlertView)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UINavigationBar)  ObjCInterface(c:objc(cs)UINavigationItem) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UINavigationBar_UINavigationItem
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UINavigationBar, UINavigationItem)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UINavigationBar, UINavigationItem)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UINavigationItem) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UINavigationItem
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UINavigationItem)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UINavigationItem)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UINavigationItem)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UINavigationItem_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UINavigationItem, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UINavigationItem, objc.NSString)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UIPopoverController) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UIPopoverController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIPopoverController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIPopoverController)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UIPopoverPresentationController) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UIPopoverPresentationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIPopoverPresentationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIPopoverPresentationController)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UIPresentationController) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UIPresentationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, imp$1.UIPresentationController)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISearchBar) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISearchBar
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchBar)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchBar)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISearchBar)  63g8et  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISearchBar_NSRange_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchBar, objc.NSRange, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchBar, objc.NSRange, objc.NSString)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISearchBar)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISearchBar_NSArray_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchBar, objc.NSArray, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchBar, objc.NSArray, objc.NSString)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISearchDisplayController)  ObjCInterface(c:objc(cs)NSString)? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISearchDisplayController_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchDisplayController, objc.NSString?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchDisplayController, objc.NSString?)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISearchDisplayController)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISearchDisplayController_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchDisplayController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISearchDisplayController, ffi.Long)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  ObjCInterface(c:objc(cs)UIViewController)  6xn2ih*? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISplitViewController_UIViewController_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  ObjCInterface(c:objc(cs)UIViewController)  ImportedEnum(imp$1.UIInterfaceOrientation) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISplitViewController_UIViewController_UIInterfaceOrientation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, ffi.Long)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController)  ObjCInterface(c:objc(cs)UIViewController)  ObjCInterface(c:objc(cs)UIViewController) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UISplitViewController_UIViewController_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, imp$1.UIViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UISplitViewController, imp$1.UIViewController, imp$1.UIViewController)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UITab) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITabBarController_UITab
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITabBarController, UITab)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UIViewController) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITabBarController_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITabBarController, imp$1.UIViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITabBarController, imp$1.UIViewController)>"
+      "~ objcBlock: ews01f  7etsgm*  ObjCInterface(c:objc(cs)UINavigationController) ":
+        kind: objc-block
+        name: ObjCBlock_UIInterfaceOrientationMask_ffiVoid_UINavigationController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UINavigationController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UINavigationController)>"
+      "~ objcBlock: ews01f  7etsgm*  ObjCInterface(c:objc(cs)UISplitViewController) ":
+        kind: objc-block
+        name: ObjCBlock_UIInterfaceOrientationMask_ffiVoid_UISplitViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UISplitViewController)>"
+      "~ objcBlock: ews01f  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController) ":
+        kind: objc-block
+        name: ObjCBlock_UIInterfaceOrientationMask_ffiVoid_UITabBarController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UITabBarController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, UITabBarController)>"
+      "~ objcBlock: f7a38e  7etsgm*  ObjCInterface(c:objc(cs)UINavigationBar) ":
+        kind: objc-block
+        name: ObjCBlock_UINavigationBarNSToolbarSection_ffiVoid_UINavigationBar
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UINavigationBar)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UINavigationBar)>"
+      "~ objcBlock: gg1jms  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_UIBarPosition_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: gg1jms  7etsgm*  id<ObjCProtocol(c:objc(pl)UIBarPositioning)> ":
+        kind: objc-block
+        name: ObjCBlock_UIBarPosition_ffiVoid_idUIBarPositioning
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  7etsgm*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)NSIndexPath)  8d1i6x ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragAnimating_ffiVoid_UIDragItem_NSIndexPath_CGRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.NSIndexPath, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.NSIndexPath, objc.CGRect)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIPopoverPresentationControllerSourceItem)>?  7etsgm* ":
+        kind: objc-block
+        name: ObjCBlock_idUIPopoverPresentationControllerSourceItem_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIViewControllerAnimatedTransitioning)>?  7etsgm*  ObjCInterface(c:objc(cs)UINavigationController)  aqvef8  ObjCInterface(c:objc(cs)UIViewController)  ObjCInterface(c:objc(cs)UIViewController) ":
+        kind: objc-block
+        name: ObjCBlock_idUIViewControllerAnimatedTransitioning_ffiVoid_UINavigationController_UINavigationControllerOperation_UIViewController_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UINavigationController, ffi.Long, imp$1.UIViewController, imp$1.UIViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UINavigationController, ffi.Long, imp$1.UIViewController, imp$1.UIViewController)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIViewControllerAnimatedTransitioning)>?  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  ObjCInterface(c:objc(cs)UIViewController)  ObjCInterface(c:objc(cs)UIViewController) ":
+        kind: objc-block
+        name: ObjCBlock_idUIViewControllerAnimatedTransitioning_ffiVoid_UITabBarController_UIViewController_UIViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UITabBarController, imp$1.UIViewController, imp$1.UIViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UITabBarController, imp$1.UIViewController, imp$1.UIViewController)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIViewControllerInteractiveTransitioning)>?  7etsgm*  ObjCInterface(c:objc(cs)UINavigationController)  id<ObjCProtocol(c:objc(pl)UIViewControllerAnimatedTransitioning)> ":
+        kind: objc-block
+        name: ObjCBlock_idUIViewControllerInteractiveTransitioning_ffiVoid_UINavigationController_idUIViewControllerAnimatedTransitioning
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UINavigationController, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UINavigationController, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIViewControllerInteractiveTransitioning)>?  7etsgm*  ObjCInterface(c:objc(cs)UITabBarController)  id<ObjCProtocol(c:objc(pl)UIViewControllerAnimatedTransitioning)> ":
+        kind: objc-block
+        name: ObjCBlock_idUIViewControllerInteractiveTransitioning_ffiVoid_UITabBarController_idUIViewControllerAnimatedTransitioning
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UITabBarController, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, UITabBarController, ffi.Pointer<objc.ObjCObjectImpl>)>"

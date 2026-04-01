@@ -1,0 +1,54 @@
+format_version: 1.2.0
+files:
+  package:objc_uikit_split/src/uikit_gestures_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@UISwipeGestureRecognizerDirection:
+        kind: enum
+        name: UISwipeGestureRecognizerDirection
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:objc(cs)UILongPressGestureRecognizer:
+        kind: objc-interface
+        name: UILongPressGestureRecognizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UILongPressGestureRecognizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPanGestureRecognizer:
+        kind: objc-interface
+        name: UIPanGestureRecognizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPanGestureRecognizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPinchGestureRecognizer:
+        kind: objc-interface
+        name: UIPinchGestureRecognizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPinchGestureRecognizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIRotationGestureRecognizer:
+        kind: objc-interface
+        name: UIRotationGestureRecognizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIRotationGestureRecognizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIScreenEdgePanGestureRecognizer:
+        kind: objc-interface
+        name: UIScreenEdgePanGestureRecognizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIScreenEdgePanGestureRecognizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISwipeGestureRecognizer:
+        kind: objc-interface
+        name: UISwipeGestureRecognizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISwipeGestureRecognizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITapGestureRecognizer:
+        kind: objc-interface
+        name: UITapGestureRecognizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITapGestureRecognizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>

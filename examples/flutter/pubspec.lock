@@ -194,10 +194,24 @@ packages:
       relative: true
     source: path
     version: "0.1.0"
+  objc_appkit_split:
+    dependency: "direct main"
+    description:
+      path: "../../packages/objc-appkit-split"
+      relative: true
+    source: path
+    version: "0.1.0"
   objc_uikit:
     dependency: "direct main"
     description:
       path: "../../packages/objc-uikit"
+      relative: true
+    source: path
+    version: "0.1.0"
+  objc_uikit_split:
+    dependency: "direct main"
+    description:
+      path: "../../packages/objc-uikit-split"
       relative: true
     source: path
     version: "0.1.0"

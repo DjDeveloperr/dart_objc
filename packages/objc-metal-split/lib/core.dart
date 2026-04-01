@@ -1,0 +1,1 @@
+export 'src/metal_core_bindings.dart' hide ObjCBlock_MTLFunctionType_ffiVoid, ObjCBlock_MTLFunctionType_ffiVoid$CallExtension, ObjCBlock_NSString_ffiVoid, ObjCBlock_NSString_ffiVoid$CallExtension, ObjCBlock_ffiVoid_ffiVoid_NSString, ObjCBlock_ffiVoid_ffiVoid_NSString$CallExtension;

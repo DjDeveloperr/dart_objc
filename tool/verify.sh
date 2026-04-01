@@ -82,10 +82,16 @@ analysis_paths=(
   packages/objc-appkit/lib/src/flutter_views.dart
   packages/objc-appkit/lib/src/flutter_views_bindings.dart
   packages/objc-appkit/hook/build.dart
+  packages/objc-appkit-split/lib/objc_appkit_split.dart
+  packages/objc-appkit-split/lib/all.dart
   packages/objc-foundation/lib/objc_foundation.dart
   packages/objc-metal/lib/objc_metal.dart
+  packages/objc-metal-split/lib/objc_metal_split.dart
+  packages/objc-metal-split/lib/all.dart
   packages/objc-metalkit/lib/objc_metalkit.dart
   packages/objc-uikit/lib/objc_uikit.dart
+  packages/objc-uikit-split/lib/objc_uikit_split.dart
+  packages/objc-uikit-split/lib/all.dart
   packages/objc-uikit/lib/flutter_views.dart
   packages/objc-uikit/lib/src/flutter_views.dart
   packages/objc-uikit/lib/src/flutter_views_bindings.dart

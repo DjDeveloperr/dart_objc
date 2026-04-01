@@ -17,7 +17,8 @@ echo "==> dart pub get (objective_c package)"
 (cd ffigen/pkgs/objective_c && dart pub get)
 
 echo "==> regenerate ObjC packages"
-dart run tool/gen_objc_packages.dart foundation appkit uikit metal metalkit
+dart tool/gen_objc_packages.dart foundation appkit uikit metal metalkit
+dart tool/gen_objc_packages.dart --layout split metal uikit appkit
 
 echo "==> flutter pub get (examples/flutter)"
 (cd examples/flutter && flutter pub get)

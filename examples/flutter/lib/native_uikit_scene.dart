@@ -2,8 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:objective_c/objective_c.dart';
-import 'package:objc_uikit/objc_uikit.dart';
 import 'package:objc_uikit/flutter_views.dart';
+import 'package:objc_uikit_split/bars.dart';
+import 'package:objc_uikit_split/core.dart';
 
 const objcUiKitTabBarViewType = 'objc-uikit-tab-bar';
 const _kTabBarHeight = 49.0;
@@ -11,6 +12,15 @@ const _kContentHorizontalPadding = 24.0;
 const _kContentTopPadding = 28.0;
 const _kContentBottomPadding = 24.0;
 const _kDemoSurfaceColor = Color(0xFFF6F2EB);
+
+UITabBar _newTabBar() => UITabBar();
+
+UITabBarItem _newTabBarItem(ObjcUiKitTab tab) => UITabBarItem.as(
+  UITabBarItem.as(
+    UITabBarItem.alloc(),
+  ).initWithTitleImageTag(tab.title.toNSString(), tag: tab.tag),
+);
+
 
 class ObjcUiKitTabShell extends StatefulWidget {
   const ObjcUiKitTabShell({super.key});
@@ -574,19 +584,13 @@ final class ObjcUiKitTabBarScene {
     required List<UITabBarItem> items,
     required UITabBarDelegate delegate,
   }) {
-    final tabBar = UITabBar.alloc().init();
-    final appearance = UITabBarAppearance.alloc().init();
+    final tabBar = _newTabBar();
+    final appearance = UITabBarAppearance();
     appearance.configureWithTransparentBackground();
-    appearance.backgroundEffect = UIBlurEffect.effectWithStyle(
-      UIBlurEffectStyle.UIBlurEffectStyleSystemChromeMaterialLight,
-    );
-    appearance.backgroundColor = UIColor.getClearColor();
-    tabBar.backgroundColor = UIColor.getClearColor();
     tabBar.isOpaque = false;
     tabBar.isTranslucent = true;
     tabBar.clipsToBounds = false;
-    tabBar.itemPositioning =
-        UITabBarItemPositioning.UITabBarItemPositioningFill;
+    tabBar.itemPositioning = UITabBarItemPositioning.UITabBarItemPositioningFill;
     tabBar.standardAppearance = appearance;
     tabBar.scrollEdgeAppearance = appearance;
     tabBar.items = NSArray.of(items);
@@ -595,14 +599,7 @@ final class ObjcUiKitTabBarScene {
     return tabBar;
   }
 
-  static UITabBarItem _buildItem(ObjcUiKitTab tab) {
-    final image = UIImage.systemImageNamed(tab.symbolName.toNSString());
-    return UITabBarItem.alloc().initWithTitleImageTag(
-      tab.title.toNSString(),
-      image: image,
-      tag: tab.tag,
-    );
-  }
+  static UITabBarItem _buildItem(ObjcUiKitTab tab) => _newTabBarItem(tab);
 }
 
 final class _NativeTabBarDelegate

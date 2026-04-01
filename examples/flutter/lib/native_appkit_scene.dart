@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:objective_c/objective_c.dart';
-import 'package:objc_appkit/objc_appkit.dart';
+import 'package:objc_appkit_split/objc_appkit_split.dart';
 import 'package:objc_appkit/flutter_views.dart';
 
 const objcAppKitDemoViewType = 'objc-appkit-demo-view';

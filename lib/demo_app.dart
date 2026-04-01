@@ -2,8 +2,8 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 import 'package:objective_c/objective_c.dart';
-import 'package:objc_appkit/objc_appkit.dart';
-import 'package:objc_metal/objc_metal.dart' as metal;
+import 'package:objc_appkit_split/objc_appkit_split.dart';
+import 'package:objc_metal_split/objc_metal_split.dart' as metal;
 import 'package:objc_metalkit/objc_metalkit.dart' as metalkit;
 import 'package:objective_c/objective_c.dart' as objc;
 

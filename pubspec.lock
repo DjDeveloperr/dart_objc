@@ -259,6 +259,13 @@ packages:
       relative: true
     source: path
     version: "0.1.0"
+  objc_appkit_split:
+    dependency: "direct main"
+    description:
+      path: "packages/objc-appkit-split"
+      relative: true
+    source: path
+    version: "0.1.0"
   objc_foundation:
     dependency: "direct main"
     description:
@@ -270,6 +277,13 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/objc-metal"
+      relative: true
+    source: path
+    version: "0.1.0"
+  objc_metal_split:
+    dependency: "direct main"
+    description:
+      path: "packages/objc-metal-split"
       relative: true
     source: path
     version: "0.1.0"

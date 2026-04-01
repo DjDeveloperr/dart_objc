@@ -12,10 +12,14 @@ dependencies:
   objective_c: ^9.3.0
   objc_appkit:
     path: packages/objc-appkit
+  objc_appkit_split:
+    path: packages/objc-appkit-split
   objc_foundation:
     path: packages/objc-foundation
   objc_metal:
     path: packages/objc-metal
+  objc_metal_split:
+    path: packages/objc-metal-split
   objc_metalkit:
     path: packages/objc-metalkit
   path: ^1.9.0

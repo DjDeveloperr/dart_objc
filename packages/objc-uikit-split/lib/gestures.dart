@@ -1,0 +1,1 @@
+export 'src/uikit_gestures_bindings.dart' hide UIPanGestureRecognizer, UIPanGestureRecognizer$Methods, UIScreenEdgePanGestureRecognizer, UIScreenEdgePanGestureRecognizer$Methods;

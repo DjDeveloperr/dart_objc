@@ -1,0 +1,488 @@
+format_version: 1.2.0
+files:
+  package:objc_uikit_split/src/uikit_controls_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@UIActionSheetStyle:
+        kind: enum
+        name: UIActionSheetStyle
+        c-type: ffi.Long
+        dart-type: UIActionSheetStyle
+        ffi-dart-type: int
+      c:@E@UIBarMetrics:
+        kind: enum
+        name: UIBarMetrics
+        c-type: ffi.Long
+        dart-type: UIBarMetrics
+        ffi-dart-type: int
+      c:@E@UIButtonConfigurationCornerStyle:
+        kind: enum
+        name: UIButtonConfigurationCornerStyle
+        c-type: ffi.Long
+        dart-type: UIButtonConfigurationCornerStyle
+        ffi-dart-type: int
+      c:@E@UIButtonConfigurationIndicator:
+        kind: enum
+        name: UIButtonConfigurationIndicator
+        c-type: ffi.Long
+        dart-type: UIButtonConfigurationIndicator
+        ffi-dart-type: int
+      c:@E@UIButtonConfigurationMacIdiomStyle:
+        kind: enum
+        name: UIButtonConfigurationMacIdiomStyle
+        c-type: ffi.Long
+        dart-type: UIButtonConfigurationMacIdiomStyle
+        ffi-dart-type: int
+      c:@E@UIButtonConfigurationSize:
+        kind: enum
+        name: UIButtonConfigurationSize
+        c-type: ffi.Long
+        dart-type: UIButtonConfigurationSize
+        ffi-dart-type: int
+      c:@E@UIButtonConfigurationTitleAlignment:
+        kind: enum
+        name: UIButtonConfigurationTitleAlignment
+        c-type: ffi.Long
+        dart-type: UIButtonConfigurationTitleAlignment
+        ffi-dart-type: int
+      c:@E@UIButtonType:
+        kind: enum
+        name: UIButtonType
+        c-type: ffi.Long
+        dart-type: UIButtonType
+        ffi-dart-type: int
+      c:@E@UIContextMenuConfigurationElementOrder:
+        kind: enum
+        name: UIContextMenuConfigurationElementOrder
+        c-type: ffi.Long
+        dart-type: UIContextMenuConfigurationElementOrder
+        ffi-dart-type: int
+      c:@E@UIDatePickerMode:
+        kind: enum
+        name: UIDatePickerMode
+        c-type: ffi.Long
+        dart-type: UIDatePickerMode
+        ffi-dart-type: int
+      c:@E@UIDatePickerStyle:
+        kind: enum
+        name: UIDatePickerStyle
+        c-type: ffi.Long
+        dart-type: UIDatePickerStyle
+        ffi-dart-type: int
+      c:@E@UIPageControlBackgroundStyle:
+        kind: enum
+        name: UIPageControlBackgroundStyle
+        c-type: ffi.Long
+        dart-type: UIPageControlBackgroundStyle
+        ffi-dart-type: int
+      c:@E@UIPageControlDirection:
+        kind: enum
+        name: UIPageControlDirection
+        c-type: ffi.Long
+        dart-type: UIPageControlDirection
+        ffi-dart-type: int
+      c:@E@UIPageControlInteractionState:
+        kind: enum
+        name: UIPageControlInteractionState
+        c-type: ffi.Long
+        dart-type: UIPageControlInteractionState
+        ffi-dart-type: int
+      c:@E@UISegmentedControlSegment:
+        kind: enum
+        name: UISegmentedControlSegment
+        c-type: ffi.Long
+        dart-type: UISegmentedControlSegment
+        ffi-dart-type: int
+      c:@E@UISegmentedControlStyle:
+        kind: enum
+        name: UISegmentedControlStyle
+        c-type: ffi.Long
+        dart-type: UISegmentedControlStyle
+        ffi-dart-type: int
+      c:@E@UISliderStyle:
+        kind: enum
+        name: UISliderStyle
+        c-type: ffi.Long
+        dart-type: UISliderStyle
+        ffi-dart-type: int
+      c:@E@UISwitchStyle:
+        kind: enum
+        name: UISwitchStyle
+        c-type: ffi.Long
+        dart-type: UISwitchStyle
+        ffi-dart-type: int
+      c:@S@UIOffset:
+        kind: type
+        name: UIOffset
+        c-type: UIOffset
+        dart-type: UIOffset
+        ffi-dart-type: UIOffset
+      c:objc(cs)NSCalendar:
+        kind: objc-interface
+        name: NSCalendar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSCalendar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTimeZone:
+        kind: objc-interface
+        name: NSTimeZone
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTimeZone
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIAction:
+        kind: objc-interface
+        name: UIAction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIAction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIActionSheet:
+        kind: objc-interface
+        name: UIActionSheet
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIActionSheet
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIButton:
+        kind: objc-interface
+        name: UIButton
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIButton
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIButtonConfiguration:
+        kind: objc-interface
+        name: UIButtonConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIButtonConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICommand:
+        kind: objc-interface
+        name: UICommand
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICommand
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICommandAlternate:
+        kind: objc-interface
+        name: UICommandAlternate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICommandAlternate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIControl:
+        kind: objc-interface
+        name: UIControl
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIControl
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDatePicker:
+        kind: objc-interface
+        name: UIDatePicker
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDatePicker
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIHoverStyle:
+        kind: objc-interface
+        name: UIHoverStyle
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIHoverStyle
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImageView:
+        kind: objc-interface
+        name: UIImageView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImageView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UILabel:
+        kind: objc-interface
+        name: UILabel
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UILabel
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPageControl:
+        kind: objc-interface
+        name: UIPageControl
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPageControl
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPageControlProgress:
+        kind: objc-interface
+        name: UIPageControlProgress
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPageControlProgress
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPageControlTimerProgress:
+        kind: objc-interface
+        name: UIPageControlTimerProgress
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPageControlTimerProgress
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPickerView:
+        kind: objc-interface
+        name: UIPickerView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPickerView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPointerEffect:
+        kind: objc-interface
+        name: UIPointerEffect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPointerEffect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPointerShape:
+        kind: objc-interface
+        name: UIPointerShape
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPointerShape
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPointerStyle:
+        kind: objc-interface
+        name: UIPointerStyle
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPointerStyle
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISegmentedControl:
+        kind: objc-interface
+        name: UISegmentedControl
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISegmentedControl
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISlider:
+        kind: objc-interface
+        name: UISlider
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISlider
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISliderTick:
+        kind: objc-interface
+        name: UISliderTick
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISliderTick
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISliderTrackConfiguration:
+        kind: objc-interface
+        name: UISliderTrackConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISliderTrackConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIStepper:
+        kind: objc-interface
+        name: UIStepper
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIStepper
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISwitch:
+        kind: objc-interface
+        name: UISwitch
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISwitch
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISymbolContentTransition:
+        kind: objc-interface
+        name: UISymbolContentTransition
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISymbolContentTransition
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITabBar:
+        kind: objc-interface
+        name: UITabBar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITabBar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIToolbar:
+        kind: objc-interface
+        name: UIToolbar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIToolbar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIActionSheetDelegate:
+        kind: objc-protocol
+        name: UIActionSheetDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIActionSheetDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIBarPositioning:
+        kind: objc-protocol
+        name: UIBarPositioning
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBarPositioning
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIHoverEffect:
+        kind: objc-protocol
+        name: UIHoverEffect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIHoverEffect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UILetterformAwareAdjusting:
+        kind: objc-protocol
+        name: UILetterformAwareAdjusting
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UILetterformAwareAdjusting
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPageControlProgressDelegate:
+        kind: objc-protocol
+        name: UIPageControlProgressDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPageControlProgressDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPageControlTimerProgressDelegate:
+        kind: objc-protocol
+        name: UIPageControlTimerProgressDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPageControlTimerProgressDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPickerViewAccessibilityDelegate:
+        kind: objc-protocol
+        name: UIPickerViewAccessibilityDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPickerViewAccessibilityDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPickerViewDataSource:
+        kind: objc-protocol
+        name: UIPickerViewDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPickerViewDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPickerViewDelegate:
+        kind: objc-protocol
+        name: UIPickerViewDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPickerViewDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 2vxpah  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_CGFloat_ffiVoid_UIPickerView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIActionSheet) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIActionSheet
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIActionSheet)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIActionSheet)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIActionSheet)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIActionSheet_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIActionSheet, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIActionSheet, ffi.Long)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPageControlProgress) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPageControlProgress
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPageControlProgress)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPageControlProgress)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPageControlTimerProgress) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPageControlTimerProgress
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPageControlTimerProgress)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPageControlTimerProgress)>"
+      "~ objcBlock: 7etsgm  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPickerView_NSInteger_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long)>"
+      "~ objcBlock: 7etsgm  ObjCInterface(c:objc(cs)UIAction)?  6xn2ih*?  cj5vv2*  ews01f  bool* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIAction_objcObjCObjectImpl_objcObjCSelector_UIControlEvents_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(UIAction?, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Pointer<objc.ObjCSelector>, ffi.UnsignedLong, ffi.Pointer<ffi.Bool>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(UIAction?, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Pointer<objc.ObjCSelector>, ffi.UnsignedLong, ffi.Pointer<ffi.Bool>)>"
+      "~ objcBlock: 7etsgm  ObjCInterface(c:objc(cs)UIButton) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIButton
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UIButton)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UIButton)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UIPickerView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)?  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid_UIPickerView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)?  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid_UIPickerView_NSInteger_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_UIPickerView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_UIPickerView_NSInteger_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIColor)  ObjCInterface(c:objc(cs)UIColor) ":
+        kind: objc-block
+        name: ObjCBlock_UIColor_UIColor
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIColor Function(imp$1.UIColor)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIColor Function(imp$1.UIColor)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIPointerStyle)?  ObjCInterface(c:objc(cs)UIButton)  ObjCInterface(c:objc(cs)UIPointerEffect)  ObjCInterface(c:objc(cs)UIPointerShape) ":
+        kind: objc-block
+        name: ObjCBlock_UIPointerStyle_UIButton_UIPointerEffect_UIPointerShape
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIPointerStyle? Function(UIButton, UIPointerEffect, UIPointerShape)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIPointerStyle? Function(UIButton, UIPointerEffect, UIPointerShape)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIView)  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2  den9f2  ObjCInterface(c:objc(cs)UIView)? ":
+        kind: objc-block
+        name: ObjCBlock_UIView_ffiVoid_UIPickerView_NSInteger_NSInteger_UIView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIView Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long, imp$1.UIView?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIView Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long, ffi.Long, imp$1.UIView?)>"
+      "~ objcBlock: bool  7etsgm*  ObjCInterface(c:objc(cs)UIPageControlTimerProgress)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UIPageControlTimerProgress_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIPageControlTimerProgress, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UIPageControlTimerProgress, ffi.Long)>"
+      "~ objcBlock: d9cnab  7etsgm*  ObjCInterface(c:objc(cs)UIPageControlProgress)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_ffiFloat_ffiVoid_UIPageControlProgress_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Float Function(ffi.Pointer<ffi.Void>, UIPageControlProgress, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Float Function(ffi.Pointer<ffi.Void>, UIPageControlProgress, ffi.Long)>"
+      "~ objcBlock: den9f2  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView) ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UIPickerView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UIPickerView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UIPickerView)>"
+      "~ objcBlock: den9f2  7etsgm*  ObjCInterface(c:objc(cs)UIPickerView)  den9f2 ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UIPickerView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UIPickerView, ffi.Long)>"
