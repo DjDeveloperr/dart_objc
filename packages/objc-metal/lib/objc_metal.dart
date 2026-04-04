@@ -1,1 +1,1 @@
-export 'src/metal_bindings.dart';
+export 'core.dart';

@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:objective_c/objective_c.dart';
+import 'package:objc_uikit/bars.dart';
+import 'package:objc_uikit/core.dart';
 import 'package:objc_uikit/flutter_views.dart';
-import 'package:objc_uikit_split/bars.dart';
-import 'package:objc_uikit_split/core.dart';
 
 const objcUiKitTabBarViewType = 'objc-uikit-tab-bar';
 const _kTabBarHeight = 49.0;
@@ -15,11 +15,11 @@ const _kDemoSurfaceColor = Color(0xFFF6F2EB);
 
 UITabBar _newTabBar() => UITabBar();
 
-UITabBarItem _newTabBarItem(ObjcUiKitTab tab) => UITabBarItem.as(
-  UITabBarItem.as(
-    UITabBarItem.alloc(),
-  ).initWithTitleImageTag(tab.title.toNSString(), tag: tab.tag),
-);
+UITabBarItem _newTabBarItem(ObjcUiKitTab tab) =>
+    UITabBarItem.alloc().initWithTitleImageTag(
+      tab.title.toNSString(),
+      tag: tab.tag,
+    );
 
 
 class ObjcUiKitTabShell extends StatefulWidget {
@@ -381,6 +381,7 @@ class _InfoCard extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(body, style: theme.textTheme.bodyLarge),
+            
           ],
         ),
       ),

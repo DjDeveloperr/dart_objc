@@ -7,21 +7,18 @@ import 'package:ffigen/src/config_provider/spec_utils.dart' as spec_utils;
 import 'package:logging/logging.dart';
 
 enum _GenerationProfile { full, lean }
-enum _GenerationLayout { monolith, split }
-enum _SplitRootSurface { umbrella, coreOnly }
+enum _RootSurface { umbrella, coreOnly }
 
 final class _ResolvedInvocation {
   const _ResolvedInvocation({
     required this.targets,
     required this.profile,
-    required this.layout,
-    required this.splitRootSurface,
+    required this.rootSurface,
   });
 
   final List<String> targets;
   final _GenerationProfile profile;
-  final _GenerationLayout layout;
-  final _SplitRootSurface splitRootSurface;
+  final _RootSurface rootSurface;
 }
 
 final class _SplitUnit {
@@ -130,20 +127,20 @@ final _frameworks = <String, _FrameworkSpec>{
 
 final _splitPackages = <String, _SplitPackageSpec>{
   'appkit': const _SplitPackageSpec(
-    packageDir: 'objc-appkit-split',
-    packageName: 'objc_appkit_split',
+    packageDir: 'objc-appkit',
+    packageName: 'objc_appkit',
     rootUnitKey: 'core',
     units: _appkitSplitUnits,
   ),
   'metal': const _SplitPackageSpec(
-    packageDir: 'objc-metal-split',
-    packageName: 'objc_metal_split',
+    packageDir: 'objc-metal',
+    packageName: 'objc_metal',
     rootUnitKey: 'core',
     units: _metalSplitUnits,
   ),
   'uikit': const _SplitPackageSpec(
-    packageDir: 'objc-uikit-split',
-    packageName: 'objc_uikit_split',
+    packageDir: 'objc-uikit',
+    packageName: 'objc_uikit',
     rootUnitKey: 'core',
     units: _uikitSplitUnits,
   ),
@@ -158,25 +155,23 @@ Future<void> main(List<String> args) async {
   for (final key in invocation.targets) {
     final spec = _frameworks[key]!;
     final sdkPath = _sdkPathFor(spec.sdk);
-    final packageDirName = _packageDirFor(spec, invocation.layout);
-    final packageName = _packageNameFor(spec, invocation.layout);
+    final packageDirName = _packageDirFor(spec);
+    final packageName = _packageNameFor(spec);
     final pkgDir = Directory('${packagesDir.path}/$packageDirName');
-    if (invocation.layout == _GenerationLayout.split && pkgDir.existsSync()) {
+    if (_usesSplitLayout(spec) && pkgDir.existsSync()) {
       _cleanSplitPackageOutputs(spec, pkgDir);
     }
     await _scaffoldPackage(
       spec,
       pkgDir,
       packageName: packageName,
-      layout: invocation.layout,
     );
     _generateBindings(
       spec,
       pkgDir,
       sdkPath,
       invocation.profile,
-      invocation.layout,
-      invocation.splitRootSurface,
+      invocation.rootSurface,
       packageName: packageName,
     );
     stdout.writeln('Generated $packageName at ${pkgDir.path}');
@@ -220,38 +215,22 @@ void _cleanSplitPackageOutputs(_FrameworkSpec spec, Directory pkgDir) {
   }
 }
 
-String _packageDirFor(_FrameworkSpec spec, _GenerationLayout layout) {
-  if (layout == _GenerationLayout.split) {
-    final splitSpec = _splitPackages[spec.key];
-    if (splitSpec != null) {
-      return splitSpec.packageDir;
-    }
-  }
-  return spec.packageDir;
-}
+String _packageDirFor(_FrameworkSpec spec) =>
+    _splitPackages[spec.key]?.packageDir ?? spec.packageDir;
 
-String _packageNameFor(_FrameworkSpec spec, _GenerationLayout layout) {
-  if (layout == _GenerationLayout.split) {
-    final splitSpec = _splitPackages[spec.key];
-    if (splitSpec != null) {
-      return splitSpec.packageName;
-    }
-  }
-  return spec.packageName;
-}
+String _packageNameFor(_FrameworkSpec spec) =>
+    _splitPackages[spec.key]?.packageName ?? spec.packageName;
 
 _ResolvedInvocation _resolveInvocation(List<String> args) {
   var profile = _GenerationProfile.full;
-  var layout = _GenerationLayout.monolith;
-  var splitRootSurface = _SplitRootSurface.coreOnly;
+  var rootSurface = _RootSurface.coreOnly;
   final targets = <String>[];
 
   for (var i = 0; i < args.length; i++) {
     final arg = args[i];
     if (arg == '--help' || arg == '-h') {
       stdout.writeln('''
-Usage: dart tool/gen_objc_packages.dart [--profile full|lean] [targets...]
-       dart tool/gen_objc_packages.dart [--layout monolith|split] [--split-root umbrella|core-only] [targets...]
+Usage: dart tool/gen_objc_packages.dart [--profile full|lean] [--root-surface umbrella|core-only] [targets...]
 
 Targets:
   ${_frameworks.keys.join(', ')}
@@ -260,11 +239,7 @@ Profiles:
   full  Generate the current full transitive surface.
   lean  Generate a smaller, less-transitive surface for faster tooling.
 
-Layouts:
-  monolith  Generate one bindings library per framework package.
-  split     Generate multiple family libraries with an umbrella export.
-
-Split root surfaces:
+Root surfaces:
   umbrella   Root library re-exports all generated family libraries via all.dart.
   core-only  Root library exports only core.dart; family APIs rely on direct imports or auto-import.
 ''');
@@ -283,34 +258,25 @@ Split root surfaces:
       profile = _parseProfile(arg.substring('--profile='.length));
       continue;
     }
-    if (arg == '--layout') {
+    if (arg == '--root-surface' || arg == '--split-root') {
       if (i + 1 >= args.length) {
         stderr.writeln(
-          'Missing value for --layout. Use "monolith" or "split".',
+          'Missing value for --root-surface. Use "umbrella" or "core-only".',
         );
         exitCode = 64;
         exit(exitCode);
       }
-      layout = _parseLayout(args[++i]);
+      rootSurface = _parseRootSurface(args[++i]);
       continue;
     }
-    if (arg.startsWith('--layout=')) {
-      layout = _parseLayout(arg.substring('--layout='.length));
-      continue;
-    }
-    if (arg == '--split-root') {
-      if (i + 1 >= args.length) {
-        stderr.writeln(
-          'Missing value for --split-root. Use "umbrella" or "core-only".',
-        );
-        exitCode = 64;
-        exit(exitCode);
-      }
-      splitRootSurface = _parseSplitRootSurface(args[++i]);
+    if (arg.startsWith('--root-surface=')) {
+      rootSurface = _parseRootSurface(
+        arg.substring('--root-surface='.length),
+      );
       continue;
     }
     if (arg.startsWith('--split-root=')) {
-      splitRootSurface = _parseSplitRootSurface(
+      rootSurface = _parseRootSurface(
         arg.substring('--split-root='.length),
       );
       continue;
@@ -322,8 +288,7 @@ Split root surfaces:
     return _ResolvedInvocation(
       targets: _frameworks.keys.toList(growable: false),
       profile: profile,
-      layout: layout,
-      splitRootSurface: splitRootSurface,
+      rootSurface: rootSurface,
     );
   }
 
@@ -340,8 +305,7 @@ Split root surfaces:
   return _ResolvedInvocation(
     targets: lowered,
     profile: profile,
-    layout: layout,
-    splitRootSurface: splitRootSurface,
+    rootSurface: rootSurface,
   );
 }
 
@@ -357,27 +321,13 @@ _GenerationProfile _parseProfile(String value) {
   };
 }
 
-_GenerationLayout _parseLayout(String value) {
+_RootSurface _parseRootSurface(String value) {
   return switch (value.toLowerCase()) {
-    'monolith' => _GenerationLayout.monolith,
-    'split' => _GenerationLayout.split,
+    'umbrella' => _RootSurface.umbrella,
+    'core-only' => _RootSurface.coreOnly,
     _ => () {
       stderr.writeln(
-        'Unknown layout "$value". Valid layouts: monolith, split',
-      );
-      exitCode = 64;
-      exit(exitCode);
-    }(),
-  };
-}
-
-_SplitRootSurface _parseSplitRootSurface(String value) {
-  return switch (value.toLowerCase()) {
-    'umbrella' => _SplitRootSurface.umbrella,
-    'core-only' => _SplitRootSurface.coreOnly,
-    _ => () {
-      stderr.writeln(
-        'Unknown split root surface "$value". Valid values: umbrella, core-only',
+        'Unknown root surface "$value". Valid values: umbrella, core-only',
       );
       exitCode = 64;
       exit(exitCode);
@@ -390,17 +340,16 @@ void _generateBindings(
   Directory pkgDir,
   String sdkPath,
   _GenerationProfile profile,
-  _GenerationLayout layout,
-  _SplitRootSurface splitRootSurface,
+  _RootSurface rootSurface,
   {required String packageName}
 ) {
-  if (layout == _GenerationLayout.split) {
+  if (_usesSplitLayout(spec)) {
     _generateSplitBindings(
       spec,
       pkgDir,
       sdkPath,
       profile,
-      splitRootSurface: splitRootSurface,
+      rootSurface: rootSurface,
       packageName: packageName,
     );
     return;
@@ -447,7 +396,7 @@ void _generateSplitBindings(
   Directory pkgDir,
   String sdkPath,
   _GenerationProfile profile,
-  {required _SplitRootSurface splitRootSurface,
+  {required _RootSurface rootSurface,
   required String packageName}
 ) {
   if (profile != _GenerationProfile.full) {
@@ -541,7 +490,7 @@ void _generateSplitBindings(
   }
   File('${pkgDir.path}/lib/all.dart').writeAsStringSync(allBuffer.toString());
 
-  final rootLibrary = splitRootSurface == _SplitRootSurface.coreOnly
+  final rootLibrary = rootSurface == _RootSurface.coreOnly
       ? '${splitSpec.rootUnitKey}.dart'
       : 'all.dart';
   File('${pkgDir.path}/lib/$packageName.dart').writeAsStringSync(
@@ -1204,36 +1153,36 @@ Future<void> _scaffoldPackage(
   _FrameworkSpec spec,
   Directory pkgDir, {
   required String packageName,
-  required _GenerationLayout layout,
 }) async {
+  final usesSplitLayout = _usesSplitLayout(spec);
   await Directory('${pkgDir.path}/lib/src').create(recursive: true);
   await Directory('${pkgDir.path}/native').create(recursive: true);
   await Directory('${pkgDir.path}/tool').create(recursive: true);
-  if (_needsBuildHook(spec, layout)) {
+  if (_needsBuildHook(spec)) {
     await Directory('${pkgDir.path}/hook').create(recursive: true);
   }
 
   await File(
     '${pkgDir.path}/pubspec.yaml',
-  ).writeAsString(_pubspecFor(spec, packageName: packageName, layout: layout));
+  ).writeAsString(_pubspecFor(spec, packageName: packageName));
   await File(
     '${pkgDir.path}/analysis_options.yaml',
   ).writeAsString(_analysisOptions);
   await File(
     '${pkgDir.path}/README.md',
-  ).writeAsString(_readmeFor(spec, packageName: packageName, layout: layout));
+  ).writeAsString(_readmeFor(spec, packageName: packageName));
   await File('${pkgDir.path}/.gitignore').writeAsString(_gitIgnore);
-  if (layout == _GenerationLayout.split && spec.key == 'appkit') {
+  if (usesSplitLayout && spec.key == 'appkit') {
     await File(
       '${pkgDir.path}/lib/src/target_action.dart',
     ).writeAsString(_appKitTargetActionSource('appkit_core_bindings.dart'));
   }
-  if (layout == _GenerationLayout.monolith) {
+  if (!usesSplitLayout) {
     await File(
       '${pkgDir.path}/lib/$packageName.dart',
     ).writeAsString(_libraryExports(spec));
   }
-  if (_hasFlutterViews(spec, layout)) {
+  if (_hasFlutterViews(spec)) {
     await File(
       '${pkgDir.path}/lib/flutter_views.dart',
     ).writeAsString(_flutterViewsLibraryExports());
@@ -1241,9 +1190,9 @@ Future<void> _scaffoldPackage(
   await File(
     '${pkgDir.path}/tool/generate.dart',
   ).writeAsString(
-    _packageGenerateTool(spec, packageName: packageName, layout: layout),
+    _packageGenerateTool(spec, packageName: packageName),
   );
-  if (_needsBuildHook(spec, layout)) {
+  if (_needsBuildHook(spec)) {
     await File(
       '${pkgDir.path}/hook/build.dart',
     ).writeAsString(_buildHookFor(spec, packageName: packageName));
@@ -1253,11 +1202,10 @@ Future<void> _scaffoldPackage(
 String _pubspecFor(
   _FrameworkSpec spec, {
   required String packageName,
-  required _GenerationLayout layout,
 }) {
-  final includeFlutterHelpers = _hasFlutterViews(spec, layout);
-  final includeBuildHookDeps = _needsBuildHook(spec, layout);
-  final description = layout == _GenerationLayout.split
+  final includeFlutterHelpers = _hasFlutterViews(spec);
+  final includeBuildHookDeps = _needsBuildHook(spec);
+  final description = _usesSplitLayout(spec)
       ? 'Split Objective-C bindings for ${spec.framework}.'
       : 'Full Objective-C bindings for ${spec.framework}.';
   final extraDeps = includeBuildHookDeps
@@ -1323,9 +1271,8 @@ String _flutterViewsLibraryExports() => "export 'src/flutter_views.dart';\n";
 String _readmeFor(
   _FrameworkSpec spec, {
   required String packageName,
-  required _GenerationLayout layout,
 }) {
-  final flutterHelpers = !_hasFlutterViews(spec, layout)
+  final flutterHelpers = !_hasFlutterViews(spec)
       ? ''
       : switch (spec.key) {
     'appkit' =>
@@ -1350,10 +1297,8 @@ demo app:
 ''',
     _ => '',
   };
-  final regenerateCommand = layout == _GenerationLayout.split
-      ? 'dart tool/gen_objc_packages.dart --layout split ${spec.key}'
-      : 'dart tool/gen_objc_packages.dart ${spec.key}';
-  final scopeDescription = layout == _GenerationLayout.split
+  final regenerateCommand = 'dart tool/gen_objc_packages.dart ${spec.key}';
+  final scopeDescription = _usesSplitLayout(spec)
       ? 'split-family'
       : 'generated';
   return '''
@@ -1376,13 +1321,13 @@ To generate the smaller tooling-focused profile instead:
 dart tool/gen_objc_packages.dart --profile lean ${spec.key}
 ```
 
-${layout == _GenerationLayout.split ? '''To regenerate the split package with a core-only root surface:
+${_usesSplitLayout(spec) ? '''To regenerate the package with an umbrella root surface:
 
 ```bash
-dart tool/gen_objc_packages.dart --layout split --split-root core-only ${spec.key}
+dart tool/gen_objc_packages.dart --root-surface umbrella ${spec.key}
 ```
 
-This split package also emits:
+This package also emits:
 
 - `all.dart` for the full umbrella export
 - `${_splitPackages[spec.key]?.rootUnitKey ?? 'core'}.dart` as the cheap default root surface
@@ -1399,20 +1344,14 @@ dart tool/gen_objc_packages.dart foundation appkit uikit metal metalkit
 String _packageGenerateTool(
   _FrameworkSpec spec, {
   required String packageName,
-  required _GenerationLayout layout,
 }) {
-  final baseArgs = <String>[
-    '../../tool/gen_objc_packages.dart',
-    if (layout == _GenerationLayout.split) '--layout',
-    if (layout == _GenerationLayout.split) 'split',
-  ];
   return '''
 import 'dart:io';
 
 Future<void> main(List<String> args) async {
   final result = await Process.run(
     'dart',
-    [${baseArgs.map((arg) => "'$arg'").join(', ')}, ...args, '${spec.key}'],
+    ['../../tool/gen_objc_packages.dart', ...args, '${spec.key}'],
     runInShell: true,
   );
   stdout.write(result.stdout);
@@ -1474,18 +1413,32 @@ final class NSButtonTargetAction {
 }
 ''';
 
-bool _hasFlutterViews(_FrameworkSpec spec, _GenerationLayout layout) =>
-    layout == _GenerationLayout.monolith &&
-    (spec.key == 'appkit' || spec.key == 'uikit');
+bool _usesSplitLayout(_FrameworkSpec spec) => _splitPackages.containsKey(spec.key);
 
-bool _needsBuildHook(_FrameworkSpec spec, _GenerationLayout layout) =>
-    _hasFlutterViews(spec, layout);
+bool _hasFlutterViews(_FrameworkSpec spec) =>
+    spec.key == 'appkit' || spec.key == 'uikit';
+
+bool _needsBuildHook(_FrameworkSpec spec) => _hasFlutterViews(spec);
 
 bool _usesBundledBindingsAsset(_FrameworkSpec spec) =>
     spec.key == 'appkit' || spec.key == 'uikit';
 
 String _bindingsAssetName(_FrameworkSpec spec) =>
     '${spec.packageName}_bindings.dylib';
+
+List<String> _bindingsSourcePaths(_FrameworkSpec spec) {
+  if (_usesSplitLayout(spec)) {
+    return [
+      for (final unit in _splitPackages[spec.key]!.units)
+        'native/${unit.libraryStem}_bindings.m',
+    ];
+  }
+  return ['native/${spec.generatedBase}_bindings.m'];
+}
+
+String _bindingsSourcesLiteral(_FrameworkSpec spec) => _bindingsSourcePaths(spec)
+    .map((path) => "      '$path',")
+    .join('\n');
 
 String _supportedOsCheck(_FrameworkSpec spec) => switch (spec.key) {
   'appkit' => 'codeConfig.targetOS != OS.macOS',
@@ -1506,26 +1459,36 @@ String _buildHookFor(
   final bindingsBlock = includeBindingsAsset
       ? '''
 
-    final bindingsAssetPath = input.outputDirectory.resolve(bindingsAssetName);
-    final bindingsSrc =
-        input.packageRoot.resolve('native/${spec.generatedBase}_bindings.m').toFilePath();
-    final bindingsObject = await builder.buildObject(
-      bindingsSrc,
-      [...cFlags, ...objCFlags],
-    );
-    await builder.linkLib(bindingsObject, bindingsAssetPath.toFilePath(), [
-      ...cFlags,
+    final bindingsSources = <String>[
+${_bindingsSourcesLiteral(spec)}
+    ]
+        .map((relativePath) => input.packageRoot.resolve(relativePath).toFilePath())
+        .where((path) => File(path).existsSync())
+        .toList();
+    if (bindingsSources.isNotEmpty) {
+      final bindingsAssetPath = input.outputDirectory.resolve(bindingsAssetName);
+      final bindingsObjects = <String>[];
+      for (final bindingsSrc in bindingsSources) {
+        final bindingsObject = await builder.buildObject(
+          bindingsSrc,
+          [...cFlags, ...objCFlags],
+        );
+        bindingsObjects.add(bindingsObject);
+        output.dependencies.add(Uri.file(bindingsSrc));
+      }
+      await builder.linkLib(bindingsObjects, bindingsAssetPath.toFilePath(), [
+        ...cFlags,
 ${_frameworkLinkFlags(spec)}
-    ]);
-    output.dependencies.add(Uri.file(bindingsSrc));
-    output.assets.code.add(
-      CodeAsset(
-        package: input.packageName,
-        name: bindingsAssetName,
-        file: bindingsAssetPath,
-        linkMode: DynamicLoadingBundled(),
-      ),
-    );
+      ]);
+      output.assets.code.add(
+        CodeAsset(
+          package: input.packageName,
+          name: bindingsAssetName,
+          file: bindingsAssetPath,
+          linkMode: DynamicLoadingBundled(),
+        ),
+      );
+    }
 '''
       : '';
   final flutterViewsBlock = includeFlutterViews
@@ -1537,7 +1500,7 @@ ${_frameworkLinkFlags(spec)}
       flutterViewsSrc,
       [...cFlags, ...objCFlags],
     );
-    await builder.linkLib(flutterViewsObject, flutterViewsAssetPath.toFilePath(), [
+    await builder.linkLib([flutterViewsObject], flutterViewsAssetPath.toFilePath(), [
       ...cFlags,
 ${_frameworkLinkFlags(spec)}
     ]);
@@ -1630,14 +1593,14 @@ class _Builder {
     return output;
   }
 
-  Future<void> linkLib(String object, String output, List<String> flags) =>
+  Future<void> linkLib(List<String> objects, String output, List<String> flags) =>
       _compile([
         '-shared',
         '-Wl,-encryptable',
         '-undefined',
         'dynamic_lookup',
         ...flags,
-        object,
+        ...objects,
       ], output);
 
   Future<void> _compile(List<String> flags, String output) async {

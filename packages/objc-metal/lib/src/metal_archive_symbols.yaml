@@ -1,0 +1,79 @@
+format_version: 1.2.0
+files:
+  package:objc_metal/src/metal_archive_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:objc(pl)MTL4Archive:
+        kind: objc-protocol
+        name: MTL4Archive
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4Archive
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)MTLAllocation:
+        kind: objc-protocol
+        name: MTLAllocation
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTLAllocation
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)MTLComputePipelineState:
+        kind: objc-protocol
+        name: MTLComputePipelineState
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTLComputePipelineState
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)MTLRenderPipelineState:
+        kind: objc-protocol
+        name: MTLRenderPipelineState
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTLRenderPipelineState
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString?)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)MTL4BinaryFunction)>? R 62n31f*  ObjCInterface(c:objc(cs)MTL4BinaryFunctionDescriptor)  ObjCInterface(c:objc(cs)NSError)?* ":
+        kind: objc-block
+        name: ObjCBlock_idMTL4BinaryFunction_ffiVoid_MTL4BinaryFunctionDescriptor_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4BinaryFunctionDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4BinaryFunctionDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)MTLComputePipelineState)>? R 62n31f*  ObjCInterface(c:objc(cs)MTL4ComputePipelineDescriptor)  ObjCInterface(c:objc(cs)MTL4PipelineStageDynamicLinkingDescriptor)  ObjCInterface(c:objc(cs)NSError)?* ":
+        kind: objc-block
+        name: ObjCBlock_idMTLComputePipelineState_ffiVoid_MTL4ComputePipelineDescriptor_MTL4PipelineStageDynamicLinkingDescriptor_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4ComputePipelineDescriptor, imp$1.MTL4PipelineStageDynamicLinkingDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4ComputePipelineDescriptor, imp$1.MTL4PipelineStageDynamicLinkingDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)MTLComputePipelineState)>? R 62n31f*  ObjCInterface(c:objc(cs)MTL4ComputePipelineDescriptor)  ObjCInterface(c:objc(cs)NSError)?* ":
+        kind: objc-block
+        name: ObjCBlock_idMTLComputePipelineState_ffiVoid_MTL4ComputePipelineDescriptor_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4ComputePipelineDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4ComputePipelineDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)MTLRenderPipelineState)>? R 62n31f*  ObjCInterface(c:objc(cs)MTL4PipelineDescriptor)  ObjCInterface(c:objc(cs)MTL4RenderPipelineDynamicLinkingDescriptor)  ObjCInterface(c:objc(cs)NSError)?* ":
+        kind: objc-block
+        name: ObjCBlock_idMTLRenderPipelineState_ffiVoid_MTL4PipelineDescriptor_MTL4RenderPipelineDynamicLinkingDescriptor_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4PipelineDescriptor, imp$1.MTL4RenderPipelineDynamicLinkingDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4PipelineDescriptor, imp$1.MTL4RenderPipelineDynamicLinkingDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)MTLRenderPipelineState)>? R 62n31f*  ObjCInterface(c:objc(cs)MTL4PipelineDescriptor)  ObjCInterface(c:objc(cs)NSError)?* ":
+        kind: objc-block
+        name: ObjCBlock_idMTLRenderPipelineState_ffiVoid_MTL4PipelineDescriptor_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4PipelineDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, imp$1.MTL4PipelineDescriptor, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"

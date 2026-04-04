@@ -1,5 +1,5 @@
 name: objc_metal
-description: Full Objective-C bindings for Metal.
+description: Split Objective-C bindings for Metal.
 version: 0.1.0
 publish_to: none
 

@@ -1,1 +1,1 @@
-export 'src/uikit_bindings.dart';
+export 'core.dart';

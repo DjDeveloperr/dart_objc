@@ -42,29 +42,50 @@ void main(List<String> args) async {
       _minOsVersion(codeConfig),
     ];
 
-    final bindingsAssetPath = input.outputDirectory.resolve(bindingsAssetName);
-    final bindingsSrc =
-        input.packageRoot.resolve('native/uikit_bindings.m').toFilePath();
-    final bindingsObject = await builder.buildObject(
-      bindingsSrc,
-      [...cFlags, ...objCFlags],
-    );
-    await builder.linkLib(bindingsObject, bindingsAssetPath.toFilePath(), [
-      ...cFlags,
+    final bindingsSources = <String>[
+      'native/uikit_core_bindings.m',
+      'native/uikit_gesture_base_bindings.m',
+      'native/uikit_gestures_bindings.m',
+      'native/uikit_scroll_bindings.m',
+      'native/uikit_controls_bindings.m',
+      'native/uikit_text_bindings.m',
+      'native/uikit_table_bindings.m',
+      'native/uikit_collection_bindings.m',
+      'native/uikit_bars_bindings.m',
+      'native/uikit_drawing_bindings.m',
+      'native/uikit_interaction_bindings.m',
+      'native/uikit_misc_bindings.m',
+    ]
+        .map((relativePath) => input.packageRoot.resolve(relativePath).toFilePath())
+        .where((path) => File(path).existsSync())
+        .toList();
+    if (bindingsSources.isNotEmpty) {
+      final bindingsAssetPath = input.outputDirectory.resolve(bindingsAssetName);
+      final bindingsObjects = <String>[];
+      for (final bindingsSrc in bindingsSources) {
+        final bindingsObject = await builder.buildObject(
+          bindingsSrc,
+          [...cFlags, ...objCFlags],
+        );
+        bindingsObjects.add(bindingsObject);
+        output.dependencies.add(Uri.file(bindingsSrc));
+      }
+      await builder.linkLib(bindingsObjects, bindingsAssetPath.toFilePath(), [
+        ...cFlags,
       '-framework',
       'Foundation',
       '-framework',
       'UIKit',
-    ]);
-    output.dependencies.add(Uri.file(bindingsSrc));
-    output.assets.code.add(
-      CodeAsset(
-        package: input.packageName,
-        name: bindingsAssetName,
-        file: bindingsAssetPath,
-        linkMode: DynamicLoadingBundled(),
-      ),
-    );
+      ]);
+      output.assets.code.add(
+        CodeAsset(
+          package: input.packageName,
+          name: bindingsAssetName,
+          file: bindingsAssetPath,
+          linkMode: DynamicLoadingBundled(),
+        ),
+      );
+    }
 
 
     final flutterViewsAssetPath = input.outputDirectory.resolve(flutterViewsAssetName);
@@ -73,7 +94,7 @@ void main(List<String> args) async {
       flutterViewsSrc,
       [...cFlags, ...objCFlags],
     );
-    await builder.linkLib(flutterViewsObject, flutterViewsAssetPath.toFilePath(), [
+    await builder.linkLib([flutterViewsObject], flutterViewsAssetPath.toFilePath(), [
       ...cFlags,
       '-framework',
       'Foundation',
@@ -121,14 +142,14 @@ class _Builder {
     return output;
   }
 
-  Future<void> linkLib(String object, String output, List<String> flags) =>
+  Future<void> linkLib(List<String> objects, String output, List<String> flags) =>
       _compile([
         '-shared',
         '-Wl,-encryptable',
         '-undefined',
         'dynamic_lookup',
         ...flags,
-        object,
+        ...objects,
       ], output);
 
   Future<void> _compile(List<String> flags, String output) async {

@@ -78,21 +78,35 @@ analysis_paths=(
   lib
   tool
   packages/objc-appkit/lib/objc_appkit.dart
+  packages/objc-appkit/lib/all.dart
   packages/objc-appkit/lib/flutter_views.dart
+  packages/objc-appkit/lib/core.dart
+  packages/objc-appkit/lib/misc.dart
   packages/objc-appkit/lib/src/flutter_views.dart
   packages/objc-appkit/lib/src/flutter_views_bindings.dart
   packages/objc-appkit/hook/build.dart
-  packages/objc-appkit-split/lib/objc_appkit_split.dart
-  packages/objc-appkit-split/lib/all.dart
   packages/objc-foundation/lib/objc_foundation.dart
   packages/objc-metal/lib/objc_metal.dart
-  packages/objc-metal-split/lib/objc_metal_split.dart
-  packages/objc-metal-split/lib/all.dart
+  packages/objc-metal/lib/all.dart
+  packages/objc-metal/lib/archive.dart
+  packages/objc-metal/lib/archive_base.dart
+  packages/objc-metal/lib/core.dart
   packages/objc-metalkit/lib/objc_metalkit.dart
   packages/objc-uikit/lib/objc_uikit.dart
-  packages/objc-uikit-split/lib/objc_uikit_split.dart
-  packages/objc-uikit-split/lib/all.dart
+  packages/objc-uikit/lib/all.dart
+  packages/objc-uikit/lib/bars.dart
+  packages/objc-uikit/lib/collection.dart
+  packages/objc-uikit/lib/controls.dart
+  packages/objc-uikit/lib/core.dart
+  packages/objc-uikit/lib/drawing.dart
   packages/objc-uikit/lib/flutter_views.dart
+  packages/objc-uikit/lib/gesture_base.dart
+  packages/objc-uikit/lib/gestures.dart
+  packages/objc-uikit/lib/interaction.dart
+  packages/objc-uikit/lib/misc.dart
+  packages/objc-uikit/lib/scroll.dart
+  packages/objc-uikit/lib/table.dart
+  packages/objc-uikit/lib/text.dart
   packages/objc-uikit/lib/src/flutter_views.dart
   packages/objc-uikit/lib/src/flutter_views_bindings.dart
   packages/objc-uikit/hook/build.dart

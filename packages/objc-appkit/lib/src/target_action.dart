@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:ffi/ffi.dart';
 import 'package:objective_c/objective_c.dart' as objc;
 
-import 'appkit_bindings.dart';
+import 'appkit_core_bindings.dart';
 
 /// A small helper for wiring AppKit target/action callbacks from Dart.
 final class NSButtonTargetAction {
@@ -26,12 +26,12 @@ final class NSButtonTargetAction {
     builder.implementMethod(
       action,
       signature.cast(),
-      ObjCBlock_ffiVoid_ffiVoid_NSButton.protocolTrampoline,
-      ObjCBlock_ffiVoid_ffiVoid_NSButton.listener((
+      ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl.protocolTrampoline,
+      ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl.listener((
         Pointer<Void> _,
-        NSButton? button,
+        objc.ObjCObject? sender,
       ) {
-        if (button == null) {
+        if (sender == null) {
           return;
         }
         onPressed();

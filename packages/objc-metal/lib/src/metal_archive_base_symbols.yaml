@@ -1,0 +1,105 @@
+format_version: 1.2.0
+files:
+  package:objc_metal/src/metal_archive_base_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@MTL4BinaryFunctionOptions:
+        kind: enum
+        name: MTL4BinaryFunctionOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@MTL4IndirectCommandBufferSupportState:
+        kind: enum
+        name: MTL4IndirectCommandBufferSupportState
+        c-type: ffi.Long
+        dart-type: MTL4IndirectCommandBufferSupportState
+        ffi-dart-type: int
+      c:@E@MTLFunctionType:
+        kind: enum
+        name: MTLFunctionType
+        c-type: ffi.UnsignedLong
+        dart-type: MTLFunctionType
+        ffi-dart-type: int
+      c:@SA@MTLSize:
+        kind: type
+        name: MTLSize
+        c-type: MTLSize
+        dart-type: MTLSize
+        ffi-dart-type: MTLSize
+      c:@T@instancetype:
+        kind: typedef
+        name: instancetype
+        c-type: instancetype
+        dart-name: Dartinstancetype
+        dart-type: Dartinstancetype
+        ffi-dart-type: instancetype
+      c:objc(cs)MTL4BinaryFunctionDescriptor:
+        kind: objc-interface
+        name: MTL4BinaryFunctionDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4BinaryFunctionDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)MTL4ComputePipelineDescriptor:
+        kind: objc-interface
+        name: MTL4ComputePipelineDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4ComputePipelineDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)MTL4FunctionDescriptor:
+        kind: objc-interface
+        name: MTL4FunctionDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4FunctionDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)MTL4PipelineDescriptor:
+        kind: objc-interface
+        name: MTL4PipelineDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4PipelineDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)MTL4PipelineOptions:
+        kind: objc-interface
+        name: MTL4PipelineOptions
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4PipelineOptions
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)MTL4PipelineStageDynamicLinkingDescriptor:
+        kind: objc-interface
+        name: MTL4PipelineStageDynamicLinkingDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4PipelineStageDynamicLinkingDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)MTL4RenderPipelineDynamicLinkingDescriptor:
+        kind: objc-interface
+        name: MTL4RenderPipelineDynamicLinkingDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4RenderPipelineDynamicLinkingDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)MTL4StaticLinkingDescriptor:
+        kind: objc-interface
+        name: MTL4StaticLinkingDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4StaticLinkingDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)MTL4BinaryFunction:
+        kind: objc-protocol
+        name: MTL4BinaryFunction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: MTL4BinaryFunction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: akvypd  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_MTLFunctionType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>

@@ -1,5 +1,5 @@
 name: objc_appkit
-description: Full Objective-C bindings for AppKit.
+description: Split Objective-C bindings for AppKit.
 version: 0.1.0
 publish_to: none
 

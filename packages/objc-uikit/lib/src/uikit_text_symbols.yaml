@@ -1,0 +1,2181 @@
+format_version: 1.2.0
+files:
+  package:objc_uikit/src/uikit_text_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@NSLineBreakStrategy:
+        kind: enum
+        name: NSLineBreakStrategy
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextAlignment:
+        kind: enum
+        name: NSTextAlignment
+        c-type: ffi.Long
+        dart-type: NSTextAlignment
+        ffi-dart-type: int
+      c:@E@NSWritingDirection:
+        kind: enum
+        name: NSWritingDirection
+        c-type: ffi.Long
+        dart-type: NSWritingDirection
+        ffi-dart-type: int
+      c:@E@UIBaselineAdjustment:
+        kind: enum
+        name: UIBaselineAdjustment
+        c-type: ffi.Long
+        dart-type: UIBaselineAdjustment
+        ffi-dart-type: int
+      c:@E@UIDataDetectorTypes:
+        kind: enum
+        name: UIDataDetectorTypes
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UIDropOperation:
+        kind: enum
+        name: UIDropOperation
+        c-type: ffi.UnsignedLong
+        dart-type: UIDropOperation
+        ffi-dart-type: int
+      c:@E@UIEditMenuArrowDirection:
+        kind: enum
+        name: UIEditMenuArrowDirection
+        c-type: ffi.Long
+        dart-type: UIEditMenuArrowDirection
+        ffi-dart-type: int
+      c:@E@UIFindSessionSearchResultDisplayStyle:
+        kind: enum
+        name: UIFindSessionSearchResultDisplayStyle
+        c-type: ffi.Long
+        dart-type: UIFindSessionSearchResultDisplayStyle
+        ffi-dart-type: int
+      c:@E@UIFontDescriptorSymbolicTraits:
+        kind: enum
+        name: UIFontDescriptorSymbolicTraits
+        c-type: ffi.Uint32
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UIKeyboardAppearance:
+        kind: enum
+        name: UIKeyboardAppearance
+        c-type: ffi.Long
+        dart-type: UIKeyboardAppearance
+        ffi-dart-type: int
+      c:@E@UIKeyboardType:
+        kind: enum
+        name: UIKeyboardType
+        c-type: ffi.Long
+        dart-type: UIKeyboardType
+        ffi-dart-type: int
+      c:@E@UILabelVibrancy:
+        kind: enum
+        name: UILabelVibrancy
+        c-type: ffi.Long
+        dart-type: UILabelVibrancy
+        ffi-dart-type: int
+      c:@E@UIReturnKeyType:
+        kind: enum
+        name: UIReturnKeyType
+        c-type: ffi.Long
+        dart-type: UIReturnKeyType
+        ffi-dart-type: int
+      c:@E@UITextAlternativeStyle:
+        kind: enum
+        name: UITextAlternativeStyle
+        c-type: ffi.Long
+        dart-type: UITextAlternativeStyle
+        ffi-dart-type: int
+      c:@E@UITextAutocapitalizationType:
+        kind: enum
+        name: UITextAutocapitalizationType
+        c-type: ffi.Long
+        dart-type: UITextAutocapitalizationType
+        ffi-dart-type: int
+      c:@E@UITextAutocorrectionType:
+        kind: enum
+        name: UITextAutocorrectionType
+        c-type: ffi.Long
+        dart-type: UITextAutocorrectionType
+        ffi-dart-type: int
+      c:@E@UITextBorderStyle:
+        kind: enum
+        name: UITextBorderStyle
+        c-type: ffi.Long
+        dart-type: UITextBorderStyle
+        ffi-dart-type: int
+      c:@E@UITextDragOptions:
+        kind: enum
+        name: UITextDragOptions
+        c-type: ffi.Long
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UITextDropAction:
+        kind: enum
+        name: UITextDropAction
+        c-type: ffi.UnsignedLong
+        dart-type: UITextDropAction
+        ffi-dart-type: int
+      c:@E@UITextDropEditability:
+        kind: enum
+        name: UITextDropEditability
+        c-type: ffi.UnsignedLong
+        dart-type: UITextDropEditability
+        ffi-dart-type: int
+      c:@E@UITextDropPerformer:
+        kind: enum
+        name: UITextDropPerformer
+        c-type: ffi.UnsignedLong
+        dart-type: UITextDropPerformer
+        ffi-dart-type: int
+      c:@E@UITextDropProgressMode:
+        kind: enum
+        name: UITextDropProgressMode
+        c-type: ffi.UnsignedLong
+        dart-type: UITextDropProgressMode
+        ffi-dart-type: int
+      c:@E@UITextFieldDidEndEditingReason:
+        kind: enum
+        name: UITextFieldDidEndEditingReason
+        c-type: ffi.Long
+        dart-type: UITextFieldDidEndEditingReason
+        ffi-dart-type: int
+      c:@E@UITextFieldViewMode:
+        kind: enum
+        name: UITextFieldViewMode
+        c-type: ffi.Long
+        dart-type: UITextFieldViewMode
+        ffi-dart-type: int
+      c:@E@UITextFormattingViewControllerComponentSize:
+        kind: enum
+        name: UITextFormattingViewControllerComponentSize
+        c-type: ffi.Long
+        dart-type: UITextFormattingViewControllerComponentSize
+        ffi-dart-type: int
+      c:@E@UITextGranularity:
+        kind: enum
+        name: UITextGranularity
+        c-type: ffi.Long
+        dart-type: UITextGranularity
+        ffi-dart-type: int
+      c:@E@UITextInlinePredictionType:
+        kind: enum
+        name: UITextInlinePredictionType
+        c-type: ffi.Long
+        dart-type: UITextInlinePredictionType
+        ffi-dart-type: int
+      c:@E@UITextInteractionMode:
+        kind: enum
+        name: UITextInteractionMode
+        c-type: ffi.Long
+        dart-type: UITextInteractionMode
+        ffi-dart-type: int
+      c:@E@UITextItemContentType:
+        kind: enum
+        name: UITextItemContentType
+        c-type: ffi.Long
+        dart-type: UITextItemContentType
+        ffi-dart-type: int
+      c:@E@UITextItemInteraction:
+        kind: enum
+        name: UITextItemInteraction
+        c-type: ffi.Long
+        dart-type: UITextItemInteraction
+        ffi-dart-type: int
+      c:@E@UITextLayoutDirection:
+        kind: enum
+        name: UITextLayoutDirection
+        c-type: ffi.Long
+        dart-type: UITextLayoutDirection
+        ffi-dart-type: int
+      c:@E@UITextMathExpressionCompletionType:
+        kind: enum
+        name: UITextMathExpressionCompletionType
+        c-type: ffi.Long
+        dart-type: UITextMathExpressionCompletionType
+        ffi-dart-type: int
+      c:@E@UITextSearchFoundTextStyle:
+        kind: enum
+        name: UITextSearchFoundTextStyle
+        c-type: ffi.Long
+        dart-type: UITextSearchFoundTextStyle
+        ffi-dart-type: int
+      c:@E@UITextSearchMatchMethod:
+        kind: enum
+        name: UITextSearchMatchMethod
+        c-type: ffi.Long
+        dart-type: UITextSearchMatchMethod
+        ffi-dart-type: int
+      c:@E@UITextSmartDashesType:
+        kind: enum
+        name: UITextSmartDashesType
+        c-type: ffi.Long
+        dart-type: UITextSmartDashesType
+        ffi-dart-type: int
+      c:@E@UITextSmartInsertDeleteType:
+        kind: enum
+        name: UITextSmartInsertDeleteType
+        c-type: ffi.Long
+        dart-type: UITextSmartInsertDeleteType
+        ffi-dart-type: int
+      c:@E@UITextSmartQuotesType:
+        kind: enum
+        name: UITextSmartQuotesType
+        c-type: ffi.Long
+        dart-type: UITextSmartQuotesType
+        ffi-dart-type: int
+      c:@E@UITextSpellCheckingType:
+        kind: enum
+        name: UITextSpellCheckingType
+        c-type: ffi.Long
+        dart-type: UITextSpellCheckingType
+        ffi-dart-type: int
+      c:@E@UITextStorageDirection:
+        kind: enum
+        name: UITextStorageDirection
+        c-type: ffi.Long
+        dart-type: UITextStorageDirection
+        ffi-dart-type: int
+      c:@E@UITextViewBorderStyle:
+        kind: enum
+        name: UITextViewBorderStyle
+        c-type: ffi.Long
+        dart-type: UITextViewBorderStyle
+        ffi-dart-type: int
+      c:@E@UIWritingToolsBehavior:
+        kind: enum
+        name: UIWritingToolsBehavior
+        c-type: ffi.Long
+        dart-type: UIWritingToolsBehavior
+        ffi-dart-type: int
+      c:@E@UIWritingToolsResultOptions:
+        kind: enum
+        name: UIWritingToolsResultOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:objc(cs)NSAdaptiveImageGlyph:
+        kind: objc-interface
+        name: NSAdaptiveImageGlyph
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAdaptiveImageGlyph
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSLayoutManager:
+        kind: objc-interface
+        name: NSLayoutManager
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSLayoutManager
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSMutableAttributedString:
+        kind: objc-interface
+        name: NSMutableAttributedString
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSMutableAttributedString
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextAttachment:
+        kind: objc-interface
+        name: NSTextAttachment
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachment
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextContainer:
+        kind: objc-interface
+        name: NSTextContainer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextContainer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextLayoutManager:
+        kind: objc-interface
+        name: NSTextLayoutManager
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextLayoutManager
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextRange:
+        kind: objc-interface
+        name: NSTextRange
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextRange
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextStorage:
+        kind: objc-interface
+        name: NSTextStorage
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextStorage
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIColorPickerViewController:
+        kind: objc-interface
+        name: UIColorPickerViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIColorPickerViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIConversationContext:
+        kind: objc-interface
+        name: UIConversationContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIConversationContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDragInteraction:
+        kind: objc-interface
+        name: UIDragInteraction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDragInteraction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDragItem:
+        kind: objc-interface
+        name: UIDragItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDragItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDropInteraction:
+        kind: objc-interface
+        name: UIDropInteraction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDropInteraction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDropProposal:
+        kind: objc-interface
+        name: UIDropProposal
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDropProposal
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIEditMenuConfiguration:
+        kind: objc-interface
+        name: UIEditMenuConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIEditMenuConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIEditMenuInteraction:
+        kind: objc-interface
+        name: UIEditMenuInteraction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIEditMenuInteraction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFindInteraction:
+        kind: objc-interface
+        name: UIFindInteraction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFindInteraction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFindSession:
+        kind: objc-interface
+        name: UIFindSession
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFindSession
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFontDescriptor:
+        kind: objc-interface
+        name: UIFontDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFontPickerViewController:
+        kind: objc-interface
+        name: UIFontPickerViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontPickerViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFontPickerViewControllerConfiguration:
+        kind: objc-interface
+        name: UIFontPickerViewControllerConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontPickerViewControllerConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIInputSuggestion:
+        kind: objc-interface
+        name: UIInputSuggestion
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIInputSuggestion
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UILabel:
+        kind: objc-interface
+        name: UILabel
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UILabel
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPasteConfiguration:
+        kind: objc-interface
+        name: UIPasteConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPasteConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITargetedDragPreview:
+        kind: objc-interface
+        name: UITargetedDragPreview
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITargetedDragPreview
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextChecker:
+        kind: objc-interface
+        name: UITextChecker
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextChecker
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextCursorDropPositionAnimator:
+        kind: objc-interface
+        name: UITextCursorDropPositionAnimator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextCursorDropPositionAnimator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextDragPreviewRenderer:
+        kind: objc-interface
+        name: UITextDragPreviewRenderer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDragPreviewRenderer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextDropProposal:
+        kind: objc-interface
+        name: UITextDropProposal
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDropProposal
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextField:
+        kind: objc-interface
+        name: UITextField
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextField
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingCoordinator:
+        kind: objc-interface
+        name: UITextFormattingCoordinator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingCoordinator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingViewController:
+        kind: objc-interface
+        name: UITextFormattingViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingViewControllerChangeValue:
+        kind: objc-interface
+        name: UITextFormattingViewControllerChangeValue
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewControllerChangeValue
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingViewControllerComponent:
+        kind: objc-interface
+        name: UITextFormattingViewControllerComponent
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewControllerComponent
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingViewControllerComponentGroup:
+        kind: objc-interface
+        name: UITextFormattingViewControllerComponentGroup
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewControllerComponentGroup
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingViewControllerConfiguration:
+        kind: objc-interface
+        name: UITextFormattingViewControllerConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewControllerConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingViewControllerFormattingDescriptor:
+        kind: objc-interface
+        name: UITextFormattingViewControllerFormattingDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewControllerFormattingDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextFormattingViewControllerFormattingStyle:
+        kind: objc-interface
+        name: UITextFormattingViewControllerFormattingStyle
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewControllerFormattingStyle
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextInputAssistantItem:
+        kind: objc-interface
+        name: UITextInputAssistantItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputAssistantItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextInputContext:
+        kind: objc-interface
+        name: UITextInputContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextInputMode:
+        kind: objc-interface
+        name: UITextInputMode
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputMode
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextInputPasswordRules:
+        kind: objc-interface
+        name: UITextInputPasswordRules
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputPasswordRules
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextInputStringTokenizer:
+        kind: objc-interface
+        name: UITextInputStringTokenizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputStringTokenizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextInteraction:
+        kind: objc-interface
+        name: UITextInteraction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInteraction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextItem:
+        kind: objc-interface
+        name: UITextItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextItemMenuConfiguration:
+        kind: objc-interface
+        name: UITextItemMenuConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextItemMenuConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextItemMenuPreview:
+        kind: objc-interface
+        name: UITextItemMenuPreview
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextItemMenuPreview
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextLoupeSession:
+        kind: objc-interface
+        name: UITextLoupeSession
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextLoupeSession
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextPlaceholder:
+        kind: objc-interface
+        name: UITextPlaceholder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextPlaceholder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextPosition:
+        kind: objc-interface
+        name: UITextPosition
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextPosition
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextRange:
+        kind: objc-interface
+        name: UITextRange
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextRange
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextSearchOptions:
+        kind: objc-interface
+        name: UITextSearchOptions
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSearchOptions
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextSearchingFindSession:
+        kind: objc-interface
+        name: UITextSearchingFindSession
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSearchingFindSession
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextSelectionDisplayInteraction:
+        kind: objc-interface
+        name: UITextSelectionDisplayInteraction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSelectionDisplayInteraction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextSelectionRect:
+        kind: objc-interface
+        name: UITextSelectionRect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSelectionRect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITextView:
+        kind: objc-interface
+        name: UITextView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIWritingToolsCoordinator:
+        kind: objc-interface
+        name: UIWritingToolsCoordinator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIWritingToolsCoordinator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cy)UIView@UITextField:
+        kind: type
+        name: UITextField$1
+      c:objc(pl)CTAdaptiveImageProviding:
+        kind: objc-protocol
+        name: CTAdaptiveImageProviding
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CTAdaptiveImageProviding
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSProgressReporting:
+        kind: objc-protocol
+        name: NSProgressReporting
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSProgressReporting
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextAttachmentLayout:
+        kind: objc-protocol
+        name: NSTextAttachmentLayout
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachmentLayout
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextSelectionDataSource:
+        kind: objc-protocol
+        name: NSTextSelectionDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextSelectionDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIDragAnimating:
+        kind: objc-protocol
+        name: UIDragAnimating
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDragAnimating
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIDragDropSession:
+        kind: objc-protocol
+        name: UIDragDropSession
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDragDropSession
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIDragSession:
+        kind: objc-protocol
+        name: UIDragSession
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDragSession
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIDropSession:
+        kind: objc-protocol
+        name: UIDropSession
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDropSession
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIEditMenuInteractionAnimating:
+        kind: objc-protocol
+        name: UIEditMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIEditMenuInteractionAnimating
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIEditMenuInteractionDelegate:
+        kind: objc-protocol
+        name: UIEditMenuInteractionDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIEditMenuInteractionDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIFindInteractionDelegate:
+        kind: objc-protocol
+        name: UIFindInteractionDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFindInteractionDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIFontPickerViewControllerDelegate:
+        kind: objc-protocol
+        name: UIFontPickerViewControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontPickerViewControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIKeyInput:
+        kind: objc-protocol
+        name: UIKeyInput
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIKeyInput
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIPasteConfigurationSupporting:
+        kind: objc-protocol
+        name: UIPasteConfigurationSupporting
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPasteConfigurationSupporting
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextCursorView:
+        kind: objc-protocol
+        name: UITextCursorView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextCursorView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextDocumentProxy:
+        kind: objc-protocol
+        name: UITextDocumentProxy
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDocumentProxy
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextDragDelegate:
+        kind: objc-protocol
+        name: UITextDragDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDragDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextDragRequest:
+        kind: objc-protocol
+        name: UITextDragRequest
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDragRequest
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextDraggable:
+        kind: objc-protocol
+        name: UITextDraggable
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDraggable
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextDropDelegate:
+        kind: objc-protocol
+        name: UITextDropDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDropDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextDropRequest:
+        kind: objc-protocol
+        name: UITextDropRequest
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDropRequest
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextDroppable:
+        kind: objc-protocol
+        name: UITextDroppable
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextDroppable
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextFieldDelegate:
+        kind: objc-protocol
+        name: UITextFieldDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFieldDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextFormattingCoordinatorDelegate:
+        kind: objc-protocol
+        name: UITextFormattingCoordinatorDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingCoordinatorDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextFormattingViewControllerDelegate:
+        kind: objc-protocol
+        name: UITextFormattingViewControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextFormattingViewControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextInput:
+        kind: objc-protocol
+        name: UITextInput
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInput
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextInputDelegate:
+        kind: objc-protocol
+        name: UITextInputDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextInputTokenizer:
+        kind: objc-protocol
+        name: UITextInputTokenizer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputTokenizer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextInputTraits:
+        kind: objc-protocol
+        name: UITextInputTraits
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInputTraits
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextInteractionDelegate:
+        kind: objc-protocol
+        name: UITextInteractionDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextInteractionDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextPasteConfigurationSupporting:
+        kind: objc-protocol
+        name: UITextPasteConfigurationSupporting
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextPasteConfigurationSupporting
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextPasteDelegate:
+        kind: objc-protocol
+        name: UITextPasteDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextPasteDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextPasteItem:
+        kind: objc-protocol
+        name: UITextPasteItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextPasteItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextSearchAggregator:
+        kind: objc-protocol
+        name: UITextSearchAggregator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSearchAggregator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextSearching:
+        kind: objc-protocol
+        name: UITextSearching
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSearching
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextSelectionDisplayInteractionDelegate:
+        kind: objc-protocol
+        name: UITextSelectionDisplayInteractionDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSelectionDisplayInteractionDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextSelectionHandleView:
+        kind: objc-protocol
+        name: UITextSelectionHandleView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSelectionHandleView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextSelectionHighlightView:
+        kind: objc-protocol
+        name: UITextSelectionHighlightView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextSelectionHighlightView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITextViewDelegate:
+        kind: objc-protocol
+        name: UITextViewDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITextViewDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 2cyps0  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextStorageDirection_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 2itc6v  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSDirectionalRectEdge_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 409oic  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  ObjCInterface(c:objc(cs)UITextPosition) ":
+        kind: objc-block
+        name: ObjCBlock_NSComparisonResult_ffiVoid_UITextPosition_UITextPosition
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextPosition)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextPosition)>"
+      "~ objcBlock: 409oic  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  ObjCInterface(c:objc(cs)UITextRange)  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>? ":
+        kind: objc-block
+        name: ObjCBlock_NSComparisonResult_ffiVoid_UITextRange_UITextRange_UITextSearchDocumentIdentifier
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextRange, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextRange, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 409oic  62n31f*  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)> ":
+        kind: objc-block
+        name: ObjCBlock_NSComparisonResult_ffiVoid_UITextSearchDocumentIdentifier_UITextSearchDocumentIdentifier
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 46uxs1  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextAutocorrectionType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 4xbvl9  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextSmartDashesType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 51ctr7  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextSpellCheckingType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 62n31f ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function()>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function()>
+      "~ objcBlock: 62n31f  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 62n31f  62n31f*  2cyps0 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextStorageDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_ffiUnsignedLong
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+      "~ objcBlock: 62n31f  62n31f*  46uxs1 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextAutocorrectionType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  4xbvl9 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextSmartDashesType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  51ctr7 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextSpellCheckingType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  7i5d9z ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextInlinePredictionType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  7rgas0*  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool)>"
+      "~ objcBlock: 62n31f  62n31f*  8f02jx ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextSmartInsertDeleteType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  9yswpb ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextMathExpressionCompletionType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCBlock(~ objcBlock: 62n31f ) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function()>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function()>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCBlock(~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)  ObjCInterface(c:objc(cs)NSDictionary) ) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextAttributesConversionHandler
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<objc.NSDictionary Function(objc.NSDictionary)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<objc.NSDictionary Function(objc.NSDictionary)>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSAdaptiveImageGlyph)  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSAdaptiveImageGlyph_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSAdaptiveImageGlyph, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSAdaptiveImageGlyph, UITextRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSAttributedString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSAttributedString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSAttributedString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSAttributedString)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSAttributedString)?  c771tu ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSAttributedString_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSAttributedString?, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSAttributedString?, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSDictionary)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSDictionary
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSDictionary?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSDictionary?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSArray)  606od2 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString_NSArray_UITextAlternativeStyle
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSArray, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSArray, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)UITextSearchOptions)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString_UITextSearchOptions_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, UITextSearchOptions, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, UITextSearchOptions, objc.NSString)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)UITextSearchOptions)  id<ObjCProtocol(c:objc(pl)UITextSearchAggregator)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString_UITextSearchOptions_idUITextSearchAggregator
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, UITextSearchOptions, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, UITextSearchOptions, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)  c771tu ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString_NSRange$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)?  c771tu ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString?, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString?, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextAttachment) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextAttachment
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextAttachment)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextAttachment)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIBezierPath)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIBezierPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIBezierPath?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIBezierPath?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIConversationContext)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIConversationContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIConversationContext?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIConversationContext?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIConversationContext)?  id<ObjCProtocol(c:objc(pl)UITextInput)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIConversationContext_idUITextInput
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIConversationContext?, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIConversationContext?, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIEditMenuInteraction)  ObjCInterface(c:objc(cs)UIEditMenuConfiguration)  id<ObjCProtocol(c:objc(pl)UIEditMenuInteractionAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIEditMenuInteraction_UIEditMenuConfiguration_idUIEditMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIEditMenuInteraction, UIEditMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIEditMenuInteraction, UIEditMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIFindInteraction)  ObjCInterface(c:objc(cs)UIFindSession) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIFindInteraction_UIFindSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIFindInteraction, UIFindSession)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIFindInteraction, UIFindSession)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIFontPickerViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIFontPickerViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIFontPickerViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIFontPickerViewController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIInputSuggestion) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIInputSuggestion
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIInputSuggestion)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIInputSuggestion)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIPasteConfiguration)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIPasteConfiguration
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPasteConfiguration?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIPasteConfiguration?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextField) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextField
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextField)  43oolg ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextField_UITextFieldDidEndEditingReason
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextField)  ObjCInterface(c:objc(cs)UIInputSuggestion) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextField_UIInputSuggestion
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField, UIInputSuggestion)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField, UIInputSuggestion)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextField)  id<ObjCProtocol(c:objc(pl)UIEditMenuInteractionAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextField_idUIEditMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextField, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextFormattingViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextFormattingViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextFormattingViewController)  ObjCInterface(c:objc(cs)UITextFormattingViewControllerChangeValue) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextFormattingViewController_UITextFormattingViewControllerChangeValue
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController, UITextFormattingViewControllerChangeValue)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController, UITextFormattingViewControllerChangeValue)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextInputPasswordRules)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextInputPasswordRules
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextInputPasswordRules?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextInputPasswordRules?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextInteraction) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextInteraction
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextInteraction)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextInteraction)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextPlaceholder) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextPlaceholder
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextPlaceholder)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextPlaceholder)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  ObjCInterface(c:objc(cs)NSAttributedString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextRange_NSAttributedString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSAttributedString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSAttributedString)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextRange_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSString)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  ObjCInterface(c:objc(cs)NSString)  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextRange_NSString_UITextSearchDocumentIdentifier
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSString, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSString, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextRange_UITextSearchDocumentIdentifier
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>?  17ub6i ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextRange_UITextSearchDocumentIdentifier_UITextSearchFoundTextStyle
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>?  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextRange_UITextSearchDocumentIdentifier_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?, objc.NSString)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextRange)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextRange?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)UIInputSuggestion) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextView_UIInputSuggestion
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, UIInputSuggestion)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, UIInputSuggestion)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)UITextFormattingViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextView_UITextFormattingViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, UITextFormattingViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, UITextFormattingViewController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)UITextItem)  id<ObjCProtocol(c:objc(pl)UIContextMenuInteractionAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextView_UITextItem_idUIContextMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, UITextItem, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, UITextItem, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITextView)  id<ObjCProtocol(c:objc(pl)UIEditMenuInteractionAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextView_idUIEditMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITextView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  id<ObjCProtocol(c:objc(pl)UIDragSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIView_idUIDragAnimating_idUIDragSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UIDragSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIView_idUIDragSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UIDragSession)>  btjhvu ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIView_idUIDragSession_UIDropOperation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIView_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UITextDropRequest)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIView_idUITextDropRequest
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  axtn5j ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIWritingToolsBehavior
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  bo9fs0 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIWritingToolsResultOptions
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+      "~ objcBlock: 62n31f  62n31f*  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Bool)>"
+      "~ objcBlock: 62n31f  62n31f*  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  dsbb6e ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIReturnKeyType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  e8wk2s ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIKeyboardAppearance
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  fq5i8j ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextDragOptions
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  g02k6k ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIKeyboardType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  gbumt ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextSmartQuotesType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  gd6mfv ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+      "~ objcBlock: 62n31f  62n31f*  hprxub  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSWritingDirection_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long, UITextRange)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)UIEditMenuInteractionAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idUIEditMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)UITextDragDelegate)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idUITextDragDelegate
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)UITextDropDelegate)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idUITextDropDelegate
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)UITextInput)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idUITextInput
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)UITextInputDelegate)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idUITextInputDelegate
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)UITextPasteConfigurationSupporting)>  id<ObjCProtocol(c:objc(pl)UITextPasteItem)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idUITextPasteConfigurationSupporting_idUITextPasteItem
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)UITextPasteDelegate)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idUITextPasteDelegate
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  sygan ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITextAutocapitalizationType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 64eqyz  62n31f*  ObjCInterface(c:objc(cs)UITextPosition) ":
+        kind: objc-block
+        name: ObjCBlock_CGAffineTransform_ffiVoid_UITextPosition
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.CGAffineTransform Function(ffi.Pointer<ffi.Void>, UITextPosition)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.CGAffineTransform Function(ffi.Pointer<ffi.Void>, UITextPosition)>"
+      "~ objcBlock: 7i5d9z  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextInlinePredictionType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 7rgas0*  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_objcObjCObjectImpl_ffiVoid$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 7rgas0*?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_objcObjCObjectImpl_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 8f02jx  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextSmartInsertDeleteType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 96j33y  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UITextDropRequest)> ":
+        kind: objc-block
+        name: ObjCBlock_UITextDropEditability_ffiVoid_UIView_idUITextDropRequest
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 9yswpb  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextMathExpressionCompletionType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)UITextView)  c771tu ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITextView_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UITextDragRequest)> ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UIView_idUITextDragRequest
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)  62n31f*  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)  62n31f*  id<ObjCProtocol(c:objc(pl)UITextPasteConfigurationSupporting)>  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid_idUITextPasteConfigurationSupporting_NSArray_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSArray, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSArray, UITextRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSDictionary_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSDictionary Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSDictionary Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)  ObjCInterface(c:objc(cs)NSDictionary) ":
+        kind: objc-block
+        name: ObjCBlock_NSDictionary_NSDictionary
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSDictionary Function(objc.NSDictionary)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSDictionary Function(objc.NSDictionary)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSDictionary_ffiVoid$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSDictionary? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSDictionary? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)?  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  2cyps0 ":
+        kind: objc-block
+        name: ObjCBlock_NSDictionary_ffiVoid_UITextPosition_UITextStorageDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSDictionary? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSDictionary? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSItemProvider)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSItemProvider_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSItemProvider Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSItemProvider Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSOrderedSet)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSOrderedSet_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSOrderedSet Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSOrderedSet Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextContentType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f*  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSUUID)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSUUID_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.NSUUID Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.NSUUID Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIAction)?  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)UITextItem)  ObjCInterface(c:objc(cs)UIAction) ":
+        kind: objc-block
+        name: ObjCBlock_UIAction_ffiVoid_UITextView_UITextItem_UIAction
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$5.UIAction? Function(ffi.Pointer<ffi.Void>, UITextView, UITextItem, imp$5.UIAction)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$5.UIAction? Function(ffi.Pointer<ffi.Void>, UITextView, UITextItem, imp$5.UIAction)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIBezierPath)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIBezierPath_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIBezierPath? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIBezierPath? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIConversationContext)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIConversationContext_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UIConversationContext? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UIConversationContext? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDragInteraction)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIDragInteraction_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UIDragInteraction? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UIDragInteraction? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDropInteraction)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIDropInteraction_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UIDropInteraction? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UIDropInteraction? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIFindSession)?  62n31f*  ObjCInterface(c:objc(cs)UIFindInteraction)  ObjCInterface(c:objc(cs)UIView) ":
+        kind: objc-block
+        name: ObjCBlock_UIFindSession_ffiVoid_UIFindInteraction_UIView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIFindSession? Function(ffi.Pointer<ffi.Void>, UIFindInteraction, imp$1.UIView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIFindSession? Function(ffi.Pointer<ffi.Void>, UIFindInteraction, imp$1.UIView)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  62n31f*  ObjCInterface(c:objc(cs)UIEditMenuInteraction)  ObjCInterface(c:objc(cs)UIEditMenuConfiguration)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_ffiVoid_UIEditMenuInteraction_UIEditMenuConfiguration_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UIEditMenuInteraction, UIEditMenuConfiguration, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UIEditMenuInteraction, UIEditMenuConfiguration, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  62n31f*  ObjCInterface(c:objc(cs)UITextField)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_ffiVoid_UITextField_NSArray_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSArray, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSArray, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  62n31f*  ObjCInterface(c:objc(cs)UITextField)  c771tu  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_ffiVoid_UITextField_NSRange_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSRange, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSRange, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_ffiVoid_UITextRange_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_ffiVoid_UITextView_NSArray_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSArray, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSArray, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  62n31f*  ObjCInterface(c:objc(cs)UITextView)  c771tu  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_ffiVoid_UITextView_NSRange_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSRange, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIMenu? Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSRange, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIMenu)?  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_UIMenu_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIMenu? Function(objc.NSArray)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIMenu? Function(objc.NSArray)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIPasteConfiguration)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIPasteConfiguration_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UIPasteConfiguration? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UIPasteConfiguration? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITargetedDragPreview)?  62n31f*  ObjCInterface(c:objc(cs)UIView)  ObjCInterface(c:objc(cs)UIDragItem)  id<ObjCProtocol(c:objc(pl)UIDragSession)> ":
+        kind: objc-block
+        name: ObjCBlock_UITargetedDragPreview_ffiVoid_UIView_UIDragItem_idUIDragSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITargetedDragPreview? Function(ffi.Pointer<ffi.Void>, imp$1.UIView, UIDragItem, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITargetedDragPreview? Function(ffi.Pointer<ffi.Void>, imp$1.UIView, UIDragItem, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITargetedDragPreview)?  62n31f*  ObjCInterface(c:objc(cs)UIView)  ObjCInterface(c:objc(cs)UITargetedDragPreview) ":
+        kind: objc-block
+        name: ObjCBlock_UITargetedDragPreview_ffiVoid_UIView_UITargetedDragPreview
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITargetedDragPreview? Function(ffi.Pointer<ffi.Void>, imp$1.UIView, UITargetedDragPreview)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITargetedDragPreview? Function(ffi.Pointer<ffi.Void>, imp$1.UIView, UITargetedDragPreview)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextDropProposal)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextDropProposal_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UITextDropProposal Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UITextDropProposal Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextDropProposal)  62n31f*  ObjCInterface(c:objc(cs)UIView)  id<ObjCProtocol(c:objc(pl)UITextDropRequest)> ":
+        kind: objc-block
+        name: ObjCBlock_UITextDropProposal_ffiVoid_UIView_idUITextDropRequest
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextDropProposal Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextDropProposal Function(ffi.Pointer<ffi.Void>, imp$1.UIView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextInputMode)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextInputMode_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UITextInputMode? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UITextInputMode? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextInputPasswordRules)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextInputPasswordRules_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UITextInputPasswordRules? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UITextInputPasswordRules? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextItemMenuConfiguration)?  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)UITextItem)  ObjCInterface(c:objc(cs)UIMenu) ":
+        kind: objc-block
+        name: ObjCBlock_UITextItemMenuConfiguration_ffiVoid_UITextView_UITextItem_UIMenu
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextItemMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITextView, UITextItem, imp$1.UIMenu)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextItemMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITextView, UITextItem, imp$1.UIMenu)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPlaceholder)  62n31f*  g1m21m ":
+        kind: objc-block
+        name: ObjCBlock_UITextPlaceholder_ffiVoid_CGSize
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPlaceholder Function(ffi.Pointer<ffi.Void>, objc.CGSize)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPlaceholder Function(ffi.Pointer<ffi.Void>, objc.CGSize)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UITextPosition Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UITextPosition Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)?  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  5xjg4p  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid_UITextPosition_UITextLayoutDirection_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)?  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  719yfi  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid_UITextPosition_UITextGranularity_UITextDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)?  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid_UITextPosition_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)?  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  5xjg4p ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid_UITextRange_UITextLayoutDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)?  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid_UITextRange_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)?  62n31f*  gd6mfv ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextPosition)?  62n31f*  gd6mfv  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_UITextPosition_ffiVoid_CGPoint_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, objc.CGPoint, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextPosition? Function(ffi.Pointer<ffi.Void>, objc.CGPoint, UITextRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextRange)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextRange_ffiVoid$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UITextRange Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UITextRange Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextRange)  62n31f*  id<ObjCProtocol(c:objc(pl)UITextPasteConfigurationSupporting)>  ObjCInterface(c:objc(cs)NSAttributedString)  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_UITextRange_ffiVoid_idUITextPasteConfigurationSupporting_NSAttributedString_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextRange Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSAttributedString, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextRange Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSAttributedString, UITextRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextRange)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextRange_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextRange)?  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  5xjg4p ":
+        kind: objc-block
+        name: ObjCBlock_UITextRange_ffiVoid_UITextPosition_UITextLayoutDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextRange)?  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  719yfi  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_UITextRange_ffiVoid_UITextPosition_UITextGranularity_UITextDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextRange)?  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  ObjCInterface(c:objc(cs)UITextPosition) ":
+        kind: objc-block
+        name: ObjCBlock_UITextRange_ffiVoid_UITextPosition_UITextPosition
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextPosition)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextPosition)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITextRange)?  62n31f*  gd6mfv ":
+        kind: objc-block
+        name: ObjCBlock_UITextRange_ffiVoid_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITextRange? Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIView)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIView_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIView Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIView Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIView)?  62n31f*  ObjCInterface(c:objc(cs)UITextSelectionDisplayInteraction) ":
+        kind: objc-block
+        name: ObjCBlock_UIView_ffiVoid_UITextSelectionDisplayInteraction
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIView? Function(ffi.Pointer<ffi.Void>, UITextSelectionDisplayInteraction)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIView? Function(ffi.Pointer<ffi.Void>, UITextSelectionDisplayInteraction)>"
+      "~ objcBlock: axtn5j  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIWritingToolsBehavior_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: bo9fs0  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIWritingToolsResultOptions_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: bool  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.NSArray)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextField) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextField
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextField)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextField)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextField)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextField_NSArray_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSArray, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSArray, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextField)  c771tu  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextField_NSRange_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSRange, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextField, objc.NSRange, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextFormattingViewController)  ObjCInterface(c:objc(cs)UIColorPickerViewController) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextFormattingViewController_UIColorPickerViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController, UIColorPickerViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController, UIColorPickerViewController)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextFormattingViewController)  ObjCInterface(c:objc(cs)UIFontPickerViewController) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextFormattingViewController_UIFontPickerViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController, UIFontPickerViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextFormattingViewController, UIFontPickerViewController)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextInteraction)  gd6mfv ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextInteraction_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextInteraction, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextInteraction, objc.CGPoint)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  719yfi  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextPosition_UITextGranularity_UITextDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long, ffi.Long)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextRange_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextRange, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextRange)  id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>?  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextRange_UITextSearchDocumentIdentifier_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextRange, ffi.Pointer<objc.ObjCObjectImpl>?, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextView) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextView_NSArray_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSArray, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSArray, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)NSTextAttachment)  c771tu ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextView_NSTextAttachment_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, NSTextAttachment, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, NSTextAttachment, objc.NSRange)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)NSTextAttachment)  c771tu  b66bi3 ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextView_NSTextAttachment_NSRange_UITextItemInteraction
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, NSTextAttachment, objc.NSRange, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, NSTextAttachment, objc.NSRange, ffi.Long)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)NSURL)  c771tu ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextView_NSURL_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSURL, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSURL, objc.NSRange)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextView)  ObjCInterface(c:objc(cs)NSURL)  c771tu  b66bi3 ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextView_NSURL_NSRange_UITextItemInteraction
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSURL, objc.NSRange, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSURL, objc.NSRange, ffi.Long)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITextView)  c771tu  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITextView_NSRange_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSRange, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITextView, objc.NSRange, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  id<ObjCProtocol(c:objc(pl)UITextPasteConfigurationSupporting)>  ObjCInterface(c:objc(cs)NSAttributedString)  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_idUITextPasteConfigurationSupporting_NSAttributedString_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSAttributedString, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSAttributedString, UITextRange)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  ObjCInterface(c:objc(cs)UITextPosition) ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UITextPosition_UITextPosition
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextPosition)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextPosition)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UITextPosition_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, UITextRange)>"
+      "~ objcBlock: dsbb6e  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIReturnKeyType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: e8wk2s  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIKeyboardAppearance_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: fq5i8j  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextDragOptions_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: g02k6k  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIKeyboardType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: gbumt  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextSmartQuotesType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: hprxub  62n31f*  ObjCInterface(c:objc(cs)UITextPosition)  2cyps0 ":
+        kind: objc-block
+        name: ObjCBlock_NSWritingDirection_ffiVoid_UITextPosition_UITextStorageDirection
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITextPosition, ffi.Long)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)NSObject), ObjCProtocol(c:objc(pl)NSCopying)>?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextSearchDocumentIdentifier_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragSession)>  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragSession_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDropSession)>  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUIDropSession_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UITextDragDelegate)>?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUITextDragDelegate_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UITextDropDelegate)>?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUITextDropDelegate_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UITextInputDelegate)>?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUITextInputDelegate_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UITextInputTokenizer)>  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUITextInputTokenizer_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UITextPasteDelegate)>?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUITextPasteDelegate_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: nrae  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: nrae  62n31f*  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: nrae  62n31f*  ObjCInterface(c:objc(cs)UIEditMenuInteraction)  ObjCInterface(c:objc(cs)UIEditMenuConfiguration) ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_UIEditMenuInteraction_UIEditMenuConfiguration
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, UIEditMenuInteraction, UIEditMenuConfiguration)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, UIEditMenuInteraction, UIEditMenuConfiguration)>"
+      "~ objcBlock: nrae  62n31f*  ObjCInterface(c:objc(cs)UITextPosition) ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_UITextPosition
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, UITextPosition)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, UITextPosition)>"
+      "~ objcBlock: nrae  62n31f*  ObjCInterface(c:objc(cs)UITextRange) ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_UITextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, UITextRange)>"
+      "~ objcBlock: nrae  62n31f*  nrae ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_CGRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.CGRect)>"
+      "~ objcBlock: sygan  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITextAutocapitalizationType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>

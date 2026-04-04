@@ -8,17 +8,19 @@ Generated Objective-C bindings for `MetalKit` using the local
 From the repository root:
 
 ```bash
-dart run tool/gen_objc_packages.dart metalkit
+dart tool/gen_objc_packages.dart metalkit
 ```
 
 To generate the smaller tooling-focused profile instead:
 
 ```bash
-dart run tool/gen_objc_packages.dart --profile lean metalkit
+dart tool/gen_objc_packages.dart --profile lean metalkit
 ```
+
+ 
 
 To regenerate all packages used by the demos:
 
 ```bash
-dart run tool/gen_objc_packages.dart foundation appkit uikit metal metalkit
+dart tool/gen_objc_packages.dart foundation appkit uikit metal metalkit
 ```

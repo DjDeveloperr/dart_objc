@@ -1,0 +1,1 @@
+export 'src/metal_archive_bindings.dart' hide MTLAllocation, MTLComputePipelineState, MTLRenderPipelineState, ObjCBlock_NSString_ffiVoid, ObjCBlock_NSString_ffiVoid$CallExtension;

@@ -23,14 +23,12 @@ quite minimal though.
 - `ffigen/`: pinned fork of `dart-lang/native`, on the `objc-interop` branch
   with support for subclass helpers
 - `packages/objc-foundation`: generated Foundation bindings
-- `packages/objc-appkit`: generated AppKit bindings plus Flutter AppKit view
-  helpers
-- `packages/objc-uikit-split`: split UIKit bindings with a cheap default root
-  and explicit `all.dart`
-- `packages/objc-metal-split`: split Metal bindings with a cheap default root
-  and explicit `all.dart`
-- `packages/objc-uikit`: generated UIKit bindings plus Flutter UIKit view
-  helpers
+- `packages/objc-appkit`: split AppKit bindings with a cheap default root,
+  explicit `all.dart`, and Flutter AppKit view helpers
+- `packages/objc-uikit`: split UIKit bindings with a cheap default root,
+  explicit `all.dart`, and Flutter UIKit view helpers
+- `packages/objc-metal`: split Metal bindings with a cheap default root and
+  explicit `all.dart`
 - `host/`: SwiftPM macOS host that embeds the Dart VM on main thread
 - `examples/flutter/`: Flutter demo with embedded AppKit and UIKit scenes
 - `tool/gen_objc_packages.dart`: package scaffolding + regeneration entrypoint
@@ -68,7 +66,6 @@ That does the minimum reproducible setup:
 - `dart pub get` at the repo root
 - `dart pub get` in the nested `ffigen` fork
 - regenerates the ObjC binding packages from the local fork
-- regenerates the split UIKit and Metal packages used for tooling experiments
 - `flutter pub get` for the Flutter demo
 
 ## Verify
@@ -150,10 +147,8 @@ dependencies:
     path: ../dart_objc/packages/objc-appkit
   objc_uikit:
     path: ../dart_objc/packages/objc-uikit
-  objc_uikit_split:
-    path: ../dart_objc/packages/objc-uikit-split
-  objc_metal_split:
-    path: ../dart_objc/packages/objc-metal-split
+  objc_metal:
+    path: ../dart_objc/packages/objc-metal
 
 dev_dependencies:
   ffigen:
@@ -174,7 +169,7 @@ For Flutter platform views:
 For split bindings with a better tooling tradeoff:
 
 - import the package root for the cheap default core surface, for example
-  `package:objc_uikit_split/objc_uikit_split.dart`
+  `package:objc_uikit/objc_uikit.dart`
 - import `package:.../all.dart` only when you intentionally want the full eager
   umbrella surface
 - let auto-import pull in family libraries like `gestures.dart` or

@@ -1,0 +1,431 @@
+format_version: 1.2.0
+files:
+  package:objc_uikit/src/uikit_drawing_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@CGBlendMode:
+        kind: enum
+        name: CGBlendMode
+        c-type: ffi.Int32
+        dart-type: CGBlendMode
+        ffi-dart-type: int
+      c:@E@CGLineCap:
+        kind: enum
+        name: CGLineCap
+        c-type: ffi.Int32
+        dart-type: CGLineCap
+        ffi-dart-type: int
+      c:@E@CGLineJoin:
+        kind: enum
+        name: CGLineJoin
+        c-type: ffi.Int32
+        dart-type: CGLineJoin
+        ffi-dart-type: int
+      c:@E@UIGraphicsImageRendererFormatRange:
+        kind: enum
+        name: UIGraphicsImageRendererFormatRange
+        c-type: ffi.Long
+        dart-type: UIGraphicsImageRendererFormatRange
+        ffi-dart-type: int
+      c:@E@UIImageOrientation:
+        kind: enum
+        name: UIImageOrientation
+        c-type: ffi.Long
+        dart-type: UIImageOrientation
+        ffi-dart-type: int
+      c:@E@UIImagePickerControllerCameraCaptureMode:
+        kind: enum
+        name: UIImagePickerControllerCameraCaptureMode
+        c-type: ffi.Long
+        dart-type: UIImagePickerControllerCameraCaptureMode
+        ffi-dart-type: int
+      c:@E@UIImagePickerControllerCameraDevice:
+        kind: enum
+        name: UIImagePickerControllerCameraDevice
+        c-type: ffi.Long
+        dart-type: UIImagePickerControllerCameraDevice
+        ffi-dart-type: int
+      c:@E@UIImagePickerControllerCameraFlashMode:
+        kind: enum
+        name: UIImagePickerControllerCameraFlashMode
+        c-type: ffi.Long
+        dart-type: UIImagePickerControllerCameraFlashMode
+        ffi-dart-type: int
+      c:@E@UIImagePickerControllerImageURLExportPreset:
+        kind: enum
+        name: UIImagePickerControllerImageURLExportPreset
+        c-type: ffi.Long
+        dart-type: UIImagePickerControllerImageURLExportPreset
+        ffi-dart-type: int
+      c:@E@UIImagePickerControllerQualityType:
+        kind: enum
+        name: UIImagePickerControllerQualityType
+        c-type: ffi.Long
+        dart-type: UIImagePickerControllerQualityType
+        ffi-dart-type: int
+      c:@E@UIImagePickerControllerSourceType:
+        kind: enum
+        name: UIImagePickerControllerSourceType
+        c-type: ffi.Long
+        dart-type: UIImagePickerControllerSourceType
+        ffi-dart-type: int
+      c:@E@UIImageRenderingMode:
+        kind: enum
+        name: UIImageRenderingMode
+        c-type: ffi.Long
+        dart-type: UIImageRenderingMode
+        ffi-dart-type: int
+      c:@E@UIImageResizingMode:
+        kind: enum
+        name: UIImageResizingMode
+        c-type: ffi.Long
+        dart-type: UIImageResizingMode
+        ffi-dart-type: int
+      c:@E@UIImageSymbolColorRenderingMode:
+        kind: enum
+        name: UIImageSymbolColorRenderingMode
+        c-type: ffi.Long
+        dart-type: UIImageSymbolColorRenderingMode
+        ffi-dart-type: int
+      c:@E@UIImageSymbolScale:
+        kind: enum
+        name: UIImageSymbolScale
+        c-type: ffi.Long
+        dart-type: UIImageSymbolScale
+        ffi-dart-type: int
+      c:@E@UIImageSymbolVariableValueMode:
+        kind: enum
+        name: UIImageSymbolVariableValueMode
+        c-type: ffi.Long
+        dart-type: UIImageSymbolVariableValueMode
+        ffi-dart-type: int
+      c:@E@UIImageSymbolWeight:
+        kind: enum
+        name: UIImageSymbolWeight
+        c-type: ffi.Long
+        dart-type: UIImageSymbolWeight
+        ffi-dart-type: int
+      c:@E@UIRectCorner:
+        kind: enum
+        name: UIRectCorner
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@S@CGColor:
+        kind: type
+        name: CGColor
+        c-type: CGColor
+        dart-type: CGColor
+        ffi-dart-type: CGColor
+      c:@S@CGImage:
+        kind: type
+        name: CGImage
+        c-type: CGImage
+        dart-type: CGImage
+        ffi-dart-type: CGImage
+      c:@S@CGPath:
+        kind: type
+        name: CGPath
+        c-type: CGPath
+        dart-type: CGPath
+        ffi-dart-type: CGPath
+      c:objc(cs)CIColor:
+        kind: objc-interface
+        name: CIColor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CIColor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)CIImage:
+        kind: objc-interface
+        name: CIImage
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CIImage
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIBezierPath:
+        kind: objc-interface
+        name: UIBezierPath
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIBezierPath
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIColor:
+        kind: objc-interface
+        name: UIColor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIColor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIColorEffect:
+        kind: objc-interface
+        name: UIColorEffect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIColorEffect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIColorPickerViewController:
+        kind: objc-interface
+        name: UIColorPickerViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIColorPickerViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIColorWell:
+        kind: objc-interface
+        name: UIColorWell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIColorWell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFont:
+        kind: objc-interface
+        name: UIFont
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFont
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFontDescriptor:
+        kind: objc-interface
+        name: UIFontDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFontMetrics:
+        kind: objc-interface
+        name: UIFontMetrics
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontMetrics
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFontPickerViewController:
+        kind: objc-interface
+        name: UIFontPickerViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontPickerViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIFontPickerViewControllerConfiguration:
+        kind: objc-interface
+        name: UIFontPickerViewControllerConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontPickerViewControllerConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsImageRenderer:
+        kind: objc-interface
+        name: UIGraphicsImageRenderer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsImageRenderer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsImageRendererContext:
+        kind: objc-interface
+        name: UIGraphicsImageRendererContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsImageRendererContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsImageRendererFormat:
+        kind: objc-interface
+        name: UIGraphicsImageRendererFormat
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsImageRendererFormat
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsPDFRenderer:
+        kind: objc-interface
+        name: UIGraphicsPDFRenderer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsPDFRenderer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsPDFRendererContext:
+        kind: objc-interface
+        name: UIGraphicsPDFRendererContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsPDFRendererContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsPDFRendererFormat:
+        kind: objc-interface
+        name: UIGraphicsPDFRendererFormat
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsPDFRendererFormat
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsRenderer:
+        kind: objc-interface
+        name: UIGraphicsRenderer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsRenderer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsRendererContext:
+        kind: objc-interface
+        name: UIGraphicsRendererContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsRendererContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIGraphicsRendererFormat:
+        kind: objc-interface
+        name: UIGraphicsRendererFormat
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIGraphicsRendererFormat
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImage:
+        kind: objc-interface
+        name: UIImage
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImage
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImageAsset:
+        kind: objc-interface
+        name: UIImageAsset
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImageAsset
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImageConfiguration:
+        kind: objc-interface
+        name: UIImageConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImageConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImagePickerController:
+        kind: objc-interface
+        name: UIImagePickerController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImagePickerController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImageReader:
+        kind: objc-interface
+        name: UIImageReader
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImageReader
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImageReaderConfiguration:
+        kind: objc-interface
+        name: UIImageReaderConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImageReaderConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImageSymbolConfiguration:
+        kind: objc-interface
+        name: UIImageSymbolConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImageSymbolConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIImageView:
+        kind: objc-interface
+        name: UIImageView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImageView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISymbolContentTransition:
+        kind: objc-interface
+        name: UISymbolContentTransition
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISymbolContentTransition
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISymbolEffectCompletionContext:
+        kind: objc-interface
+        name: UISymbolEffectCompletionContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISymbolEffectCompletionContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cy)NSTextAttachment@UIImage:
+        kind: type
+        name: UIImage$1
+      c:objc(cy)UIColor@UIColorNamedColors:
+        kind: type
+        name: UIColorNamedColors
+      c:objc(cy)UIColor@UIColorSystemColors:
+        kind: type
+        name: UIColorSystemColors
+      c:objc(cy)UIFont@UIFontSystemFonts:
+        kind: type
+        name: UIFontSystemFonts
+      c:objc(cy)UIGraphicsRenderer@UIGraphicsRendererProtected:
+        kind: type
+        name: UIGraphicsRendererProtected
+      c:objc(cy)UIImage@UIImageDeprecated:
+        kind: type
+        name: UIImageDeprecated
+      c:objc(pl)UIColorPickerViewControllerDelegate:
+        kind: objc-protocol
+        name: UIColorPickerViewControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIColorPickerViewControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIFontPickerViewControllerDelegate:
+        kind: objc-protocol
+        name: UIFontPickerViewControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIFontPickerViewControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIImagePickerControllerDelegate:
+        kind: objc-protocol
+        name: UIImagePickerControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIImagePickerControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIColorPickerViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIColorPickerViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIColorPickerViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIColorPickerViewController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIColorPickerViewController)  ObjCInterface(c:objc(cs)UIColor)  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIColorPickerViewController_UIColor_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIColorPickerViewController, UIColor, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIColorPickerViewController, UIColor, ffi.Bool)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIFontPickerViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIFontPickerViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIFontPickerViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIFontPickerViewController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIImagePickerController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIImagePickerController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIImagePickerController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIImagePickerController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIImagePickerController)  ObjCInterface(c:objc(cs)NSDictionary) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIImagePickerController_NSDictionary
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIImagePickerController, objc.NSDictionary)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIImagePickerController, objc.NSDictionary)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UIImagePickerController)  ObjCInterface(c:objc(cs)UIImage)  ObjCInterface(c:objc(cs)NSDictionary)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UIImagePickerController_UIImage_NSDictionary
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIImagePickerController, UIImage, objc.NSDictionary?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UIImagePickerController, UIImage, objc.NSDictionary?)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UIGraphicsImageRendererContext) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIGraphicsImageRendererContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UIGraphicsImageRendererContext)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UIGraphicsImageRendererContext)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UIGraphicsPDFRendererContext) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIGraphicsPDFRendererContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UIGraphicsPDFRendererContext)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UIGraphicsPDFRendererContext)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UIGraphicsRendererContext) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIGraphicsRendererContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UIGraphicsRendererContext)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UIGraphicsRendererContext)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UIImage)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIImage
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UIImage?)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UIImage?)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UISymbolEffectCompletionContext) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UISymbolEffectCompletionContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UISymbolEffectCompletionContext)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UISymbolEffectCompletionContext)>

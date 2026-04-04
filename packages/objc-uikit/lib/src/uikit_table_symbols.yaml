@@ -1,0 +1,750 @@
+format_version: 1.2.0
+files:
+  package:objc_uikit/src/uikit_table_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@UITableViewCellAccessoryType:
+        kind: enum
+        name: UITableViewCellAccessoryType
+        c-type: ffi.Long
+        dart-type: UITableViewCellAccessoryType
+        ffi-dart-type: int
+      c:@E@UITableViewCellDragState:
+        kind: enum
+        name: UITableViewCellDragState
+        c-type: ffi.Long
+        dart-type: UITableViewCellDragState
+        ffi-dart-type: int
+      c:@E@UITableViewCellEditingStyle:
+        kind: enum
+        name: UITableViewCellEditingStyle
+        c-type: ffi.Long
+        dart-type: UITableViewCellEditingStyle
+        ffi-dart-type: int
+      c:@E@UITableViewCellFocusStyle:
+        kind: enum
+        name: UITableViewCellFocusStyle
+        c-type: ffi.Long
+        dart-type: UITableViewCellFocusStyle
+        ffi-dart-type: int
+      c:@E@UITableViewCellSelectionStyle:
+        kind: enum
+        name: UITableViewCellSelectionStyle
+        c-type: ffi.Long
+        dart-type: UITableViewCellSelectionStyle
+        ffi-dart-type: int
+      c:@E@UITableViewCellSeparatorStyle:
+        kind: enum
+        name: UITableViewCellSeparatorStyle
+        c-type: ffi.Long
+        dart-type: UITableViewCellSeparatorStyle
+        ffi-dart-type: int
+      c:@E@UITableViewCellStateMask:
+        kind: enum
+        name: UITableViewCellStateMask
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UITableViewCellStyle:
+        kind: enum
+        name: UITableViewCellStyle
+        c-type: ffi.Long
+        dart-type: UITableViewCellStyle
+        ffi-dart-type: int
+      c:@E@UITableViewContentHuggingElements:
+        kind: enum
+        name: UITableViewContentHuggingElements
+        c-type: ffi.Long
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UITableViewDropIntent:
+        kind: enum
+        name: UITableViewDropIntent
+        c-type: ffi.Long
+        dart-type: UITableViewDropIntent
+        ffi-dart-type: int
+      c:@E@UITableViewRowActionStyle:
+        kind: enum
+        name: UITableViewRowActionStyle
+        c-type: ffi.Long
+        dart-type: UITableViewRowActionStyle
+        ffi-dart-type: int
+      c:@E@UITableViewRowAnimation:
+        kind: enum
+        name: UITableViewRowAnimation
+        c-type: ffi.Long
+        dart-type: UITableViewRowAnimation
+        ffi-dart-type: int
+      c:@E@UITableViewScrollPosition:
+        kind: enum
+        name: UITableViewScrollPosition
+        c-type: ffi.Long
+        dart-type: UITableViewScrollPosition
+        ffi-dart-type: int
+      c:@E@UITableViewSelfSizingInvalidation:
+        kind: enum
+        name: UITableViewSelfSizingInvalidation
+        c-type: ffi.Long
+        dart-type: UITableViewSelfSizingInvalidation
+        ffi-dart-type: int
+      c:@E@UITableViewSeparatorInsetReference:
+        kind: enum
+        name: UITableViewSeparatorInsetReference
+        c-type: ffi.Long
+        dart-type: UITableViewSeparatorInsetReference
+        ffi-dart-type: int
+      c:@E@UITableViewStyle:
+        kind: enum
+        name: UITableViewStyle
+        c-type: ffi.Long
+        dart-type: UITableViewStyle
+        ffi-dart-type: int
+      c:objc(cs)NSDiffableDataSourceSnapshot:
+        kind: objc-interface
+        name: NSDiffableDataSourceSnapshot
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDiffableDataSourceSnapshot
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSIndexPath:
+        kind: objc-interface
+        name: NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSIndexPath
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellConfigurationState:
+        kind: objc-interface
+        name: UICellConfigurationState
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellConfigurationState
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDragPreviewParameters:
+        kind: objc-interface
+        name: UIDragPreviewParameters
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDragPreviewParameters
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDragPreviewTarget:
+        kind: objc-interface
+        name: UIDragPreviewTarget
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDragPreviewTarget
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIListContentConfiguration:
+        kind: objc-interface
+        name: UIListContentConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIListContentConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UINib:
+        kind: objc-interface
+        name: UINib
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UINib
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPreviewParameters:
+        kind: objc-interface
+        name: UIPreviewParameters
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPreviewParameters
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIPreviewTarget:
+        kind: objc-interface
+        name: UIPreviewTarget
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIPreviewTarget
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UISwipeActionsConfiguration:
+        kind: objc-interface
+        name: UISwipeActionsConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISwipeActionsConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableView:
+        kind: objc-interface
+        name: UITableView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewCell:
+        kind: objc-interface
+        name: UITableViewCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewController:
+        kind: objc-interface
+        name: UITableViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewDiffableDataSource:
+        kind: objc-interface
+        name: UITableViewDiffableDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDiffableDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewDropPlaceholder:
+        kind: objc-interface
+        name: UITableViewDropPlaceholder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropPlaceholder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewDropProposal:
+        kind: objc-interface
+        name: UITableViewDropProposal
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropProposal
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewFocusUpdateContext:
+        kind: objc-interface
+        name: UITableViewFocusUpdateContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewFocusUpdateContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewHeaderFooterView:
+        kind: objc-interface
+        name: UITableViewHeaderFooterView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewHeaderFooterView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewPlaceholder:
+        kind: objc-interface
+        name: UITableViewPlaceholder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewPlaceholder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UITableViewRowAction:
+        kind: objc-interface
+        name: UITableViewRowAction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewRowAction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIVisualEffect:
+        kind: objc-interface
+        name: UIVisualEffect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIVisualEffect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UIDataSourceTranslating:
+        kind: objc-protocol
+        name: UIDataSourceTranslating
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDataSourceTranslating
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UISpringLoadedInteractionContext:
+        kind: objc-protocol
+        name: UISpringLoadedInteractionContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UISpringLoadedInteractionContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDataSource:
+        kind: objc-protocol
+        name: UITableViewDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDataSourcePrefetching:
+        kind: objc-protocol
+        name: UITableViewDataSourcePrefetching
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDataSourcePrefetching
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDelegate:
+        kind: objc-protocol
+        name: UITableViewDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDragDelegate:
+        kind: objc-protocol
+        name: UITableViewDragDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDragDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropCoordinator:
+        kind: objc-protocol
+        name: UITableViewDropCoordinator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropCoordinator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropDelegate:
+        kind: objc-protocol
+        name: UITableViewDropDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropItem:
+        kind: objc-protocol
+        name: UITableViewDropItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UITableViewDropPlaceholderContext:
+        kind: objc-protocol
+        name: UITableViewDropPlaceholderContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UITableViewDropPlaceholderContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 62n31f ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function()>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function()>
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, objc.NSArray)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_NSIndexPath_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_NSIndexPath$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  id<ObjCProtocol(c:objc(pl)UIContextMenuInteractionAnimating)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_UIContextMenuConfiguration_idUIContextMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  id<ObjCProtocol(c:objc(pl)UIContextMenuInteractionCommitAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_UIContextMenuConfiguration_idUIContextMenuInteractionCommitAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)UITableViewCell)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_UITableViewCell_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, UITableViewCell, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, UITableViewCell, NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)UITableViewFocusUpdateContext)  ObjCInterface(c:objc(cs)UIFocusAnimationCoordinator) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_UITableViewFocusUpdateContext_UIFocusAnimationCoordinator
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, UITableViewFocusUpdateContext, imp$1.UIFocusAnimationCoordinator)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, UITableViewFocusUpdateContext, imp$1.UIFocusAnimationCoordinator)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)UIView)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_UIView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, imp$1.UIView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, imp$1.UIView, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  de1spy  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_UITableViewCellEditingStyle_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long, NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  f379jq*  ObjCInterface(c:objc(cs)NSIndexPath)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_objcObjCSelector_NSIndexPath_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCSelector>, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCSelector>, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDragSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_idUIDragSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UITableViewDropCoordinator)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UITableView_idUITableViewDropCoordinator
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(NSIndexPath)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(NSIndexPath)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UITableViewCell) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UITableViewCell
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UITableViewCell)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UITableViewCell)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UITableViewCell)  ObjCInterface(c:objc(cs)UICellConfigurationState) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UITableViewCell_UICellConfigurationState
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(UITableViewCell, UICellConfigurationState)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(UITableViewCell, UICellConfigurationState)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UITableViewHeaderFooterView)  ObjCInterface(c:objc(cs)UIViewConfigurationState) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UITableViewHeaderFooterView_UIViewConfigurationState
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(UITableViewHeaderFooterView, imp$1.UIViewConfigurationState)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(UITableViewHeaderFooterView, imp$1.UIViewConfigurationState)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UITableViewRowAction)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UITableViewRowAction_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(UITableViewRowAction, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(UITableViewRowAction, NSIndexPath)>"
+      "~ objcBlock: 62n31f  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Bool)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Bool)>
+      "~ objcBlock: 9hnaj4  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_CGSize_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDragSession)>  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITableView_idUIDragSession_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDragSession)>  ObjCInterface(c:objc(cs)NSIndexPath)  67ro7m ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITableView_idUIDragSession_NSIndexPath_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, NSIndexPath, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, NSIndexPath, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  ObjCInterface(c:objc(cs)UITableView) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITableView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, UITableView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, UITableView)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid_UITableView_NSIndexPath_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSIndexPath Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSIndexPath Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSIndexPath? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSIndexPath? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)?  62n31f*  ObjCInterface(c:objc(cs)UITableView) ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid_UITableView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSIndexPath? Function(ffi.Pointer<ffi.Void>, UITableView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSIndexPath? Function(ffi.Pointer<ffi.Void>, UITableView)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSIndexPath? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSIndexPath? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_UITableView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIContextMenuConfiguration)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath)  67ro7m ":
+        kind: objc-block
+        name: ObjCBlock_UIContextMenuConfiguration_ffiVoid_UITableView_NSIndexPath_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$4.UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$4.UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDragItem)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIDragItem_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$6.UIDragItem Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$6.UIDragItem Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDragPreviewParameters)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UIDragPreviewParameters_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIDragPreviewParameters? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIDragPreviewParameters? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDragPreviewParameters)?  ObjCInterface(c:objc(cs)UITableViewCell) ":
+        kind: objc-block
+        name: ObjCBlock_UIDragPreviewParameters_UITableViewCell
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UIDragPreviewParameters? Function(UITableViewCell)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UIDragPreviewParameters? Function(UITableViewCell)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UISwipeActionsConfiguration)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UISwipeActionsConfiguration_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UISwipeActionsConfiguration? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UISwipeActionsConfiguration? Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITableViewCell)  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewCell_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITableViewCell Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITableViewCell Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITableViewCell)?  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath)  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewCell_UITableView_NSIndexPath_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITableViewCell? Function(UITableView, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITableViewCell? Function(UITableView, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITableViewDropProposal)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewDropProposal_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UITableViewDropProposal Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UITableViewDropProposal Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITableViewDropProposal)  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDropSession)>  ObjCInterface(c:objc(cs)NSIndexPath)? ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewDropProposal_ffiVoid_UITableView_idUIDropSession_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UITableViewDropProposal Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, NSIndexPath?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UITableViewDropProposal Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>, NSIndexPath?)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITargetedPreview)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration) ":
+        kind: objc-block
+        name: ObjCBlock_UITargetedPreview_ffiVoid_UITableView_UIContextMenuConfiguration
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UITableView, imp$4.UIContextMenuConfiguration)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UITableView, imp$4.UIContextMenuConfiguration)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIView)?  62n31f*  ObjCInterface(c:objc(cs)UITableView)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_UIView_ffiVoid_UITableView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIView? Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIView? Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+      "~ objcBlock: bm7pyr  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewCellAccessoryType_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: bool  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: bool  62n31f*  ObjCBlock(~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSIndexPath) ) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_ffiVoidNSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(NSIndexPath)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(NSIndexPath)>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath)  id<ObjCProtocol(c:objc(pl)UISpringLoadedInteractionContext)> ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITableView_NSIndexPath_idUISpringLoadedInteractionContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)UITableViewFocusUpdateContext) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITableView_UITableViewFocusUpdateContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, UITableViewFocusUpdateContext)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, UITableViewFocusUpdateContext)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITableView)  f379jq*  ObjCInterface(c:objc(cs)NSIndexPath)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITableView_objcObjCSelector_NSIndexPath_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCSelector>, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCSelector>, NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDragSession)> ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITableView_idUIDragSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UITableView)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UITableView_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: c2o3f9  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_CGFloat_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: c2o3f9  62n31f*  ObjCInterface(c:objc(cs)UITableView)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_CGFloat_ffiVoid_UITableView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UITableView) ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UITableView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSString)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UITableView_NSString_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, objc.NSString, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, objc.NSString, ffi.Long)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UITableView)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UITableView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, ffi.Long)>"
+      "~ objcBlock: de1spy  62n31f*  ObjCInterface(c:objc(cs)UITableView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UITableViewCellEditingStyle_ffiVoid_UITableView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UITableView, NSIndexPath)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragAnimating_ffiVoid_UIDragItem_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, NSIndexPath)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)NSIndexPath)  afr6y2 ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragAnimating_ffiVoid_UIDragItem_NSIndexPath_CGRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, NSIndexPath, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, NSIndexPath, objc.CGRect)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)UIDragPreviewTarget) ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragAnimating_ffiVoid_UIDragItem_UIDragPreviewTarget
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, UIDragPreviewTarget)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, UIDragPreviewTarget)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDropSession)>  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUIDropSession_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UITableViewDropPlaceholderContext)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)UITableViewDropPlaceholder) ":
+        kind: objc-block
+        name: ObjCBlock_idUITableViewDropPlaceholderContext_ffiVoid_UIDragItem_UITableViewDropPlaceholder
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, UITableViewDropPlaceholder)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, UITableViewDropPlaceholder)>"

@@ -73,54 +73,59 @@ if [[ "${SKIP_BINDINGS_COMPILE:-0}" != "1" ]]; then
   fi
 
   mkdir -p "$HOST_BUILD_DIR"
-  FOUNDATION_M="$ROOT/packages/objc-foundation/native/foundation_bindings.m"
-  APPKIT_M="$ROOT/packages/objc-appkit/native/appkit_bindings.m"
-  METAL_M="$ROOT/packages/objc-metal/native/metal_bindings.m"
-  METALKIT_M="$ROOT/packages/objc-metalkit/native/metalkit_bindings.m"
-  if [[ -f "$FOUNDATION_M" ]]; then
+  shopt -s nullglob
+
+  FOUNDATION_SOURCES=("$ROOT/packages/objc-foundation/native/foundation_bindings.m")
+  APPKIT_SOURCES=("$ROOT/packages/objc-appkit/native/"appkit*_bindings.m)
+  METAL_SOURCES=("$ROOT/packages/objc-metal/native/"metal*_bindings.m)
+  METALKIT_SOURCES=("$ROOT/packages/objc-metalkit/native/metalkit_bindings.m")
+
+  if [[ -f "${FOUNDATION_SOURCES[0]}" ]]; then
     echo "Compiling Foundation bindings dylib into $FOUNDATION_BINDINGS_DYLIB"
     "$CLANG_BIN" -dynamiclib -fobjc-arc \
       -o "$FOUNDATION_BINDINGS_DYLIB" \
-      "$FOUNDATION_M" \
+      "${FOUNDATION_SOURCES[@]}" \
       -framework Foundation
   else
-    echo "Skipping Foundation bindings dylib compile (no source at $FOUNDATION_M)"
+    echo "Skipping Foundation bindings dylib compile (no source at ${FOUNDATION_SOURCES[0]})"
   fi
 
-  if [[ -f "$APPKIT_M" ]]; then
+  if (( ${#APPKIT_SOURCES[@]} > 0 )); then
     echo "Compiling AppKit bindings dylib into $APPKIT_BINDINGS_DYLIB"
     "$CLANG_BIN" -dynamiclib -fobjc-arc \
       -o "$APPKIT_BINDINGS_DYLIB" \
-      "$APPKIT_M" \
+      "${APPKIT_SOURCES[@]}" \
       -framework Foundation \
       -framework AppKit
   else
-    echo "Skipping AppKit bindings dylib compile (no source at $APPKIT_M)"
+    echo "Skipping AppKit bindings dylib compile (no matching sources in $ROOT/packages/objc-appkit/native)"
   fi
 
-  if [[ -f "$METAL_M" ]]; then
+  if (( ${#METAL_SOURCES[@]} > 0 )); then
     echo "Compiling Metal bindings dylib into $METAL_BINDINGS_DYLIB"
     "$CLANG_BIN" -dynamiclib -fobjc-arc \
       -o "$METAL_BINDINGS_DYLIB" \
-      "$METAL_M" \
+      "${METAL_SOURCES[@]}" \
       -framework Foundation \
       -framework Metal
   else
-    echo "Skipping Metal bindings dylib compile (no source at $METAL_M)"
+    echo "Skipping Metal bindings dylib compile (no matching sources in $ROOT/packages/objc-metal/native)"
   fi
 
-  if [[ -f "$METALKIT_M" ]]; then
+  if [[ -f "${METALKIT_SOURCES[0]}" ]]; then
     echo "Compiling MetalKit bindings dylib into $METALKIT_BINDINGS_DYLIB"
     "$CLANG_BIN" -dynamiclib -fobjc-arc \
       -o "$METALKIT_BINDINGS_DYLIB" \
-      "$METALKIT_M" \
+      "${METALKIT_SOURCES[@]}" \
       -framework Foundation \
       -framework AppKit \
       -framework Metal \
       -framework MetalKit
   else
-    echo "Skipping MetalKit bindings dylib compile (no source at $METALKIT_M)"
+    echo "Skipping MetalKit bindings dylib compile (no source at ${METALKIT_SOURCES[0]})"
   fi
+
+  shopt -u nullglob
 fi
 
 ENTRYPOINT_ABS=$(cd "$(dirname "$ENTRYPOINT")" && pwd)/$(basename "$ENTRYPOINT")

@@ -1,5 +1,5 @@
 name: objc_uikit
-description: Full Objective-C bindings for UIKit.
+description: Split Objective-C bindings for UIKit.
 version: 0.1.0
 publish_to: none
 

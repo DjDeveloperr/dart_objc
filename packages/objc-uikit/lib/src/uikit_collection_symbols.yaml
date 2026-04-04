@@ -1,0 +1,1034 @@
+format_version: 1.2.0
+files:
+  package:objc_uikit/src/uikit_collection_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@UICellAccessoryDisplayedState:
+        kind: enum
+        name: UICellAccessoryDisplayedState
+        c-type: ffi.Long
+        dart-type: UICellAccessoryDisplayedState
+        ffi-dart-type: int
+      c:@E@UICellAccessoryOutlineDisclosureStyle:
+        kind: enum
+        name: UICellAccessoryOutlineDisclosureStyle
+        c-type: ffi.Long
+        dart-type: UICellAccessoryOutlineDisclosureStyle
+        ffi-dart-type: int
+      c:@E@UICellAccessoryPlacement:
+        kind: enum
+        name: UICellAccessoryPlacement
+        c-type: ffi.Long
+        dart-type: UICellAccessoryPlacement
+        ffi-dart-type: int
+      c:@E@UICellConfigurationDragState:
+        kind: enum
+        name: UICellConfigurationDragState
+        c-type: ffi.Long
+        dart-type: UICellConfigurationDragState
+        ffi-dart-type: int
+      c:@E@UICellConfigurationDropState:
+        kind: enum
+        name: UICellConfigurationDropState
+        c-type: ffi.Long
+        dart-type: UICellConfigurationDropState
+        ffi-dart-type: int
+      c:@E@UICollectionElementCategory:
+        kind: enum
+        name: UICollectionElementCategory
+        c-type: ffi.UnsignedLong
+        dart-type: UICollectionElementCategory
+        ffi-dart-type: int
+      c:@E@UICollectionLayoutListAppearance:
+        kind: enum
+        name: UICollectionLayoutListAppearance
+        c-type: ffi.Long
+        dart-type: UICollectionLayoutListAppearance
+        ffi-dart-type: int
+      c:@E@UICollectionLayoutListContentHuggingElements:
+        kind: enum
+        name: UICollectionLayoutListContentHuggingElements
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UICollectionLayoutListFooterMode:
+        kind: enum
+        name: UICollectionLayoutListFooterMode
+        c-type: ffi.Long
+        dart-type: UICollectionLayoutListFooterMode
+        ffi-dart-type: int
+      c:@E@UICollectionLayoutListHeaderMode:
+        kind: enum
+        name: UICollectionLayoutListHeaderMode
+        c-type: ffi.Long
+        dart-type: UICollectionLayoutListHeaderMode
+        ffi-dart-type: int
+      c:@E@UICollectionLayoutSectionOrthogonalScrollingBounce:
+        kind: enum
+        name: UICollectionLayoutSectionOrthogonalScrollingBounce
+        c-type: ffi.Long
+        dart-type: UICollectionLayoutSectionOrthogonalScrollingBounce
+        ffi-dart-type: int
+      c:@E@UICollectionUpdateAction:
+        kind: enum
+        name: UICollectionUpdateAction
+        c-type: ffi.Long
+        dart-type: UICollectionUpdateAction
+        ffi-dart-type: int
+      c:@E@UICollectionViewCellDragState:
+        kind: enum
+        name: UICollectionViewCellDragState
+        c-type: ffi.Long
+        dart-type: UICollectionViewCellDragState
+        ffi-dart-type: int
+      c:@E@UICollectionViewDropIntent:
+        kind: enum
+        name: UICollectionViewDropIntent
+        c-type: ffi.Long
+        dart-type: UICollectionViewDropIntent
+        ffi-dart-type: int
+      c:@E@UICollectionViewFlowLayoutSectionInsetReference:
+        kind: enum
+        name: UICollectionViewFlowLayoutSectionInsetReference
+        c-type: ffi.Long
+        dart-type: UICollectionViewFlowLayoutSectionInsetReference
+        ffi-dart-type: int
+      c:@E@UICollectionViewReorderingCadence:
+        kind: enum
+        name: UICollectionViewReorderingCadence
+        c-type: ffi.Long
+        dart-type: UICollectionViewReorderingCadence
+        ffi-dart-type: int
+      c:@E@UICollectionViewScrollDirection:
+        kind: enum
+        name: UICollectionViewScrollDirection
+        c-type: ffi.Long
+        dart-type: UICollectionViewScrollDirection
+        ffi-dart-type: int
+      c:@E@UICollectionViewScrollPosition:
+        kind: enum
+        name: UICollectionViewScrollPosition
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@UICollectionViewSelfSizingInvalidation:
+        kind: enum
+        name: UICollectionViewSelfSizingInvalidation
+        c-type: ffi.Long
+        dart-type: UICollectionViewSelfSizingInvalidation
+        ffi-dart-type: int
+      c:@E@UIContentInsetsReference:
+        kind: enum
+        name: UIContentInsetsReference
+        c-type: ffi.Long
+        dart-type: UIContentInsetsReference
+        ffi-dart-type: int
+      c:@E@UIListContentTextAlignment:
+        kind: enum
+        name: UIListContentTextAlignment
+        c-type: ffi.Long
+        dart-type: UIListContentTextAlignment
+        ffi-dart-type: int
+      c:@E@UIListContentTextTransform:
+        kind: enum
+        name: UIListContentTextTransform
+        c-type: ffi.Long
+        dart-type: UIListContentTextTransform
+        ffi-dart-type: int
+      c:@E@UIListSeparatorVisibility:
+        kind: enum
+        name: UIListSeparatorVisibility
+        c-type: ffi.Long
+        dart-type: UIListSeparatorVisibility
+        ffi-dart-type: int
+      c:objc(cs)NSCollectionLayoutSection:
+        kind: objc-interface
+        name: NSCollectionLayoutSection
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSCollectionLayoutSection
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSDiffableDataSourceSectionSnapshot:
+        kind: objc-interface
+        name: NSDiffableDataSourceSectionSnapshot
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDiffableDataSourceSectionSnapshot
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSDiffableDataSourceTransaction:
+        kind: objc-interface
+        name: NSDiffableDataSourceTransaction
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDiffableDataSourceTransaction
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessory:
+        kind: objc-interface
+        name: UICellAccessory
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessory
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryCheckmark:
+        kind: objc-interface
+        name: UICellAccessoryCheckmark
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryCheckmark
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryCustomView:
+        kind: objc-interface
+        name: UICellAccessoryCustomView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryCustomView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryDelete:
+        kind: objc-interface
+        name: UICellAccessoryDelete
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryDelete
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryDetail:
+        kind: objc-interface
+        name: UICellAccessoryDetail
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryDetail
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryDisclosureIndicator:
+        kind: objc-interface
+        name: UICellAccessoryDisclosureIndicator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryDisclosureIndicator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryInsert:
+        kind: objc-interface
+        name: UICellAccessoryInsert
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryInsert
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryLabel:
+        kind: objc-interface
+        name: UICellAccessoryLabel
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryLabel
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryMultiselect:
+        kind: objc-interface
+        name: UICellAccessoryMultiselect
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryMultiselect
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryOutlineDisclosure:
+        kind: objc-interface
+        name: UICellAccessoryOutlineDisclosure
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryOutlineDisclosure
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryPopUpMenu:
+        kind: objc-interface
+        name: UICellAccessoryPopUpMenu
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryPopUpMenu
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellAccessoryReorder:
+        kind: objc-interface
+        name: UICellAccessoryReorder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellAccessoryReorder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICellConfigurationState:
+        kind: objc-interface
+        name: UICellConfigurationState
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICellConfigurationState
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionLayoutListConfiguration:
+        kind: objc-interface
+        name: UICollectionLayoutListConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionLayoutListConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionLayoutSectionOrthogonalScrollingProperties:
+        kind: objc-interface
+        name: UICollectionLayoutSectionOrthogonalScrollingProperties
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionLayoutSectionOrthogonalScrollingProperties
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionReusableView:
+        kind: objc-interface
+        name: UICollectionReusableView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionReusableView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionView:
+        kind: objc-interface
+        name: UICollectionView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewCell:
+        kind: objc-interface
+        name: UICollectionViewCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewCellRegistration:
+        kind: objc-interface
+        name: UICollectionViewCellRegistration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewCellRegistration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewCompositionalLayout:
+        kind: objc-interface
+        name: UICollectionViewCompositionalLayout
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewCompositionalLayout
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewCompositionalLayoutConfiguration:
+        kind: objc-interface
+        name: UICollectionViewCompositionalLayoutConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewCompositionalLayoutConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewController:
+        kind: objc-interface
+        name: UICollectionViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewDiffableDataSource:
+        kind: objc-interface
+        name: UICollectionViewDiffableDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDiffableDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewDiffableDataSourceReorderingHandlers:
+        kind: objc-interface
+        name: UICollectionViewDiffableDataSourceReorderingHandlers
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDiffableDataSourceReorderingHandlers
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewDiffableDataSourceSectionSnapshotHandlers:
+        kind: objc-interface
+        name: UICollectionViewDiffableDataSourceSectionSnapshotHandlers
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDiffableDataSourceSectionSnapshotHandlers
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewDropPlaceholder:
+        kind: objc-interface
+        name: UICollectionViewDropPlaceholder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDropPlaceholder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewDropProposal:
+        kind: objc-interface
+        name: UICollectionViewDropProposal
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDropProposal
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewFlowLayout:
+        kind: objc-interface
+        name: UICollectionViewFlowLayout
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewFlowLayout
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewFlowLayoutInvalidationContext:
+        kind: objc-interface
+        name: UICollectionViewFlowLayoutInvalidationContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewFlowLayoutInvalidationContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewFocusUpdateContext:
+        kind: objc-interface
+        name: UICollectionViewFocusUpdateContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewFocusUpdateContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewLayout:
+        kind: objc-interface
+        name: UICollectionViewLayout
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewLayout
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewLayoutAttributes:
+        kind: objc-interface
+        name: UICollectionViewLayoutAttributes
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewLayoutAttributes
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewLayoutInvalidationContext:
+        kind: objc-interface
+        name: UICollectionViewLayoutInvalidationContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewLayoutInvalidationContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewListCell:
+        kind: objc-interface
+        name: UICollectionViewListCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewListCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewPlaceholder:
+        kind: objc-interface
+        name: UICollectionViewPlaceholder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewPlaceholder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewSupplementaryRegistration:
+        kind: objc-interface
+        name: UICollectionViewSupplementaryRegistration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewSupplementaryRegistration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewTransitionLayout:
+        kind: objc-interface
+        name: UICollectionViewTransitionLayout
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewTransitionLayout
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UICollectionViewUpdateItem:
+        kind: objc-interface
+        name: UICollectionViewUpdateItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewUpdateItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIDynamicAnimator:
+        kind: objc-interface
+        name: UIDynamicAnimator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIDynamicAnimator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIListContentConfiguration:
+        kind: objc-interface
+        name: UIListContentConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIListContentConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIListContentImageProperties:
+        kind: objc-interface
+        name: UIListContentImageProperties
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIListContentImageProperties
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIListContentTextProperties:
+        kind: objc-interface
+        name: UIListContentTextProperties
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIListContentTextProperties
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIListContentView:
+        kind: objc-interface
+        name: UIListContentView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIListContentView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)UIListSeparatorConfiguration:
+        kind: objc-interface
+        name: UIListSeparatorConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UIListSeparatorConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cy)NSCollectionLayoutSection@UICollectionLayoutListSection:
+        kind: type
+        name: UICollectionLayoutListSection$1
+      c:objc(cy)UICollectionViewCompositionalLayout@UICollectionLayoutListSection:
+        kind: type
+        name: UICollectionLayoutListSection
+      c:objc(cy)UIDynamicAnimator@UICollectionViewAdditions:
+        kind: type
+        name: UICollectionViewAdditions
+      c:objc(pl)NSCollectionLayoutEnvironment:
+        kind: objc-protocol
+        name: NSCollectionLayoutEnvironment
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSCollectionLayoutEnvironment
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDataSource:
+        kind: objc-protocol
+        name: UICollectionViewDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDataSourcePrefetching:
+        kind: objc-protocol
+        name: UICollectionViewDataSourcePrefetching
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDataSourcePrefetching
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDelegate:
+        kind: objc-protocol
+        name: UICollectionViewDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDelegateFlowLayout:
+        kind: objc-protocol
+        name: UICollectionViewDelegateFlowLayout
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDelegateFlowLayout
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDragDelegate:
+        kind: objc-protocol
+        name: UICollectionViewDragDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDragDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDropCoordinator:
+        kind: objc-protocol
+        name: UICollectionViewDropCoordinator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDropCoordinator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDropDelegate:
+        kind: objc-protocol
+        name: UICollectionViewDropDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDropDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDropItem:
+        kind: objc-protocol
+        name: UICollectionViewDropItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDropItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)UICollectionViewDropPlaceholderContext:
+        kind: objc-protocol
+        name: UICollectionViewDropPlaceholderContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: UICollectionViewDropPlaceholderContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 2itc6v  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_NSUInteger_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(objc.NSArray)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(objc.NSArray)>
+      "~ objcBlock: 62n31f ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function()>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function()>
+      "~ objcBlock: 62n31f  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSArray)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_NSIndexPath_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, imp$7.NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionReusableView)  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_UICollectionReusableView_NSString_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionReusableView, objc.NSString, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionReusableView, objc.NSString, imp$7.NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewCell)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_UICollectionViewCell_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewCell, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewCell, imp$7.NSIndexPath)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewFocusUpdateContext)  ObjCInterface(c:objc(cs)UIFocusAnimationCoordinator) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_UICollectionViewFocusUpdateContext_UIFocusAnimationCoordinator
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewFocusUpdateContext, imp$1.UIFocusAnimationCoordinator)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewFocusUpdateContext, imp$1.UIFocusAnimationCoordinator)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  id<ObjCProtocol(c:objc(pl)UIContextMenuInteractionAnimating)>? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_UIContextMenuConfiguration_idUIContextMenuInteractionAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  id<ObjCProtocol(c:objc(pl)UIContextMenuInteractionCommitAnimating)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_UIContextMenuConfiguration_idUIContextMenuInteractionCommitAnimating
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  f379jq*  ObjCInterface(c:objc(cs)NSIndexPath)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_objcObjCSelector_NSIndexPath_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCSelector>, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCSelector>, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UICollectionViewDropCoordinator)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_idUICollectionViewDropCoordinator
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UIDragSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_idUIDragSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_UICollectionView_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<objc.ObjCObjectImpl>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<objc.ObjCObjectImpl>)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSDiffableDataSourceTransaction) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSDiffableDataSourceTransaction
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(NSDiffableDataSourceTransaction)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(NSDiffableDataSourceTransaction)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(imp$7.NSIndexPath)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(imp$7.NSIndexPath)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UICollectionReusableView)  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UICollectionReusableView_NSString_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(UICollectionReusableView, objc.NSString, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(UICollectionReusableView, objc.NSString, imp$7.NSIndexPath)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UICollectionViewCell) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UICollectionViewCell
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(UICollectionViewCell)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(UICollectionViewCell)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UICollectionViewCell)  ObjCInterface(c:objc(cs)NSIndexPath)  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UICollectionViewCell_NSIndexPath_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(UICollectionViewCell, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(UICollectionViewCell, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UICollectionViewCell)  ObjCInterface(c:objc(cs)UICellConfigurationState) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UICollectionViewCell_UICellConfigurationState
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(UICollectionViewCell, UICellConfigurationState)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(UICollectionViewCell, UICellConfigurationState)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)UIMenu) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_UIMenu
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(imp$1.UIMenu)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(imp$1.UIMenu)>
+      "~ objcBlock: 62n31f  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Bool)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Bool)>
+      "~ objcBlock: 62n31f  bool  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_bool_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Bool, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Bool, ffi.Bool)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UIDragSession)>  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UICollectionView_idUIDragSession_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UIDragSession)>  ObjCInterface(c:objc(cs)NSIndexPath)  bxnz34 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UICollectionView_idUIDragSession_NSIndexPath_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_UICollectionView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSCollectionLayoutSection)?  cn4ems  id<ObjCProtocol(c:objc(pl)NSCollectionLayoutEnvironment)> ":
+        kind: objc-block
+        name: ObjCBlock_NSCollectionLayoutSection_NSInteger_idNSCollectionLayoutEnvironment
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSCollectionLayoutSection? Function(ffi.Long, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSCollectionLayoutSection? Function(ffi.Long, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDiffableDataSourceSectionSnapshot)  7rgas0*  ObjCInterface(c:objc(cs)NSDiffableDataSourceSectionSnapshot) ":
+        kind: objc-block
+        name: ObjCBlock_NSDiffableDataSourceSectionSnapshot_objcObjCObjectImpl_NSDiffableDataSourceSectionSnapshot
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSDiffableDataSourceSectionSnapshot Function(ffi.Pointer<objc.ObjCObjectImpl>, NSDiffableDataSourceSectionSnapshot)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSDiffableDataSourceSectionSnapshot Function(ffi.Pointer<objc.ObjCObjectImpl>, NSDiffableDataSourceSectionSnapshot)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid_UICollectionView_NSIndexPath_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$7.NSIndexPath Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$7.NSIndexPath Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath)  ObjCInterface(c:objc(cs)NSIndexPath)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid_UICollectionView_NSIndexPath_NSIndexPath_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$7.NSIndexPath Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, imp$7.NSIndexPath, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$7.NSIndexPath Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, imp$7.NSIndexPath, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSString)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid_UICollectionView_NSString_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$7.NSIndexPath Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSString, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$7.NSIndexPath Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSString, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$7.NSIndexPath? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$7.NSIndexPath? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSIndexPath)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView) ":
+        kind: objc-block
+        name: ObjCBlock_NSIndexPath_ffiVoid_UICollectionView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$7.NSIndexPath? Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$7.NSIndexPath? Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICollectionReusableView)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UICollectionReusableView_ffiVoid_UICollectionView_NSString_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UICollectionReusableView Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSString, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UICollectionReusableView Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSString, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICollectionReusableView)?  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UICollectionReusableView_UICollectionView_NSString_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UICollectionReusableView? Function(UICollectionView, objc.NSString, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UICollectionReusableView? Function(UICollectionView, objc.NSString, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICollectionViewCell)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UICollectionViewCell_ffiVoid_UICollectionView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UICollectionViewCell Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UICollectionViewCell Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICollectionViewCell)?  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath)  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_UICollectionViewCell_UICollectionView_NSIndexPath_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UICollectionViewCell? Function(UICollectionView, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UICollectionViewCell? Function(UICollectionView, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICollectionViewDropProposal)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UICollectionViewDropProposal_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<UICollectionViewDropProposal Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<UICollectionViewDropProposal Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICollectionViewDropProposal)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UIDropSession)>  ObjCInterface(c:objc(cs)NSIndexPath)? ":
+        kind: objc-block
+        name: ObjCBlock_UICollectionViewDropProposal_ffiVoid_UICollectionView_idUIDropSession_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UICollectionViewDropProposal Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UICollectionViewDropProposal Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>, imp$7.NSIndexPath?)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UICollectionViewTransitionLayout)  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewLayout)  ObjCInterface(c:objc(cs)UICollectionViewLayout) ":
+        kind: objc-block
+        name: ObjCBlock_UICollectionViewTransitionLayout_ffiVoid_UICollectionView_UICollectionViewLayout_UICollectionViewLayout
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UICollectionViewTransitionLayout Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, UICollectionViewLayout)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UICollectionViewTransitionLayout Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, UICollectionViewLayout)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIColor)  ObjCInterface(c:objc(cs)UIColor) ":
+        kind: objc-block
+        name: ObjCBlock_UIColor_UIColor
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$1.UIColor Function(imp$1.UIColor)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$1.UIColor Function(imp$1.UIColor)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIContextMenuConfiguration)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSArray)  bxnz34 ":
+        kind: objc-block
+        name: ObjCBlock_UIContextMenuConfiguration_ffiVoid_UICollectionView_NSArray_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$4.UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSArray, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$4.UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.NSArray, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIContextMenuConfiguration)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath)  bxnz34 ":
+        kind: objc-block
+        name: ObjCBlock_UIContextMenuConfiguration_ffiVoid_UICollectionView_NSIndexPath_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$4.UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$4.UIContextMenuConfiguration? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, objc.CGPoint)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDragItem)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_UIDragItem_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$6.UIDragItem Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$6.UIDragItem Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDragPreviewParameters)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UIDragPreviewParameters_ffiVoid_UICollectionView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$7.UIDragPreviewParameters? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$7.UIDragPreviewParameters? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIDragPreviewParameters)?  ObjCInterface(c:objc(cs)UICollectionViewCell) ":
+        kind: objc-block
+        name: ObjCBlock_UIDragPreviewParameters_UICollectionViewCell
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$7.UIDragPreviewParameters? Function(UICollectionViewCell)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$7.UIDragPreviewParameters? Function(UICollectionViewCell)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIListSeparatorConfiguration)  ObjCInterface(c:objc(cs)NSIndexPath)  ObjCInterface(c:objc(cs)UIListSeparatorConfiguration) ":
+        kind: objc-block
+        name: ObjCBlock_UIListSeparatorConfiguration_NSIndexPath_UIListSeparatorConfiguration
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<UIListSeparatorConfiguration Function(imp$7.NSIndexPath, UIListSeparatorConfiguration)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<UIListSeparatorConfiguration Function(imp$7.NSIndexPath, UIListSeparatorConfiguration)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UISwipeActionsConfiguration)?  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UISwipeActionsConfiguration_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<imp$7.UISwipeActionsConfiguration? Function(imp$7.NSIndexPath)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<imp$7.UISwipeActionsConfiguration? Function(imp$7.NSIndexPath)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITargetedPreview)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration) ":
+        kind: objc-block
+        name: ObjCBlock_UITargetedPreview_ffiVoid_UICollectionView_UIContextMenuConfiguration
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UITargetedPreview)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UIContextMenuConfiguration)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_UITargetedPreview_ffiVoid_UICollectionView_UIContextMenuConfiguration_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UITargetedPreview? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$4.UIContextMenuConfiguration, imp$7.NSIndexPath)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)UIWindowSceneActivationConfiguration)?  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath)  bxnz34 ":
+        kind: objc-block
+        name: ObjCBlock_UIWindowSceneActivationConfiguration_ffiVoid_UICollectionView_NSIndexPath_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIWindowSceneActivationConfiguration? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIWindowSceneActivationConfiguration? Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, objc.CGPoint)>"
+      "~ objcBlock: bool  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: bool  62n31f*  ObjCBlock(~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSIndexPath) ) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_ffiVoidNSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(imp$7.NSIndexPath)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(imp$7.NSIndexPath)>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UICollectionView_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)NSIndexPath)  id<ObjCProtocol(c:objc(pl)UISpringLoadedInteractionContext)> ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UICollectionView_NSIndexPath_idUISpringLoadedInteractionContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewFocusUpdateContext) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UICollectionView_UICollectionViewFocusUpdateContext
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewFocusUpdateContext)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewFocusUpdateContext)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  f379jq*  ObjCInterface(c:objc(cs)NSIndexPath)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UICollectionView_objcObjCSelector_NSIndexPath_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCSelector>, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCSelector>, imp$7.NSIndexPath, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UIDragSession)> ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UICollectionView_idUIDragSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  id<ObjCProtocol(c:objc(pl)UIDropSession)> ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_UICollectionView_idUIDropSession
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: bool  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_bool_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<objc.ObjCObjectImpl>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<objc.ObjCObjectImpl>)>
+      "~ objcBlock: bxnz34  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  bxnz34 ":
+        kind: objc-block
+        name: ObjCBlock_CGPoint_ffiVoid_UICollectionView_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGPoint Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGPoint Function(ffi.Pointer<ffi.Void>, UICollectionView, objc.CGPoint)>"
+      "~ objcBlock: c2o3f9  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewLayout)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_CGFloat_ffiVoid_UICollectionView_UICollectionViewLayout_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, ffi.Long)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UICollectionView) ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UICollectionView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UICollectionView)>"
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_UICollectionView_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, UICollectionView, ffi.Long)>"
+      "~ objcBlock: gy5anf  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_CGSize_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: gy5anf  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewLayout)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_CGSize_ffiVoid_UICollectionView_UICollectionViewLayout_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, imp$7.NSIndexPath)>"
+      "~ objcBlock: gy5anf  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewLayout)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_CGSize_ffiVoid_UICollectionView_UICollectionViewLayout_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, ffi.Long)>"
+      "~ objcBlock: h48dc1  62n31f*  ObjCInterface(c:objc(cs)UICollectionView)  ObjCInterface(c:objc(cs)UICollectionViewLayout)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_UIEdgeInsets_ffiVoid_UICollectionView_UICollectionViewLayout_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<imp$1.UIEdgeInsets Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<imp$1.UIEdgeInsets Function(ffi.Pointer<ffi.Void>, UICollectionView, UICollectionViewLayout, ffi.Long)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UICollectionViewDropPlaceholderContext)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)UICollectionViewDropPlaceholder) ":
+        kind: objc-block
+        name: ObjCBlock_idUICollectionViewDropPlaceholderContext_ffiVoid_UIDragItem_UICollectionViewDropPlaceholder
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, UICollectionViewDropPlaceholder)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, UICollectionViewDropPlaceholder)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)NSIndexPath) ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragAnimating_ffiVoid_UIDragItem_NSIndexPath
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.NSIndexPath)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.NSIndexPath)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)NSIndexPath)  8j3pii ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragAnimating_ffiVoid_UIDragItem_NSIndexPath_CGRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.NSIndexPath, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.NSIndexPath, objc.CGRect)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDragAnimating)>  62n31f*  ObjCInterface(c:objc(cs)UIDragItem)  ObjCInterface(c:objc(cs)UIDragPreviewTarget) ":
+        kind: objc-block
+        name: ObjCBlock_idUIDragAnimating_ffiVoid_UIDragItem_UIDragPreviewTarget
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.UIDragPreviewTarget)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>, imp$6.UIDragItem, imp$7.UIDragPreviewTarget)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)UIDropSession)>  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_idUIDropSession_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)>

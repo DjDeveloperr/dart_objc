@@ -12,12 +12,8 @@ dependencies:
     sdk: flutter
   objc_appkit:
     path: ../../packages/objc-appkit
-  objc_appkit_split:
-    path: ../../packages/objc-appkit-split
   objc_uikit:
     path: ../../packages/objc-uikit
-  objc_uikit_split:
-    path: ../../packages/objc-uikit-split
   objective_c:
     path: ../../ffigen/pkgs/objective_c
 

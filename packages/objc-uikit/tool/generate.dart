@@ -3,7 +3,7 @@ import 'dart:io';
 Future<void> main(List<String> args) async {
   final result = await Process.run(
     'dart',
-    ['run', '../../tool/gen_objc_packages.dart', ...args, 'uikit'],
+    ['../../tool/gen_objc_packages.dart', ...args, 'uikit'],
     runInShell: true,
   );
   stdout.write(result.stdout);

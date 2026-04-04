@@ -1,0 +1,3440 @@
+format_version: 1.2.0
+files:
+  package:objc_appkit/src/appkit_core_bindings.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@NSAccessibilityOrientation:
+        kind: enum
+        name: NSAccessibilityOrientation
+        c-type: ffi.Long
+        dart-type: NSAccessibilityOrientation
+        ffi-dart-type: int
+      c:@E@NSAccessibilityRulerMarkerType:
+        kind: enum
+        name: NSAccessibilityRulerMarkerType
+        c-type: ffi.Long
+        dart-type: NSAccessibilityRulerMarkerType
+        ffi-dart-type: int
+      c:@E@NSAccessibilitySortDirection:
+        kind: enum
+        name: NSAccessibilitySortDirection
+        c-type: ffi.Long
+        dart-type: NSAccessibilitySortDirection
+        ffi-dart-type: int
+      c:@E@NSAccessibilityUnits:
+        kind: enum
+        name: NSAccessibilityUnits
+        c-type: ffi.Long
+        dart-type: NSAccessibilityUnits
+        ffi-dart-type: int
+      c:@E@NSAlignmentOptions:
+        kind: enum
+        name: NSAlignmentOptions
+        c-type: ffi.LongLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSAnimationBlockingMode:
+        kind: enum
+        name: NSAnimationBlockingMode
+        c-type: ffi.UnsignedLong
+        dart-type: NSAnimationBlockingMode
+        ffi-dart-type: int
+      c:@E@NSAnimationCurve:
+        kind: enum
+        name: NSAnimationCurve
+        c-type: ffi.UnsignedLong
+        dart-type: NSAnimationCurve
+        ffi-dart-type: int
+      c:@E@NSApplicationActivationPolicy:
+        kind: enum
+        name: NSApplicationActivationPolicy
+        c-type: ffi.Long
+        dart-type: NSApplicationActivationPolicy
+        ffi-dart-type: int
+      c:@E@NSApplicationDelegateReply:
+        kind: enum
+        name: NSApplicationDelegateReply
+        c-type: ffi.UnsignedLong
+        dart-type: NSApplicationDelegateReply
+        ffi-dart-type: int
+      c:@E@NSApplicationOcclusionState:
+        kind: enum
+        name: NSApplicationOcclusionState
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSApplicationPresentationOptions:
+        kind: enum
+        name: NSApplicationPresentationOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSApplicationPrintReply:
+        kind: enum
+        name: NSApplicationPrintReply
+        c-type: ffi.UnsignedLong
+        dart-type: NSApplicationPrintReply
+        ffi-dart-type: int
+      c:@E@NSApplicationTerminateReply:
+        kind: enum
+        name: NSApplicationTerminateReply
+        c-type: ffi.UnsignedLong
+        dart-type: NSApplicationTerminateReply
+        ffi-dart-type: int
+      c:@E@NSAutoresizingMaskOptions:
+        kind: enum
+        name: NSAutoresizingMaskOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSBackgroundStyle:
+        kind: enum
+        name: NSBackgroundStyle
+        c-type: ffi.Long
+        dart-type: NSBackgroundStyle
+        ffi-dart-type: int
+      c:@E@NSBackingStoreType:
+        kind: enum
+        name: NSBackingStoreType
+        c-type: ffi.UnsignedLong
+        dart-type: NSBackingStoreType
+        ffi-dart-type: int
+      c:@E@NSBezelStyle:
+        kind: enum
+        name: NSBezelStyle
+        c-type: ffi.UnsignedLong
+        dart-type: NSBezelStyle
+        ffi-dart-type: int
+      c:@E@NSBoxType:
+        kind: enum
+        name: NSBoxType
+        c-type: ffi.UnsignedLong
+        dart-type: NSBoxType
+        ffi-dart-type: int
+      c:@E@NSButtonType:
+        kind: enum
+        name: NSButtonType
+        c-type: ffi.UnsignedLong
+        dart-type: NSButtonType
+        ffi-dart-type: int
+      c:@E@NSCellAttribute:
+        kind: enum
+        name: NSCellAttribute
+        c-type: ffi.UnsignedLong
+        dart-type: NSCellAttribute
+        ffi-dart-type: int
+      c:@E@NSCellImagePosition:
+        kind: enum
+        name: NSCellImagePosition
+        c-type: ffi.UnsignedLong
+        dart-type: NSCellImagePosition
+        ffi-dart-type: int
+      c:@E@NSCellType:
+        kind: enum
+        name: NSCellType
+        c-type: ffi.UnsignedLong
+        dart-type: NSCellType
+        ffi-dart-type: int
+      c:@E@NSColorPanelMode:
+        kind: enum
+        name: NSColorPanelMode
+        c-type: ffi.Long
+        dart-type: NSColorPanelMode
+        ffi-dart-type: int
+      c:@E@NSColorPanelOptions:
+        kind: enum
+        name: NSColorPanelOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSColorSpaceModel:
+        kind: enum
+        name: NSColorSpaceModel
+        c-type: ffi.Long
+        dart-type: NSColorSpaceModel
+        ffi-dart-type: int
+      c:@E@NSColorSystemEffect:
+        kind: enum
+        name: NSColorSystemEffect
+        c-type: ffi.Long
+        dart-type: NSColorSystemEffect
+        ffi-dart-type: int
+      c:@E@NSColorType:
+        kind: enum
+        name: NSColorType
+        c-type: ffi.Long
+        dart-type: NSColorType
+        ffi-dart-type: int
+      c:@E@NSColorWellStyle:
+        kind: enum
+        name: NSColorWellStyle
+        c-type: ffi.Long
+        dart-type: NSColorWellStyle
+        ffi-dart-type: int
+      c:@E@NSControlBorderShape:
+        kind: enum
+        name: NSControlBorderShape
+        c-type: ffi.Long
+        dart-type: NSControlBorderShape
+        ffi-dart-type: int
+      c:@E@NSControlSize:
+        kind: enum
+        name: NSControlSize
+        c-type: ffi.UnsignedLong
+        dart-type: NSControlSize
+        ffi-dart-type: int
+      c:@E@NSControlTint:
+        kind: enum
+        name: NSControlTint
+        c-type: ffi.UnsignedLong
+        dart-type: NSControlTint
+        ffi-dart-type: int
+      c:@E@NSDisplayGamut:
+        kind: enum
+        name: NSDisplayGamut
+        c-type: ffi.Long
+        dart-type: NSDisplayGamut
+        ffi-dart-type: int
+      c:@E@NSDragOperation:
+        kind: enum
+        name: NSDragOperation
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSDraggingContext:
+        kind: enum
+        name: NSDraggingContext
+        c-type: ffi.Long
+        dart-type: NSDraggingContext
+        ffi-dart-type: int
+      c:@E@NSEventGestureAxis:
+        kind: enum
+        name: NSEventGestureAxis
+        c-type: ffi.Long
+        dart-type: NSEventGestureAxis
+        ffi-dart-type: int
+      c:@E@NSEventMask:
+        kind: enum
+        name: NSEventMask
+        c-type: ffi.LongLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSEventModifierFlags:
+        kind: enum
+        name: NSEventModifierFlags
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSFontAction:
+        kind: enum
+        name: NSFontAction
+        c-type: ffi.UnsignedLong
+        dart-type: NSFontAction
+        ffi-dart-type: int
+      c:@E@NSFontAssetRequestOptions:
+        kind: enum
+        name: NSFontAssetRequestOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSFontCollectionOptions:
+        kind: enum
+        name: NSFontCollectionOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSFontCollectionVisibility:
+        kind: enum
+        name: NSFontCollectionVisibility
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSFontDescriptorSymbolicTraits:
+        kind: enum
+        name: NSFontDescriptorSymbolicTraits
+        c-type: ffi.Uint32
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSFontPanelModeMask:
+        kind: enum
+        name: NSFontPanelModeMask
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSFontRenderingMode:
+        kind: enum
+        name: NSFontRenderingMode
+        c-type: ffi.UnsignedLong
+        dart-type: NSFontRenderingMode
+        ffi-dart-type: int
+      c:@E@NSFontTraitMask:
+        kind: enum
+        name: NSFontTraitMask
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSImageScaling:
+        kind: enum
+        name: NSImageScaling
+        c-type: ffi.UnsignedLong
+        dart-type: NSImageScaling
+        ffi-dart-type: int
+      c:@E@NSLayoutAttribute:
+        kind: enum
+        name: NSLayoutAttribute
+        c-type: ffi.Long
+        dart-type: NSLayoutAttribute
+        ffi-dart-type: int
+      c:@E@NSLineBreakMode:
+        kind: enum
+        name: NSLineBreakMode
+        c-type: ffi.UnsignedLong
+        dart-type: NSLineBreakMode
+        ffi-dart-type: int
+      c:@E@NSLineBreakStrategy:
+        kind: enum
+        name: NSLineBreakStrategy
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSLineMovementDirection:
+        kind: enum
+        name: NSLineMovementDirection
+        c-type: ffi.UnsignedLong
+        dart-type: NSLineMovementDirection
+        ffi-dart-type: int
+      c:@E@NSLineSweepDirection:
+        kind: enum
+        name: NSLineSweepDirection
+        c-type: ffi.UnsignedLong
+        dart-type: NSLineSweepDirection
+        ffi-dart-type: int
+      c:@E@NSPasteboardReadingOptions:
+        kind: enum
+        name: NSPasteboardReadingOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSPasteboardWritingOptions:
+        kind: enum
+        name: NSPasteboardWritingOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSPopoverBehavior:
+        kind: enum
+        name: NSPopoverBehavior
+        c-type: ffi.Long
+        dart-type: NSPopoverBehavior
+        ffi-dart-type: int
+      c:@E@NSRectEdge:
+        kind: enum
+        name: NSRectEdge
+        c-type: ffi.UnsignedLong
+        dart-type: NSRectEdge
+        ffi-dart-type: int
+      c:@E@NSRequestUserAttentionType:
+        kind: enum
+        name: NSRequestUserAttentionType
+        c-type: ffi.UnsignedLong
+        dart-type: NSRequestUserAttentionType
+        ffi-dart-type: int
+      c:@E@NSSelectionDirection:
+        kind: enum
+        name: NSSelectionDirection
+        c-type: ffi.UnsignedLong
+        dart-type: NSSelectionDirection
+        ffi-dart-type: int
+      c:@E@NSSelectionGranularity:
+        kind: enum
+        name: NSSelectionGranularity
+        c-type: ffi.UnsignedLong
+        dart-type: NSSelectionGranularity
+        ffi-dart-type: int
+      c:@E@NSTextAlignment:
+        kind: enum
+        name: NSTextAlignment
+        c-type: ffi.Long
+        dart-type: NSTextAlignment
+        ffi-dart-type: int
+      c:@E@NSTextBlockDimension:
+        kind: enum
+        name: NSTextBlockDimension
+        c-type: ffi.UnsignedLong
+        dart-type: NSTextBlockDimension
+        ffi-dart-type: int
+      c:@E@NSTextBlockLayer:
+        kind: enum
+        name: NSTextBlockLayer
+        c-type: ffi.Long
+        dart-type: NSTextBlockLayer
+        ffi-dart-type: int
+      c:@E@NSTextBlockValueType:
+        kind: enum
+        name: NSTextBlockValueType
+        c-type: ffi.UnsignedLong
+        dart-type: NSTextBlockValueType
+        ffi-dart-type: int
+      c:@E@NSTextBlockVerticalAlignment:
+        kind: enum
+        name: NSTextBlockVerticalAlignment
+        c-type: ffi.UnsignedLong
+        dart-type: NSTextBlockVerticalAlignment
+        ffi-dart-type: int
+      c:@E@NSTextCheckingType:
+        kind: enum
+        name: NSTextCheckingType
+        c-type: ffi.Uint64
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextContentManagerEnumerationOptions:
+        kind: enum
+        name: NSTextContentManagerEnumerationOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextCursorAccessoryPlacement:
+        kind: enum
+        name: NSTextCursorAccessoryPlacement
+        c-type: ffi.Long
+        dart-type: NSTextCursorAccessoryPlacement
+        ffi-dart-type: int
+      c:@E@NSTextFieldBezelStyle:
+        kind: enum
+        name: NSTextFieldBezelStyle
+        c-type: ffi.UnsignedLong
+        dart-type: NSTextFieldBezelStyle
+        ffi-dart-type: int
+      c:@E@NSTextFinderAction:
+        kind: enum
+        name: NSTextFinderAction
+        c-type: ffi.Long
+        dart-type: NSTextFinderAction
+        ffi-dart-type: int
+      c:@E@NSTextInputTraitType:
+        kind: enum
+        name: NSTextInputTraitType
+        c-type: ffi.Long
+        dart-type: NSTextInputTraitType
+        ffi-dart-type: int
+      c:@E@NSTextInsertionIndicatorAutomaticModeOptions:
+        kind: enum
+        name: NSTextInsertionIndicatorAutomaticModeOptions
+        c-type: ffi.Long
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextInsertionIndicatorDisplayMode:
+        kind: enum
+        name: NSTextInsertionIndicatorDisplayMode
+        c-type: ffi.Long
+        dart-type: NSTextInsertionIndicatorDisplayMode
+        ffi-dart-type: int
+      c:@E@NSTextLayoutFragmentEnumerationOptions:
+        kind: enum
+        name: NSTextLayoutFragmentEnumerationOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextLayoutFragmentState:
+        kind: enum
+        name: NSTextLayoutFragmentState
+        c-type: ffi.UnsignedLong
+        dart-type: NSTextLayoutFragmentState
+        ffi-dart-type: int
+      c:@E@NSTextLayoutManagerSegmentOptions:
+        kind: enum
+        name: NSTextLayoutManagerSegmentOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextLayoutManagerSegmentType:
+        kind: enum
+        name: NSTextLayoutManagerSegmentType
+        c-type: ffi.Long
+        dart-type: NSTextLayoutManagerSegmentType
+        ffi-dart-type: int
+      c:@E@NSTextLayoutOrientation:
+        kind: enum
+        name: NSTextLayoutOrientation
+        c-type: ffi.Long
+        dart-type: NSTextLayoutOrientation
+        ffi-dart-type: int
+      c:@E@NSTextListOptions:
+        kind: enum
+        name: NSTextListOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextSelectionAffinity:
+        kind: enum
+        name: NSTextSelectionAffinity
+        c-type: ffi.Long
+        dart-type: NSTextSelectionAffinity
+        ffi-dart-type: int
+      c:@E@NSTextSelectionGranularity:
+        kind: enum
+        name: NSTextSelectionGranularity
+        c-type: ffi.Long
+        dart-type: NSTextSelectionGranularity
+        ffi-dart-type: int
+      c:@E@NSTextSelectionNavigationDestination:
+        kind: enum
+        name: NSTextSelectionNavigationDestination
+        c-type: ffi.Long
+        dart-type: NSTextSelectionNavigationDestination
+        ffi-dart-type: int
+      c:@E@NSTextSelectionNavigationDirection:
+        kind: enum
+        name: NSTextSelectionNavigationDirection
+        c-type: ffi.Long
+        dart-type: NSTextSelectionNavigationDirection
+        ffi-dart-type: int
+      c:@E@NSTextSelectionNavigationLayoutOrientation:
+        kind: enum
+        name: NSTextSelectionNavigationLayoutOrientation
+        c-type: ffi.Long
+        dart-type: NSTextSelectionNavigationLayoutOrientation
+        ffi-dart-type: int
+      c:@E@NSTextSelectionNavigationModifier:
+        kind: enum
+        name: NSTextSelectionNavigationModifier
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextSelectionNavigationWritingDirection:
+        kind: enum
+        name: NSTextSelectionNavigationWritingDirection
+        c-type: ffi.Long
+        dart-type: NSTextSelectionNavigationWritingDirection
+        ffi-dart-type: int
+      c:@E@NSTextStorageEditActions:
+        kind: enum
+        name: NSTextStorageEditActions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSTextTabType:
+        kind: enum
+        name: NSTextTabType
+        c-type: ffi.UnsignedLong
+        dart-type: NSTextTabType
+        ffi-dart-type: int
+      c:@E@NSTextTableLayoutAlgorithm:
+        kind: enum
+        name: NSTextTableLayoutAlgorithm
+        c-type: ffi.UnsignedLong
+        dart-type: NSTextTableLayoutAlgorithm
+        ffi-dart-type: int
+      c:@E@NSTintProminence:
+        kind: enum
+        name: NSTintProminence
+        c-type: ffi.Long
+        dart-type: NSTintProminence
+        ffi-dart-type: int
+      c:@E@NSTitlePosition:
+        kind: enum
+        name: NSTitlePosition
+        c-type: ffi.UnsignedLong
+        dart-type: NSTitlePosition
+        ffi-dart-type: int
+      c:@E@NSTitlebarSeparatorStyle:
+        kind: enum
+        name: NSTitlebarSeparatorStyle
+        c-type: ffi.Long
+        dart-type: NSTitlebarSeparatorStyle
+        ffi-dart-type: int
+      c:@E@NSUserInterfaceLayoutDirection:
+        kind: enum
+        name: NSUserInterfaceLayoutDirection
+        c-type: ffi.Long
+        dart-type: NSUserInterfaceLayoutDirection
+        ffi-dart-type: int
+      c:@E@NSViewControllerTransitionOptions:
+        kind: enum
+        name: NSViewControllerTransitionOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSViewLayerContentsPlacement:
+        kind: enum
+        name: NSViewLayerContentsPlacement
+        c-type: ffi.Long
+        dart-type: NSViewLayerContentsPlacement
+        ffi-dart-type: int
+      c:@E@NSViewLayerContentsRedrawPolicy:
+        kind: enum
+        name: NSViewLayerContentsRedrawPolicy
+        c-type: ffi.Long
+        dart-type: NSViewLayerContentsRedrawPolicy
+        ffi-dart-type: int
+      c:@E@NSViewLayoutRegionAdaptivityAxis:
+        kind: enum
+        name: NSViewLayoutRegionAdaptivityAxis
+        c-type: ffi.Long
+        dart-type: NSViewLayoutRegionAdaptivityAxis
+        ffi-dart-type: int
+      c:@E@NSVisualEffectBlendingMode:
+        kind: enum
+        name: NSVisualEffectBlendingMode
+        c-type: ffi.Long
+        dart-type: NSVisualEffectBlendingMode
+        ffi-dart-type: int
+      c:@E@NSVisualEffectMaterial:
+        kind: enum
+        name: NSVisualEffectMaterial
+        c-type: ffi.Long
+        dart-type: NSVisualEffectMaterial
+        ffi-dart-type: int
+      c:@E@NSVisualEffectState:
+        kind: enum
+        name: NSVisualEffectState
+        c-type: ffi.Long
+        dart-type: NSVisualEffectState
+        ffi-dart-type: int
+      c:@E@NSWindowAnimationBehavior:
+        kind: enum
+        name: NSWindowAnimationBehavior
+        c-type: ffi.Long
+        dart-type: NSWindowAnimationBehavior
+        ffi-dart-type: int
+      c:@E@NSWindowButton:
+        kind: enum
+        name: NSWindowButton
+        c-type: ffi.UnsignedLong
+        dart-type: NSWindowButton
+        ffi-dart-type: int
+      c:@E@NSWindowCollectionBehavior:
+        kind: enum
+        name: NSWindowCollectionBehavior
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSWindowDepth:
+        kind: enum
+        name: NSWindowDepth
+        c-type: ffi.Int32
+        dart-type: NSWindowDepth
+        ffi-dart-type: int
+      c:@E@NSWindowListOptions:
+        kind: enum
+        name: NSWindowListOptions
+        c-type: ffi.Long
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSWindowNumberListOptions:
+        kind: enum
+        name: NSWindowNumberListOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSWindowOcclusionState:
+        kind: enum
+        name: NSWindowOcclusionState
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSWindowOrderingMode:
+        kind: enum
+        name: NSWindowOrderingMode
+        c-type: ffi.Long
+        dart-type: NSWindowOrderingMode
+        ffi-dart-type: int
+      c:@E@NSWindowSharingType:
+        kind: enum
+        name: NSWindowSharingType
+        c-type: ffi.UnsignedLong
+        dart-type: NSWindowSharingType
+        ffi-dart-type: int
+      c:@E@NSWindowStyleMask:
+        kind: enum
+        name: NSWindowStyleMask
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@E@NSWindowTabbingMode:
+        kind: enum
+        name: NSWindowTabbingMode
+        c-type: ffi.Long
+        dart-type: NSWindowTabbingMode
+        ffi-dart-type: int
+      c:@E@NSWindowTitleVisibility:
+        kind: enum
+        name: NSWindowTitleVisibility
+        c-type: ffi.Long
+        dart-type: NSWindowTitleVisibility
+        ffi-dart-type: int
+      c:@E@NSWindowToolbarStyle:
+        kind: enum
+        name: NSWindowToolbarStyle
+        c-type: ffi.Long
+        dart-type: NSWindowToolbarStyle
+        ffi-dart-type: int
+      c:@E@NSWindowUserTabbingPreference:
+        kind: enum
+        name: NSWindowUserTabbingPreference
+        c-type: ffi.Long
+        dart-type: NSWindowUserTabbingPreference
+        ffi-dart-type: int
+      c:@E@NSWritingDirection:
+        kind: enum
+        name: NSWritingDirection
+        c-type: ffi.Long
+        dart-type: NSWritingDirection
+        ffi-dart-type: int
+      c:@E@NSWritingToolsBehavior:
+        kind: enum
+        name: NSWritingToolsBehavior
+        c-type: ffi.Long
+        dart-type: NSWritingToolsBehavior
+        ffi-dart-type: int
+      c:@E@NSWritingToolsResultOptions:
+        kind: enum
+        name: NSWritingToolsResultOptions
+        c-type: ffi.UnsignedLong
+        dart-type: int
+        ffi-dart-type: int
+      c:@S@CGColor:
+        kind: type
+        name: CGColor
+        c-type: CGColor
+        dart-type: CGColor
+        ffi-dart-type: CGColor
+      c:@S@CGColorSpace:
+        kind: type
+        name: CGColorSpace
+        c-type: CGColorSpace
+        dart-type: CGColorSpace
+        ffi-dart-type: CGColorSpace
+      c:@S@CGContext:
+        kind: type
+        name: CGContext
+        c-type: CGContext
+        dart-type: CGContext
+        ffi-dart-type: CGContext
+      c:@S@CGImage:
+        kind: type
+        name: CGImage
+        c-type: CGImage
+        dart-type: CGImage
+        ffi-dart-type: CGImage
+      c:@S@_NSModalSession:
+        kind: type
+        name: _NSModalSession
+        c-type: _NSModalSession
+        dart-type: _NSModalSession
+        ffi-dart-type: _NSModalSession
+      c:@T@instancetype:
+        kind: typedef
+        name: instancetype
+        c-type: instancetype
+        dart-name: Dartinstancetype
+        dart-type: Dartinstancetype
+        ffi-dart-type: instancetype
+      c:objc(cs)CALayer:
+        kind: objc-interface
+        name: CALayer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CALayer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)CIFilter:
+        kind: objc-interface
+        name: CIFilter
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CIFilter
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)CKShareMetadata:
+        kind: objc-interface
+        name: CKShareMetadata
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CKShareMetadata
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)INIntent:
+        kind: objc-interface
+        name: INIntent
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: INIntent
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSActionCell:
+        kind: objc-interface
+        name: NSActionCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSActionCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSAdaptiveImageGlyph:
+        kind: objc-interface
+        name: NSAdaptiveImageGlyph
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAdaptiveImageGlyph
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSAffineTransform:
+        kind: objc-interface
+        name: NSAffineTransform
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAffineTransform
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSAnimation:
+        kind: objc-interface
+        name: NSAnimation
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAnimation
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSAppearance:
+        kind: objc-interface
+        name: NSAppearance
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAppearance
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSApplication:
+        kind: objc-interface
+        name: NSApplication
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSApplication
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSBitmapImageRep:
+        kind: objc-interface
+        name: NSBitmapImageRep
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSBitmapImageRep
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSBox:
+        kind: objc-interface
+        name: NSBox
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSBox
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSButton:
+        kind: objc-interface
+        name: NSButton
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSButton
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSButtonCell:
+        kind: objc-interface
+        name: NSButtonCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSButtonCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSCandidateListTouchBarItem:
+        kind: objc-interface
+        name: NSCandidateListTouchBarItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSCandidateListTouchBarItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSCell:
+        kind: objc-interface
+        name: NSCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColor:
+        kind: objc-interface
+        name: NSColor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColorList:
+        kind: objc-interface
+        name: NSColorList
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorList
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColorPanel:
+        kind: objc-interface
+        name: NSColorPanel
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorPanel
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColorPicker:
+        kind: objc-interface
+        name: NSColorPicker
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorPicker
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColorPickerTouchBarItem:
+        kind: objc-interface
+        name: NSColorPickerTouchBarItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorPickerTouchBarItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColorSampler:
+        kind: objc-interface
+        name: NSColorSampler
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorSampler
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColorSpace:
+        kind: objc-interface
+        name: NSColorSpace
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorSpace
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSColorWell:
+        kind: objc-interface
+        name: NSColorWell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorWell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSControl:
+        kind: objc-interface
+        name: NSControl
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSControl
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSController:
+        kind: objc-interface
+        name: NSController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSDockTile:
+        kind: objc-interface
+        name: NSDockTile
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDockTile
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSDocumentController:
+        kind: objc-interface
+        name: NSDocumentController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDocumentController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSDraggingSession:
+        kind: objc-interface
+        name: NSDraggingSession
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDraggingSession
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSEvent:
+        kind: objc-interface
+        name: NSEvent
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSEvent
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSException:
+        kind: objc-interface
+        name: NSException
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSException
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFileWrapper:
+        kind: objc-interface
+        name: NSFileWrapper
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFileWrapper
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFont:
+        kind: objc-interface
+        name: NSFont
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFont
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFontAssetRequest:
+        kind: objc-interface
+        name: NSFontAssetRequest
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFontAssetRequest
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFontCollection:
+        kind: objc-interface
+        name: NSFontCollection
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFontCollection
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFontDescriptor:
+        kind: objc-interface
+        name: NSFontDescriptor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFontDescriptor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFontManager:
+        kind: objc-interface
+        name: NSFontManager
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFontManager
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFontPanel:
+        kind: objc-interface
+        name: NSFontPanel
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFontPanel
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSFormatter:
+        kind: objc-interface
+        name: NSFormatter
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFormatter
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSGraphicsContext:
+        kind: objc-interface
+        name: NSGraphicsContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSGraphicsContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSImage:
+        kind: objc-interface
+        name: NSImage
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSImage
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSImageRep:
+        kind: objc-interface
+        name: NSImageRep
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSImageRep
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSImageSymbolConfiguration:
+        kind: objc-interface
+        name: NSImageSymbolConfiguration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSImageSymbolConfiguration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSLayoutManager:
+        kind: objc-interface
+        name: NSLayoutManager
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSLayoutManager
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSMenu:
+        kind: objc-interface
+        name: NSMenu
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSMenu
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSMenuItem:
+        kind: objc-interface
+        name: NSMenuItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSMenuItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSMutableAttributedString:
+        kind: objc-interface
+        name: NSMutableAttributedString
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSMutableAttributedString
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSOperationQueue:
+        kind: objc-interface
+        name: NSOperationQueue
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSOperationQueue
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSOrthography:
+        kind: objc-interface
+        name: NSOrthography
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSOrthography
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSPanel:
+        kind: objc-interface
+        name: NSPanel
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSPanel
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSParagraphStyle:
+        kind: objc-interface
+        name: NSParagraphStyle
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSParagraphStyle
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSPasteboard:
+        kind: objc-interface
+        name: NSPasteboard
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSPasteboard
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSRegularExpression:
+        kind: objc-interface
+        name: NSRegularExpression
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSRegularExpression
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSResponder:
+        kind: objc-interface
+        name: NSResponder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSResponder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSRulerMarker:
+        kind: objc-interface
+        name: NSRulerMarker
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSRulerMarker
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSRulerView:
+        kind: objc-interface
+        name: NSRulerView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSRulerView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSRunningApplication:
+        kind: objc-interface
+        name: NSRunningApplication
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSRunningApplication
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSScreen:
+        kind: objc-interface
+        name: NSScreen
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSScreen
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSScrollEdgeEffectStyle:
+        kind: objc-interface
+        name: NSScrollEdgeEffectStyle
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSScrollEdgeEffectStyle
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSScrollView:
+        kind: objc-interface
+        name: NSScrollView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSScrollView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSShadow:
+        kind: objc-interface
+        name: NSShadow
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSShadow
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSSharingServicePicker:
+        kind: objc-interface
+        name: NSSharingServicePicker
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSSharingServicePicker
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSSound:
+        kind: objc-interface
+        name: NSSound
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSSound
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSStoryboard:
+        kind: objc-interface
+        name: NSStoryboard
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSStoryboard
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSStoryboardSegue:
+        kind: objc-interface
+        name: NSStoryboardSegue
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSStoryboardSegue
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSText:
+        kind: objc-interface
+        name: NSText
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSText
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextAlternatives:
+        kind: objc-interface
+        name: NSTextAlternatives
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAlternatives
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextAttachment:
+        kind: objc-interface
+        name: NSTextAttachment
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachment
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextAttachmentCell:
+        kind: objc-interface
+        name: NSTextAttachmentCell$1
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachmentCell$1
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextAttachmentViewProvider:
+        kind: objc-interface
+        name: NSTextAttachmentViewProvider
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachmentViewProvider
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextBlock:
+        kind: objc-interface
+        name: NSTextBlock
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextBlock
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextCheckingController:
+        kind: objc-interface
+        name: NSTextCheckingController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextCheckingController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextCheckingResult:
+        kind: objc-interface
+        name: NSTextCheckingResult
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextCheckingResult
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextContainer:
+        kind: objc-interface
+        name: NSTextContainer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextContainer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextContentManager:
+        kind: objc-interface
+        name: NSTextContentManager
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextContentManager
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextContentStorage:
+        kind: objc-interface
+        name: NSTextContentStorage
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextContentStorage
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextElement:
+        kind: objc-interface
+        name: NSTextElement
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextElement
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextField:
+        kind: objc-interface
+        name: NSTextField
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextField
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextFieldCell:
+        kind: objc-interface
+        name: NSTextFieldCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextFieldCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextFinder:
+        kind: objc-interface
+        name: NSTextFinder
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextFinder
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextInputContext:
+        kind: objc-interface
+        name: NSTextInputContext
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextInputContext
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextInsertionIndicator:
+        kind: objc-interface
+        name: NSTextInsertionIndicator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextInsertionIndicator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextLayoutFragment:
+        kind: objc-interface
+        name: NSTextLayoutFragment
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextLayoutFragment
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextLayoutManager:
+        kind: objc-interface
+        name: NSTextLayoutManager
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextLayoutManager
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextLineFragment:
+        kind: objc-interface
+        name: NSTextLineFragment
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextLineFragment
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextList:
+        kind: objc-interface
+        name: NSTextList
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextList
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextListElement:
+        kind: objc-interface
+        name: NSTextListElement
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextListElement
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextParagraph:
+        kind: objc-interface
+        name: NSTextParagraph
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextParagraph
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextPreview:
+        kind: objc-interface
+        name: NSTextPreview
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextPreview
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextRange:
+        kind: objc-interface
+        name: NSTextRange
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextRange
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextSelection:
+        kind: objc-interface
+        name: NSTextSelection
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextSelection
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextSelectionNavigation:
+        kind: objc-interface
+        name: NSTextSelectionNavigation
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextSelectionNavigation
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextStorage:
+        kind: objc-interface
+        name: NSTextStorage
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextStorage
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextTab:
+        kind: objc-interface
+        name: NSTextTab
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextTab
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextTable:
+        kind: objc-interface
+        name: NSTextTable
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextTable
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextTableBlock:
+        kind: objc-interface
+        name: NSTextTableBlock
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextTableBlock
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextView:
+        kind: objc-interface
+        name: NSTextView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTextViewportLayoutController:
+        kind: objc-interface
+        name: NSTextViewportLayoutController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextViewportLayoutController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTimeZone:
+        kind: objc-interface
+        name: NSTimeZone
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTimeZone
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTitlebarAccessoryViewController:
+        kind: objc-interface
+        name: NSTitlebarAccessoryViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTitlebarAccessoryViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSToolbar:
+        kind: objc-interface
+        name: NSToolbar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSToolbar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTouchBar:
+        kind: objc-interface
+        name: NSTouchBar
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTouchBar
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSTouchBarItem:
+        kind: objc-interface
+        name: NSTouchBarItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTouchBarItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSUndoManager:
+        kind: objc-interface
+        name: NSUndoManager
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSUndoManager
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSUserActivity:
+        kind: objc-interface
+        name: NSUserActivity
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSUserActivity
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSUserInterfaceCompressionOptions:
+        kind: objc-interface
+        name: NSUserInterfaceCompressionOptions
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSUserInterfaceCompressionOptions
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSView:
+        kind: objc-interface
+        name: NSView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSViewAnimation:
+        kind: objc-interface
+        name: NSViewAnimation
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSViewAnimation
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSViewController:
+        kind: objc-interface
+        name: NSViewController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSViewController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSViewLayoutRegion:
+        kind: objc-interface
+        name: NSViewLayoutRegion
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSViewLayoutRegion
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSVisualEffectView:
+        kind: objc-interface
+        name: NSVisualEffectView
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSVisualEffectView
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSWindow:
+        kind: objc-interface
+        name: NSWindow
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSWindow
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSWindowController:
+        kind: objc-interface
+        name: NSWindowController
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSWindowController
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSWindowTab:
+        kind: objc-interface
+        name: NSWindowTab
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSWindowTab
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cs)NSWindowTabGroup:
+        kind: objc-interface
+        name: NSWindowTabGroup
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSWindowTabGroup
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(cy)NSApplication@NSColorPanel:
+        kind: type
+        name: NSColorPanel$1
+      c:objc(cy)NSApplication@NSResponder:
+        kind: type
+        name: NSResponder$1
+      c:objc(cy)NSApplication@NSWindowRestoration:
+        kind: type
+        name: NSWindowRestoration
+      c:objc(cy)NSApplication@NSWindowsMenu:
+        kind: type
+        name: NSWindowsMenu
+      c:objc(cy)NSControl@NSControlEditableTextMethods:
+        kind: type
+        name: NSControlEditableTextMethods
+      c:objc(cy)NSDocumentController@NSWindowRestoration:
+        kind: type
+        name: NSWindowRestoration$1
+      c:objc(cy)NSFont@NSFont_Deprecated:
+        kind: type
+        name: NSFont_Deprecated
+      c:objc(cy)NSFont@NSFont_TextStyles:
+        kind: type
+        name: NSFont_TextStyles
+      c:objc(cy)NSFontDescriptor@NSFontDescriptor_TextStyles:
+        kind: type
+        name: NSFontDescriptor_TextStyles
+      c:objc(cy)NSFontManager@NSFontManagerMenuActionMethods:
+        kind: type
+        name: NSFontManagerMenuActionMethods
+      c:objc(cy)NSLayoutManager@NSTextViewSupport:
+        kind: type
+        name: NSTextViewSupport
+      c:objc(cy)NSObject@NSColorPanelResponderMethod:
+        kind: type
+        name: NSColorPanelResponderMethod
+      c:objc(cy)NSObject@NSControlSubclassNotifications:
+        kind: type
+        name: NSControlSubclassNotifications
+      c:objc(cy)NSObject@NSFontManagerDelegate:
+        kind: type
+        name: NSFontManagerDelegate
+      c:objc(cy)NSObject@NSFontManagerResponderMethod:
+        kind: type
+        name: NSFontManagerResponderMethod
+      c:objc(cy)NSObject@NSFontPanelValidationAdditions:
+        kind: type
+        name: NSFontPanelValidationAdditions
+      c:objc(cy)NSResponder@NSControlEditingSupport:
+        kind: type
+        name: NSControlEditingSupport
+      c:objc(cy)NSResponder@NSTextFinderSupport:
+        kind: type
+        name: NSTextFinderSupport
+      c:objc(cy)NSResponder@NSWindowTabbing:
+        kind: type
+        name: NSWindowTabbing
+      c:objc(cy)NSTextAttachment@NSTextAttachment_Deprecation:
+        kind: type
+        name: NSTextAttachment_Deprecation
+      c:objc(cy)NSTextCheckingResult@NSTextCheckingResultCreation:
+        kind: type
+        name: NSTextCheckingResultCreation
+      c:objc(cy)NSTextCheckingResult@NSTextCheckingResultOptional:
+        kind: type
+        name: NSTextCheckingResultOptional
+      c:objc(cy)NSTextContainer@NSTextContainerDeprecated:
+        kind: type
+        name: NSTextContainerDeprecated
+      c:objc(cy)NSTextField@NSTextFieldAttributedStringMethods:
+        kind: type
+        name: NSTextFieldAttributedStringMethods
+      c:objc(cy)NSTextField@NSTextFieldConvenience:
+        kind: type
+        name: NSTextFieldConvenience
+      c:objc(cy)NSTextTab@NSTextTabDeprecated:
+        kind: type
+        name: NSTextTabDeprecated
+      c:objc(cy)NSTextView@NSTextChecking:
+        kind: type
+        name: NSTextChecking
+      c:objc(cy)NSTextView@NSTextView_Factory:
+        kind: type
+        name: NSTextView_Factory
+      c:objc(cy)NSTextView@NSTextView_SharingService:
+        kind: type
+        name: NSTextView_SharingService
+      c:objc(cy)NSTextView@NSTextView_TextHighlight:
+        kind: type
+        name: NSTextView_TextHighlight
+      c:objc(cy)NSTextView@NSTextView_TouchBar:
+        kind: type
+        name: NSTextView_TouchBar
+      c:objc(cy)NSView@NSViewEnclosingMenuItem:
+        kind: type
+        name: NSViewEnclosingMenuItem
+      c:objc(cy)NSViewController@NSViewControllerContainer:
+        kind: type
+        name: NSViewControllerContainer
+      c:objc(cy)NSViewController@NSViewControllerPresentation:
+        kind: type
+        name: NSViewControllerPresentation
+      c:objc(cy)NSViewController@NSViewControllerPresentationAndTransitionStyles:
+        kind: type
+        name: NSViewControllerPresentationAndTransitionStyles
+      c:objc(cy)NSViewController@NSViewControllerStoryboardingMethods:
+        kind: type
+        name: NSViewControllerStoryboardingMethods
+      c:objc(cy)NSWindowController@NSWindowControllerDismissing:
+        kind: type
+        name: NSWindowControllerDismissing
+      c:objc(cy)NSWindowController@NSWindowControllerStoryboardingMethods:
+        kind: type
+        name: NSWindowControllerStoryboardingMethods
+      c:objc(pl)CAMediaTiming:
+        kind: objc-protocol
+        name: CAMediaTiming
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CAMediaTiming
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)CTAdaptiveImageProviding:
+        kind: objc-protocol
+        name: CTAdaptiveImageProviding
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: CTAdaptiveImageProviding
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAccessibility:
+        kind: objc-protocol
+        name: NSAccessibility
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAccessibility
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAccessibilityButton:
+        kind: objc-protocol
+        name: NSAccessibilityButton
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAccessibilityButton
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAccessibilityElement:
+        kind: objc-protocol
+        name: NSAccessibilityElement
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAccessibilityElement
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAccessibilityNavigableStaticText:
+        kind: objc-protocol
+        name: NSAccessibilityNavigableStaticText
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAccessibilityNavigableStaticText
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAccessibilityStaticText:
+        kind: objc-protocol
+        name: NSAccessibilityStaticText
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAccessibilityStaticText
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAnimatablePropertyContainer:
+        kind: objc-protocol
+        name: NSAnimatablePropertyContainer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAnimatablePropertyContainer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAnimationDelegate:
+        kind: objc-protocol
+        name: NSAnimationDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAnimationDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSAppearanceCustomization:
+        kind: objc-protocol
+        name: NSAppearanceCustomization
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSAppearanceCustomization
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSApplicationDelegate:
+        kind: objc-protocol
+        name: NSApplicationDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSApplicationDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSCandidateListTouchBarItemDelegate:
+        kind: objc-protocol
+        name: NSCandidateListTouchBarItemDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSCandidateListTouchBarItemDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSChangeSpelling:
+        kind: objc-protocol
+        name: NSChangeSpelling
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSChangeSpelling
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSColorChanging:
+        kind: objc-protocol
+        name: NSColorChanging
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorChanging
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSColorPickingCustom:
+        kind: objc-protocol
+        name: NSColorPickingCustom
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorPickingCustom
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSColorPickingDefault:
+        kind: objc-protocol
+        name: NSColorPickingDefault
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSColorPickingDefault
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSControlTextEditingDelegate:
+        kind: objc-protocol
+        name: NSControlTextEditingDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSControlTextEditingDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSDraggingDestination:
+        kind: objc-protocol
+        name: NSDraggingDestination
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDraggingDestination
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSDraggingInfo:
+        kind: objc-protocol
+        name: NSDraggingInfo
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDraggingInfo
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSDraggingSource:
+        kind: objc-protocol
+        name: NSDraggingSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSDraggingSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSEditor:
+        kind: objc-protocol
+        name: NSEditor
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSEditor
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSEditorRegistration:
+        kind: objc-protocol
+        name: NSEditorRegistration
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSEditorRegistration
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSFontChanging:
+        kind: objc-protocol
+        name: NSFontChanging
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSFontChanging
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSIgnoreMisspelledWords:
+        kind: objc-protocol
+        name: NSIgnoreMisspelledWords
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSIgnoreMisspelledWords
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSMenuItemValidation:
+        kind: objc-protocol
+        name: NSMenuItemValidation
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSMenuItemValidation
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSPasteboardReading:
+        kind: objc-protocol
+        name: NSPasteboardReading
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSPasteboardReading
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSPasteboardWriting:
+        kind: objc-protocol
+        name: NSPasteboardWriting
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSPasteboardWriting
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSProgressReporting:
+        kind: objc-protocol
+        name: NSProgressReporting
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSProgressReporting
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSSeguePerforming:
+        kind: objc-protocol
+        name: NSSeguePerforming
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSSeguePerforming
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSStandardKeyBindingResponding:
+        kind: objc-protocol
+        name: NSStandardKeyBindingResponding
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSStandardKeyBindingResponding
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextAttachmentCell:
+        kind: objc-protocol
+        name: NSTextAttachmentCell
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachmentCell
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextAttachmentContainer:
+        kind: objc-protocol
+        name: NSTextAttachmentContainer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachmentContainer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextAttachmentLayout:
+        kind: objc-protocol
+        name: NSTextAttachmentLayout
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextAttachmentLayout
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextCheckingClient:
+        kind: objc-protocol
+        name: NSTextCheckingClient
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextCheckingClient
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextContent:
+        kind: objc-protocol
+        name: NSTextContent
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextContent
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextContentManagerDelegate:
+        kind: objc-protocol
+        name: NSTextContentManagerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextContentManagerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextContentStorageDelegate:
+        kind: objc-protocol
+        name: NSTextContentStorageDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextContentStorageDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextDelegate:
+        kind: objc-protocol
+        name: NSTextDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextElementProvider:
+        kind: objc-protocol
+        name: NSTextElementProvider
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextElementProvider
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextFieldDelegate:
+        kind: objc-protocol
+        name: NSTextFieldDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextFieldDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextFinderBarContainer:
+        kind: objc-protocol
+        name: NSTextFinderBarContainer
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextFinderBarContainer
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextFinderClient:
+        kind: objc-protocol
+        name: NSTextFinderClient
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextFinderClient
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextInput:
+        kind: objc-protocol
+        name: NSTextInput
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextInput
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextInputClient:
+        kind: objc-protocol
+        name: NSTextInputClient
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextInputClient
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextInputTraits:
+        kind: objc-protocol
+        name: NSTextInputTraits
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextInputTraits
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextLayoutManagerDelegate:
+        kind: objc-protocol
+        name: NSTextLayoutManagerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextLayoutManagerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextLayoutOrientationProvider:
+        kind: objc-protocol
+        name: NSTextLayoutOrientationProvider
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextLayoutOrientationProvider
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextLocation:
+        kind: objc-protocol
+        name: NSTextLocation
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextLocation
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextSelectionDataSource:
+        kind: objc-protocol
+        name: NSTextSelectionDataSource
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextSelectionDataSource
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextStorageDelegate:
+        kind: objc-protocol
+        name: NSTextStorageDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextStorageDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextStorageObserving:
+        kind: objc-protocol
+        name: NSTextStorageObserving
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextStorageObserving
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextViewDelegate:
+        kind: objc-protocol
+        name: NSTextViewDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextViewDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTextViewportLayoutControllerDelegate:
+        kind: objc-protocol
+        name: NSTextViewportLayoutControllerDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTextViewportLayoutControllerDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSTouchBarDelegate:
+        kind: objc-protocol
+        name: NSTouchBarDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSTouchBarDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSUserInterfaceCompression:
+        kind: objc-protocol
+        name: NSUserInterfaceCompression
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSUserInterfaceCompression
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSUserInterfaceItemIdentification:
+        kind: objc-protocol
+        name: NSUserInterfaceItemIdentification
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSUserInterfaceItemIdentification
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSUserInterfaceValidations:
+        kind: objc-protocol
+        name: NSUserInterfaceValidations
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSUserInterfaceValidations
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSValidatedUserInterfaceItem:
+        kind: objc-protocol
+        name: NSValidatedUserInterfaceItem
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSValidatedUserInterfaceItem
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSViewContentSelectionInfo:
+        kind: objc-protocol
+        name: NSViewContentSelectionInfo
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSViewContentSelectionInfo
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSViewControllerPresentationAnimator:
+        kind: objc-protocol
+        name: NSViewControllerPresentationAnimator
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSViewControllerPresentationAnimator
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSViewLayerContentScaleDelegate:
+        kind: objc-protocol
+        name: NSViewLayerContentScaleDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSViewLayerContentScaleDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSViewToolTipOwner:
+        kind: objc-protocol
+        name: NSViewToolTipOwner
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSViewToolTipOwner
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSWindowDelegate:
+        kind: objc-protocol
+        name: NSWindowDelegate
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSWindowDelegate
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      c:objc(pl)NSWindowRestoration:
+        kind: objc-protocol
+        name: NSWindowRestoration$2
+        c-type: ffi.Pointer<objc.ObjCObjectImpl>
+        dart-type: NSWindowRestoration$2
+        ffi-dart-type: ffi.Pointer<objc.ObjCObjectImpl>
+      "~ objcBlock: 12fqv5  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSRange_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSRange Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSRange Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 12fqv5  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  12fqv5  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSRange_ffiVoid_NSTextView_NSRange_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSRange Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSRange Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, objc.NSRange)>"
+      "~ objcBlock: 2itc6v  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSUInteger_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 2itc6v  62n31f*  dfl22e ":
+        kind: objc-block
+        name: ObjCBlock_NSUInteger_ffiVoid_NSPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+      "~ objcBlock: 3c16it  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSWritingToolsBehavior_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 4k32w8  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSTextLayoutOrientation_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 4sia1k  62n31f*  ObjCInterface(c:objc(cs)NSApplication) ":
+        kind: objc-block
+        name: ObjCBlock_NSApplicationTerminateReply_ffiVoid_NSApplication
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSApplication)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSApplication)>"
+      "~ objcBlock: 4uu8i3  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSWritingToolsResultOptions_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 5923ow  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSSize_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 5923ow  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  5923ow ":
+        kind: objc-block
+        name: ObjCBlock_NSSize_ffiVoid_NSWindow_NSSize
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGSize)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGSize)>"
+      "~ objcBlock: 5923ow  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  5923ow  5923ow ":
+        kind: objc-block
+        name: ObjCBlock_NSSize_ffiVoid_NSWindow_NSSize_NSSize
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGSize, objc.CGSize)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGSize Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGSize, objc.CGSize)>"
+      "~ objcBlock: 5lv4f8  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSColorPanelMode_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 5y1vle  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)> ":
+        kind: objc-block
+        name: ObjCBlock_NSTextSelectionNavigationWritingDirection_ffiVoid_idNSTextLocation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function()>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function()>
+      "~ objcBlock: 62n31f  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 62n31f  62n31f*  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  12fqv5  ObjCInterface(c:objc(cs)NSAttributedString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSRange_NSAttributedString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange, objc.NSAttributedString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange, objc.NSAttributedString)>"
+      "~ objcBlock: 62n31f  62n31f*  12fqv5  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSRange_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange, objc.NSString)>"
+      "~ objcBlock: 62n31f  62n31f*  12fqv5  ObjCInterface(c:objc(cs)NSView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSRange_NSView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange, NSView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSRange, NSView)>"
+      "~ objcBlock: 62n31f  62n31f*  3c16it ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsBehavior
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  4uu8i3 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsResultOptions
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+      "~ objcBlock: 62n31f  62n31f*  5923ow ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSSize
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGSize)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGSize)>"
+      "~ objcBlock: 62n31f  62n31f*  5lv4f8 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSColorPanelMode
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 62n31f  62n31f*  7rgas0*  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  7rgas0*  12fqv5  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl_NSRange_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSRange, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSRange, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  7rgas0*?  f379jq*  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCObjectImpl_objcObjCSelector_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<ffi.Void>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.Pointer<objc.ObjCSelector>, ffi.Pointer<ffi.Void>)>"
+      "~ objcBlock: 62n31f  62n31f*  9tgum0  ObjCInterface(c:objc(cs)NSView)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSRect_NSView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSView?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSView?)>"
+      "~ objcBlock: 62n31f  62n31f*  9tgum0  ObjCInterface(c:objc(cs)NSView)?  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSRect_NSView_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSView?, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSView?, ffi.UnsignedLong)>"
+      "~ objcBlock: 62n31f  62n31f*  9tgum0  ObjCInterface(c:objc(cs)NSView)?  2itc6v  ObjCInterface(c:objc(cs)NSLayoutManager) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSRect_NSView_NSUInteger_NSLayoutManager
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSView?, ffi.UnsignedLong, NSLayoutManager)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSView?, ffi.UnsignedLong, NSLayoutManager)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCBlock(~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSError)? )? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(objc.NSError?)>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(objc.NSError?)>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSAdaptiveImageGlyph)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSAdaptiveImageGlyph_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSAdaptiveImageGlyph, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSAdaptiveImageGlyph, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)CKShareMetadata) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_CKShareMetadata
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, CKShareMetadata)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, CKShareMetadata)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSArray)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSCoder) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_NSCoder
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSCoder)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSCoder)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSData) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_NSData
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSData)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSData)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSDictionary) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_NSDictionary
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSDictionary)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSDictionary)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSError) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSError)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSError)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSError) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_NSString_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSString, objc.NSError)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSString, objc.NSError)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSUserActivity) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSApplication_NSUserActivity
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, NSUserActivity)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSApplication, NSUserActivity)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSArray)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSColor) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSColor
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSColor)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSColor)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSColorList) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSColorList
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSColorList)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSColorList)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSColorPanel)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSColorPanel
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSColorPanel?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSColorPanel?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSControl)  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSString)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSControl_NSString_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSControl, objc.NSString, objc.NSString?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSControl, objc.NSString, objc.NSString?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSDictionary)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSDictionary_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSDictionary, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSDictionary, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSFontManager)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSFontManager
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSFontManager?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSFontManager?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSImage)  ObjCInterface(c:objc(cs)NSButtonCell) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSNotification) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNotification
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSNotification)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSNotification)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSStoryboardSegue)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSStoryboardSegue_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSStoryboardSegue, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSStoryboardSegue, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSAttributedStringKey_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSStoryboardSegueIdentifier_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSString)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSString?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextAttachment)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextAttachment
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextAttachment?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextAttachment?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextRange)  ObjCInterface(c:objc(cs)NSArray)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextRange_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextRange, objc.NSArray?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextRange, objc.NSArray?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextStorage)  ObjCBlock(~ objcBlock: 62n31f ) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextStorage_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage, objc.ObjCBlock<ffi.Void Function()>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage, objc.ObjCBlock<ffi.Void Function()>)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextStorage)  dyerq  12fqv5  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextStorage_NSTextStorageEditActions_NSRange_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage, ffi.UnsignedLong, objc.NSRange, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage, ffi.UnsignedLong, objc.NSRange, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextStorage)  dyerq  12fqv5  cn4ems  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextStorage_NSTextStorageEditActions_NSRange_NSInteger_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage, ffi.UnsignedLong, objc.NSRange, ffi.Long, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage, ffi.UnsignedLong, objc.NSRange, ffi.Long, objc.NSRange)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextStorage)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextStorage
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextStorage?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  id<ObjCProtocol(c:objc(pl)NSTextAttachmentCell)>  9tgum0 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextView_idNSTextAttachmentCell_NSRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  id<ObjCProtocol(c:objc(pl)NSTextAttachmentCell)>  9tgum0  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextView_idNSTextAttachmentCell_NSRect_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect, ffi.UnsignedLong)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  id<ObjCProtocol(c:objc(pl)NSTextAttachmentCell)>  9tgum0  ObjCInterface(c:objc(cs)NSEvent) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextView_idNSTextAttachmentCell_NSRect_NSEvent
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect, NSEvent)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect, NSEvent)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  id<ObjCProtocol(c:objc(pl)NSTextAttachmentCell)>  9tgum0  ObjCInterface(c:objc(cs)NSEvent)  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextView_idNSTextAttachmentCell_NSRect_NSEvent_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect, NSEvent, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, objc.CGRect, NSEvent, ffi.UnsignedLong)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextViewportLayoutController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextViewportLayoutController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextViewportLayoutController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextViewportLayoutController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSTextViewportLayoutController)  ObjCInterface(c:objc(cs)NSTextLayoutFragment) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextViewportLayoutController_NSTextLayoutFragment
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextViewportLayoutController, NSTextLayoutFragment)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSTextViewportLayoutController, NSTextLayoutFragment)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSView)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSView)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSView$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSView?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSView?)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSViewController)  ObjCInterface(c:objc(cs)NSViewController) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSViewController_NSViewController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSViewController, NSViewController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSViewController, NSViewController)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSWindow) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSWindow
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  ObjCInterface(c:objc(cs)NSCoder) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSWindow_NSCoder
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow, objc.NSCoder)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow, objc.NSCoder)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  ObjCInterface(c:objc(cs)NSScreen)  c2o3f9 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSWindow_NSScreen_NSTimeInterval
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow, NSScreen, ffi.Double)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow, NSScreen, ffi.Double)>"
+      "~ objcBlock: 62n31f  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  c2o3f9 ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSWindow_NSTimeInterval
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow, ffi.Double)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSWindow, ffi.Double)>"
+      "~ objcBlock: 62n31f  62n31f*  azxdtl ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_NSTextInputTraitType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: 62n31f  62n31f*  bool ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Bool)>"
+      "~ objcBlock: 62n31f  62n31f*  bool  9tgum0  ObjCInterface(c:objc(cs)NSView)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_bool_NSRect_NSView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Bool, objc.CGRect, NSView?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Bool, objc.CGRect, NSView?)>"
+      "~ objcBlock: 62n31f  62n31f*  f379jq* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_objcObjCSelector
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCSelector>)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  9npptv  ObjCBlock(~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSString)?  ObjCInterface(c:objc(cs)NSTextRange)  ObjCInterface(c:objc(cs)NSTextRange)?  bool* ) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idNSTextLocation_NSStringEnumerationOptions_ffiVoidNSStringNSTextRangeNSTextRangebool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong, objc.ObjCBlock<ffi.Void Function(objc.NSString?, NSTextRange, NSTextRange?, ffi.Pointer<ffi.Bool>)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong, objc.ObjCBlock<ffi.Void Function(objc.NSString?, NSTextRange, NSTextRange?, ffi.Pointer<ffi.Bool>)>)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  ObjCBlock(~ objcBlock: 62n31f  c2o3f9  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  bool  bool* ) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idNSTextLocation_ffiVoidCGFloatidNSTextLocationboolbool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.ObjCBlock<ffi.Void Function(ffi.Double, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool, ffi.Pointer<ffi.Bool>)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.ObjCBlock<ffi.Void Function(ffi.Double, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool, ffi.Pointer<ffi.Bool>)>)>"
+      "~ objcBlock: 62n31f  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  bool  ObjCBlock(~ objcBlock: 62n31f  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  bool* ) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiVoid_idNSTextLocation_bool_ffiVoididNSTextLocationbool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool, objc.ObjCBlock<ffi.Void Function(ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<ffi.Bool>)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool, objc.ObjCBlock<ffi.Void Function(ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<ffi.Bool>)>)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(objc.NSArray)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(objc.NSArray)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSColor)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSColor
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(NSColor?)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(NSColor?)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSError)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(objc.NSError?)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(objc.NSError?)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSString)?  ObjCInterface(c:objc(cs)NSTextRange)  ObjCInterface(c:objc(cs)NSTextRange)?  bool* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSString_NSTextRange_NSTextRange_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(objc.NSString?, NSTextRange, NSTextRange?, ffi.Pointer<ffi.Bool>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(objc.NSString?, NSTextRange, NSTextRange?, ffi.Pointer<ffi.Bool>)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSTextLayoutManager)  ObjCInterface(c:objc(cs)NSTextLayoutFragment) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSTextLayoutManager_NSTextLayoutFragment
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(NSTextLayoutManager, NSTextLayoutFragment)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(NSTextLayoutManager, NSTextLayoutFragment)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSView) ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(NSView)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(NSView)>
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSWindow)  bool* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSWindow_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(NSWindow, ffi.Pointer<ffi.Bool>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(NSWindow, ffi.Pointer<ffi.Bool>)>"
+      "~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSWindow)?  ObjCInterface(c:objc(cs)NSError)? ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_NSWindow_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(NSWindow?, objc.NSError?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(NSWindow?, objc.NSError?)>"
+      "~ objcBlock: 62n31f  c2o3f9  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  bool  bool* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_CGFloat_idNSTextLocation_bool_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Double, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool, ffi.Pointer<ffi.Bool>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Double, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool, ffi.Pointer<ffi.Bool>)>"
+      "~ objcBlock: 62n31f  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_ffiLong
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Long)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Void Function(ffi.Long)>
+      "~ objcBlock: 62n31f  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  bool* ":
+        kind: objc-block
+        name: ObjCBlock_ffiVoid_idNSTextLocation_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<ffi.Bool>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Void Function(ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<ffi.Bool>)>"
+      "~ objcBlock: 7rgas0* R 62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_instancetype_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>> Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>> Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 7rgas0* R 62n31f*  ObjCInterface(c:objc(cs)NSString)?  ObjCInterface(c:objc(cs)NSBundle)? ":
+        kind: objc-block
+        name: ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>> Function(ffi.Pointer<ffi.Void>, objc.NSString?, objc.NSBundle?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>> Function(ffi.Pointer<ffi.Void>, objc.NSString?, objc.NSBundle?)>"
+      "~ objcBlock: 7rgas0*?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_objcObjCObjectImpl_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 7rgas0*?  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)INIntent) ":
+        kind: objc-block
+        name: ObjCBlock_objcObjCObjectImpl_ffiVoid_NSApplication_INIntent
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, NSApplication, INIntent)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, NSApplication, INIntent)>"
+      "~ objcBlock: 7rgas0*?  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_objcObjCObjectImpl_ffiVoid_NSWindow_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, NSWindow, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, NSWindow, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: 7rgas0*? R 62n31f*  2itc6v  ObjCInterface(c:objc(cs)NSColorPanel) ":
+        kind: objc-block
+        name: ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong, NSColorPanel)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong, NSColorPanel)>"
+      "~ objcBlock: 7rgas0*? R 62n31f*  ObjCInterface(c:objc(cs)NSCoder) ":
+        kind: objc-block
+        name: ObjCBlock_instancetype_ffiVoid_NSCoder
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, objc.NSCoder)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.Retained<ffi.Pointer<objc.ObjCObjectImpl>?> Function(ffi.Pointer<ffi.Void>, objc.NSCoder)>"
+      "~ objcBlock: 9lmw4f  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)> ":
+        kind: objc-block
+        name: ObjCBlock_NSTextSelectionNavigationLayoutOrientation_ffiVoid_idNSTextLocation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: 9tgum0  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSRect_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: 9tgum0  62n31f*  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSRect_ffiVoid_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+      "~ objcBlock: 9tgum0  62n31f*  12fqv5  12fqv5* ":
+        kind: objc-block
+        name: ObjCBlock_NSRect_ffiVoid_NSRange_NSRangePointer
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.NSRange, ffi.Pointer<objc.NSRange>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.NSRange, ffi.Pointer<objc.NSRange>)>"
+      "~ objcBlock: 9tgum0  62n31f*  ObjCInterface(c:objc(cs)NSDictionary)  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  ObjCInterface(c:objc(cs)NSTextContainer)?  9tgum0  dfl22e ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_NSDictionary_idNSTextLocation_NSTextContainer_CGRect_CGPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?, objc.CGRect, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?, objc.CGRect, objc.CGPoint)>"
+      "~ objcBlock: 9tgum0  62n31f*  ObjCInterface(c:objc(cs)NSTextContainer)  9tgum0  dfl22e  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_NSRect_ffiVoid_NSTextContainer_NSRect_NSPoint_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSTextContainer, objc.CGRect, objc.CGPoint, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSTextContainer, objc.CGRect, objc.CGPoint, ffi.UnsignedLong)>"
+      "~ objcBlock: 9tgum0  62n31f*  ObjCInterface(c:objc(cs)NSTextContainer)?  9tgum0  dfl22e  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_NSTextContainer_CGRect_CGPoint_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSTextContainer?, objc.CGRect, objc.CGPoint, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSTextContainer?, objc.CGRect, objc.CGPoint, ffi.UnsignedLong)>"
+      "~ objcBlock: 9tgum0  62n31f*  ObjCInterface(c:objc(cs)NSTextViewportLayoutController) ":
+        kind: objc-block
+        name: ObjCBlock_CGRect_ffiVoid_NSTextViewportLayoutController
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSTextViewportLayoutController)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSTextViewportLayoutController)>"
+      "~ objcBlock: 9tgum0  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  9tgum0 ":
+        kind: objc-block
+        name: ObjCBlock_NSRect_ffiVoid_NSWindow_NSRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGRect)>"
+      "~ objcBlock: 9tgum0  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  ObjCInterface(c:objc(cs)NSWindow)  9tgum0 ":
+        kind: objc-block
+        name: ObjCBlock_NSRect_ffiVoid_NSWindow_NSWindow_NSRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSWindow, NSWindow, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.CGRect Function(ffi.Pointer<ffi.Void>, NSWindow, NSWindow, objc.CGRect)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSControl)  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSArray)  12fqv5  cn4ems* ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSControl_NSTextView_NSArray_NSRange_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSControl, NSTextView, objc.NSArray, objc.NSRange, ffi.Pointer<ffi.Long>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSControl, NSTextView, objc.NSArray, objc.NSRange, ffi.Pointer<ffi.Long>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextField)  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSArray)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextField_NSTextView_NSArray_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextField, NSTextView, objc.NSArray, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextField, NSTextView, objc.NSArray, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  12fqv5  Uint64  ObjCInterface(c:objc(cs)NSDictionary)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSOrthography)  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_NSRange_NSTextCheckingTypes_NSDictionary_NSArray_NSOrthography_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, ffi.Uint64, objc.NSDictionary, objc.NSArray, NSOrthography, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, ffi.Uint64, objc.NSDictionary, objc.NSArray, NSOrthography, ffi.Long)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSArray)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_NSArray_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSArray)  12fqv5  cn4ems* ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_NSArray_NSRange_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSRange, ffi.Pointer<ffi.Long>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSRange, ffi.Pointer<ffi.Long>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_NSArray_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  id<ObjCProtocol(c:objc(pl)NSTextAttachmentCell)>  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_idNSTextAttachmentCell_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  ObjCInterface(c:objc(cs)NSTextField)  ObjCInterface(c:objc(cs)NSTextView)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextField_NSTextView_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSTextField, NSTextView, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSTextField, NSTextView, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSTextView_NSRange$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  ObjCInterface(c:objc(cs)NSWindow) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSWindow
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSArray)?  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  ObjCInterface(c:objc(cs)NSScreen) ":
+        kind: objc-block
+        name: ObjCBlock_NSArray_ffiVoid_NSWindow_NSScreen
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSWindow, NSScreen)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSArray? Function(ffi.Pointer<ffi.Void>, NSWindow, NSScreen)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)  62n31f*  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSAttributedString Function(ffi.Pointer<ffi.Void>, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSAttributedString)?  62n31f*  12fqv5  12fqv5* ":
+        kind: objc-block
+        name: ObjCBlock_NSAttributedString_ffiVoid_NSRange_NSRangePointer
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>, objc.NSRange, ffi.Pointer<objc.NSRange>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSAttributedString? Function(ffi.Pointer<ffi.Void>, objc.NSRange, ffi.Pointer<objc.NSRange>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSBundle)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSBundle_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSBundle? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSBundle? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSCandidateListTouchBarItem)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSCandidateListTouchBarItem_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSCandidateListTouchBarItem? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSCandidateListTouchBarItem? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSColor)  ObjCInterface(c:objc(cs)NSAppearance) ":
+        kind: objc-block
+        name: ObjCBlock_NSColor_NSAppearance
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSColor Function(NSAppearance)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSColor Function(NSAppearance)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  12fqv5  ObjCInterface(c:objc(cs)NSDictionary)  Uint64* ":
+        kind: objc-block
+        name: ObjCBlock_NSDictionary_ffiVoid_NSTextView_NSRange_NSDictionary_NSTextCheckingTypes
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSDictionary Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, objc.NSDictionary, ffi.Pointer<ffi.Uint64>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSDictionary Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, objc.NSDictionary, ffi.Pointer<ffi.Uint64>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSDictionary)  ObjCInterface(c:objc(cs)NSDictionary) ":
+        kind: objc-block
+        name: ObjCBlock_NSDictionary_ffiVoid_NSTextView_NSDictionary_NSDictionary
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSDictionary Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSDictionary, objc.NSDictionary)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSDictionary Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSDictionary, objc.NSDictionary)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSDictionary)?  62n31f*  ObjCInterface(c:objc(cs)NSTextLayoutManager)  7rgas0*  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  ObjCInterface(c:objc(cs)NSDictionary) ":
+        kind: objc-block
+        name: ObjCBlock_NSDictionary_ffiVoid_NSTextLayoutManager_objcObjCObjectImpl_idNSTextLocation_NSDictionary
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSDictionary? Function(ffi.Pointer<ffi.Void>, NSTextLayoutManager, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSDictionary)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSDictionary? Function(ffi.Pointer<ffi.Void>, NSTextLayoutManager, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSDictionary)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSError)  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSError) ":
+        kind: objc-block
+        name: ObjCBlock_NSError_ffiVoid_NSApplication_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSError Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSError)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSError Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSError)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSImage)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSImage_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSImage)?  62n31f*  9tgum0  ObjCInterface(c:objc(cs)NSDictionary)  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  ObjCInterface(c:objc(cs)NSTextContainer)? ":
+        kind: objc-block
+        name: ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocation_NSTextContainer
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSImage)?  62n31f*  9tgum0  ObjCInterface(c:objc(cs)NSTextContainer)?  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSTextContainer?, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSTextContainer?, ffi.UnsignedLong)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSMenu)?  62n31f*  ObjCInterface(c:objc(cs)NSApplication) ":
+        kind: objc-block
+        name: ObjCBlock_NSMenu_ffiVoid_NSApplication
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSMenu? Function(ffi.Pointer<ffi.Void>, NSApplication)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSMenu? Function(ffi.Pointer<ffi.Void>, NSApplication)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSMenu)?  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSMenu)  ObjCInterface(c:objc(cs)NSEvent)  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_NSMenu_ffiVoid_NSTextView_NSMenu_NSEvent_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSMenu? Function(ffi.Pointer<ffi.Void>, NSTextView, NSMenu, NSEvent, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSMenu? Function(ffi.Pointer<ffi.Void>, NSTextView, NSMenu, NSEvent, ffi.UnsignedLong)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSSharingServicePicker)?  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSSharingServicePicker)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_NSSharingServicePicker_ffiVoid_NSTextView_NSSharingServicePicker_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSSharingServicePicker? Function(ffi.Pointer<ffi.Void>, NSTextView, NSSharingServicePicker, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSSharingServicePicker? Function(ffi.Pointer<ffi.Void>, NSTextView, NSSharingServicePicker, objc.NSArray)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)  62n31f*  2itc6v  12fqv5*  bool* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_NSUInteger_NSRangePointer_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong, ffi.Pointer<objc.NSRange>, ffi.Pointer<ffi.Bool>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong, ffi.Pointer<objc.NSRange>, ffi.Pointer<ffi.Bool>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)  62n31f*  ObjCInterface(c:objc(cs)NSView)  cn4ems  dfl22e  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_NSView_NSToolTipTag_NSPoint_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>, NSView, ffi.Long, objc.CGPoint, ffi.Pointer<ffi.Void>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString Function(ffi.Pointer<ffi.Void>, NSView, ffi.Long, objc.CGPoint, ffi.Pointer<ffi.Void>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSString)?  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSString)  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_NSString_ffiVoid_NSTextView_NSString_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSString, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSString? Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSString, ffi.UnsignedLong)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextAttachment)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSTextAttachment_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSTextAttachment? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSTextAttachment? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextAttachmentViewProvider)?  62n31f*  ObjCInterface(c:objc(cs)NSView)?  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  ObjCInterface(c:objc(cs)NSTextContainer)? ":
+        kind: objc-block
+        name: ObjCBlock_NSTextAttachmentViewProvider_ffiVoid_NSView_idNSTextLocation_NSTextContainer
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSTextAttachmentViewProvider? Function(ffi.Pointer<ffi.Void>, NSView?, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSTextAttachmentViewProvider? Function(ffi.Pointer<ffi.Void>, NSView?, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextElement)?  62n31f*  ObjCInterface(c:objc(cs)NSTextContentManager)  id<ObjCProtocol(c:objc(pl)NSTextLocation)> ":
+        kind: objc-block
+        name: ObjCBlock_NSTextElement_ffiVoid_NSTextContentManager_idNSTextLocation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSTextElement? Function(ffi.Pointer<ffi.Void>, NSTextContentManager, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSTextElement? Function(ffi.Pointer<ffi.Void>, NSTextContentManager, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextLayoutFragment)  62n31f*  ObjCInterface(c:objc(cs)NSTextLayoutManager)  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  ObjCInterface(c:objc(cs)NSTextElement) ":
+        kind: objc-block
+        name: ObjCBlock_NSTextLayoutFragment_ffiVoid_NSTextLayoutManager_idNSTextLocation_NSTextElement
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSTextLayoutFragment Function(ffi.Pointer<ffi.Void>, NSTextLayoutManager, ffi.Pointer<objc.ObjCObjectImpl>, NSTextElement)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSTextLayoutFragment Function(ffi.Pointer<ffi.Void>, NSTextLayoutManager, ffi.Pointer<objc.ObjCObjectImpl>, NSTextElement)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextParagraph)?  62n31f*  ObjCInterface(c:objc(cs)NSTextContentStorage)  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSTextParagraph_ffiVoid_NSTextContentStorage_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSTextParagraph? Function(ffi.Pointer<ffi.Void>, NSTextContentStorage, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSTextParagraph? Function(ffi.Pointer<ffi.Void>, NSTextContentStorage, objc.NSRange)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextRange)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSTextRange_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSTextRange Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSTextRange Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextRange)?  62n31f*  ObjCInterface(c:objc(cs)NSTextRange)  bool ":
+        kind: objc-block
+        name: ObjCBlock_NSTextRange_ffiVoid_NSTextRange_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSTextRange? Function(ffi.Pointer<ffi.Void>, NSTextRange, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSTextRange? Function(ffi.Pointer<ffi.Void>, NSTextRange, ffi.Bool)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextRange)?  62n31f*  aszd31  id<ObjCProtocol(c:objc(pl)NSTextLocation)> ":
+        kind: objc-block
+        name: ObjCBlock_NSTextRange_ffiVoid_NSTextSelectionGranularity_idNSTextLocation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSTextRange? Function(ffi.Pointer<ffi.Void>, ffi.Long, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSTextRange? Function(ffi.Pointer<ffi.Void>, ffi.Long, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextRange)?  62n31f*  dfl22e  id<ObjCProtocol(c:objc(pl)NSTextLocation)> ":
+        kind: objc-block
+        name: ObjCBlock_NSTextRange_ffiVoid_CGPoint_idNSTextLocation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSTextRange? Function(ffi.Pointer<ffi.Void>, objc.CGPoint, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSTextRange? Function(ffi.Pointer<ffi.Void>, objc.CGPoint, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSTextStorage)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSTextStorage_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSTextStorage? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSTextStorage? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSURL)?  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSTextAttachment)  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_NSURL_ffiVoid_NSTextView_NSTextAttachment_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<objc.NSURL? Function(ffi.Pointer<ffi.Void>, NSTextView, NSTextAttachment, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<objc.NSURL? Function(ffi.Pointer<ffi.Void>, NSTextView, NSTextAttachment, ffi.UnsignedLong)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSUndoManager)?  62n31f*  ObjCInterface(c:objc(cs)NSTextView) ":
+        kind: objc-block
+        name: ObjCBlock_NSUndoManager_ffiVoid_NSTextView
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSUndoManager? Function(ffi.Pointer<ffi.Void>, NSTextView)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSUndoManager? Function(ffi.Pointer<ffi.Void>, NSTextView)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSUndoManager)?  62n31f*  ObjCInterface(c:objc(cs)NSWindow) ":
+        kind: objc-block
+        name: ObjCBlock_NSUndoManager_ffiVoid_NSWindow
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSUndoManager? Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSUndoManager? Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSView)  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSView_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSView Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSView Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSView)  62n31f*  2itc6v  12fqv5* ":
+        kind: objc-block
+        name: ObjCBlock_NSView_ffiVoid_NSUInteger_NSRangePointer
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSView Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong, ffi.Pointer<objc.NSRange>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSView Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong, ffi.Pointer<objc.NSRange>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSView)  62n31f*  bool ":
+        kind: objc-block
+        name: ObjCBlock_NSView_ffiVoid_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSView Function(ffi.Pointer<ffi.Void>, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSView Function(ffi.Pointer<ffi.Void>, ffi.Bool)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSView)?  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSView_ffiVoid$1
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<NSView? Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<NSView? Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSView)?  62n31f*  12fqv5  9tgum0*  12fqv5* ":
+        kind: objc-block
+        name: ObjCBlock_NSView_ffiVoid_NSRange_NSRectPointer_NSRangePointer
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSView? Function(ffi.Pointer<ffi.Void>, objc.NSRange, ffi.Pointer<objc.CGRect>, ffi.Pointer<objc.NSRange>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSView? Function(ffi.Pointer<ffi.Void>, objc.NSRange, ffi.Pointer<objc.CGRect>, ffi.Pointer<objc.NSRange>)>"
+      "~ objcBlock: ObjCInterface(c:objc(cs)NSWindow)?  62n31f*  ObjCInterface(c:objc(cs)NSWindow) ":
+        kind: objc-block
+        name: ObjCBlock_NSWindow_ffiVoid_NSWindow
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<NSWindow? Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<NSWindow? Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+      "~ objcBlock: azxdtl  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSTextInputTraitType_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: bool  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: bool  62n31f*  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+      "~ objcBlock: bool  62n31f*  5lv4f8 ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSColorPanelMode
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Long)>"
+      "~ objcBlock: bool  62n31f*  7rgas0*  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_objcObjCObjectImpl_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)CALayer)  c2o3f9  ObjCInterface(c:objc(cs)NSWindow) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_CALayer_CGFloat_NSWindow
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, CALayer, ffi.Double, NSWindow)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, CALayer, ffi.Double, NSWindow)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSApplication) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSApplication
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSApplication_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSUserActivity)  ObjCBlock(~ objcBlock: 62n31f  ObjCInterface(c:objc(cs)NSArray) ) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSApplication_NSUserActivity_ffiVoidNSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication, NSUserActivity, objc.ObjCBlock<ffi.Void Function(objc.NSArray)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication, NSUserActivity, objc.ObjCBlock<ffi.Void Function(objc.NSArray)>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  bool ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSApplication_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSApplication, ffi.Bool)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSArray) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSArray_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.NSArray, objc.NSArray)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.NSArray, objc.NSArray)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSControl)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSControl_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSControl)  ObjCInterface(c:objc(cs)NSString)  ObjCInterface(c:objc(cs)NSString)? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSControl_NSString_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, objc.NSString, objc.NSString?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, objc.NSString, objc.NSString?)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSControl)  ObjCInterface(c:objc(cs)NSText) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSControl_NSText
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, NSText)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, NSText)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSControl)  ObjCInterface(c:objc(cs)NSTextView)  f379jq* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSControl_NSTextView_objcObjCSelector
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, NSTextView, ffi.Pointer<objc.ObjCSelector>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSControl, NSTextView, ffi.Pointer<objc.ObjCSelector>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSError)?* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSEvent)  9tgum0  ObjCInterface(c:objc(cs)NSView)?  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSEvent_NSRect_NSView_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSEvent, objc.CGRect, NSView?, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSEvent, objc.CGRect, NSView?, ffi.UnsignedLong)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSEvent)  9tgum0  ObjCInterface(c:objc(cs)NSView)?  2itc6v  bool ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSEvent_NSRect_NSView_NSUInteger_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSEvent, objc.CGRect, NSView?, ffi.UnsignedLong, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSEvent, objc.CGRect, NSView?, ffi.UnsignedLong, ffi.Bool)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSEvent)  9tgum0  ObjCInterface(c:objc(cs)NSView)?  bool ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSEvent_NSRect_NSView_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSEvent, objc.CGRect, NSView?, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSEvent, objc.CGRect, NSView?, ffi.Bool)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSString)  7rgas0*? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSStoryboardSegueIdentifier_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.NSString, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, objc.NSString, ffi.Pointer<objc.ObjCObjectImpl>?)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSText) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSText
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSText)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSText)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextContentManager)  ObjCInterface(c:objc(cs)NSTextElement)  fkgmlw ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextContentManager_NSTextElement_NSTextContentManagerEnumerationOptions
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextContentManager, NSTextElement, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextContentManager, NSTextElement, ffi.UnsignedLong)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextField)  ObjCInterface(c:objc(cs)NSTextView)  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextField_NSTextView_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextField, NSTextView, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextField, NSTextView, ffi.UnsignedLong)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextLayoutManager)  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  bool ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextLayoutManager_idNSTextLocation_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextLayoutManager, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextLayoutManager, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Bool)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  12fqv5  ObjCInterface(c:objc(cs)NSString)? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextView_NSRange_NSString
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, objc.NSString?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSRange, objc.NSString?)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextView_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.UnsignedLong)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  7rgas0* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextView_objcObjCObjectImpl
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  7rgas0*  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextView_objcObjCObjectImpl_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSArray)? ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextView_NSArray_NSArray
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSArray?)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, objc.NSArray, objc.NSArray?)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  f379jq* ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextView_objcObjCSelector
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCSelector>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCSelector>)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  id<ObjCProtocol(c:objc(pl)NSTextAttachmentCell)>  2itc6v  ObjCInterface(c:objc(cs)NSPasteboard)  ObjCInterface(c:objc(cs)NSString) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSTextView_idNSTextAttachmentCell_NSUInteger_NSPasteboard_NSPasteboardType
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong, NSPasteboard, objc.NSString)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Pointer<objc.ObjCObjectImpl>, ffi.UnsignedLong, NSPasteboard, objc.NSString)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSWindow) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSWindow
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  9tgum0 ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSWindow_NSRect
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGRect)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow, objc.CGRect)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  ObjCInterface(c:objc(cs)NSEvent)  dfl22e  ObjCInterface(c:objc(cs)NSPasteboard) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSWindow_NSEvent_NSPoint_NSPasteboard
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow, NSEvent, objc.CGPoint, NSPasteboard)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow, NSEvent, objc.CGPoint, NSPasteboard)>"
+      "~ objcBlock: bool  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  ObjCInterface(c:objc(cs)NSMenu) ":
+        kind: objc-block
+        name: ObjCBlock_bool_ffiVoid_NSWindow_NSMenu
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow, NSMenu)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>, NSWindow, NSMenu)>"
+      "~ objcBlock: bool  ObjCInterface(c:objc(cs)NSError)? ":
+        kind: objc-block
+        name: ObjCBlock_bool_NSError
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(objc.NSError?)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(objc.NSError?)>
+      "~ objcBlock: bool  ObjCInterface(c:objc(cs)NSTextElement) ":
+        kind: objc-block
+        name: ObjCBlock_bool_NSTextElement
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(NSTextElement)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(NSTextElement)>
+      "~ objcBlock: bool  ObjCInterface(c:objc(cs)NSTextLayoutFragment) ":
+        kind: objc-block
+        name: ObjCBlock_bool_NSTextLayoutFragment
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Bool Function(NSTextLayoutFragment)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Bool Function(NSTextLayoutFragment)>
+      "~ objcBlock: bool  ObjCInterface(c:objc(cs)NSTextLayoutManager)  ObjCInterface(c:objc(cs)NSDictionary)  ObjCInterface(c:objc(cs)NSTextRange) ":
+        kind: objc-block
+        name: ObjCBlock_bool_NSTextLayoutManager_NSDictionary_NSTextRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(NSTextLayoutManager, objc.NSDictionary, NSTextRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(NSTextLayoutManager, objc.NSDictionary, NSTextRange)>"
+      "~ objcBlock: bool  ObjCInterface(c:objc(cs)NSTextRange)?  9tgum0  c2o3f9  ObjCInterface(c:objc(cs)NSTextContainer) ":
+        kind: objc-block
+        name: ObjCBlock_bool_NSTextRange_CGRect_CGFloat_NSTextContainer
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Bool Function(NSTextRange?, objc.CGRect, ffi.Double, NSTextContainer)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Bool Function(NSTextRange?, objc.CGRect, ffi.Double, NSTextContainer)>"
+      "~ objcBlock: c2o3f9  62n31f*  2itc6v ":
+        kind: objc-block
+        name: ObjCBlock_CGFloat_ffiVoid_NSUInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, ffi.UnsignedLong)>"
+      "~ objcBlock: c2o3f9  62n31f*  dfl22e ":
+        kind: objc-block
+        name: ObjCBlock_CGFloat_ffiVoid_NSPoint
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Double Function(ffi.Pointer<ffi.Void>, objc.CGPoint)>"
+      "~ objcBlock: cn4ems  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: cn4ems  62n31f*  ObjCInterface(c:objc(cs)NSTextView)  cn4ems  12fqv5 ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_NSTextView_NSInteger_NSRange
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Long, objc.NSRange)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, NSTextView, ffi.Long, objc.NSRange)>"
+      "~ objcBlock: cn4ems  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  id<ObjCProtocol(c:objc(pl)NSTextLocation)> ":
+        kind: objc-block
+        name: ObjCBlock_NSInteger_ffiVoid_idNSTextLocation_idNSTextLocation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: czkor4  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)> ":
+        kind: objc-block
+        name: ObjCBlock_NSComparisonResult_ffiVoid_idNSTextLocation
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>)>"
+      "~ objcBlock: d7eb0z  62n31f*  ObjCInterface(c:objc(cs)NSFontPanel) ":
+        kind: objc-block
+        name: ObjCBlock_NSFontPanelModeMask_ffiVoid_NSFontPanel
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSFontPanel)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSFontPanel)>"
+      "~ objcBlock: dfl22e  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSPoint_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<objc.CGPoint Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<objc.CGPoint Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: ecdt0q  62n31f*  ObjCInterface(c:objc(cs)NSApplication)  ObjCInterface(c:objc(cs)NSArray)  ObjCInterface(c:objc(cs)NSDictionary)  bool ":
+        kind: objc-block
+        name: ObjCBlock_NSApplicationPrintReply_ffiVoid_NSApplication_NSArray_NSDictionary_bool
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSArray, objc.NSDictionary, ffi.Bool)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSApplication, objc.NSArray, objc.NSDictionary, ffi.Bool)>"
+      "~ objcBlock: ehh4ov  62n31f*  ObjCInterface(c:objc(cs)NSWindow)  ehh4ov ":
+        kind: objc-block
+        name: ObjCBlock_NSApplicationPresentationOptions_ffiVoid_NSWindow_NSApplicationPresentationOptions
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSWindow, ffi.UnsignedLong)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, NSWindow, ffi.UnsignedLong)>"
+      "~ objcBlock: h21xja  62n31f* ":
+        kind: objc-block
+        name: ObjCBlock_NSTextCursorAccessoryPlacement_ffiVoid
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: objc.ObjCBlock<ffi.Long Function(ffi.Pointer<ffi.Void>)>
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)NSTextLocation)>?  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)>  cn4ems ":
+        kind: objc-block
+        name: ObjCBlock_idNSTextLocation_ffiVoid_idNSTextLocation_NSInteger
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Long)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Long)>"
+      "~ objcBlock: id<ObjCProtocol(c:objc(pl)NSTextLocation)>?  62n31f*  id<ObjCProtocol(c:objc(pl)NSTextLocation)>?  fkgmlw  ObjCBlock(~ objcBlock: bool  ObjCInterface(c:objc(cs)NSTextElement) ) ":
+        kind: objc-block
+        name: ObjCBlock_idNSTextLocation_ffiVoid_idNSTextLocation_NSTextContentManagerEnumerationOptions_boolNSTextElement
+        c-type: ffi.Pointer<objc.ObjCBlockImpl>
+        dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.UnsignedLong, objc.ObjCBlock<ffi.Bool Function(NSTextElement)>)>"
+        ffi-dart-type: ffi.Pointer<objc.ObjCBlockImpl>
+        public-dart-type: "objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>, ffi.Pointer<objc.ObjCObjectImpl>?, ffi.UnsignedLong, objc.ObjCBlock<ffi.Bool Function(NSTextElement)>)>"
