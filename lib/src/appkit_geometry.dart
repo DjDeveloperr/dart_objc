@@ -12,3 +12,11 @@ CGRect cgRect(double x, double y, double width, double height) {
   rect.size.height = height;
   return rect;
 }
+
+CGSize cgSize(double width, double height) {
+  final bytes = Uint8List(ffi.sizeOf<CGSize>());
+  final size = ffi.Struct.create<CGSize>(bytes);
+  size.width = width;
+  size.height = height;
+  return size;
+}

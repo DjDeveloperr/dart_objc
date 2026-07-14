@@ -267,9 +267,13 @@ NSWindow _buildMainWindow() {
     blue: 0.12,
     alpha: 1.0,
   );
-  window.center();
-  window.contentMinSize = CGSize.$allocate(calloc, width: 820, height: 560).ref;
   window.contentViewController = DemoViewController().asNSViewController;
+  // Assigning a view controller can adopt its initial view size. Set the
+  // intended content size afterwards so the pure-Dart host always opens at a
+  // useful size on every display arrangement.
+  window.setContentSize(cgSize(980, 680));
+  window.contentMinSize = cgSize(820, 560);
+  window.center();
 
   return window;
 }
