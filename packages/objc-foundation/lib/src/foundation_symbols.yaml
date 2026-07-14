@@ -1,0 +1,1489 @@
+format_version: 1.0.0
+files:
+  package:objc_foundation/objc_foundation.dart:
+    used-config:
+      ffi-native: false
+    symbols:
+      c:@E@NSActivityOptions:
+        name: NSActivityOptions
+      c:@E@NSBackgroundActivityResult:
+        name: NSBackgroundActivityResult
+      c:@E@NSByteCountFormatterCountStyle:
+        name: NSByteCountFormatterCountStyle
+      c:@E@NSByteCountFormatterUnits:
+        name: NSByteCountFormatterUnits
+      c:@E@NSCalculationError:
+        name: NSCalculationError
+      c:@E@NSCalendarOptions:
+        name: NSCalendarOptions
+      c:@E@NSCalendarUnit:
+        name: NSCalendarUnit
+      c:@E@NSComparisonPredicateModifier:
+        name: NSComparisonPredicateModifier
+      c:@E@NSComparisonPredicateOptions:
+        name: NSComparisonPredicateOptions
+      c:@E@NSCompoundPredicateType:
+        name: NSCompoundPredicateType
+      c:@E@NSDateComponentsFormatterUnitsStyle:
+        name: NSDateComponentsFormatterUnitsStyle
+      c:@E@NSDateComponentsFormatterZeroFormattingBehavior:
+        name: NSDateComponentsFormatterZeroFormattingBehavior
+      c:@E@NSDateFormatterBehavior:
+        name: NSDateFormatterBehavior
+      c:@E@NSDateFormatterStyle:
+        name: NSDateFormatterStyle
+      c:@E@NSDateIntervalFormatterStyle:
+        name: NSDateIntervalFormatterStyle
+      c:@E@NSDirectoryEnumerationOptions:
+        name: NSDirectoryEnumerationOptions
+      c:@E@NSDistributedNotificationOptions:
+        name: NSDistributedNotificationOptions
+      c:@E@NSEnergyFormatterUnit:
+        name: NSEnergyFormatterUnit
+      c:@E@NSExpressionType:
+        name: NSExpressionType
+      c:@E@NSFileCoordinatorReadingOptions:
+        name: NSFileCoordinatorReadingOptions
+      c:@E@NSFileCoordinatorWritingOptions:
+        name: NSFileCoordinatorWritingOptions
+      c:@E@NSFileManagerItemReplacementOptions:
+        name: NSFileManagerItemReplacementOptions
+      c:@E@NSFileManagerResumeSyncBehavior:
+        name: NSFileManagerResumeSyncBehavior
+      c:@E@NSFileManagerUnmountOptions:
+        name: NSFileManagerUnmountOptions
+      c:@E@NSFileManagerUploadLocalVersionConflictPolicy:
+        name: NSFileManagerUploadLocalVersionConflictPolicy
+      c:@E@NSFileVersionAddingOptions:
+        name: NSFileVersionAddingOptions
+      c:@E@NSFileVersionReplacingOptions:
+        name: NSFileVersionReplacingOptions
+      c:@E@NSFileWrapperReadingOptions:
+        name: NSFileWrapperReadingOptions
+      c:@E@NSFileWrapperWritingOptions:
+        name: NSFileWrapperWritingOptions
+      c:@E@NSFormattingContext:
+        name: NSFormattingContext
+      c:@E@NSFormattingUnitStyle:
+        name: NSFormattingUnitStyle
+      c:@E@NSGrammaticalCase:
+        name: NSGrammaticalCase
+      c:@E@NSGrammaticalDefiniteness:
+        name: NSGrammaticalDefiniteness
+      c:@E@NSGrammaticalDetermination:
+        name: NSGrammaticalDetermination
+      c:@E@NSGrammaticalGender:
+        name: NSGrammaticalGender
+      c:@E@NSGrammaticalNumber:
+        name: NSGrammaticalNumber
+      c:@E@NSGrammaticalPartOfSpeech:
+        name: NSGrammaticalPartOfSpeech
+      c:@E@NSGrammaticalPerson:
+        name: NSGrammaticalPerson
+      c:@E@NSGrammaticalPronounType:
+        name: NSGrammaticalPronounType
+      c:@E@NSHTTPCookieAcceptPolicy:
+        name: NSHTTPCookieAcceptPolicy
+      c:@E@NSISO8601DateFormatOptions:
+        name: NSISO8601DateFormatOptions
+      c:@E@NSInsertionPosition:
+        name: NSInsertionPosition
+      c:@E@NSJSONReadingOptions:
+        name: NSJSONReadingOptions
+      c:@E@NSJSONWritingOptions:
+        name: NSJSONWritingOptions
+      c:@E@NSLengthFormatterUnit:
+        name: NSLengthFormatterUnit
+      c:@E@NSLinguisticTaggerUnit:
+        name: NSLinguisticTaggerUnit
+      c:@E@NSMachPortOptions:
+        name: NSMachPortOptions
+      c:@E@NSMassFormatterUnit:
+        name: NSMassFormatterUnit
+      c:@E@NSMatchingFlags:
+        name: NSMatchingFlags
+      c:@E@NSMatchingOptions:
+        name: NSMatchingOptions
+      c:@E@NSMeasurementFormatterUnitOptions:
+        name: NSMeasurementFormatterUnitOptions
+      c:@E@NSNetServiceOptions:
+        name: NSNetServiceOptions
+      c:@E@NSNotificationCoalescing:
+        name: NSNotificationCoalescing
+      c:@E@NSNotificationSuspensionBehavior:
+        name: NSNotificationSuspensionBehavior
+      c:@E@NSNumberFormatterBehavior:
+        name: NSNumberFormatterBehavior
+      c:@E@NSNumberFormatterPadPosition:
+        name: NSNumberFormatterPadPosition
+      c:@E@NSNumberFormatterRoundingMode:
+        name: NSNumberFormatterRoundingMode
+      c:@E@NSNumberFormatterStyle:
+        name: NSNumberFormatterStyle
+      c:@E@NSOperationQueuePriority:
+        name: NSOperationQueuePriority
+      c:@E@NSPersonNameComponentsFormatterOptions:
+        name: NSPersonNameComponentsFormatterOptions
+      c:@E@NSPersonNameComponentsFormatterStyle:
+        name: NSPersonNameComponentsFormatterStyle
+      c:@E@NSPointerFunctionsOptions:
+        name: NSPointerFunctionsOptions
+      c:@E@NSPostingStyle:
+        name: NSPostingStyle
+      c:@E@NSPredicateOperatorType:
+        name: NSPredicateOperatorType
+      c:@E@NSPresentationIntentKind:
+        name: NSPresentationIntentKind
+      c:@E@NSProcessInfoThermalState:
+        name: NSProcessInfoThermalState
+      c:@E@NSPropertyListMutabilityOptions:
+        name: NSPropertyListMutabilityOptions
+      c:@E@NSRegularExpressionOptions:
+        name: NSRegularExpressionOptions
+      c:@E@NSRelativeDateTimeFormatterStyle:
+        name: NSRelativeDateTimeFormatterStyle
+      c:@E@NSRelativeDateTimeFormatterUnitsStyle:
+        name: NSRelativeDateTimeFormatterUnitsStyle
+      c:@E@NSRelativePosition:
+        name: NSRelativePosition
+      c:@E@NSRoundingMode:
+        name: NSRoundingMode
+      c:@E@NSSaveOptions:
+        name: NSSaveOptions
+      c:@E@NSSearchPathDirectory:
+        name: NSSearchPathDirectory
+      c:@E@NSSearchPathDomainMask:
+        name: NSSearchPathDomainMask
+      c:@E@NSTaskTerminationReason:
+        name: NSTaskTerminationReason
+      c:@E@NSTestComparisonOperation:
+        name: NSTestComparisonOperation
+      c:@E@NSTextCheckingType:
+        name: NSTextCheckingType
+      c:@E@NSTimeZoneNameStyle:
+        name: NSTimeZoneNameStyle
+      c:@E@NSURLCacheStoragePolicy:
+        name: NSURLCacheStoragePolicy
+      c:@E@NSURLCredentialPersistence:
+        name: NSURLCredentialPersistence
+      c:@E@NSURLRelationship:
+        name: NSURLRelationship
+      c:@E@NSURLRequestAttribution:
+        name: NSURLRequestAttribution
+      c:@E@NSURLRequestCachePolicy:
+        name: NSURLRequestCachePolicy
+      c:@E@NSURLRequestNetworkServiceType:
+        name: NSURLRequestNetworkServiceType
+      c:@E@NSURLSessionAuthChallengeDisposition:
+        name: NSURLSessionAuthChallengeDisposition
+      c:@E@NSURLSessionDelayedRequestDisposition:
+        name: NSURLSessionDelayedRequestDisposition
+      c:@E@NSURLSessionMultipathServiceType:
+        name: NSURLSessionMultipathServiceType
+      c:@E@NSURLSessionResponseDisposition:
+        name: NSURLSessionResponseDisposition
+      c:@E@NSURLSessionTaskMetricsDomainResolutionProtocol:
+        name: NSURLSessionTaskMetricsDomainResolutionProtocol
+      c:@E@NSURLSessionTaskMetricsResourceFetchType:
+        name: NSURLSessionTaskMetricsResourceFetchType
+      c:@E@NSURLSessionTaskState:
+        name: NSURLSessionTaskState
+      c:@E@NSURLSessionWebSocketCloseCode:
+        name: NSURLSessionWebSocketCloseCode
+      c:@E@NSURLSessionWebSocketMessageType:
+        name: NSURLSessionWebSocketMessageType
+      c:@E@NSUserNotificationActivationType:
+        name: NSUserNotificationActivationType
+      c:@E@NSVolumeEnumerationOptions:
+        name: NSVolumeEnumerationOptions
+      c:@E@NSWhoseSubelementIdentifier:
+        name: NSWhoseSubelementIdentifier
+      c:@E@NSXMLDTDNodeKind:
+        name: NSXMLDTDNodeKind
+      c:@E@NSXMLDocumentContentKind:
+        name: NSXMLDocumentContentKind
+      c:@E@NSXMLNodeKind:
+        name: NSXMLNodeKind
+      c:@E@NSXMLNodeOptions:
+        name: NSXMLNodeOptions
+      c:@E@NSXMLParserExternalEntityResolvingPolicy:
+        name: NSXMLParserExternalEntityResolvingPolicy
+      c:@E@NSXPCConnectionOptions:
+        name: NSXPCConnectionOptions
+      c:@E@SSLProtocol:
+        name: SSLProtocol
+      c:@E@tls_protocol_version_t:
+        name: tls_protocol_version_t
+      c:@S@__NSAppleEventManagerSuspension:
+        name: __NSAppleEventManagerSuspension
+      c:@S@__SecIdentity:
+        name: __SecIdentity
+      c:@S@__SecTrust:
+        name: __SecTrust
+      c:@S@_xpc_type_s:
+        name: _xpc_type_s
+      c:@SA@NSAffineTransformStruct:
+        name: NSAffineTransformStruct
+      c:@SA@NSDecimal:
+        name: NSDecimal
+      c:@SA@NSOperatingSystemVersion:
+        name: NSOperatingSystemVersion
+      c:@T@instancetype:
+        name: instancetype
+        dart-name: Dartinstancetype
+      c:objc(cs)NSAffineTransform:
+        name: NSAffineTransform
+      c:objc(cs)NSAppleEventDescriptor:
+        name: NSAppleEventDescriptor
+      c:objc(cs)NSAppleEventManager:
+        name: NSAppleEventManager
+      c:objc(cs)NSAppleScript:
+        name: NSAppleScript
+      c:objc(cs)NSArchiver:
+        name: NSArchiver
+      c:objc(cs)NSAssertionHandler:
+        name: NSAssertionHandler
+      c:objc(cs)NSAttributedStringMarkdownSourcePosition:
+        name: NSAttributedStringMarkdownSourcePosition
+      c:objc(cs)NSAutoreleasePool:
+        name: NSAutoreleasePool
+      c:objc(cs)NSBackgroundActivityScheduler:
+        name: NSBackgroundActivityScheduler
+      c:objc(cs)NSBlockOperation:
+        name: NSBlockOperation
+      c:objc(cs)NSBundleResourceRequest:
+        name: NSBundleResourceRequest
+      c:objc(cs)NSByteCountFormatter:
+        name: NSByteCountFormatter
+      c:objc(cs)NSCache:
+        name: NSCache
+      c:objc(cs)NSCachedURLResponse:
+        name: NSCachedURLResponse
+      c:objc(cs)NSCalendar:
+        name: NSCalendar
+      c:objc(cs)NSCalendarDate:
+        name: NSCalendarDate
+      c:objc(cs)NSClassDescription:
+        name: NSClassDescription
+      c:objc(cs)NSCloneCommand:
+        name: NSCloneCommand
+      c:objc(cs)NSCloseCommand:
+        name: NSCloseCommand
+      c:objc(cs)NSComparisonPredicate:
+        name: NSComparisonPredicate
+      c:objc(cs)NSCompoundPredicate:
+        name: NSCompoundPredicate
+      c:objc(cs)NSCondition:
+        name: NSCondition
+      c:objc(cs)NSConditionLock:
+        name: NSConditionLock
+      c:objc(cs)NSConnection:
+        name: NSConnection
+      c:objc(cs)NSConstantString:
+        name: NSConstantString
+      c:objc(cs)NSCountCommand:
+        name: NSCountCommand
+      c:objc(cs)NSCountedSet:
+        name: NSCountedSet
+      c:objc(cs)NSCreateCommand:
+        name: NSCreateCommand
+      c:objc(cs)NSDataDetector:
+        name: NSDataDetector
+      c:objc(cs)NSDateComponents:
+        name: NSDateComponents
+      c:objc(cs)NSDateComponentsFormatter:
+        name: NSDateComponentsFormatter
+      c:objc(cs)NSDateFormatter:
+        name: NSDateFormatter
+      c:objc(cs)NSDateInterval:
+        name: NSDateInterval
+      c:objc(cs)NSDateIntervalFormatter:
+        name: NSDateIntervalFormatter
+      c:objc(cs)NSDecimalNumber:
+        name: NSDecimalNumber
+      c:objc(cs)NSDecimalNumberHandler:
+        name: NSDecimalNumberHandler
+      c:objc(cs)NSDeleteCommand:
+        name: NSDeleteCommand
+      c:objc(cs)NSDimension:
+        name: NSDimension
+      c:objc(cs)NSDirectoryEnumerator:
+        name: NSDirectoryEnumerator
+      c:objc(cs)NSDistantObject:
+        name: NSDistantObject
+      c:objc(cs)NSDistantObjectRequest:
+        name: NSDistantObjectRequest
+      c:objc(cs)NSDistributedLock:
+        name: NSDistributedLock
+      c:objc(cs)NSDistributedNotificationCenter:
+        name: NSDistributedNotificationCenter
+      c:objc(cs)NSEnergyFormatter:
+        name: NSEnergyFormatter
+      c:objc(cs)NSException:
+        name: NSException
+      c:objc(cs)NSExistsCommand:
+        name: NSExistsCommand
+      c:objc(cs)NSExpression:
+        name: NSExpression
+      c:objc(cs)NSExtensionContext:
+        name: NSExtensionContext
+      c:objc(cs)NSExtensionItem:
+        name: NSExtensionItem
+      c:objc(cs)NSFileAccessIntent:
+        name: NSFileAccessIntent
+      c:objc(cs)NSFileCoordinator:
+        name: NSFileCoordinator
+      c:objc(cs)NSFileHandle:
+        name: NSFileHandle
+      c:objc(cs)NSFileManager:
+        name: NSFileManager
+      c:objc(cs)NSFileProviderService:
+        name: NSFileProviderService
+      c:objc(cs)NSFileSecurity:
+        name: NSFileSecurity
+      c:objc(cs)NSFileVersion:
+        name: NSFileVersion
+      c:objc(cs)NSFileWrapper:
+        name: NSFileWrapper
+      c:objc(cs)NSFormatter:
+        name: NSFormatter
+      c:objc(cs)NSGarbageCollector:
+        name: NSGarbageCollector
+      c:objc(cs)NSGetCommand:
+        name: NSGetCommand
+      c:objc(cs)NSHTTPCookie:
+        name: NSHTTPCookie
+      c:objc(cs)NSHTTPCookieStorage:
+        name: NSHTTPCookieStorage
+      c:objc(cs)NSHTTPURLResponse:
+        name: NSHTTPURLResponse
+      c:objc(cs)NSHashTable:
+        name: NSHashTable
+      c:objc(cs)NSHost:
+        name: NSHost
+      c:objc(cs)NSISO8601DateFormatter:
+        name: NSISO8601DateFormatter
+      c:objc(cs)NSIndexPath:
+        name: NSIndexPath
+      c:objc(cs)NSIndexSpecifier:
+        name: NSIndexSpecifier
+      c:objc(cs)NSInflectionRule:
+        name: NSInflectionRule
+      c:objc(cs)NSInflectionRuleExplicit:
+        name: NSInflectionRuleExplicit
+      c:objc(cs)NSInvocationOperation:
+        name: NSInvocationOperation
+      c:objc(cs)NSJSONSerialization:
+        name: NSJSONSerialization
+      c:objc(cs)NSKeyValueSharedObservers:
+        name: NSKeyValueSharedObservers
+      c:objc(cs)NSKeyValueSharedObserversSnapshot:
+        name: NSKeyValueSharedObserversSnapshot
+      c:objc(cs)NSKeyedArchiver:
+        name: NSKeyedArchiver
+      c:objc(cs)NSKeyedUnarchiver:
+        name: NSKeyedUnarchiver
+      c:objc(cs)NSLengthFormatter:
+        name: NSLengthFormatter
+      c:objc(cs)NSLinguisticTagger:
+        name: NSLinguisticTagger
+      c:objc(cs)NSListFormatter:
+        name: NSListFormatter
+      c:objc(cs)NSLocalizedNumberFormatRule:
+        name: NSLocalizedNumberFormatRule
+      c:objc(cs)NSLock:
+        name: NSLock
+      c:objc(cs)NSLogicalTest:
+        name: NSLogicalTest
+      c:objc(cs)NSMachBootstrapServer:
+        name: NSMachBootstrapServer
+      c:objc(cs)NSMachPort:
+        name: NSMachPort
+      c:objc(cs)NSMapTable:
+        name: NSMapTable
+      c:objc(cs)NSMassFormatter:
+        name: NSMassFormatter
+      c:objc(cs)NSMeasurement:
+        name: NSMeasurement
+      c:objc(cs)NSMeasurementFormatter:
+        name: NSMeasurementFormatter
+      c:objc(cs)NSMessagePort:
+        name: NSMessagePort
+      c:objc(cs)NSMessagePortNameServer:
+        name: NSMessagePortNameServer
+      c:objc(cs)NSMetadataItem:
+        name: NSMetadataItem
+      c:objc(cs)NSMetadataQuery:
+        name: NSMetadataQuery
+      c:objc(cs)NSMetadataQueryAttributeValueTuple:
+        name: NSMetadataQueryAttributeValueTuple
+      c:objc(cs)NSMetadataQueryResultGroup:
+        name: NSMetadataQueryResultGroup
+      c:objc(cs)NSMiddleSpecifier:
+        name: NSMiddleSpecifier
+      c:objc(cs)NSMorphology:
+        name: NSMorphology$1
+      c:objc(cs)NSMorphologyCustomPronoun:
+        name: NSMorphologyCustomPronoun
+      c:objc(cs)NSMorphologyPronoun:
+        name: NSMorphologyPronoun
+      c:objc(cs)NSMoveCommand:
+        name: NSMoveCommand
+      c:objc(cs)NSMutableAttributedString:
+        name: NSMutableAttributedString
+      c:objc(cs)NSMutableCharacterSet:
+        name: NSMutableCharacterSet
+      c:objc(cs)NSMutableURLRequest:
+        name: NSMutableURLRequest
+      c:objc(cs)NSNameSpecifier:
+        name: NSNameSpecifier
+      c:objc(cs)NSNetService:
+        name: NSNetService
+      c:objc(cs)NSNetServiceBrowser:
+        name: NSNetServiceBrowser
+      c:objc(cs)NSNotificationCenter:
+        name: NSNotificationCenter
+      c:objc(cs)NSNotificationQueue:
+        name: NSNotificationQueue
+      c:objc(cs)NSNumberFormatter:
+        name: NSNumberFormatter
+      c:objc(cs)NSOperation:
+        name: NSOperation
+      c:objc(cs)NSOperationQueue:
+        name: NSOperationQueue
+      c:objc(cs)NSOrthography:
+        name: NSOrthography
+      c:objc(cs)NSPersonNameComponents:
+        name: NSPersonNameComponents
+      c:objc(cs)NSPersonNameComponentsFormatter:
+        name: NSPersonNameComponentsFormatter
+      c:objc(cs)NSPipe:
+        name: NSPipe
+      c:objc(cs)NSPointerArray:
+        name: NSPointerArray
+      c:objc(cs)NSPointerFunctions:
+        name: NSPointerFunctions
+      c:objc(cs)NSPortCoder:
+        name: NSPortCoder
+      c:objc(cs)NSPortNameServer:
+        name: NSPortNameServer
+      c:objc(cs)NSPositionalSpecifier:
+        name: NSPositionalSpecifier
+      c:objc(cs)NSPredicate:
+        name: NSPredicate
+      c:objc(cs)NSPresentationIntent:
+        name: NSPresentationIntent
+      c:objc(cs)NSProcessInfo:
+        name: NSProcessInfo
+      c:objc(cs)NSPropertyListSerialization:
+        name: NSPropertyListSerialization
+      c:objc(cs)NSPropertySpecifier:
+        name: NSPropertySpecifier
+      c:objc(cs)NSProtocolChecker:
+        name: NSProtocolChecker
+      c:objc(cs)NSProxy:
+        name: NSProxy
+      c:objc(cs)NSPurgeableData:
+        name: NSPurgeableData
+      c:objc(cs)NSQuitCommand:
+        name: NSQuitCommand
+      c:objc(cs)NSRandomSpecifier:
+        name: NSRandomSpecifier
+      c:objc(cs)NSRangeSpecifier:
+        name: NSRangeSpecifier
+      c:objc(cs)NSRecursiveLock:
+        name: NSRecursiveLock
+      c:objc(cs)NSRegularExpression:
+        name: NSRegularExpression
+      c:objc(cs)NSRelativeDateTimeFormatter:
+        name: NSRelativeDateTimeFormatter
+      c:objc(cs)NSRelativeSpecifier:
+        name: NSRelativeSpecifier
+      c:objc(cs)NSScanner:
+        name: NSScanner
+      c:objc(cs)NSScriptClassDescription:
+        name: NSScriptClassDescription
+      c:objc(cs)NSScriptCoercionHandler:
+        name: NSScriptCoercionHandler
+      c:objc(cs)NSScriptCommand:
+        name: NSScriptCommand
+      c:objc(cs)NSScriptCommandDescription:
+        name: NSScriptCommandDescription
+      c:objc(cs)NSScriptExecutionContext:
+        name: NSScriptExecutionContext
+      c:objc(cs)NSScriptObjectSpecifier:
+        name: NSScriptObjectSpecifier
+      c:objc(cs)NSScriptSuiteRegistry:
+        name: NSScriptSuiteRegistry
+      c:objc(cs)NSScriptWhoseTest:
+        name: NSScriptWhoseTest
+      c:objc(cs)NSSecureUnarchiveFromDataTransformer:
+        name: NSSecureUnarchiveFromDataTransformer
+      c:objc(cs)NSSetCommand:
+        name: NSSetCommand
+      c:objc(cs)NSSimpleCString:
+        name: NSSimpleCString
+      c:objc(cs)NSSocketPort:
+        name: NSSocketPort
+      c:objc(cs)NSSocketPortNameServer:
+        name: NSSocketPortNameServer
+      c:objc(cs)NSSortDescriptor:
+        name: NSSortDescriptor
+      c:objc(cs)NSSpecifierTest:
+        name: NSSpecifierTest
+      c:objc(cs)NSSpellServer:
+        name: NSSpellServer
+      c:objc(cs)NSTask:
+        name: NSTask
+      c:objc(cs)NSTermOfAddress:
+        name: NSTermOfAddress
+      c:objc(cs)NSTextCheckingResult:
+        name: NSTextCheckingResult
+      c:objc(cs)NSThread:
+        name: NSThread
+      c:objc(cs)NSTimeZone:
+        name: NSTimeZone
+      c:objc(cs)NSURLAuthenticationChallenge:
+        name: NSURLAuthenticationChallenge
+      c:objc(cs)NSURLCache:
+        name: NSURLCache
+      c:objc(cs)NSURLComponents:
+        name: NSURLComponents
+      c:objc(cs)NSURLConnection:
+        name: NSURLConnection
+      c:objc(cs)NSURLCredential:
+        name: NSURLCredential
+      c:objc(cs)NSURLCredentialStorage:
+        name: NSURLCredentialStorage
+      c:objc(cs)NSURLDownload:
+        name: NSURLDownload
+      c:objc(cs)NSURLProtectionSpace:
+        name: NSURLProtectionSpace
+      c:objc(cs)NSURLProtocol:
+        name: NSURLProtocol
+      c:objc(cs)NSURLQueryItem:
+        name: NSURLQueryItem
+      c:objc(cs)NSURLRequest:
+        name: NSURLRequest
+      c:objc(cs)NSURLResponse:
+        name: NSURLResponse
+      c:objc(cs)NSURLSession:
+        name: NSURLSession
+      c:objc(cs)NSURLSessionConfiguration:
+        name: NSURLSessionConfiguration
+      c:objc(cs)NSURLSessionDataTask:
+        name: NSURLSessionDataTask
+      c:objc(cs)NSURLSessionDownloadTask:
+        name: NSURLSessionDownloadTask
+      c:objc(cs)NSURLSessionStreamTask:
+        name: NSURLSessionStreamTask
+      c:objc(cs)NSURLSessionTask:
+        name: NSURLSessionTask
+      c:objc(cs)NSURLSessionTaskMetrics:
+        name: NSURLSessionTaskMetrics
+      c:objc(cs)NSURLSessionTaskTransactionMetrics:
+        name: NSURLSessionTaskTransactionMetrics
+      c:objc(cs)NSURLSessionUploadTask:
+        name: NSURLSessionUploadTask
+      c:objc(cs)NSURLSessionWebSocketMessage:
+        name: NSURLSessionWebSocketMessage
+      c:objc(cs)NSURLSessionWebSocketTask:
+        name: NSURLSessionWebSocketTask
+      c:objc(cs)NSUUID:
+        name: NSUUID
+      c:objc(cs)NSUbiquitousKeyValueStore:
+        name: NSUbiquitousKeyValueStore
+      c:objc(cs)NSUnarchiver:
+        name: NSUnarchiver
+      c:objc(cs)NSUndoManager:
+        name: NSUndoManager
+      c:objc(cs)NSUniqueIDSpecifier:
+        name: NSUniqueIDSpecifier
+      c:objc(cs)NSUnit:
+        name: NSUnit
+      c:objc(cs)NSUnitAcceleration:
+        name: NSUnitAcceleration
+      c:objc(cs)NSUnitAngle:
+        name: NSUnitAngle
+      c:objc(cs)NSUnitArea:
+        name: NSUnitArea
+      c:objc(cs)NSUnitConcentrationMass:
+        name: NSUnitConcentrationMass
+      c:objc(cs)NSUnitConverter:
+        name: NSUnitConverter
+      c:objc(cs)NSUnitConverterLinear:
+        name: NSUnitConverterLinear
+      c:objc(cs)NSUnitDispersion:
+        name: NSUnitDispersion
+      c:objc(cs)NSUnitDuration:
+        name: NSUnitDuration
+      c:objc(cs)NSUnitElectricCharge:
+        name: NSUnitElectricCharge
+      c:objc(cs)NSUnitElectricCurrent:
+        name: NSUnitElectricCurrent
+      c:objc(cs)NSUnitElectricPotentialDifference:
+        name: NSUnitElectricPotentialDifference
+      c:objc(cs)NSUnitElectricResistance:
+        name: NSUnitElectricResistance
+      c:objc(cs)NSUnitEnergy:
+        name: NSUnitEnergy
+      c:objc(cs)NSUnitFrequency:
+        name: NSUnitFrequency
+      c:objc(cs)NSUnitFuelEfficiency:
+        name: NSUnitFuelEfficiency
+      c:objc(cs)NSUnitIlluminance:
+        name: NSUnitIlluminance
+      c:objc(cs)NSUnitInformationStorage:
+        name: NSUnitInformationStorage
+      c:objc(cs)NSUnitLength:
+        name: NSUnitLength
+      c:objc(cs)NSUnitMass:
+        name: NSUnitMass
+      c:objc(cs)NSUnitPower:
+        name: NSUnitPower
+      c:objc(cs)NSUnitPressure:
+        name: NSUnitPressure
+      c:objc(cs)NSUnitSpeed:
+        name: NSUnitSpeed
+      c:objc(cs)NSUnitTemperature:
+        name: NSUnitTemperature
+      c:objc(cs)NSUnitVolume:
+        name: NSUnitVolume
+      c:objc(cs)NSUserActivity:
+        name: NSUserActivity
+      c:objc(cs)NSUserAppleScriptTask:
+        name: NSUserAppleScriptTask
+      c:objc(cs)NSUserAutomatorTask:
+        name: NSUserAutomatorTask
+      c:objc(cs)NSUserDefaults:
+        name: NSUserDefaults
+      c:objc(cs)NSUserNotification:
+        name: NSUserNotification
+      c:objc(cs)NSUserNotificationAction:
+        name: NSUserNotificationAction
+      c:objc(cs)NSUserNotificationCenter:
+        name: NSUserNotificationCenter
+      c:objc(cs)NSUserScriptTask:
+        name: NSUserScriptTask
+      c:objc(cs)NSUserUnixTask:
+        name: NSUserUnixTask
+      c:objc(cs)NSValueTransformer:
+        name: NSValueTransformer
+      c:objc(cs)NSWhoseSpecifier:
+        name: NSWhoseSpecifier
+      c:objc(cs)NSXMLDTD:
+        name: NSXMLDTD
+      c:objc(cs)NSXMLDTDNode:
+        name: NSXMLDTDNode
+      c:objc(cs)NSXMLDocument:
+        name: NSXMLDocument
+      c:objc(cs)NSXMLElement:
+        name: NSXMLElement
+      c:objc(cs)NSXMLNode:
+        name: NSXMLNode
+      c:objc(cs)NSXMLParser:
+        name: NSXMLParser
+      c:objc(cs)NSXPCCoder:
+        name: NSXPCCoder
+      c:objc(cs)NSXPCConnection:
+        name: NSXPCConnection
+      c:objc(cs)NSXPCInterface:
+        name: NSXPCInterface
+      c:objc(cs)NSXPCListener:
+        name: NSXPCListener
+      c:objc(cs)NSXPCListenerEndpoint:
+        name: NSXPCListenerEndpoint
+      c:objc(cy)NSArray@NSArrayCreation:
+        name: NSArrayCreation
+      c:objc(cy)NSArray@NSArrayDiffing:
+        name: NSArrayDiffing
+      c:objc(cy)NSArray@NSArrayPathExtensions:
+        name: NSArrayPathExtensions
+      c:objc(cy)NSArray@NSDeprecated:
+        name: NSDeprecated
+      c:objc(cy)NSArray@NSKeyValueCoding:
+        name: NSKeyValueCoding
+      c:objc(cy)NSArray@NSKeyValueObserverRegistration:
+        name: NSKeyValueObserverRegistration
+      c:objc(cy)NSArray@NSPredicateSupport:
+        name: NSPredicateSupport
+      c:objc(cy)NSArray@NSSortDescriptorSorting:
+        name: NSSortDescriptorSorting
+      c:objc(cy)NSAttributedString@NSAttributedStringCreateFromMarkdown:
+        name: NSAttributedStringCreateFromMarkdown
+      c:objc(cy)NSAttributedString@NSAttributedStringFormatting:
+        name: NSAttributedStringFormatting
+      c:objc(cy)NSAttributedString@NSExtendedAttributedString:
+        name: NSExtendedAttributedString
+      c:objc(cy)NSAttributedString@NSMorphology:
+        name: NSMorphology
+      c:objc(cy)NSBundle@NSBundleResourceRequestAdditions:
+        name: NSBundleResourceRequestAdditions
+      c:objc(cy)NSCharacterSet@NSURLUtilities:
+        name: NSURLUtilities
+      c:objc(cy)NSCoder@NSDeprecated:
+        name: NSDeprecated$5
+      c:objc(cy)NSCoder@NSExtendedCoder:
+        name: NSExtendedCoder
+      c:objc(cy)NSCoder@NSGeometryCoding:
+        name: NSGeometryCoding
+      c:objc(cy)NSCoder@NSGeometryKeyedCoding:
+        name: NSGeometryKeyedCoding
+      c:objc(cy)NSCoder@NSTypedstreamCompatibility:
+        name: NSTypedstreamCompatibility
+      c:objc(cy)NSData@NSDataBase64Encoding:
+        name: NSDataBase64Encoding
+      c:objc(cy)NSData@NSDataCompression:
+        name: NSDataCompression
+      c:objc(cy)NSData@NSDeprecated:
+        name: NSDeprecated$4
+      c:objc(cy)NSDate@NSCalendarDateExtras:
+        name: NSCalendarDateExtras
+      c:objc(cy)NSDate@NSDateCreation:
+        name: NSDateCreation
+      c:objc(cy)NSDateFormatter@NSDateFormatterCompatibility:
+        name: NSDateFormatterCompatibility
+      c:objc(cy)NSDictionary@NSDeprecated:
+        name: NSDeprecated$2
+      c:objc(cy)NSDictionary@NSDictionaryCreation:
+        name: NSDictionaryCreation
+      c:objc(cy)NSDictionary@NSFileAttributes:
+        name: NSFileAttributes
+      c:objc(cy)NSDictionary@NSGenericFastEnumeration:
+        name: NSGenericFastEnumeration
+      c:objc(cy)NSDictionary@NSKeyValueCoding:
+        name: NSKeyValueCoding$5
+      c:objc(cy)NSDictionary@NSSharedKeySetDictionary:
+        name: NSSharedKeySetDictionary$1
+      c:objc(cy)NSException@NSExceptionRaisingConveniences:
+        name: NSExceptionRaisingConveniences
+      c:objc(cy)NSFileHandle@NSFileHandleAsynchronousAccess:
+        name: NSFileHandleAsynchronousAccess
+      c:objc(cy)NSFileHandle@NSFileHandleCreation:
+        name: NSFileHandleCreation
+      c:objc(cy)NSFileHandle@NSFileHandlePlatformSpecific:
+        name: NSFileHandlePlatformSpecific
+      c:objc(cy)NSFileManager@NSUserInformation:
+        name: NSUserInformation
+      c:objc(cy)NSFileWrapper@NSDeprecated:
+        name: NSDeprecated$8
+      c:objc(cy)NSHTTPCookieStorage@NSURLSessionTaskAdditions:
+        name: NSURLSessionTaskAdditions
+      c:objc(cy)NSIndexPath@NSDeprecated:
+        name: NSDeprecated$9
+      c:objc(cy)NSInflectionRule@NSInflectionAvailability:
+        name: NSInflectionAvailability
+      c:objc(cy)NSInputStream@NSInputStreamExtensions:
+        name: NSInputStreamExtensions
+      c:objc(cy)NSItemProvider@NSPreviewSupport:
+        name: NSPreviewSupport
+      c:objc(cy)NSLocale@NSExtendedLocale:
+        name: NSExtendedLocale
+      c:objc(cy)NSLocale@NSLocaleCreation:
+        name: NSLocaleCreation
+      c:objc(cy)NSLocale@NSLocaleGeneralInfo:
+        name: NSLocaleGeneralInfo
+      c:objc(cy)NSMorphology@NSCustomPronouns:
+        name: NSCustomPronouns
+      c:objc(cy)NSMorphology@NSMorphologyUserSettings:
+        name: NSMorphologyUserSettings
+      c:objc(cy)NSMutableArray@NSMutableArrayCreation:
+        name: NSMutableArrayCreation
+      c:objc(cy)NSMutableArray@NSMutableArrayDiffing:
+        name: NSMutableArrayDiffing
+      c:objc(cy)NSMutableArray@NSPredicateSupport:
+        name: NSPredicateSupport$1
+      c:objc(cy)NSMutableArray@NSSortDescriptorSorting:
+        name: NSSortDescriptorSorting$1
+      c:objc(cy)NSMutableAttributedString@NSExtendedMutableAttributedString:
+        name: NSExtendedMutableAttributedString
+      c:objc(cy)NSMutableAttributedString@NSMutableAttributedStringFormatting:
+        name: NSMutableAttributedStringFormatting
+      c:objc(cy)NSMutableData@NSMutableDataCompression:
+        name: NSMutableDataCompression
+      c:objc(cy)NSMutableData@NSMutableDataCreation:
+        name: NSMutableDataCreation
+      c:objc(cy)NSMutableDictionary@NSKeyValueCoding:
+        name: NSKeyValueCoding$1
+      c:objc(cy)NSMutableDictionary@NSMutableDictionaryCreation:
+        name: NSMutableDictionaryCreation
+      c:objc(cy)NSMutableDictionary@NSSharedKeySetDictionary:
+        name: NSSharedKeySetDictionary
+      c:objc(cy)NSMutableOrderedSet@NSKeyValueSorting:
+        name: NSKeyValueSorting
+      c:objc(cy)NSMutableOrderedSet@NSMutableOrderedSetCreation:
+        name: NSMutableOrderedSetCreation
+      c:objc(cy)NSMutableOrderedSet@NSMutableOrderedSetDiffing:
+        name: NSMutableOrderedSetDiffing
+      c:objc(cy)NSMutableOrderedSet@NSPredicateSupport:
+        name: NSPredicateSupport$2
+      c:objc(cy)NSMutableSet@NSMutableSetCreation:
+        name: NSMutableSetCreation
+      c:objc(cy)NSMutableSet@NSPredicateSupport:
+        name: NSPredicateSupport$5
+      c:objc(cy)NSMutableString@NSMutableStringExtensionMethods:
+        name: NSMutableStringExtensionMethods
+      c:objc(cy)NSMutableURLRequest@NSMutableHTTPURLRequest:
+        name: NSMutableHTTPURLRequest
+      c:objc(cy)NSNotification@NSNotificationCreation:
+        name: NSNotificationCreation
+      c:objc(cy)NSNumber@NSDecimalNumberExtensions:
+        name: NSDecimalNumberExtensions
+      c:objc(cy)NSNumberFormatter@NSNumberFormatterCompatibility:
+        name: NSNumberFormatterCompatibility
+      c:objc(cy)NSObject@NSArchiverCallback:
+        name: NSArchiverCallback
+      c:objc(cy)NSObject@NSClassDescriptionPrimitives:
+        name: NSClassDescriptionPrimitives
+      c:objc(cy)NSObject@NSCoderMethods:
+        name: NSCoderMethods
+      c:objc(cy)NSObject@NSComparisonMethods:
+        name: NSComparisonMethods
+      c:objc(cy)NSObject@NSCopyLinkMoveHandler:
+        name: NSCopyLinkMoveHandler
+      c:objc(cy)NSObject@NSDelayedPerforming:
+        name: NSDelayedPerforming
+      c:objc(cy)NSObject@NSDeprecatedKeyValueCoding:
+        name: NSDeprecatedKeyValueCoding
+      c:objc(cy)NSObject@NSDeprecatedKeyValueObservingCustomization:
+        name: NSDeprecatedKeyValueObservingCustomization
+      c:objc(cy)NSObject@NSDeprecatedMethods:
+        name: NSDeprecatedMethods
+      c:objc(cy)NSObject@NSDiscardableContentProxy:
+        name: NSDiscardableContentProxy
+      c:objc(cy)NSObject@NSDistributedObjects:
+        name: NSDistributedObjects
+      c:objc(cy)NSObject@NSErrorRecoveryAttempting:
+        name: NSErrorRecoveryAttempting
+      c:objc(cy)NSObject@NSKeyValueCoding:
+        name: NSKeyValueCoding$2
+      c:objc(cy)NSObject@NSKeyValueObserverNotification:
+        name: NSKeyValueObserverNotification
+      c:objc(cy)NSObject@NSKeyValueObserverRegistration:
+        name: NSKeyValueObserverRegistration$3
+      c:objc(cy)NSObject@NSKeyValueObserving:
+        name: NSKeyValueObserving
+      c:objc(cy)NSObject@NSKeyValueObservingCustomization:
+        name: NSKeyValueObservingCustomization
+      c:objc(cy)NSObject@NSKeyValueSharedObserverRegistration:
+        name: NSKeyValueSharedObserverRegistration
+      c:objc(cy)NSObject@NSKeyedArchiverObjectSubstitution:
+        name: NSKeyedArchiverObjectSubstitution
+      c:objc(cy)NSObject@NSKeyedUnarchiverObjectSubstitution:
+        name: NSKeyedUnarchiverObjectSubstitution
+      c:objc(cy)NSObject@NSScriptClassDescription:
+        name: NSScriptClassDescription$1
+      c:objc(cy)NSObject@NSScriptKeyValueCoding:
+        name: NSScriptKeyValueCoding
+      c:objc(cy)NSObject@NSScriptObjectSpecifiers:
+        name: NSScriptObjectSpecifiers
+      c:objc(cy)NSObject@NSScripting:
+        name: NSScripting
+      c:objc(cy)NSObject@NSScriptingComparisonMethods:
+        name: NSScriptingComparisonMethods
+      c:objc(cy)NSObject@NSThreadPerformAdditions:
+        name: NSThreadPerformAdditions
+      c:objc(cy)NSObject@NSURLClient:
+        name: NSURLClient
+      c:objc(cy)NSOperationQueue@NSDeprecated:
+        name: NSDeprecated$6
+      c:objc(cy)NSOrderedSet@NSKeyValueCoding:
+        name: NSKeyValueCoding$4
+      c:objc(cy)NSOrderedSet@NSKeyValueObserverRegistration:
+        name: NSKeyValueObserverRegistration$2
+      c:objc(cy)NSOrderedSet@NSKeyValueSorting:
+        name: NSKeyValueSorting$1
+      c:objc(cy)NSOrderedSet@NSOrderedSetCreation:
+        name: NSOrderedSetCreation
+      c:objc(cy)NSOrderedSet@NSOrderedSetDiffing:
+        name: NSOrderedSetDiffing
+      c:objc(cy)NSOrderedSet@NSPredicateSupport:
+        name: NSPredicateSupport$4
+      c:objc(cy)NSOrthography@NSOrthographyCreation:
+        name: NSOrthographyCreation
+      c:objc(cy)NSOrthography@NSOrthographyExtended:
+        name: NSOrthographyExtended
+      c:objc(cy)NSOutputStream@NSOutputStreamExtensions:
+        name: NSOutputStreamExtensions
+      c:objc(cy)NSPointerArray@NSPointerArrayConveniences:
+        name: NSPointerArrayConveniences
+      c:objc(cy)NSProcessInfo@NSProcessInfoActivity:
+        name: NSProcessInfoActivity
+      c:objc(cy)NSProcessInfo@NSProcessInfoPlatform:
+        name: NSProcessInfoPlatform
+      c:objc(cy)NSProcessInfo@NSProcessInfoPowerState:
+        name: NSProcessInfoPowerState
+      c:objc(cy)NSProcessInfo@NSProcessInfoThermalState:
+        name: NSProcessInfoThermalState$1
+      c:objc(cy)NSProcessInfo@NSUserInformation:
+        name: NSUserInformation$1
+      c:objc(cy)NSProtocolChecker@NSProtocolCheckerCreation:
+        name: NSProtocolCheckerCreation
+      c:objc(cy)NSRegularExpression@NSMatching:
+        name: NSMatching
+      c:objc(cy)NSRegularExpression@NSReplacement:
+        name: NSReplacement
+      c:objc(cy)NSRunLoop@NSOrderedPerform:
+        name: NSOrderedPerform
+      c:objc(cy)NSRunLoop@NSRunLoopConveniences:
+        name: NSRunLoopConveniences
+      c:objc(cy)NSScanner@NSDecimalNumberScanning:
+        name: NSDecimalNumberScanning
+      c:objc(cy)NSScanner@NSExtendedScanner:
+        name: NSExtendedScanner
+      c:objc(cy)NSScriptClassDescription@NSDeprecated:
+        name: NSDeprecated$1
+      c:objc(cy)NSSet@NSKeyValueCoding:
+        name: NSKeyValueCoding$3
+      c:objc(cy)NSSet@NSKeyValueObserverRegistration:
+        name: NSKeyValueObserverRegistration$1
+      c:objc(cy)NSSet@NSPredicateSupport:
+        name: NSPredicateSupport$3
+      c:objc(cy)NSSet@NSSetCreation:
+        name: NSSetCreation
+      c:objc(cy)NSSet@NSSortDescriptorSorting:
+        name: NSSortDescriptorSorting$2
+      c:objc(cy)NSStream@NSSocketStreamCreationExtensions:
+        name: NSSocketStreamCreationExtensions
+      c:objc(cy)NSStream@NSStreamBoundPairCreationExtensions:
+        name: NSStreamBoundPairCreationExtensions
+      c:objc(cy)NSString@NSBundleExtensionMethods:
+        name: NSBundleExtensionMethods
+      c:objc(cy)NSString@NSExtendedStringPropertyListParsing:
+        name: NSExtendedStringPropertyListParsing
+      c:objc(cy)NSString@NSItemProvider:
+        name: NSItemProvider
+      c:objc(cy)NSString@NSLinguisticAnalysis:
+        name: NSLinguisticAnalysis
+      c:objc(cy)NSString@NSStringDeprecated:
+        name: NSStringDeprecated
+      c:objc(cy)NSString@NSStringEncodingDetection:
+        name: NSStringEncodingDetection
+      c:objc(cy)NSString@NSStringPathExtensions:
+        name: NSStringPathExtensions
+      c:objc(cy)NSString@NSURLUtilities:
+        name: NSURLUtilities$1
+      c:objc(cy)NSTask@NSDeprecated:
+        name: NSDeprecated$7
+      c:objc(cy)NSTask@NSTaskConveniences:
+        name: NSTaskConveniences
+      c:objc(cy)NSTextCheckingResult@NSTextCheckingResultCreation:
+        name: NSTextCheckingResultCreation
+      c:objc(cy)NSTextCheckingResult@NSTextCheckingResultOptional:
+        name: NSTextCheckingResultOptional
+      c:objc(cy)NSTimeZone@NSExtendedTimeZone:
+        name: NSExtendedTimeZone
+      c:objc(cy)NSTimeZone@NSTimeZoneCreation:
+        name: NSTimeZoneCreation
+      c:objc(cy)NSURL@NSItemProvider:
+        name: NSItemProvider$1
+      c:objc(cy)NSURL@NSPromisedItems:
+        name: NSPromisedItems
+      c:objc(cy)NSURL@NSURLLoading:
+        name: NSURLLoading
+      c:objc(cy)NSURL@NSURLPathUtilities:
+        name: NSURLPathUtilities
+      c:objc(cy)NSURLCache@NSURLSessionTaskAdditions:
+        name: NSURLSessionTaskAdditions$1
+      c:objc(cy)NSURLConnection@NSURLConnectionQueuedLoading:
+        name: NSURLConnectionQueuedLoading
+      c:objc(cy)NSURLConnection@NSURLConnectionSynchronousLoading:
+        name: NSURLConnectionSynchronousLoading
+      c:objc(cy)NSURLCredential@NSClientCertificate:
+        name: NSClientCertificate
+      c:objc(cy)NSURLCredential@NSInternetPassword:
+        name: NSInternetPassword
+      c:objc(cy)NSURLCredential@NSServerTrust:
+        name: NSServerTrust
+      c:objc(cy)NSURLCredentialStorage@NSURLSessionTaskAdditions:
+        name: NSURLSessionTaskAdditions$2
+      c:objc(cy)NSURLProtectionSpace@NSClientCertificateSpace:
+        name: NSClientCertificateSpace
+      c:objc(cy)NSURLProtectionSpace@NSServerTrustValidationSpace:
+        name: NSServerTrustValidationSpace
+      c:objc(cy)NSURLProtocol@NSURLSessionTaskAdditions:
+        name: NSURLSessionTaskAdditions$3
+      c:objc(cy)NSURLRequest@NSHTTPURLRequest:
+        name: NSHTTPURLRequest
+      c:objc(cy)NSURLSession@NSURLSessionAsynchronousConvenience:
+        name: NSURLSessionAsynchronousConvenience
+      c:objc(cy)NSURLSessionConfiguration@NSURLSessionDeprecated:
+        name: NSURLSessionDeprecated
+      c:objc(cy)NSValue@NSDeprecated:
+        name: NSDeprecated$3
+      c:objc(cy)NSValue@NSValueCreation:
+        name: NSValueCreation
+      c:objc(cy)NSValue@NSValueExtensionMethods:
+        name: NSValueExtensionMethods
+      c:objc(cy)NSValue@NSValueGeometryExtensions:
+        name: NSValueGeometryExtensions
+      c:objc(cy)NSValue@NSValueRangeExtensions:
+        name: NSValueRangeExtensions
+      c:objc(cy)NSXMLElement@NSDeprecated:
+        name: NSDeprecated$10
+      c:objc(cy)NSXMLParser@NSXMLParserLocatorAdditions:
+        name: NSXMLParserLocatorAdditions
+      c:objc(ext)NSFileHandle@NSFileHandle.h@5004:
+        name: unnamed
+      c:objc(pl)NSCacheDelegate:
+        name: NSCacheDelegate
+      c:objc(pl)NSConnectionDelegate:
+        name: NSConnectionDelegate
+      c:objc(pl)NSDecimalNumberBehaviors:
+        name: NSDecimalNumberBehaviors
+      c:objc(pl)NSDiscardableContent:
+        name: NSDiscardableContent
+      c:objc(pl)NSExtensionRequestHandling:
+        name: NSExtensionRequestHandling
+      c:objc(pl)NSFileManagerDelegate:
+        name: NSFileManagerDelegate
+      c:objc(pl)NSFilePresenter:
+        name: NSFilePresenter
+      c:objc(pl)NSKeyedArchiverDelegate:
+        name: NSKeyedArchiverDelegate
+      c:objc(pl)NSKeyedUnarchiverDelegate:
+        name: NSKeyedUnarchiverDelegate
+      c:objc(pl)NSLocking:
+        name: NSLocking
+      c:objc(pl)NSMachPortDelegate:
+        name: NSMachPortDelegate
+      c:objc(pl)NSMetadataQueryDelegate:
+        name: NSMetadataQueryDelegate
+      c:objc(pl)NSNetServiceBrowserDelegate:
+        name: NSNetServiceBrowserDelegate
+      c:objc(pl)NSNetServiceDelegate:
+        name: NSNetServiceDelegate
+      c:objc(pl)NSPredicateValidating:
+        name: NSPredicateValidating
+      c:objc(pl)NSProgressReporting:
+        name: NSProgressReporting
+      c:objc(pl)NSSpellServerDelegate:
+        name: NSSpellServerDelegate
+      c:objc(pl)NSURLAuthenticationChallengeSender:
+        name: NSURLAuthenticationChallengeSender
+      c:objc(pl)NSURLConnectionDataDelegate:
+        name: NSURLConnectionDataDelegate
+      c:objc(pl)NSURLConnectionDelegate:
+        name: NSURLConnectionDelegate
+      c:objc(pl)NSURLConnectionDownloadDelegate:
+        name: NSURLConnectionDownloadDelegate
+      c:objc(pl)NSURLDownloadDelegate:
+        name: NSURLDownloadDelegate
+      c:objc(pl)NSURLHandleClient:
+        name: NSURLHandleClient
+      c:objc(pl)NSURLProtocolClient:
+        name: NSURLProtocolClient
+      c:objc(pl)NSURLSessionDataDelegate:
+        name: NSURLSessionDataDelegate
+      c:objc(pl)NSURLSessionDelegate:
+        name: NSURLSessionDelegate
+      c:objc(pl)NSURLSessionDownloadDelegate:
+        name: NSURLSessionDownloadDelegate
+      c:objc(pl)NSURLSessionStreamDelegate:
+        name: NSURLSessionStreamDelegate
+      c:objc(pl)NSURLSessionTaskDelegate:
+        name: NSURLSessionTaskDelegate
+      c:objc(pl)NSURLSessionWebSocketDelegate:
+        name: NSURLSessionWebSocketDelegate
+      c:objc(pl)NSUserActivityDelegate:
+        name: NSUserActivityDelegate
+      c:objc(pl)NSUserNotificationCenterDelegate:
+        name: NSUserNotificationCenterDelegate
+      c:objc(pl)NSXMLParserDelegate:
+        name: NSXMLParserDelegate
+      c:objc(pl)NSXPCListenerDelegate:
+        name: NSXPCListenerDelegate
+      c:objc(pl)NSXPCProxyCreating:
+        name: NSXPCProxyCreating
+      "~ objcBlock: 1jpsrc?  861uh9*  cpdemi  1jpsrc ":
+        name: ObjCBlock_NSCachedURLResponse_ffiVoid_NSURLConnection_NSCachedURLResponse
+      "~ objcBlock: 2it2ig  861uh9* ":
+        name: ObjCBlock_ffiShort_ffiVoid
+      "~ objcBlock: 2tqx7m?  861uh9*  hpsq7w*  84iqub  2tqx7m  2tqx7m? ":
+        name: ObjCBlock_NSDecimalNumber_ffiVoid_SEL_NSCalculationError_NSDecimalNumber_NSDecimalNumber
+      "~ objcBlock: 35s5g6*  35s5g6*?  bzg5bs  dabhyx? ":
+        name: ObjCBlock_id_id_NSArray_NSMutableDictionary
+      "~ objcBlock: 35s5g6*  861uh9* ":
+        name: ObjCBlock_id_ffiVoid
+      "~ objcBlock: 35s5g6*  861uh9*  7iw8bp  3n5cd4  35s5g6* ":
+        name: ObjCBlock_id_ffiVoid_NSMetadataQuery_NSString_id
+      "~ objcBlock: 35s5g6*  861uh9*  7iw8bp  fot55v ":
+        name: ObjCBlock_id_ffiVoid_NSMetadataQuery_NSMetadataItem
+      "~ objcBlock: 35s5g6*  861uh9*  82td96 ":
+        name: ObjCBlock_id_ffiVoid_NSConnection
+      "~ objcBlock: 35s5g6*  861uh9*  gepgps ":
+        name: ObjCBlock_id_ffiVoid_ffiVoidNSError
+      "~ objcBlock: 35s5g6*?  861uh9*  6er1u4  35s5g6* ":
+        name: ObjCBlock_id_ffiVoid_NSKeyedArchiver_id
+      "~ objcBlock: 35s5g6*?  861uh9*  e614ve  3n5cd4  bzg5bs ":
+        name: ObjCBlock_Class_ffiVoid_NSKeyedUnarchiver_NSString_NSArray
+      "~ objcBlock: 35s5g6*? R 861uh9*  e614ve  35s5g6*? C":
+        name: ObjCBlock_id_ffiVoid_NSKeyedUnarchiver_id
+      "~ objcBlock: 3gmpnw  35s5g6*  35s5g6* ":
+        name: ObjCBlock_NSComparisonResult_id_id
+      "~ objcBlock: 4wust8?  861uh9* ":
+        name: ObjCBlock_NSURL_ffiVoid
+      "~ objcBlock: 5viw5p  861uh9* ":
+        name: ObjCBlock_NSSet_ffiVoid
+      "~ objcBlock: 6rjp48  861uh9*  bzg5bs ":
+        name: ObjCBlock_NSData_ffiVoid_NSArray
+      "~ objcBlock: 6rjp48?  861uh9*  g7903j  3n5cd4  3n5cd4? ":
+        name: ObjCBlock_NSData_ffiVoid_NSXMLParser_NSString_NSString
+      "~ objcBlock: 7vkv98?  861uh9*  95amug  7vkv98  1unni1? ":
+        name: ObjCBlock_NSURLRequest_ffiVoid_NSURLDownload_NSURLRequest_NSURLResponse
+      "~ objcBlock: 7vkv98?  861uh9*  cpdemi  7vkv98  1unni1? ":
+        name: ObjCBlock_NSURLRequest_ffiVoid_NSURLConnection_NSURLRequest_NSURLResponse
+      "~ objcBlock: 861uh9 ":
+        name: ObjCBlock_ffiVoid
+      "~ objcBlock: 861uh9  13g93j?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSURLSessionWebSocketMessage_NSError
+      "~ objcBlock: 861uh9  1jpsrc? ":
+        name: ObjCBlock_ffiVoid_NSCachedURLResponse
+      "~ objcBlock: 861uh9  1unni1?  6rjp48?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSURLResponse_NSData_NSError
+      "~ objcBlock: 861uh9  2dcvdt ":
+        name: ObjCBlock_ffiVoid_NSError$1
+      "~ objcBlock: 861uh9  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSError
+      "~ objcBlock: 861uh9  35s5g6* ":
+        name: ObjCBlock_ffiVoid_id
+      "~ objcBlock: 861uh9  35s5g6*  agrza8  bool* ":
+        name: ObjCBlock_ffiVoid_objcObjCObjectImpl_ffiUnsignedLong_bool
+      "~ objcBlock: 861uh9  35s5g6*?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_id_NSError
+      "~ objcBlock: 861uh9  35s5g6*?  bwe8hu  bool* ":
+        name: ObjCBlock_ffiVoid_id_NSRange_bool
+      "~ objcBlock: 861uh9  3jw4d8  bwe8hu  bool* ":
+        name: ObjCBlock_ffiVoid_NSDictionary_NSRange_bool
+      "~ objcBlock: 861uh9  3jw4d8? ":
+        name: ObjCBlock_ffiVoid_NSDictionary
+      "~ objcBlock: 861uh9  3jw4d8?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSDictionary_NSError
+      "~ objcBlock: 861uh9  3n5cd4?  bwe8hu  bool* ":
+        name: ObjCBlock_ffiVoid_NSLinguisticTag_NSRange_bool
+      "~ objcBlock: 861uh9  3n5cd4?  bwe8hu  bwe8hu  bool* ":
+        name: ObjCBlock_ffiVoid_NSString_NSRange_NSRange_bool
+      "~ objcBlock: 861uh9  41qufp?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSAppleEventDescriptor_NSError
+      "~ objcBlock: 861uh9  45v5u0 ":
+        name: ObjCBlock_ffiVoid_NSNotification
+      "~ objcBlock: 861uh9  47yqx5  7zt92? ":
+        name: ObjCBlock_ffiVoid_NSURLSessionAuthChallengeDisposition_NSURLCredential
+      "~ objcBlock: 861uh9  4wust8 ":
+        name: ObjCBlock_ffiVoid_NSURL
+      "~ objcBlock: 861uh9  4wust8  4wust8 ":
+        name: ObjCBlock_ffiVoid_NSURL_NSURL
+      "~ objcBlock: 861uh9  4wust8?  1unni1?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSURL_NSURLResponse_NSError
+      "~ objcBlock: 861uh9  6rjp48  bool  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSData_bool_NSError
+      "~ objcBlock: 861uh9  6rjp48? ":
+        name: ObjCBlock_ffiVoid_NSData
+      "~ objcBlock: 861uh9  6rjp48?  1unni1?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSData_NSURLResponse_NSError
+      "~ objcBlock: 861uh9  6rjp48?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSData_NSError
+      "~ objcBlock: 861uh9  7vkv98? ":
+        name: ObjCBlock_ffiVoid_NSURLRequest
+      "~ objcBlock: 861uh9  7zt92? ":
+        name: ObjCBlock_ffiVoid_NSURLCredential
+      "~ objcBlock: 861uh9  861uh9* ":
+        name: ObjCBlock_ffiVoid_ffiVoid$1
+      "~ objcBlock: 861uh9  861uh9*  1l0uk8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLAuthenticationChallenge
+      "~ objcBlock: 861uh9  861uh9*  3diabs ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetServiceBrowser
+      "~ objcBlock: 861uh9  861uh9*  3diabs  3jw4d8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetServiceBrowser_NSDictionary
+      "~ objcBlock: 861uh9  861uh9*  3diabs  3n5cd4  bool ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetServiceBrowser_NSString_bool
+      "~ objcBlock: 861uh9  861uh9*  3diabs  4omrc3  bool ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetServiceBrowser_NSNetService_bool
+      "~ objcBlock: 861uh9  861uh9*  4omrc3 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetService
+      "~ objcBlock: 861uh9  861uh9*  4omrc3  3jw4d8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetService_NSDictionary
+      "~ objcBlock: 861uh9  861uh9*  4omrc3  6rjp48 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetService_NSData
+      "~ objcBlock: 861uh9  861uh9*  4omrc3  awch6  cfecyi ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSNetService_NSInputStream_NSOutputStream
+      "~ objcBlock: 861uh9  861uh9*  4tv4r2  30ob2z ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSUserNotificationCenter_NSUserNotification
+      "~ objcBlock: 861uh9  861uh9*  4wust8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURL
+      "~ objcBlock: 861uh9  861uh9*  4wust8  4wust8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURL_NSURL
+      "~ objcBlock: 861uh9  861uh9*  4wust8  7xtuq7 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURL_ffiVoidNSError
+      "~ objcBlock: 861uh9  861uh9*  4wust8  ff15o4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURL_NSFileVersion
+      "~ objcBlock: 861uh9  861uh9*  5viw5p ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSSet
+      "~ objcBlock: 861uh9  861uh9*  6er1u4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSKeyedArchiver
+      "~ objcBlock: 861uh9  861uh9*  6er1u4  35s5g6*? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSKeyedArchiver_id
+      "~ objcBlock: 861uh9  861uh9*  6er1u4  35s5g6*?  35s5g6*? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSKeyedArchiver_id_id
+      "~ objcBlock: 861uh9  861uh9*  7xtuq7 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError
+      "~ objcBlock: 861uh9  861uh9*  7zt92  1l0uk8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLCredential_NSURLAuthenticationChallenge
+      "~ objcBlock: 861uh9  861uh9*  861uh9* ":
+        name: ObjCBlock_ffiVoid_ffiVoid_ffiVoid
+      "~ objcBlock: 861uh9  861uh9*  95amug ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLDownload
+      "~ objcBlock: 861uh9  861uh9*  95amug  1l0uk8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLDownload_NSURLAuthenticationChallenge
+      "~ objcBlock: 861uh9  861uh9*  95amug  1unni1 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLDownload_NSURLResponse
+      "~ objcBlock: 861uh9  861uh9*  95amug  1unni1  16ihbd ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLDownload_NSURLResponse_ffiLongLong
+      "~ objcBlock: 861uh9  861uh9*  95amug  2dcvdt ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLDownload_NSError
+      "~ objcBlock: 861uh9  861uh9*  95amug  3n5cd4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLDownload_NSString
+      "~ objcBlock: 861uh9  861uh9*  95amug  agrza8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLDownload_NSUInteger
+      "~ objcBlock: 861uh9  861uh9*  a8vwdj ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSPortMessage
+      "~ objcBlock: 861uh9  861uh9*  cpdemi ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  16ihbd  16ihbd ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_ffiLongLong_ffiLongLong
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  16ihbd  16ihbd  16ihbd ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_ffiLongLong_ffiLongLong_ffiLongLong
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  1l0uk8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_NSURLAuthenticationChallenge
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  1unni1 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_NSURLResponse
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  2dcvdt ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_NSError
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  4wust8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_NSURL
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  6eem33  6eem33  6eem33 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_NSInteger_NSInteger_NSInteger
+      "~ objcBlock: 861uh9  861uh9*  cpdemi  6rjp48 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLConnection_NSData
+      "~ objcBlock: 861uh9  861uh9*  dvpgg2  35s5g6* ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSCache_id
+      "~ objcBlock: 861uh9  861uh9*  e614ve ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSKeyedUnarchiver
+      "~ objcBlock: 861uh9  861uh9*  e614ve  35s5g6*  35s5g6* ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSKeyedUnarchiver_id_id
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  1l0uk8  5n3jc0 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLAuthenticationChallenge_ffiVoidNSURLSessionAuthChallengeDispositionNSURLCredential
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  2cne1f ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionStreamTask
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  2cne1f  awch6  cfecyi ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionStreamTask_NSInputStream_NSOutputStream
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSError
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  3npequ  4wust8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDownloadTask_NSURL
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  3npequ  Int64  Int64 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDownloadTask_Int64_Int64
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  3npequ  Int64  Int64  Int64 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDownloadTask_Int64_Int64_Int64
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  c3jb5x  1jpsrc  7wmff4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDataTask_NSCachedURLResponse_ffiVoidNSCachedURLResponse
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  c3jb5x  1unni1  8moxw0 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDataTask_NSURLResponse_ffiVoidNSURLSessionResponseDisposition
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  c3jb5x  2cne1f ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDataTask_NSURLSessionStreamTask
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  c3jb5x  3npequ ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDataTask_NSURLSessionDownloadTask
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  c3jb5x  6rjp48 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionDataTask_NSData
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  fztw7a  2qmylb  6rjp48? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionWebSocketTask_NSURLSessionWebSocketCloseCode_NSData
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  fztw7a  3n5cd4? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionWebSocketTask_NSString
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  1l0uk8  5n3jc0 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_NSURLAuthenticationChallenge_ffiVoidNSURLSessionAuthChallengeDispositionNSURLCredential
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_NSError
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  662k06 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_NSHTTPURLResponse
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  662k06  7vkv98  c5t2ks ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_NSHTTPURLResponse_NSURLRequest_ffiVoidNSURLRequest
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  7vkv98  boo7t5 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_NSURLRequest_ffiVoidNSURLSessionDelayedRequestDispositionNSURLRequest
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  Int64  Int64  Int64 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_Int64_Int64_Int64
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  Int64  hbyo20 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_Int64_ffiVoidNSInputStream
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  fezxmj ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_NSURLSessionTaskMetrics
+      "~ objcBlock: 861uh9  861uh9*  ee5xm3  hif6gk  hbyo20 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLSession_NSURLSessionTask_ffiVoidNSInputStream
+      "~ objcBlock: 861uh9  861uh9*  ejgbv0 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSUserActivity
+      "~ objcBlock: 861uh9  861uh9*  ejgbv0  awch6  cfecyi ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSUserActivity_NSInputStream_NSOutputStream
+      "~ objcBlock: 861uh9  861uh9*  elz2u8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_ffiVoidffiVoid
+      "~ objcBlock: 861uh9  861uh9*  ff15o4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSFileVersion
+      "~ objcBlock: 861uh9  861uh9*  g0epwy ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSExtensionContext
+      "~ objcBlock: 861uh9  861uh9*  g7903j ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser
+      "~ objcBlock: 861uh9  861uh9*  g7903j  2dcvdt ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSError
+      "~ objcBlock: 861uh9  861uh9*  g7903j  3n5cd4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSString
+      "~ objcBlock: 861uh9  861uh9*  g7903j  3n5cd4  3n5cd4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSString_NSString
+      "~ objcBlock: 861uh9  861uh9*  g7903j  3n5cd4  3n5cd4  3n5cd4?  3n5cd4? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSString_NSString_NSString_NSString
+      "~ objcBlock: 861uh9  861uh9*  g7903j  3n5cd4  3n5cd4? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSString_NSString$1
+      "~ objcBlock: 861uh9  861uh9*  g7903j  3n5cd4  3n5cd4?  3n5cd4? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSString_NSString_NSString
+      "~ objcBlock: 861uh9  861uh9*  g7903j  3n5cd4  3n5cd4?  3n5cd4?  3jw4d8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSString_NSString_NSString_NSDictionary
+      "~ objcBlock: 861uh9  861uh9*  g7903j  3n5cd4  3n5cd4?  3n5cd4?  3n5cd4? ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSString_NSString_NSString_NSString$1
+      "~ objcBlock: 861uh9  861uh9*  g7903j  6rjp48 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSXMLParser_NSData
+      "~ objcBlock: 861uh9  861uh9*  ga40e1 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLProtocol
+      "~ objcBlock: 861uh9  861uh9*  ga40e1  1jpsrc ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLProtocol_NSCachedURLResponse
+      "~ objcBlock: 861uh9  861uh9*  ga40e1  1l0uk8 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLProtocol_NSURLAuthenticationChallenge
+      "~ objcBlock: 861uh9  861uh9*  ga40e1  1unni1  4tfyvr ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLProtocol_NSURLResponse_NSURLCacheStoragePolicy
+      "~ objcBlock: 861uh9  861uh9*  ga40e1  2dcvdt ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLProtocol_NSError
+      "~ objcBlock: 861uh9  861uh9*  ga40e1  6rjp48 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLProtocol_NSData
+      "~ objcBlock: 861uh9  861uh9*  ga40e1  7vkv98  1unni1 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLProtocol_NSURLRequest_NSURLResponse
+      "~ objcBlock: 861uh9  861uh9*  gnfq7d  3n5cd4  3n5cd4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSSpellServer_NSString_NSString
+      "~ objcBlock: 861uh9  861uh9*  gnfq7d  agrza8  3n5cd4  3n5cd4  3n5cd4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSSpellServer_NSUInteger_NSString_NSString_NSString
+      "~ objcBlock: 861uh9  861uh9*  nhzpj ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLHandle
+      "~ objcBlock: 861uh9  861uh9*  nhzpj  3n5cd4 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLHandle_NSString
+      "~ objcBlock: 861uh9  861uh9*  nhzpj  6rjp48 ":
+        name: ObjCBlock_ffiVoid_ffiVoid_NSURLHandle_NSData
+      "~ objcBlock: 861uh9  9da1kg ":
+        name: ObjCBlock_ffiVoid_NSFileHandle
+      "~ objcBlock: 861uh9  agqlym ":
+        name: ObjCBlock_ffiVoid_NSTask
+      "~ objcBlock: 861uh9  awch6? ":
+        name: ObjCBlock_ffiVoid_NSInputStream
+      "~ objcBlock: 861uh9  awch6?  cfecyi?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSInputStream_NSOutputStream_NSError
+      "~ objcBlock: 861uh9  bool ":
+        name: ObjCBlock_ffiVoid_bool
+      "~ objcBlock: 861uh9  bttj5o ":
+        name: ObjCBlock_ffiVoid_ffiVoid$2
+      "~ objcBlock: 861uh9  bttj5o? ":
+        name: ObjCBlock_ffiVoid_ffiVoid
+      "~ objcBlock: 861uh9  bzg5bs ":
+        name: ObjCBlock_ffiVoid_NSArray$1
+      "~ objcBlock: 861uh9  bzg5bs  bzg5bs  bzg5bs ":
+        name: ObjCBlock_ffiVoid_NSArray_NSArray_NSArray
+      "~ objcBlock: 861uh9  bzg5bs? ":
+        name: ObjCBlock_ffiVoid_NSArray
+      "~ objcBlock: 861uh9  bzg5bs?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSArray_NSError
+      "~ objcBlock: 861uh9  c6u0zw ":
+        name: ObjCBlock_ffiVoid_NSURLSessionResponseDisposition
+      "~ objcBlock: 861uh9  czbxe6  35s5g6*  3jw4d8 ":
+        name: ObjCBlock_ffiVoid_NSItemProviderCompletionHandler_Class_NSDictionary
+      "~ objcBlock: 861uh9  dl9t97?  dsq5et  bool* ":
+        name: ObjCBlock_ffiVoid_NSTextCheckingResult_NSMatchingFlags_bool
+      "~ objcBlock: 861uh9  dwvxr7 ":
+        name: ObjCBlock_ffiVoid_NSBackgroundActivityCompletionHandler
+      "~ objcBlock: 861uh9  eemqzg?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSXPCConnection_NSError
+      "~ objcBlock: 861uh9  ff15o4?  2dcvdt? ":
+        name: ObjCBlock_ffiVoid_NSFileVersion_NSError
+      "~ objcBlock: 861uh9  fjrzcn ":
+        name: ObjCBlock_ffiVoid_NSBackgroundActivityResult
+      "~ objcBlock: 861uh9  fox8mz  7vkv98? ":
+        name: ObjCBlock_ffiVoid_NSURLSessionDelayedRequestDisposition_NSURLRequest
+      "~ objcBlock: 861uh9  gyvuve?  bool  bool* ":
+        name: ObjCBlock_ffiVoid_NSDate_bool_bool
+      "~ objcBlock: 861uh9  id<gu69z2>?  2dcvdt ":
+        name: ObjCBlock_ffiVoid_idNSSecureCoding_NSError
+      "~ objcBlock: 8t1cvk  861uh9* ":
+        name: ObjCBlock_NSProgress_ffiVoid
+      "~ objcBlock: 9zanoy  861uh9* ":
+        name: ObjCBlock_NSOperationQueue_ffiVoid
+      "~ objcBlock: awch6?  861uh9*  cpdemi  7vkv98 ":
+        name: ObjCBlock_NSInputStream_ffiVoid_NSURLConnection_NSURLRequest
+      "~ objcBlock: bool  35s5g6*  35s5g6* ":
+        name: ObjCBlock_bool_objcObjCObjectImpl_objcObjCObjectImpl
+      "~ objcBlock: bool  35s5g6*?  3jw4d8? ":
+        name: ObjCBlock_bool_id_NSDictionary
+      "~ objcBlock: bool  4wust8  2dcvdt ":
+        name: ObjCBlock_bool_NSURL_NSError
+      "~ objcBlock: bool  861uh9* ":
+        name: ObjCBlock_bool_ffiVoid
+      "~ objcBlock: bool  861uh9*  1uwf7s  2dcvdt?* ":
+        name: ObjCBlock_bool_ffiVoid_NSPredicateOperatorType_NSError
+      "~ objcBlock: bool  861uh9*  3v9t03  2dcvdt?* ":
+        name: ObjCBlock_bool_ffiVoid_NSPredicate_NSError
+      "~ objcBlock: bool  861uh9*  4tv4r2  30ob2z ":
+        name: ObjCBlock_bool_ffiVoid_NSUserNotificationCenter_NSUserNotification
+      "~ objcBlock: bool  861uh9*  82td96  82td96 ":
+        name: ObjCBlock_bool_ffiVoid_NSConnection_NSConnection
+      "~ objcBlock: bool  861uh9*  82td96  ey93lv ":
+        name: ObjCBlock_bool_ffiVoid_NSConnection_NSDistantObjectRequest
+      "~ objcBlock: bool  861uh9*  95amug ":
+        name: ObjCBlock_bool_ffiVoid_NSURLDownload
+      "~ objcBlock: bool  861uh9*  95amug  3n5cd4 ":
+        name: ObjCBlock_bool_ffiVoid_NSURLDownload_NSString
+      "~ objcBlock: bool  861uh9*  95amug  e2yi3z ":
+        name: ObjCBlock_bool_ffiVoid_NSURLDownload_NSURLProtectionSpace
+      "~ objcBlock: bool  861uh9*  bzg5bs  6rjp48 ":
+        name: ObjCBlock_bool_ffiVoid_NSArray_NSData
+      "~ objcBlock: bool  861uh9*  c1ge5o  2dcvdt?* ":
+        name: ObjCBlock_bool_ffiVoid_NSExpression_NSError
+      "~ objcBlock: bool  861uh9*  c1ge5o  3n5cd4?  3n5cd4?  2dcvdt?* ":
+        name: ObjCBlock_bool_ffiVoid_NSExpression_NSString_NSString_NSError
+      "~ objcBlock: bool  861uh9*  cpdemi ":
+        name: ObjCBlock_bool_ffiVoid_NSURLConnection
+      "~ objcBlock: bool  861uh9*  cpdemi  e2yi3z ":
+        name: ObjCBlock_bool_ffiVoid_NSURLConnection_NSURLProtectionSpace
+      "~ objcBlock: bool  861uh9*  gs53k8  eemqzg ":
+        name: ObjCBlock_bool_ffiVoid_NSXPCListener_NSXPCConnection
+      "~ objcBlock: bool  861uh9*  hc26w8  2dcvdt  3n5cd4 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSError_NSString
+      "~ objcBlock: bool  861uh9*  hc26w8  2dcvdt  3n5cd4  3n5cd4 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSError_NSString_NSString
+      "~ objcBlock: bool  861uh9*  hc26w8  2dcvdt  4wust8 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSError_NSURL
+      "~ objcBlock: bool  861uh9*  hc26w8  2dcvdt  4wust8  4wust8 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSError_NSURL_NSURL
+      "~ objcBlock: bool  861uh9*  hc26w8  3n5cd4 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSString
+      "~ objcBlock: bool  861uh9*  hc26w8  3n5cd4  3n5cd4 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSString_NSString
+      "~ objcBlock: bool  861uh9*  hc26w8  4wust8 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSURL
+      "~ objcBlock: bool  861uh9*  hc26w8  4wust8  4wust8 ":
+        name: ObjCBlock_bool_ffiVoid_NSFileManager_NSURL_NSURL
+      "~ objcBlock: bwe8hu  861uh9*  gnfq7d  3n5cd4  3n5cd4  6eem33*  bool ":
+        name: ObjCBlock_NSRange_ffiVoid_NSSpellServer_NSString_NSString_NSInteger_bool
+      "~ objcBlock: bwe8hu  861uh9*  gnfq7d  3n5cd4  3n5cd4?  bzg5bs?* ":
+        name: ObjCBlock_NSRange_ffiVoid_NSSpellServer_NSString_NSString_NSArray
+      "~ objcBlock: bzg5bs?  861uh9*  gnfq7d  3n5cd4  3n5cd4 ":
+        name: ObjCBlock_NSArray_ffiVoid_NSSpellServer_NSString_NSString
+      "~ objcBlock: bzg5bs?  861uh9*  gnfq7d  3n5cd4  agrza8  Uint64  3jw4d8?  e49hd7?  6eem33* ":
+        name: ObjCBlock_NSArray_ffiVoid_NSSpellServer_NSString_NSUInteger_NSTextCheckingTypes_NSDictionary_NSOrthography_NSInteger
+      "~ objcBlock: bzg5bs?  861uh9*  gnfq7d  bwe8hu  3n5cd4  3n5cd4 ":
+        name: ObjCBlock_NSArray_ffiVoid_NSSpellServer_NSRange_NSString_NSString
+      "~ objcBlock: duukhx  861uh9* ":
+        name: ObjCBlock_NSRoundingMode_ffiVoid

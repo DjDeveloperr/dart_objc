@@ -19,6 +19,7 @@ dependencies:
   objc_metalkit:
     path: packages/objc-metalkit
   path: ^1.9.0
+  yaml: ^3.1.3
 
 dependency_overrides:
   ffi:

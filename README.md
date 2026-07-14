@@ -30,8 +30,14 @@ quite minimal though.
 - `host/`: SwiftPM macOS host that embeds the Dart VM on main thread
 - `examples/flutter/`: Flutter demo with embedded AppKit and UIKit scenes
 - `tool/gen_objc_packages.dart`: package scaffolding + regeneration entrypoint
+- `tool/benchmark_appkit_analyzer.dart`: reproducible vanilla-to-AppKit
+  fresh-process latency and peak-RSS benchmark
 - `tool/bootstrap.sh`: repeatable local setup
 - `tool/verify.sh`: repeatable verification for the repo surface we care about
+- `docs/analyzer-performance.md`: generated-binding tree-shaking, analyzer
+  benchmarks, and the local Dart SDK optimization
+- `docs/dart-team-response.md`: copy-ready explanation of the developer
+  experience and analyzer work for the Dart team
 
 ## Prerequisites
 

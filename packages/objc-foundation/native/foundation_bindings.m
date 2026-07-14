@@ -49,16 +49,16 @@ id objc_retainBlock(id);
   };
 
 
-typedef id  (^_ProtocolTrampoline)(void * sel, id arg1, struct _NSRange arg2, id arg3, id arg4);
-__attribute__((visibility("default"))) __attribute__((used))
-id  _bp3akc_protocolTrampoline_19u921t(id target, void * sel, id arg1, struct _NSRange arg2, id arg3, id arg4) {
-  return ((_ProtocolTrampoline)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
-}
-
-typedef id  (^_ProtocolTrampoline_1)(void * sel, id arg1, id arg2, id arg3);
+typedef id  (^_ProtocolTrampoline)(void * sel, id arg1, id arg2, id arg3);
 __attribute__((visibility("default"))) __attribute__((used))
 id  _bp3akc_protocolTrampoline_1yw2rcr(id target, void * sel, id arg1, id arg2, id arg3) {
-  return ((_ProtocolTrampoline_1)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+  return ((_ProtocolTrampoline)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+}
+
+typedef id  (^_ProtocolTrampoline_1)(void * sel, id arg1, struct _NSRange arg2, id arg3, id arg4);
+__attribute__((visibility("default"))) __attribute__((used))
+id  _bp3akc_protocolTrampoline_19u921t(id target, void * sel, id arg1, struct _NSRange arg2, id arg3, id arg4) {
+  return ((_ProtocolTrampoline_1)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef id  (^_ProtocolTrampoline_2)(void * sel, id arg1, id arg2, unsigned long arg3, uint64_t arg4, id arg5, id arg6, long * arg7);
@@ -121,28 +121,46 @@ BOOL  _bp3akc_protocolTrampoline_2n06mv(id target, void * sel, id arg1, id arg2)
   return ((_ProtocolTrampoline_11)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
 }
 
-typedef BOOL  (^_ProtocolTrampoline_12)(void * sel, id arg1, id arg2, id arg3);
+typedef BOOL  (^_ProtocolTrampoline_12)(void * sel, id arg1, id * arg2);
 __attribute__((visibility("default"))) __attribute__((used))
-BOOL  _bp3akc_protocolTrampoline_jk8du5(id target, void * sel, id arg1, id arg2, id arg3) {
-  return ((_ProtocolTrampoline_12)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+BOOL  _bp3akc_protocolTrampoline_joosg4(id target, void * sel, id arg1, id * arg2) {
+  return ((_ProtocolTrampoline_12)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
 }
 
-typedef BOOL  (^_ProtocolTrampoline_13)(void * sel, id arg1, id arg2, id arg3, id arg4);
+typedef BOOL  (^_ProtocolTrampoline_13)(void * sel, id arg1, id arg2, id arg3, id * arg4);
 __attribute__((visibility("default"))) __attribute__((used))
-BOOL  _bp3akc_protocolTrampoline_1em3l8z(id target, void * sel, id arg1, id arg2, id arg3, id arg4) {
+BOOL  _bp3akc_protocolTrampoline_kag8fk(id target, void * sel, id arg1, id arg2, id arg3, id * arg4) {
   return ((_ProtocolTrampoline_13)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
-typedef BOOL  (^_ProtocolTrampoline_14)(void * sel, id arg1);
+typedef BOOL  (^_ProtocolTrampoline_14)(void * sel, id arg1, id arg2, id arg3);
 __attribute__((visibility("default"))) __attribute__((used))
-BOOL  _bp3akc_protocolTrampoline_3su7tt(id target, void * sel, id arg1) {
-  return ((_ProtocolTrampoline_14)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
+BOOL  _bp3akc_protocolTrampoline_jk8du5(id target, void * sel, id arg1, id arg2, id arg3) {
+  return ((_ProtocolTrampoline_14)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
 }
 
-typedef short  (^_ProtocolTrampoline_15)(void * sel);
+typedef BOOL  (^_ProtocolTrampoline_15)(void * sel, id arg1, id arg2, id arg3, id arg4);
+__attribute__((visibility("default"))) __attribute__((used))
+BOOL  _bp3akc_protocolTrampoline_1em3l8z(id target, void * sel, id arg1, id arg2, id arg3, id arg4) {
+  return ((_ProtocolTrampoline_15)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+}
+
+typedef BOOL  (^_ProtocolTrampoline_16)(void * sel, NSPredicateOperatorType arg1, id * arg2);
+__attribute__((visibility("default"))) __attribute__((used))
+BOOL  _bp3akc_protocolTrampoline_f46pvg(id target, void * sel, NSPredicateOperatorType arg1, id * arg2) {
+  return ((_ProtocolTrampoline_16)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
+}
+
+typedef BOOL  (^_ProtocolTrampoline_17)(void * sel, id arg1);
+__attribute__((visibility("default"))) __attribute__((used))
+BOOL  _bp3akc_protocolTrampoline_3su7tt(id target, void * sel, id arg1) {
+  return ((_ProtocolTrampoline_17)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
+}
+
+typedef short  (^_ProtocolTrampoline_18)(void * sel);
 __attribute__((visibility("default"))) __attribute__((used))
 short  _bp3akc_protocolTrampoline_p984hf(id target, void * sel) {
-  return ((_ProtocolTrampoline_15)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel);
+  return ((_ProtocolTrampoline_18)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel);
 }
 
 typedef void  (^_ListenerTrampoline)(void);
@@ -536,10 +554,10 @@ _ListenerTrampoline_16 _bp3akc_wrapBlockingBlock_ovsamd(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_16)(void * sel);
+typedef void  (^_ProtocolTrampoline_19)(void * sel);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_ovsamd(id target, void * sel) {
-  return ((_ProtocolTrampoline_16)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel);
+  return ((_ProtocolTrampoline_19)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel);
 }
 
 typedef void  (^_ListenerTrampoline_17)(void * arg0, id arg1, id arg2);
@@ -565,10 +583,10 @@ _ListenerTrampoline_17 _bp3akc_wrapBlockingBlock_fjrv01(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_17)(void * sel, id arg1, id arg2);
+typedef void  (^_ProtocolTrampoline_20)(void * sel, id arg1, id arg2);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_fjrv01(id target, void * sel, id arg1, id arg2) {
-  return ((_ProtocolTrampoline_17)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
+  return ((_ProtocolTrampoline_20)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
 }
 
 typedef void  (^_ListenerTrampoline_18)(void * arg0, id arg1);
@@ -594,10 +612,10 @@ _ListenerTrampoline_18 _bp3akc_wrapBlockingBlock_18v1jvf(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_18)(void * sel, id arg1);
+typedef void  (^_ProtocolTrampoline_21)(void * sel, id arg1);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_18v1jvf(id target, void * sel, id arg1) {
-  return ((_ProtocolTrampoline_18)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
+  return ((_ProtocolTrampoline_21)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
 }
 
 typedef void  (^_ListenerTrampoline_19)(void * arg0, id arg1, id arg2, id arg3);
@@ -623,10 +641,10 @@ _ListenerTrampoline_19 _bp3akc_wrapBlockingBlock_1tz5yf(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_19)(void * sel, id arg1, id arg2, id arg3);
+typedef void  (^_ProtocolTrampoline_22)(void * sel, id arg1, id arg2, id arg3);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_1tz5yf(id target, void * sel, id arg1, id arg2, id arg3) {
-  return ((_ProtocolTrampoline_19)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+  return ((_ProtocolTrampoline_22)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
 }
 
 typedef void  (^_ListenerTrampoline_20)(void * arg0, id arg1, id arg2, BOOL arg3);
@@ -652,10 +670,10 @@ _ListenerTrampoline_20 _bp3akc_wrapBlockingBlock_8acz2h(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_20)(void * sel, id arg1, id arg2, BOOL arg3);
+typedef void  (^_ProtocolTrampoline_23)(void * sel, id arg1, id arg2, BOOL arg3);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_8acz2h(id target, void * sel, id arg1, id arg2, BOOL arg3) {
-  return ((_ProtocolTrampoline_20)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+  return ((_ProtocolTrampoline_23)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
 }
 
 typedef void  (^_ListenerTrampoline_21)(void * arg0, id arg1, unsigned long arg2, id arg3, id arg4, id arg5);
@@ -681,10 +699,10 @@ _ListenerTrampoline_21 _bp3akc_wrapBlockingBlock_1cn988u(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_21)(void * sel, id arg1, unsigned long arg2, id arg3, id arg4, id arg5);
+typedef void  (^_ProtocolTrampoline_24)(void * sel, id arg1, unsigned long arg2, id arg3, id arg4, id arg5);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_1cn988u(id target, void * sel, id arg1, unsigned long arg2, id arg3, id arg4, id arg5) {
-  return ((_ProtocolTrampoline_21)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
+  return ((_ProtocolTrampoline_24)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
 }
 
 typedef void  (^_ListenerTrampoline_22)(void * arg0, id arg1, long arg2, long arg3, long arg4);
@@ -710,10 +728,10 @@ _ListenerTrampoline_22 _bp3akc_wrapBlockingBlock_15e9dqx(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_22)(void * sel, id arg1, long arg2, long arg3, long arg4);
+typedef void  (^_ProtocolTrampoline_25)(void * sel, id arg1, long arg2, long arg3, long arg4);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_15e9dqx(id target, void * sel, id arg1, long arg2, long arg3, long arg4) {
-  return ((_ProtocolTrampoline_22)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+  return ((_ProtocolTrampoline_25)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef void  (^_ListenerTrampoline_23)(void * arg0, id arg1, long long arg2, long long arg3);
@@ -739,10 +757,10 @@ _ListenerTrampoline_23 _bp3akc_wrapBlockingBlock_9crvvv(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_23)(void * sel, id arg1, long long arg2, long long arg3);
+typedef void  (^_ProtocolTrampoline_26)(void * sel, id arg1, long long arg2, long long arg3);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_9crvvv(id target, void * sel, id arg1, long long arg2, long long arg3) {
-  return ((_ProtocolTrampoline_23)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+  return ((_ProtocolTrampoline_26)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
 }
 
 typedef void  (^_ListenerTrampoline_24)(void * arg0, id arg1, long long arg2, long long arg3, long long arg4);
@@ -768,10 +786,10 @@ _ListenerTrampoline_24 _bp3akc_wrapBlockingBlock_1qf1qkl(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_24)(void * sel, id arg1, long long arg2, long long arg3, long long arg4);
+typedef void  (^_ProtocolTrampoline_27)(void * sel, id arg1, long long arg2, long long arg3, long long arg4);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_1qf1qkl(id target, void * sel, id arg1, long long arg2, long long arg3, long long arg4) {
-  return ((_ProtocolTrampoline_24)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+  return ((_ProtocolTrampoline_27)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef void  (^_ListenerTrampoline_25)(void * arg0, id arg1, unsigned long arg2);
@@ -797,10 +815,10 @@ _ListenerTrampoline_25 _bp3akc_wrapBlockingBlock_wy9lus(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_25)(void * sel, id arg1, unsigned long arg2);
+typedef void  (^_ProtocolTrampoline_28)(void * sel, id arg1, unsigned long arg2);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_wy9lus(id target, void * sel, id arg1, unsigned long arg2) {
-  return ((_ProtocolTrampoline_25)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
+  return ((_ProtocolTrampoline_28)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
 }
 
 typedef void  (^_ListenerTrampoline_26)(void * arg0, id arg1, id arg2, long long arg3);
@@ -826,10 +844,10 @@ _ListenerTrampoline_26 _bp3akc_wrapBlockingBlock_34xzuf(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_26)(void * sel, id arg1, id arg2, long long arg3);
+typedef void  (^_ProtocolTrampoline_29)(void * sel, id arg1, id arg2, long long arg3);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_34xzuf(id target, void * sel, id arg1, id arg2, long long arg3) {
-  return ((_ProtocolTrampoline_26)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+  return ((_ProtocolTrampoline_29)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
 }
 
 typedef void  (^_ListenerTrampoline_27)(void * arg0, id arg1, id arg2, NSURLCacheStoragePolicy arg3);
@@ -855,10 +873,10 @@ _ListenerTrampoline_27 _bp3akc_wrapBlockingBlock_1j7coyk(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_27)(void * sel, id arg1, id arg2, NSURLCacheStoragePolicy arg3);
+typedef void  (^_ProtocolTrampoline_30)(void * sel, id arg1, id arg2, NSURLCacheStoragePolicy arg3);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_1j7coyk(id target, void * sel, id arg1, id arg2, NSURLCacheStoragePolicy arg3) {
-  return ((_ProtocolTrampoline_27)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+  return ((_ProtocolTrampoline_30)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
 }
 
 typedef void  (^_ListenerTrampoline_28)(void * arg0, id arg1, id arg2, id arg3);
@@ -884,10 +902,10 @@ _ListenerTrampoline_28 _bp3akc_wrapBlockingBlock_bklti2(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_28)(void * sel, id arg1, id arg2, id arg3);
+typedef void  (^_ProtocolTrampoline_31)(void * sel, id arg1, id arg2, id arg3);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_bklti2(id target, void * sel, id arg1, id arg2, id arg3) {
-  return ((_ProtocolTrampoline_28)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
+  return ((_ProtocolTrampoline_31)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3);
 }
 
 typedef void  (^_ListenerTrampoline_29)(void * arg0, id arg1, id arg2, id arg3, id arg4);
@@ -913,10 +931,10 @@ _ListenerTrampoline_29 _bp3akc_wrapBlockingBlock_xx612k(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_29)(void * sel, id arg1, id arg2, id arg3, id arg4);
+typedef void  (^_ProtocolTrampoline_32)(void * sel, id arg1, id arg2, id arg3, id arg4);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_xx612k(id target, void * sel, id arg1, id arg2, id arg3, id arg4) {
-  return ((_ProtocolTrampoline_29)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+  return ((_ProtocolTrampoline_32)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef void  (^_ListenerTrampoline_30)(void * arg0, id arg1, id arg2, int64_t arg3, int64_t arg4);
@@ -942,10 +960,10 @@ _ListenerTrampoline_30 _bp3akc_wrapBlockingBlock_ly2579(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_30)(void * sel, id arg1, id arg2, int64_t arg3, int64_t arg4);
+typedef void  (^_ProtocolTrampoline_33)(void * sel, id arg1, id arg2, int64_t arg3, int64_t arg4);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_ly2579(id target, void * sel, id arg1, id arg2, int64_t arg3, int64_t arg4) {
-  return ((_ProtocolTrampoline_30)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+  return ((_ProtocolTrampoline_33)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef void  (^_ListenerTrampoline_31)(void * arg0, id arg1, id arg2, int64_t arg3, int64_t arg4, int64_t arg5);
@@ -971,10 +989,10 @@ _ListenerTrampoline_31 _bp3akc_wrapBlockingBlock_h68abb(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_31)(void * sel, id arg1, id arg2, int64_t arg3, int64_t arg4, int64_t arg5);
+typedef void  (^_ProtocolTrampoline_34)(void * sel, id arg1, id arg2, int64_t arg3, int64_t arg4, int64_t arg5);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_h68abb(id target, void * sel, id arg1, id arg2, int64_t arg3, int64_t arg4, int64_t arg5) {
-  return ((_ProtocolTrampoline_31)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
+  return ((_ProtocolTrampoline_34)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
 }
 
 typedef void  (^_ListenerTrampoline_32)(void * arg0, id arg1, id arg2, id arg3, id arg4);
@@ -1000,10 +1018,10 @@ _ListenerTrampoline_32 _bp3akc_wrapBlockingBlock_8jfq1p(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_32)(void * sel, id arg1, id arg2, id arg3, id arg4);
+typedef void  (^_ProtocolTrampoline_35)(void * sel, id arg1, id arg2, id arg3, id arg4);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_8jfq1p(id target, void * sel, id arg1, id arg2, id arg3, id arg4) {
-  return ((_ProtocolTrampoline_32)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+  return ((_ProtocolTrampoline_35)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef void  (^_ListenerTrampoline_33)(void * arg0, id arg1, id arg2, int64_t arg3, id arg4);
@@ -1029,10 +1047,10 @@ _ListenerTrampoline_33 _bp3akc_wrapBlockingBlock_jyim80(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_33)(void * sel, id arg1, id arg2, int64_t arg3, id arg4);
+typedef void  (^_ProtocolTrampoline_36)(void * sel, id arg1, id arg2, int64_t arg3, id arg4);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_jyim80(id target, void * sel, id arg1, id arg2, int64_t arg3, id arg4) {
-  return ((_ProtocolTrampoline_33)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+  return ((_ProtocolTrampoline_36)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef void  (^_ListenerTrampoline_34)(void * arg0, id arg1, id arg2, id arg3, id arg4, id arg5);
@@ -1058,10 +1076,10 @@ _ListenerTrampoline_34 _bp3akc_wrapBlockingBlock_l2g8ke(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_34)(void * sel, id arg1, id arg2, id arg3, id arg4, id arg5);
+typedef void  (^_ProtocolTrampoline_37)(void * sel, id arg1, id arg2, id arg3, id arg4, id arg5);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_l2g8ke(id target, void * sel, id arg1, id arg2, id arg3, id arg4, id arg5) {
-  return ((_ProtocolTrampoline_34)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
+  return ((_ProtocolTrampoline_37)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
 }
 
 typedef void  (^_ListenerTrampoline_35)(void * arg0, id arg1, id arg2, NSURLSessionWebSocketCloseCode arg3, id arg4);
@@ -1087,10 +1105,10 @@ _ListenerTrampoline_35 _bp3akc_wrapBlockingBlock_1lx650f(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_35)(void * sel, id arg1, id arg2, NSURLSessionWebSocketCloseCode arg3, id arg4);
+typedef void  (^_ProtocolTrampoline_38)(void * sel, id arg1, id arg2, NSURLSessionWebSocketCloseCode arg3, id arg4);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_1lx650f(id target, void * sel, id arg1, id arg2, NSURLSessionWebSocketCloseCode arg3, id arg4) {
-  return ((_ProtocolTrampoline_35)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
+  return ((_ProtocolTrampoline_38)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4);
 }
 
 typedef void  (^_ListenerTrampoline_36)(void * arg0, id arg1, id arg2);
@@ -1116,10 +1134,10 @@ _ListenerTrampoline_36 _bp3akc_wrapBlockingBlock_jk1ljc(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_36)(void * sel, id arg1, id arg2);
+typedef void  (^_ProtocolTrampoline_39)(void * sel, id arg1, id arg2);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_jk1ljc(id target, void * sel, id arg1, id arg2) {
-  return ((_ProtocolTrampoline_36)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
+  return ((_ProtocolTrampoline_39)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
 }
 
 typedef void  (^_ListenerTrampoline_37)(void * arg0, id arg1, id arg2, id arg3, id arg4, id arg5);
@@ -1145,10 +1163,10 @@ _ListenerTrampoline_37 _bp3akc_wrapBlockingBlock_m09tr7(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_37)(void * sel, id arg1, id arg2, id arg3, id arg4, id arg5);
+typedef void  (^_ProtocolTrampoline_40)(void * sel, id arg1, id arg2, id arg3, id arg4, id arg5);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_m09tr7(id target, void * sel, id arg1, id arg2, id arg3, id arg4, id arg5) {
-  return ((_ProtocolTrampoline_37)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
+  return ((_ProtocolTrampoline_40)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2, arg3, arg4, arg5);
 }
 
 typedef void  (^_ListenerTrampoline_38)(void * arg0, void * arg1);
@@ -1174,10 +1192,10 @@ _ListenerTrampoline_38 _bp3akc_wrapBlockingBlock_1037nh9(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_38)(void * sel, void * arg1);
+typedef void  (^_ProtocolTrampoline_41)(void * sel, void * arg1);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_1037nh9(id target, void * sel, void * arg1) {
-  return ((_ProtocolTrampoline_38)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
+  return ((_ProtocolTrampoline_41)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
 }
 
 typedef void  (^_ListenerTrampoline_39)(void * arg0, id arg1);
@@ -1203,10 +1221,10 @@ _ListenerTrampoline_39 _bp3akc_wrapBlockingBlock_1l4hxwm(
   });
 }
 
-typedef void  (^_ProtocolTrampoline_39)(void * sel, id arg1);
+typedef void  (^_ProtocolTrampoline_42)(void * sel, id arg1);
 __attribute__((visibility("default"))) __attribute__((used))
 void  _bp3akc_protocolTrampoline_1l4hxwm(id target, void * sel, id arg1) {
-  return ((_ProtocolTrampoline_39)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
+  return ((_ProtocolTrampoline_42)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
 }
 
 typedef void  (^_ListenerTrampoline_40)(id arg0, unsigned long arg1, BOOL * arg2);
@@ -1232,16 +1250,16 @@ _ListenerTrampoline_40 _bp3akc_wrapBlockingBlock_1p9ui4q(
   });
 }
 
-typedef id  (^_ProtocolTrampoline_40)(void * sel, id arg1, id arg2 __attribute__((ns_consumed)));
+typedef id  (^_ProtocolTrampoline_43)(void * sel, id arg1, id arg2 __attribute__((ns_consumed)));
 __attribute__((visibility("default"))) __attribute__((used))
 id  _bp3akc_protocolTrampoline_1p0fswn(id target, void * sel, id arg1, id arg2 __attribute__((ns_consumed))) {
-  return ((_ProtocolTrampoline_40)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
+  return ((_ProtocolTrampoline_43)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1, arg2);
 }
 
-typedef id  (^_ProtocolTrampoline_41)(void * sel, id arg1);
+typedef id  (^_ProtocolTrampoline_44)(void * sel, id arg1);
 __attribute__((visibility("default"))) __attribute__((used))
 id  _bp3akc_protocolTrampoline_wpy7aa(id target, void * sel, id arg1) {
-  return ((_ProtocolTrampoline_41)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
+  return ((_ProtocolTrampoline_44)((id (*)(id, SEL, SEL))objc_msgSend)(target, @selector(getDOBJCDartProtocolMethodForSelector:), sel))(sel, arg1);
 }
 #undef BLOCKING_BLOCK_IMPL
 
