@@ -5,7 +5,7 @@ Objective-C/AppKit/UIKit interop experiments for Dart and Flutter.
 This setup covers two concrete app paths:
 
 - a fully native AppKit app driven from Dart through an embedder host in
-  [`host/`](./host) and source in (`lib/`)(./lib)
+  [`host/`](./host) and source in [`lib/`](./lib)
 - a Flutter app that embeds Dart-built AppKit and UIKit views in
   [`examples/flutter/`](./examples/flutter)
 
@@ -23,10 +23,10 @@ quite minimal though.
 - `ffigen/`: pinned fork of `dart-lang/native`, on the `objc-interop` branch
   with support for subclass helpers
 - `packages/objc-foundation`: generated Foundation bindings
-- `packages/objc-appkit`: generated AppKit bindings plus Flutter AppKit view
-  helpers
-- `packages/objc-uikit`: generated UIKit bindings plus Flutter UIKit view
-  helpers
+- `packages/objc-appkit`: generated AppKit bindings with no Flutter dependency
+- `packages/objc-uikit`: generated UIKit bindings with no Flutter dependency
+- `packages/objc-appkit-flutter`: optional Flutter/AppKit platform-view bridge
+- `packages/objc-uikit-flutter`: optional Flutter/UIKit platform-view bridge
 - `host/`: SwiftPM macOS host that embeds the Dart VM on main thread
 - `examples/flutter/`: Flutter demo with embedded AppKit and UIKit scenes
 - `tool/gen_objc_packages.dart`: package scaffolding + regeneration entrypoint
@@ -104,7 +104,9 @@ delegates to [`lib/demo_app.dart`](./lib/demo_app.dart).
 ## Flutter Demo
 
 The Flutter demo registers platform-view factories from Dart and embeds native
-views without app-specific Swift or Objective-C platform-view glue.
+views without app-specific Swift or Objective-C platform-view glue. It includes
+a real AppKit text editor, a typed native file panel, a Dart-created AppKit
+surface, and a UIKit tab shell.
 
 ```bash
 cd examples/flutter
@@ -163,7 +165,17 @@ dependency_overrides:
 
 For Flutter platform views:
 
-- AppKit path: import `package:objc_appkit/flutter_views.dart`, call
+- AppKit path: import `package:objc_appkit_flutter/objc_appkit_flutter.dart`, call
   `registerObjCAppKitViewType(...)`, and mount `ObjCAppKitHostView`
-- UIKit path: import `package:objc_uikit/flutter_views.dart`, call
+- UIKit path: import `package:objc_uikit_flutter/objc_uikit_flutter.dart`, call
   `registerObjCUiKitViewType(...)`, and mount `ObjCUiKitHostView`
+
+Add only the bridge used by the Flutter application:
+
+```yaml
+dependencies:
+  objc_appkit_flutter:
+    path: ../dart_objc/packages/objc-appkit-flutter
+  objc_uikit_flutter:
+    path: ../dart_objc/packages/objc-uikit-flutter
+```
