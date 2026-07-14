@@ -2,13 +2,9 @@
 
 Generated Objective-C bindings for `AppKit` using the local
 `ffigen` fork in `../ffigen`.
-This package also bundles the Flutter platform-view transfer shim used by the
-demo app:
 
-- import `package:objc_appkit/flutter_views.dart`
-- `registerObjCAppKitViewType(...)`
-- `ObjCAppKitHostView`
-
+This package has no Flutter dependency. Flutter platform-view integration is
+available separately from `package:objc_appkit_flutter`.
 
 ## Regenerate
 

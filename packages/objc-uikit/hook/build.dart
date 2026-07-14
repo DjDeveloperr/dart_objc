@@ -7,7 +7,6 @@ import 'package:native_toolchain_c/src/cbuilder/compiler_resolver.dart';
 
 const objCFlags = ['-x', 'objective-c', '-fobjc-arc'];
 const bindingsAssetName = 'objc_uikit_bindings.dylib';
-const flutterViewsAssetName = 'objc_uikit_flutter_views.dylib';
 
 final logger = Logger('')
   ..level = Level.INFO
@@ -65,31 +64,6 @@ void main(List<String> args) async {
         linkMode: DynamicLoadingBundled(),
       ),
     );
-
-
-    final flutterViewsAssetPath = input.outputDirectory.resolve(flutterViewsAssetName);
-    final flutterViewsSrc = input.packageRoot.resolve('src/flutter_views.m').toFilePath();
-    final flutterViewsObject = await builder.buildObject(
-      flutterViewsSrc,
-      [...cFlags, ...objCFlags],
-    );
-    await builder.linkLib(flutterViewsObject, flutterViewsAssetPath.toFilePath(), [
-      ...cFlags,
-      '-framework',
-      'Foundation',
-      '-framework',
-      'UIKit',
-    ]);
-    output.dependencies.add(Uri.file(flutterViewsSrc));
-    output.assets.code.add(
-      CodeAsset(
-        package: input.packageName,
-        name: flutterViewsAssetName,
-        file: flutterViewsAssetPath,
-        linkMode: DynamicLoadingBundled(),
-      ),
-    );
-
   });
 }
 

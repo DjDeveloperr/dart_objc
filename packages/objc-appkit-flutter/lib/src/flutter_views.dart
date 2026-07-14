@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:objc_appkit/objc_appkit.dart';
 import 'package:objective_c/objective_c.dart' as objc;
 
 import 'flutter_views_bindings.dart' as c;
-import 'appkit_bindings.dart';
 
 typedef _ObjectPtr = ffi.Pointer<objc.ObjCObjectImpl>;
 typedef _SelectorPtr = ffi.Pointer<objc.ObjCSelector>;

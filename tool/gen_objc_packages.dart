@@ -144,6 +144,7 @@ void _generateBindings(_FrameworkSpec spec, Directory pkgDir, String sdkPath) {
     // ffigen configuration API supports it.
     // ignore: deprecated_member_use
     libraryImports: sharedImports.libraries,
+    reservedNames: sharedImports.reservedNames,
     output: Output(
       dartFile: dartOut,
       objectiveCFile: objcOut,
@@ -190,6 +191,7 @@ _SharedImports _loadFoundationImports(Directory packagesDir) {
   final files = document['files'] as YamlMap;
   final libraries = <LibraryImport>[];
   final typesByUsr = <String, ImportedType>{};
+  final reservedNames = <String>{};
   var importIndex = 0;
 
   for (final fileEntry in files.nodes.entries) {
@@ -205,6 +207,7 @@ _SharedImports _loadFoundationImports(Directory packagesDir) {
       final symbol = (symbolEntry.value as YamlMap).value;
       final name = symbol['name'] as String;
       final dartName = symbol['dart-name'] as String? ?? name;
+      reservedNames.add(dartName);
       typesByUsr[usr] = ImportedType(
         library,
         name,
@@ -215,7 +218,26 @@ _SharedImports _loadFoundationImports(Directory packagesDir) {
     }
   }
 
-  return _SharedImports(typesByUsr: typesByUsr, libraries: libraries);
+  final foundationBindings = File(
+    '${packagesDir.path}/objc-foundation/lib/src/foundation_bindings.dart',
+  ).readAsStringSync();
+  final declarationPattern = RegExp(
+    r'^(?:(?:abstract|base|final|interface|sealed)\s+)*'
+    r'(?:class|enum|mixin|typedef|extension(?:\s+type)?)\s+'
+    r'([A-Za-z_$][A-Za-z0-9_$]*)',
+    multiLine: true,
+  );
+  reservedNames.addAll(
+    declarationPattern
+        .allMatches(foundationBindings)
+        .map((match) => match.group(1)!),
+  );
+
+  return _SharedImports(
+    typesByUsr: typesByUsr,
+    libraries: libraries,
+    reservedNames: reservedNames,
+  );
 }
 
 bool _shareFoundationSymbol(String usr) =>
@@ -370,11 +392,6 @@ Future<void> _scaffoldPackage(_FrameworkSpec spec, Directory pkgDir) async {
   await File(
     '${pkgDir.path}/lib/${spec.packageName}.dart',
   ).writeAsString(_libraryExports(spec));
-  if (_hasFlutterViews(spec)) {
-    await File(
-      '${pkgDir.path}/lib/flutter_views.dart',
-    ).writeAsString(_flutterViewsLibraryExports());
-  }
   await File(
     '${pkgDir.path}/tool/generate.dart',
   ).writeAsString(_packageGenerateTool(spec));
@@ -386,7 +403,6 @@ Future<void> _scaffoldPackage(_FrameworkSpec spec, Directory pkgDir) async {
 }
 
 String _pubspecFor(_FrameworkSpec spec) {
-  final includeFlutterHelpers = _hasFlutterViews(spec);
   final includeBuildHookDeps = _needsBuildHook(spec);
   final extraDeps = includeBuildHookDeps
       ? '''
@@ -394,7 +410,7 @@ String _pubspecFor(_FrameworkSpec spec) {
   hooks: ^1.0.0
   logging: ^1.3.0
   native_toolchain_c: ^0.17.4
-${includeFlutterHelpers ? "  flutter:\n    sdk: flutter\n" : ''}'''
+'''
       : '';
   final frameworkDeps = spec.key == 'appkit'
       ? '''
@@ -451,37 +467,20 @@ String _libraryExports(_FrameworkSpec spec) {
   return buffer.toString();
 }
 
-String _flutterViewsLibraryExports() => "export 'src/flutter_views.dart';\n";
-
 String _readmeFor(_FrameworkSpec spec) {
-  final flutterHelpers = switch (spec.key) {
-    'appkit' =>
-      '''
-
-This package also bundles the Flutter platform-view transfer shim used by the
-demo app:
-
-- import `package:${spec.packageName}/flutter_views.dart`
-- `registerObjCAppKitViewType(...)`
-- `ObjCAppKitHostView`
-''',
-    'uikit' =>
-      '''
-
-This package also bundles the Flutter platform-view transfer shim used by the
-demo app:
-
-- import `package:${spec.packageName}/flutter_views.dart`
-- `registerObjCUiKitViewType(...)`
-- `ObjCUiKitHostView`
-''',
+  final flutterBridgeSection = switch (spec.key) {
+    'appkit' || 'uikit' =>
+      '\n\n'
+          'This package has no Flutter dependency. Flutter platform-view '
+          'integration is\n'
+          'available separately from `package:${spec.packageName}_flutter`.',
     _ => '',
   };
   return '''
 # ${spec.packageName}
 
 Generated Objective-C bindings for `${spec.framework}` using the local
-`ffigen` fork in `../ffigen`.$flutterHelpers
+`ffigen` fork in `../ffigen`.$flutterBridgeSection
 
 ## Regenerate
 
@@ -521,10 +520,7 @@ const _gitIgnore = '''
 build/
 ''';
 
-bool _hasFlutterViews(_FrameworkSpec spec) =>
-    spec.key == 'appkit' || spec.key == 'uikit';
-
-bool _needsBuildHook(_FrameworkSpec spec) => _hasFlutterViews(spec);
+bool _needsBuildHook(_FrameworkSpec spec) => _usesBundledBindingsAsset(spec);
 
 bool _usesBundledBindingsAsset(_FrameworkSpec spec) =>
     spec.key == 'appkit' || spec.key == 'uikit';
@@ -543,7 +539,6 @@ String _frameworkLinkFlags(_FrameworkSpec spec) => spec.frameworkLoadOrder
     .join('\n');
 
 String _buildHookFor(_FrameworkSpec spec) {
-  final includeFlutterViews = _hasFlutterViews(spec);
   final includeBindingsAsset = _usesBundledBindingsAsset(spec);
   final bindingsBlock = includeBindingsAsset
       ? '''
@@ -570,31 +565,6 @@ ${_frameworkLinkFlags(spec)}
     );
 '''
       : '';
-  final flutterViewsBlock = includeFlutterViews
-      ? '''
-
-    final flutterViewsAssetPath = input.outputDirectory.resolve(flutterViewsAssetName);
-    final flutterViewsSrc = input.packageRoot.resolve('src/flutter_views.m').toFilePath();
-    final flutterViewsObject = await builder.buildObject(
-      flutterViewsSrc,
-      [...cFlags, ...objCFlags],
-    );
-    await builder.linkLib(flutterViewsObject, flutterViewsAssetPath.toFilePath(), [
-      ...cFlags,
-${_frameworkLinkFlags(spec)}
-    ]);
-    output.dependencies.add(Uri.file(flutterViewsSrc));
-    output.assets.code.add(
-      CodeAsset(
-        package: input.packageName,
-        name: flutterViewsAssetName,
-        file: flutterViewsAssetPath,
-        linkMode: DynamicLoadingBundled(),
-      ),
-    );
-'''
-      : '';
-
   return '''
 import 'dart:io';
 
@@ -605,7 +575,6 @@ import 'package:native_toolchain_c/src/cbuilder/compiler_resolver.dart';
 
 const objCFlags = ['-x', 'objective-c', '-fobjc-arc'];
 ${includeBindingsAsset ? "const bindingsAssetName = '${_bindingsAssetName(spec)}';" : ''}
-${includeFlutterViews ? "const flutterViewsAssetName = '${spec.packageName}_flutter_views.dylib';" : ''}
 
 final logger = Logger('')
   ..level = Level.INFO
@@ -639,8 +608,7 @@ void main(List<String> args) async {
       _toTargetTriple(codeConfig),
       _minOsVersion(codeConfig),
     ];
-$bindingsBlock
-$flutterViewsBlock
+${bindingsBlock.trimRight()}
   });
 }
 
@@ -769,12 +737,20 @@ class _FrameworkSpec {
 }
 
 class _SharedImports {
-  const _SharedImports({required this.typesByUsr, required this.libraries});
+  const _SharedImports({
+    required this.typesByUsr,
+    required this.libraries,
+    required this.reservedNames,
+  });
 
-  const _SharedImports.empty() : typesByUsr = const {}, libraries = const [];
+  const _SharedImports.empty()
+    : typesByUsr = const {},
+      libraries = const [],
+      reservedNames = const {};
 
   final Map<String, ImportedType> typesByUsr;
   final List<LibraryImport> libraries;
+  final Set<String> reservedNames;
 }
 
 enum _AppleSdk { macOS, iOSSimulator }

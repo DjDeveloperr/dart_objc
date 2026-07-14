@@ -3573,14 +3573,14 @@ external ffi.Pointer<objc.ObjCObjectImpl> _1wf8t1k_protocolTrampoline_skjqxk(
 );
 
 @ffi.Native<
-  instancetype Function(
+  instancetype$1 Function(
     ffi.Pointer<objc.ObjCObjectImpl>,
     ffi.Pointer<ffi.Void>,
     ffi.UnsignedLong,
     ffi.Pointer<objc.ObjCObjectImpl>,
   )
 >()
-external instancetype _1wf8t1k_protocolTrampoline_sov0i8(
+external instancetype$1 _1wf8t1k_protocolTrampoline_sov0i8(
   ffi.Pointer<objc.ObjCObjectImpl> target,
   ffi.Pointer<ffi.Void> sel,
   int arg1,
@@ -9589,7 +9589,7 @@ interface class CAMediaTiming$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -12813,7 +12813,7 @@ extension Deprecated on NSCursor {
   }
 }
 
-extension Deprecated$1 on NSImage {
+extension Deprecated$1 on NSImage$1 {
   NSImageRep bestRepresentationForDevice(objc.NSDictionary deviceDescription) {
     objc.checkOsVersionInternal(
       'NSImage.bestRepresentationForDevice:',
@@ -20083,9 +20083,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityAttributedStringForRange_ =
       objc.ObjCProtocolMethod<objc.NSAttributedString? Function(objc.NSRange)>(
@@ -20159,9 +20160,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityCellForColumn_row_ =
       objc.ObjCProtocolMethod<objc.ObjCObject? Function(int, int)>(
@@ -20262,9 +20264,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityCloseButton
@@ -20287,9 +20290,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityColumnCount
@@ -20467,9 +20471,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityCustomActions
@@ -20544,9 +20549,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityDefaultButton
@@ -20569,9 +20575,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityDisclosedByRow
@@ -20594,9 +20601,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityDisclosedRows
@@ -20619,9 +20627,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityDisclosureLevel
@@ -20695,9 +20704,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityFilename
@@ -20746,9 +20756,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityFrame
@@ -20821,9 +20832,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityGrowArea
@@ -20846,9 +20858,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityHandles
@@ -20897,9 +20910,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityHelp
@@ -20948,9 +20962,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityHorizontalUnitDescription
@@ -21051,9 +21066,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityIndex
@@ -21303,9 +21319,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityMarkerGroupUIElement
@@ -21328,9 +21345,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityMarkerTypeDescription
@@ -21405,9 +21423,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityMaxValue
@@ -21430,9 +21449,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityMenuBar
@@ -21455,9 +21475,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityMinValue
@@ -21480,9 +21501,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityMinimizeButton
@@ -21505,9 +21527,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityNextContents
@@ -21607,9 +21630,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityParent
@@ -21632,9 +21656,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformCancel =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -21655,7 +21680,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21678,7 +21703,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21701,7 +21726,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21724,7 +21749,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21747,7 +21772,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21770,7 +21795,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21793,7 +21818,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21816,7 +21841,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21839,7 +21864,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21862,7 +21887,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21885,7 +21910,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -21962,9 +21987,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityRTFForRange_ =
       objc.ObjCProtocolMethod<objc.NSData? Function(objc.NSRange)>(
@@ -22317,9 +22343,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilitySearchMenu
@@ -22342,9 +22369,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilitySelectedCells
@@ -22653,9 +22681,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilitySortDirection
@@ -22858,9 +22887,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityToolbarButton
@@ -22883,9 +22913,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityTopLevelUIElement
@@ -22908,9 +22939,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityURL
@@ -22933,7 +22965,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.NSURL? Function() func) => ObjCBlock_NSURL_ffiVoid.fromFunction(
+        (objc.NSURL? Function() func) => ObjCBlock_NSURL_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23036,9 +23068,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityValueDescription
@@ -23087,9 +23120,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityVerticalUnitDescription
@@ -23294,9 +23328,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityWindow
@@ -23319,9 +23354,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// accessibilityWindows
@@ -23370,9 +23406,10 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// isAccessibilityAlternateUIVisible
@@ -23395,7 +23432,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23420,7 +23457,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23444,7 +23481,7 @@ interface class NSAccessibility$1$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -23469,7 +23506,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23494,7 +23531,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23519,7 +23556,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23544,7 +23581,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23569,7 +23606,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23593,7 +23630,7 @@ interface class NSAccessibility$1$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -23617,7 +23654,7 @@ interface class NSAccessibility$1$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -23642,7 +23679,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23666,7 +23703,7 @@ interface class NSAccessibility$1$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -23691,7 +23728,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23716,7 +23753,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23741,7 +23778,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -23766,7 +23803,7 @@ interface class NSAccessibility$1$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -26685,7 +26722,7 @@ interface class NSAccessibility$1$Builder {
           isInstanceMethod: true,
         ),
         (void Function(objc.NSURL?) func) =>
-            ObjCBlock_ffiVoid_ffiVoid_NSURL.fromFunction(
+            ObjCBlock_ffiVoid_ffiVoid_NSURL$1.fromFunction(
               (ffi.Pointer<ffi.Void> _, objc.NSURL? arg1) => func(arg1),
             ),
       );
@@ -27477,9 +27514,10 @@ interface class NSAccessibilityButton$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformPress =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -27500,7 +27538,7 @@ interface class NSAccessibilityButton$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -27523,7 +27561,7 @@ interface class NSAccessibilityButton$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -27857,9 +27895,10 @@ interface class NSAccessibilityCheckBox$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformPress =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -27880,7 +27919,7 @@ interface class NSAccessibilityCheckBox$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -27927,7 +27966,7 @@ interface class NSAccessibilityCheckBox$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -28371,9 +28410,10 @@ interface class NSAccessibilityContainsTransientUI$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformShowAlternateUI =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -28394,7 +28434,7 @@ interface class NSAccessibilityContainsTransientUI$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -28417,7 +28457,7 @@ interface class NSAccessibilityContainsTransientUI$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -28440,7 +28480,7 @@ interface class NSAccessibilityContainsTransientUI$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -28463,7 +28503,7 @@ interface class NSAccessibilityContainsTransientUI$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -29828,9 +29868,10 @@ interface class NSAccessibilityElement$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final isAccessibilityFocused =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -29851,7 +29892,7 @@ interface class NSAccessibilityElement$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -30478,9 +30519,10 @@ interface class NSAccessibilityGroup$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final isAccessibilityFocused =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -30501,7 +30543,7 @@ interface class NSAccessibilityGroup$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -30797,9 +30839,10 @@ interface class NSAccessibilityImage$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final isAccessibilityFocused =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -30820,7 +30863,7 @@ interface class NSAccessibilityImage$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -31112,7 +31155,7 @@ interface class NSAccessibilityLayoutArea$Builder {
 
   /// accessibilityFocusedUIElement
   static final accessibilityFocusedUIElement =
-      objc.ObjCProtocolMethod<Dartinstancetype Function()>(
+      objc.ObjCProtocolMethod<Dartinstancetype$1 Function()>(
         _protocol_NSAccessibilityLayoutArea,
         _sel_accessibilityFocusedUIElement,
         ffi.Native.addressOf<
@@ -31130,7 +31173,7 @@ interface class NSAccessibilityLayoutArea$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (Dartinstancetype Function() func) =>
+        (Dartinstancetype$1 Function() func) =>
             ObjCBlock_objcObjCObjectImpl_ffiVoid.fromFunction(
               (ffi.Pointer<ffi.Void> _) => func(),
             ),
@@ -31225,9 +31268,10 @@ interface class NSAccessibilityLayoutArea$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilitySelectedChildren =
       objc.ObjCProtocolMethod<objc.NSArray? Function()>(
@@ -31272,7 +31316,7 @@ interface class NSAccessibilityLayoutArea$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -31559,9 +31603,10 @@ interface class NSAccessibilityLayoutItem$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final isAccessibilityFocused =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -31582,7 +31627,7 @@ interface class NSAccessibilityLayoutItem$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -32340,9 +32385,10 @@ interface class NSAccessibilityList$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityRowHeaderUIElements =
       objc.ObjCProtocolMethod<objc.NSArray? Function()>(
@@ -32555,7 +32601,7 @@ interface class NSAccessibilityList$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -33132,9 +33178,10 @@ interface class NSAccessibilityNavigableStaticText$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityRangeForLine_ =
       objc.ObjCProtocolMethod<objc.NSRange Function(int)>(
@@ -33253,7 +33300,7 @@ interface class NSAccessibilityNavigableStaticText$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -34011,9 +34058,10 @@ interface class NSAccessibilityOutline$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityRowHeaderUIElements =
       objc.ObjCProtocolMethod<objc.NSArray? Function()>(
@@ -34226,7 +34274,7 @@ interface class NSAccessibilityOutline$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -34532,9 +34580,10 @@ interface class NSAccessibilityProgressIndicator$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityValue =
       objc.ObjCProtocolMethod<objc.NSNumber? Function()>(
@@ -34579,7 +34628,7 @@ interface class NSAccessibilityProgressIndicator$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -34914,9 +34963,10 @@ interface class NSAccessibilityRadioButton$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformPress =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -34937,7 +34987,7 @@ interface class NSAccessibilityRadioButton$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -34984,7 +35034,7 @@ interface class NSAccessibilityRadioButton$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -35323,9 +35373,10 @@ interface class NSAccessibilityRow$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final isAccessibilityFocused =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -35346,7 +35397,7 @@ interface class NSAccessibilityRow$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -35721,9 +35772,10 @@ interface class NSAccessibilitySlider$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformDecrement =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -35744,7 +35796,7 @@ interface class NSAccessibilitySlider$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -35767,7 +35819,7 @@ interface class NSAccessibilitySlider$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -35790,9 +35842,10 @@ interface class NSAccessibilitySlider$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final isAccessibilityFocused =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -35813,7 +35866,7 @@ interface class NSAccessibilitySlider$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -36219,9 +36272,10 @@ interface class NSAccessibilityStaticText$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityValue =
       objc.ObjCProtocolMethod<objc.NSString? Function()>(
@@ -36290,7 +36344,7 @@ interface class NSAccessibilityStaticText$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -36651,9 +36705,10 @@ interface class NSAccessibilityStepper$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformDecrement =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -36674,7 +36729,7 @@ interface class NSAccessibilityStepper$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -36697,7 +36752,7 @@ interface class NSAccessibilityStepper$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -36720,9 +36775,10 @@ interface class NSAccessibilityStepper$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final isAccessibilityFocused =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -36743,7 +36799,7 @@ interface class NSAccessibilityStepper$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -37132,9 +37188,10 @@ interface class NSAccessibilitySwitch$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityPerformDecrement =
       objc.ObjCProtocolMethod<bool Function()>(
@@ -37155,7 +37212,7 @@ interface class NSAccessibilitySwitch$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -37178,7 +37235,7 @@ interface class NSAccessibilitySwitch$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -37201,7 +37258,7 @@ interface class NSAccessibilitySwitch$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -37248,7 +37305,7 @@ interface class NSAccessibilitySwitch$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -37981,9 +38038,10 @@ interface class NSAccessibilityTable$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
   static final accessibilityRowHeaderUIElements =
       objc.ObjCProtocolMethod<objc.NSArray? Function()>(
@@ -38196,7 +38254,7 @@ interface class NSAccessibilityTable$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -38363,7 +38421,7 @@ extension NSActionCell$Methods on NSActionCell {
     return NSActionCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSActionCell initImageCell(NSImage? image) {
+  NSActionCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSActionCell.initImageCell:',
       iOS: (true, null),
@@ -38736,10 +38794,10 @@ extension NSAlert$Methods on NSAlert {
   }
 
   /// icon
-  NSImage get icon {
+  NSImage$1 get icon {
     objc.checkOsVersionInternal('NSAlert.icon', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_icon);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// informativeText
@@ -38831,7 +38889,7 @@ extension NSAlert$Methods on NSAlert {
   }
 
   /// setIcon:
-  set icon(NSImage value) {
+  set icon(NSImage$1 value) {
     objc.checkOsVersionInternal('NSAlert.setIcon:', iOS: (true, null));
     _objc_msgSend_xtuoz7(object$.ref.pointer, _sel_setIcon_, value.ref.pointer);
   }
@@ -39628,29 +39686,30 @@ interface class NSAnimatablePropertyContainer$Builder {
               (ffi.Pointer<ffi.Void> _) => func(),
             ),
       );
-  static final animator = objc.ObjCProtocolMethod<Dartinstancetype Function()>(
-    _protocol_NSAnimatablePropertyContainer,
-    _sel_animator,
-    ffi.Native.addressOf<
-          ffi.NativeFunction<
-            ffi.Pointer<objc.ObjCObjectImpl> Function(
-              ffi.Pointer<objc.ObjCObjectImpl>,
-              ffi.Pointer<ffi.Void>,
-            )
-          >
-        >(_1wf8t1k_protocolTrampoline_1mbt9g9)
-        .cast(),
-    objc.getProtocolMethodSignature(
-      _protocol_NSAnimatablePropertyContainer,
-      _sel_animator,
-      isRequired: true,
-      isInstanceMethod: true,
-    ),
-    (Dartinstancetype Function() func) =>
-        ObjCBlock_objcObjCObjectImpl_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
+  static final animator =
+      objc.ObjCProtocolMethod<Dartinstancetype$1 Function()>(
+        _protocol_NSAnimatablePropertyContainer,
+        _sel_animator,
+        ffi.Native.addressOf<
+              ffi.NativeFunction<
+                ffi.Pointer<objc.ObjCObjectImpl> Function(
+                  ffi.Pointer<objc.ObjCObjectImpl>,
+                  ffi.Pointer<ffi.Void>,
+                )
+              >
+            >(_1wf8t1k_protocolTrampoline_1mbt9g9)
+            .cast(),
+        objc.getProtocolMethodSignature(
+          _protocol_NSAnimatablePropertyContainer,
+          _sel_animator,
+          isRequired: true,
+          isInstanceMethod: true,
         ),
-  );
+        (Dartinstancetype$1 Function() func) =>
+            ObjCBlock_objcObjCObjectImpl_ffiVoid.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
+      );
 
   /// setAnimations:
   static final setAnimations_ =
@@ -40202,7 +40261,7 @@ extension NSAnimationContext$Methods on NSAnimationContext {
     );
     return $ret.address == 0
         ? null
-        : ObjCBlock_ffiVoid.fromPointer($ret, retain: true, release: true);
+        : ObjCBlock_ffiVoid$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// duration
@@ -41432,7 +41491,7 @@ extension NSApplication$Methods on NSApplication {
   }
 
   /// applicationIconImage
-  NSImage get applicationIconImage {
+  NSImage$1 get applicationIconImage {
     objc.checkOsVersionInternal(
       'NSApplication.applicationIconImage',
       iOS: (true, null),
@@ -41441,7 +41500,7 @@ extension NSApplication$Methods on NSApplication {
       object$.ref.pointer,
       _sel_applicationIconImage,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// applicationShouldSuppressHighDynamicRangeContent
@@ -41882,7 +41941,7 @@ extension NSApplication$Methods on NSApplication {
   }
 
   /// setApplicationIconImage:
-  set applicationIconImage(NSImage value) {
+  set applicationIconImage(NSImage$1 value) {
     objc.checkOsVersionInternal(
       'NSApplication.setApplicationIconImage:',
       iOS: (true, null),
@@ -50301,7 +50360,7 @@ extension NSBrowser$Methods on NSBrowser {
     return _objc_msgSend_1ovaulg(object$.ref.pointer, _sel_doubleAction);
   }
 
-  NSImage? draggingImageForRowsWithIndexes(
+  NSImage$1? draggingImageForRowsWithIndexes(
     objc.NSIndexSet rowIndexes, {
     required int inColumn,
     required NSEvent withEvent,
@@ -50322,7 +50381,7 @@ extension NSBrowser$Methods on NSBrowser {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   void drawTitleOfColumn(int column, {required objc.CGRect inRect}) {
@@ -51483,12 +51542,12 @@ extension type NSBrowserCell._(objc.ObjCObject object$)
   }
 
   /// branchImage
-  static NSImage? getBranchImage() {
+  static NSImage$1? getBranchImage() {
     objc.checkOsVersionInternal('NSBrowserCell.branchImage', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(_class_NSBrowserCell, _sel_branchImage);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -51501,7 +51560,7 @@ extension type NSBrowserCell._(objc.ObjCObject object$)
   }
 
   /// highlightedBranchImage
-  static NSImage? getHighlightedBranchImage() {
+  static NSImage$1? getHighlightedBranchImage() {
     objc.checkOsVersionInternal(
       'NSBrowserCell.highlightedBranchImage',
       iOS: (true, null),
@@ -51512,7 +51571,7 @@ extension type NSBrowserCell._(objc.ObjCObject object$)
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   static NSBrowserCell new$() {
@@ -51538,7 +51597,7 @@ extension type NSBrowserCell._(objc.ObjCObject object$)
 
 extension NSBrowserCell$Methods on NSBrowserCell {
   /// alternateImage
-  NSImage? get alternateImage {
+  NSImage$1? get alternateImage {
     objc.checkOsVersionInternal(
       'NSBrowserCell.alternateImage',
       iOS: (true, null),
@@ -51549,7 +51608,7 @@ extension NSBrowserCell$Methods on NSBrowserCell {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSColor? highlightColorInView(NSView controlView) {
@@ -51568,12 +51627,12 @@ extension NSBrowserCell$Methods on NSBrowserCell {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSBrowserCell.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSBrowserCell init() {
@@ -51589,7 +51648,7 @@ extension NSBrowserCell$Methods on NSBrowserCell {
     return NSBrowserCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSBrowserCell initImageCell(NSImage? image) {
+  NSBrowserCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSBrowserCell.initImageCell:',
       iOS: (true, null),
@@ -51651,7 +51710,7 @@ extension NSBrowserCell$Methods on NSBrowserCell {
   }
 
   /// setAlternateImage:
-  set alternateImage(NSImage? value) {
+  set alternateImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSBrowserCell.setAlternateImage:',
       iOS: (true, null),
@@ -51664,7 +51723,7 @@ extension NSBrowserCell$Methods on NSBrowserCell {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal('NSBrowserCell.setImage:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -51872,7 +51931,7 @@ extension NSBrowserDelegate$Methods on NSBrowserDelegate {
     );
   }
 
-  NSImage? browserDraggingImageForRowsWithIndexesInColumnWithEventOffset(
+  NSImage$1? browserDraggingImageForRowsWithIndexesInColumnWithEventOffset(
     NSBrowser browser, {
     required objc.NSIndexSet draggingImageForRowsWithIndexes,
     required int inColumn,
@@ -51904,7 +51963,7 @@ extension NSBrowserDelegate$Methods on NSBrowserDelegate {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSViewController? browserHeaderViewControllerForItem(
@@ -52720,7 +52779,7 @@ abstract interface class NSBrowserDelegateOptional {
     required int didChangeLastColumn,
     required int toColumn,
   });
-  NSImage? browserDraggingImageForRowsWithIndexesInColumnWithEventOffset(
+  NSImage$1? browserDraggingImageForRowsWithIndexesInColumnWithEventOffset(
     NSBrowser browser, {
     required objc.NSIndexSet draggingImageForRowsWithIndexes,
     required int inColumn,
@@ -53603,7 +53662,7 @@ interface class NSBrowserDelegate$Builder {
       );
   static final browser_draggingImageForRowsWithIndexes_inColumn_withEvent_offset_ =
       objc.ObjCProtocolMethod<
-        NSImage? Function(
+        NSImage$1? Function(
           NSBrowser,
           objc.NSIndexSet,
           int,
@@ -53634,7 +53693,7 @@ interface class NSBrowserDelegate$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage? Function(
+          NSImage$1? Function(
             NSBrowser,
             objc.NSIndexSet,
             int,
@@ -54589,7 +54648,7 @@ extension NSBundleImageExtension on objc.NSBundle {
         : objc.NSURL.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage? imageForResource(objc.NSString name) {
+  NSImage$1? imageForResource(objc.NSString name) {
     objc.checkOsVersionInternal(
       'NSBundle.imageForResource:',
       iOS: (true, null),
@@ -54602,7 +54661,7 @@ extension NSBundleImageExtension on objc.NSBundle {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   objc.NSString? pathForImageResource(objc.NSString name) {
@@ -54685,7 +54744,7 @@ extension type NSButton._(objc.ObjCObject object$)
   }
 
   static NSButton buttonWithImage(
-    NSImage image, {
+    NSImage$1 image, {
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -54706,7 +54765,7 @@ extension type NSButton._(objc.ObjCObject object$)
 
   static NSButton buttonWithTitleImageTargetAction(
     objc.NSString title, {
-    required NSImage image,
+    required NSImage$1 image,
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -54937,7 +54996,7 @@ extension NSButton$Methods on NSButton {
   }
 
   /// alternateImage
-  NSImage? get alternateImage {
+  NSImage$1? get alternateImage {
     objc.checkOsVersionInternal('NSButton.alternateImage', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(
       object$.ref.pointer,
@@ -54945,7 +55004,7 @@ extension NSButton$Methods on NSButton {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// alternateTitle
@@ -55083,12 +55142,12 @@ extension NSButton$Methods on NSButton {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSButton.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// imageHugsTitle
@@ -55342,7 +55401,7 @@ extension NSButton$Methods on NSButton {
   }
 
   /// setAlternateImage:
-  set alternateImage(NSImage? value) {
+  set alternateImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSButton.setAlternateImage:',
       iOS: (true, null),
@@ -55471,7 +55530,7 @@ extension NSButton$Methods on NSButton {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal('NSButton.setImage:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -55814,7 +55873,7 @@ extension type NSButtonCell._(objc.ObjCObject object$)
 
 extension NSButtonCell$Methods on NSButtonCell {
   /// alternateImage
-  NSImage? get alternateImage {
+  NSImage$1? get alternateImage {
     objc.checkOsVersionInternal(
       'NSButtonCell.alternateImage',
       iOS: (true, null),
@@ -55825,7 +55884,7 @@ extension NSButtonCell$Methods on NSButtonCell {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// alternateTitle
@@ -55911,7 +55970,7 @@ extension NSButtonCell$Methods on NSButtonCell {
   }
 
   void drawImage(
-    NSImage image, {
+    NSImage$1 image, {
     required objc.CGRect withFrame,
     required NSView inView,
   }) {
@@ -56029,7 +56088,7 @@ extension NSButtonCell$Methods on NSButtonCell {
     return NSButtonCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSButtonCell initImageCell(NSImage? image) {
+  NSButtonCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSButtonCell.initImageCell:',
       iOS: (true, null),
@@ -56139,7 +56198,7 @@ extension NSButtonCell$Methods on NSButtonCell {
   }
 
   /// setAlternateImage:
-  set alternateImage(NSImage? value) {
+  set alternateImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSButtonCell.setAlternateImage:',
       iOS: (true, null),
@@ -56464,7 +56523,7 @@ extension type NSButtonTouchBarItem._(objc.ObjCObject object$)
 
   static NSButtonTouchBarItem buttonTouchBarItemWithIdentifierImageTargetAction(
     objc.NSString identifier, {
-    required NSImage image,
+    required NSImage$1 image,
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -56487,7 +56546,7 @@ extension type NSButtonTouchBarItem._(objc.ObjCObject object$)
   static NSButtonTouchBarItem buttonTouchBarItemWithIdentifier(
     objc.NSString identifier, {
     required objc.NSString title,
-    required NSImage image,
+    required NSImage$1 image,
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -56578,7 +56637,7 @@ extension NSButtonTouchBarItem$Methods on NSButtonTouchBarItem {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal(
       'NSButtonTouchBarItem.image',
       iOS: (false, (13, 0, 0)),
@@ -56587,7 +56646,7 @@ extension NSButtonTouchBarItem$Methods on NSButtonTouchBarItem {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSButtonTouchBarItem init() {
@@ -56690,7 +56749,7 @@ extension NSButtonTouchBarItem$Methods on NSButtonTouchBarItem {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSButtonTouchBarItem.setImage:',
       iOS: (false, (13, 0, 0)),
@@ -58945,12 +59004,12 @@ extension NSCell$Methods on NSCell {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSCell.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   objc.CGRect imageRectForBounds(objc.CGRect rect) {
@@ -58991,7 +59050,7 @@ extension NSCell$Methods on NSCell {
     return NSCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSCell initImageCell(NSImage? image) {
+  NSCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal('NSCell.initImageCell:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       object$.ref.retainAndReturnPointer(),
@@ -59418,7 +59477,7 @@ extension NSCell$Methods on NSCell {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal('NSCell.setImage:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -61286,7 +61345,7 @@ extension NSCloudSharingServiceDelegate$Methods
         : NSWindow.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage? sharingServiceTransitionImageForShareItemContentRect(
+  NSImage$1? sharingServiceTransitionImageForShareItemContentRect(
     NSSharingService sharingService, {
     required objc.ObjCObject transitionImageForShareItem,
     required ffi.Pointer<objc.CGRect> contentRect,
@@ -61313,7 +61372,7 @@ extension NSCloudSharingServiceDelegate$Methods
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   void sharingServiceWillShareItems(
@@ -61385,7 +61444,7 @@ abstract interface class NSCloudSharingServiceDelegateOptional {
     required objc.NSArray sourceWindowForShareItems,
     required ffi.Pointer<ffi.Long> sharingContentScope,
   });
-  NSImage? sharingServiceTransitionImageForShareItemContentRect(
+  NSImage$1? sharingServiceTransitionImageForShareItemContentRect(
     NSSharingService sharingService, {
     required objc.ObjCObject transitionImageForShareItem,
     required ffi.Pointer<objc.CGRect> contentRect,
@@ -61943,7 +62002,7 @@ interface class NSCloudSharingServiceDelegate$Builder {
       );
   static final sharingService_transitionImageForShareItem_contentRect_ =
       objc.ObjCProtocolMethod<
-        NSImage? Function(
+        NSImage$1? Function(
           NSSharingService,
           objc.ObjCObject,
           ffi.Pointer<objc.CGRect>,
@@ -61970,7 +62029,7 @@ interface class NSCloudSharingServiceDelegate$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage? Function(
+          NSImage$1? Function(
             NSSharingService,
             objc.ObjCObject,
             ffi.Pointer<objc.CGRect>,
@@ -65774,7 +65833,7 @@ interface class NSCollectionLayoutVisibleItem$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -66286,7 +66345,7 @@ extension NSCollectionView$Methods on NSCollectionView {
     );
   }
 
-  NSImage draggingImageForItemsAtIndexPaths(
+  NSImage$1 draggingImageForItemsAtIndexPaths(
     objc.NSSet indexPaths, {
     required NSEvent withEvent,
     required ffi.Pointer<objc.CGPoint> offset,
@@ -66303,10 +66362,10 @@ extension NSCollectionView$Methods on NSCollectionView {
       withEvent.ref.pointer,
       offset,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage draggingImageForItemsAtIndexes(
+  NSImage$1 draggingImageForItemsAtIndexes(
     objc.NSIndexSet indexes, {
     required NSEvent withEvent,
     required ffi.Pointer<objc.CGPoint> offset,
@@ -66323,7 +66382,7 @@ extension NSCollectionView$Methods on NSCollectionView {
       withEvent.ref.pointer,
       offset,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   objc.CGRect frameForItemAtIndex(int index) {
@@ -68313,7 +68372,7 @@ extension NSCollectionViewDelegate$Methods on NSCollectionViewDelegate {
     );
   }
 
-  NSImage collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSSet draggingImageForItemsAtIndexPaths,
     required NSEvent withEvent,
@@ -68341,10 +68400,10 @@ extension NSCollectionViewDelegate$Methods on NSCollectionViewDelegate {
       withEvent.ref.pointer,
       offset,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSIndexSet draggingImageForItemsAtIndexes,
     required NSEvent withEvent,
@@ -68372,7 +68431,7 @@ extension NSCollectionViewDelegate$Methods on NSCollectionViewDelegate {
       withEvent.ref.pointer,
       offset,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   void collectionViewDraggingSessionEndedAtPointDragOperation(
@@ -68946,13 +69005,13 @@ abstract interface class NSCollectionViewDelegateOptional {
     NSCollectionView collectionView, {
     required objc.NSSet didSelectItemsAtIndexPaths,
   });
-  NSImage collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSSet draggingImageForItemsAtIndexPaths,
     required NSEvent withEvent,
     required ffi.Pointer<objc.CGPoint> offset,
   });
-  NSImage collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSIndexSet draggingImageForItemsAtIndexes,
     required NSEvent withEvent,
@@ -70084,7 +70143,7 @@ interface class NSCollectionViewDelegate$Builder {
       );
   static final collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset_ =
       objc.ObjCProtocolMethod<
-        NSImage Function(
+        NSImage$1 Function(
           NSCollectionView,
           objc.NSSet,
           NSEvent,
@@ -70113,7 +70172,7 @@ interface class NSCollectionViewDelegate$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage Function(
+          NSImage$1 Function(
             NSCollectionView,
             objc.NSSet,
             NSEvent,
@@ -70133,7 +70192,7 @@ interface class NSCollectionViewDelegate$Builder {
       );
   static final collectionView_draggingImageForItemsAtIndexes_withEvent_offset_ =
       objc.ObjCProtocolMethod<
-        NSImage Function(
+        NSImage$1 Function(
           NSCollectionView,
           objc.NSIndexSet,
           NSEvent,
@@ -70162,7 +70221,7 @@ interface class NSCollectionViewDelegate$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage Function(
+          NSImage$1 Function(
             NSCollectionView,
             objc.NSIndexSet,
             NSEvent,
@@ -71191,7 +71250,7 @@ extension NSCollectionViewDelegateFlowLayout$Methods
     );
   }
 
-  NSImage collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSSet draggingImageForItemsAtIndexPaths,
     required NSEvent withEvent,
@@ -71219,10 +71278,10 @@ extension NSCollectionViewDelegateFlowLayout$Methods
       withEvent.ref.pointer,
       offset,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSIndexSet draggingImageForItemsAtIndexes,
     required NSEvent withEvent,
@@ -71250,7 +71309,7 @@ extension NSCollectionViewDelegateFlowLayout$Methods
       withEvent.ref.pointer,
       offset,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   void collectionViewDraggingSessionEndedAtPointDragOperation(
@@ -72062,13 +72121,13 @@ abstract interface class NSCollectionViewDelegateFlowLayoutOptional {
     NSCollectionView collectionView, {
     required objc.NSSet didSelectItemsAtIndexPaths,
   });
-  NSImage collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexPathsWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSSet draggingImageForItemsAtIndexPaths,
     required NSEvent withEvent,
     required ffi.Pointer<objc.CGPoint> offset,
   });
-  NSImage collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
+  NSImage$1 collectionViewDraggingImageForItemsAtIndexesWithEventOffset(
     NSCollectionView collectionView, {
     required objc.NSIndexSet draggingImageForItemsAtIndexes,
     required NSEvent withEvent,
@@ -73357,7 +73416,7 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
       );
   static final collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset_ =
       objc.ObjCProtocolMethod<
-        NSImage Function(
+        NSImage$1 Function(
           NSCollectionView,
           objc.NSSet,
           NSEvent,
@@ -73386,7 +73445,7 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage Function(
+          NSImage$1 Function(
             NSCollectionView,
             objc.NSSet,
             NSEvent,
@@ -73406,7 +73465,7 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
       );
   static final collectionView_draggingImageForItemsAtIndexes_withEvent_offset_ =
       objc.ObjCProtocolMethod<
-        NSImage Function(
+        NSImage$1 Function(
           NSCollectionView,
           objc.NSIndexSet,
           NSEvent,
@@ -73435,7 +73494,7 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage Function(
+          NSImage$1 Function(
             NSCollectionView,
             objc.NSIndexSet,
             NSEvent,
@@ -75120,7 +75179,7 @@ interface class NSCollectionViewElement$Builder {
       isRequired: false,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -77940,7 +77999,7 @@ interface class NSCollectionViewSectionHeaderView$Builder {
       isRequired: false,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -78879,7 +78938,7 @@ extension type NSColor._(objc.ObjCObject object$)
     return NSColor.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSColor colorWithPatternImage(NSImage image) {
+  static NSColor colorWithPatternImage(NSImage$1 image) {
     objc.checkOsVersionInternal(
       'NSColor.colorWithPatternImage:',
       iOS: (true, null),
@@ -80106,10 +80165,10 @@ extension NSColor$Methods on NSColor {
   }
 
   /// patternImage
-  NSImage get patternImage {
+  NSImage$1 get patternImage {
     objc.checkOsVersionInternal('NSColor.patternImage', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_patternImage);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// redComponent
@@ -81316,7 +81375,7 @@ extension NSColorPicker$Methods on NSColorPicker {
   }
 
   void insertNewButtonImage(
-    NSImage newButtonImage, {
+    NSImage$1 newButtonImage, {
     required NSButtonCell in$,
   }) {
     objc.checkOsVersionInternal(
@@ -81356,7 +81415,7 @@ extension NSColorPicker$Methods on NSColorPicker {
   }
 
   /// provideNewButtonImage
-  NSImage get provideNewButtonImage {
+  NSImage$1 get provideNewButtonImage {
     objc.checkOsVersionInternal(
       'NSColorPicker.provideNewButtonImage',
       iOS: (true, null),
@@ -81365,7 +81424,7 @@ extension NSColorPicker$Methods on NSColorPicker {
       object$.ref.pointer,
       _sel_provideNewButtonImage,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   void setMode(NSColorPanelMode mode) {
@@ -81470,7 +81529,7 @@ extension type NSColorPickerTouchBarItem._(objc.ObjCObject object$)
 
   static NSColorPickerTouchBarItem colorPickerWithIdentifierButtonImage(
     objc.NSString identifier, {
-    required NSImage buttonImage,
+    required NSImage$1 buttonImage,
   }) {
     objc.checkOsVersionInternal(
       'NSColorPickerTouchBarItem.colorPickerWithIdentifier:buttonImage:',
@@ -81892,7 +81951,7 @@ extension NSColorPickingCustom$Methods on NSColorPickingCustom {
   }
 
   void insertNewButtonImage(
-    NSImage newButtonImage, {
+    NSImage$1 newButtonImage, {
     required NSButtonCell in$,
   }) {
     objc.checkOsVersionInternal(
@@ -81931,7 +81990,7 @@ extension NSColorPickingCustom$Methods on NSColorPickingCustom {
     return ffi.Struct.create<objc.CGSize>($finalizable);
   }
 
-  NSImage provideNewButtonImage() {
+  NSImage$1 provideNewButtonImage() {
     objc.checkOsVersionInternal(
       'NSColorPickingCustom.provideNewButtonImage',
       iOS: (true, null),
@@ -81940,7 +81999,7 @@ extension NSColorPickingCustom$Methods on NSColorPickingCustom {
       object$.ref.pointer,
       _sel_provideNewButtonImage,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSView provideNewView(bool initialRequest) {
@@ -82012,11 +82071,11 @@ abstract interface class NSColorPickingCustomSpec {
     required NSColorPanel colorPanel,
   });
   void insertNewButtonImage(
-    NSImage newButtonImage, {
+    NSImage$1 newButtonImage, {
     required NSButtonCell in$,
   });
   objc.CGSize minContentSize();
-  NSImage provideNewButtonImage();
+  NSImage$1 provideNewButtonImage();
   NSView provideNewView(bool initialRequest);
   void setColor(NSColor newColor);
   void setMode(NSColorPanelMode mode);
@@ -82083,7 +82142,7 @@ interface class NSColorPickingCustom$Builder {
           implementation.initWithPickerMask(mask, colorPanel: colorPanel),
     );
     NSColorPickingCustom$Builder.insertNewButtonImage_in_.implement(builder, (
-      NSImage newButtonImage,
+      NSImage$1 newButtonImage,
       NSButtonCell in$,
     ) {
       implementation.insertNewButtonImage(newButtonImage, in$: in$);
@@ -82246,12 +82305,12 @@ interface class NSColorPickingCustom$Builder {
             ),
       );
   static final initWithPickerMask_colorPanel_ =
-      objc.ObjCProtocolMethod<Dartinstancetype? Function(int, NSColorPanel)>(
+      objc.ObjCProtocolMethod<Dartinstancetype$1? Function(int, NSColorPanel)>(
         _protocol_NSColorPickingCustom,
         _sel_initWithPickerMask_colorPanel_,
         ffi.Native.addressOf<
               ffi.NativeFunction<
-                instancetype Function(
+                instancetype$1 Function(
                   ffi.Pointer<objc.ObjCObjectImpl>,
                   ffi.Pointer<ffi.Void>,
                   ffi.UnsignedLong,
@@ -82266,14 +82325,14 @@ interface class NSColorPickingCustom$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (Dartinstancetype? Function(int, NSColorPanel) func) =>
+        (Dartinstancetype$1? Function(int, NSColorPanel) func) =>
             ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel.fromFunction(
               (ffi.Pointer<ffi.Void> _, int arg1, NSColorPanel arg2) =>
                   func(arg1, arg2),
             ),
       );
   static final insertNewButtonImage_in_ =
-      objc.ObjCProtocolMethod<void Function(NSImage, NSButtonCell)>(
+      objc.ObjCProtocolMethod<void Function(NSImage$1, NSButtonCell)>(
         _protocol_NSColorPickingCustom,
         _sel_insertNewButtonImage_in_,
         ffi.Native.addressOf<
@@ -82293,9 +82352,9 @@ interface class NSColorPickingCustom$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (void Function(NSImage, NSButtonCell) func) =>
+        (void Function(NSImage$1, NSButtonCell) func) =>
             ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell.fromFunction(
-              (ffi.Pointer<ffi.Void> _, NSImage arg1, NSButtonCell arg2) =>
+              (ffi.Pointer<ffi.Void> _, NSImage$1 arg1, NSButtonCell arg2) =>
                   func(arg1, arg2),
             ),
       );
@@ -82322,7 +82381,7 @@ interface class NSColorPickingCustom$Builder {
     ),
   );
   static final provideNewButtonImage =
-      objc.ObjCProtocolMethod<NSImage Function()>(
+      objc.ObjCProtocolMethod<NSImage$1 Function()>(
         _protocol_NSColorPickingCustom,
         _sel_provideNewButtonImage,
         ffi.Native.addressOf<
@@ -82340,7 +82399,7 @@ interface class NSColorPickingCustom$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (NSImage Function() func) => ObjCBlock_NSImage_ffiVoid$1.fromFunction(
+        (NSImage$1 Function() func) => ObjCBlock_NSImage_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -82565,7 +82624,7 @@ extension NSColorPickingDefault$Methods on NSColorPickingDefault {
   }
 
   void insertNewButtonImage(
-    NSImage newButtonImage, {
+    NSImage$1 newButtonImage, {
     required NSButtonCell in$,
   }) {
     objc.checkOsVersionInternal(
@@ -82604,7 +82663,7 @@ extension NSColorPickingDefault$Methods on NSColorPickingDefault {
     return ffi.Struct.create<objc.CGSize>($finalizable);
   }
 
-  NSImage provideNewButtonImage() {
+  NSImage$1 provideNewButtonImage() {
     objc.checkOsVersionInternal(
       'NSColorPickingDefault.provideNewButtonImage',
       iOS: (true, null),
@@ -82613,7 +82672,7 @@ extension NSColorPickingDefault$Methods on NSColorPickingDefault {
       object$.ref.pointer,
       _sel_provideNewButtonImage,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   void setMode(NSColorPanelMode mode) {
@@ -82647,11 +82706,11 @@ abstract interface class NSColorPickingDefaultSpec {
     required NSColorPanel colorPanel,
   });
   void insertNewButtonImage(
-    NSImage newButtonImage, {
+    NSImage$1 newButtonImage, {
     required NSButtonCell in$,
   });
   objc.CGSize minContentSize();
-  NSImage provideNewButtonImage();
+  NSImage$1 provideNewButtonImage();
   void setMode(NSColorPanelMode mode);
   void viewSizeChanged(objc.ObjCObject? sender);
 }
@@ -82713,7 +82772,7 @@ interface class NSColorPickingDefault$Builder {
           implementation.initWithPickerMask(mask, colorPanel: colorPanel),
     );
     NSColorPickingDefault$Builder.insertNewButtonImage_in_.implement(builder, (
-      NSImage newButtonImage,
+      NSImage$1 newButtonImage,
       NSButtonCell in$,
     ) {
       implementation.insertNewButtonImage(newButtonImage, in$: in$);
@@ -82839,12 +82898,12 @@ interface class NSColorPickingDefault$Builder {
             ),
       );
   static final initWithPickerMask_colorPanel_ =
-      objc.ObjCProtocolMethod<Dartinstancetype? Function(int, NSColorPanel)>(
+      objc.ObjCProtocolMethod<Dartinstancetype$1? Function(int, NSColorPanel)>(
         _protocol_NSColorPickingDefault,
         _sel_initWithPickerMask_colorPanel_,
         ffi.Native.addressOf<
               ffi.NativeFunction<
-                instancetype Function(
+                instancetype$1 Function(
                   ffi.Pointer<objc.ObjCObjectImpl>,
                   ffi.Pointer<ffi.Void>,
                   ffi.UnsignedLong,
@@ -82859,14 +82918,14 @@ interface class NSColorPickingDefault$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (Dartinstancetype? Function(int, NSColorPanel) func) =>
+        (Dartinstancetype$1? Function(int, NSColorPanel) func) =>
             ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel.fromFunction(
               (ffi.Pointer<ffi.Void> _, int arg1, NSColorPanel arg2) =>
                   func(arg1, arg2),
             ),
       );
   static final insertNewButtonImage_in_ =
-      objc.ObjCProtocolMethod<void Function(NSImage, NSButtonCell)>(
+      objc.ObjCProtocolMethod<void Function(NSImage$1, NSButtonCell)>(
         _protocol_NSColorPickingDefault,
         _sel_insertNewButtonImage_in_,
         ffi.Native.addressOf<
@@ -82886,9 +82945,9 @@ interface class NSColorPickingDefault$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (void Function(NSImage, NSButtonCell) func) =>
+        (void Function(NSImage$1, NSButtonCell) func) =>
             ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell.fromFunction(
-              (ffi.Pointer<ffi.Void> _, NSImage arg1, NSButtonCell arg2) =>
+              (ffi.Pointer<ffi.Void> _, NSImage$1 arg1, NSButtonCell arg2) =>
                   func(arg1, arg2),
             ),
       );
@@ -82915,7 +82974,7 @@ interface class NSColorPickingDefault$Builder {
     ),
   );
   static final provideNewButtonImage =
-      objc.ObjCProtocolMethod<NSImage Function()>(
+      objc.ObjCProtocolMethod<NSImage$1 Function()>(
         _protocol_NSColorPickingDefault,
         _sel_provideNewButtonImage,
         ffi.Native.addressOf<
@@ -82933,7 +82992,7 @@ interface class NSColorPickingDefault$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (NSImage Function() func) => ObjCBlock_NSImage_ffiVoid$1.fromFunction(
+        (NSImage$1 Function() func) => ObjCBlock_NSImage_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -83663,7 +83722,7 @@ extension NSColorWell$Methods on NSColorWell {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal(
       'NSColorWell.image',
       iOS: (true, null),
@@ -83672,7 +83731,7 @@ extension NSColorWell$Methods on NSColorWell {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSColorWell init() {
@@ -83811,7 +83870,7 @@ extension NSColorWell$Methods on NSColorWell {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSColorWell.setImage:',
       iOS: (true, null),
@@ -84661,7 +84720,7 @@ extension NSComboBoxCell$Methods on NSComboBoxCell {
     return NSComboBoxCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSComboBoxCell initImageCell(NSImage? image) {
+  NSComboBoxCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSComboBoxCell.initImageCell:',
       iOS: (true, null),
@@ -87083,7 +87142,7 @@ extension type NSComboButton._(objc.ObjCObject object$)
   }
 
   static NSComboButton comboButtonWithImage(
-    NSImage image, {
+    NSImage$1 image, {
     NSMenu? menu,
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
@@ -87105,7 +87164,7 @@ extension type NSComboButton._(objc.ObjCObject object$)
 
   static NSComboButton comboButtonWithTitleImageMenuTargetAction(
     objc.NSString title, {
-    required NSImage image,
+    required NSImage$1 image,
     NSMenu? menu,
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
@@ -87189,12 +87248,12 @@ extension type NSComboButton._(objc.ObjCObject object$)
 
 extension NSComboButton$Methods on NSComboButton {
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSComboButton.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// imageScaling
@@ -87256,7 +87315,7 @@ extension NSComboButton$Methods on NSComboButton {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal('NSComboButton.setImage:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -90563,14 +90622,14 @@ extension NSCursor$Methods on NSCursor {
   }
 
   /// image
-  NSImage get image {
+  NSImage$1 get image {
     objc.checkOsVersionInternal(
       'NSCursor.image',
       iOS: (false, (13, 0, 0)),
       macOS: (false, (10, 0, 0)),
     );
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSCursor init() {
@@ -90601,7 +90660,7 @@ extension NSCursor$Methods on NSCursor {
   }
 
   NSCursor initWithImageForegroundColorHintBackgroundColorHintHotSpot(
-    NSImage newImage, {
+    NSImage$1 newImage, {
     NSColor? foregroundColorHint,
     NSColor? backgroundColorHint,
     required objc.CGPoint hotSpot,
@@ -90623,7 +90682,7 @@ extension NSCursor$Methods on NSCursor {
   }
 
   NSCursor initWithImageHotSpot(
-    NSImage newImage, {
+    NSImage$1 newImage, {
     required objc.CGPoint hotSpot,
   }) {
     objc.checkOsVersionInternal(
@@ -92180,7 +92239,7 @@ extension NSDatePickerCell$Methods on NSDatePickerCell {
     return NSDatePickerCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSDatePickerCell initImageCell(NSImage? image) {
+  NSDatePickerCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSDatePickerCell.initImageCell:',
       iOS: (true, null),
@@ -92712,7 +92771,7 @@ extension NSDefinition on NSView {
   }
 }
 
-extension NSDeprecated on NSResponder {
+extension NSDeprecated$11 on NSResponder {
   bool performMnemonic(objc.NSString string) {
     objc.checkOsVersionInternal(
       'NSResponder.performMnemonic:',
@@ -92727,7 +92786,7 @@ extension NSDeprecated on NSResponder {
   }
 }
 
-extension NSDeprecated$1 on NSScreen {
+extension NSDeprecated$12 on NSScreen {
   double userSpaceScaleFactor() {
     objc.checkOsVersionInternal(
       'NSScreen.userSpaceScaleFactor',
@@ -92743,7 +92802,1080 @@ extension NSDeprecated$1 on NSScreen {
   }
 }
 
-extension NSDeprecated$10 on NSScroller {
+extension NSDeprecated$13 on NSSound {
+  static objc.NSArray soundUnfilteredFileTypes() {
+    objc.checkOsVersionInternal(
+      'NSSound.soundUnfilteredFileTypes',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      _class_NSSound,
+      _sel_soundUnfilteredFileTypes,
+    );
+    return objc.NSArray.fromPointer($ret, retain: true, release: true);
+  }
+
+  static objc.NSArray soundUnfilteredPasteboardTypes() {
+    objc.checkOsVersionInternal(
+      'NSSound.soundUnfilteredPasteboardTypes',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      _class_NSSound,
+      _sel_soundUnfilteredPasteboardTypes,
+    );
+    return objc.NSArray.fromPointer($ret, retain: true, release: true);
+  }
+}
+
+extension NSDeprecated$14 on NSButtonCell {
+  objc.NSString alternateMnemonic() {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.alternateMnemonic',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      object$.ref.pointer,
+      _sel_alternateMnemonic,
+    );
+    return objc.NSString.fromPointer($ret, retain: true, release: true);
+  }
+
+  int alternateMnemonicLocation() {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.alternateMnemonicLocation',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_xw2lbc(
+      object$.ref.pointer,
+      _sel_alternateMnemonicLocation,
+    );
+  }
+
+  /// gradientType
+  NSGradientType get gradientType {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.gradientType',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_tavke(object$.ref.pointer, _sel_gradientType);
+    return NSGradientType.fromValue($ret);
+  }
+
+  /// keyEquivalentFont
+  NSFont? get keyEquivalentFont {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.keyEquivalentFont',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      object$.ref.pointer,
+      _sel_keyEquivalentFont,
+    );
+    return $ret.address == 0
+        ? null
+        : NSFont.fromPointer($ret, retain: true, release: true);
+  }
+
+  void setAlternateMnemonicLocation(int location) {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.setAlternateMnemonicLocation:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1i9r4xy(
+      object$.ref.pointer,
+      _sel_setAlternateMnemonicLocation_,
+      location,
+    );
+  }
+
+  void setAlternateTitleWithMnemonic(objc.NSString stringWithAmpersand) {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.setAlternateTitleWithMnemonic:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setAlternateTitleWithMnemonic_,
+      stringWithAmpersand.ref.pointer,
+    );
+  }
+
+  /// setGradientType:
+  set gradientType(NSGradientType value) {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.setGradientType:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1umii4k(
+      object$.ref.pointer,
+      _sel_setGradientType_,
+      value.value,
+    );
+  }
+
+  /// setKeyEquivalentFont:
+  set keyEquivalentFont(NSFont? value) {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.setKeyEquivalentFont:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setKeyEquivalentFont_,
+      value?.ref.pointer ?? ffi.nullptr,
+    );
+  }
+
+  void setKeyEquivalentFont(objc.NSString fontName, {required double size}) {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.setKeyEquivalentFont:size:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_gp0n3k(
+      object$.ref.pointer,
+      _sel_setKeyEquivalentFont_size_,
+      fontName.ref.pointer,
+      size,
+    );
+  }
+
+  void setTitleWithMnemonic(objc.NSString stringWithAmpersand) {
+    objc.checkOsVersionInternal(
+      'NSButtonCell.setTitleWithMnemonic:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setTitleWithMnemonic_,
+      stringWithAmpersand.ref.pointer,
+    );
+  }
+}
+
+extension NSDeprecated$15 on NSCell {
+  /// controlTint
+  NSControlTint get controlTint {
+    objc.checkOsVersionInternal(
+      'NSCell.controlTint',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_rasxey(object$.ref.pointer, _sel_controlTint);
+    return NSControlTint.fromValue($ret);
+  }
+
+  int entryType() {
+    objc.checkOsVersionInternal(
+      'NSCell.entryType',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_1hz7y9r(object$.ref.pointer, _sel_entryType);
+  }
+
+  bool isEntryAcceptable(objc.NSString string) {
+    objc.checkOsVersionInternal(
+      'NSCell.isEntryAcceptable:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_19nvye5(
+      object$.ref.pointer,
+      _sel_isEntryAcceptable_,
+      string.ref.pointer,
+    );
+  }
+
+  objc.NSString mnemonic() {
+    objc.checkOsVersionInternal(
+      'NSCell.mnemonic',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_mnemonic);
+    return objc.NSString.fromPointer($ret, retain: true, release: true);
+  }
+
+  int mnemonicLocation() {
+    objc.checkOsVersionInternal(
+      'NSCell.mnemonicLocation',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_xw2lbc(object$.ref.pointer, _sel_mnemonicLocation);
+  }
+
+  /// setControlTint:
+  set controlTint(NSControlTint value) {
+    objc.checkOsVersionInternal(
+      'NSCell.setControlTint:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_12si6jk(
+      object$.ref.pointer,
+      _sel_setControlTint_,
+      value.value,
+    );
+  }
+
+  void setEntryType(int type) {
+    objc.checkOsVersionInternal(
+      'NSCell.setEntryType:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_4sp4xj(object$.ref.pointer, _sel_setEntryType_, type);
+  }
+
+  void setFloatingPointFormat(
+    bool autoRange, {
+    required int left,
+    required int right,
+  }) {
+    objc.checkOsVersionInternal(
+      'NSCell.setFloatingPointFormat:left:right:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_wauwgb(
+      object$.ref.pointer,
+      _sel_setFloatingPointFormat_left_right_,
+      autoRange,
+      left,
+      right,
+    );
+  }
+
+  void setMnemonicLocation(int location) {
+    objc.checkOsVersionInternal(
+      'NSCell.setMnemonicLocation:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1i9r4xy(
+      object$.ref.pointer,
+      _sel_setMnemonicLocation_,
+      location,
+    );
+  }
+
+  void setTitleWithMnemonic(objc.NSString stringWithAmpersand) {
+    objc.checkOsVersionInternal(
+      'NSCell.setTitleWithMnemonic:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setTitleWithMnemonic_,
+      stringWithAmpersand.ref.pointer,
+    );
+  }
+}
+
+extension NSDeprecated$16 on NSMenuItem {
+  objc.NSString mnemonic() {
+    objc.checkOsVersionInternal(
+      'NSMenuItem.mnemonic',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_mnemonic);
+    return objc.NSString.fromPointer($ret, retain: true, release: true);
+  }
+
+  int mnemonicLocation() {
+    objc.checkOsVersionInternal(
+      'NSMenuItem.mnemonicLocation',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_xw2lbc(object$.ref.pointer, _sel_mnemonicLocation);
+  }
+
+  void setMnemonicLocation(int location) {
+    objc.checkOsVersionInternal(
+      'NSMenuItem.setMnemonicLocation:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1i9r4xy(
+      object$.ref.pointer,
+      _sel_setMnemonicLocation_,
+      location,
+    );
+  }
+
+  void setTitleWithMnemonic(objc.NSString stringWithAmpersand) {
+    objc.checkOsVersionInternal(
+      'NSMenuItem.setTitleWithMnemonic:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setTitleWithMnemonic_,
+      stringWithAmpersand.ref.pointer,
+    );
+  }
+}
+
+extension NSDeprecated$17 on NSToolbar {
+  /// centeredItemIdentifier
+  objc.NSString? get centeredItemIdentifier {
+    objc.checkOsVersionInternal(
+      'NSToolbar.centeredItemIdentifier',
+      iOS: (false, (13, 0, 0)),
+      macOS: (false, (10, 14, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      object$.ref.pointer,
+      _sel_centeredItemIdentifier,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.NSString.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// configurationDictionary
+  objc.NSDictionary get configurationDictionary {
+    objc.checkOsVersionInternal(
+      'NSToolbar.configurationDictionary',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      object$.ref.pointer,
+      _sel_configurationDictionary,
+    );
+    return objc.NSDictionary.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// fullScreenAccessoryView
+  NSView? get fullScreenAccessoryView {
+    objc.checkOsVersionInternal(
+      'NSToolbar.fullScreenAccessoryView',
+      iOS: (true, null),
+      macOS: (false, (10, 7, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      object$.ref.pointer,
+      _sel_fullScreenAccessoryView,
+    );
+    return $ret.address == 0
+        ? null
+        : NSView.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// fullScreenAccessoryViewMaxHeight
+  double get fullScreenAccessoryViewMaxHeight {
+    objc.checkOsVersionInternal(
+      'NSToolbar.fullScreenAccessoryViewMaxHeight',
+      iOS: (true, null),
+      macOS: (false, (10, 7, 0)),
+    );
+    return objc.useMsgSendVariants
+        ? _objc_msgSend_1ukqyt8Fpret(
+            object$.ref.pointer,
+            _sel_fullScreenAccessoryViewMaxHeight,
+          )
+        : _objc_msgSend_1ukqyt8(
+            object$.ref.pointer,
+            _sel_fullScreenAccessoryViewMaxHeight,
+          );
+  }
+
+  /// fullScreenAccessoryViewMinHeight
+  double get fullScreenAccessoryViewMinHeight {
+    objc.checkOsVersionInternal(
+      'NSToolbar.fullScreenAccessoryViewMinHeight',
+      iOS: (true, null),
+      macOS: (false, (10, 7, 0)),
+    );
+    return objc.useMsgSendVariants
+        ? _objc_msgSend_1ukqyt8Fpret(
+            object$.ref.pointer,
+            _sel_fullScreenAccessoryViewMinHeight,
+          )
+        : _objc_msgSend_1ukqyt8(
+            object$.ref.pointer,
+            _sel_fullScreenAccessoryViewMinHeight,
+          );
+  }
+
+  /// setCenteredItemIdentifier:
+  set centeredItemIdentifier(objc.NSString? value) {
+    objc.checkOsVersionInternal(
+      'NSToolbar.setCenteredItemIdentifier:',
+      iOS: (false, (13, 0, 0)),
+      macOS: (false, (10, 14, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setCenteredItemIdentifier_,
+      value?.ref.pointer ?? ffi.nullptr,
+    );
+  }
+
+  void setConfigurationFromDictionary(objc.NSDictionary configDict) {
+    objc.checkOsVersionInternal(
+      'NSToolbar.setConfigurationFromDictionary:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setConfigurationFromDictionary_,
+      configDict.ref.pointer,
+    );
+  }
+
+  /// setFullScreenAccessoryView:
+  set fullScreenAccessoryView(NSView? value) {
+    objc.checkOsVersionInternal(
+      'NSToolbar.setFullScreenAccessoryView:',
+      iOS: (true, null),
+      macOS: (false, (10, 7, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setFullScreenAccessoryView_,
+      value?.ref.pointer ?? ffi.nullptr,
+    );
+  }
+
+  /// setFullScreenAccessoryViewMaxHeight:
+  set fullScreenAccessoryViewMaxHeight(double value) {
+    objc.checkOsVersionInternal(
+      'NSToolbar.setFullScreenAccessoryViewMaxHeight:',
+      iOS: (true, null),
+      macOS: (false, (10, 7, 0)),
+    );
+    _objc_msgSend_hwm8nu(
+      object$.ref.pointer,
+      _sel_setFullScreenAccessoryViewMaxHeight_,
+      value,
+    );
+  }
+
+  /// setFullScreenAccessoryViewMinHeight:
+  set fullScreenAccessoryViewMinHeight(double value) {
+    objc.checkOsVersionInternal(
+      'NSToolbar.setFullScreenAccessoryViewMinHeight:',
+      iOS: (true, null),
+      macOS: (false, (10, 7, 0)),
+    );
+    _objc_msgSend_hwm8nu(
+      object$.ref.pointer,
+      _sel_setFullScreenAccessoryViewMinHeight_,
+      value,
+    );
+  }
+
+  /// setShowsBaselineSeparator:
+  set showsBaselineSeparator(bool value) {
+    objc.checkOsVersionInternal(
+      'NSToolbar.setShowsBaselineSeparator:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1s56lr9(
+      object$.ref.pointer,
+      _sel_setShowsBaselineSeparator_,
+      value,
+    );
+  }
+
+  /// setSizeMode:
+  set sizeMode(NSToolbarSizeMode value) {
+    objc.checkOsVersionInternal(
+      'NSToolbar.setSizeMode:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1jr5up3(object$.ref.pointer, _sel_setSizeMode_, value.value);
+  }
+
+  /// showsBaselineSeparator
+  bool get showsBaselineSeparator {
+    objc.checkOsVersionInternal(
+      'NSToolbar.showsBaselineSeparator',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(
+      object$.ref.pointer,
+      _sel_showsBaselineSeparator,
+    );
+  }
+
+  /// sizeMode
+  NSToolbarSizeMode get sizeMode {
+    objc.checkOsVersionInternal(
+      'NSToolbar.sizeMode',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_zmekkz(object$.ref.pointer, _sel_sizeMode);
+    return NSToolbarSizeMode.fromValue($ret);
+  }
+}
+
+extension NSDeprecated$18 on NSControl {
+  void calcSize() {
+    objc.checkOsVersionInternal(
+      'NSControl.calcSize',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_calcSize);
+  }
+
+  /// cell
+  NSCell? get cell {
+    objc.checkOsVersionInternal('NSControl.cell', iOS: (true, null));
+    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_cell);
+    return $ret.address == 0
+        ? null
+        : NSCell.fromPointer($ret, retain: true, release: true);
+  }
+
+  void drawCell(NSCell cell) {
+    objc.checkOsVersionInternal('NSControl.drawCell:', iOS: (true, null));
+    _objc_msgSend_xtuoz7(object$.ref.pointer, _sel_drawCell_, cell.ref.pointer);
+  }
+
+  void drawCellInside(NSCell cell) {
+    objc.checkOsVersionInternal('NSControl.drawCellInside:', iOS: (true, null));
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_drawCellInside_,
+      cell.ref.pointer,
+    );
+  }
+
+  void selectCell(NSCell cell) {
+    objc.checkOsVersionInternal('NSControl.selectCell:', iOS: (true, null));
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_selectCell_,
+      cell.ref.pointer,
+    );
+  }
+
+  NSCell? selectedCell() {
+    objc.checkOsVersionInternal('NSControl.selectedCell', iOS: (true, null));
+    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_selectedCell);
+    return $ret.address == 0
+        ? null
+        : NSCell.fromPointer($ret, retain: true, release: true);
+  }
+
+  int selectedTag() {
+    objc.checkOsVersionInternal('NSControl.selectedTag', iOS: (true, null));
+    return _objc_msgSend_1hz7y9r(object$.ref.pointer, _sel_selectedTag);
+  }
+
+  /// setCell:
+  set cell(NSCell? value) {
+    objc.checkOsVersionInternal('NSControl.setCell:', iOS: (true, null));
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_setCell_,
+      value?.ref.pointer ?? ffi.nullptr,
+    );
+  }
+
+  void setFloatingPointFormat(
+    bool autoRange, {
+    required int left,
+    required int right,
+  }) {
+    objc.checkOsVersionInternal(
+      'NSControl.setFloatingPointFormat:left:right:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_wauwgb(
+      object$.ref.pointer,
+      _sel_setFloatingPointFormat_left_right_,
+      autoRange,
+      left,
+      right,
+    );
+  }
+
+  void setNeedsDisplay() {
+    objc.checkOsVersionInternal(
+      'NSControl.setNeedsDisplay',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_setNeedsDisplay);
+  }
+
+  void updateCell(NSCell cell) {
+    objc.checkOsVersionInternal('NSControl.updateCell:', iOS: (true, null));
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_updateCell_,
+      cell.ref.pointer,
+    );
+  }
+
+  void updateCellInside(NSCell cell) {
+    objc.checkOsVersionInternal(
+      'NSControl.updateCellInside:',
+      iOS: (true, null),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_updateCellInside_,
+      cell.ref.pointer,
+    );
+  }
+
+  /// cellClass
+  static objc.ObjCObject? getCellClass() {
+    objc.checkOsVersionInternal('NSControl.cellClass', iOS: (true, null));
+    final $ret = _objc_msgSend_151sglz(_class_NSControl, _sel_cellClass);
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
+  /// setCellClass:
+  static void setCellClass(objc.ObjCObject? value) {
+    objc.checkOsVersionInternal('NSControl.setCellClass:', iOS: (true, null));
+    _objc_msgSend_xtuoz7(
+      _class_NSControl,
+      _sel_setCellClass_,
+      value?.ref.pointer ?? ffi.nullptr,
+    );
+  }
+}
+
+extension NSDeprecated$19 on NSWindow {
+  /// backingLocation
+  NSWindowBackingLocation get backingLocation {
+    objc.checkOsVersionInternal(
+      'NSWindow.backingLocation',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1fc7usk(
+      object$.ref.pointer,
+      _sel_backingLocation,
+    );
+    return NSWindowBackingLocation.fromValue($ret);
+  }
+
+  void cacheImageInRect(objc.CGRect rect) {
+    objc.checkOsVersionInternal(
+      'NSWindow.cacheImageInRect:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1okkq16(object$.ref.pointer, _sel_cacheImageInRect_, rect);
+  }
+
+  bool canStoreColor() {
+    objc.checkOsVersionInternal(
+      'NSWindow.canStoreColor',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(object$.ref.pointer, _sel_canStoreColor);
+  }
+
+  objc.CGPoint convertBaseToScreen(objc.CGPoint point) {
+    objc.checkOsVersionInternal(
+      'NSWindow.convertBaseToScreen:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ptr = pkg_ffi.calloc<objc.CGPoint>();
+    objc.useMsgSendVariants
+        ? _objc_msgSend_1w4qqqrStret(
+            $ptr,
+            object$.ref.pointer,
+            _sel_convertBaseToScreen_,
+            point,
+          )
+        : $ptr.ref = _objc_msgSend_1w4qqqr(
+            object$.ref.pointer,
+            _sel_convertBaseToScreen_,
+            point,
+          );
+    final $finalizable = $ptr.cast<ffi.Uint8>().asTypedList(
+      ffi.sizeOf<objc.CGPoint>(),
+      finalizer: pkg_ffi.calloc.nativeFree,
+    );
+    return ffi.Struct.create<objc.CGPoint>($finalizable);
+  }
+
+  objc.CGPoint convertScreenToBase(objc.CGPoint point) {
+    objc.checkOsVersionInternal(
+      'NSWindow.convertScreenToBase:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ptr = pkg_ffi.calloc<objc.CGPoint>();
+    objc.useMsgSendVariants
+        ? _objc_msgSend_1w4qqqrStret(
+            $ptr,
+            object$.ref.pointer,
+            _sel_convertScreenToBase_,
+            point,
+          )
+        : $ptr.ref = _objc_msgSend_1w4qqqr(
+            object$.ref.pointer,
+            _sel_convertScreenToBase_,
+            point,
+          );
+    final $finalizable = $ptr.cast<ffi.Uint8>().asTypedList(
+      ffi.sizeOf<objc.CGPoint>(),
+      finalizer: pkg_ffi.calloc.nativeFree,
+    );
+    return ffi.Struct.create<objc.CGPoint>($finalizable);
+  }
+
+  void disableFlushWindow() {
+    objc.checkOsVersionInternal(
+      'NSWindow.disableFlushWindow',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_disableFlushWindow);
+  }
+
+  void disableScreenUpdatesUntilFlush() {
+    objc.checkOsVersionInternal(
+      'NSWindow.disableScreenUpdatesUntilFlush',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(
+      object$.ref.pointer,
+      _sel_disableScreenUpdatesUntilFlush,
+    );
+  }
+
+  void discardCachedImage() {
+    objc.checkOsVersionInternal(
+      'NSWindow.discardCachedImage',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_discardCachedImage);
+  }
+
+  void enableFlushWindow() {
+    objc.checkOsVersionInternal(
+      'NSWindow.enableFlushWindow',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_enableFlushWindow);
+  }
+
+  void flushWindow() {
+    objc.checkOsVersionInternal(
+      'NSWindow.flushWindow',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_flushWindow);
+  }
+
+  void flushWindowIfNeeded() {
+    objc.checkOsVersionInternal(
+      'NSWindow.flushWindowIfNeeded',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_flushWindowIfNeeded);
+  }
+
+  int gState() {
+    objc.checkOsVersionInternal(
+      'NSWindow.gState',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_1hz7y9r(object$.ref.pointer, _sel_gState);
+  }
+
+  /// graphicsContext
+  NSGraphicsContext? get graphicsContext {
+    objc.checkOsVersionInternal(
+      'NSWindow.graphicsContext',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_151sglz(
+      object$.ref.pointer,
+      _sel_graphicsContext,
+    );
+    return $ret.address == 0
+        ? null
+        : NSGraphicsContext.fromPointer($ret, retain: true, release: true);
+  }
+
+  NSWindow? initWithWindowRef(ffi.Pointer<ffi.Void> windowRef) {
+    objc.checkOsVersionInternal(
+      'NSWindow.initWithWindowRef:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    final $ret = _objc_msgSend_1mbt9g9(
+      object$.ref.retainAndReturnPointer(),
+      _sel_initWithWindowRef_,
+      windowRef,
+    );
+    return $ret.address == 0
+        ? null
+        : NSWindow.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// isAutodisplay
+  bool get isAutodisplay {
+    objc.checkOsVersionInternal(
+      'NSWindow.isAutodisplay',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isAutodisplay);
+  }
+
+  /// isFlushWindowDisabled
+  bool get isFlushWindowDisabled {
+    objc.checkOsVersionInternal(
+      'NSWindow.isFlushWindowDisabled',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(
+      object$.ref.pointer,
+      _sel_isFlushWindowDisabled,
+    );
+  }
+
+  /// isOneShot
+  bool get isOneShot {
+    objc.checkOsVersionInternal(
+      'NSWindow.isOneShot',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isOneShot);
+  }
+
+  /// preferredBackingLocation
+  NSWindowBackingLocation get preferredBackingLocation {
+    objc.checkOsVersionInternal(
+      'NSWindow.preferredBackingLocation',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1fc7usk(
+      object$.ref.pointer,
+      _sel_preferredBackingLocation,
+    );
+    return NSWindowBackingLocation.fromValue($ret);
+  }
+
+  void restoreCachedImage() {
+    objc.checkOsVersionInternal(
+      'NSWindow.restoreCachedImage',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_restoreCachedImage);
+  }
+
+  /// setAutodisplay:
+  set isAutodisplay(bool value) {
+    objc.checkOsVersionInternal(
+      'NSWindow.setAutodisplay:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setAutodisplay_, value);
+  }
+
+  /// setOneShot:
+  set isOneShot(bool value) {
+    objc.checkOsVersionInternal(
+      'NSWindow.setOneShot:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setOneShot_, value);
+  }
+
+  /// setPreferredBackingLocation:
+  set preferredBackingLocation(NSWindowBackingLocation value) {
+    objc.checkOsVersionInternal(
+      'NSWindow.setPreferredBackingLocation:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    _objc_msgSend_118rr7u(
+      object$.ref.pointer,
+      _sel_setPreferredBackingLocation_,
+      value.value,
+    );
+  }
+
+  /// setShowsResizeIndicator:
+  set showsResizeIndicator(bool value) {
+    objc.checkOsVersionInternal(
+      'NSWindow.setShowsResizeIndicator:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1s56lr9(
+      object$.ref.pointer,
+      _sel_setShowsResizeIndicator_,
+      value,
+    );
+  }
+
+  /// showsResizeIndicator
+  bool get showsResizeIndicator {
+    objc.checkOsVersionInternal(
+      'NSWindow.showsResizeIndicator',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(object$.ref.pointer, _sel_showsResizeIndicator);
+  }
+
+  void useOptimizedDrawing(bool flag) {
+    objc.checkOsVersionInternal(
+      'NSWindow.useOptimizedDrawing:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_useOptimizedDrawing_, flag);
+  }
+
+  double userSpaceScaleFactor() {
+    objc.checkOsVersionInternal(
+      'NSWindow.userSpaceScaleFactor',
+      iOS: (true, null),
+      macOS: (false, (10, 4, 0)),
+    );
+    return objc.useMsgSendVariants
+        ? _objc_msgSend_1ukqyt8Fpret(
+            object$.ref.pointer,
+            _sel_userSpaceScaleFactor,
+          )
+        : _objc_msgSend_1ukqyt8(object$.ref.pointer, _sel_userSpaceScaleFactor);
+  }
+
+  /// windowRef
+  ffi.Pointer<ffi.Void> get windowRef {
+    objc.checkOsVersionInternal(
+      'NSWindow.windowRef',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_6ex6p5(object$.ref.pointer, _sel_windowRef);
+  }
+
+  static void menuChanged(NSMenu menu) {
+    objc.checkOsVersionInternal(
+      'NSWindow.menuChanged:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(_class_NSWindow, _sel_menuChanged_, menu.ref.pointer);
+  }
+}
+
+extension NSDeprecated$20 on NSCursor {
+  /// isSetOnMouseEntered
+  bool get isSetOnMouseEntered {
+    objc.checkOsVersionInternal(
+      'NSCursor.isSetOnMouseEntered',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isSetOnMouseEntered);
+  }
+
+  /// isSetOnMouseExited
+  bool get isSetOnMouseExited {
+    objc.checkOsVersionInternal(
+      'NSCursor.isSetOnMouseExited',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isSetOnMouseExited);
+  }
+
+  void mouseEntered(NSEvent event) {
+    objc.checkOsVersionInternal(
+      'NSCursor.mouseEntered:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_mouseEntered_,
+      event.ref.pointer,
+    );
+  }
+
+  void mouseExited(NSEvent event) {
+    objc.checkOsVersionInternal(
+      'NSCursor.mouseExited:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_xtuoz7(
+      object$.ref.pointer,
+      _sel_mouseExited_,
+      event.ref.pointer,
+    );
+  }
+
+  void setOnMouseEntered(bool flag) {
+    objc.checkOsVersionInternal(
+      'NSCursor.setOnMouseEntered:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setOnMouseEntered_, flag);
+  }
+
+  void setOnMouseExited(bool flag) {
+    objc.checkOsVersionInternal(
+      'NSCursor.setOnMouseExited:',
+      iOS: (true, null),
+      macOS: (false, (10, 0, 0)),
+    );
+    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setOnMouseExited_, flag);
+  }
+}
+
+extension NSDeprecated$21 on NSScroller {
   /// arrowsPosition
   NSScrollArrowPosition get arrowsPosition {
     objc.checkOsVersionInternal(
@@ -92884,7 +94016,7 @@ extension NSDeprecated$10 on NSScroller {
   }
 }
 
-extension NSDeprecated$11 on NSView {
+extension NSDeprecated$22 on NSView {
   void allocateGState() {
     objc.checkOsVersionInternal(
       'NSView.allocateGState',
@@ -93072,7 +94204,7 @@ extension NSDeprecated$11 on NSView {
   }
 
   void dragImage(
-    NSImage image, {
+    NSImage$1 image, {
     required objc.CGPoint at,
     required objc.CGSize offset,
     required NSEvent event,
@@ -93180,7 +94312,7 @@ extension NSDeprecated$11 on NSView {
   }
 }
 
-extension NSDeprecated$12 on NSTextView {
+extension NSDeprecated$23 on NSTextView {
   void toggleBaseWritingDirection(objc.ObjCObject? sender) {
     objc.checkOsVersionInternal(
       'NSTextView.toggleBaseWritingDirection:',
@@ -93195,7 +94327,7 @@ extension NSDeprecated$12 on NSTextView {
   }
 }
 
-extension NSDeprecated$13 on NSColor {
+extension NSDeprecated$24 on NSColor {
   /// colorSpaceName
   objc.NSString get colorSpaceName {
     objc.checkOsVersionInternal(
@@ -93411,7 +94543,7 @@ extension NSDeprecated$13 on NSColor {
   }
 }
 
-extension NSDeprecated$14 on NSTableColumn {
+extension NSDeprecated$25 on NSTableColumn {
   /// dataCell
   objc.ObjCObject get dataCell {
     objc.checkOsVersionInternal('NSTableColumn.dataCell', iOS: (true, null));
@@ -93464,7 +94596,7 @@ extension NSDeprecated$14 on NSTableColumn {
   }
 }
 
-extension NSDeprecated$15 on NSNib {
+extension NSDeprecated$26 on NSNib {
   objc.ObjCObject initWithContentsOfURL(objc.NSURL nibFileURL) {
     objc.checkOsVersionInternal(
       'NSNib.initWithContentsOfURL:',
@@ -93512,7 +94644,7 @@ extension NSDeprecated$15 on NSNib {
   }
 }
 
-extension NSDeprecated$16 on NSTableView {
+extension NSDeprecated$27 on NSTableView {
   bool autoresizesAllColumnsToFit() {
     objc.checkOsVersionInternal(
       'NSTableView.autoresizesAllColumnsToFit',
@@ -93551,7 +94683,7 @@ extension NSDeprecated$16 on NSTableView {
     return ffi.Struct.create<objc.NSRange>($finalizable);
   }
 
-  NSImage? dragImageForRows(
+  NSImage$1? dragImageForRows(
     objc.NSArray dragRows, {
     required NSEvent event,
     required ffi.Pointer<objc.CGPoint> dragImageOffset,
@@ -93570,7 +94702,7 @@ extension NSDeprecated$16 on NSTableView {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   bool drawsGrid() {
@@ -93792,7 +94924,7 @@ extension NSDeprecated$16 on NSTableView {
   }
 }
 
-extension NSDeprecated$17 on NSApplication {
+extension NSDeprecated$28 on NSApplication {
   void application(NSApplication sender, {required objc.NSArray printFiles}) {
     objc.checkOsVersionInternal(
       'NSApplication.application:printFiles:',
@@ -93925,7 +95057,7 @@ extension NSDeprecated$17 on NSApplication {
   }
 }
 
-extension NSDeprecated$18 on NSMenu {
+extension NSDeprecated$29 on NSMenu {
   NSMenu attachedMenu() {
     objc.checkOsVersionInternal(
       'NSMenu.attachedMenu',
@@ -94127,7 +95259,7 @@ extension NSDeprecated$18 on NSMenu {
   }
 }
 
-extension NSDeprecated$19 on NSTextField {
+extension NSDeprecated$30 on NSTextField {
   void setTitleWithMnemonic(objc.NSString stringWithAmpersand) {
     objc.checkOsVersionInternal(
       'NSTextField.setTitleWithMnemonic:',
@@ -94142,35 +95274,7 @@ extension NSDeprecated$19 on NSTextField {
   }
 }
 
-extension NSDeprecated$2 on NSSound {
-  static objc.NSArray soundUnfilteredFileTypes() {
-    objc.checkOsVersionInternal(
-      'NSSound.soundUnfilteredFileTypes',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      _class_NSSound,
-      _sel_soundUnfilteredFileTypes,
-    );
-    return objc.NSArray.fromPointer($ret, retain: true, release: true);
-  }
-
-  static objc.NSArray soundUnfilteredPasteboardTypes() {
-    objc.checkOsVersionInternal(
-      'NSSound.soundUnfilteredPasteboardTypes',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      _class_NSSound,
-      _sel_soundUnfilteredPasteboardTypes,
-    );
-    return objc.NSArray.fromPointer($ret, retain: true, release: true);
-  }
-}
-
-extension NSDeprecated$20 on NSCollectionView {
+extension NSDeprecated$31 on NSCollectionView {
   /// itemPrototype
   NSCollectionViewItem? get itemPrototype {
     objc.checkOsVersionInternal(
@@ -94327,7 +95431,7 @@ extension NSDeprecated$20 on NSCollectionView {
   }
 }
 
-extension NSDeprecated$21 on NSBrowser {
+extension NSDeprecated$32 on NSBrowser {
   bool acceptsArrowKeys() {
     objc.checkOsVersionInternal(
       'NSBrowser.acceptsArrowKeys',
@@ -94439,7 +95543,7 @@ extension NSDeprecated$21 on NSBrowser {
   }
 }
 
-extension NSDeprecated$22 on NSSplitView {
+extension NSDeprecated$33 on NSSplitView {
   bool isPaneSplitter() {
     objc.checkOsVersionInternal(
       'NSSplitView.isPaneSplitter',
@@ -94459,7 +95563,7 @@ extension NSDeprecated$22 on NSSplitView {
   }
 }
 
-extension NSDeprecated$23 on NSSavePanel {
+extension NSDeprecated$34 on NSSavePanel {
   /// allowedFileTypes
   objc.NSArray? get allowedFileTypes {
     objc.checkOsVersionInternal(
@@ -94604,7 +95708,7 @@ extension NSDeprecated$23 on NSSavePanel {
   }
 }
 
-extension NSDeprecated$24 on NSOpenPanel {
+extension NSDeprecated$35 on NSOpenPanel {
   void beginForDirectory(
     objc.NSString? path, {
     objc.NSString? file,
@@ -94700,7 +95804,7 @@ extension NSDeprecated$24 on NSOpenPanel {
   }
 }
 
-extension NSDeprecated$25 on NSPathControl {
+extension NSDeprecated$36 on NSPathControl {
   NSPathComponentCell? clickedPathComponentCell() {
     objc.checkOsVersionInternal(
       'NSPathControl.clickedPathComponentCell',
@@ -94743,7 +95847,7 @@ extension NSDeprecated$25 on NSPathControl {
   }
 }
 
-extension NSDeprecated$26 on NSPrinter {
+extension NSDeprecated$37 on NSPrinter {
   bool acceptsBinary() {
     objc.checkOsVersionInternal(
       'NSPrinter.acceptsBinary',
@@ -95039,7 +96143,7 @@ extension NSDeprecated$26 on NSPrinter {
   }
 }
 
-extension NSDeprecated$27 on NSPrintInfo {
+extension NSDeprecated$38 on NSPrintInfo {
   static void setDefaultPrinter(NSPrinter? printer) {
     objc.checkOsVersionInternal(
       'NSPrintInfo.setDefaultPrinter:',
@@ -95080,7 +96184,7 @@ extension NSDeprecated$27 on NSPrintInfo {
   }
 }
 
-extension NSDeprecated$28 on NSPrintPanel {
+extension NSDeprecated$39 on NSPrintPanel {
   NSView? accessoryView() {
     objc.checkOsVersionInternal(
       'NSPrintPanel.accessoryView',
@@ -95125,7 +96229,7 @@ extension NSDeprecated$28 on NSPrintPanel {
   }
 }
 
-extension NSDeprecated$29 on NSPrintOperation {
+extension NSDeprecated$40 on NSPrintOperation {
   NSView? accessoryView() {
     objc.checkOsVersionInternal(
       'NSPrintOperation.accessoryView',
@@ -95195,142 +96299,7 @@ extension NSDeprecated$29 on NSPrintOperation {
   }
 }
 
-extension NSDeprecated$3 on NSButtonCell {
-  objc.NSString alternateMnemonic() {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.alternateMnemonic',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      object$.ref.pointer,
-      _sel_alternateMnemonic,
-    );
-    return objc.NSString.fromPointer($ret, retain: true, release: true);
-  }
-
-  int alternateMnemonicLocation() {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.alternateMnemonicLocation',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_xw2lbc(
-      object$.ref.pointer,
-      _sel_alternateMnemonicLocation,
-    );
-  }
-
-  /// gradientType
-  NSGradientType get gradientType {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.gradientType',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_tavke(object$.ref.pointer, _sel_gradientType);
-    return NSGradientType.fromValue($ret);
-  }
-
-  /// keyEquivalentFont
-  NSFont? get keyEquivalentFont {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.keyEquivalentFont',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      object$.ref.pointer,
-      _sel_keyEquivalentFont,
-    );
-    return $ret.address == 0
-        ? null
-        : NSFont.fromPointer($ret, retain: true, release: true);
-  }
-
-  void setAlternateMnemonicLocation(int location) {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.setAlternateMnemonicLocation:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1i9r4xy(
-      object$.ref.pointer,
-      _sel_setAlternateMnemonicLocation_,
-      location,
-    );
-  }
-
-  void setAlternateTitleWithMnemonic(objc.NSString stringWithAmpersand) {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.setAlternateTitleWithMnemonic:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setAlternateTitleWithMnemonic_,
-      stringWithAmpersand.ref.pointer,
-    );
-  }
-
-  /// setGradientType:
-  set gradientType(NSGradientType value) {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.setGradientType:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1umii4k(
-      object$.ref.pointer,
-      _sel_setGradientType_,
-      value.value,
-    );
-  }
-
-  /// setKeyEquivalentFont:
-  set keyEquivalentFont(NSFont? value) {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.setKeyEquivalentFont:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setKeyEquivalentFont_,
-      value?.ref.pointer ?? ffi.nullptr,
-    );
-  }
-
-  void setKeyEquivalentFont(objc.NSString fontName, {required double size}) {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.setKeyEquivalentFont:size:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_gp0n3k(
-      object$.ref.pointer,
-      _sel_setKeyEquivalentFont_size_,
-      fontName.ref.pointer,
-      size,
-    );
-  }
-
-  void setTitleWithMnemonic(objc.NSString stringWithAmpersand) {
-    objc.checkOsVersionInternal(
-      'NSButtonCell.setTitleWithMnemonic:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setTitleWithMnemonic_,
-      stringWithAmpersand.ref.pointer,
-    );
-  }
-}
-
-extension NSDeprecated$30 on NSPageLayout {
+extension NSDeprecated$41 on NSPageLayout {
   NSView accessoryView() {
     objc.checkOsVersionInternal(
       'NSPageLayout.accessoryView',
@@ -95373,7 +96342,7 @@ extension NSDeprecated$30 on NSPageLayout {
   }
 }
 
-extension NSDeprecated$31 on NSDocument {
+extension NSDeprecated$42 on NSDocument {
   objc.NSData? dataRepresentationOfType(objc.NSString type) {
     objc.checkOsVersionInternal(
       'NSDocument.dataRepresentationOfType:',
@@ -95753,7 +96722,7 @@ extension NSDeprecated$31 on NSDocument {
   }
 }
 
-extension NSDeprecated$32 on NSBox {
+extension NSDeprecated$43 on NSBox {
   /// borderType
   NSBorderType get borderType {
     objc.checkOsVersionInternal(
@@ -95793,7 +96762,7 @@ extension NSDeprecated$32 on NSBox {
   }
 }
 
-extension NSDeprecated$33 on NSDocumentController {
+extension NSDeprecated$44 on NSDocumentController {
   objc.ObjCObject? documentForFileName(objc.NSString fileName) {
     objc.checkOsVersionInternal(
       'NSDocumentController.documentForFileName:',
@@ -96046,7 +97015,7 @@ extension NSDeprecated$33 on NSDocumentController {
   }
 }
 
-extension NSDeprecated$34 on NSPersistentDocument {
+extension NSDeprecated$45 on NSPersistentDocument {
   bool configurePersistentStoreCoordinatorForURL$1(
     objc.NSURL url, {
     required objc.NSString ofType,
@@ -96073,18 +97042,18 @@ extension NSDeprecated$34 on NSPersistentDocument {
   }
 }
 
-extension NSDeprecated$35 on NSSliderCell {
-  NSImage image$1() {
+extension NSDeprecated$46 on NSSliderCell {
+  NSImage$1 image$1() {
     objc.checkOsVersionInternal(
       'NSSliderCell.image',
       iOS: (true, null),
       macOS: (false, (10, 0, 0)),
     );
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  void setImage(NSImage backgroundImage) {
+  void setImage(NSImage$1 backgroundImage) {
     objc.checkOsVersionInternal(
       'NSSliderCell.setImage:',
       iOS: (true, null),
@@ -96203,7 +97172,7 @@ extension NSDeprecated$35 on NSSliderCell {
   }
 }
 
-extension NSDeprecated$36 on NSSpellChecker {
+extension NSDeprecated$47 on NSSpellChecker {
   void forgetWord(objc.NSString word) {
     objc.checkOsVersionInternal(
       'NSSpellChecker.forgetWord:',
@@ -96232,7 +97201,7 @@ extension NSDeprecated$36 on NSSpellChecker {
   }
 }
 
-extension NSDeprecated$37 on NSWorkspace {
+extension NSDeprecated$48 on NSWorkspace {
   objc.NSString? absolutePathForAppBundleWithIdentifier(
     objc.NSString bundleIdentifier,
   ) {
@@ -96345,7 +97314,7 @@ extension NSDeprecated$37 on NSWorkspace {
     );
   }
 
-  NSImage iconForFileType(objc.NSString fileType) {
+  NSImage$1 iconForFileType(objc.NSString fileType) {
     objc.checkOsVersionInternal(
       'NSWorkspace.iconForFileType:',
       iOS: (true, null),
@@ -96356,7 +97325,7 @@ extension NSDeprecated$37 on NSWorkspace {
       _sel_iconForFileType_,
       fileType.ref.pointer,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   bool launchAppWithBundleIdentifier(
@@ -96550,7 +97519,7 @@ extension NSDeprecated$37 on NSWorkspace {
 
   bool openFileFromImageAtInView(
     objc.NSString fullPath, {
-    NSImage? fromImage,
+    NSImage$1? fromImage,
     required objc.CGPoint at,
     NSView? inView,
   }) {
@@ -96742,7 +97711,7 @@ extension NSDeprecated$37 on NSWorkspace {
   }
 
   void slideImage(
-    NSImage image, {
+    NSImage$1 image, {
     required objc.CGPoint from,
     required objc.CGPoint to,
   }) {
@@ -96807,916 +97776,6 @@ extension NSDeprecated$37 on NSWorkspace {
       macOS: (false, (10, 0, 0)),
     );
     return _objc_msgSend_91o635(object$.ref.pointer, _sel_userDefaultsChanged);
-  }
-}
-
-extension NSDeprecated$4 on NSCell {
-  /// controlTint
-  NSControlTint get controlTint {
-    objc.checkOsVersionInternal(
-      'NSCell.controlTint',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_rasxey(object$.ref.pointer, _sel_controlTint);
-    return NSControlTint.fromValue($ret);
-  }
-
-  int entryType() {
-    objc.checkOsVersionInternal(
-      'NSCell.entryType',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_1hz7y9r(object$.ref.pointer, _sel_entryType);
-  }
-
-  bool isEntryAcceptable(objc.NSString string) {
-    objc.checkOsVersionInternal(
-      'NSCell.isEntryAcceptable:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_19nvye5(
-      object$.ref.pointer,
-      _sel_isEntryAcceptable_,
-      string.ref.pointer,
-    );
-  }
-
-  objc.NSString mnemonic() {
-    objc.checkOsVersionInternal(
-      'NSCell.mnemonic',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_mnemonic);
-    return objc.NSString.fromPointer($ret, retain: true, release: true);
-  }
-
-  int mnemonicLocation() {
-    objc.checkOsVersionInternal(
-      'NSCell.mnemonicLocation',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_xw2lbc(object$.ref.pointer, _sel_mnemonicLocation);
-  }
-
-  /// setControlTint:
-  set controlTint(NSControlTint value) {
-    objc.checkOsVersionInternal(
-      'NSCell.setControlTint:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_12si6jk(
-      object$.ref.pointer,
-      _sel_setControlTint_,
-      value.value,
-    );
-  }
-
-  void setEntryType(int type) {
-    objc.checkOsVersionInternal(
-      'NSCell.setEntryType:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_4sp4xj(object$.ref.pointer, _sel_setEntryType_, type);
-  }
-
-  void setFloatingPointFormat(
-    bool autoRange, {
-    required int left,
-    required int right,
-  }) {
-    objc.checkOsVersionInternal(
-      'NSCell.setFloatingPointFormat:left:right:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_wauwgb(
-      object$.ref.pointer,
-      _sel_setFloatingPointFormat_left_right_,
-      autoRange,
-      left,
-      right,
-    );
-  }
-
-  void setMnemonicLocation(int location) {
-    objc.checkOsVersionInternal(
-      'NSCell.setMnemonicLocation:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1i9r4xy(
-      object$.ref.pointer,
-      _sel_setMnemonicLocation_,
-      location,
-    );
-  }
-
-  void setTitleWithMnemonic(objc.NSString stringWithAmpersand) {
-    objc.checkOsVersionInternal(
-      'NSCell.setTitleWithMnemonic:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setTitleWithMnemonic_,
-      stringWithAmpersand.ref.pointer,
-    );
-  }
-}
-
-extension NSDeprecated$5 on NSMenuItem {
-  objc.NSString mnemonic() {
-    objc.checkOsVersionInternal(
-      'NSMenuItem.mnemonic',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_mnemonic);
-    return objc.NSString.fromPointer($ret, retain: true, release: true);
-  }
-
-  int mnemonicLocation() {
-    objc.checkOsVersionInternal(
-      'NSMenuItem.mnemonicLocation',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_xw2lbc(object$.ref.pointer, _sel_mnemonicLocation);
-  }
-
-  void setMnemonicLocation(int location) {
-    objc.checkOsVersionInternal(
-      'NSMenuItem.setMnemonicLocation:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1i9r4xy(
-      object$.ref.pointer,
-      _sel_setMnemonicLocation_,
-      location,
-    );
-  }
-
-  void setTitleWithMnemonic(objc.NSString stringWithAmpersand) {
-    objc.checkOsVersionInternal(
-      'NSMenuItem.setTitleWithMnemonic:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setTitleWithMnemonic_,
-      stringWithAmpersand.ref.pointer,
-    );
-  }
-}
-
-extension NSDeprecated$6 on NSToolbar {
-  /// centeredItemIdentifier
-  objc.NSString? get centeredItemIdentifier {
-    objc.checkOsVersionInternal(
-      'NSToolbar.centeredItemIdentifier',
-      iOS: (false, (13, 0, 0)),
-      macOS: (false, (10, 14, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      object$.ref.pointer,
-      _sel_centeredItemIdentifier,
-    );
-    return $ret.address == 0
-        ? null
-        : objc.NSString.fromPointer($ret, retain: true, release: true);
-  }
-
-  /// configurationDictionary
-  objc.NSDictionary get configurationDictionary {
-    objc.checkOsVersionInternal(
-      'NSToolbar.configurationDictionary',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      object$.ref.pointer,
-      _sel_configurationDictionary,
-    );
-    return objc.NSDictionary.fromPointer($ret, retain: true, release: true);
-  }
-
-  /// fullScreenAccessoryView
-  NSView? get fullScreenAccessoryView {
-    objc.checkOsVersionInternal(
-      'NSToolbar.fullScreenAccessoryView',
-      iOS: (true, null),
-      macOS: (false, (10, 7, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      object$.ref.pointer,
-      _sel_fullScreenAccessoryView,
-    );
-    return $ret.address == 0
-        ? null
-        : NSView.fromPointer($ret, retain: true, release: true);
-  }
-
-  /// fullScreenAccessoryViewMaxHeight
-  double get fullScreenAccessoryViewMaxHeight {
-    objc.checkOsVersionInternal(
-      'NSToolbar.fullScreenAccessoryViewMaxHeight',
-      iOS: (true, null),
-      macOS: (false, (10, 7, 0)),
-    );
-    return objc.useMsgSendVariants
-        ? _objc_msgSend_1ukqyt8Fpret(
-            object$.ref.pointer,
-            _sel_fullScreenAccessoryViewMaxHeight,
-          )
-        : _objc_msgSend_1ukqyt8(
-            object$.ref.pointer,
-            _sel_fullScreenAccessoryViewMaxHeight,
-          );
-  }
-
-  /// fullScreenAccessoryViewMinHeight
-  double get fullScreenAccessoryViewMinHeight {
-    objc.checkOsVersionInternal(
-      'NSToolbar.fullScreenAccessoryViewMinHeight',
-      iOS: (true, null),
-      macOS: (false, (10, 7, 0)),
-    );
-    return objc.useMsgSendVariants
-        ? _objc_msgSend_1ukqyt8Fpret(
-            object$.ref.pointer,
-            _sel_fullScreenAccessoryViewMinHeight,
-          )
-        : _objc_msgSend_1ukqyt8(
-            object$.ref.pointer,
-            _sel_fullScreenAccessoryViewMinHeight,
-          );
-  }
-
-  /// setCenteredItemIdentifier:
-  set centeredItemIdentifier(objc.NSString? value) {
-    objc.checkOsVersionInternal(
-      'NSToolbar.setCenteredItemIdentifier:',
-      iOS: (false, (13, 0, 0)),
-      macOS: (false, (10, 14, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setCenteredItemIdentifier_,
-      value?.ref.pointer ?? ffi.nullptr,
-    );
-  }
-
-  void setConfigurationFromDictionary(objc.NSDictionary configDict) {
-    objc.checkOsVersionInternal(
-      'NSToolbar.setConfigurationFromDictionary:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setConfigurationFromDictionary_,
-      configDict.ref.pointer,
-    );
-  }
-
-  /// setFullScreenAccessoryView:
-  set fullScreenAccessoryView(NSView? value) {
-    objc.checkOsVersionInternal(
-      'NSToolbar.setFullScreenAccessoryView:',
-      iOS: (true, null),
-      macOS: (false, (10, 7, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setFullScreenAccessoryView_,
-      value?.ref.pointer ?? ffi.nullptr,
-    );
-  }
-
-  /// setFullScreenAccessoryViewMaxHeight:
-  set fullScreenAccessoryViewMaxHeight(double value) {
-    objc.checkOsVersionInternal(
-      'NSToolbar.setFullScreenAccessoryViewMaxHeight:',
-      iOS: (true, null),
-      macOS: (false, (10, 7, 0)),
-    );
-    _objc_msgSend_hwm8nu(
-      object$.ref.pointer,
-      _sel_setFullScreenAccessoryViewMaxHeight_,
-      value,
-    );
-  }
-
-  /// setFullScreenAccessoryViewMinHeight:
-  set fullScreenAccessoryViewMinHeight(double value) {
-    objc.checkOsVersionInternal(
-      'NSToolbar.setFullScreenAccessoryViewMinHeight:',
-      iOS: (true, null),
-      macOS: (false, (10, 7, 0)),
-    );
-    _objc_msgSend_hwm8nu(
-      object$.ref.pointer,
-      _sel_setFullScreenAccessoryViewMinHeight_,
-      value,
-    );
-  }
-
-  /// setShowsBaselineSeparator:
-  set showsBaselineSeparator(bool value) {
-    objc.checkOsVersionInternal(
-      'NSToolbar.setShowsBaselineSeparator:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1s56lr9(
-      object$.ref.pointer,
-      _sel_setShowsBaselineSeparator_,
-      value,
-    );
-  }
-
-  /// setSizeMode:
-  set sizeMode(NSToolbarSizeMode value) {
-    objc.checkOsVersionInternal(
-      'NSToolbar.setSizeMode:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1jr5up3(object$.ref.pointer, _sel_setSizeMode_, value.value);
-  }
-
-  /// showsBaselineSeparator
-  bool get showsBaselineSeparator {
-    objc.checkOsVersionInternal(
-      'NSToolbar.showsBaselineSeparator',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(
-      object$.ref.pointer,
-      _sel_showsBaselineSeparator,
-    );
-  }
-
-  /// sizeMode
-  NSToolbarSizeMode get sizeMode {
-    objc.checkOsVersionInternal(
-      'NSToolbar.sizeMode',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_zmekkz(object$.ref.pointer, _sel_sizeMode);
-    return NSToolbarSizeMode.fromValue($ret);
-  }
-}
-
-extension NSDeprecated$7 on NSControl {
-  void calcSize() {
-    objc.checkOsVersionInternal(
-      'NSControl.calcSize',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_calcSize);
-  }
-
-  /// cell
-  NSCell? get cell {
-    objc.checkOsVersionInternal('NSControl.cell', iOS: (true, null));
-    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_cell);
-    return $ret.address == 0
-        ? null
-        : NSCell.fromPointer($ret, retain: true, release: true);
-  }
-
-  void drawCell(NSCell cell) {
-    objc.checkOsVersionInternal('NSControl.drawCell:', iOS: (true, null));
-    _objc_msgSend_xtuoz7(object$.ref.pointer, _sel_drawCell_, cell.ref.pointer);
-  }
-
-  void drawCellInside(NSCell cell) {
-    objc.checkOsVersionInternal('NSControl.drawCellInside:', iOS: (true, null));
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_drawCellInside_,
-      cell.ref.pointer,
-    );
-  }
-
-  void selectCell(NSCell cell) {
-    objc.checkOsVersionInternal('NSControl.selectCell:', iOS: (true, null));
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_selectCell_,
-      cell.ref.pointer,
-    );
-  }
-
-  NSCell? selectedCell() {
-    objc.checkOsVersionInternal('NSControl.selectedCell', iOS: (true, null));
-    final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_selectedCell);
-    return $ret.address == 0
-        ? null
-        : NSCell.fromPointer($ret, retain: true, release: true);
-  }
-
-  int selectedTag() {
-    objc.checkOsVersionInternal('NSControl.selectedTag', iOS: (true, null));
-    return _objc_msgSend_1hz7y9r(object$.ref.pointer, _sel_selectedTag);
-  }
-
-  /// setCell:
-  set cell(NSCell? value) {
-    objc.checkOsVersionInternal('NSControl.setCell:', iOS: (true, null));
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_setCell_,
-      value?.ref.pointer ?? ffi.nullptr,
-    );
-  }
-
-  void setFloatingPointFormat(
-    bool autoRange, {
-    required int left,
-    required int right,
-  }) {
-    objc.checkOsVersionInternal(
-      'NSControl.setFloatingPointFormat:left:right:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_wauwgb(
-      object$.ref.pointer,
-      _sel_setFloatingPointFormat_left_right_,
-      autoRange,
-      left,
-      right,
-    );
-  }
-
-  void setNeedsDisplay() {
-    objc.checkOsVersionInternal(
-      'NSControl.setNeedsDisplay',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_setNeedsDisplay);
-  }
-
-  void updateCell(NSCell cell) {
-    objc.checkOsVersionInternal('NSControl.updateCell:', iOS: (true, null));
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_updateCell_,
-      cell.ref.pointer,
-    );
-  }
-
-  void updateCellInside(NSCell cell) {
-    objc.checkOsVersionInternal(
-      'NSControl.updateCellInside:',
-      iOS: (true, null),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_updateCellInside_,
-      cell.ref.pointer,
-    );
-  }
-
-  /// cellClass
-  static objc.ObjCObject? getCellClass() {
-    objc.checkOsVersionInternal('NSControl.cellClass', iOS: (true, null));
-    final $ret = _objc_msgSend_151sglz(_class_NSControl, _sel_cellClass);
-    return $ret.address == 0
-        ? null
-        : objc.ObjCObject($ret, retain: true, release: true);
-  }
-
-  /// setCellClass:
-  static void setCellClass(objc.ObjCObject? value) {
-    objc.checkOsVersionInternal('NSControl.setCellClass:', iOS: (true, null));
-    _objc_msgSend_xtuoz7(
-      _class_NSControl,
-      _sel_setCellClass_,
-      value?.ref.pointer ?? ffi.nullptr,
-    );
-  }
-}
-
-extension NSDeprecated$8 on NSWindow {
-  /// backingLocation
-  NSWindowBackingLocation get backingLocation {
-    objc.checkOsVersionInternal(
-      'NSWindow.backingLocation',
-      iOS: (true, null),
-      macOS: (false, (10, 5, 0)),
-    );
-    final $ret = _objc_msgSend_1fc7usk(
-      object$.ref.pointer,
-      _sel_backingLocation,
-    );
-    return NSWindowBackingLocation.fromValue($ret);
-  }
-
-  void cacheImageInRect(objc.CGRect rect) {
-    objc.checkOsVersionInternal(
-      'NSWindow.cacheImageInRect:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1okkq16(object$.ref.pointer, _sel_cacheImageInRect_, rect);
-  }
-
-  bool canStoreColor() {
-    objc.checkOsVersionInternal(
-      'NSWindow.canStoreColor',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(object$.ref.pointer, _sel_canStoreColor);
-  }
-
-  objc.CGPoint convertBaseToScreen(objc.CGPoint point) {
-    objc.checkOsVersionInternal(
-      'NSWindow.convertBaseToScreen:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ptr = pkg_ffi.calloc<objc.CGPoint>();
-    objc.useMsgSendVariants
-        ? _objc_msgSend_1w4qqqrStret(
-            $ptr,
-            object$.ref.pointer,
-            _sel_convertBaseToScreen_,
-            point,
-          )
-        : $ptr.ref = _objc_msgSend_1w4qqqr(
-            object$.ref.pointer,
-            _sel_convertBaseToScreen_,
-            point,
-          );
-    final $finalizable = $ptr.cast<ffi.Uint8>().asTypedList(
-      ffi.sizeOf<objc.CGPoint>(),
-      finalizer: pkg_ffi.calloc.nativeFree,
-    );
-    return ffi.Struct.create<objc.CGPoint>($finalizable);
-  }
-
-  objc.CGPoint convertScreenToBase(objc.CGPoint point) {
-    objc.checkOsVersionInternal(
-      'NSWindow.convertScreenToBase:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ptr = pkg_ffi.calloc<objc.CGPoint>();
-    objc.useMsgSendVariants
-        ? _objc_msgSend_1w4qqqrStret(
-            $ptr,
-            object$.ref.pointer,
-            _sel_convertScreenToBase_,
-            point,
-          )
-        : $ptr.ref = _objc_msgSend_1w4qqqr(
-            object$.ref.pointer,
-            _sel_convertScreenToBase_,
-            point,
-          );
-    final $finalizable = $ptr.cast<ffi.Uint8>().asTypedList(
-      ffi.sizeOf<objc.CGPoint>(),
-      finalizer: pkg_ffi.calloc.nativeFree,
-    );
-    return ffi.Struct.create<objc.CGPoint>($finalizable);
-  }
-
-  void disableFlushWindow() {
-    objc.checkOsVersionInternal(
-      'NSWindow.disableFlushWindow',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_disableFlushWindow);
-  }
-
-  void disableScreenUpdatesUntilFlush() {
-    objc.checkOsVersionInternal(
-      'NSWindow.disableScreenUpdatesUntilFlush',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(
-      object$.ref.pointer,
-      _sel_disableScreenUpdatesUntilFlush,
-    );
-  }
-
-  void discardCachedImage() {
-    objc.checkOsVersionInternal(
-      'NSWindow.discardCachedImage',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_discardCachedImage);
-  }
-
-  void enableFlushWindow() {
-    objc.checkOsVersionInternal(
-      'NSWindow.enableFlushWindow',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_enableFlushWindow);
-  }
-
-  void flushWindow() {
-    objc.checkOsVersionInternal(
-      'NSWindow.flushWindow',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_flushWindow);
-  }
-
-  void flushWindowIfNeeded() {
-    objc.checkOsVersionInternal(
-      'NSWindow.flushWindowIfNeeded',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_flushWindowIfNeeded);
-  }
-
-  int gState() {
-    objc.checkOsVersionInternal(
-      'NSWindow.gState',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_1hz7y9r(object$.ref.pointer, _sel_gState);
-  }
-
-  /// graphicsContext
-  NSGraphicsContext? get graphicsContext {
-    objc.checkOsVersionInternal(
-      'NSWindow.graphicsContext',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_151sglz(
-      object$.ref.pointer,
-      _sel_graphicsContext,
-    );
-    return $ret.address == 0
-        ? null
-        : NSGraphicsContext.fromPointer($ret, retain: true, release: true);
-  }
-
-  NSWindow? initWithWindowRef(ffi.Pointer<ffi.Void> windowRef) {
-    objc.checkOsVersionInternal(
-      'NSWindow.initWithWindowRef:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    final $ret = _objc_msgSend_1mbt9g9(
-      object$.ref.retainAndReturnPointer(),
-      _sel_initWithWindowRef_,
-      windowRef,
-    );
-    return $ret.address == 0
-        ? null
-        : NSWindow.fromPointer($ret, retain: false, release: true);
-  }
-
-  /// isAutodisplay
-  bool get isAutodisplay {
-    objc.checkOsVersionInternal(
-      'NSWindow.isAutodisplay',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isAutodisplay);
-  }
-
-  /// isFlushWindowDisabled
-  bool get isFlushWindowDisabled {
-    objc.checkOsVersionInternal(
-      'NSWindow.isFlushWindowDisabled',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(
-      object$.ref.pointer,
-      _sel_isFlushWindowDisabled,
-    );
-  }
-
-  /// isOneShot
-  bool get isOneShot {
-    objc.checkOsVersionInternal(
-      'NSWindow.isOneShot',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isOneShot);
-  }
-
-  /// preferredBackingLocation
-  NSWindowBackingLocation get preferredBackingLocation {
-    objc.checkOsVersionInternal(
-      'NSWindow.preferredBackingLocation',
-      iOS: (true, null),
-      macOS: (false, (10, 5, 0)),
-    );
-    final $ret = _objc_msgSend_1fc7usk(
-      object$.ref.pointer,
-      _sel_preferredBackingLocation,
-    );
-    return NSWindowBackingLocation.fromValue($ret);
-  }
-
-  void restoreCachedImage() {
-    objc.checkOsVersionInternal(
-      'NSWindow.restoreCachedImage',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_restoreCachedImage);
-  }
-
-  /// setAutodisplay:
-  set isAutodisplay(bool value) {
-    objc.checkOsVersionInternal(
-      'NSWindow.setAutodisplay:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setAutodisplay_, value);
-  }
-
-  /// setOneShot:
-  set isOneShot(bool value) {
-    objc.checkOsVersionInternal(
-      'NSWindow.setOneShot:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setOneShot_, value);
-  }
-
-  /// setPreferredBackingLocation:
-  set preferredBackingLocation(NSWindowBackingLocation value) {
-    objc.checkOsVersionInternal(
-      'NSWindow.setPreferredBackingLocation:',
-      iOS: (true, null),
-      macOS: (false, (10, 5, 0)),
-    );
-    _objc_msgSend_118rr7u(
-      object$.ref.pointer,
-      _sel_setPreferredBackingLocation_,
-      value.value,
-    );
-  }
-
-  /// setShowsResizeIndicator:
-  set showsResizeIndicator(bool value) {
-    objc.checkOsVersionInternal(
-      'NSWindow.setShowsResizeIndicator:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1s56lr9(
-      object$.ref.pointer,
-      _sel_setShowsResizeIndicator_,
-      value,
-    );
-  }
-
-  /// showsResizeIndicator
-  bool get showsResizeIndicator {
-    objc.checkOsVersionInternal(
-      'NSWindow.showsResizeIndicator',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(object$.ref.pointer, _sel_showsResizeIndicator);
-  }
-
-  void useOptimizedDrawing(bool flag) {
-    objc.checkOsVersionInternal(
-      'NSWindow.useOptimizedDrawing:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_useOptimizedDrawing_, flag);
-  }
-
-  double userSpaceScaleFactor() {
-    objc.checkOsVersionInternal(
-      'NSWindow.userSpaceScaleFactor',
-      iOS: (true, null),
-      macOS: (false, (10, 4, 0)),
-    );
-    return objc.useMsgSendVariants
-        ? _objc_msgSend_1ukqyt8Fpret(
-            object$.ref.pointer,
-            _sel_userSpaceScaleFactor,
-          )
-        : _objc_msgSend_1ukqyt8(object$.ref.pointer, _sel_userSpaceScaleFactor);
-  }
-
-  /// windowRef
-  ffi.Pointer<ffi.Void> get windowRef {
-    objc.checkOsVersionInternal(
-      'NSWindow.windowRef',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_6ex6p5(object$.ref.pointer, _sel_windowRef);
-  }
-
-  static void menuChanged(NSMenu menu) {
-    objc.checkOsVersionInternal(
-      'NSWindow.menuChanged:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(_class_NSWindow, _sel_menuChanged_, menu.ref.pointer);
-  }
-}
-
-extension NSDeprecated$9 on NSCursor {
-  /// isSetOnMouseEntered
-  bool get isSetOnMouseEntered {
-    objc.checkOsVersionInternal(
-      'NSCursor.isSetOnMouseEntered',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isSetOnMouseEntered);
-  }
-
-  /// isSetOnMouseExited
-  bool get isSetOnMouseExited {
-    objc.checkOsVersionInternal(
-      'NSCursor.isSetOnMouseExited',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    return _objc_msgSend_91o635(object$.ref.pointer, _sel_isSetOnMouseExited);
-  }
-
-  void mouseEntered(NSEvent event) {
-    objc.checkOsVersionInternal(
-      'NSCursor.mouseEntered:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_mouseEntered_,
-      event.ref.pointer,
-    );
-  }
-
-  void mouseExited(NSEvent event) {
-    objc.checkOsVersionInternal(
-      'NSCursor.mouseExited:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_xtuoz7(
-      object$.ref.pointer,
-      _sel_mouseExited_,
-      event.ref.pointer,
-    );
-  }
-
-  void setOnMouseEntered(bool flag) {
-    objc.checkOsVersionInternal(
-      'NSCursor.setOnMouseEntered:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setOnMouseEntered_, flag);
-  }
-
-  void setOnMouseExited(bool flag) {
-    objc.checkOsVersionInternal(
-      'NSCursor.setOnMouseExited:',
-      iOS: (true, null),
-      macOS: (false, (10, 0, 0)),
-    );
-    _objc_msgSend_1s56lr9(object$.ref.pointer, _sel_setOnMouseExited_, flag);
   }
 }
 
@@ -102169,7 +102228,7 @@ extension NSDrag on NSWindow {
   }
 
   void dragImage(
-    NSImage image, {
+    NSImage$1 image, {
     required objc.CGPoint at,
     required objc.CGSize offset,
     required NSEvent event,
@@ -102306,7 +102365,7 @@ extension NSDragging on NSTextView {
     _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_cleanUpAfterDragOperation);
   }
 
-  NSImage? dragImageForSelectionWithEvent(
+  NSImage$1? dragImageForSelectionWithEvent(
     NSEvent event, {
     required ffi.Pointer<objc.CGPoint> origin,
   }) {
@@ -102322,7 +102381,7 @@ extension NSDragging on NSTextView {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   int dragOperationForDraggingInfo(
@@ -102924,7 +102983,7 @@ interface class NSDraggingDestination$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -103196,7 +103255,7 @@ extension NSDraggingInfo$Methods on NSDraggingInfo {
   }
 
   /// draggedImage
-  NSImage? get draggedImage {
+  NSImage$1? get draggedImage {
     objc.checkOsVersionInternal(
       'NSDraggingInfo.draggedImage',
       iOS: (true, null),
@@ -103205,7 +103264,7 @@ extension NSDraggingInfo$Methods on NSDraggingInfo {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_draggedImage);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// draggedImageLocation
@@ -103477,7 +103536,7 @@ abstract interface class NSDraggingInfoSpec {
   bool get animatesToDestination;
 
   /// draggedImage
-  NSImage? get draggedImage;
+  NSImage$1? get draggedImage;
 
   /// draggedImageLocation
   objc.CGPoint get draggedImageLocation;
@@ -103681,13 +103740,13 @@ interface class NSDraggingInfo$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
 
   /// draggedImage
-  static final draggedImage = objc.ObjCProtocolMethod<NSImage? Function()>(
+  static final draggedImage = objc.ObjCProtocolMethod<NSImage$1? Function()>(
     _protocol_NSDraggingInfo,
     _sel_draggedImage,
     ffi.Native.addressOf<
@@ -103705,7 +103764,7 @@ interface class NSDraggingInfo$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (NSImage? Function() func) => ObjCBlock_NSImage_ffiVoid.fromFunction(
+    (NSImage$1? Function() func) => ObjCBlock_NSImage_ffiVoid.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -103883,9 +103942,10 @@ interface class NSDraggingInfo$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (objc.ObjCObject? Function() func) => ObjCBlock_id_ffiVoid.fromFunction(
-          (ffi.Pointer<ffi.Void> _) => func(),
-        ),
+        (objc.ObjCObject? Function() func) =>
+            ObjCBlock_id_ffiVoid$1.fromFunction(
+              (ffi.Pointer<ffi.Void> _) => func(),
+            ),
       );
 
   /// draggingSourceOperationMask
@@ -104044,7 +104104,7 @@ interface class NSDraggingInfo$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -105025,7 +105085,7 @@ mixin NSDraggingSourceAdapter {
 }
 
 extension NSDraggingSourceDeprecated on objc.NSObject {
-  void draggedImageBeganAt(NSImage image, {required objc.CGPoint beganAt}) {
+  void draggedImageBeganAt(NSImage$1 image, {required objc.CGPoint beganAt}) {
     objc.checkOsVersionInternal(
       'NSObject.draggedImage:beganAt:',
       iOS: (true, null),
@@ -105040,7 +105100,7 @@ extension NSDraggingSourceDeprecated on objc.NSObject {
   }
 
   void draggedImageEndedAtDeposited(
-    NSImage image, {
+    NSImage$1 image, {
     required objc.CGPoint endedAt,
     required bool deposited,
   }) {
@@ -105059,7 +105119,7 @@ extension NSDraggingSourceDeprecated on objc.NSObject {
   }
 
   void draggedImageEndedAtOperation(
-    NSImage image, {
+    NSImage$1 image, {
     required objc.CGPoint endedAt,
     required int operation,
   }) {
@@ -105077,7 +105137,7 @@ extension NSDraggingSourceDeprecated on objc.NSObject {
     );
   }
 
-  void draggedImageMovedTo(NSImage image, {required objc.CGPoint movedTo}) {
+  void draggedImageMovedTo(NSImage$1 image, {required objc.CGPoint movedTo}) {
     objc.checkOsVersionInternal(
       'NSObject.draggedImage:movedTo:',
       iOS: (true, null),
@@ -106717,7 +106777,7 @@ interface class NSEditor$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -106813,7 +106873,7 @@ interface class NSEditor$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -109033,16 +109093,16 @@ extension NSExtensionAdditions on NSViewController {
 
 extension NSExtensions on foundation0.NSFileWrapper {
   /// icon
-  NSImage? get icon {
+  NSImage$1? get icon {
     objc.checkOsVersionInternal('NSFileWrapper.icon', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_icon);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// setIcon:
-  set icon(NSImage? value) {
+  set icon(NSImage$1? value) {
     objc.checkOsVersionInternal('NSFileWrapper.setIcon:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -113626,7 +113686,7 @@ extension NSFormCell$Methods on NSFormCell {
     return NSFormCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSFormCell initImageCell(NSImage? image) {
+  NSFormCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal('NSFormCell.initImageCell:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       object$.ref.retainAndReturnPointer(),
@@ -119167,16 +119227,16 @@ mixin NSIgnoreMisspelledWordsAdapter {
       );
 }
 
-extension type NSImage._(objc.ObjCObject object$)
+extension type NSImage$1._(objc.ObjCObject object$)
     implements objc.ObjCObject, objc.NSObject {
-  /// Constructs a [NSImage] that points to the same underlying object as [other].
-  NSImage.as(objc.ObjCObject other) : object$ = other {
+  /// Constructs a [NSImage$1] that points to the same underlying object as [other].
+  NSImage$1.as(objc.ObjCObject other) : object$ = other {
     objc.checkOsVersionInternal('NSImage', iOS: (false, (13, 0, 0)));
     assert(isA(object$));
   }
 
-  /// Constructs a [NSImage] that wraps the given raw object pointer.
-  NSImage.fromPointer(
+  /// Constructs a [NSImage$1] that wraps the given raw object pointer.
+  NSImage$1.fromPointer(
     ffi.Pointer<objc.ObjCObjectImpl> other, {
     bool retain = false,
     bool release = false,
@@ -119185,7 +119245,7 @@ extension type NSImage._(objc.ObjCObject object$)
     assert(isA(object$));
   }
 
-  /// Returns whether [obj] is an instance of [NSImage].
+  /// Returns whether [obj] is an instance of [NSImage$1].
   static bool isA(objc.ObjCObject? obj) => obj == null
       ? false
       : _objc_msgSend_19nvye5(
@@ -119194,18 +119254,18 @@ extension type NSImage._(objc.ObjCObject object$)
           _class_NSImage,
         );
 
-  static NSImage alloc() {
+  static NSImage$1 alloc() {
     final $ret = _objc_msgSend_151sglz(_class_NSImage, _sel_alloc);
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  static NSImage allocWithZone(ffi.Pointer<objc.NSZone> zone) {
+  static NSImage$1 allocWithZone(ffi.Pointer<objc.NSZone> zone) {
     final $ret = _objc_msgSend_1cwp428(
       _class_NSImage,
       _sel_allocWithZone_,
       zone,
     );
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
   static bool canInitWithPasteboard(NSPasteboard pasteboard) {
@@ -119220,7 +119280,7 @@ extension type NSImage._(objc.ObjCObject object$)
     );
   }
 
-  static NSImage? imageNamed(objc.NSString name) {
+  static NSImage$1? imageNamed(objc.NSString name) {
     objc.checkOsVersionInternal('NSImage.imageNamed:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       _class_NSImage,
@@ -119229,7 +119289,7 @@ extension type NSImage._(objc.ObjCObject object$)
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// imageTypes
@@ -119257,7 +119317,7 @@ extension type NSImage._(objc.ObjCObject object$)
     return objc.NSArray.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSImage imageWithSize(
+  static NSImage$1 imageWithSize(
     objc.CGSize size, {
     required bool flipped,
     required objc.ObjCBlock<ffi.Bool Function(objc.CGRect)> drawingHandler,
@@ -119274,10 +119334,10 @@ extension type NSImage._(objc.ObjCObject object$)
       flipped,
       drawingHandler.ref.pointer,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSImage? imageWithSymbolNameBundleVariableValue(
+  static NSImage$1? imageWithSymbolNameBundleVariableValue(
     objc.NSString name, {
     objc.NSBundle? bundle,
     required double variableValue,
@@ -119296,10 +119356,10 @@ extension type NSImage._(objc.ObjCObject object$)
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSImage? imageWithSymbolNameVariableValue(
+  static NSImage$1? imageWithSymbolNameVariableValue(
     objc.NSString name, {
     required double variableValue,
   }) {
@@ -119316,10 +119376,10 @@ extension type NSImage._(objc.ObjCObject object$)
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSImage? imageWithSystemSymbolNameAccessibilityDescription(
+  static NSImage$1? imageWithSystemSymbolNameAccessibilityDescription(
     objc.NSString name, {
     objc.NSString? accessibilityDescription,
   }) {
@@ -119336,10 +119396,10 @@ extension type NSImage._(objc.ObjCObject object$)
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSImage?
+  static NSImage$1?
   imageWithSystemSymbolNameVariableValueAccessibilityDescription(
     objc.NSString name, {
     required double variableValue,
@@ -119359,19 +119419,19 @@ extension type NSImage._(objc.ObjCObject object$)
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSImage new$() {
+  static NSImage$1 new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSImage, _sel_new);
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  /// Returns a new instance of NSImage constructed with the default `new` method.
-  NSImage() : this.as(new$().object$);
+  /// Returns a new instance of NSImage$1 constructed with the default `new` method.
+  NSImage$1() : this.as(new$().object$);
 }
 
-extension NSImage$Methods on NSImage {
+extension NSImage$1$Methods on NSImage$1 {
   ffi.Pointer<CGImage> CGImageForProposedRect(
     ffi.Pointer<objc.CGRect> proposedDestRect, {
     NSGraphicsContext? context,
@@ -119666,7 +119726,7 @@ extension NSImage$Methods on NSImage {
     );
   }
 
-  NSImage imageWithLocale(objc.NSLocale? locale) {
+  NSImage$1 imageWithLocale(objc.NSLocale? locale) {
     objc.checkOsVersionInternal(
       'NSImage.imageWithLocale:',
       iOS: (true, null),
@@ -119677,10 +119737,10 @@ extension NSImage$Methods on NSImage {
       _sel_imageWithLocale_,
       locale?.ref.pointer ?? ffi.nullptr,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage? imageWithSymbolConfiguration(
+  NSImage$1? imageWithSymbolConfiguration(
     NSImageSymbolConfiguration configuration,
   ) {
     objc.checkOsVersionInternal(
@@ -119695,10 +119755,10 @@ extension NSImage$Methods on NSImage {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage init() {
+  NSImage$1 init() {
     objc.checkOsVersionInternal(
       'NSImage.init',
       iOS: (false, (2, 0, 0)),
@@ -119708,10 +119768,10 @@ extension NSImage$Methods on NSImage {
       object$.ref.retainAndReturnPointer(),
       _sel_init,
     );
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage? initByReferencingFile(objc.NSString fileName) {
+  NSImage$1? initByReferencingFile(objc.NSString fileName) {
     objc.checkOsVersionInternal(
       'NSImage.initByReferencingFile:',
       iOS: (true, null),
@@ -119723,10 +119783,10 @@ extension NSImage$Methods on NSImage {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: false, release: true);
+        : NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage initByReferencingURL(objc.NSURL url) {
+  NSImage$1 initByReferencingURL(objc.NSURL url) {
     objc.checkOsVersionInternal(
       'NSImage.initByReferencingURL:',
       iOS: (true, null),
@@ -119736,10 +119796,10 @@ extension NSImage$Methods on NSImage {
       _sel_initByReferencingURL_,
       url.ref.pointer,
     );
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage initWithCGImage(
+  NSImage$1 initWithCGImage(
     ffi.Pointer<CGImage> cgImage, {
     required objc.CGSize size,
   }) {
@@ -119754,20 +119814,20 @@ extension NSImage$Methods on NSImage {
       cgImage,
       size,
     );
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage initWithCoder(objc.NSCoder coder) {
+  NSImage$1 initWithCoder(objc.NSCoder coder) {
     objc.checkOsVersionInternal('NSImage.initWithCoder:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       object$.ref.retainAndReturnPointer(),
       _sel_initWithCoder_,
       coder.ref.pointer,
     );
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage? initWithContentsOfFile(objc.NSString fileName) {
+  NSImage$1? initWithContentsOfFile(objc.NSString fileName) {
     objc.checkOsVersionInternal(
       'NSImage.initWithContentsOfFile:',
       iOS: (true, null),
@@ -119779,10 +119839,10 @@ extension NSImage$Methods on NSImage {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: false, release: true);
+        : NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage? initWithContentsOfURL(objc.NSURL url) {
+  NSImage$1? initWithContentsOfURL(objc.NSURL url) {
     objc.checkOsVersionInternal(
       'NSImage.initWithContentsOfURL:',
       iOS: (true, null),
@@ -119794,10 +119854,10 @@ extension NSImage$Methods on NSImage {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: false, release: true);
+        : NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage? initWithData(objc.NSData data) {
+  NSImage$1? initWithData(objc.NSData data) {
     objc.checkOsVersionInternal('NSImage.initWithData:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       object$.ref.retainAndReturnPointer(),
@@ -119806,10 +119866,10 @@ extension NSImage$Methods on NSImage {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: false, release: true);
+        : NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage? initWithDataIgnoringOrientation(objc.NSData data) {
+  NSImage$1? initWithDataIgnoringOrientation(objc.NSData data) {
     objc.checkOsVersionInternal(
       'NSImage.initWithDataIgnoringOrientation:',
       iOS: (true, null),
@@ -119822,10 +119882,10 @@ extension NSImage$Methods on NSImage {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: false, release: true);
+        : NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage initWithIconRef(ffi.Pointer<OpaqueIconRef> iconRef) {
+  NSImage$1 initWithIconRef(ffi.Pointer<OpaqueIconRef> iconRef) {
     objc.checkOsVersionInternal(
       'NSImage.initWithIconRef:',
       iOS: (true, null),
@@ -119836,10 +119896,10 @@ extension NSImage$Methods on NSImage {
       _sel_initWithIconRef_,
       iconRef,
     );
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage? initWithPasteboard(NSPasteboard pasteboard) {
+  NSImage$1? initWithPasteboard(NSPasteboard pasteboard) {
     objc.checkOsVersionInternal(
       'NSImage.initWithPasteboard:',
       iOS: (true, null),
@@ -119851,17 +119911,17 @@ extension NSImage$Methods on NSImage {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: false, release: true);
+        : NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImage initWithSize(objc.CGSize size) {
+  NSImage$1 initWithSize(objc.CGSize size) {
     objc.checkOsVersionInternal('NSImage.initWithSize:', iOS: (true, null));
     final $ret = _objc_msgSend_1c2zpn3(
       object$.ref.retainAndReturnPointer(),
       _sel_initWithSize_,
       size,
     );
-    return NSImage.fromPointer($ret, retain: false, release: true);
+    return NSImage$1.fromPointer($ret, retain: false, release: true);
   }
 
   /// isTemplate
@@ -120381,7 +120441,7 @@ extension NSImageCell$Methods on NSImageCell {
     return NSImageCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSImageCell initImageCell(NSImage? image) {
+  NSImageCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSImageCell.initImageCell:',
       iOS: (true, null),
@@ -120481,7 +120541,7 @@ extension type NSImageDelegate._(objc.ObjCProtocol object$)
 
 extension NSImageDelegate$Methods on NSImageDelegate {
   void imageDidLoadPartOfRepresentationWithValidRows(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep didLoadPartOfRepresentation,
     required int withValidRows,
   }) {
@@ -120509,7 +120569,7 @@ extension NSImageDelegate$Methods on NSImageDelegate {
   }
 
   void imageDidLoadRepresentationWithStatus(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep didLoadRepresentation,
     required NSImageLoadStatus withStatus,
   }) {
@@ -120537,7 +120597,7 @@ extension NSImageDelegate$Methods on NSImageDelegate {
   }
 
   void imageDidLoadRepresentationHeader(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep didLoadRepresentationHeader,
   }) {
     objc.checkOsVersionInternal(
@@ -120563,7 +120623,7 @@ extension NSImageDelegate$Methods on NSImageDelegate {
   }
 
   void imageWillLoadRepresentation(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep willLoadRepresentation,
   }) {
     objc.checkOsVersionInternal(
@@ -120588,7 +120648,7 @@ extension NSImageDelegate$Methods on NSImageDelegate {
     );
   }
 
-  NSImage? imageDidNotDraw(NSImage sender, {required objc.CGRect inRect}) {
+  NSImage$1? imageDidNotDraw(NSImage$1 sender, {required objc.CGRect inRect}) {
     objc.checkOsVersionInternal(
       'NSImageDelegate.imageDidNotDraw:inRect:',
       iOS: (true, null),
@@ -120610,7 +120670,7 @@ extension NSImageDelegate$Methods on NSImageDelegate {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 }
 
@@ -120618,24 +120678,24 @@ abstract interface class NSImageDelegateSpec {}
 
 abstract interface class NSImageDelegateOptional {
   void imageDidLoadPartOfRepresentationWithValidRows(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep didLoadPartOfRepresentation,
     required int withValidRows,
   });
   void imageDidLoadRepresentationWithStatus(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep didLoadRepresentation,
     required NSImageLoadStatus withStatus,
   });
   void imageDidLoadRepresentationHeader(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep didLoadRepresentationHeader,
   });
   void imageWillLoadRepresentation(
-    NSImage image, {
+    NSImage$1 image, {
     required NSImageRep willLoadRepresentation,
   });
-  NSImage? imageDidNotDraw(NSImage sender, {required objc.CGRect inRect});
+  NSImage$1? imageDidNotDraw(NSImage$1 sender, {required objc.CGRect inRect});
 }
 
 mixin NSImageDelegateDefaults implements NSImageDelegateOptional {
@@ -120682,7 +120742,7 @@ interface class NSImageDelegate$Builder {
                       .isAvailable &&
                   optionalImplementation != null
               ? (
-                  NSImage image,
+                  NSImage$1 image,
                   NSImageRep didLoadPartOfRepresentation,
                   int withValidRows,
                 ) {
@@ -120703,7 +120763,7 @@ interface class NSImageDelegate$Builder {
                   .isAvailable &&
               optionalImplementation != null
           ? (
-              NSImage image,
+              NSImage$1 image,
               NSImageRep didLoadRepresentation,
               NSImageLoadStatus withStatus,
             ) {
@@ -120719,7 +120779,7 @@ interface class NSImageDelegate$Builder {
       builder,
       NSImageDelegate$Builder.image_didLoadRepresentationHeader_.isAvailable &&
               optionalImplementation != null
-          ? (NSImage image, NSImageRep didLoadRepresentationHeader) {
+          ? (NSImage$1 image, NSImageRep didLoadRepresentationHeader) {
               optionalImplementation.imageDidLoadRepresentationHeader(
                 image,
                 didLoadRepresentationHeader: didLoadRepresentationHeader,
@@ -120731,7 +120791,7 @@ interface class NSImageDelegate$Builder {
       builder,
       NSImageDelegate$Builder.image_willLoadRepresentation_.isAvailable &&
               optionalImplementation != null
-          ? (NSImage image, NSImageRep willLoadRepresentation) {
+          ? (NSImage$1 image, NSImageRep willLoadRepresentation) {
               optionalImplementation.imageWillLoadRepresentation(
                 image,
                 willLoadRepresentation: willLoadRepresentation,
@@ -120743,7 +120803,7 @@ interface class NSImageDelegate$Builder {
       builder,
       NSImageDelegate$Builder.imageDidNotDraw_inRect_.isAvailable &&
               optionalImplementation != null
-          ? (NSImage sender, objc.CGRect inRect) =>
+          ? (NSImage$1 sender, objc.CGRect inRect) =>
                 optionalImplementation.imageDidNotDraw(sender, inRect: inRect)
           : null,
     );
@@ -120751,7 +120811,7 @@ interface class NSImageDelegate$Builder {
   }
 
   static final image_didLoadPartOfRepresentation_withValidRows_ =
-      objc.ObjCProtocolMethod<void Function(NSImage, NSImageRep, int)>(
+      objc.ObjCProtocolMethod<void Function(NSImage$1, NSImageRep, int)>(
         _protocol_NSImageDelegate,
         _sel_image_didLoadPartOfRepresentation_withValidRows_,
         ffi.Native.addressOf<
@@ -120772,11 +120832,11 @@ interface class NSImageDelegate$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (void Function(NSImage, NSImageRep, int) func) =>
+        (void Function(NSImage$1, NSImageRep, int) func) =>
             ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger.fromFunction(
               (
                 ffi.Pointer<ffi.Void> _,
-                NSImage arg1,
+                NSImage$1 arg1,
                 NSImageRep arg2,
                 int arg3,
               ) => func(arg1, arg2, arg3),
@@ -120784,7 +120844,7 @@ interface class NSImageDelegate$Builder {
       );
   static final image_didLoadRepresentation_withStatus_ =
       objc.ObjCProtocolMethod<
-        void Function(NSImage, NSImageRep, NSImageLoadStatus)
+        void Function(NSImage$1, NSImageRep, NSImageLoadStatus)
       >(
         _protocol_NSImageDelegate,
         _sel_image_didLoadRepresentation_withStatus_,
@@ -120806,18 +120866,18 @@ interface class NSImageDelegate$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (void Function(NSImage, NSImageRep, NSImageLoadStatus) func) =>
+        (void Function(NSImage$1, NSImageRep, NSImageLoadStatus) func) =>
             ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadStatus.fromFunction(
               (
                 ffi.Pointer<ffi.Void> _,
-                NSImage arg1,
+                NSImage$1 arg1,
                 NSImageRep arg2,
                 NSImageLoadStatus arg3,
               ) => func(arg1, arg2, arg3),
             ),
       );
   static final image_didLoadRepresentationHeader_ =
-      objc.ObjCProtocolMethod<void Function(NSImage, NSImageRep)>(
+      objc.ObjCProtocolMethod<void Function(NSImage$1, NSImageRep)>(
         _protocol_NSImageDelegate,
         _sel_image_didLoadRepresentationHeader_,
         ffi.Native.addressOf<
@@ -120837,14 +120897,14 @@ interface class NSImageDelegate$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (void Function(NSImage, NSImageRep) func) =>
+        (void Function(NSImage$1, NSImageRep) func) =>
             ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep.fromFunction(
-              (ffi.Pointer<ffi.Void> _, NSImage arg1, NSImageRep arg2) =>
+              (ffi.Pointer<ffi.Void> _, NSImage$1 arg1, NSImageRep arg2) =>
                   func(arg1, arg2),
             ),
       );
   static final image_willLoadRepresentation_ =
-      objc.ObjCProtocolMethod<void Function(NSImage, NSImageRep)>(
+      objc.ObjCProtocolMethod<void Function(NSImage$1, NSImageRep)>(
         _protocol_NSImageDelegate,
         _sel_image_willLoadRepresentation_,
         ffi.Native.addressOf<
@@ -120864,14 +120924,14 @@ interface class NSImageDelegate$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (void Function(NSImage, NSImageRep) func) =>
+        (void Function(NSImage$1, NSImageRep) func) =>
             ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep.fromFunction(
-              (ffi.Pointer<ffi.Void> _, NSImage arg1, NSImageRep arg2) =>
+              (ffi.Pointer<ffi.Void> _, NSImage$1 arg1, NSImageRep arg2) =>
                   func(arg1, arg2),
             ),
       );
   static final imageDidNotDraw_inRect_ =
-      objc.ObjCProtocolMethod<NSImage? Function(NSImage, objc.CGRect)>(
+      objc.ObjCProtocolMethod<NSImage$1? Function(NSImage$1, objc.CGRect)>(
         _protocol_NSImageDelegate,
         _sel_imageDidNotDraw_inRect_,
         ffi.Native.addressOf<
@@ -120891,9 +120951,9 @@ interface class NSImageDelegate$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (NSImage? Function(NSImage, objc.CGRect) func) =>
+        (NSImage$1? Function(NSImage$1, objc.CGRect) func) =>
             ObjCBlock_NSImage_ffiVoid_NSImage_NSRect.fromFunction(
-              (ffi.Pointer<ffi.Void> _, NSImage arg1, objc.CGRect arg2) =>
+              (ffi.Pointer<ffi.Void> _, NSImage$1 arg1, objc.CGRect arg2) =>
                   func(arg1, arg2),
             ),
       );
@@ -122091,7 +122151,7 @@ extension type NSImageView._(objc.ObjCObject object$)
         : NSView.fromPointer($ret, retain: true, release: true);
   }
 
-  static NSImageView imageViewWithImage(NSImage image) {
+  static NSImageView imageViewWithImage(NSImage$1 image) {
     objc.checkOsVersionInternal(
       'NSImageView.imageViewWithImage:',
       iOS: (true, null),
@@ -122247,12 +122307,12 @@ extension NSImageView$Methods on NSImageView {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSImageView.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// imageAlignment
@@ -122483,7 +122543,7 @@ extension NSImageView$Methods on NSImageView {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal('NSImageView.setImage:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -122691,14 +122751,14 @@ extension NSInputManager$Methods on NSInputManager {
     );
   }
 
-  NSImage image() {
+  NSImage$1 image() {
     objc.checkOsVersionInternal(
       'NSInputManager.image',
       iOS: (true, null),
       macOS: (false, (10, 0, 0)),
     );
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSInputManager init() {
@@ -123679,7 +123739,7 @@ interface class NSInputServiceProvider$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -123944,7 +124004,7 @@ interface class NSInputServiceProvider$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -123967,7 +124027,7 @@ interface class NSInputServiceProvider$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -123990,7 +124050,7 @@ interface class NSInputServiceProvider$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -130631,7 +130691,7 @@ extension NSLevelIndicator$Methods on NSLevelIndicator {
   }
 
   /// ratingImage
-  NSImage? get ratingImage {
+  NSImage$1? get ratingImage {
     objc.checkOsVersionInternal(
       'NSLevelIndicator.ratingImage',
       iOS: (true, null),
@@ -130640,11 +130700,11 @@ extension NSLevelIndicator$Methods on NSLevelIndicator {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_ratingImage);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// ratingPlaceholderImage
-  NSImage? get ratingPlaceholderImage {
+  NSImage$1? get ratingPlaceholderImage {
     objc.checkOsVersionInternal(
       'NSLevelIndicator.ratingPlaceholderImage',
       iOS: (true, null),
@@ -130656,7 +130716,7 @@ extension NSLevelIndicator$Methods on NSLevelIndicator {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   objc.CGRect rectOfTickMarkAtIndex(int index) {
@@ -130818,7 +130878,7 @@ extension NSLevelIndicator$Methods on NSLevelIndicator {
   }
 
   /// setRatingImage:
-  set ratingImage(NSImage? value) {
+  set ratingImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSLevelIndicator.setRatingImage:',
       iOS: (true, null),
@@ -130832,7 +130892,7 @@ extension NSLevelIndicator$Methods on NSLevelIndicator {
   }
 
   /// setRatingPlaceholderImage:
-  set ratingPlaceholderImage(NSImage? value) {
+  set ratingPlaceholderImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSLevelIndicator.setRatingPlaceholderImage:',
       iOS: (true, null),
@@ -131057,7 +131117,7 @@ extension NSLevelIndicatorCell$Methods on NSLevelIndicatorCell {
     return NSLevelIndicatorCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSLevelIndicatorCell initImageCell(NSImage? image) {
+  NSLevelIndicatorCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSLevelIndicatorCell.initImageCell:',
       iOS: (true, null),
@@ -135071,7 +135131,7 @@ extension type NSMenu._(objc.ObjCObject object$)
   static NSMenu paletteMenuWithColorsTitlesTemplateImageSelectionHandler(
     objc.NSArray colors, {
     required objc.NSArray titles,
-    required NSImage templateImage,
+    required NSImage$1 templateImage,
     objc.ObjCBlock<ffi.Void Function(NSMenu)>? selectionHandler,
   }) {
     objc.checkOsVersionInternal(
@@ -136743,12 +136803,12 @@ extension NSMenuItem$Methods on NSMenuItem {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSMenuItem.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// indentationLevel
@@ -136908,7 +136968,7 @@ extension NSMenuItem$Methods on NSMenuItem {
   }
 
   /// mixedStateImage
-  NSImage get mixedStateImage {
+  NSImage$1 get mixedStateImage {
     objc.checkOsVersionInternal(
       'NSMenuItem.mixedStateImage',
       iOS: (true, null),
@@ -136917,23 +136977,23 @@ extension NSMenuItem$Methods on NSMenuItem {
       object$.ref.pointer,
       _sel_mixedStateImage,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// offStateImage
-  NSImage? get offStateImage {
+  NSImage$1? get offStateImage {
     objc.checkOsVersionInternal('NSMenuItem.offStateImage', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_offStateImage);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// onStateImage
-  NSImage get onStateImage {
+  NSImage$1 get onStateImage {
     objc.checkOsVersionInternal('NSMenuItem.onStateImage', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_onStateImage);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// parentItem
@@ -137118,7 +137178,7 @@ extension NSMenuItem$Methods on NSMenuItem {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal('NSMenuItem.setImage:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -137173,7 +137233,7 @@ extension NSMenuItem$Methods on NSMenuItem {
   }
 
   /// setMixedStateImage:
-  set mixedStateImage(NSImage value) {
+  set mixedStateImage(NSImage$1 value) {
     objc.checkOsVersionInternal(
       'NSMenuItem.setMixedStateImage:',
       iOS: (true, null),
@@ -137186,7 +137246,7 @@ extension NSMenuItem$Methods on NSMenuItem {
   }
 
   /// setOffStateImage:
-  set offStateImage(NSImage? value) {
+  set offStateImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSMenuItem.setOffStateImage:',
       iOS: (true, null),
@@ -137199,7 +137259,7 @@ extension NSMenuItem$Methods on NSMenuItem {
   }
 
   /// setOnStateImage:
-  set onStateImage(NSImage value) {
+  set onStateImage(NSImage$1 value) {
     objc.checkOsVersionInternal(
       'NSMenuItem.setOnStateImage:',
       iOS: (true, null),
@@ -137796,7 +137856,7 @@ extension NSMenuItemCell$Methods on NSMenuItemCell {
     return NSMenuItemCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSMenuItemCell initImageCell(NSImage? image) {
+  NSMenuItemCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSMenuItemCell.initImageCell:',
       iOS: (true, null),
@@ -155048,7 +155108,7 @@ extension NSPathCell$Methods on NSPathCell {
     return NSPathCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSPathCell initImageCell(NSImage? image) {
+  NSPathCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal('NSPathCell.initImageCell:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       object$.ref.retainAndReturnPointer(),
@@ -155660,12 +155720,12 @@ extension NSPathComponentCell$Methods on NSPathComponentCell {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSPathComponentCell.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSPathComponentCell init() {
@@ -155681,7 +155741,7 @@ extension NSPathComponentCell$Methods on NSPathComponentCell {
     return NSPathComponentCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSPathComponentCell initImageCell(NSImage? image) {
+  NSPathComponentCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSPathComponentCell.initImageCell:',
       iOS: (true, null),
@@ -155721,7 +155781,7 @@ extension NSPathComponentCell$Methods on NSPathComponentCell {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSPathComponentCell.setImage:',
       iOS: (true, null),
@@ -156783,12 +156843,12 @@ extension NSPathControlItem$Methods on NSPathControlItem {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal('NSPathControlItem.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSPathControlItem init() {
@@ -156818,7 +156878,7 @@ extension NSPathControlItem$Methods on NSPathControlItem {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSPathControlItem.setImage:',
       iOS: (true, null),
@@ -157514,7 +157574,7 @@ extension NSPickerTouchBarItem$Methods on NSPickerTouchBarItem {
   }
 
   /// collapsedRepresentationImage
-  NSImage? get collapsedRepresentationImage {
+  NSImage$1? get collapsedRepresentationImage {
     objc.checkOsVersionInternal(
       'NSPickerTouchBarItem.collapsedRepresentationImage',
       iOS: (false, (13, 0, 0)),
@@ -157526,7 +157586,7 @@ extension NSPickerTouchBarItem$Methods on NSPickerTouchBarItem {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// collapsedRepresentationLabel
@@ -157571,7 +157631,7 @@ extension NSPickerTouchBarItem$Methods on NSPickerTouchBarItem {
     return objc.NSString.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage? imageAtIndex(int index) {
+  NSImage$1? imageAtIndex(int index) {
     objc.checkOsVersionInternal(
       'NSPickerTouchBarItem.imageAtIndex:',
       iOS: (false, (13, 0, 0)),
@@ -157584,7 +157644,7 @@ extension NSPickerTouchBarItem$Methods on NSPickerTouchBarItem {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSPickerTouchBarItem init() {
@@ -157725,7 +157785,7 @@ extension NSPickerTouchBarItem$Methods on NSPickerTouchBarItem {
   }
 
   /// setCollapsedRepresentationImage:
-  set collapsedRepresentationImage(NSImage? value) {
+  set collapsedRepresentationImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSPickerTouchBarItem.setCollapsedRepresentationImage:',
       iOS: (false, (13, 0, 0)),
@@ -157804,7 +157864,7 @@ extension NSPickerTouchBarItem$Methods on NSPickerTouchBarItem {
     );
   }
 
-  void setImage(NSImage? image, {required int atIndex}) {
+  void setImage(NSImage$1? image, {required int atIndex}) {
     objc.checkOsVersionInternal(
       'NSPickerTouchBarItem.setImage:atIndex:',
       iOS: (false, (13, 0, 0)),
@@ -158063,7 +158123,7 @@ extension type NSPopUpButton._(objc.ObjCObject object$)
   }
 
   static NSPopUpButton buttonWithImage(
-    NSImage image, {
+    NSImage$1 image, {
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -158084,7 +158144,7 @@ extension type NSPopUpButton._(objc.ObjCObject object$)
 
   static NSPopUpButton buttonWithTitleImageTargetAction(
     objc.NSString title, {
-    required NSImage image,
+    required NSImage$1 image,
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -158201,7 +158261,7 @@ extension type NSPopUpButton._(objc.ObjCObject object$)
   }
 
   static NSPopUpButton pullDownButtonWithImage(
-    NSImage image, {
+    NSImage$1 image, {
     required NSMenu menu,
   }) {
     objc.checkOsVersionInternal(
@@ -158220,7 +158280,7 @@ extension type NSPopUpButton._(objc.ObjCObject object$)
 
   static NSPopUpButton pullDownButtonWithTitleImageMenu(
     objc.NSString title, {
-    required NSImage image,
+    required NSImage$1 image,
     required NSMenu menu,
   }) {
     objc.checkOsVersionInternal(
@@ -159034,7 +159094,7 @@ extension NSPopUpButtonCell$Methods on NSPopUpButtonCell {
     return NSPopUpButtonCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSPopUpButtonCell initImageCell(NSImage? image) {
+  NSPopUpButtonCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSPopUpButtonCell.initImageCell:',
       iOS: (true, null),
@@ -160533,7 +160593,7 @@ extension NSPopoverTouchBarItem$Methods on NSPopoverTouchBarItem {
   }
 
   /// collapsedRepresentationImage
-  NSImage? get collapsedRepresentationImage {
+  NSImage$1? get collapsedRepresentationImage {
     objc.checkOsVersionInternal(
       'NSPopoverTouchBarItem.collapsedRepresentationImage',
       iOS: (false, (13, 0, 0)),
@@ -160545,7 +160605,7 @@ extension NSPopoverTouchBarItem$Methods on NSPopoverTouchBarItem {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// collapsedRepresentationLabel
@@ -160694,7 +160754,7 @@ extension NSPopoverTouchBarItem$Methods on NSPopoverTouchBarItem {
   }
 
   /// setCollapsedRepresentationImage:
-  set collapsedRepresentationImage(NSImage? value) {
+  set collapsedRepresentationImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSPopoverTouchBarItem.setCollapsedRepresentationImage:',
       iOS: (false, (13, 0, 0)),
@@ -161975,7 +162035,7 @@ interface class NSPreviewRepresentableActivityItem$Builder {
       );
 
   /// item
-  static final item = objc.ObjCProtocolMethod<Dartinstancetype Function()>(
+  static final item = objc.ObjCProtocolMethod<Dartinstancetype$1 Function()>(
     _protocol_NSPreviewRepresentableActivityItem,
     _sel_item,
     ffi.Native.addressOf<
@@ -161993,7 +162053,7 @@ interface class NSPreviewRepresentableActivityItem$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (Dartinstancetype Function() func) =>
+    (Dartinstancetype$1 Function() func) =>
         ObjCBlock_objcObjCObjectImpl_ffiVoid.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
@@ -162137,8 +162197,8 @@ extension NSPreviewRepresentingActivityItem$Methods
   NSPreviewRepresentingActivityItem initWithItemTitleImageIcon(
     objc.ObjCObject item, {
     objc.NSString? title,
-    NSImage? image,
-    NSImage? icon,
+    NSImage$1? image,
+    NSImage$1? icon,
   }) {
     objc.checkOsVersionInternal(
       'NSPreviewRepresentingActivityItem.initWithItem:title:image:icon:',
@@ -164025,7 +164085,7 @@ interface class NSPrintPanelAccessorizing$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (objc.NSSet Function() func) => ObjCBlock_NSSet_ffiVoid.fromFunction(
+        (objc.NSSet Function() func) => ObjCBlock_NSSet_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -168217,10 +168277,10 @@ extension NSRulerMarker$Methods on NSRulerMarker {
   }
 
   /// image
-  NSImage get image {
+  NSImage$1 get image {
     objc.checkOsVersionInternal('NSRulerMarker.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// imageOrigin
@@ -168297,7 +168357,7 @@ extension NSRulerMarker$Methods on NSRulerMarker {
   NSRulerMarker initWithRulerView(
     NSRulerView ruler, {
     required double markerLocation,
-    required NSImage image,
+    required NSImage$1 image,
     required objc.CGPoint imageOrigin,
   }) {
     objc.checkOsVersionInternal(
@@ -168369,7 +168429,7 @@ extension NSRulerMarker$Methods on NSRulerMarker {
   }
 
   /// setImage:
-  set image(NSImage value) {
+  set image(NSImage$1 value) {
     objc.checkOsVersionInternal('NSRulerMarker.setImage:', iOS: (true, null));
     _objc_msgSend_xtuoz7(
       object$.ref.pointer,
@@ -169568,12 +169628,12 @@ extension NSRunningApplication$Methods on NSRunningApplication {
   }
 
   /// icon
-  NSImage? get icon {
+  NSImage$1? get icon {
     objc.checkOsVersionInternal('NSRunningApplication.icon', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_icon);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSRunningApplication init() {
@@ -171323,7 +171383,7 @@ extension NSScreen$Methods on NSScreen {
   }
 }
 
-extension NSScripting on NSWindow {
+extension NSScripting$1 on NSWindow {
   objc.ObjCObject? handleCloseScriptCommand(
     foundation0.NSCloseCommand command,
   ) {
@@ -171448,7 +171508,7 @@ extension NSScripting on NSWindow {
   }
 }
 
-extension NSScripting$1 on NSApplication {
+extension NSScripting$2 on NSApplication {
   /// orderedDocuments
   objc.NSArray get orderedDocuments {
     objc.checkOsVersionInternal(
@@ -171476,7 +171536,7 @@ extension NSScripting$1 on NSApplication {
   }
 }
 
-extension NSScripting$2 on NSDocument {
+extension NSScripting$3 on NSDocument {
   objc.ObjCObject? handleCloseScriptCommand(
     foundation0.NSCloseCommand command,
   ) {
@@ -175653,13 +175713,13 @@ extension type NSScrubberImageItemView._(objc.ObjCObject object$)
 
 extension NSScrubberImageItemView$Methods on NSScrubberImageItemView {
   /// image
-  NSImage get image {
+  NSImage$1 get image {
     objc.checkOsVersionInternal(
       'NSScrubberImageItemView.image',
       iOS: (true, null),
     );
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// imageAlignment
@@ -175736,7 +175796,7 @@ extension NSScrubberImageItemView$Methods on NSScrubberImageItemView {
   }
 
   /// setImage:
-  set image(NSImage value) {
+  set image(NSImage$1 value) {
     objc.checkOsVersionInternal(
       'NSScrubberImageItemView.setImage:',
       iOS: (true, null),
@@ -177653,7 +177713,7 @@ extension NSSearchFieldCell$Methods on NSSearchFieldCell {
     return NSSearchFieldCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSSearchFieldCell initImageCell(NSImage? image) {
+  NSSearchFieldCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSSearchFieldCell.initImageCell:',
       iOS: (true, null),
@@ -179811,7 +179871,7 @@ extension NSSecureTextFieldCell$Methods on NSSecureTextFieldCell {
     );
   }
 
-  NSSecureTextFieldCell initImageCell(NSImage? image) {
+  NSSecureTextFieldCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSSecureTextFieldCell.initImageCell:',
       iOS: (true, null),
@@ -180065,7 +180125,7 @@ extension NSSegmentedCell$Methods on NSSegmentedCell {
     );
   }
 
-  NSImage? imageForSegment(int segment) {
+  NSImage$1? imageForSegment(int segment) {
     objc.checkOsVersionInternal(
       'NSSegmentedCell.imageForSegment:',
       iOS: (true, null),
@@ -180077,7 +180137,7 @@ extension NSSegmentedCell$Methods on NSSegmentedCell {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSImageScaling imageScalingForSegment(int segment) {
@@ -180107,7 +180167,7 @@ extension NSSegmentedCell$Methods on NSSegmentedCell {
     return NSSegmentedCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSSegmentedCell initImageCell(NSImage? image) {
+  NSSegmentedCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSSegmentedCell.initImageCell:',
       iOS: (true, null),
@@ -180270,7 +180330,7 @@ extension NSSegmentedCell$Methods on NSSegmentedCell {
     );
   }
 
-  void setImage(NSImage? image, {required int forSegment}) {
+  void setImage(NSImage$1? image, {required int forSegment}) {
     objc.checkOsVersionInternal(
       'NSSegmentedCell.setImage:forSegment:',
       iOS: (true, null),
@@ -180690,7 +180750,7 @@ extension NSSegmentedControl$Methods on NSSegmentedControl {
           );
   }
 
-  NSImage? imageForSegment(int segment) {
+  NSImage$1? imageForSegment(int segment) {
     objc.checkOsVersionInternal(
       'NSSegmentedControl.imageForSegment:',
       iOS: (true, null),
@@ -180702,7 +180762,7 @@ extension NSSegmentedControl$Methods on NSSegmentedControl {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSImageScaling imageScalingForSegment(int segment) {
@@ -180974,7 +181034,7 @@ extension NSSegmentedControl$Methods on NSSegmentedControl {
     );
   }
 
-  void setImage(NSImage? image, {required int forSegment}) {
+  void setImage(NSImage$1? image, {required int forSegment}) {
     objc.checkOsVersionInternal(
       'NSSegmentedControl.setImage:forSegment:',
       iOS: (true, null),
@@ -183456,7 +183516,7 @@ extension NSSharingService$Methods on NSSharingService {
   }
 
   /// alternateImage
-  NSImage? get alternateImage {
+  NSImage$1? get alternateImage {
     objc.checkOsVersionInternal(
       'NSSharingService.alternateImage',
       iOS: (true, null),
@@ -183467,7 +183527,7 @@ extension NSSharingService$Methods on NSSharingService {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// attachmentFileURLs
@@ -183512,10 +183572,10 @@ extension NSSharingService$Methods on NSSharingService {
   }
 
   /// image
-  NSImage get image {
+  NSImage$1 get image {
     objc.checkOsVersionInternal('NSSharingService.image', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSSharingService init() {
@@ -183533,8 +183593,8 @@ extension NSSharingService$Methods on NSSharingService {
 
   NSSharingService initWithTitle(
     objc.NSString title, {
-    required NSImage image,
-    NSImage? alternateImage,
+    required NSImage$1 image,
+    NSImage$1? alternateImage,
     required objc.ObjCBlock<ffi.Void Function()> handler,
   }) {
     objc.checkOsVersionInternal(
@@ -183864,7 +183924,7 @@ extension NSSharingServiceDelegate$Methods on NSSharingServiceDelegate {
         : NSWindow.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage? sharingServiceTransitionImageForShareItemContentRect(
+  NSImage$1? sharingServiceTransitionImageForShareItemContentRect(
     NSSharingService sharingService, {
     required objc.ObjCObject transitionImageForShareItem,
     required ffi.Pointer<objc.CGRect> contentRect,
@@ -183891,7 +183951,7 @@ extension NSSharingServiceDelegate$Methods on NSSharingServiceDelegate {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   void sharingServiceWillShareItems(
@@ -183946,7 +184006,7 @@ abstract interface class NSSharingServiceDelegateOptional {
     required objc.NSArray sourceWindowForShareItems,
     required ffi.Pointer<ffi.Long> sharingContentScope,
   });
-  NSImage? sharingServiceTransitionImageForShareItemContentRect(
+  NSImage$1? sharingServiceTransitionImageForShareItemContentRect(
     NSSharingService sharingService, {
     required objc.ObjCObject transitionImageForShareItem,
     required ffi.Pointer<objc.CGRect> contentRect,
@@ -184313,7 +184373,7 @@ interface class NSSharingServiceDelegate$Builder {
       );
   static final sharingService_transitionImageForShareItem_contentRect_ =
       objc.ObjCProtocolMethod<
-        NSImage? Function(
+        NSImage$1? Function(
           NSSharingService,
           objc.ObjCObject,
           ffi.Pointer<objc.CGRect>,
@@ -184340,7 +184400,7 @@ interface class NSSharingServiceDelegate$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage? Function(
+          NSImage$1? Function(
             NSSharingService,
             objc.ObjCObject,
             ffi.Pointer<objc.CGRect>,
@@ -185722,7 +185782,7 @@ extension type NSSharingServicePickerTouchBarItem._(objc.ObjCObject object$)
 extension NSSharingServicePickerTouchBarItem$Methods
     on NSSharingServicePickerTouchBarItem {
   /// buttonImage
-  NSImage? get buttonImage {
+  NSImage$1? get buttonImage {
     objc.checkOsVersionInternal(
       'NSSharingServicePickerTouchBarItem.buttonImage',
       iOS: (true, null),
@@ -185730,7 +185790,7 @@ extension NSSharingServicePickerTouchBarItem$Methods
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_buttonImage);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// buttonTitle
@@ -185824,7 +185884,7 @@ extension NSSharingServicePickerTouchBarItem$Methods
   }
 
   /// setButtonImage:
-  set buttonImage(NSImage? value) {
+  set buttonImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSSharingServicePickerTouchBarItem.setButtonImage:',
       iOS: (true, null),
@@ -186962,7 +187022,7 @@ extension type NSSliderAccessory._(objc.ObjCObject object$)
           _class_NSSliderAccessory,
         );
 
-  static NSSliderAccessory accessoryWithImage(NSImage image) {
+  static NSSliderAccessory accessoryWithImage(NSImage$1 image) {
     objc.checkOsVersionInternal(
       'NSSliderAccessory.accessoryWithImage:',
       iOS: (false, (13, 0, 0)),
@@ -187434,7 +187494,7 @@ extension NSSliderCell$Methods on NSSliderCell {
     return NSSliderCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSSliderCell initImageCell(NSImage? image) {
+  NSSliderCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSSliderCell.initImageCell:',
       iOS: (true, null),
@@ -187616,17 +187676,17 @@ extension NSSliderCellVerticalGetter on NSSliderCell {
 extension NSSliderConvenience on NSSlider {}
 
 extension NSSliderDeprecated on NSSlider {
-  NSImage image() {
+  NSImage$1 image() {
     objc.checkOsVersionInternal(
       'NSSlider.image',
       iOS: (true, null),
       macOS: (false, (10, 0, 0)),
     );
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  void setImage(NSImage backgroundImage) {
+  void setImage(NSImage$1 backgroundImage) {
     objc.checkOsVersionInternal(
       'NSSlider.setImage:',
       iOS: (true, null),
@@ -202643,7 +202703,7 @@ extension type NSStatusBarButton._(objc.ObjCObject object$)
   }
 
   static NSStatusBarButton buttonWithImage(
-    NSImage image, {
+    NSImage$1 image, {
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -202664,7 +202724,7 @@ extension type NSStatusBarButton._(objc.ObjCObject object$)
 
   static NSStatusBarButton buttonWithTitleImageTargetAction(
     objc.NSString title, {
-    required NSImage image,
+    required NSImage$1 image,
     objc.ObjCObject? target,
     required ffi.Pointer<objc.ObjCSelector> action,
   }) {
@@ -203059,7 +203119,7 @@ extension NSStatusItemDeprecated on NSStatusItem {
   }
 
   /// alternateImage
-  NSImage? get alternateImage {
+  NSImage$1? get alternateImage {
     objc.checkOsVersionInternal(
       'NSStatusItem.alternateImage',
       iOS: (true, null),
@@ -203071,7 +203131,7 @@ extension NSStatusItemDeprecated on NSStatusItem {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// attributedTitle
@@ -203132,7 +203192,7 @@ extension NSStatusItemDeprecated on NSStatusItem {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal(
       'NSStatusItem.image',
       iOS: (true, null),
@@ -203141,7 +203201,7 @@ extension NSStatusItemDeprecated on NSStatusItem {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// isEnabled
@@ -203187,7 +203247,7 @@ extension NSStatusItemDeprecated on NSStatusItem {
   }
 
   /// setAlternateImage:
-  set alternateImage(NSImage? value) {
+  set alternateImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSStatusItem.setAlternateImage:',
       iOS: (true, null),
@@ -203245,7 +203305,7 @@ extension NSStatusItemDeprecated on NSStatusItem {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSStatusItem.setImage:',
       iOS: (true, null),
@@ -203877,7 +203937,7 @@ extension NSStepperCell$Methods on NSStepperCell {
     return NSStepperCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSStepperCell initImageCell(NSImage? image) {
+  NSStepperCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSStepperCell.initImageCell:',
       iOS: (true, null),
@@ -206232,7 +206292,7 @@ extension NSSymbolEffect on NSImageView {
   }
 
   void setSymbolImageWithContentTransition(
-    NSImage symbolImage, {
+    NSImage$1 symbolImage, {
     required NSSymbolContentTransition withContentTransition,
   }) {
     objc.checkOsVersionInternal(
@@ -206249,7 +206309,7 @@ extension NSSymbolEffect on NSImageView {
   }
 
   void setSymbolImageWithContentTransitionOptions(
-    NSImage symbolImage, {
+    NSImage$1 symbolImage, {
     required NSSymbolContentTransition withContentTransition,
     required NSSymbolEffectOptions options,
   }) {
@@ -208304,7 +208364,7 @@ extension NSTabViewItem$Methods on NSTabViewItem {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal(
       'NSTabViewItem.image',
       iOS: (true, null),
@@ -208313,7 +208373,7 @@ extension NSTabViewItem$Methods on NSTabViewItem {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSTabViewItem init() {
@@ -208388,7 +208448,7 @@ extension NSTabViewItem$Methods on NSTabViewItem {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSTabViewItem.setImage:',
       iOS: (true, null),
@@ -209308,7 +209368,7 @@ extension NSTableHeaderCell$Methods on NSTableHeaderCell {
     return NSTableHeaderCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSTableHeaderCell initImageCell(NSImage? image) {
+  NSTableHeaderCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSTableHeaderCell.initImageCell:',
       iOS: (true, null),
@@ -210872,7 +210932,7 @@ extension NSTableView$Methods on NSTableView {
     return _objc_msgSend_1ovaulg(object$.ref.pointer, _sel_doubleAction);
   }
 
-  NSImage dragImageForRowsWithIndexes(
+  NSImage$1 dragImageForRowsWithIndexes(
     objc.NSIndexSet dragRows, {
     required objc.NSArray tableColumns,
     required NSEvent event,
@@ -210890,7 +210950,7 @@ extension NSTableView$Methods on NSTableView {
       event.ref.pointer,
       offset,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// draggingDestinationFeedbackStyle
@@ -211143,7 +211203,7 @@ extension NSTableView$Methods on NSTableView {
         : NSTableColumn.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage? indicatorImageInTableColumn(NSTableColumn tableColumn) {
+  NSImage$1? indicatorImageInTableColumn(NSTableColumn tableColumn) {
     objc.checkOsVersionInternal(
       'NSTableView.indicatorImageInTableColumn:',
       iOS: (true, null),
@@ -211155,7 +211215,7 @@ extension NSTableView$Methods on NSTableView {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSTableView init() {
@@ -212190,7 +212250,7 @@ extension NSTableView$Methods on NSTableView {
   }
 
   void setIndicatorImage(
-    NSImage? image, {
+    NSImage$1? image, {
     required NSTableColumn inTableColumn,
   }) {
     objc.checkOsVersionInternal(
@@ -217400,7 +217460,7 @@ extension NSTableViewRowAction$Methods on NSTableViewRowAction {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal(
       'NSTableViewRowAction.image',
       iOS: (true, null),
@@ -217409,7 +217469,7 @@ extension NSTableViewRowAction$Methods on NSTableViewRowAction {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSTableViewRowAction init() {
@@ -217439,7 +217499,7 @@ extension NSTableViewRowAction$Methods on NSTableViewRowAction {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSTableViewRowAction.setImage:',
       iOS: (true, null),
@@ -218682,7 +218742,7 @@ extension NSTextAttachment$Methods on NSTextAttachment {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal(
       'NSTextAttachment.image',
       iOS: (false, (7, 0, 0)),
@@ -218691,7 +218751,7 @@ extension NSTextAttachment$Methods on NSTextAttachment {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSTextAttachment init() {
@@ -218835,7 +218895,7 @@ extension NSTextAttachment$Methods on NSTextAttachment {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSTextAttachment.setImage:',
       iOS: (false, (7, 0, 0)),
@@ -219696,7 +219756,7 @@ interface class NSTextAttachmentCell$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -219938,7 +219998,7 @@ extension NSTextAttachmentCell$1$Methods on NSTextAttachmentCell$1 {
     );
   }
 
-  NSTextAttachmentCell$1 initImageCell(NSImage? image) {
+  NSTextAttachmentCell$1 initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSTextAttachmentCell.initImageCell:',
       iOS: (true, null),
@@ -220050,7 +220110,7 @@ extension NSTextAttachmentContainer$Methods on NSTextAttachmentContainer {
     return ffi.Struct.create<objc.CGRect>($finalizable);
   }
 
-  NSImage? imageForBounds(
+  NSImage$1? imageForBounds(
     objc.CGRect imageBounds, {
     NSTextContainer? textContainer,
     required int characterIndex,
@@ -220069,7 +220129,7 @@ extension NSTextAttachmentContainer$Methods on NSTextAttachmentContainer {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 }
 
@@ -220080,7 +220140,7 @@ abstract interface class NSTextAttachmentContainerSpec {
     required objc.CGPoint glyphPosition,
     required int characterIndex,
   });
-  NSImage? imageForBounds(
+  NSImage$1? imageForBounds(
     objc.CGRect imageBounds, {
     NSTextContainer? textContainer,
     required int characterIndex,
@@ -220192,7 +220252,7 @@ interface class NSTextAttachmentContainer$Builder {
       );
   static final imageForBounds_textContainer_characterIndex_ =
       objc.ObjCProtocolMethod<
-        NSImage? Function(objc.CGRect, NSTextContainer?, int)
+        NSImage$1? Function(objc.CGRect, NSTextContainer?, int)
       >(
         _protocol_NSTextAttachmentContainer,
         _sel_imageForBounds_textContainer_characterIndex_,
@@ -220214,7 +220274,7 @@ interface class NSTextAttachmentContainer$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (NSImage? Function(objc.CGRect, NSTextContainer?, int) func) =>
+        (NSImage$1? Function(objc.CGRect, NSTextContainer?, int) func) =>
             ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger.fromFunction(
               (
                 ffi.Pointer<ffi.Void> _,
@@ -220297,7 +220357,7 @@ extension NSTextAttachmentLayout$Methods on NSTextAttachmentLayout {
     return ffi.Struct.create<objc.CGRect>($finalizable);
   }
 
-  NSImage? imageForBounds(
+  NSImage$1? imageForBounds(
     objc.CGRect bounds, {
     required objc.NSDictionary attributes,
     required NSTextLocation location,
@@ -220318,7 +220378,7 @@ extension NSTextAttachmentLayout$Methods on NSTextAttachmentLayout {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSTextAttachmentViewProvider? viewProviderForParentView(
@@ -220356,7 +220416,7 @@ abstract interface class NSTextAttachmentLayoutSpec {
     required objc.CGRect proposedLineFragment,
     required objc.CGPoint position,
   });
-  NSImage? imageForBounds(
+  NSImage$1? imageForBounds(
     objc.CGRect bounds, {
     required objc.NSDictionary attributes,
     required NSTextLocation location,
@@ -220506,7 +220566,7 @@ interface class NSTextAttachmentLayout$Builder {
       );
   static final imageForBounds_attributes_location_textContainer_ =
       objc.ObjCProtocolMethod<
-        NSImage? Function(
+        NSImage$1? Function(
           objc.CGRect,
           objc.NSDictionary,
           NSTextLocation,
@@ -220535,7 +220595,7 @@ interface class NSTextAttachmentLayout$Builder {
           isInstanceMethod: true,
         ),
         (
-          NSImage? Function(
+          NSImage$1? Function(
             objc.CGRect,
             objc.NSDictionary,
             NSTextLocation,
@@ -220915,7 +220975,7 @@ extension NSTextAttachment_Deprecation on NSTextAttachment {
     return ffi.Struct.create<objc.CGRect>($finalizable);
   }
 
-  NSImage? imageForBounds(
+  NSImage$1? imageForBounds(
     objc.CGRect imageBounds, {
     NSTextContainer? textContainer,
     required int characterIndex,
@@ -220934,7 +220994,7 @@ extension NSTextAttachment_Deprecation on NSTextAttachment {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 }
 
@@ -224247,7 +224307,7 @@ interface class NSTextCheckingClient$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -225126,7 +225186,7 @@ interface class NSTextCheckingClient$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -225225,7 +225285,7 @@ interface class NSTextCheckingClient$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -228622,7 +228682,7 @@ interface class NSTextElementProvider$Builder {
         ),
         (
           void Function(objc.ObjCBlock<ffi.Void Function(objc.NSError?)>?) func,
-        ) => ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError.fromFunction(
+        ) => ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError$1.fromFunction(
           (
             ffi.Pointer<ffi.Void> _,
             objc.ObjCBlock<ffi.Void Function(objc.NSError?)>? arg1,
@@ -229881,7 +229941,7 @@ extension NSTextFieldCell$Methods on NSTextFieldCell {
     return NSTextFieldCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSTextFieldCell initImageCell(NSImage? image) {
+  NSTextFieldCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSTextFieldCell.initImageCell:',
       iOS: (true, null),
@@ -231737,7 +231797,7 @@ interface class NSTextFinderBarContainer$Builder {
           isRequired: true,
           isInstanceMethod: true,
         ),
-        (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+        (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -231761,7 +231821,7 @@ interface class NSTextFinderBarContainer$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -232498,7 +232558,7 @@ interface class NSTextFinderClient$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -232550,7 +232610,7 @@ interface class NSTextFinderClient$Builder {
       isRequired: false,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -232627,7 +232687,7 @@ interface class NSTextFinderClient$Builder {
       isRequired: false,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -232651,7 +232711,7 @@ interface class NSTextFinderClient$Builder {
       isRequired: false,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -233412,7 +233472,7 @@ interface class NSTextInput$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -233533,7 +233593,7 @@ interface class NSTextInput$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -234533,7 +234593,7 @@ interface class NSTextInputClient$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+    (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -234722,7 +234782,7 @@ interface class NSTextInputClient$Builder {
           isRequired: false,
           isInstanceMethod: true,
         ),
-        (bool Function() func) => ObjCBlock_bool_ffiVoid.fromFunction(
+        (bool Function() func) => ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => func(),
         ),
       );
@@ -234769,7 +234829,7 @@ interface class NSTextInputClient$Builder {
       isRequired: true,
       isInstanceMethod: true,
     ),
-    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid.fromFunction(
+    (void Function() func) => ObjCBlock_ffiVoid_ffiVoid$3.fromFunction(
       (ffi.Pointer<ffi.Void> _) => func(),
     ),
   );
@@ -250496,7 +250556,7 @@ extension NSTokenFieldCell$Methods on NSTokenFieldCell {
     return NSTokenFieldCell.fromPointer($ret, retain: false, release: true);
   }
 
-  NSTokenFieldCell initImageCell(NSImage? image) {
+  NSTokenFieldCell initImageCell(NSImage$1? image) {
     objc.checkOsVersionInternal(
       'NSTokenFieldCell.initImageCell:',
       iOS: (true, null),
@@ -254653,7 +254713,7 @@ extension NSToolbarItem$Methods on NSToolbarItem {
   }
 
   /// image
-  NSImage? get image {
+  NSImage$1? get image {
     objc.checkOsVersionInternal(
       'NSToolbarItem.image',
       iOS: (false, (13, 0, 0)),
@@ -254661,7 +254721,7 @@ extension NSToolbarItem$Methods on NSToolbarItem {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_image);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSToolbarItem init() {
@@ -254910,7 +254970,7 @@ extension NSToolbarItem$Methods on NSToolbarItem {
   }
 
   /// setImage:
-  set image(NSImage? value) {
+  set image(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSToolbarItem.setImage:',
       iOS: (false, (13, 0, 0)),
@@ -259175,7 +259235,7 @@ enum NSUsableScrollerParts {
   };
 }
 
-extension NSUserActivity on NSResponder {
+extension NSUserActivity$1 on NSResponder {
   void restoreUserActivityState(foundation0.NSUserActivity userActivity) {
     objc.checkOsVersionInternal(
       'NSResponder.restoreUserActivityState:',
@@ -259234,7 +259294,7 @@ extension NSUserActivity on NSResponder {
   }
 }
 
-extension NSUserActivity$1 on NSDocument {
+extension NSUserActivity$2 on NSDocument {
   void restoreUserActivityState(foundation0.NSUserActivity userActivity) {
     objc.checkOsVersionInternal(
       'NSDocument.restoreUserActivityState:',
@@ -259395,7 +259455,7 @@ interface class NSUserActivityRestoring$Builder {
           isInstanceMethod: true,
         ),
         (void Function(foundation0.NSUserActivity) func) =>
-            ObjCBlock_ffiVoid_ffiVoid_NSUserActivity.fromFunction(
+            ObjCBlock_ffiVoid_ffiVoid_NSUserActivity$1.fromFunction(
               (ffi.Pointer<ffi.Void> _, foundation0.NSUserActivity arg1) =>
                   func(arg1),
             ),
@@ -264519,7 +264579,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_e3qsqz)
             .cast(),
-        ObjCBlock_bool_ffiVoid.fromFunction(
+        ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => implementation.commitEditing(),
         ),
       );
@@ -264590,7 +264650,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.discardEditing();
         }),
       );
@@ -264619,7 +264679,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_e3qsqz)
             .cast(),
-        ObjCBlock_bool_ffiVoid.fromFunction(
+        ObjCBlock_bool_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => implementation.isViewLoaded,
         ),
       );
@@ -264648,7 +264708,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.loadView();
         }),
       );
@@ -264677,7 +264737,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.loadViewIfNeeded();
         }),
       );
@@ -264791,7 +264851,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_1mbt9g9)
             .cast(),
-        ObjCBlock_id_ffiVoid.fromFunction(
+        ObjCBlock_id_ffiVoid$1.fromFunction(
           (ffi.Pointer<ffi.Void> _) => implementation.representedObject,
         ),
       );
@@ -264977,7 +265037,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.updateViewConstraints();
         }),
       );
@@ -265033,7 +265093,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.viewDidAppear();
         }),
       );
@@ -265062,7 +265122,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.viewDidDisappear();
         }),
       );
@@ -265091,7 +265151,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.viewDidLayout();
         }),
       );
@@ -265120,7 +265180,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.viewDidLoad();
         }),
       );
@@ -265178,7 +265238,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.viewWillAppear();
         }),
       );
@@ -265207,7 +265267,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.viewWillDisappear();
         }),
       );
@@ -265236,7 +265296,7 @@ interface class NSViewControllerSubclassBuilder {
               >
             >(_1wf8t1k_protocolTrampoline_ovsamd)
             .cast(),
-        ObjCBlock_ffiVoid_ffiVoid.fromFunction((ffi.Pointer<ffi.Void> _) {
+        ObjCBlock_ffiVoid_ffiVoid$3.fromFunction((ffi.Pointer<ffi.Void> _) {
           implementation.viewWillLayout();
         }),
       );
@@ -266567,7 +266627,7 @@ extension NSVisualEffectView$Methods on NSVisualEffectView {
   }
 
   /// maskImage
-  NSImage? get maskImage {
+  NSImage$1? get maskImage {
     objc.checkOsVersionInternal(
       'NSVisualEffectView.maskImage',
       iOS: (true, null),
@@ -266575,7 +266635,7 @@ extension NSVisualEffectView$Methods on NSVisualEffectView {
     final $ret = _objc_msgSend_151sglz(object$.ref.pointer, _sel_maskImage);
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// material
@@ -266612,7 +266672,7 @@ extension NSVisualEffectView$Methods on NSVisualEffectView {
   }
 
   /// setMaskImage:
-  set maskImage(NSImage? value) {
+  set maskImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSVisualEffectView.setMaskImage:',
       iOS: (true, null),
@@ -268558,7 +268618,7 @@ extension NSWindow$Methods on NSWindow {
   }
 
   /// miniwindowImage
-  NSImage? get miniwindowImage {
+  NSImage$1? get miniwindowImage {
     objc.checkOsVersionInternal('NSWindow.miniwindowImage', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(
       object$.ref.pointer,
@@ -268566,7 +268626,7 @@ extension NSWindow$Methods on NSWindow {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// miniwindowTitle
@@ -268816,7 +268876,7 @@ extension NSWindow$Methods on NSWindow {
   }
 
   void requestSharingOfWindowUsingPreview(
-    NSImage image, {
+    NSImage$1 image, {
     required objc.NSString title,
     required objc.ObjCBlock<ffi.Void Function(objc.NSError?)> completionHandler,
   }) {
@@ -269544,7 +269604,7 @@ extension NSWindow$Methods on NSWindow {
   }
 
   /// setMiniwindowImage:
-  set miniwindowImage(NSImage? value) {
+  set miniwindowImage(NSImage$1? value) {
     objc.checkOsVersionInternal(
       'NSWindow.setMiniwindowImage:',
       iOS: (true, null),
@@ -275272,7 +275332,7 @@ extension NSWorkspace$Methods on NSWorkspace {
     _objc_msgSend_1pl9qdv(object$.ref.pointer, _sel_hideOtherApplications);
   }
 
-  NSImage iconForContentType(UTType contentType) {
+  NSImage$1 iconForContentType(UTType contentType) {
     objc.checkOsVersionInternal(
       'NSWorkspace.iconForContentType:',
       iOS: (true, null),
@@ -275283,20 +275343,20 @@ extension NSWorkspace$Methods on NSWorkspace {
       _sel_iconForContentType_,
       contentType.ref.pointer,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage iconForFile(objc.NSString fullPath) {
+  NSImage$1 iconForFile(objc.NSString fullPath) {
     objc.checkOsVersionInternal('NSWorkspace.iconForFile:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       object$.ref.pointer,
       _sel_iconForFile_,
       fullPath.ref.pointer,
     );
-    return NSImage.fromPointer($ret, retain: true, release: true);
+    return NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
-  NSImage? iconForFiles(objc.NSArray fullPaths) {
+  NSImage$1? iconForFiles(objc.NSArray fullPaths) {
     objc.checkOsVersionInternal('NSWorkspace.iconForFiles:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
       object$.ref.pointer,
@@ -275305,7 +275365,7 @@ extension NSWorkspace$Methods on NSWorkspace {
     );
     return $ret.address == 0
         ? null
-        : NSImage.fromPointer($ret, retain: true, release: true);
+        : NSImage$1.fromPointer($ret, retain: true, release: true);
   }
 
   NSWorkspace init() {
@@ -275560,7 +275620,7 @@ extension NSWorkspace$Methods on NSWorkspace {
   }
 
   bool setIcon(
-    NSImage? image, {
+    NSImage$1? image, {
     required objc.NSString forFile,
     required int options,
   }) {
@@ -276830,7 +276890,7 @@ extension NSWritingToolsCoordinatorAnimationParameters$Methods
     );
     return $ret.address == 0
         ? null
-        : ObjCBlock_ffiVoid.fromPointer($ret, retain: true, release: true);
+        : ObjCBlock_ffiVoid$1.fromPointer($ret, retain: true, release: true);
   }
 
   /// delay
@@ -300803,14 +300863,14 @@ extension ObjCBlock_NSFontPanelModeMask_ffiVoid_NSFontPanel$CallExtension
       >()(ref.pointer, arg0, arg1.ref.pointer);
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid {
   /// Returns a block that wraps the given raw block pointer.
-  static objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)> fromPointer(
+  static objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
     bool retain = false,
     bool release = false,
-  }) => objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)>(
+  }) => objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)>(
     pointer,
     retain: retain,
     release: release,
@@ -300821,7 +300881,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid {
   /// This block must be invoked by native code running on the same thread as
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
-  static objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)>
+  static objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)>
   fromFunctionPointer(
     ffi.Pointer<
       ffi.NativeFunction<
@@ -300829,7 +300889,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid {
       >
     >
     ptr,
-  ) => objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)>(
+  ) => objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)>(
     objc.newPointerBlock(_fnPtrCallable, ptr.cast()),
     retain: false,
     release: true,
@@ -300843,10 +300903,11 @@ abstract final class ObjCBlock_NSImage_ffiVoid {
   ///
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
-  static objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)> fromFunction(
-    NSImage? Function(ffi.Pointer<ffi.Void>) fn, {
+  static objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)>
+  fromFunction(
+    NSImage$1? Function(ffi.Pointer<ffi.Void>) fn, {
     bool keepIsolateAlive = true,
-  }) => objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)>(
+  }) => objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)>(
     objc.newClosureBlock(
       _closureCallable,
       (ffi.Pointer<ffi.Void> arg0) =>
@@ -300907,10 +300968,10 @@ abstract final class ObjCBlock_NSImage_ffiVoid {
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)>`.
 extension ObjCBlock_NSImage_ffiVoid$CallExtension
-    on objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>)> {
-  NSImage? call(ffi.Pointer<ffi.Void> arg0) =>
+    on objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>)> {
+  NSImage$1? call(ffi.Pointer<ffi.Void> arg0) =>
       ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -300929,7 +300990,7 @@ extension ObjCBlock_NSImage_ffiVoid$CallExtension
               .address ==
           0
       ? null
-      : NSImage.fromPointer(
+      : NSImage$1.fromPointer(
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -300950,14 +301011,14 @@ extension ObjCBlock_NSImage_ffiVoid$CallExtension
         );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid$1 {
   /// Returns a block that wraps the given raw block pointer.
-  static objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)> fromPointer(
+  static objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
     bool retain = false,
     bool release = false,
-  }) => objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>(
+  }) => objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)>(
     pointer,
     retain: retain,
     release: release,
@@ -300968,7 +301029,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid$1 {
   /// This block must be invoked by native code running on the same thread as
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
-  static objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>
+  static objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)>
   fromFunctionPointer(
     ffi.Pointer<
       ffi.NativeFunction<
@@ -300976,7 +301037,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid$1 {
       >
     >
     ptr,
-  ) => objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>(
+  ) => objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)>(
     objc.newPointerBlock(_fnPtrCallable, ptr.cast()),
     retain: false,
     release: true,
@@ -300990,10 +301051,10 @@ abstract final class ObjCBlock_NSImage_ffiVoid$1 {
   ///
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
-  static objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)> fromFunction(
-    NSImage Function(ffi.Pointer<ffi.Void>) fn, {
+  static objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)> fromFunction(
+    NSImage$1 Function(ffi.Pointer<ffi.Void>) fn, {
     bool keepIsolateAlive = true,
-  }) => objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>(
+  }) => objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)>(
     objc.newClosureBlock(
       _closureCallable,
       (ffi.Pointer<ffi.Void> arg0) => fn(arg0).ref.retainAndAutorelease(),
@@ -301053,10 +301114,10 @@ abstract final class ObjCBlock_NSImage_ffiVoid$1 {
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)>`.
 extension ObjCBlock_NSImage_ffiVoid$1$CallExtension
-    on objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>)> {
-  NSImage call(ffi.Pointer<ffi.Void> arg0) => NSImage.fromPointer(
+    on objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>)> {
+  NSImage$1 call(ffi.Pointer<ffi.Void> arg0) => NSImage$1.fromPointer(
     ref.pointer.ref.invoke
         .cast<
           ffi.NativeFunction<
@@ -301077,11 +301138,11 @@ extension ObjCBlock_NSImage_ffiVoid$1$CallExtension
   );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, objc.CGRect, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocation_NSTextContainer {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       objc.CGRect,
       objc.NSDictionary,
@@ -301095,7 +301156,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocat
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           objc.CGRect,
           objc.NSDictionary,
@@ -301110,7 +301171,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocat
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       objc.CGRect,
       objc.NSDictionary,
@@ -301133,7 +301194,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocat
     ptr,
   ) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           objc.CGRect,
           objc.NSDictionary,
@@ -301155,7 +301216,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocat
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       objc.CGRect,
       objc.NSDictionary,
@@ -301164,7 +301225,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocat
     )
   >
   fromFunction(
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       objc.CGRect,
       objc.NSDictionary,
@@ -301175,7 +301236,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocat
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           objc.CGRect,
           objc.NSDictionary,
@@ -301302,11 +301363,11 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocat
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, objc.CGRect, objc.NSDictionary, ffi.Pointer<objc.ObjCObjectImpl>, NSTextContainer?)>`.
 extension ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocation_NSTextContainer$CallExtension
     on
         objc.ObjCBlock<
-          NSImage? Function(
+          NSImage$1? Function(
             ffi.Pointer<ffi.Void>,
             objc.CGRect,
             objc.NSDictionary,
@@ -301314,7 +301375,7 @@ extension ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocation_NSTextC
             NSTextContainer?,
           )
         > {
-  NSImage? call(
+  NSImage$1? call(
     ffi.Pointer<ffi.Void> arg0,
     objc.CGRect arg1,
     objc.NSDictionary arg2,
@@ -301354,7 +301415,7 @@ extension ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocation_NSTextC
               .address ==
           0
       ? null
-      : NSImage.fromPointer(
+      : NSImage$1.fromPointer(
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -301390,11 +301451,11 @@ extension ObjCBlock_NSImage_ffiVoid_CGRect_NSDictionary_idNSTextLocation_NSTextC
         );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSTextContainer?, ffi.UnsignedLong)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSTextContainer?, ffi.UnsignedLong)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       objc.CGRect,
       NSTextContainer?,
@@ -301407,7 +301468,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           objc.CGRect,
           NSTextContainer?,
@@ -301421,7 +301482,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       objc.CGRect,
       NSTextContainer?,
@@ -301442,7 +301503,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger
     ptr,
   ) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           objc.CGRect,
           NSTextContainer?,
@@ -301463,7 +301524,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       objc.CGRect,
       NSTextContainer?,
@@ -301471,12 +301532,17 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger
     )
   >
   fromFunction(
-    NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSTextContainer?, int)
+    NSImage$1? Function(
+      ffi.Pointer<ffi.Void>,
+      objc.CGRect,
+      NSTextContainer?,
+      int,
+    )
     fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           objc.CGRect,
           NSTextContainer?,
@@ -301588,18 +301654,18 @@ abstract final class ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSTextContainer?, ffi.UnsignedLong)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, objc.CGRect, NSTextContainer?, ffi.UnsignedLong)>`.
 extension ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger$CallExtension
     on
         objc.ObjCBlock<
-          NSImage? Function(
+          NSImage$1? Function(
             ffi.Pointer<ffi.Void>,
             objc.CGRect,
             NSTextContainer?,
             ffi.UnsignedLong,
           )
         > {
-  NSImage? call(
+  NSImage$1? call(
     ffi.Pointer<ffi.Void> arg0,
     objc.CGRect arg1,
     NSTextContainer? arg2,
@@ -301635,7 +301701,7 @@ extension ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger$CallExtens
               .address ==
           0
       ? null
-      : NSImage.fromPointer(
+      : NSImage$1.fromPointer(
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -301668,11 +301734,11 @@ extension ObjCBlock_NSImage_ffiVoid_CGRect_NSTextContainer_NSUInteger$CallExtens
         );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, NSBrowser, objc.NSIndexSet, ffi.Long, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, NSBrowser, objc.NSIndexSet, ffi.Long, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NSEvent_NSPointPointer {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSBrowser,
       objc.NSIndexSet,
@@ -301687,7 +301753,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NS
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           NSBrowser,
           objc.NSIndexSet,
@@ -301703,7 +301769,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NS
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSBrowser,
       objc.NSIndexSet,
@@ -301728,7 +301794,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NS
     ptr,
   ) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           NSBrowser,
           objc.NSIndexSet,
@@ -301751,7 +301817,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NS
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSBrowser,
       objc.NSIndexSet,
@@ -301761,7 +301827,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NS
     )
   >
   fromFunction(
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSBrowser,
       objc.NSIndexSet,
@@ -301773,7 +301839,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NS
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           NSBrowser,
           objc.NSIndexSet,
@@ -301901,11 +301967,11 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NS
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, NSBrowser, objc.NSIndexSet, ffi.Long, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, NSBrowser, objc.NSIndexSet, ffi.Long, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
 extension ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NSEvent_NSPointPointer$CallExtension
     on
         objc.ObjCBlock<
-          NSImage? Function(
+          NSImage$1? Function(
             ffi.Pointer<ffi.Void>,
             NSBrowser,
             objc.NSIndexSet,
@@ -301914,7 +301980,7 @@ extension ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NSEvent_NSPoi
             ffi.Pointer<objc.CGPoint>,
           )
         > {
-  NSImage? call(
+  NSImage$1? call(
     ffi.Pointer<ffi.Void> arg0,
     NSBrowser arg1,
     objc.NSIndexSet arg2,
@@ -301958,7 +302024,7 @@ extension ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NSEvent_NSPoi
               .address ==
           0
       ? null
-      : NSImage.fromPointer(
+      : NSImage$1.fromPointer(
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -301997,11 +302063,11 @@ extension ObjCBlock_NSImage_ffiVoid_NSBrowser_NSIndexSet_NSInteger_NSEvent_NSPoi
         );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSIndexSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSIndexSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEvent_NSPointPointer {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSIndexSet,
@@ -302015,7 +302081,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEve
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        NSImage Function(
+        NSImage$1 Function(
           ffi.Pointer<ffi.Void>,
           NSCollectionView,
           objc.NSIndexSet,
@@ -302030,7 +302096,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEve
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSIndexSet,
@@ -302053,7 +302119,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEve
     ptr,
   ) =>
       objc.ObjCBlock<
-        NSImage Function(
+        NSImage$1 Function(
           ffi.Pointer<ffi.Void>,
           NSCollectionView,
           objc.NSIndexSet,
@@ -302075,7 +302141,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEve
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSIndexSet,
@@ -302084,7 +302150,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEve
     )
   >
   fromFunction(
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSIndexSet,
@@ -302095,7 +302161,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEve
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        NSImage Function(
+        NSImage$1 Function(
           ffi.Pointer<ffi.Void>,
           NSCollectionView,
           objc.NSIndexSet,
@@ -302210,11 +302276,11 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEve
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSIndexSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSIndexSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
 extension ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEvent_NSPointPointer$CallExtension
     on
         objc.ObjCBlock<
-          NSImage Function(
+          NSImage$1 Function(
             ffi.Pointer<ffi.Void>,
             NSCollectionView,
             objc.NSIndexSet,
@@ -302222,13 +302288,13 @@ extension ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEvent_NSPointP
             ffi.Pointer<objc.CGPoint>,
           )
         > {
-  NSImage call(
+  NSImage$1 call(
     ffi.Pointer<ffi.Void> arg0,
     NSCollectionView arg1,
     objc.NSIndexSet arg2,
     NSEvent arg3,
     ffi.Pointer<objc.CGPoint> arg4,
-  ) => NSImage.fromPointer(
+  ) => NSImage$1.fromPointer(
     ref.pointer.ref.invoke
         .cast<
           ffi.NativeFunction<
@@ -302264,11 +302330,11 @@ extension ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSIndexSet_NSEvent_NSPointP
   );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NSPointPointer {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSSet,
@@ -302282,7 +302348,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NS
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        NSImage Function(
+        NSImage$1 Function(
           ffi.Pointer<ffi.Void>,
           NSCollectionView,
           objc.NSSet,
@@ -302297,7 +302363,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NS
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSSet,
@@ -302320,7 +302386,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NS
     ptr,
   ) =>
       objc.ObjCBlock<
-        NSImage Function(
+        NSImage$1 Function(
           ffi.Pointer<ffi.Void>,
           NSCollectionView,
           objc.NSSet,
@@ -302342,7 +302408,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NS
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSSet,
@@ -302351,7 +302417,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NS
     )
   >
   fromFunction(
-    NSImage Function(
+    NSImage$1 Function(
       ffi.Pointer<ffi.Void>,
       NSCollectionView,
       objc.NSSet,
@@ -302362,7 +302428,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NS
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        NSImage Function(
+        NSImage$1 Function(
           ffi.Pointer<ffi.Void>,
           NSCollectionView,
           objc.NSSet,
@@ -302477,11 +302543,11 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NS
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1 Function(ffi.Pointer<ffi.Void>, NSCollectionView, objc.NSSet, NSEvent, ffi.Pointer<objc.CGPoint>)>`.
 extension ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NSPointPointer$CallExtension
     on
         objc.ObjCBlock<
-          NSImage Function(
+          NSImage$1 Function(
             ffi.Pointer<ffi.Void>,
             NSCollectionView,
             objc.NSSet,
@@ -302489,13 +302555,13 @@ extension ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NSPointPointe
             ffi.Pointer<objc.CGPoint>,
           )
         > {
-  NSImage call(
+  NSImage$1 call(
     ffi.Pointer<ffi.Void> arg0,
     NSCollectionView arg1,
     objc.NSSet arg2,
     NSEvent arg3,
     ffi.Pointer<objc.CGPoint> arg4,
-  ) => NSImage.fromPointer(
+  ) => NSImage$1.fromPointer(
     ref.pointer.ref.invoke
         .cast<
           ffi.NativeFunction<
@@ -302531,11 +302597,11 @@ extension ObjCBlock_NSImage_ffiVoid_NSCollectionView_NSSet_NSEvent_NSPointPointe
   );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid_NSImage_NSRect {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)
+    NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)
   >
   fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -302543,7 +302609,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSImage_NSRect {
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)
+        NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)
       >(pointer, retain: retain, release: release);
 
   /// Creates a block from a C function pointer.
@@ -302552,7 +302618,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSImage_NSRect {
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)
+    NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)
   >
   fromFunctionPointer(
     ffi.Pointer<
@@ -302567,7 +302633,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSImage_NSRect {
     ptr,
   ) =>
       objc.ObjCBlock<
-        NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)
+        NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)
       >(
         objc.newPointerBlock(_fnPtrCallable, ptr.cast()),
         retain: false,
@@ -302583,14 +302649,14 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSImage_NSRect {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)
+    NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)
   >
   fromFunction(
-    NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect) fn, {
+    NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)
+        NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)
       >(
         objc.newClosureBlock(
           _closureCallable,
@@ -302601,7 +302667,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSImage_NSRect {
           ) =>
               fn(
                 arg0,
-                NSImage.fromPointer(arg1, retain: true, release: true),
+                NSImage$1.fromPointer(arg1, retain: true, release: true),
                 arg2,
               )?.ref.retainAndAutorelease() ??
               ffi.nullptr,
@@ -302681,13 +302747,17 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSImage_NSRect {
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)>`.
 extension ObjCBlock_NSImage_ffiVoid_NSImage_NSRect$CallExtension
     on
         objc.ObjCBlock<
-          NSImage? Function(ffi.Pointer<ffi.Void>, NSImage, objc.CGRect)
+          NSImage$1? Function(ffi.Pointer<ffi.Void>, NSImage$1, objc.CGRect)
         > {
-  NSImage? call(ffi.Pointer<ffi.Void> arg0, NSImage arg1, objc.CGRect arg2) =>
+  NSImage$1? call(
+    ffi.Pointer<ffi.Void> arg0,
+    NSImage$1 arg1,
+    objc.CGRect arg2,
+  ) =>
       ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -302710,7 +302780,7 @@ extension ObjCBlock_NSImage_ffiVoid_NSImage_NSRect$CallExtension
               .address ==
           0
       ? null
-      : NSImage.fromPointer(
+      : NSImage$1.fromPointer(
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -302735,11 +302805,11 @@ extension ObjCBlock_NSImage_ffiVoid_NSImage_NSRect$CallExtension
         );
 }
 
-/// Construction methods for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, NSSharingService, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.CGRect>)>`.
+/// Construction methods for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, NSSharingService, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.CGRect>)>`.
 abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSSharingService,
       ffi.Pointer<objc.ObjCObjectImpl>,
@@ -302752,7 +302822,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           NSSharingService,
           ffi.Pointer<objc.ObjCObjectImpl>,
@@ -302766,7 +302836,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSSharingService,
       ffi.Pointer<objc.ObjCObjectImpl>,
@@ -302787,7 +302857,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
     ptr,
   ) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           NSSharingService,
           ffi.Pointer<objc.ObjCObjectImpl>,
@@ -302808,7 +302878,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSSharingService,
       ffi.Pointer<objc.ObjCObjectImpl>,
@@ -302816,7 +302886,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
     )
   >
   fromFunction(
-    NSImage? Function(
+    NSImage$1? Function(
       ffi.Pointer<ffi.Void>,
       NSSharingService,
       objc.ObjCObject,
@@ -302826,7 +302896,7 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        NSImage? Function(
+        NSImage$1? Function(
           ffi.Pointer<ffi.Void>,
           NSSharingService,
           ffi.Pointer<objc.ObjCObjectImpl>,
@@ -302932,18 +303002,18 @@ abstract final class ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect {
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<NSImage? Function(ffi.Pointer<ffi.Void>, NSSharingService, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.CGRect>)>`.
+/// Call operator for `objc.ObjCBlock<NSImage$1? Function(ffi.Pointer<ffi.Void>, NSSharingService, ffi.Pointer<objc.ObjCObjectImpl>, ffi.Pointer<objc.CGRect>)>`.
 extension ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect$CallExtension
     on
         objc.ObjCBlock<
-          NSImage? Function(
+          NSImage$1? Function(
             ffi.Pointer<ffi.Void>,
             NSSharingService,
             ffi.Pointer<objc.ObjCObjectImpl>,
             ffi.Pointer<objc.CGRect>,
           )
         > {
-  NSImage? call(
+  NSImage$1? call(
     ffi.Pointer<ffi.Void> arg0,
     NSSharingService arg1,
     objc.ObjCObject arg2,
@@ -302973,7 +303043,7 @@ extension ObjCBlock_NSImage_ffiVoid_NSSharingService_id_NSRect$CallExtension
               .address ==
           0
       ? null
-      : NSImage.fromPointer(
+      : NSImage$1.fromPointer(
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
@@ -312890,7 +312960,7 @@ extension ObjCBlock_NSScrubberItemView_ffiVoid_NSScrubber_NSInteger$CallExtensio
 }
 
 /// Construction methods for `objc.ObjCBlock<objc.NSSet Function(ffi.Pointer<ffi.Void>)>`.
-abstract final class ObjCBlock_NSSet_ffiVoid {
+abstract final class ObjCBlock_NSSet_ffiVoid$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<objc.NSSet Function(ffi.Pointer<ffi.Void>)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -312994,7 +313064,7 @@ abstract final class ObjCBlock_NSSet_ffiVoid {
 }
 
 /// Call operator for `objc.ObjCBlock<objc.NSSet Function(ffi.Pointer<ffi.Void>)>`.
-extension ObjCBlock_NSSet_ffiVoid$CallExtension
+extension ObjCBlock_NSSet_ffiVoid$1$CallExtension
     on objc.ObjCBlock<objc.NSSet Function(ffi.Pointer<ffi.Void>)> {
   objc.NSSet call(ffi.Pointer<ffi.Void> arg0) => objc.NSSet.fromPointer(
     ref.pointer.ref.invoke
@@ -326213,7 +326283,7 @@ extension ObjCBlock_NSUInteger_ffiVoid_NSPoint$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<objc.NSURL? Function(ffi.Pointer<ffi.Void>)>`.
-abstract final class ObjCBlock_NSURL_ffiVoid {
+abstract final class ObjCBlock_NSURL_ffiVoid$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<objc.NSURL? Function(ffi.Pointer<ffi.Void>)>
   fromPointer(
@@ -326319,7 +326389,7 @@ abstract final class ObjCBlock_NSURL_ffiVoid {
 }
 
 /// Call operator for `objc.ObjCBlock<objc.NSURL? Function(ffi.Pointer<ffi.Void>)>`.
-extension ObjCBlock_NSURL_ffiVoid$CallExtension
+extension ObjCBlock_NSURL_ffiVoid$1$CallExtension
     on objc.ObjCBlock<objc.NSURL? Function(ffi.Pointer<ffi.Void>)> {
   objc.NSURL? call(ffi.Pointer<ffi.Void> arg0) =>
       ref.pointer.ref.invoke
@@ -332423,7 +332493,7 @@ extension ObjCBlock_bool_NSTextRange_CGRect_CGFloat_NSTextContainer$CallExtensio
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>`.
-abstract final class ObjCBlock_bool_ffiVoid {
+abstract final class ObjCBlock_bool_ffiVoid$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -332516,7 +332586,7 @@ abstract final class ObjCBlock_bool_ffiVoid {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)>`.
-extension ObjCBlock_bool_ffiVoid$CallExtension
+extension ObjCBlock_bool_ffiVoid$1$CallExtension
     on objc.ObjCBlock<ffi.Bool Function(ffi.Pointer<ffi.Void>)> {
   bool call(ffi.Pointer<ffi.Void> arg0) => ref.pointer.ref.invoke
       .cast<
@@ -333450,7 +333520,7 @@ abstract final class ObjCBlock_bool_ffiVoid_NSApplication_NSUserActivity_ffiVoid
               retain: true,
               release: true,
             ),
-            ObjCBlock_ffiVoid_NSArray.fromPointer(
+            ObjCBlock_ffiVoid_NSArray$2.fromPointer(
               arg3,
               retain: true,
               release: true,
@@ -354315,7 +354385,7 @@ extension ObjCBlock_ffiFloat_ffiVoid_NSAnimation_NSAnimationProgress$CallExtensi
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function()>`.
-abstract final class ObjCBlock_ffiVoid {
+abstract final class ObjCBlock_ffiVoid$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function()> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -354488,7 +354558,7 @@ abstract final class ObjCBlock_ffiVoid {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function()>`.
-extension ObjCBlock_ffiVoid$CallExtension
+extension ObjCBlock_ffiVoid$1$CallExtension
     on objc.ObjCBlock<ffi.Void Function()> {
   void call() =>
       ref.pointer.ref.invoke
@@ -355950,7 +356020,7 @@ extension ObjCBlock_ffiVoid_NSAnimationContext$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(objc.NSArray)>`.
-abstract final class ObjCBlock_ffiVoid_NSArray {
+abstract final class ObjCBlock_ffiVoid_NSArray$2 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(objc.NSArray)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -356175,7 +356245,7 @@ abstract final class ObjCBlock_ffiVoid_NSArray {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(objc.NSArray)>`.
-extension ObjCBlock_ffiVoid_NSArray$CallExtension
+extension ObjCBlock_ffiVoid_NSArray$2$CallExtension
     on objc.ObjCBlock<ffi.Void Function(objc.NSArray)> {
   void call(objc.NSArray arg0) => ref.pointer.ref.invoke
       .cast<
@@ -356195,7 +356265,7 @@ extension ObjCBlock_ffiVoid_NSArray$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(objc.NSArray?)>`.
-abstract final class ObjCBlock_ffiVoid_NSArray$1 {
+abstract final class ObjCBlock_ffiVoid_NSArray$3 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(objc.NSArray?)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -356432,7 +356502,7 @@ abstract final class ObjCBlock_ffiVoid_NSArray$1 {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(objc.NSArray?)>`.
-extension ObjCBlock_ffiVoid_NSArray$1$CallExtension
+extension ObjCBlock_ffiVoid_NSArray$3$CallExtension
     on objc.ObjCBlock<ffi.Void Function(objc.NSArray?)> {
   void call(objc.NSArray? arg0) => ref.pointer.ref.invoke
       .cast<
@@ -357398,7 +357468,7 @@ extension ObjCBlock_ffiVoid_NSColor$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(objc.NSDictionary?, objc.NSError?)>`.
-abstract final class ObjCBlock_ffiVoid_NSDictionary_NSError {
+abstract final class ObjCBlock_ffiVoid_NSDictionary_NSError$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(objc.NSDictionary?, objc.NSError?)>
   fromPointer(
@@ -357696,7 +357766,7 @@ abstract final class ObjCBlock_ffiVoid_NSDictionary_NSError {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(objc.NSDictionary?, objc.NSError?)>`.
-extension ObjCBlock_ffiVoid_NSDictionary_NSError$CallExtension
+extension ObjCBlock_ffiVoid_NSDictionary_NSError$1$CallExtension
     on objc.ObjCBlock<ffi.Void Function(objc.NSDictionary?, objc.NSError?)> {
   void call(objc.NSDictionary? arg0, objc.NSError? arg1) =>
       ref.pointer.ref.invoke
@@ -357723,7 +357793,7 @@ extension ObjCBlock_ffiVoid_NSDictionary_NSError$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(objc.NSDictionary, objc.NSError?)>`.
-abstract final class ObjCBlock_ffiVoid_NSDictionary_NSError$1 {
+abstract final class ObjCBlock_ffiVoid_NSDictionary_NSError$2 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(objc.NSDictionary, objc.NSError?)>
   fromPointer(
@@ -358013,7 +358083,7 @@ abstract final class ObjCBlock_ffiVoid_NSDictionary_NSError$1 {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(objc.NSDictionary, objc.NSError?)>`.
-extension ObjCBlock_ffiVoid_NSDictionary_NSError$1$CallExtension
+extension ObjCBlock_ffiVoid_NSDictionary_NSError$2$CallExtension
     on objc.ObjCBlock<ffi.Void Function(objc.NSDictionary, objc.NSError?)> {
   void call(objc.NSDictionary arg0, objc.NSError? arg1) => ref
       .pointer
@@ -358737,7 +358807,7 @@ extension ObjCBlock_ffiVoid_NSDraggingItem_NSInteger_bool$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(objc.NSError?)>`.
-abstract final class ObjCBlock_ffiVoid_NSError {
+abstract final class ObjCBlock_ffiVoid_NSError$2 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(objc.NSError?)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -358974,7 +359044,7 @@ abstract final class ObjCBlock_ffiVoid_NSError {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(objc.NSError?)>`.
-extension ObjCBlock_ffiVoid_NSError$CallExtension
+extension ObjCBlock_ffiVoid_NSError$2$CallExtension
     on objc.ObjCBlock<ffi.Void Function(objc.NSError?)> {
   void call(objc.NSError? arg0) => ref.pointer.ref.invoke
       .cast<
@@ -366819,7 +366889,7 @@ extension ObjCBlock_ffiVoid_NSWorkspaceAuthorization_NSError$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Bool)>`.
-abstract final class ObjCBlock_ffiVoid_bool {
+abstract final class ObjCBlock_ffiVoid_bool$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(ffi.Bool)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -367015,7 +367085,7 @@ abstract final class ObjCBlock_ffiVoid_bool {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Bool)>`.
-extension ObjCBlock_ffiVoid_bool$CallExtension
+extension ObjCBlock_ffiVoid_bool$1$CallExtension
     on objc.ObjCBlock<ffi.Void Function(ffi.Bool)> {
   void call(bool arg0) =>
       ref.pointer.ref.invoke
@@ -367464,7 +367534,7 @@ extension ObjCBlock_ffiVoid_ffiLong$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>`.
-abstract final class ObjCBlock_ffiVoid_ffiVoid {
+abstract final class ObjCBlock_ffiVoid_ffiVoid$3 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)> fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -367689,7 +367759,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)>`.
-extension ObjCBlock_ffiVoid_ffiVoid$CallExtension
+extension ObjCBlock_ffiVoid_ffiVoid$3$CallExtension
     on objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>)> {
   void call(ffi.Pointer<ffi.Void> arg0) => ref.pointer.ref.invoke
       .cast<
@@ -367706,7 +367776,7 @@ extension ObjCBlock_ffiVoid_ffiVoid$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>)>`.
-abstract final class ObjCBlock_ffiVoid_ffiVoid$1 {
+abstract final class ObjCBlock_ffiVoid_ffiVoid$4 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>)>
   fromPointer(
@@ -367753,8 +367823,9 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$1 {
   }) => objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>)>(
     objc.newClosureBlock(
       _closureCallable,
-      (ffi.Pointer<objc.ObjCBlockImpl> arg0) =>
-          fn(ObjCBlock_ffiVoid.fromPointer(arg0, retain: true, release: true)),
+      (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
+        ObjCBlock_ffiVoid$1.fromPointer(arg0, retain: true, release: true),
+      ),
       keepIsolateAlive,
     ),
     retain: false,
@@ -367777,8 +367848,9 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$1 {
   }) {
     final raw = objc.newClosureBlock(
       _listenerCallable.nativeFunction.cast(),
-      (ffi.Pointer<objc.ObjCBlockImpl> arg0) =>
-          fn(ObjCBlock_ffiVoid.fromPointer(arg0, retain: false, release: true)),
+      (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
+        ObjCBlock_ffiVoid$1.fromPointer(arg0, retain: false, release: true),
+      ),
       keepIsolateAlive,
     );
     final wrapper = _1wf8t1k_wrapListenerBlock_f167m6(raw);
@@ -367805,14 +367877,16 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$1 {
   }) {
     final raw = objc.newClosureBlock(
       _blockingCallable.nativeFunction.cast(),
-      (ffi.Pointer<objc.ObjCBlockImpl> arg0) =>
-          fn(ObjCBlock_ffiVoid.fromPointer(arg0, retain: false, release: true)),
+      (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
+        ObjCBlock_ffiVoid$1.fromPointer(arg0, retain: false, release: true),
+      ),
       keepIsolateAlive,
     );
     final rawListener = objc.newClosureBlock(
       _blockingListenerCallable.nativeFunction.cast(),
-      (ffi.Pointer<objc.ObjCBlockImpl> arg0) =>
-          fn(ObjCBlock_ffiVoid.fromPointer(arg0, retain: false, release: true)),
+      (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
+        ObjCBlock_ffiVoid$1.fromPointer(arg0, retain: false, release: true),
+      ),
       keepIsolateAlive,
     );
     final wrapper = _1wf8t1k_wrapBlockingBlock_f167m6(
@@ -367932,7 +368006,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$1 {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>)>`.
-extension ObjCBlock_ffiVoid_ffiVoid$1$CallExtension
+extension ObjCBlock_ffiVoid_ffiVoid$4$CallExtension
     on objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>)> {
   void call(objc.ObjCBlock<ffi.Void Function()> arg0) => ref.pointer.ref.invoke
       .cast<
@@ -367952,7 +368026,7 @@ extension ObjCBlock_ffiVoid_ffiVoid$1$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>?)>`.
-abstract final class ObjCBlock_ffiVoid_ffiVoid$2 {
+abstract final class ObjCBlock_ffiVoid_ffiVoid$5 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>?)>
   fromPointer(
@@ -368002,7 +368076,11 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$2 {
       (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
         arg0.address == 0
             ? null
-            : ObjCBlock_ffiVoid.fromPointer(arg0, retain: true, release: true),
+            : ObjCBlock_ffiVoid$1.fromPointer(
+                arg0,
+                retain: true,
+                release: true,
+              ),
       ),
       keepIsolateAlive,
     ),
@@ -368029,7 +368107,11 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$2 {
       (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
         arg0.address == 0
             ? null
-            : ObjCBlock_ffiVoid.fromPointer(arg0, retain: false, release: true),
+            : ObjCBlock_ffiVoid$1.fromPointer(
+                arg0,
+                retain: false,
+                release: true,
+              ),
       ),
       keepIsolateAlive,
     );
@@ -368060,7 +368142,11 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$2 {
       (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
         arg0.address == 0
             ? null
-            : ObjCBlock_ffiVoid.fromPointer(arg0, retain: false, release: true),
+            : ObjCBlock_ffiVoid$1.fromPointer(
+                arg0,
+                retain: false,
+                release: true,
+              ),
       ),
       keepIsolateAlive,
     );
@@ -368069,7 +368155,11 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$2 {
       (ffi.Pointer<objc.ObjCBlockImpl> arg0) => fn(
         arg0.address == 0
             ? null
-            : ObjCBlock_ffiVoid.fromPointer(arg0, retain: false, release: true),
+            : ObjCBlock_ffiVoid$1.fromPointer(
+                arg0,
+                retain: false,
+                release: true,
+              ),
       ),
       keepIsolateAlive,
     );
@@ -368190,7 +368280,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid$2 {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>?)>`.
-extension ObjCBlock_ffiVoid_ffiVoid$2$CallExtension
+extension ObjCBlock_ffiVoid_ffiVoid$5$CallExtension
     on objc.ObjCBlock<ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>?)> {
   void call(objc.ObjCBlock<ffi.Void Function()>? arg0) => ref.pointer.ref.invoke
       .cast<
@@ -389407,7 +389497,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSFilePromiseProvider_NSURL_ffiVo
               release: true,
             ),
             objc.NSURL.fromPointer(arg2, retain: true, release: true),
-            ObjCBlock_ffiVoid_NSError.fromPointer(
+            ObjCBlock_ffiVoid_NSError$2.fromPointer(
               arg3,
               retain: true,
               release: true,
@@ -389472,7 +389562,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSFilePromiseProvider_NSURL_ffiVo
         arg0,
         NSFilePromiseProvider.fromPointer(arg1, retain: false, release: true),
         objc.NSURL.fromPointer(arg2, retain: false, release: true),
-        ObjCBlock_ffiVoid_NSError.fromPointer(
+        ObjCBlock_ffiVoid_NSError$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -389531,7 +389621,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSFilePromiseProvider_NSURL_ffiVo
         arg0,
         NSFilePromiseProvider.fromPointer(arg1, retain: false, release: true),
         objc.NSURL.fromPointer(arg2, retain: false, release: true),
-        ObjCBlock_ffiVoid_NSError.fromPointer(
+        ObjCBlock_ffiVoid_NSError$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -389550,7 +389640,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSFilePromiseProvider_NSURL_ffiVo
         arg0,
         NSFilePromiseProvider.fromPointer(arg1, retain: false, release: true),
         objc.NSURL.fromPointer(arg2, retain: false, release: true),
-        ObjCBlock_ffiVoid_NSError.fromPointer(
+        ObjCBlock_ffiVoid_NSError$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -390954,11 +391044,11 @@ extension ObjCBlock_ffiVoid_ffiVoid_NSHapticFeedbackPattern_NSHapticFeedbackPerf
       >()(ref.pointer, arg0, arg1.value, arg2.value);
 }
 
-/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)>`.
+/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)>`.
 abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
   >
   fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -390966,7 +391056,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
       >(pointer, retain: retain, release: release);
 
   /// Creates a block from a C function pointer.
@@ -390975,7 +391065,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
   >
   fromFunctionPointer(
     ffi.Pointer<
@@ -390990,7 +391080,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
     ptr,
   ) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
       >(
         objc.newPointerBlock(_fnPtrCallable, ptr.cast()),
         retain: false,
@@ -391006,14 +391096,14 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
   >
   fromFunction(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
       >(
         objc.newClosureBlock(
           _closureCallable,
@@ -391023,7 +391113,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
             ffi.Pointer<objc.ObjCObjectImpl> arg2,
           ) => fn(
             arg0,
-            NSImage.fromPointer(arg1, retain: true, release: true),
+            NSImage$1.fromPointer(arg1, retain: true, release: true),
             NSButtonCell.fromPointer(arg2, retain: true, release: true),
           ),
           keepIsolateAlive,
@@ -391056,10 +391146,10 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
   >
   listener(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell) fn, {
     bool keepIsolateAlive = true,
   }) {
     final raw = objc.newClosureBlock(
@@ -391070,7 +391160,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
         ffi.Pointer<objc.ObjCObjectImpl> arg2,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSButtonCell.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
@@ -391078,7 +391168,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
     final wrapper = _1wf8t1k_wrapListenerBlock_fjrv01(raw);
     objc.objectRelease(raw.cast());
     return objc.ObjCBlock<
-      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
     >(wrapper, retain: false, release: true);
   }
 
@@ -391093,10 +391183,10 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
   /// has shut down, and the block is invoked by native code, it may block
   /// indefinitely, or have other undefined behavior.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
   >
   blocking(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell) fn, {
     bool keepIsolateAlive = true,
   }) {
     final raw = objc.newClosureBlock(
@@ -391107,7 +391197,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
         ffi.Pointer<objc.ObjCObjectImpl> arg2,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSButtonCell.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
@@ -391120,7 +391210,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
         ffi.Pointer<objc.ObjCObjectImpl> arg2,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSButtonCell.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
@@ -391133,7 +391223,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
     objc.objectRelease(raw.cast());
     objc.objectRelease(rawListener.cast());
     return objc.ObjCBlock<
-      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
     >(wrapper, retain: false, release: true);
   }
 
@@ -391287,41 +391377,39 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell {
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)>`.
+/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)>`.
 extension ObjCBlock_ffiVoid_ffiVoid_NSImage_NSButtonCell$CallExtension
     on
         objc.ObjCBlock<
-          ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSButtonCell)
+          ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSButtonCell)
         > {
-  void call(ffi.Pointer<ffi.Void> arg0, NSImage arg1, NSButtonCell arg2) => ref
-      .pointer
-      .ref
-      .invoke
-      .cast<
-        ffi.NativeFunction<
-          ffi.Void Function(
-            ffi.Pointer<objc.ObjCBlockImpl> block,
-            ffi.Pointer<ffi.Void> arg0,
-            ffi.Pointer<objc.ObjCObjectImpl> arg1,
-            ffi.Pointer<objc.ObjCObjectImpl> arg2,
-          )
-        >
-      >()
-      .asFunction<
-        void Function(
-          ffi.Pointer<objc.ObjCBlockImpl>,
-          ffi.Pointer<ffi.Void>,
-          ffi.Pointer<objc.ObjCObjectImpl>,
-          ffi.Pointer<objc.ObjCObjectImpl>,
-        )
-      >()(ref.pointer, arg0, arg1.ref.pointer, arg2.ref.pointer);
+  void call(ffi.Pointer<ffi.Void> arg0, NSImage$1 arg1, NSButtonCell arg2) =>
+      ref.pointer.ref.invoke
+          .cast<
+            ffi.NativeFunction<
+              ffi.Void Function(
+                ffi.Pointer<objc.ObjCBlockImpl> block,
+                ffi.Pointer<ffi.Void> arg0,
+                ffi.Pointer<objc.ObjCObjectImpl> arg1,
+                ffi.Pointer<objc.ObjCObjectImpl> arg2,
+              )
+            >
+          >()
+          .asFunction<
+            void Function(
+              ffi.Pointer<objc.ObjCBlockImpl>,
+              ffi.Pointer<ffi.Void>,
+              ffi.Pointer<objc.ObjCObjectImpl>,
+              ffi.Pointer<objc.ObjCObjectImpl>,
+            )
+          >()(ref.pointer, arg0, arg1.ref.pointer, arg2.ref.pointer);
 }
 
-/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)>`.
+/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)>`.
 abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
   >
   fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -391329,7 +391417,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
       >(pointer, retain: retain, release: release);
 
   /// Creates a block from a C function pointer.
@@ -391338,7 +391426,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
   >
   fromFunctionPointer(
     ffi.Pointer<
@@ -391353,7 +391441,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
     ptr,
   ) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
       >(
         objc.newPointerBlock(_fnPtrCallable, ptr.cast()),
         retain: false,
@@ -391369,14 +391457,14 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
   >
   fromFunction(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
       >(
         objc.newClosureBlock(
           _closureCallable,
@@ -391386,7 +391474,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
             ffi.Pointer<objc.ObjCObjectImpl> arg2,
           ) => fn(
             arg0,
-            NSImage.fromPointer(arg1, retain: true, release: true),
+            NSImage$1.fromPointer(arg1, retain: true, release: true),
             NSImageRep.fromPointer(arg2, retain: true, release: true),
           ),
           keepIsolateAlive,
@@ -391419,10 +391507,10 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
   >
   listener(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep) fn, {
     bool keepIsolateAlive = true,
   }) {
     final raw = objc.newClosureBlock(
@@ -391433,7 +391521,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
         ffi.Pointer<objc.ObjCObjectImpl> arg2,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
@@ -391441,7 +391529,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
     final wrapper = _1wf8t1k_wrapListenerBlock_fjrv01(raw);
     objc.objectRelease(raw.cast());
     return objc.ObjCBlock<
-      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
     >(wrapper, retain: false, release: true);
   }
 
@@ -391456,10 +391544,10 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
   /// has shut down, and the block is invoked by native code, it may block
   /// indefinitely, or have other undefined behavior.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
   >
   blocking(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep) fn, {
     bool keepIsolateAlive = true,
   }) {
     final raw = objc.newClosureBlock(
@@ -391470,7 +391558,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
         ffi.Pointer<objc.ObjCObjectImpl> arg2,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
@@ -391483,7 +391571,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
         ffi.Pointer<objc.ObjCObjectImpl> arg2,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
@@ -391496,7 +391584,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
     objc.objectRelease(raw.cast());
     objc.objectRelease(rawListener.cast());
     return objc.ObjCBlock<
-      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
     >(wrapper, retain: false, release: true);
   }
 
@@ -391650,13 +391738,13 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep {
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)>`.
+/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)>`.
 extension ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep$CallExtension
     on
         objc.ObjCBlock<
-          ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep)
+          ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep)
         > {
-  void call(ffi.Pointer<ffi.Void> arg0, NSImage arg1, NSImageRep arg2) => ref
+  void call(ffi.Pointer<ffi.Void> arg0, NSImage$1 arg1, NSImageRep arg2) => ref
       .pointer
       .ref
       .invoke
@@ -391680,13 +391768,13 @@ extension ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep$CallExtension
       >()(ref.pointer, arg0, arg1.ref.pointer, arg2.ref.pointer);
 }
 
-/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.UnsignedLong)>`.
+/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.UnsignedLong)>`.
 abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadStatus {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
     ffi.Void Function(
       ffi.Pointer<ffi.Void>,
-      NSImage,
+      NSImage$1,
       NSImageRep,
       ffi.UnsignedLong,
     )
@@ -391699,7 +391787,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
       objc.ObjCBlock<
         ffi.Void Function(
           ffi.Pointer<ffi.Void>,
-          NSImage,
+          NSImage$1,
           NSImageRep,
           ffi.UnsignedLong,
         )
@@ -391713,7 +391801,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
   static objc.ObjCBlock<
     ffi.Void Function(
       ffi.Pointer<ffi.Void>,
-      NSImage,
+      NSImage$1,
       NSImageRep,
       ffi.UnsignedLong,
     )
@@ -391734,7 +391822,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
       objc.ObjCBlock<
         ffi.Void Function(
           ffi.Pointer<ffi.Void>,
-          NSImage,
+          NSImage$1,
           NSImageRep,
           ffi.UnsignedLong,
         )
@@ -391755,20 +391843,25 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
   static objc.ObjCBlock<
     ffi.Void Function(
       ffi.Pointer<ffi.Void>,
-      NSImage,
+      NSImage$1,
       NSImageRep,
       ffi.UnsignedLong,
     )
   >
   fromFunction(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, NSImageLoadStatus)
+    void Function(
+      ffi.Pointer<ffi.Void>,
+      NSImage$1,
+      NSImageRep,
+      NSImageLoadStatus,
+    )
     fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
         ffi.Void Function(
           ffi.Pointer<ffi.Void>,
-          NSImage,
+          NSImage$1,
           NSImageRep,
           ffi.UnsignedLong,
         )
@@ -391782,7 +391875,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
             int arg3,
           ) => fn(
             arg0,
-            NSImage.fromPointer(arg1, retain: true, release: true),
+            NSImage$1.fromPointer(arg1, retain: true, release: true),
             NSImageRep.fromPointer(arg2, retain: true, release: true),
             NSImageLoadStatus.fromValue(arg3),
           ),
@@ -391819,13 +391912,18 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
   static objc.ObjCBlock<
     ffi.Void Function(
       ffi.Pointer<ffi.Void>,
-      NSImage,
+      NSImage$1,
       NSImageRep,
       ffi.UnsignedLong,
     )
   >
   listener(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, NSImageLoadStatus)
+    void Function(
+      ffi.Pointer<ffi.Void>,
+      NSImage$1,
+      NSImageRep,
+      NSImageLoadStatus,
+    )
     fn, {
     bool keepIsolateAlive = true,
   }) {
@@ -391838,7 +391936,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
         int arg3,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
         NSImageLoadStatus.fromValue(arg3),
       ),
@@ -391849,7 +391947,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
     return objc.ObjCBlock<
       ffi.Void Function(
         ffi.Pointer<ffi.Void>,
-        NSImage,
+        NSImage$1,
         NSImageRep,
         ffi.UnsignedLong,
       )
@@ -391869,13 +391967,18 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
   static objc.ObjCBlock<
     ffi.Void Function(
       ffi.Pointer<ffi.Void>,
-      NSImage,
+      NSImage$1,
       NSImageRep,
       ffi.UnsignedLong,
     )
   >
   blocking(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, NSImageLoadStatus)
+    void Function(
+      ffi.Pointer<ffi.Void>,
+      NSImage$1,
+      NSImageRep,
+      NSImageLoadStatus,
+    )
     fn, {
     bool keepIsolateAlive = true,
   }) {
@@ -391888,7 +391991,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
         int arg3,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
         NSImageLoadStatus.fromValue(arg3),
       ),
@@ -391903,7 +392006,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
         int arg3,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
         NSImageLoadStatus.fromValue(arg3),
       ),
@@ -391919,7 +392022,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
     return objc.ObjCBlock<
       ffi.Void Function(
         ffi.Pointer<ffi.Void>,
-        NSImage,
+        NSImage$1,
         NSImageRep,
         ffi.UnsignedLong,
       )
@@ -392093,20 +392196,20 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadSta
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.UnsignedLong)>`.
+/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.UnsignedLong)>`.
 extension ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadStatus$CallExtension
     on
         objc.ObjCBlock<
           ffi.Void Function(
             ffi.Pointer<ffi.Void>,
-            NSImage,
+            NSImage$1,
             NSImageRep,
             ffi.UnsignedLong,
           )
         > {
   void call(
     ffi.Pointer<ffi.Void> arg0,
-    NSImage arg1,
+    NSImage$1 arg1,
     NSImageRep arg2,
     NSImageLoadStatus arg3,
   ) => ref.pointer.ref.invoke
@@ -392132,11 +392235,11 @@ extension ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSImageLoadStatus$CallExt
       >()(ref.pointer, arg0, arg1.ref.pointer, arg2.ref.pointer, arg3.value);
 }
 
-/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)>`.
+/// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)>`.
 abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)
   >
   fromPointer(
     ffi.Pointer<objc.ObjCBlockImpl> pointer, {
@@ -392144,7 +392247,12 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
     bool release = false,
   }) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+        ffi.Void Function(
+          ffi.Pointer<ffi.Void>,
+          NSImage$1,
+          NSImageRep,
+          ffi.Long,
+        )
       >(pointer, retain: retain, release: release);
 
   /// Creates a block from a C function pointer.
@@ -392153,7 +392261,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
   /// the isolate that registered it. Invoking the block on the wrong thread
   /// will result in a crash.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)
   >
   fromFunctionPointer(
     ffi.Pointer<
@@ -392169,7 +392277,12 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
     ptr,
   ) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+        ffi.Void Function(
+          ffi.Pointer<ffi.Void>,
+          NSImage$1,
+          NSImageRep,
+          ffi.Long,
+        )
       >(
         objc.newPointerBlock(_fnPtrCallable, ptr.cast()),
         retain: false,
@@ -392185,14 +392298,19 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)
   >
   fromFunction(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, int) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, int) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
-        ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+        ffi.Void Function(
+          ffi.Pointer<ffi.Void>,
+          NSImage$1,
+          NSImageRep,
+          ffi.Long,
+        )
       >(
         objc.newClosureBlock(
           _closureCallable,
@@ -392203,7 +392321,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
             int arg3,
           ) => fn(
             arg0,
-            NSImage.fromPointer(arg1, retain: true, release: true),
+            NSImage$1.fromPointer(arg1, retain: true, release: true),
             NSImageRep.fromPointer(arg2, retain: true, release: true),
             arg3,
           ),
@@ -392238,10 +392356,10 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
   /// If `keepIsolateAlive` is true, this block will keep this isolate alive
   /// until it is garbage collected by both Dart and ObjC.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)
   >
   listener(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, int) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, int) fn, {
     bool keepIsolateAlive = true,
   }) {
     final raw = objc.newClosureBlock(
@@ -392253,7 +392371,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
         int arg3,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
         arg3,
       ),
@@ -392262,7 +392380,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
     final wrapper = _1wf8t1k_wrapListenerBlock_e6jln7(raw);
     objc.objectRelease(raw.cast());
     return objc.ObjCBlock<
-      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)
     >(wrapper, retain: false, release: true);
   }
 
@@ -392277,10 +392395,10 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
   /// has shut down, and the block is invoked by native code, it may block
   /// indefinitely, or have other undefined behavior.
   static objc.ObjCBlock<
-    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+    ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)
   >
   blocking(
-    void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, int) fn, {
+    void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, int) fn, {
     bool keepIsolateAlive = true,
   }) {
     final raw = objc.newClosureBlock(
@@ -392292,7 +392410,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
         int arg3,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
         arg3,
       ),
@@ -392307,7 +392425,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
         int arg3,
       ) => fn(
         arg0,
-        NSImage.fromPointer(arg1, retain: false, release: true),
+        NSImage$1.fromPointer(arg1, retain: false, release: true),
         NSImageRep.fromPointer(arg2, retain: false, release: true),
         arg3,
       ),
@@ -392321,7 +392439,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
     objc.objectRelease(raw.cast());
     objc.objectRelease(rawListener.cast());
     return objc.ObjCBlock<
-      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)
+      ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)
     >(wrapper, retain: false, release: true);
   }
 
@@ -392492,20 +392610,20 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger {
           .cast();
 }
 
-/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage, NSImageRep, ffi.Long)>`.
+/// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, NSImage$1, NSImageRep, ffi.Long)>`.
 extension ObjCBlock_ffiVoid_ffiVoid_NSImage_NSImageRep_NSInteger$CallExtension
     on
         objc.ObjCBlock<
           ffi.Void Function(
             ffi.Pointer<ffi.Void>,
-            NSImage,
+            NSImage$1,
             NSImageRep,
             ffi.Long,
           )
         > {
   void call(
     ffi.Pointer<ffi.Void> arg0,
-    NSImage arg1,
+    NSImage$1 arg1,
     NSImageRep arg2,
     int arg3,
   ) => ref.pointer.ref.invoke
@@ -415888,7 +416006,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSString_NSInteger_ffiVoidNSArray
             arg0,
             objc.NSString.fromPointer(arg1, retain: true, release: true),
             arg2,
-            ObjCBlock_ffiVoid_NSArray.fromPointer(
+            ObjCBlock_ffiVoid_NSArray$2.fromPointer(
               arg3,
               retain: true,
               release: true,
@@ -415953,7 +416071,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSString_NSInteger_ffiVoidNSArray
         arg0,
         objc.NSString.fromPointer(arg1, retain: false, release: true),
         arg2,
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -416012,7 +416130,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSString_NSInteger_ffiVoidNSArray
         arg0,
         objc.NSString.fromPointer(arg1, retain: false, release: true),
         arg2,
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -416031,7 +416149,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSString_NSInteger_ffiVoidNSArray
         arg0,
         objc.NSString.fromPointer(arg1, retain: false, release: true),
         arg2,
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -423554,7 +423672,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSTextStorage_ffiVoid {
           ) => fn(
             arg0,
             NSTextStorage.fromPointer(arg1, retain: true, release: true),
-            ObjCBlock_ffiVoid.fromPointer(arg2, retain: true, release: true),
+            ObjCBlock_ffiVoid$1.fromPointer(arg2, retain: true, release: true),
           ),
           keepIsolateAlive,
         ),
@@ -423610,7 +423728,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSTextStorage_ffiVoid {
       ) => fn(
         arg0,
         NSTextStorage.fromPointer(arg1, retain: false, release: true),
-        ObjCBlock_ffiVoid.fromPointer(arg2, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -423660,7 +423778,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSTextStorage_ffiVoid {
       ) => fn(
         arg0,
         NSTextStorage.fromPointer(arg1, retain: false, release: true),
-        ObjCBlock_ffiVoid.fromPointer(arg2, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -423673,7 +423791,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSTextStorage_ffiVoid {
       ) => fn(
         arg0,
         NSTextStorage.fromPointer(arg1, retain: false, release: true),
-        ObjCBlock_ffiVoid.fromPointer(arg2, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg2, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -427524,7 +427642,7 @@ extension ObjCBlock_ffiVoid_ffiVoid_NSUInteger_NSPoint_NSUInteger_id$CallExtensi
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSURL?)>`.
-abstract final class ObjCBlock_ffiVoid_ffiVoid_NSURL {
+abstract final class ObjCBlock_ffiVoid_ffiVoid_NSURL$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSURL?)>
   fromPointer(
@@ -427808,7 +427926,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSURL {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSURL?)>`.
-extension ObjCBlock_ffiVoid_ffiVoid_NSURL$CallExtension
+extension ObjCBlock_ffiVoid_ffiVoid_NSURL$1$CallExtension
     on objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.NSURL?)> {
   void call(ffi.Pointer<ffi.Void> arg0, objc.NSURL? arg1) => ref
       .pointer
@@ -427833,7 +427951,7 @@ extension ObjCBlock_ffiVoid_ffiVoid_NSURL$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, foundation0.NSUserActivity)>`.
-abstract final class ObjCBlock_ffiVoid_ffiVoid_NSUserActivity {
+abstract final class ObjCBlock_ffiVoid_ffiVoid_NSUserActivity$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
     ffi.Void Function(ffi.Pointer<ffi.Void>, foundation0.NSUserActivity)
@@ -428141,7 +428259,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSUserActivity {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, foundation0.NSUserActivity)>`.
-extension ObjCBlock_ffiVoid_ffiVoid_NSUserActivity$CallExtension
+extension ObjCBlock_ffiVoid_ffiVoid_NSUserActivity$1$CallExtension
     on
         objc.ObjCBlock<
           ffi.Void Function(ffi.Pointer<ffi.Void>, foundation0.NSUserActivity)
@@ -430991,7 +431109,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSArray
               retain: true,
               release: true,
             ),
-            ObjCBlock_ffiVoid.fromPointer(arg4, retain: true, release: true),
+            ObjCBlock_ffiVoid$1.fromPointer(arg4, retain: true, release: true),
           ),
           keepIsolateAlive,
         ),
@@ -431065,7 +431183,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSArray
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid.fromPointer(arg4, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg4, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -431133,7 +431251,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSArray
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid.fromPointer(arg4, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg4, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -431158,7 +431276,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSArray
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid.fromPointer(arg4, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg4, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -432771,7 +432889,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSRange
               retain: true,
               release: true,
             ),
-            ObjCBlock_ffiVoid_NSArray.fromPointer(
+            ObjCBlock_ffiVoid_NSArray$2.fromPointer(
               arg4,
               retain: true,
               release: true,
@@ -432849,7 +432967,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSRange
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg4,
           retain: false,
           release: true,
@@ -432921,7 +433039,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSRange
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg4,
           retain: false,
           release: true,
@@ -432950,7 +433068,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSRange
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg4,
           retain: false,
           release: true,
@@ -434458,7 +434576,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
               release: true,
             ),
             NSWritingToolsCoordinatorContextScope.fromValue(arg2),
-            ObjCBlock_ffiVoid_NSArray.fromPointer(
+            ObjCBlock_ffiVoid_NSArray$2.fromPointer(
               arg3,
               retain: true,
               release: true,
@@ -434527,7 +434645,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           release: true,
         ),
         NSWritingToolsCoordinatorContextScope.fromValue(arg2),
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -434590,7 +434708,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           release: true,
         ),
         NSWritingToolsCoordinatorContextScope.fromValue(arg2),
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -434613,7 +434731,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           release: true,
         ),
         NSWritingToolsCoordinatorContextScope.fromValue(arg2),
-        ObjCBlock_ffiVoid_NSArray.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$2.fromPointer(
           arg3,
           retain: false,
           release: true,
@@ -434957,7 +435075,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
               release: true,
             ),
             NSWritingToolsCoordinatorState.fromValue(arg2),
-            ObjCBlock_ffiVoid.fromPointer(arg3, retain: true, release: true),
+            ObjCBlock_ffiVoid$1.fromPointer(arg3, retain: true, release: true),
           ),
           keepIsolateAlive,
         ),
@@ -435022,7 +435140,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           release: true,
         ),
         NSWritingToolsCoordinatorState.fromValue(arg2),
-        ObjCBlock_ffiVoid.fromPointer(arg3, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg3, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -435081,7 +435199,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           release: true,
         ),
         NSWritingToolsCoordinatorState.fromValue(arg2),
-        ObjCBlock_ffiVoid.fromPointer(arg3, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg3, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -435100,7 +435218,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           release: true,
         ),
         NSWritingToolsCoordinatorState.fromValue(arg2),
-        ObjCBlock_ffiVoid.fromPointer(arg3, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg3, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -435464,7 +435582,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
               retain: true,
               release: true,
             ),
-            ObjCBlock_ffiVoid.fromPointer(arg5, retain: true, release: true),
+            ObjCBlock_ffiVoid$1.fromPointer(arg5, retain: true, release: true),
           ),
           keepIsolateAlive,
         ),
@@ -435543,7 +435661,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid.fromPointer(arg5, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg5, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -435616,7 +435734,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid.fromPointer(arg5, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg5, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -435643,7 +435761,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid.fromPointer(arg5, retain: false, release: true),
+        ObjCBlock_ffiVoid$1.fromPointer(arg5, retain: false, release: true),
       ),
       keepIsolateAlive,
     );
@@ -436060,7 +436178,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
               retain: true,
               release: true,
             ),
-            ObjCBlock_ffiVoid_NSArray$1.fromPointer(
+            ObjCBlock_ffiVoid_NSArray$3.fromPointer(
               arg5,
               retain: true,
               release: true,
@@ -436143,7 +436261,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid_NSArray$1.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$3.fromPointer(
           arg5,
           retain: false,
           release: true,
@@ -436220,7 +436338,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid_NSArray$1.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$3.fromPointer(
           arg5,
           retain: false,
           release: true,
@@ -436251,7 +436369,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_NSWritingToolsCoordinator_NSWriti
           retain: false,
           release: true,
         ),
-        ObjCBlock_ffiVoid_NSArray$1.fromPointer(
+        ObjCBlock_ffiVoid_NSArray$3.fromPointer(
           arg5,
           retain: false,
           release: true,
@@ -439183,7 +439301,7 @@ extension ObjCBlock_ffiVoid_ffiVoid_ffiFloat$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(objc.NSError?)>?)>`.
-abstract final class ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError {
+abstract final class ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
     ffi.Void Function(
@@ -439271,7 +439389,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError {
                 arg0,
                 arg1.address == 0
                     ? null
-                    : ObjCBlock_ffiVoid_NSError.fromPointer(
+                    : ObjCBlock_ffiVoid_NSError$2.fromPointer(
                         arg1,
                         retain: true,
                         release: true,
@@ -439325,7 +439443,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError {
         arg0,
         arg1.address == 0
             ? null
-            : ObjCBlock_ffiVoid_NSError.fromPointer(
+            : ObjCBlock_ffiVoid_NSError$2.fromPointer(
                 arg1,
                 retain: false,
                 release: true,
@@ -439373,7 +439491,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError {
         arg0,
         arg1.address == 0
             ? null
-            : ObjCBlock_ffiVoid_NSError.fromPointer(
+            : ObjCBlock_ffiVoid_NSError$2.fromPointer(
                 arg1,
                 retain: false,
                 release: true,
@@ -439387,7 +439505,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError {
         arg0,
         arg1.address == 0
             ? null
-            : ObjCBlock_ffiVoid_NSError.fromPointer(
+            : ObjCBlock_ffiVoid_NSError$2.fromPointer(
                 arg1,
                 retain: false,
                 release: true,
@@ -439541,7 +439659,7 @@ abstract final class ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Void Function(ffi.Pointer<ffi.Void>, objc.ObjCBlock<ffi.Void Function(objc.NSError?)>?)>`.
-extension ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError$CallExtension
+extension ObjCBlock_ffiVoid_ffiVoid_ffiVoidNSError$1$CallExtension
     on
         objc.ObjCBlock<
           ffi.Void Function(
@@ -449107,7 +449225,7 @@ extension ObjCBlock_id_NSCoder$CallExtension
 }
 
 /// Construction methods for `objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>`.
-abstract final class ObjCBlock_id_ffiVoid {
+abstract final class ObjCBlock_id_ffiVoid$1 {
   /// Returns a block that wraps the given raw block pointer.
   static objc.ObjCBlock<
     ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)
@@ -449224,7 +449342,7 @@ abstract final class ObjCBlock_id_ffiVoid {
 }
 
 /// Call operator for `objc.ObjCBlock<ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)>`.
-extension ObjCBlock_id_ffiVoid$CallExtension
+extension ObjCBlock_id_ffiVoid$1$CallExtension
     on
         objc.ObjCBlock<
           ffi.Pointer<objc.ObjCObjectImpl>? Function(ffi.Pointer<ffi.Void>)
@@ -453994,7 +454112,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid {
   >
   fromFunctionPointer(
     ffi.Pointer<
-      ffi.NativeFunction<instancetype Function(ffi.Pointer<ffi.Void> arg0)>
+      ffi.NativeFunction<instancetype$1 Function(ffi.Pointer<ffi.Void> arg0)>
     >
     ptr,
   ) =>
@@ -454022,7 +454140,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid {
     )
   >
   fromFunction(
-    Dartinstancetype Function(ffi.Pointer<ffi.Void>) fn, {
+    Dartinstancetype$1 Function(ffi.Pointer<ffi.Void>) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
@@ -454051,31 +454169,31 @@ abstract final class ObjCBlock_instancetype_ffiVoid {
           >(_1wf8t1k_protocolTrampoline_1mbt9g9)
           .cast();
 
-  static instancetype _fnPtrTrampoline(
+  static instancetype$1 _fnPtrTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
   ) => block.ref.target
       .cast<
-        ffi.NativeFunction<instancetype Function(ffi.Pointer<ffi.Void> arg0)>
+        ffi.NativeFunction<instancetype$1 Function(ffi.Pointer<ffi.Void> arg0)>
       >()
-      .asFunction<instancetype Function(ffi.Pointer<ffi.Void>)>()(arg0);
+      .asFunction<instancetype$1 Function(ffi.Pointer<ffi.Void>)>()(arg0);
   static ffi.Pointer<ffi.Void> _fnPtrCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
             )
           >(_fnPtrTrampoline)
           .cast();
-  static instancetype _closureTrampoline(
+  static instancetype$1 _closureTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
   ) =>
       (objc.getBlockClosure(block)
-          as instancetype Function(ffi.Pointer<ffi.Void>))(arg0);
+          as instancetype$1 Function(ffi.Pointer<ffi.Void>))(arg0);
   static ffi.Pointer<ffi.Void> _closureCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
             )
@@ -454091,18 +454209,18 @@ extension ObjCBlock_instancetype_ffiVoid$CallExtension
             ffi.Pointer<ffi.Void>,
           )
         > {
-  Dartinstancetype call(ffi.Pointer<ffi.Void> arg0) => objc.ObjCObject(
+  Dartinstancetype$1 call(ffi.Pointer<ffi.Void> arg0) => objc.ObjCObject(
     ref.pointer.ref.invoke
         .cast<
           ffi.NativeFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl> block,
               ffi.Pointer<ffi.Void> arg0,
             )
           >
         >()
         .asFunction<
-          instancetype Function(
+          instancetype$1 Function(
             ffi.Pointer<objc.ObjCBlockImpl>,
             ffi.Pointer<ffi.Void>,
           )
@@ -454147,7 +454265,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSCoder {
   fromFunctionPointer(
     ffi.Pointer<
       ffi.NativeFunction<
-        instancetype Function(
+        instancetype$1 Function(
           ffi.Pointer<ffi.Void> arg0,
           ffi.Pointer<objc.ObjCObjectImpl> arg1,
         )
@@ -454181,7 +454299,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSCoder {
     )
   >
   fromFunction(
-    Dartinstancetype? Function(ffi.Pointer<ffi.Void>, objc.NSCoder) fn, {
+    Dartinstancetype$1? Function(ffi.Pointer<ffi.Void>, objc.NSCoder) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
@@ -454217,47 +454335,47 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSCoder {
           >(_1wf8t1k_protocolTrampoline_xr62hr)
           .cast();
 
-  static instancetype _fnPtrTrampoline(
+  static instancetype$1 _fnPtrTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
     ffi.Pointer<objc.ObjCObjectImpl> arg1,
   ) => block.ref.target
       .cast<
         ffi.NativeFunction<
-          instancetype Function(
+          instancetype$1 Function(
             ffi.Pointer<ffi.Void> arg0,
             ffi.Pointer<objc.ObjCObjectImpl> arg1,
           )
         >
       >()
       .asFunction<
-        instancetype Function(
+        instancetype$1 Function(
           ffi.Pointer<ffi.Void>,
           ffi.Pointer<objc.ObjCObjectImpl>,
         )
       >()(arg0, arg1);
   static ffi.Pointer<ffi.Void> _fnPtrCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
               ffi.Pointer<objc.ObjCObjectImpl>,
             )
           >(_fnPtrTrampoline)
           .cast();
-  static instancetype _closureTrampoline(
+  static instancetype$1 _closureTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
     ffi.Pointer<objc.ObjCObjectImpl> arg1,
   ) =>
       (objc.getBlockClosure(block)
-          as instancetype Function(
+          as instancetype$1 Function(
             ffi.Pointer<ffi.Void>,
             ffi.Pointer<objc.ObjCObjectImpl>,
           ))(arg0, arg1);
   static ffi.Pointer<ffi.Void> _closureCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
               ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454275,11 +454393,11 @@ extension ObjCBlock_instancetype_ffiVoid_NSCoder$CallExtension
             objc.NSCoder,
           )
         > {
-  Dartinstancetype? call(ffi.Pointer<ffi.Void> arg0, objc.NSCoder arg1) =>
+  Dartinstancetype$1? call(ffi.Pointer<ffi.Void> arg0, objc.NSCoder arg1) =>
       ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
-                  instancetype Function(
+                  instancetype$1 Function(
                     ffi.Pointer<objc.ObjCBlockImpl> block,
                     ffi.Pointer<ffi.Void> arg0,
                     ffi.Pointer<objc.ObjCObjectImpl> arg1,
@@ -454287,7 +454405,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSCoder$CallExtension
                 >
               >()
               .asFunction<
-                instancetype Function(
+                instancetype$1 Function(
                   ffi.Pointer<objc.ObjCBlockImpl>,
                   ffi.Pointer<ffi.Void>,
                   ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454300,7 +454418,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSCoder$CallExtension
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
-                  instancetype Function(
+                  instancetype$1 Function(
                     ffi.Pointer<objc.ObjCBlockImpl> block,
                     ffi.Pointer<ffi.Void> arg0,
                     ffi.Pointer<objc.ObjCObjectImpl> arg1,
@@ -454308,7 +454426,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSCoder$CallExtension
                 >
               >()
               .asFunction<
-                instancetype Function(
+                instancetype$1 Function(
                   ffi.Pointer<objc.ObjCBlockImpl>,
                   ffi.Pointer<ffi.Void>,
                   ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454357,7 +454475,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle {
   fromFunctionPointer(
     ffi.Pointer<
       ffi.NativeFunction<
-        instancetype Function(
+        instancetype$1 Function(
           ffi.Pointer<ffi.Void> arg0,
           ffi.Pointer<objc.ObjCObjectImpl> arg1,
           ffi.Pointer<objc.ObjCObjectImpl> arg2,
@@ -454394,7 +454512,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle {
     )
   >
   fromFunction(
-    Dartinstancetype Function(
+    Dartinstancetype$1 Function(
       ffi.Pointer<ffi.Void>,
       objc.NSString?,
       objc.NSBundle?,
@@ -454444,7 +454562,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle {
           >(_1wf8t1k_protocolTrampoline_zi5eed)
           .cast();
 
-  static instancetype _fnPtrTrampoline(
+  static instancetype$1 _fnPtrTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
     ffi.Pointer<objc.ObjCObjectImpl> arg1,
@@ -454452,7 +454570,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle {
   ) => block.ref.target
       .cast<
         ffi.NativeFunction<
-          instancetype Function(
+          instancetype$1 Function(
             ffi.Pointer<ffi.Void> arg0,
             ffi.Pointer<objc.ObjCObjectImpl> arg1,
             ffi.Pointer<objc.ObjCObjectImpl> arg2,
@@ -454460,7 +454578,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle {
         >
       >()
       .asFunction<
-        instancetype Function(
+        instancetype$1 Function(
           ffi.Pointer<ffi.Void>,
           ffi.Pointer<objc.ObjCObjectImpl>,
           ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454468,7 +454586,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle {
       >()(arg0, arg1, arg2);
   static ffi.Pointer<ffi.Void> _fnPtrCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
               ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454476,21 +454594,21 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle {
             )
           >(_fnPtrTrampoline)
           .cast();
-  static instancetype _closureTrampoline(
+  static instancetype$1 _closureTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
     ffi.Pointer<objc.ObjCObjectImpl> arg1,
     ffi.Pointer<objc.ObjCObjectImpl> arg2,
   ) =>
       (objc.getBlockClosure(block)
-          as instancetype Function(
+          as instancetype$1 Function(
             ffi.Pointer<ffi.Void>,
             ffi.Pointer<objc.ObjCObjectImpl>,
             ffi.Pointer<objc.ObjCObjectImpl>,
           ))(arg0, arg1, arg2);
   static ffi.Pointer<ffi.Void> _closureCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
               ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454510,7 +454628,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle$CallExtension
             objc.NSBundle?,
           )
         > {
-  Dartinstancetype call(
+  Dartinstancetype$1 call(
     ffi.Pointer<ffi.Void> arg0,
     objc.NSString? arg1,
     objc.NSBundle? arg2,
@@ -454518,7 +454636,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle$CallExtension
     ref.pointer.ref.invoke
         .cast<
           ffi.NativeFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl> block,
               ffi.Pointer<ffi.Void> arg0,
               ffi.Pointer<objc.ObjCObjectImpl> arg1,
@@ -454527,7 +454645,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSNibName_NSBundle$CallExtension
           >
         >()
         .asFunction<
-          instancetype Function(
+          instancetype$1 Function(
             ffi.Pointer<objc.ObjCBlockImpl>,
             ffi.Pointer<ffi.Void>,
             ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454582,7 +454700,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
   fromFunctionPointer(
     ffi.Pointer<
       ffi.NativeFunction<
-        instancetype Function(
+        instancetype$1 Function(
           ffi.Pointer<ffi.Void> arg0,
           ffi.UnsignedLong arg1,
           ffi.Pointer<objc.ObjCObjectImpl> arg2,
@@ -454619,7 +454737,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
     )
   >
   fromFunction(
-    Dartinstancetype? Function(ffi.Pointer<ffi.Void>, int, NSColorPanel) fn, {
+    Dartinstancetype$1? Function(ffi.Pointer<ffi.Void>, int, NSColorPanel) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
@@ -454652,7 +454770,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
   static ffi.Pointer<ffi.Void> get protocolTrampoline =>
       ffi.Native.addressOf<
             ffi.NativeFunction<
-              instancetype Function(
+              instancetype$1 Function(
                 ffi.Pointer<objc.ObjCObjectImpl>,
                 ffi.Pointer<ffi.Void>,
                 ffi.UnsignedLong,
@@ -454662,7 +454780,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
           >(_1wf8t1k_protocolTrampoline_sov0i8)
           .cast();
 
-  static instancetype _fnPtrTrampoline(
+  static instancetype$1 _fnPtrTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
     int arg1,
@@ -454670,7 +454788,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
   ) => block.ref.target
       .cast<
         ffi.NativeFunction<
-          instancetype Function(
+          instancetype$1 Function(
             ffi.Pointer<ffi.Void> arg0,
             ffi.UnsignedLong arg1,
             ffi.Pointer<objc.ObjCObjectImpl> arg2,
@@ -454678,7 +454796,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
         >
       >()
       .asFunction<
-        instancetype Function(
+        instancetype$1 Function(
           ffi.Pointer<ffi.Void>,
           int,
           ffi.Pointer<objc.ObjCObjectImpl>,
@@ -454686,7 +454804,7 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
       >()(arg0, arg1, arg2);
   static ffi.Pointer<ffi.Void> _fnPtrCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
               ffi.UnsignedLong,
@@ -454694,21 +454812,21 @@ abstract final class ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel {
             )
           >(_fnPtrTrampoline)
           .cast();
-  static instancetype _closureTrampoline(
+  static instancetype$1 _closureTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
     int arg1,
     ffi.Pointer<objc.ObjCObjectImpl> arg2,
   ) =>
       (objc.getBlockClosure(block)
-          as instancetype Function(
+          as instancetype$1 Function(
             ffi.Pointer<ffi.Void>,
             int,
             ffi.Pointer<objc.ObjCObjectImpl>,
           ))(arg0, arg1, arg2);
   static ffi.Pointer<ffi.Void> _closureCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
               ffi.UnsignedLong,
@@ -454728,7 +454846,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel$CallExtension
             NSColorPanel,
           )
         > {
-  Dartinstancetype? call(
+  Dartinstancetype$1? call(
     ffi.Pointer<ffi.Void> arg0,
     int arg1,
     NSColorPanel arg2,
@@ -454736,7 +454854,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel$CallExtension
       ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
-                  instancetype Function(
+                  instancetype$1 Function(
                     ffi.Pointer<objc.ObjCBlockImpl> block,
                     ffi.Pointer<ffi.Void> arg0,
                     ffi.UnsignedLong arg1,
@@ -454745,7 +454863,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel$CallExtension
                 >
               >()
               .asFunction<
-                instancetype Function(
+                instancetype$1 Function(
                   ffi.Pointer<objc.ObjCBlockImpl>,
                   ffi.Pointer<ffi.Void>,
                   int,
@@ -454759,7 +454877,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel$CallExtension
           ref.pointer.ref.invoke
               .cast<
                 ffi.NativeFunction<
-                  instancetype Function(
+                  instancetype$1 Function(
                     ffi.Pointer<objc.ObjCBlockImpl> block,
                     ffi.Pointer<ffi.Void> arg0,
                     ffi.UnsignedLong arg1,
@@ -454768,7 +454886,7 @@ extension ObjCBlock_instancetype_ffiVoid_NSUInteger_NSColorPanel$CallExtension
                 >
               >()
               .asFunction<
-                instancetype Function(
+                instancetype$1 Function(
                   ffi.Pointer<objc.ObjCBlockImpl>,
                   ffi.Pointer<ffi.Void>,
                   int,
@@ -454805,7 +454923,7 @@ abstract final class ObjCBlock_objcObjCObjectImpl_ffiVoid {
   >
   fromFunctionPointer(
     ffi.Pointer<
-      ffi.NativeFunction<instancetype Function(ffi.Pointer<ffi.Void> arg0)>
+      ffi.NativeFunction<instancetype$1 Function(ffi.Pointer<ffi.Void> arg0)>
     >
     ptr,
   ) =>
@@ -454829,7 +454947,7 @@ abstract final class ObjCBlock_objcObjCObjectImpl_ffiVoid {
     ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)
   >
   fromFunction(
-    Dartinstancetype Function(ffi.Pointer<ffi.Void>) fn, {
+    Dartinstancetype$1 Function(ffi.Pointer<ffi.Void>) fn, {
     bool keepIsolateAlive = true,
   }) =>
       objc.ObjCBlock<
@@ -454856,31 +454974,31 @@ abstract final class ObjCBlock_objcObjCObjectImpl_ffiVoid {
           >(_1wf8t1k_protocolTrampoline_1mbt9g9)
           .cast();
 
-  static instancetype _fnPtrTrampoline(
+  static instancetype$1 _fnPtrTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
   ) => block.ref.target
       .cast<
-        ffi.NativeFunction<instancetype Function(ffi.Pointer<ffi.Void> arg0)>
+        ffi.NativeFunction<instancetype$1 Function(ffi.Pointer<ffi.Void> arg0)>
       >()
-      .asFunction<instancetype Function(ffi.Pointer<ffi.Void>)>()(arg0);
+      .asFunction<instancetype$1 Function(ffi.Pointer<ffi.Void>)>()(arg0);
   static ffi.Pointer<ffi.Void> _fnPtrCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
             )
           >(_fnPtrTrampoline)
           .cast();
-  static instancetype _closureTrampoline(
+  static instancetype$1 _closureTrampoline(
     ffi.Pointer<objc.ObjCBlockImpl> block,
     ffi.Pointer<ffi.Void> arg0,
   ) =>
       (objc.getBlockClosure(block)
-          as instancetype Function(ffi.Pointer<ffi.Void>))(arg0);
+          as instancetype$1 Function(ffi.Pointer<ffi.Void>))(arg0);
   static ffi.Pointer<ffi.Void> _closureCallable =
       ffi.Pointer.fromFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl>,
               ffi.Pointer<ffi.Void>,
             )
@@ -454894,18 +455012,18 @@ extension ObjCBlock_objcObjCObjectImpl_ffiVoid$CallExtension
         objc.ObjCBlock<
           ffi.Pointer<objc.ObjCObjectImpl> Function(ffi.Pointer<ffi.Void>)
         > {
-  Dartinstancetype call(ffi.Pointer<ffi.Void> arg0) => objc.ObjCObject(
+  Dartinstancetype$1 call(ffi.Pointer<ffi.Void> arg0) => objc.ObjCObject(
     ref.pointer.ref.invoke
         .cast<
           ffi.NativeFunction<
-            instancetype Function(
+            instancetype$1 Function(
               ffi.Pointer<objc.ObjCBlockImpl> block,
               ffi.Pointer<ffi.Void> arg0,
             )
           >
         >()
         .asFunction<
-          instancetype Function(
+          instancetype$1 Function(
             ffi.Pointer<objc.ObjCBlockImpl>,
             ffi.Pointer<ffi.Void>,
           )
@@ -498279,29 +498397,29 @@ late final _sel_zPosition = objc.registerName("zPosition");
 late final _sel_zoomInCursor = objc.registerName("zoomInCursor");
 late final _sel_zoomOutCursor = objc.registerName("zoomOutCursor");
 late final _sel_zoom_ = objc.registerName("zoom:");
-typedef instancetype = ffi.Pointer<objc.ObjCObjectImpl>;
-typedef Dartinstancetype = objc.ObjCObject;
-
-extension unnamed on NSScreen {}
+typedef instancetype$1 = ffi.Pointer<objc.ObjCObjectImpl>;
+typedef Dartinstancetype$1 = objc.ObjCObject;
 
 extension unnamed$1 on NSScreen {}
 
-extension unnamed$10 on NSSliderAccessory {}
+extension unnamed$10 on NSImage$1 {}
 
-extension unnamed$11 on NSMutableParagraphStyle {}
+extension unnamed$11 on NSSliderAccessory {}
 
-extension unnamed$2 on NSToolbarItem {}
+extension unnamed$12 on NSMutableParagraphStyle {}
 
-extension unnamed$3 on NSClipView {}
+extension unnamed$2 on NSScreen {}
 
-extension unnamed$4 on NSLayoutConstraint {}
+extension unnamed$3 on NSToolbarItem {}
 
-extension unnamed$5 on NSParagraphStyle {}
+extension unnamed$4 on NSClipView {}
 
-extension unnamed$6 on NSTextTab {}
+extension unnamed$5 on NSLayoutConstraint {}
 
-extension unnamed$7 on NSTextContainer {}
+extension unnamed$6 on NSParagraphStyle {}
 
-extension unnamed$8 on NSImage {}
+extension unnamed$7 on NSTextTab {}
 
-extension unnamed$9 on NSImage {}
+extension unnamed$8 on NSTextContainer {}
+
+extension unnamed$9 on NSImage$1 {}

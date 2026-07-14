@@ -1,5 +1,5 @@
-name: objc_appkit
-description: Full Objective-C bindings for AppKit.
+name: objc_uikit_flutter
+description: Flutter platform-view bridge for Dart UIKit bindings.
 version: 0.1.0
 publish_to: none
 
@@ -11,15 +11,14 @@ dependencies:
   hooks: ^1.0.0
   logging: ^1.3.0
   native_toolchain_c: ^0.17.4
-  objc_foundation:
-    path: ../objc-foundation
-  ffi: ^2.2.0
+  flutter:
+    sdk: flutter
+  objc_uikit:
+    path: ../objc-uikit
   objective_c:
     path: ../../ffigen/pkgs/objective_c
 
 dev_dependencies:
-  ffigen:
-    path: ../../ffigen/pkgs/ffigen
   lints: ^6.0.0
 
 dependency_overrides:
