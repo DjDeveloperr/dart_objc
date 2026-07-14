@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:objective_c/objective_c.dart';
 import 'package:objc_appkit/objc_appkit.dart';
-import 'package:objc_appkit/flutter_views.dart';
+import 'package:objc_appkit_flutter/objc_appkit_flutter.dart';
 
 const objcAppKitDemoViewType = 'objc-appkit-demo-view';
 
@@ -39,9 +39,7 @@ final class ObjcAppKitDemoScene {
   });
 
   factory ObjcAppKitDemoScene({required VoidCallback onButtonPressed}) {
-    final retainedButtonTarget = NSButtonTargetAction.listener(
-      onButtonPressed,
-    );
+    final retainedButtonTarget = NSButtonTargetAction.listener(onButtonPressed);
     final rootView = _buildRootView(retainedButtonTarget);
     return ObjcAppKitDemoScene._(
       retainedButtonTarget: retainedButtonTarget,

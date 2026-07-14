@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:objective_c/objective_c.dart';
 import 'package:objc_uikit/objc_uikit.dart';
-import 'package:objc_uikit/flutter_views.dart';
+import 'package:objc_uikit_flutter/objc_uikit_flutter.dart';
 
 const objcUiKitTabBarViewType = 'objc-uikit-tab-bar';
 const _kTabBarHeight = 49.0;
