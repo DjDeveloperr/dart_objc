@@ -120,6 +120,8 @@ final class ObjcAppKitEditorScene {
 
   late final NSScrollView rootView = _buildScrollView(textView);
 
+  NSTextViewDelegate get delegate => _delegate.asNSTextViewDelegate;
+
   String get text => textView.string.toDartString();
 
   set text(String value) {
@@ -157,6 +159,11 @@ final class _TextViewDelegate
     with NSTextViewDelegateDefaults, NSTextViewDelegateAdapter
     implements NSTextViewDelegateSpec {
   _TextViewDelegate(this._textView, this.onTextChanged);
+
+  @override
+  Set<ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods => {
+    NSTextViewDelegate$Builder.textDidChange_,
+  };
 
   final NSTextView _textView;
   final ValueChanged<String> onTextChanged;

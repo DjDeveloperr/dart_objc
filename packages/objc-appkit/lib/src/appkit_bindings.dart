@@ -6269,9 +6269,6 @@ interface class CAAction$Builder {
 
   /// Builds an object that implements the CAAction protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [CAActionOptional].
   static CAAction implementFrom(
     CAActionSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -8750,6 +8747,11 @@ extension CALayerDelegate$Methods on CALayerDelegate {
 abstract interface class CALayerDelegateSpec {}
 
 abstract interface class CALayerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   CAAction? actionForLayer(CALayer layer, {required objc.NSString forKey});
   void displayLayer(CALayer layer);
   void drawLayer(CALayer layer, {required ffi.Pointer<CGContext> inContext});
@@ -8758,6 +8760,10 @@ abstract interface class CALayerDelegateOptional {
 }
 
 mixin CALayerDelegateDefaults implements CALayerDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -8772,6 +8778,9 @@ interface class CALayerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [CALayerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [CALayerDelegateOptional.$implementedOptionalMethods].
   static CALayerDelegate implementFrom(
     CALayerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -8796,7 +8805,10 @@ interface class CALayerDelegate$Builder {
     CALayerDelegate$Builder.actionForLayer_forKey_.implement(
       builder,
       CALayerDelegate$Builder.actionForLayer_forKey_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayerDelegate$Builder.actionForLayer_forKey_,
+              )
           ? (CALayer layer, objc.NSString forKey) =>
                 optionalImplementation.actionForLayer(layer, forKey: forKey)
           : null,
@@ -8804,7 +8816,10 @@ interface class CALayerDelegate$Builder {
     CALayerDelegate$Builder.displayLayer_.implement(
       builder,
       CALayerDelegate$Builder.displayLayer_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayerDelegate$Builder.displayLayer_,
+              )
           ? (CALayer layer) {
               optionalImplementation.displayLayer(layer);
             }
@@ -8813,7 +8828,10 @@ interface class CALayerDelegate$Builder {
     CALayerDelegate$Builder.drawLayer_inContext_.implement(
       builder,
       CALayerDelegate$Builder.drawLayer_inContext_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayerDelegate$Builder.drawLayer_inContext_,
+              )
           ? (CALayer layer, ffi.Pointer<CGContext> inContext) {
               optionalImplementation.drawLayer(layer, inContext: inContext);
             }
@@ -8822,7 +8840,10 @@ interface class CALayerDelegate$Builder {
     CALayerDelegate$Builder.layerWillDraw_.implement(
       builder,
       CALayerDelegate$Builder.layerWillDraw_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayerDelegate$Builder.layerWillDraw_,
+              )
           ? (CALayer layer) {
               optionalImplementation.layerWillDraw(layer);
             }
@@ -8831,7 +8852,10 @@ interface class CALayerDelegate$Builder {
     CALayerDelegate$Builder.layoutSublayersOfLayer_.implement(
       builder,
       CALayerDelegate$Builder.layoutSublayersOfLayer_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayerDelegate$Builder.layoutSublayersOfLayer_,
+              )
           ? (CALayer layer) {
               optionalImplementation.layoutSublayersOfLayer(layer);
             }
@@ -9081,12 +9105,21 @@ extension CALayoutManager$Methods on CALayoutManager {
 abstract interface class CALayoutManagerSpec {}
 
 abstract interface class CALayoutManagerOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void invalidateLayoutOfLayer(CALayer layer);
   void layoutSublayersOfLayer(CALayer layer);
   objc.CGSize preferredSizeOfLayer(CALayer layer);
 }
 
 mixin CALayoutManagerDefaults implements CALayoutManagerOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -9101,6 +9134,9 @@ interface class CALayoutManager$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [CALayoutManagerOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [CALayoutManagerOptional.$implementedOptionalMethods].
   static CALayoutManager implementFrom(
     CALayoutManagerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -9125,7 +9161,10 @@ interface class CALayoutManager$Builder {
     CALayoutManager$Builder.invalidateLayoutOfLayer_.implement(
       builder,
       CALayoutManager$Builder.invalidateLayoutOfLayer_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayoutManager$Builder.invalidateLayoutOfLayer_,
+              )
           ? (CALayer layer) {
               optionalImplementation.invalidateLayoutOfLayer(layer);
             }
@@ -9134,7 +9173,10 @@ interface class CALayoutManager$Builder {
     CALayoutManager$Builder.layoutSublayersOfLayer_.implement(
       builder,
       CALayoutManager$Builder.layoutSublayersOfLayer_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayoutManager$Builder.layoutSublayersOfLayer_,
+              )
           ? (CALayer layer) {
               optionalImplementation.layoutSublayersOfLayer(layer);
             }
@@ -9143,7 +9185,10 @@ interface class CALayoutManager$Builder {
     CALayoutManager$Builder.preferredSizeOfLayer_.implement(
       builder,
       CALayoutManager$Builder.preferredSizeOfLayer_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                CALayoutManager$Builder.preferredSizeOfLayer_,
+              )
           ? (CALayer layer) =>
                 optionalImplementation.preferredSizeOfLayer(layer)
           : null,
@@ -9494,9 +9539,6 @@ interface class CAMediaTiming$Builder {
 
   /// Builds an object that implements the CAMediaTiming protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [CAMediaTimingOptional].
   static CAMediaTiming implementFrom(
     CAMediaTimingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -12628,9 +12670,6 @@ interface class CTAdaptiveImageProviding$Builder {
 
   /// Builds an object that implements the CTAdaptiveImageProviding protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [CTAdaptiveImageProvidingOptional].
   static CTAdaptiveImageProviding implementFrom(
     CTAdaptiveImageProvidingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -13351,9 +13390,6 @@ interface class MTLTexture$Builder {
 
   /// Builds an object that implements the MTLTexture protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [MTLTextureOptional].
   static MTLTexture implementFrom(
     MTLTextureSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -18713,9 +18749,6 @@ interface class NSAccessibility$1$Builder {
 
   /// Builds an object that implements the NSAccessibility protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSAccessibility$1Optional].
   static NSAccessibility$1 implementFrom(
     NSAccessibility$1Spec implementation, {
     bool $keepIsolateAlive = true,
@@ -27349,11 +27382,20 @@ abstract interface class NSAccessibilityButtonSpec {
 }
 
 abstract interface class NSAccessibilityButtonOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityButtonDefaults implements NSAccessibilityButtonOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -27368,6 +27410,9 @@ interface class NSAccessibilityButton$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityButtonOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityButtonOptional.$implementedOptionalMethods].
   static NSAccessibilityButton implementFrom(
     NSAccessibilityButtonSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -27398,7 +27443,10 @@ interface class NSAccessibilityButton$Builder {
     NSAccessibilityButton$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityButton$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityButton$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -27417,7 +27465,10 @@ interface class NSAccessibilityButton$Builder {
     NSAccessibilityButton$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityButton$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityButton$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -27725,12 +27776,21 @@ abstract interface class NSAccessibilityCheckBoxSpec {
 }
 
 abstract interface class NSAccessibilityCheckBoxOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityCheckBoxDefaults
     implements NSAccessibilityCheckBoxOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -27745,6 +27805,9 @@ interface class NSAccessibilityCheckBox$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityCheckBoxOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityCheckBoxOptional.$implementedOptionalMethods].
   static NSAccessibilityCheckBox implementFrom(
     NSAccessibilityCheckBoxSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -27775,7 +27838,10 @@ interface class NSAccessibilityCheckBox$Builder {
     NSAccessibilityCheckBox$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityCheckBox$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityCheckBox$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -27798,7 +27864,10 @@ interface class NSAccessibilityCheckBox$Builder {
     NSAccessibilityCheckBox$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityCheckBox$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityCheckBox$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -28031,9 +28100,6 @@ interface class NSAccessibilityColor$Builder {
 
   /// Builds an object that implements the NSAccessibilityColor protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSAccessibilityColorOptional].
   static NSAccessibilityColor implementFrom(
     NSAccessibilityColorSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -28254,12 +28320,21 @@ abstract interface class NSAccessibilityContainsTransientUISpec {
 }
 
 abstract interface class NSAccessibilityContainsTransientUIOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityContainsTransientUIDefaults
     implements NSAccessibilityContainsTransientUIOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -28275,6 +28350,9 @@ interface class NSAccessibilityContainsTransientUI$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityContainsTransientUIOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityContainsTransientUIOptional.$implementedOptionalMethods].
   static NSAccessibilityContainsTransientUI implementFrom(
     NSAccessibilityContainsTransientUISpec implementation, {
     bool $keepIsolateAlive = true,
@@ -28308,7 +28386,11 @@ interface class NSAccessibilityContainsTransientUI$Builder {
           NSAccessibilityContainsTransientUI$Builder
                       .accessibilityIdentifier
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityContainsTransientUI$Builder
+                        .accessibilityIdentifier,
+                  )
               ? () => optionalImplementation.accessibilityIdentifier()
               : null,
         );
@@ -28337,7 +28419,11 @@ interface class NSAccessibilityContainsTransientUI$Builder {
       NSAccessibilityContainsTransientUI$Builder
                   .isAccessibilityFocused
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityContainsTransientUI$Builder
+                    .isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -29285,9 +29371,6 @@ interface class NSAccessibilityCustomRotorItemSearchDelegate$Builder {
 
   /// Builds an object that implements the NSAccessibilityCustomRotorItemSearchDelegate protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSAccessibilityCustomRotorItemSearchDelegateOptional].
   static NSAccessibilityCustomRotorItemSearchDelegate implementFrom(
     NSAccessibilityCustomRotorItemSearchDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -29735,11 +29818,20 @@ abstract interface class NSAccessibilityElementSpec {
 }
 
 abstract interface class NSAccessibilityElementOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityElementDefaults implements NSAccessibilityElementOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -29754,6 +29846,9 @@ interface class NSAccessibilityElement$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityElementOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityElementOptional.$implementedOptionalMethods].
   static NSAccessibilityElement implementFrom(
     NSAccessibilityElementSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -29784,7 +29879,10 @@ interface class NSAccessibilityElement$Builder {
     NSAccessibilityElement$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityElement$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityElement$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -29795,7 +29893,10 @@ interface class NSAccessibilityElement$Builder {
     NSAccessibilityElement$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityElement$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityElement$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -30153,6 +30254,11 @@ abstract interface class NSAccessibilityElementLoadingSpec {
 }
 
 abstract interface class NSAccessibilityElementLoadingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSRange accessibilityRangeInTargetElementWithToken(
     objc.NSSecureCoding token,
   );
@@ -30160,6 +30266,10 @@ abstract interface class NSAccessibilityElementLoadingOptional {
 
 mixin NSAccessibilityElementLoadingDefaults
     implements NSAccessibilityElementLoadingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -30174,6 +30284,9 @@ interface class NSAccessibilityElementLoading$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityElementLoadingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityElementLoadingOptional.$implementedOptionalMethods].
   static NSAccessibilityElementLoading implementFrom(
     NSAccessibilityElementLoadingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -30210,7 +30323,11 @@ interface class NSAccessibilityElementLoading$Builder {
           NSAccessibilityElementLoading$Builder
                       .accessibilityRangeInTargetElementWithToken_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityElementLoading$Builder
+                        .accessibilityRangeInTargetElementWithToken_,
+                  )
               ? (objc.NSSecureCoding token) => optionalImplementation
                     .accessibilityRangeInTargetElementWithToken(token)
               : null,
@@ -30388,11 +30505,20 @@ abstract interface class NSAccessibilityGroupSpec {
 }
 
 abstract interface class NSAccessibilityGroupOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityGroupDefaults implements NSAccessibilityGroupOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -30407,6 +30533,9 @@ interface class NSAccessibilityGroup$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityGroupOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityGroupOptional.$implementedOptionalMethods].
   static NSAccessibilityGroup implementFrom(
     NSAccessibilityGroupSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -30435,7 +30564,10 @@ interface class NSAccessibilityGroup$Builder {
     NSAccessibilityGroup$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityGroup$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityGroup$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -30446,7 +30578,10 @@ interface class NSAccessibilityGroup$Builder {
     NSAccessibilityGroup$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityGroup$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityGroup$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -30680,11 +30815,20 @@ abstract interface class NSAccessibilityImageSpec {
 }
 
 abstract interface class NSAccessibilityImageOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityImageDefaults implements NSAccessibilityImageOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -30699,6 +30843,9 @@ interface class NSAccessibilityImage$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityImageOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityImageOptional.$implementedOptionalMethods].
   static NSAccessibilityImage implementFrom(
     NSAccessibilityImageSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -30727,7 +30874,10 @@ interface class NSAccessibilityImage$Builder {
     NSAccessibilityImage$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityImage$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityImage$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -30742,7 +30892,10 @@ interface class NSAccessibilityImage$Builder {
     NSAccessibilityImage$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityImage$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityImage$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -31044,12 +31197,21 @@ abstract interface class NSAccessibilityLayoutAreaSpec {
 }
 
 abstract interface class NSAccessibilityLayoutAreaOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityLayoutAreaDefaults
     implements NSAccessibilityLayoutAreaOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -31064,6 +31226,9 @@ interface class NSAccessibilityLayoutArea$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityLayoutAreaOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityLayoutAreaOptional.$implementedOptionalMethods].
   static NSAccessibilityLayoutArea implementFrom(
     NSAccessibilityLayoutAreaSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -31102,7 +31267,10 @@ interface class NSAccessibilityLayoutArea$Builder {
     NSAccessibilityLayoutArea$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityLayoutArea$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityLayoutArea$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -31121,7 +31289,10 @@ interface class NSAccessibilityLayoutArea$Builder {
     NSAccessibilityLayoutArea$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityLayoutArea$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityLayoutArea$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -31459,6 +31630,11 @@ abstract interface class NSAccessibilityLayoutItemSpec {
 }
 
 abstract interface class NSAccessibilityLayoutItemOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
   void setAccessibilityFrame(objc.CGRect frame);
@@ -31466,6 +31642,10 @@ abstract interface class NSAccessibilityLayoutItemOptional {
 
 mixin NSAccessibilityLayoutItemDefaults
     implements NSAccessibilityLayoutItemOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -31480,6 +31660,9 @@ interface class NSAccessibilityLayoutItem$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityLayoutItemOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityLayoutItemOptional.$implementedOptionalMethods].
   static NSAccessibilityLayoutItem implementFrom(
     NSAccessibilityLayoutItemSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -31510,7 +31693,10 @@ interface class NSAccessibilityLayoutItem$Builder {
     NSAccessibilityLayoutItem$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityLayoutItem$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityLayoutItem$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -31521,14 +31707,20 @@ interface class NSAccessibilityLayoutItem$Builder {
     NSAccessibilityLayoutItem$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityLayoutItem$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityLayoutItem$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
     NSAccessibilityLayoutItem$Builder.setAccessibilityFrame_.implement(
       builder,
       NSAccessibilityLayoutItem$Builder.setAccessibilityFrame_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityLayoutItem$Builder.setAccessibilityFrame_,
+              )
           ? (objc.CGRect frame) {
               optionalImplementation.setAccessibilityFrame(frame);
             }
@@ -32056,6 +32248,11 @@ abstract interface class NSAccessibilityListSpec {
 }
 
 abstract interface class NSAccessibilityListOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSArray? accessibilityColumnHeaderUIElements();
   objc.NSArray? accessibilityColumns();
   objc.NSString? accessibilityHeaderGroup();
@@ -32073,6 +32270,10 @@ abstract interface class NSAccessibilityListOptional {
 
 mixin NSAccessibilityListDefaults implements NSAccessibilityListOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -32086,6 +32287,9 @@ interface class NSAccessibilityList$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityListOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityListOptional.$implementedOptionalMethods].
   static NSAccessibilityList implementFrom(
     NSAccessibilityListSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -32112,14 +32316,20 @@ interface class NSAccessibilityList$Builder {
       NSAccessibilityList$Builder
                   .accessibilityColumnHeaderUIElements
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityColumnHeaderUIElements,
+              )
           ? () => optionalImplementation.accessibilityColumnHeaderUIElements()
           : null,
     );
     NSAccessibilityList$Builder.accessibilityColumns.implement(
       builder,
       NSAccessibilityList$Builder.accessibilityColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityColumns,
+              )
           ? () => optionalImplementation.accessibilityColumns()
           : null,
     );
@@ -32130,14 +32340,20 @@ interface class NSAccessibilityList$Builder {
     NSAccessibilityList$Builder.accessibilityHeaderGroup.implement(
       builder,
       NSAccessibilityList$Builder.accessibilityHeaderGroup.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityHeaderGroup,
+              )
           ? () => optionalImplementation.accessibilityHeaderGroup()
           : null,
     );
     NSAccessibilityList$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityList$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -32154,7 +32370,10 @@ interface class NSAccessibilityList$Builder {
       NSAccessibilityList$Builder
                   .accessibilityRowHeaderUIElements
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityRowHeaderUIElements,
+              )
           ? () => optionalImplementation.accessibilityRowHeaderUIElements()
           : null,
     );
@@ -32165,56 +32384,80 @@ interface class NSAccessibilityList$Builder {
     NSAccessibilityList$Builder.accessibilitySelectedCells.implement(
       builder,
       NSAccessibilityList$Builder.accessibilitySelectedCells.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilitySelectedCells,
+              )
           ? () => optionalImplementation.accessibilitySelectedCells()
           : null,
     );
     NSAccessibilityList$Builder.accessibilitySelectedColumns.implement(
       builder,
       NSAccessibilityList$Builder.accessibilitySelectedColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilitySelectedColumns,
+              )
           ? () => optionalImplementation.accessibilitySelectedColumns()
           : null,
     );
     NSAccessibilityList$Builder.accessibilitySelectedRows.implement(
       builder,
       NSAccessibilityList$Builder.accessibilitySelectedRows.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilitySelectedRows,
+              )
           ? () => optionalImplementation.accessibilitySelectedRows()
           : null,
     );
     NSAccessibilityList$Builder.accessibilityVisibleCells.implement(
       builder,
       NSAccessibilityList$Builder.accessibilityVisibleCells.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityVisibleCells,
+              )
           ? () => optionalImplementation.accessibilityVisibleCells()
           : null,
     );
     NSAccessibilityList$Builder.accessibilityVisibleColumns.implement(
       builder,
       NSAccessibilityList$Builder.accessibilityVisibleColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityVisibleColumns,
+              )
           ? () => optionalImplementation.accessibilityVisibleColumns()
           : null,
     );
     NSAccessibilityList$Builder.accessibilityVisibleRows.implement(
       builder,
       NSAccessibilityList$Builder.accessibilityVisibleRows.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.accessibilityVisibleRows,
+              )
           ? () => optionalImplementation.accessibilityVisibleRows()
           : null,
     );
     NSAccessibilityList$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityList$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
     NSAccessibilityList$Builder.setAccessibilitySelectedRows_.implement(
       builder,
       NSAccessibilityList$Builder.setAccessibilitySelectedRows_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityList$Builder.setAccessibilitySelectedRows_,
+              )
           ? (objc.NSArray selectedRows) {
               optionalImplementation.setAccessibilitySelectedRows(selectedRows);
             }
@@ -32908,6 +33151,11 @@ abstract interface class NSAccessibilityNavigableStaticTextSpec {
 }
 
 abstract interface class NSAccessibilityNavigableStaticTextOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSAttributedString? accessibilityAttributedStringForRange(
     objc.NSRange range,
   );
@@ -32918,6 +33166,10 @@ abstract interface class NSAccessibilityNavigableStaticTextOptional {
 
 mixin NSAccessibilityNavigableStaticTextDefaults
     implements NSAccessibilityNavigableStaticTextOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -32933,6 +33185,9 @@ interface class NSAccessibilityNavigableStaticText$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityNavigableStaticTextOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityNavigableStaticTextOptional.$implementedOptionalMethods].
   static NSAccessibilityNavigableStaticText implementFrom(
     NSAccessibilityNavigableStaticTextSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -32963,7 +33218,11 @@ interface class NSAccessibilityNavigableStaticText$Builder {
           NSAccessibilityNavigableStaticText$Builder
                       .accessibilityAttributedStringForRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityNavigableStaticText$Builder
+                        .accessibilityAttributedStringForRange_,
+                  )
               ? (objc.NSRange range) => optionalImplementation
                     .accessibilityAttributedStringForRange(range)
               : null,
@@ -32984,7 +33243,11 @@ interface class NSAccessibilityNavigableStaticText$Builder {
           NSAccessibilityNavigableStaticText$Builder
                       .accessibilityIdentifier
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityNavigableStaticText$Builder
+                        .accessibilityIdentifier,
+                  )
               ? () => optionalImplementation.accessibilityIdentifier()
               : null,
         );
@@ -33020,7 +33283,11 @@ interface class NSAccessibilityNavigableStaticText$Builder {
           NSAccessibilityNavigableStaticText$Builder
                       .accessibilityVisibleCharacterRange
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityNavigableStaticText$Builder
+                        .accessibilityVisibleCharacterRange,
+                  )
               ? () =>
                     optionalImplementation.accessibilityVisibleCharacterRange()
               : null,
@@ -33030,7 +33297,11 @@ interface class NSAccessibilityNavigableStaticText$Builder {
       NSAccessibilityNavigableStaticText$Builder
                   .isAccessibilityFocused
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityNavigableStaticText$Builder
+                    .isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -33723,6 +33994,11 @@ abstract interface class NSAccessibilityOutlineSpec {
 }
 
 abstract interface class NSAccessibilityOutlineOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSArray? accessibilityColumnHeaderUIElements();
   objc.NSArray? accessibilityColumns();
   objc.NSString? accessibilityHeaderGroup();
@@ -33740,6 +34016,10 @@ abstract interface class NSAccessibilityOutlineOptional {
 
 mixin NSAccessibilityOutlineDefaults implements NSAccessibilityOutlineOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -33753,6 +34033,9 @@ interface class NSAccessibilityOutline$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityOutlineOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityOutlineOptional.$implementedOptionalMethods].
   static NSAccessibilityOutline implementFrom(
     NSAccessibilityOutlineSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -33782,7 +34065,11 @@ interface class NSAccessibilityOutline$Builder {
           NSAccessibilityOutline$Builder
                       .accessibilityColumnHeaderUIElements
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityOutline$Builder
+                        .accessibilityColumnHeaderUIElements,
+                  )
               ? () =>
                     optionalImplementation.accessibilityColumnHeaderUIElements()
               : null,
@@ -33790,7 +34077,10 @@ interface class NSAccessibilityOutline$Builder {
     NSAccessibilityOutline$Builder.accessibilityColumns.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilityColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilityColumns,
+              )
           ? () => optionalImplementation.accessibilityColumns()
           : null,
     );
@@ -33801,14 +34091,20 @@ interface class NSAccessibilityOutline$Builder {
     NSAccessibilityOutline$Builder.accessibilityHeaderGroup.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilityHeaderGroup.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilityHeaderGroup,
+              )
           ? () => optionalImplementation.accessibilityHeaderGroup()
           : null,
     );
     NSAccessibilityOutline$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -33825,7 +34121,10 @@ interface class NSAccessibilityOutline$Builder {
       NSAccessibilityOutline$Builder
                   .accessibilityRowHeaderUIElements
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilityRowHeaderUIElements,
+              )
           ? () => optionalImplementation.accessibilityRowHeaderUIElements()
           : null,
     );
@@ -33836,49 +34135,70 @@ interface class NSAccessibilityOutline$Builder {
     NSAccessibilityOutline$Builder.accessibilitySelectedCells.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilitySelectedCells.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilitySelectedCells,
+              )
           ? () => optionalImplementation.accessibilitySelectedCells()
           : null,
     );
     NSAccessibilityOutline$Builder.accessibilitySelectedColumns.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilitySelectedColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilitySelectedColumns,
+              )
           ? () => optionalImplementation.accessibilitySelectedColumns()
           : null,
     );
     NSAccessibilityOutline$Builder.accessibilitySelectedRows.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilitySelectedRows.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilitySelectedRows,
+              )
           ? () => optionalImplementation.accessibilitySelectedRows()
           : null,
     );
     NSAccessibilityOutline$Builder.accessibilityVisibleCells.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilityVisibleCells.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilityVisibleCells,
+              )
           ? () => optionalImplementation.accessibilityVisibleCells()
           : null,
     );
     NSAccessibilityOutline$Builder.accessibilityVisibleColumns.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilityVisibleColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilityVisibleColumns,
+              )
           ? () => optionalImplementation.accessibilityVisibleColumns()
           : null,
     );
     NSAccessibilityOutline$Builder.accessibilityVisibleRows.implement(
       builder,
       NSAccessibilityOutline$Builder.accessibilityVisibleRows.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.accessibilityVisibleRows,
+              )
           ? () => optionalImplementation.accessibilityVisibleRows()
           : null,
     );
     NSAccessibilityOutline$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityOutline$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -33887,7 +34207,10 @@ interface class NSAccessibilityOutline$Builder {
       NSAccessibilityOutline$Builder
                   .setAccessibilitySelectedRows_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityOutline$Builder.setAccessibilitySelectedRows_,
+              )
           ? (objc.NSArray selectedRows) {
               optionalImplementation.setAccessibilitySelectedRows(selectedRows);
             }
@@ -34437,12 +34760,21 @@ abstract interface class NSAccessibilityProgressIndicatorSpec {
 }
 
 abstract interface class NSAccessibilityProgressIndicatorOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityProgressIndicatorDefaults
     implements NSAccessibilityProgressIndicatorOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -34458,6 +34790,9 @@ interface class NSAccessibilityProgressIndicator$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityProgressIndicatorOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityProgressIndicatorOptional.$implementedOptionalMethods].
   static NSAccessibilityProgressIndicator implementFrom(
     NSAccessibilityProgressIndicatorSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -34490,7 +34825,11 @@ interface class NSAccessibilityProgressIndicator$Builder {
       NSAccessibilityProgressIndicator$Builder
                   .accessibilityIdentifier
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityProgressIndicator$Builder
+                    .accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -34507,7 +34846,10 @@ interface class NSAccessibilityProgressIndicator$Builder {
       NSAccessibilityProgressIndicator$Builder
                   .isAccessibilityFocused
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityProgressIndicator$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -34793,12 +35135,21 @@ abstract interface class NSAccessibilityRadioButtonSpec {
 }
 
 abstract interface class NSAccessibilityRadioButtonOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityRadioButtonDefaults
     implements NSAccessibilityRadioButtonOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -34813,6 +35164,9 @@ interface class NSAccessibilityRadioButton$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityRadioButtonOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityRadioButtonOptional.$implementedOptionalMethods].
   static NSAccessibilityRadioButton implementFrom(
     NSAccessibilityRadioButtonSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -34843,7 +35197,10 @@ interface class NSAccessibilityRadioButton$Builder {
     NSAccessibilityRadioButton$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityRadioButton$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityRadioButton$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -34866,7 +35223,10 @@ interface class NSAccessibilityRadioButton$Builder {
     NSAccessibilityRadioButton$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityRadioButton$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityRadioButton$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -35185,12 +35545,21 @@ abstract interface class NSAccessibilityRowSpec {
 }
 
 abstract interface class NSAccessibilityRowOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   int accessibilityDisclosureLevel();
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityRowDefaults implements NSAccessibilityRowOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -35205,6 +35574,9 @@ interface class NSAccessibilityRow$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityRowOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityRowOptional.$implementedOptionalMethods].
   static NSAccessibilityRow implementFrom(
     NSAccessibilityRowSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -35229,7 +35601,10 @@ interface class NSAccessibilityRow$Builder {
     NSAccessibilityRow$Builder.accessibilityDisclosureLevel.implement(
       builder,
       NSAccessibilityRow$Builder.accessibilityDisclosureLevel.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityRow$Builder.accessibilityDisclosureLevel,
+              )
           ? () => optionalImplementation.accessibilityDisclosureLevel()
           : null,
     );
@@ -35240,7 +35615,10 @@ interface class NSAccessibilityRow$Builder {
     NSAccessibilityRow$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityRow$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityRow$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -35255,7 +35633,10 @@ interface class NSAccessibilityRow$Builder {
     NSAccessibilityRow$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityRow$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityRow$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -35599,11 +35980,20 @@ abstract interface class NSAccessibilitySliderSpec {
 }
 
 abstract interface class NSAccessibilitySliderOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilitySliderDefaults implements NSAccessibilitySliderOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -35618,6 +36008,9 @@ interface class NSAccessibilitySlider$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilitySliderOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilitySliderOptional.$implementedOptionalMethods].
   static NSAccessibilitySlider implementFrom(
     NSAccessibilitySliderSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -35648,7 +36041,10 @@ interface class NSAccessibilitySlider$Builder {
     NSAccessibilitySlider$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilitySlider$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilitySlider$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -35675,7 +36071,10 @@ interface class NSAccessibilitySlider$Builder {
     NSAccessibilitySlider$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilitySlider$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilitySlider$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -36083,6 +36482,11 @@ abstract interface class NSAccessibilityStaticTextSpec {
 }
 
 abstract interface class NSAccessibilityStaticTextOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSAttributedString? accessibilityAttributedStringForRange(
     objc.NSRange range,
   );
@@ -36093,6 +36497,10 @@ abstract interface class NSAccessibilityStaticTextOptional {
 
 mixin NSAccessibilityStaticTextDefaults
     implements NSAccessibilityStaticTextOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -36107,6 +36515,9 @@ interface class NSAccessibilityStaticText$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityStaticTextOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityStaticTextOptional.$implementedOptionalMethods].
   static NSAccessibilityStaticText implementFrom(
     NSAccessibilityStaticTextSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -36136,7 +36547,11 @@ interface class NSAccessibilityStaticText$Builder {
           NSAccessibilityStaticText$Builder
                       .accessibilityAttributedStringForRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityStaticText$Builder
+                        .accessibilityAttributedStringForRange_,
+                  )
               ? (objc.NSRange range) => optionalImplementation
                     .accessibilityAttributedStringForRange(range)
               : null,
@@ -36148,7 +36563,10 @@ interface class NSAccessibilityStaticText$Builder {
     NSAccessibilityStaticText$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityStaticText$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityStaticText$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -36166,7 +36584,11 @@ interface class NSAccessibilityStaticText$Builder {
           NSAccessibilityStaticText$Builder
                       .accessibilityVisibleCharacterRange
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSAccessibilityStaticText$Builder
+                        .accessibilityVisibleCharacterRange,
+                  )
               ? () =>
                     optionalImplementation.accessibilityVisibleCharacterRange()
               : null,
@@ -36174,7 +36596,10 @@ interface class NSAccessibilityStaticText$Builder {
     NSAccessibilityStaticText$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityStaticText$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityStaticText$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -36528,12 +36953,21 @@ abstract interface class NSAccessibilityStepperSpec {
 }
 
 abstract interface class NSAccessibilityStepperOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   objc.ObjCObject? accessibilityValue();
   bool isAccessibilityFocused();
 }
 
 mixin NSAccessibilityStepperDefaults implements NSAccessibilityStepperOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -36548,6 +36982,9 @@ interface class NSAccessibilityStepper$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityStepperOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityStepperOptional.$implementedOptionalMethods].
   static NSAccessibilityStepper implementFrom(
     NSAccessibilityStepperSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -36578,7 +37015,10 @@ interface class NSAccessibilityStepper$Builder {
     NSAccessibilityStepper$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityStepper$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityStepper$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -36601,14 +37041,20 @@ interface class NSAccessibilityStepper$Builder {
     NSAccessibilityStepper$Builder.accessibilityValue.implement(
       builder,
       NSAccessibilityStepper$Builder.accessibilityValue.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityStepper$Builder.accessibilityValue,
+              )
           ? () => optionalImplementation.accessibilityValue()
           : null,
     );
     NSAccessibilityStepper$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityStepper$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityStepper$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -37003,6 +37449,11 @@ abstract interface class NSAccessibilitySwitchSpec {
 }
 
 abstract interface class NSAccessibilitySwitchOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString accessibilityIdentifier();
   bool accessibilityPerformDecrement();
   bool accessibilityPerformIncrement();
@@ -37010,6 +37461,10 @@ abstract interface class NSAccessibilitySwitchOptional {
 }
 
 mixin NSAccessibilitySwitchDefaults implements NSAccessibilitySwitchOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -37024,6 +37479,9 @@ interface class NSAccessibilitySwitch$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilitySwitchOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilitySwitchOptional.$implementedOptionalMethods].
   static NSAccessibilitySwitch implementFrom(
     NSAccessibilitySwitchSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -37054,7 +37512,10 @@ interface class NSAccessibilitySwitch$Builder {
     NSAccessibilitySwitch$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilitySwitch$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilitySwitch$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -37069,14 +37530,20 @@ interface class NSAccessibilitySwitch$Builder {
     NSAccessibilitySwitch$Builder.accessibilityPerformDecrement.implement(
       builder,
       NSAccessibilitySwitch$Builder.accessibilityPerformDecrement.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilitySwitch$Builder.accessibilityPerformDecrement,
+              )
           ? () => optionalImplementation.accessibilityPerformDecrement()
           : null,
     );
     NSAccessibilitySwitch$Builder.accessibilityPerformIncrement.implement(
       builder,
       NSAccessibilitySwitch$Builder.accessibilityPerformIncrement.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilitySwitch$Builder.accessibilityPerformIncrement,
+              )
           ? () => optionalImplementation.accessibilityPerformIncrement()
           : null,
     );
@@ -37091,7 +37558,10 @@ interface class NSAccessibilitySwitch$Builder {
     NSAccessibilitySwitch$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilitySwitch$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilitySwitch$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
@@ -37709,6 +38179,11 @@ abstract interface class NSAccessibilityTableSpec {
 }
 
 abstract interface class NSAccessibilityTableOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSArray? accessibilityColumnHeaderUIElements();
   objc.NSArray? accessibilityColumns();
   objc.NSString? accessibilityHeaderGroup();
@@ -37726,6 +38201,10 @@ abstract interface class NSAccessibilityTableOptional {
 
 mixin NSAccessibilityTableDefaults implements NSAccessibilityTableOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -37739,6 +38218,9 @@ interface class NSAccessibilityTable$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAccessibilityTableOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAccessibilityTableOptional.$implementedOptionalMethods].
   static NSAccessibilityTable implementFrom(
     NSAccessibilityTableSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -37765,14 +38247,21 @@ interface class NSAccessibilityTable$Builder {
       NSAccessibilityTable$Builder
                   .accessibilityColumnHeaderUIElements
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder
+                    .accessibilityColumnHeaderUIElements,
+              )
           ? () => optionalImplementation.accessibilityColumnHeaderUIElements()
           : null,
     );
     NSAccessibilityTable$Builder.accessibilityColumns.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilityColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilityColumns,
+              )
           ? () => optionalImplementation.accessibilityColumns()
           : null,
     );
@@ -37783,14 +38272,20 @@ interface class NSAccessibilityTable$Builder {
     NSAccessibilityTable$Builder.accessibilityHeaderGroup.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilityHeaderGroup.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilityHeaderGroup,
+              )
           ? () => optionalImplementation.accessibilityHeaderGroup()
           : null,
     );
     NSAccessibilityTable$Builder.accessibilityIdentifier.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilityIdentifier.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilityIdentifier,
+              )
           ? () => optionalImplementation.accessibilityIdentifier()
           : null,
     );
@@ -37807,7 +38302,10 @@ interface class NSAccessibilityTable$Builder {
       NSAccessibilityTable$Builder
                   .accessibilityRowHeaderUIElements
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilityRowHeaderUIElements,
+              )
           ? () => optionalImplementation.accessibilityRowHeaderUIElements()
           : null,
     );
@@ -37818,56 +38316,80 @@ interface class NSAccessibilityTable$Builder {
     NSAccessibilityTable$Builder.accessibilitySelectedCells.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilitySelectedCells.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilitySelectedCells,
+              )
           ? () => optionalImplementation.accessibilitySelectedCells()
           : null,
     );
     NSAccessibilityTable$Builder.accessibilitySelectedColumns.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilitySelectedColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilitySelectedColumns,
+              )
           ? () => optionalImplementation.accessibilitySelectedColumns()
           : null,
     );
     NSAccessibilityTable$Builder.accessibilitySelectedRows.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilitySelectedRows.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilitySelectedRows,
+              )
           ? () => optionalImplementation.accessibilitySelectedRows()
           : null,
     );
     NSAccessibilityTable$Builder.accessibilityVisibleCells.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilityVisibleCells.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilityVisibleCells,
+              )
           ? () => optionalImplementation.accessibilityVisibleCells()
           : null,
     );
     NSAccessibilityTable$Builder.accessibilityVisibleColumns.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilityVisibleColumns.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilityVisibleColumns,
+              )
           ? () => optionalImplementation.accessibilityVisibleColumns()
           : null,
     );
     NSAccessibilityTable$Builder.accessibilityVisibleRows.implement(
       builder,
       NSAccessibilityTable$Builder.accessibilityVisibleRows.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.accessibilityVisibleRows,
+              )
           ? () => optionalImplementation.accessibilityVisibleRows()
           : null,
     );
     NSAccessibilityTable$Builder.isAccessibilityFocused.implement(
       builder,
       NSAccessibilityTable$Builder.isAccessibilityFocused.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.isAccessibilityFocused,
+              )
           ? () => optionalImplementation.isAccessibilityFocused()
           : null,
     );
     NSAccessibilityTable$Builder.setAccessibilitySelectedRows_.implement(
       builder,
       NSAccessibilityTable$Builder.setAccessibilitySelectedRows_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAccessibilityTable$Builder.setAccessibilitySelectedRows_,
+              )
           ? (objc.NSArray selectedRows) {
               optionalImplementation.setAccessibilitySelectedRows(selectedRows);
             }
@@ -39025,10 +39547,19 @@ extension NSAlertDelegate$Methods on NSAlertDelegate {
 abstract interface class NSAlertDelegateSpec {}
 
 abstract interface class NSAlertDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool alertShowHelp(NSAlert alert);
 }
 
 mixin NSAlertDelegateDefaults implements NSAlertDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -39043,6 +39574,9 @@ interface class NSAlertDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAlertDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAlertDelegateOptional.$implementedOptionalMethods].
   static NSAlertDelegate implementFrom(
     NSAlertDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -39067,7 +39601,10 @@ interface class NSAlertDelegate$Builder {
     NSAlertDelegate$Builder.alertShowHelp_.implement(
       builder,
       NSAlertDelegate$Builder.alertShowHelp_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAlertDelegate$Builder.alertShowHelp_,
+              )
           ? (NSAlert alert) => optionalImplementation.alertShowHelp(alert)
           : null,
     );
@@ -39434,9 +39971,6 @@ interface class NSAlignmentFeedbackToken$Builder {
 
   /// Builds an object that implements the NSAlignmentFeedbackToken protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSAlignmentFeedbackTokenOptional].
   static NSAlignmentFeedbackToken implementFrom(
     NSAlignmentFeedbackTokenSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -39593,9 +40127,6 @@ interface class NSAnimatablePropertyContainer$Builder {
 
   /// Builds an object that implements the NSAnimatablePropertyContainer protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSAnimatablePropertyContainerOptional].
   static NSAnimatablePropertyContainer implementFrom(
     NSAnimatablePropertyContainerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -40515,6 +41046,11 @@ extension NSAnimationDelegate$Methods on NSAnimationDelegate {
 abstract interface class NSAnimationDelegateSpec {}
 
 abstract interface class NSAnimationDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void animationDidReachProgressMark(
     NSAnimation animation, {
     required double didReachProgressMark,
@@ -40530,6 +41066,10 @@ abstract interface class NSAnimationDelegateOptional {
 
 mixin NSAnimationDelegateDefaults implements NSAnimationDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -40543,6 +41083,9 @@ interface class NSAnimationDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSAnimationDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSAnimationDelegateOptional.$implementedOptionalMethods].
   static NSAnimationDelegate implementFrom(
     NSAnimationDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -40567,7 +41110,10 @@ interface class NSAnimationDelegate$Builder {
     NSAnimationDelegate$Builder.animation_didReachProgressMark_.implement(
       builder,
       NSAnimationDelegate$Builder.animation_didReachProgressMark_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAnimationDelegate$Builder.animation_didReachProgressMark_,
+              )
           ? (NSAnimation animation, double didReachProgressMark) {
               optionalImplementation.animationDidReachProgressMark(
                 animation,
@@ -40579,7 +41125,10 @@ interface class NSAnimationDelegate$Builder {
     NSAnimationDelegate$Builder.animation_valueForProgress_.implement(
       builder,
       NSAnimationDelegate$Builder.animation_valueForProgress_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAnimationDelegate$Builder.animation_valueForProgress_,
+              )
           ? (NSAnimation animation, double valueForProgress) =>
                 optionalImplementation.animationValueForProgress(
                   animation,
@@ -40590,7 +41139,10 @@ interface class NSAnimationDelegate$Builder {
     NSAnimationDelegate$Builder.animationDidEnd_.implement(
       builder,
       NSAnimationDelegate$Builder.animationDidEnd_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAnimationDelegate$Builder.animationDidEnd_,
+              )
           ? (NSAnimation animation) {
               optionalImplementation.animationDidEnd(animation);
             }
@@ -40599,7 +41151,10 @@ interface class NSAnimationDelegate$Builder {
     NSAnimationDelegate$Builder.animationDidStop_.implement(
       builder,
       NSAnimationDelegate$Builder.animationDidStop_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAnimationDelegate$Builder.animationDidStop_,
+              )
           ? (NSAnimation animation) {
               optionalImplementation.animationDidStop(animation);
             }
@@ -40608,7 +41163,10 @@ interface class NSAnimationDelegate$Builder {
     NSAnimationDelegate$Builder.animationShouldStart_.implement(
       builder,
       NSAnimationDelegate$Builder.animationShouldStart_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSAnimationDelegate$Builder.animationShouldStart_,
+              )
           ? (NSAnimation animation) =>
                 optionalImplementation.animationShouldStart(animation)
           : null,
@@ -41137,9 +41695,6 @@ interface class NSAppearanceCustomization$Builder {
 
   /// Builds an object that implements the NSAppearanceCustomization protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSAppearanceCustomizationOptional].
   static NSAppearanceCustomization implementFrom(
     NSAppearanceCustomizationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -43261,6 +43816,11 @@ extension NSApplicationDelegate$Methods on NSApplicationDelegate {
 abstract interface class NSApplicationDelegateSpec {}
 
 abstract interface class NSApplicationDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool applicationContinueUserActivityRestorationHandler(
     NSApplication application, {
     required foundation0.NSUserActivity continueUserActivity,
@@ -43383,6 +43943,10 @@ abstract interface class NSApplicationDelegateOptional {
 
 mixin NSApplicationDelegateDefaults implements NSApplicationDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -43396,6 +43960,9 @@ interface class NSApplicationDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSApplicationDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSApplicationDelegateOptional.$implementedOptionalMethods].
   static NSApplicationDelegate implementFrom(
     NSApplicationDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -43426,7 +43993,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_continueUserActivity_restorationHandler_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_continueUserActivity_restorationHandler_,
+                  )
               ? (
                   NSApplication application,
                   foundation0.NSUserActivity continueUserActivity,
@@ -43445,7 +44016,10 @@ interface class NSApplicationDelegate$Builder {
       NSApplicationDelegate$Builder
                   .application_delegateHandlesKey_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_delegateHandlesKey_,
+              )
           ? (NSApplication sender, objc.NSString delegateHandlesKey) =>
                 optionalImplementation.applicationDelegateHandlesKey(
                   sender,
@@ -43459,7 +44033,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_didDecodeRestorableState_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_didDecodeRestorableState_,
+                  )
               ? (NSApplication app, objc.NSCoder didDecodeRestorableState) {
                   optionalImplementation.applicationDidDecodeRestorableState(
                     app,
@@ -43475,7 +44053,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_didFailToContinueUserActivityWithType_error_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_didFailToContinueUserActivityWithType_error_,
+                  )
               ? (
                   NSApplication application,
                   objc.NSString didFailToContinueUserActivityWithType,
@@ -43498,7 +44080,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_didFailToRegisterForRemoteNotificationsWithError_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_didFailToRegisterForRemoteNotificationsWithError_,
+                  )
               ? (
                   NSApplication application,
                   objc.NSError didFailToRegisterForRemoteNotificationsWithError,
@@ -43518,7 +44104,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_didReceiveRemoteNotification_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_didReceiveRemoteNotification_,
+                  )
               ? (
                   NSApplication application,
                   objc.NSDictionary didReceiveRemoteNotification,
@@ -43539,7 +44129,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_didRegisterForRemoteNotificationsWithDeviceToken_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_didRegisterForRemoteNotificationsWithDeviceToken_,
+                  )
               ? (
                   NSApplication application,
                   objc.NSData didRegisterForRemoteNotificationsWithDeviceToken,
@@ -43558,7 +44152,11 @@ interface class NSApplicationDelegate$Builder {
       NSApplicationDelegate$Builder
                   .application_didUpdateUserActivity_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder
+                    .application_didUpdateUserActivity_,
+              )
           ? (
               NSApplication application,
               foundation0.NSUserActivity didUpdateUserActivity,
@@ -43573,7 +44171,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.application_handlerForIntent_.implement(
       builder,
       NSApplicationDelegate$Builder.application_handlerForIntent_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_handlerForIntent_,
+              )
           ? (NSApplication application, INIntent handlerForIntent) =>
                 optionalImplementation.applicationHandlerForIntent(
                   application,
@@ -43584,7 +44185,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.application_openFile_.implement(
       builder,
       NSApplicationDelegate$Builder.application_openFile_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_openFile_,
+              )
           ? (NSApplication sender, objc.NSString openFile) =>
                 optionalImplementation.applicationOpenFile(
                   sender,
@@ -43597,7 +44201,10 @@ interface class NSApplicationDelegate$Builder {
       NSApplicationDelegate$Builder
                   .application_openFileWithoutUI_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_openFileWithoutUI_,
+              )
           ? (objc.ObjCObject sender, objc.NSString openFileWithoutUI) =>
                 optionalImplementation.applicationOpenFileWithoutUI(
                   sender,
@@ -43608,7 +44215,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.application_openFiles_.implement(
       builder,
       NSApplicationDelegate$Builder.application_openFiles_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_openFiles_,
+              )
           ? (NSApplication sender, objc.NSArray openFiles) {
               optionalImplementation.applicationOpenFiles(
                 sender,
@@ -43620,7 +44230,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.application_openTempFile_.implement(
       builder,
       NSApplicationDelegate$Builder.application_openTempFile_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_openTempFile_,
+              )
           ? (NSApplication sender, objc.NSString openTempFile) =>
                 optionalImplementation.applicationOpenTempFile(
                   sender,
@@ -43631,7 +44244,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.application_openURLs_.implement(
       builder,
       NSApplicationDelegate$Builder.application_openURLs_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_openURLs_,
+              )
           ? (NSApplication application, objc.NSArray openURLs) {
               optionalImplementation.applicationOpenURLs(
                 application,
@@ -43643,7 +44259,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.application_printFile_.implement(
       builder,
       NSApplicationDelegate$Builder.application_printFile_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_printFile_,
+              )
           ? (NSApplication sender, objc.NSString printFile) =>
                 optionalImplementation.applicationPrintFile(
                   sender,
@@ -43658,7 +44277,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_printFiles_withSettings_showPrintPanels_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_printFiles_withSettings_showPrintPanels_,
+                  )
               ? (
                   NSApplication application,
                   objc.NSArray printFiles,
@@ -43680,7 +44303,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_userDidAcceptCloudKitShareWithMetadata_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_userDidAcceptCloudKitShareWithMetadata_,
+                  )
               ? (
                   NSApplication application,
                   CKShareMetadata userDidAcceptCloudKitShareWithMetadata,
@@ -43700,7 +44327,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_willContinueUserActivityWithType_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_willContinueUserActivityWithType_,
+                  )
               ? (
                   NSApplication application,
                   objc.NSString willContinueUserActivityWithType,
@@ -43718,7 +44349,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .application_willEncodeRestorableState_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .application_willEncodeRestorableState_,
+                  )
               ? (NSApplication app, objc.NSCoder willEncodeRestorableState) {
                   optionalImplementation.applicationWillEncodeRestorableState(
                     app,
@@ -43730,7 +44365,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.application_willPresentError_.implement(
       builder,
       NSApplicationDelegate$Builder.application_willPresentError_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.application_willPresentError_,
+              )
           ? (NSApplication application, objc.NSError willPresentError) =>
                 optionalImplementation.applicationWillPresentError(
                   application,
@@ -43741,7 +44379,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationDidBecomeActive_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationDidBecomeActive_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationDidBecomeActive_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationDidBecomeActive(notification);
             }
@@ -43752,7 +44393,11 @@ interface class NSApplicationDelegate$Builder {
       NSApplicationDelegate$Builder
                   .applicationDidChangeOcclusionState_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder
+                    .applicationDidChangeOcclusionState_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationDidChangeOcclusionState(
                 notification,
@@ -43766,7 +44411,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .applicationDidChangeScreenParameters_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .applicationDidChangeScreenParameters_,
+                  )
               ? (objc.NSNotification notification) {
                   optionalImplementation.applicationDidChangeScreenParameters(
                     notification,
@@ -43779,7 +44428,10 @@ interface class NSApplicationDelegate$Builder {
       NSApplicationDelegate$Builder
                   .applicationDidFinishLaunching_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationDidFinishLaunching_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationDidFinishLaunching(
                 notification,
@@ -43790,7 +44442,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationDidHide_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationDidHide_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationDidHide_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationDidHide(notification);
             }
@@ -43799,7 +44454,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationDidResignActive_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationDidResignActive_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationDidResignActive_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationDidResignActive(notification);
             }
@@ -43808,7 +44466,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationDidUnhide_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationDidUnhide_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationDidUnhide_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationDidUnhide(notification);
             }
@@ -43817,7 +44478,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationDidUpdate_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationDidUpdate_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationDidUpdate_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationDidUpdate(notification);
             }
@@ -43826,7 +44490,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationDockMenu_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationDockMenu_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationDockMenu_,
+              )
           ? (NSApplication sender) =>
                 optionalImplementation.applicationDockMenu(sender)
           : null,
@@ -43834,7 +44501,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationOpenUntitledFile_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationOpenUntitledFile_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationOpenUntitledFile_,
+              )
           ? (NSApplication sender) =>
                 optionalImplementation.applicationOpenUntitledFile(sender)
           : null,
@@ -43845,7 +44515,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .applicationProtectedDataDidBecomeAvailable_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .applicationProtectedDataDidBecomeAvailable_,
+                  )
               ? (objc.NSNotification notification) {
                   optionalImplementation
                       .applicationProtectedDataDidBecomeAvailable(notification);
@@ -43858,7 +44532,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .applicationProtectedDataWillBecomeUnavailable_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .applicationProtectedDataWillBecomeUnavailable_,
+                  )
               ? (objc.NSNotification notification) {
                   optionalImplementation
                       .applicationProtectedDataWillBecomeUnavailable(
@@ -43874,7 +44552,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .applicationShouldAutomaticallyLocalizeKeyEquivalents_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .applicationShouldAutomaticallyLocalizeKeyEquivalents_,
+                  )
               ? (NSApplication application) => optionalImplementation
                     .applicationShouldAutomaticallyLocalizeKeyEquivalents(
                       application,
@@ -43888,7 +44570,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .applicationShouldHandleReopen_hasVisibleWindows_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .applicationShouldHandleReopen_hasVisibleWindows_,
+                  )
               ? (NSApplication sender, bool hasVisibleWindows) =>
                     optionalImplementation.applicationShouldHandleReopen(
                       sender,
@@ -43901,7 +44587,11 @@ interface class NSApplicationDelegate$Builder {
       NSApplicationDelegate$Builder
                   .applicationShouldOpenUntitledFile_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder
+                    .applicationShouldOpenUntitledFile_,
+              )
           ? (NSApplication sender) =>
                 optionalImplementation.applicationShouldOpenUntitledFile(sender)
           : null,
@@ -43909,7 +44599,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationShouldTerminate_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationShouldTerminate_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationShouldTerminate_,
+              )
           ? (NSApplication sender) =>
                 optionalImplementation.applicationShouldTerminate(sender)
           : null,
@@ -43921,7 +44614,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .applicationShouldTerminateAfterLastWindowClosed_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .applicationShouldTerminateAfterLastWindowClosed_,
+                  )
               ? (NSApplication sender) => optionalImplementation
                     .applicationShouldTerminateAfterLastWindowClosed(sender)
               : null,
@@ -43932,7 +44629,11 @@ interface class NSApplicationDelegate$Builder {
           NSApplicationDelegate$Builder
                       .applicationSupportsSecureRestorableState_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSApplicationDelegate$Builder
+                        .applicationSupportsSecureRestorableState_,
+                  )
               ? (NSApplication app) => optionalImplementation
                     .applicationSupportsSecureRestorableState(app)
               : null,
@@ -43940,7 +44641,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationWillBecomeActive_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationWillBecomeActive_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationWillBecomeActive_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationWillBecomeActive(notification);
             }
@@ -43951,7 +44655,10 @@ interface class NSApplicationDelegate$Builder {
       NSApplicationDelegate$Builder
                   .applicationWillFinishLaunching_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationWillFinishLaunching_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationWillFinishLaunching(
                 notification,
@@ -43962,7 +44669,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationWillHide_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationWillHide_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationWillHide_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationWillHide(notification);
             }
@@ -43971,7 +44681,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationWillResignActive_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationWillResignActive_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationWillResignActive_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationWillResignActive(notification);
             }
@@ -43980,7 +44693,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationWillTerminate_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationWillTerminate_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationWillTerminate_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationWillTerminate(notification);
             }
@@ -43989,7 +44705,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationWillUnhide_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationWillUnhide_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationWillUnhide_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationWillUnhide(notification);
             }
@@ -43998,7 +44717,10 @@ interface class NSApplicationDelegate$Builder {
     NSApplicationDelegate$Builder.applicationWillUpdate_.implement(
       builder,
       NSApplicationDelegate$Builder.applicationWillUpdate_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSApplicationDelegate$Builder.applicationWillUpdate_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.applicationWillUpdate(notification);
             }
@@ -52751,6 +53473,11 @@ extension NSBrowserDelegate$Methods on NSBrowserDelegate {
 abstract interface class NSBrowserDelegateSpec {}
 
 abstract interface class NSBrowserDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool browserAcceptDropAtRowColumnDropOperation(
     NSBrowser browser, {
     required NSDraggingInfo acceptDrop,
@@ -52907,6 +53634,10 @@ abstract interface class NSBrowserDelegateOptional {
 
 mixin NSBrowserDelegateDefaults implements NSBrowserDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -52920,6 +53651,9 @@ interface class NSBrowserDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSBrowserDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSBrowserDelegateOptional.$implementedOptionalMethods].
   static NSBrowserDelegate implementFrom(
     NSBrowserDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -52947,7 +53681,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_acceptDrop_atRow_column_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_acceptDrop_atRow_column_dropOperation_,
+                  )
               ? (
                   NSBrowser browser,
                   NSDraggingInfo acceptDrop,
@@ -52970,7 +53708,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_canDragRowsWithIndexes_inColumn_withEvent_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_canDragRowsWithIndexes_inColumn_withEvent_,
+                  )
               ? (
                   NSBrowser browser,
                   objc.NSIndexSet canDragRowsWithIndexes,
@@ -52988,7 +53730,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_child_ofItem_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_child_ofItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_child_ofItem_,
+              )
           ? (NSBrowser browser, int child, objc.ObjCObject? ofItem) =>
                 optionalImplementation.browserChildOfItem(
                   browser,
@@ -53002,7 +53747,10 @@ interface class NSBrowserDelegate$Builder {
       NSBrowserDelegate$Builder
                   .browser_createRowsForColumn_inMatrix_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_createRowsForColumn_inMatrix_,
+              )
           ? (NSBrowser sender, int createRowsForColumn, NSMatrix inMatrix) {
               optionalImplementation.browserCreateRowsForColumnInMatrix(
                 sender,
@@ -53017,7 +53765,10 @@ interface class NSBrowserDelegate$Builder {
       NSBrowserDelegate$Builder
                   .browser_didChangeLastColumn_toColumn_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_didChangeLastColumn_toColumn_,
+              )
           ? (NSBrowser browser, int didChangeLastColumn, int toColumn) {
               optionalImplementation.browserDidChangeLastColumnToColumn(
                 browser,
@@ -53034,7 +53785,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_draggingImageForRowsWithIndexes_inColumn_withEvent_offset_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_draggingImageForRowsWithIndexes_inColumn_withEvent_offset_,
+                  )
               ? (
                   NSBrowser browser,
                   objc.NSIndexSet draggingImageForRowsWithIndexes,
@@ -53057,7 +53812,10 @@ interface class NSBrowserDelegate$Builder {
       NSBrowserDelegate$Builder
                   .browser_headerViewControllerForItem_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_headerViewControllerForItem_,
+              )
           ? (NSBrowser browser, objc.ObjCObject? headerViewControllerForItem) =>
                 optionalImplementation.browserHeaderViewControllerForItem(
                   browser,
@@ -53068,7 +53826,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_heightOfRow_inColumn_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_heightOfRow_inColumn_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_heightOfRow_inColumn_,
+              )
           ? (NSBrowser browser, int heightOfRow, int inColumn) =>
                 optionalImplementation.browserHeightOfRowInColumn(
                   browser,
@@ -53080,7 +53841,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_isColumnValid_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_isColumnValid_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_isColumnValid_,
+              )
           ? (NSBrowser sender, int isColumnValid) => optionalImplementation
                 .browserIsColumnValid(sender, isColumnValid: isColumnValid)
           : null,
@@ -53088,7 +53852,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_isLeafItem_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_isLeafItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_isLeafItem_,
+              )
           ? (NSBrowser browser, objc.ObjCObject? isLeafItem) =>
                 optionalImplementation.browserIsLeafItem(
                   browser,
@@ -53103,7 +53870,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes_inColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes_inColumn_,
+                  )
               ? (
                   NSBrowser browser,
                   objc.NSURL namesOfPromisedFilesDroppedAtDestination,
@@ -53126,7 +53897,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_nextTypeSelectMatchFromRow_toRow_inColumn_forString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_nextTypeSelectMatchFromRow_toRow_inColumn_forString_,
+                  )
               ? (
                   NSBrowser browser,
                   int nextTypeSelectMatchFromRow,
@@ -53146,7 +53921,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_numberOfChildrenOfItem_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_numberOfChildrenOfItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_numberOfChildrenOfItem_,
+              )
           ? (NSBrowser browser, objc.ObjCObject? numberOfChildrenOfItem) =>
                 optionalImplementation.browserNumberOfChildrenOfItem(
                   browser,
@@ -53157,7 +53935,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_numberOfRowsInColumn_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_numberOfRowsInColumn_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_numberOfRowsInColumn_,
+              )
           ? (NSBrowser sender, int numberOfRowsInColumn) =>
                 optionalImplementation.browserNumberOfRowsInColumn(
                   sender,
@@ -53168,7 +53949,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_objectValueForItem_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_objectValueForItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_objectValueForItem_,
+              )
           ? (NSBrowser browser, objc.ObjCObject? objectValueForItem) =>
                 optionalImplementation.browserObjectValueForItem(
                   browser,
@@ -53182,7 +53966,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_previewViewControllerForLeafItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_previewViewControllerForLeafItem_,
+                  )
               ? (
                   NSBrowser browser,
                   objc.ObjCObject previewViewControllerForLeafItem,
@@ -53199,7 +53987,11 @@ interface class NSBrowserDelegate$Builder {
       NSBrowserDelegate$Builder
                   .browser_selectCellWithString_inColumn_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder
+                    .browser_selectCellWithString_inColumn_,
+              )
           ? (
               NSBrowser sender,
               objc.NSString selectCellWithString,
@@ -53214,7 +54006,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_selectRow_inColumn_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_selectRow_inColumn_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_selectRow_inColumn_,
+              )
           ? (NSBrowser sender, int selectRow, int inColumn) =>
                 optionalImplementation.browserSelectRowInColumn(
                   sender,
@@ -53230,7 +54025,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_selectionIndexesForProposedSelection_inColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_selectionIndexesForProposedSelection_inColumn_,
+                  )
               ? (
                   NSBrowser browser,
                   objc.NSIndexSet selectionIndexesForProposedSelection,
@@ -53247,7 +54046,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_setObjectValue_forItem_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_setObjectValue_forItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_setObjectValue_forItem_,
+              )
           ? (
               NSBrowser browser,
               objc.ObjCObject? setObjectValue,
@@ -53264,7 +54066,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_shouldEditItem_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_shouldEditItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_shouldEditItem_,
+              )
           ? (NSBrowser browser, objc.ObjCObject? shouldEditItem) =>
                 optionalImplementation.browserShouldEditItem(
                   browser,
@@ -53278,7 +54083,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_shouldShowCellExpansionForRow_column_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_shouldShowCellExpansionForRow_column_,
+                  )
               ? (
                   NSBrowser browser,
                   int shouldShowCellExpansionForRow,
@@ -53298,7 +54107,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_shouldSizeColumn_forUserResize_toWidth_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_shouldSizeColumn_forUserResize_toWidth_,
+                  )
               ? (
                   NSBrowser browser,
                   int shouldSizeColumn,
@@ -53320,7 +54133,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_shouldTypeSelectForEvent_withCurrentSearchString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_shouldTypeSelectForEvent_withCurrentSearchString_,
+                  )
               ? (
                   NSBrowser browser,
                   NSEvent shouldTypeSelectForEvent,
@@ -53336,7 +54153,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_sizeToFitWidthOfColumn_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_sizeToFitWidthOfColumn_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_sizeToFitWidthOfColumn_,
+              )
           ? (NSBrowser browser, int sizeToFitWidthOfColumn) =>
                 optionalImplementation.browserSizeToFitWidthOfColumn(
                   browser,
@@ -53347,7 +54167,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browser_titleOfColumn_.implement(
       builder,
       NSBrowserDelegate$Builder.browser_titleOfColumn_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_titleOfColumn_,
+              )
           ? (NSBrowser sender, int titleOfColumn) => optionalImplementation
                 .browserTitleOfColumn(sender, titleOfColumn: titleOfColumn)
           : null,
@@ -53358,7 +54181,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_typeSelectStringForRow_inColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_typeSelectStringForRow_inColumn_,
+                  )
               ? (NSBrowser browser, int typeSelectStringForRow, int inColumn) =>
                     optionalImplementation
                         .browserTypeSelectStringForRowInColumn(
@@ -53375,7 +54202,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_validateDrop_proposedRow_column_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_validateDrop_proposedRow_column_dropOperation_,
+                  )
               ? (
                   NSBrowser browser,
                   NSDraggingInfo validateDrop,
@@ -53397,7 +54228,10 @@ interface class NSBrowserDelegate$Builder {
       NSBrowserDelegate$Builder
                   .browser_willDisplayCell_atRow_column_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browser_willDisplayCell_atRow_column_,
+              )
           ? (
               NSBrowser sender,
               objc.ObjCObject willDisplayCell,
@@ -53420,7 +54254,11 @@ interface class NSBrowserDelegate$Builder {
           NSBrowserDelegate$Builder
                       .browser_writeRowsWithIndexes_inColumn_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSBrowserDelegate$Builder
+                        .browser_writeRowsWithIndexes_inColumn_toPasteboard_,
+                  )
               ? (
                   NSBrowser browser,
                   objc.NSIndexSet writeRowsWithIndexes,
@@ -53440,7 +54278,10 @@ interface class NSBrowserDelegate$Builder {
       NSBrowserDelegate$Builder
                   .browserColumnConfigurationDidChange_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browserColumnConfigurationDidChange_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.browserColumnConfigurationDidChange(
                 notification,
@@ -53451,7 +54292,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browserDidScroll_.implement(
       builder,
       NSBrowserDelegate$Builder.browserDidScroll_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browserDidScroll_,
+              )
           ? (NSBrowser sender) {
               optionalImplementation.browserDidScroll(sender);
             }
@@ -53460,7 +54304,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.browserWillScroll_.implement(
       builder,
       NSBrowserDelegate$Builder.browserWillScroll_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.browserWillScroll_,
+              )
           ? (NSBrowser sender) {
               optionalImplementation.browserWillScroll(sender);
             }
@@ -53469,7 +54316,10 @@ interface class NSBrowserDelegate$Builder {
     NSBrowserDelegate$Builder.rootItemForBrowser_.implement(
       builder,
       NSBrowserDelegate$Builder.rootItemForBrowser_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSBrowserDelegate$Builder.rootItemForBrowser_,
+              )
           ? (NSBrowser browser) =>
                 optionalImplementation.rootItemForBrowser(browser)
           : null,
@@ -58225,6 +59075,11 @@ extension NSCandidateListTouchBarItemDelegate$Methods
 abstract interface class NSCandidateListTouchBarItemDelegateSpec {}
 
 abstract interface class NSCandidateListTouchBarItemDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void candidateListTouchBarItemBeginSelectingCandidateAtIndex(
     NSCandidateListTouchBarItem anItem, {
     required int beginSelectingCandidateAtIndex,
@@ -58247,6 +59102,10 @@ abstract interface class NSCandidateListTouchBarItemDelegateOptional {
 mixin NSCandidateListTouchBarItemDelegateDefaults
     implements NSCandidateListTouchBarItemDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -58261,6 +59120,9 @@ interface class NSCandidateListTouchBarItemDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCandidateListTouchBarItemDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCandidateListTouchBarItemDelegateOptional.$implementedOptionalMethods].
   static NSCandidateListTouchBarItemDelegate implementFrom(
     NSCandidateListTouchBarItemDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -58291,7 +59153,11 @@ interface class NSCandidateListTouchBarItemDelegate$Builder {
           NSCandidateListTouchBarItemDelegate$Builder
                       .candidateListTouchBarItem_beginSelectingCandidateAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCandidateListTouchBarItemDelegate$Builder
+                        .candidateListTouchBarItem_beginSelectingCandidateAtIndex_,
+                  )
               ? (
                   NSCandidateListTouchBarItem anItem,
                   int beginSelectingCandidateAtIndex,
@@ -58312,7 +59178,11 @@ interface class NSCandidateListTouchBarItemDelegate$Builder {
           NSCandidateListTouchBarItemDelegate$Builder
                       .candidateListTouchBarItem_changeSelectionFromCandidateAtIndex_toIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCandidateListTouchBarItemDelegate$Builder
+                        .candidateListTouchBarItem_changeSelectionFromCandidateAtIndex_toIndex_,
+                  )
               ? (
                   NSCandidateListTouchBarItem anItem,
                   int changeSelectionFromCandidateAtIndex,
@@ -58335,7 +59205,11 @@ interface class NSCandidateListTouchBarItemDelegate$Builder {
           NSCandidateListTouchBarItemDelegate$Builder
                       .candidateListTouchBarItem_changedCandidateListVisibility_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCandidateListTouchBarItemDelegate$Builder
+                        .candidateListTouchBarItem_changedCandidateListVisibility_,
+                  )
               ? (
                   NSCandidateListTouchBarItem anItem,
                   bool changedCandidateListVisibility,
@@ -58356,7 +59230,11 @@ interface class NSCandidateListTouchBarItemDelegate$Builder {
           NSCandidateListTouchBarItemDelegate$Builder
                       .candidateListTouchBarItem_endSelectingCandidateAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCandidateListTouchBarItemDelegate$Builder
+                        .candidateListTouchBarItem_endSelectingCandidateAtIndex_,
+                  )
               ? (
                   NSCandidateListTouchBarItem anItem,
                   int endSelectingCandidateAtIndex,
@@ -60281,9 +61159,6 @@ interface class NSChangeSpelling$Builder {
 
   /// Builds an object that implements the NSChangeSpelling protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSChangeSpellingOptional].
   static NSChangeSpelling implementFrom(
     NSChangeSpellingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -61404,6 +62279,11 @@ extension NSCloudSharingServiceDelegate$Methods
 abstract interface class NSCloudSharingServiceDelegateSpec {}
 
 abstract interface class NSCloudSharingServiceDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSView? anchoringViewForSharingService(
     NSSharingService sharingService, {
     required ffi.Pointer<objc.CGRect> showRelativeToRect,
@@ -61458,6 +62338,10 @@ abstract interface class NSCloudSharingServiceDelegateOptional {
 mixin NSCloudSharingServiceDelegateDefaults
     implements NSCloudSharingServiceDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -61471,6 +62355,9 @@ interface class NSCloudSharingServiceDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCloudSharingServiceDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCloudSharingServiceDelegateOptional.$implementedOptionalMethods].
   static NSCloudSharingServiceDelegate implementFrom(
     NSCloudSharingServiceDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -61501,7 +62388,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .anchoringViewForSharingService_showRelativeToRect_preferredEdge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .anchoringViewForSharingService_showRelativeToRect_preferredEdge_,
+                  )
               ? (
                   NSSharingService sharingService,
                   ffi.Pointer<objc.CGRect> showRelativeToRect,
@@ -61520,7 +62411,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .optionsForSharingService_shareProvider_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .optionsForSharingService_shareProvider_,
+                  )
               ? (
                   NSSharingService cloudKitSharingService,
                   objc.NSItemProvider shareProvider,
@@ -61537,7 +62432,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_didCompleteForItems_error_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_didCompleteForItems_error_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.NSArray didCompleteForItems,
@@ -61558,7 +62457,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_didFailToShareItems_error_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_didFailToShareItems_error_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.NSArray didFailToShareItems,
@@ -61578,7 +62481,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_didSaveShare_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_didSaveShare_,
+                  )
               ? (NSSharingService sharingService, CKShare didSaveShare) {
                   optionalImplementation.sharingServiceDidSaveShare(
                     sharingService,
@@ -61593,7 +62500,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_didShareItems_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_didShareItems_,
+                  )
               ? (NSSharingService sharingService, objc.NSArray didShareItems) {
                   optionalImplementation.sharingServiceDidShareItems(
                     sharingService,
@@ -61608,7 +62519,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_didStopSharing_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_didStopSharing_,
+                  )
               ? (NSSharingService sharingService, CKShare didStopSharing) {
                   optionalImplementation.sharingService(
                     sharingService,
@@ -61624,7 +62539,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_sourceFrameOnScreenForShareItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_sourceFrameOnScreenForShareItem_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.ObjCObject sourceFrameOnScreenForShareItem,
@@ -61643,7 +62562,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_sourceWindowForShareItems_sharingContentScope_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_sourceWindowForShareItems_sharingContentScope_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.NSArray sourceWindowForShareItems,
@@ -61663,7 +62586,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_transitionImageForShareItem_contentRect_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_transitionImageForShareItem_contentRect_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.ObjCObject transitionImageForShareItem,
@@ -61682,7 +62609,11 @@ interface class NSCloudSharingServiceDelegate$Builder {
           NSCloudSharingServiceDelegate$Builder
                       .sharingService_willShareItems_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCloudSharingServiceDelegate$Builder
+                        .sharingService_willShareItems_,
+                  )
               ? (NSSharingService sharingService, objc.NSArray willShareItems) {
                   optionalImplementation.sharingServiceWillShareItems(
                     sharingService,
@@ -62132,9 +63063,6 @@ interface class NSCloudSharingValidation$Builder {
 
   /// Builds an object that implements the NSCloudSharingValidation protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSCloudSharingValidationOptional].
   static NSCloudSharingValidation implementFrom(
     NSCloudSharingValidationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -62871,9 +63799,6 @@ interface class NSCollectionLayoutContainer$Builder {
 
   /// Builds an object that implements the NSCollectionLayoutContainer protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSCollectionLayoutContainerOptional].
   static NSCollectionLayoutContainer implementFrom(
     NSCollectionLayoutContainerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -63666,9 +64591,6 @@ interface class NSCollectionLayoutEnvironment$Builder {
 
   /// Builds an object that implements the NSCollectionLayoutEnvironment protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSCollectionLayoutEnvironmentOptional].
   static NSCollectionLayoutEnvironment implementFrom(
     NSCollectionLayoutEnvironmentSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -65607,9 +66529,6 @@ interface class NSCollectionLayoutVisibleItem$Builder {
 
   /// Builds an object that implements the NSCollectionLayoutVisibleItem protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSCollectionLayoutVisibleItemOptional].
   static NSCollectionLayoutVisibleItem implementFrom(
     NSCollectionLayoutVisibleItemSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -67846,6 +68765,11 @@ abstract interface class NSCollectionViewDataSourceSpec {
 }
 
 abstract interface class NSCollectionViewDataSourceOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSView collectionView(
     NSCollectionView collectionView, {
     required objc.NSString viewForSupplementaryElementOfKind,
@@ -67856,6 +68780,10 @@ abstract interface class NSCollectionViewDataSourceOptional {
 
 mixin NSCollectionViewDataSourceDefaults
     implements NSCollectionViewDataSourceOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -67870,6 +68798,9 @@ interface class NSCollectionViewDataSource$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCollectionViewDataSourceOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCollectionViewDataSourceOptional.$implementedOptionalMethods].
   static NSCollectionViewDataSource implementFrom(
     NSCollectionViewDataSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -67922,7 +68853,11 @@ interface class NSCollectionViewDataSource$Builder {
           NSCollectionViewDataSource$Builder
                       .collectionView_viewForSupplementaryElementOfKind_atIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDataSource$Builder
+                        .collectionView_viewForSupplementaryElementOfKind_atIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSString viewForSupplementaryElementOfKind,
@@ -67941,7 +68876,11 @@ interface class NSCollectionViewDataSource$Builder {
           NSCollectionViewDataSource$Builder
                       .numberOfSectionsInCollectionView_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDataSource$Builder
+                        .numberOfSectionsInCollectionView_,
+                  )
               ? (NSCollectionView collectionView) => optionalImplementation
                     .numberOfSectionsInCollectionView(collectionView)
               : null,
@@ -68958,6 +69897,11 @@ extension NSCollectionViewDelegate$Methods on NSCollectionViewDelegate {
 abstract interface class NSCollectionViewDelegateSpec {}
 
 abstract interface class NSCollectionViewDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool collectionViewAcceptDropIndexDropOperation(
     NSCollectionView collectionView, {
     required NSDraggingInfo acceptDrop,
@@ -69115,6 +70059,10 @@ abstract interface class NSCollectionViewDelegateOptional {
 mixin NSCollectionViewDelegateDefaults
     implements NSCollectionViewDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -69128,6 +70076,9 @@ interface class NSCollectionViewDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCollectionViewDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCollectionViewDelegateOptional.$implementedOptionalMethods].
   static NSCollectionViewDelegate implementFrom(
     NSCollectionViewDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -69158,7 +70109,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_acceptDrop_index_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_acceptDrop_index_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo acceptDrop,
@@ -69180,7 +70135,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_acceptDrop_indexPath_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_acceptDrop_indexPath_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo acceptDrop,
@@ -69202,7 +70161,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_canDragItemsAtIndexPaths_withEvent_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_canDragItemsAtIndexPaths_withEvent_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet canDragItemsAtIndexPaths,
@@ -69222,7 +70185,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_canDragItemsAtIndexes_withEvent_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_canDragItemsAtIndexes_withEvent_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSIndexSet canDragItemsAtIndexes,
@@ -69242,7 +70209,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_didChangeItemsAtIndexPaths_toHighlightState_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_didChangeItemsAtIndexPaths_toHighlightState_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet didChangeItemsAtIndexPaths,
@@ -69264,7 +70235,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_didDeselectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_didDeselectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet didDeselectItemsAtIndexPaths,
@@ -69285,7 +70260,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_didEndDisplayingItem_forRepresentedObjectAtIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_didEndDisplayingItem_forRepresentedObjectAtIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewItem didEndDisplayingItem,
@@ -69308,7 +70287,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_didEndDisplayingSupplementaryView_forElementOfKind_atIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_didEndDisplayingSupplementaryView_forElementOfKind_atIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSView didEndDisplayingSupplementaryView,
@@ -69332,7 +70315,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_didSelectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_didSelectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet didSelectItemsAtIndexPaths,
@@ -69352,7 +70339,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet draggingImageForItemsAtIndexPaths,
@@ -69375,7 +70366,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_draggingImageForItemsAtIndexes_withEvent_offset_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_draggingImageForItemsAtIndexes_withEvent_offset_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSIndexSet draggingImageForItemsAtIndexes,
@@ -69398,7 +70393,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_draggingSession_endedAtPoint_dragOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_draggingSession_endedAtPoint_dragOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingSession draggingSession,
@@ -69422,7 +70421,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingSession draggingSession,
@@ -69446,7 +70449,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexes_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingSession draggingSession,
@@ -69470,7 +70477,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSURL namesOfPromisedFilesDroppedAtDestination,
@@ -69491,7 +70502,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexes_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSURL namesOfPromisedFilesDroppedAtDestination,
@@ -69512,7 +70527,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_pasteboardWriterForItemAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_pasteboardWriterForItemAtIndex_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   int pasteboardWriterForItemAtIndex,
@@ -69531,7 +70550,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_pasteboardWriterForItemAtIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_pasteboardWriterForItemAtIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   foundation0.NSIndexPath pasteboardWriterForItemAtIndexPath,
@@ -69550,7 +70573,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_shouldChangeItemsAtIndexPaths_toHighlightState_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_shouldChangeItemsAtIndexPaths_toHighlightState_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet shouldChangeItemsAtIndexPaths,
@@ -69571,7 +70598,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_shouldDeselectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_shouldDeselectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet shouldDeselectItemsAtIndexPaths,
@@ -69590,7 +70621,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_shouldSelectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_shouldSelectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet shouldSelectItemsAtIndexPaths,
@@ -69609,7 +70644,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_transitionLayoutForOldLayout_newLayout_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_transitionLayoutForOldLayout_newLayout_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout transitionLayoutForOldLayout,
@@ -69627,7 +70666,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_updateDraggingItemsForDrag_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_updateDraggingItemsForDrag_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo updateDraggingItemsForDrag,
@@ -69647,7 +70690,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_validateDrop_proposedIndex_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_validateDrop_proposedIndex_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo validateDrop,
@@ -69669,7 +70716,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_validateDrop_proposedIndexPath_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_validateDrop_proposedIndexPath_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo validateDrop,
@@ -69692,7 +70743,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_willDisplayItem_forRepresentedObjectAtIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_willDisplayItem_forRepresentedObjectAtIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewItem willDisplayItem,
@@ -69715,7 +70770,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_willDisplaySupplementaryView_forElementKind_atIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_willDisplaySupplementaryView_forElementKind_atIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSView willDisplaySupplementaryView,
@@ -69740,7 +70799,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_writeItemsAtIndexPaths_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_writeItemsAtIndexPaths_toPasteboard_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet writeItemsAtIndexPaths,
@@ -69760,7 +70823,11 @@ interface class NSCollectionViewDelegate$Builder {
           NSCollectionViewDelegate$Builder
                       .collectionView_writeItemsAtIndexes_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegate$Builder
+                        .collectionView_writeItemsAtIndexes_toPasteboard_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSIndexSet writeItemsAtIndexes,
@@ -72074,6 +73141,11 @@ extension NSCollectionViewDelegateFlowLayout$Methods
 abstract interface class NSCollectionViewDelegateFlowLayoutSpec {}
 
 abstract interface class NSCollectionViewDelegateFlowLayoutOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool collectionViewAcceptDropIndexDropOperation(
     NSCollectionView collectionView, {
     required NSDraggingInfo acceptDrop,
@@ -72261,6 +73333,10 @@ abstract interface class NSCollectionViewDelegateFlowLayoutOptional {
 mixin NSCollectionViewDelegateFlowLayoutDefaults
     implements NSCollectionViewDelegateFlowLayoutOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -72275,6 +73351,9 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCollectionViewDelegateFlowLayoutOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCollectionViewDelegateFlowLayoutOptional.$implementedOptionalMethods].
   static NSCollectionViewDelegateFlowLayout implementFrom(
     NSCollectionViewDelegateFlowLayoutSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -72305,7 +73384,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_acceptDrop_index_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_acceptDrop_index_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo acceptDrop,
@@ -72327,7 +73410,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_acceptDrop_indexPath_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_acceptDrop_indexPath_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo acceptDrop,
@@ -72349,7 +73436,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_canDragItemsAtIndexPaths_withEvent_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_canDragItemsAtIndexPaths_withEvent_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet canDragItemsAtIndexPaths,
@@ -72369,7 +73460,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_canDragItemsAtIndexes_withEvent_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_canDragItemsAtIndexes_withEvent_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSIndexSet canDragItemsAtIndexes,
@@ -72389,7 +73484,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_didChangeItemsAtIndexPaths_toHighlightState_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_didChangeItemsAtIndexPaths_toHighlightState_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet didChangeItemsAtIndexPaths,
@@ -72411,7 +73510,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_didDeselectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_didDeselectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet didDeselectItemsAtIndexPaths,
@@ -72432,7 +73535,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_didEndDisplayingItem_forRepresentedObjectAtIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_didEndDisplayingItem_forRepresentedObjectAtIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewItem didEndDisplayingItem,
@@ -72455,7 +73562,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_didEndDisplayingSupplementaryView_forElementOfKind_atIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_didEndDisplayingSupplementaryView_forElementOfKind_atIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSView didEndDisplayingSupplementaryView,
@@ -72480,7 +73591,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_didSelectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_didSelectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet didSelectItemsAtIndexPaths,
@@ -72500,7 +73615,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet draggingImageForItemsAtIndexPaths,
@@ -72523,7 +73642,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_draggingImageForItemsAtIndexes_withEvent_offset_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_draggingImageForItemsAtIndexes_withEvent_offset_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSIndexSet draggingImageForItemsAtIndexes,
@@ -72546,7 +73669,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_draggingSession_endedAtPoint_dragOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_draggingSession_endedAtPoint_dragOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingSession draggingSession,
@@ -72570,7 +73697,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingSession draggingSession,
@@ -72594,7 +73725,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexes_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingSession draggingSession,
@@ -72618,7 +73753,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_layout_insetForSectionAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_layout_insetForSectionAtIndex_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout layout,
@@ -72638,7 +73777,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_layout_minimumInteritemSpacingForSectionAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_layout_minimumInteritemSpacingForSectionAtIndex_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout layout,
@@ -72659,7 +73802,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_layout_minimumLineSpacingForSectionAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_layout_minimumLineSpacingForSectionAtIndex_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout layout,
@@ -72680,7 +73827,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_layout_referenceSizeForFooterInSection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_layout_referenceSizeForFooterInSection_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout layout,
@@ -72701,7 +73852,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_layout_referenceSizeForHeaderInSection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_layout_referenceSizeForHeaderInSection_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout layout,
@@ -72722,7 +73877,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_layout_sizeForItemAtIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_layout_sizeForItemAtIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout layout,
@@ -72742,7 +73901,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSURL namesOfPromisedFilesDroppedAtDestination,
@@ -72763,7 +73926,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexes_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSURL namesOfPromisedFilesDroppedAtDestination,
@@ -72784,7 +73951,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_pasteboardWriterForItemAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_pasteboardWriterForItemAtIndex_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   int pasteboardWriterForItemAtIndex,
@@ -72803,7 +73974,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_pasteboardWriterForItemAtIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_pasteboardWriterForItemAtIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   foundation0.NSIndexPath pasteboardWriterForItemAtIndexPath,
@@ -72822,7 +73997,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_shouldChangeItemsAtIndexPaths_toHighlightState_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_shouldChangeItemsAtIndexPaths_toHighlightState_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet shouldChangeItemsAtIndexPaths,
@@ -72843,7 +74022,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_shouldDeselectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_shouldDeselectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet shouldDeselectItemsAtIndexPaths,
@@ -72862,7 +74045,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_shouldSelectItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_shouldSelectItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet shouldSelectItemsAtIndexPaths,
@@ -72881,7 +74068,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_transitionLayoutForOldLayout_newLayout_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_transitionLayoutForOldLayout_newLayout_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewLayout transitionLayoutForOldLayout,
@@ -72900,7 +74091,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_updateDraggingItemsForDrag_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_updateDraggingItemsForDrag_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo updateDraggingItemsForDrag,
@@ -72920,7 +74115,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_validateDrop_proposedIndex_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_validateDrop_proposedIndex_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo validateDrop,
@@ -72942,7 +74141,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_validateDrop_proposedIndexPath_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_validateDrop_proposedIndexPath_dropOperation_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSDraggingInfo validateDrop,
@@ -72965,7 +74168,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_willDisplayItem_forRepresentedObjectAtIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_willDisplayItem_forRepresentedObjectAtIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSCollectionViewItem willDisplayItem,
@@ -72988,7 +74195,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_willDisplaySupplementaryView_forElementKind_atIndexPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_willDisplaySupplementaryView_forElementKind_atIndexPath_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   NSView willDisplaySupplementaryView,
@@ -73013,7 +74224,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_writeItemsAtIndexPaths_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_writeItemsAtIndexPaths_toPasteboard_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSSet writeItemsAtIndexPaths,
@@ -73033,7 +74248,11 @@ interface class NSCollectionViewDelegateFlowLayout$Builder {
           NSCollectionViewDelegateFlowLayout$Builder
                       .collectionView_writeItemsAtIndexes_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewDelegateFlowLayout$Builder
+                        .collectionView_writeItemsAtIndexes_toPasteboard_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSIndexSet writeItemsAtIndexes,
@@ -74907,6 +76126,11 @@ abstract interface class NSCollectionViewElementSpec {
 }
 
 abstract interface class NSCollectionViewElementOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void applyLayoutAttributes(NSCollectionViewLayoutAttributes layoutAttributes);
   void didTransitionFromLayout(
     NSCollectionViewLayout oldLayout, {
@@ -74925,6 +76149,10 @@ abstract interface class NSCollectionViewElementOptional {
 mixin NSCollectionViewElementDefaults
     implements NSCollectionViewElementOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -74938,6 +76166,9 @@ interface class NSCollectionViewElement$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCollectionViewElementOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCollectionViewElementOptional.$implementedOptionalMethods].
   static NSCollectionViewElement implementFrom(
     NSCollectionViewElementSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -74964,7 +76195,10 @@ interface class NSCollectionViewElement$Builder {
     NSCollectionViewElement$Builder.applyLayoutAttributes_.implement(
       builder,
       NSCollectionViewElement$Builder.applyLayoutAttributes_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSCollectionViewElement$Builder.applyLayoutAttributes_,
+              )
           ? (NSCollectionViewLayoutAttributes layoutAttributes) {
               optionalImplementation.applyLayoutAttributes(layoutAttributes);
             }
@@ -74975,7 +76209,11 @@ interface class NSCollectionViewElement$Builder {
       NSCollectionViewElement$Builder
                   .didTransitionFromLayout_toLayout_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSCollectionViewElement$Builder
+                    .didTransitionFromLayout_toLayout_,
+              )
           ? (
               NSCollectionViewLayout oldLayout,
               NSCollectionViewLayout toLayout,
@@ -74997,7 +76235,11 @@ interface class NSCollectionViewElement$Builder {
           NSCollectionViewElement$Builder
                       .preferredLayoutAttributesFittingAttributes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewElement$Builder
+                        .preferredLayoutAttributesFittingAttributes_,
+                  )
               ? (NSCollectionViewLayoutAttributes layoutAttributes) =>
                     optionalImplementation
                         .preferredLayoutAttributesFittingAttributes(
@@ -75008,7 +76250,10 @@ interface class NSCollectionViewElement$Builder {
     NSCollectionViewElement$Builder.prepareForReuse.implement(
       builder,
       NSCollectionViewElement$Builder.prepareForReuse.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSCollectionViewElement$Builder.prepareForReuse,
+              )
           ? () {
               optionalImplementation.prepareForReuse();
             }
@@ -75025,7 +76270,11 @@ interface class NSCollectionViewElement$Builder {
           NSCollectionViewElement$Builder
                       .willTransitionFromLayout_toLayout_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewElement$Builder
+                        .willTransitionFromLayout_toLayout_,
+                  )
               ? (
                   NSCollectionViewLayout oldLayout,
                   NSCollectionViewLayout toLayout,
@@ -77286,6 +78535,11 @@ abstract interface class NSCollectionViewPrefetchingSpec {
 }
 
 abstract interface class NSCollectionViewPrefetchingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void collectionViewCancelPrefetchingForItemsAtIndexPaths(
     NSCollectionView collectionView, {
     required objc.NSArray cancelPrefetchingForItemsAtIndexPaths,
@@ -77294,6 +78548,10 @@ abstract interface class NSCollectionViewPrefetchingOptional {
 
 mixin NSCollectionViewPrefetchingDefaults
     implements NSCollectionViewPrefetchingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -77308,6 +78566,9 @@ interface class NSCollectionViewPrefetching$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCollectionViewPrefetchingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCollectionViewPrefetchingOptional.$implementedOptionalMethods].
   static NSCollectionViewPrefetching implementFrom(
     NSCollectionViewPrefetchingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -77338,7 +78599,11 @@ interface class NSCollectionViewPrefetching$Builder {
           NSCollectionViewPrefetching$Builder
                       .collectionView_cancelPrefetchingForItemsAtIndexPaths_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewPrefetching$Builder
+                        .collectionView_cancelPrefetchingForItemsAtIndexPaths_,
+                  )
               ? (
                   NSCollectionView collectionView,
                   objc.NSArray cancelPrefetchingForItemsAtIndexPaths,
@@ -77694,6 +78959,11 @@ abstract interface class NSCollectionViewSectionHeaderViewSpec {
 }
 
 abstract interface class NSCollectionViewSectionHeaderViewOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void applyLayoutAttributes(NSCollectionViewLayoutAttributes layoutAttributes);
   void didTransitionFromLayout(
     NSCollectionViewLayout oldLayout, {
@@ -77718,6 +78988,10 @@ abstract interface class NSCollectionViewSectionHeaderViewOptional {
 mixin NSCollectionViewSectionHeaderViewDefaults
     implements NSCollectionViewSectionHeaderViewOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -77732,6 +79006,9 @@ interface class NSCollectionViewSectionHeaderView$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCollectionViewSectionHeaderViewOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCollectionViewSectionHeaderViewOptional.$implementedOptionalMethods].
   static NSCollectionViewSectionHeaderView implementFrom(
     NSCollectionViewSectionHeaderViewSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -77760,7 +79037,11 @@ interface class NSCollectionViewSectionHeaderView$Builder {
       NSCollectionViewSectionHeaderView$Builder
                   .applyLayoutAttributes_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSCollectionViewSectionHeaderView$Builder
+                    .applyLayoutAttributes_,
+              )
           ? (NSCollectionViewLayoutAttributes layoutAttributes) {
               optionalImplementation.applyLayoutAttributes(layoutAttributes);
             }
@@ -77772,7 +79053,11 @@ interface class NSCollectionViewSectionHeaderView$Builder {
           NSCollectionViewSectionHeaderView$Builder
                       .didTransitionFromLayout_toLayout_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewSectionHeaderView$Builder
+                        .didTransitionFromLayout_toLayout_,
+                  )
               ? (
                   NSCollectionViewLayout oldLayout,
                   NSCollectionViewLayout toLayout,
@@ -77795,7 +79080,11 @@ interface class NSCollectionViewSectionHeaderView$Builder {
           NSCollectionViewSectionHeaderView$Builder
                       .preferredLayoutAttributesFittingAttributes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewSectionHeaderView$Builder
+                        .preferredLayoutAttributesFittingAttributes_,
+                  )
               ? (NSCollectionViewLayoutAttributes layoutAttributes) =>
                     optionalImplementation
                         .preferredLayoutAttributesFittingAttributes(
@@ -77806,7 +79095,10 @@ interface class NSCollectionViewSectionHeaderView$Builder {
     NSCollectionViewSectionHeaderView$Builder.prepareForReuse.implement(
       builder,
       NSCollectionViewSectionHeaderView$Builder.prepareForReuse.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSCollectionViewSectionHeaderView$Builder.prepareForReuse,
+              )
           ? () {
               optionalImplementation.prepareForReuse();
             }
@@ -77817,7 +79109,10 @@ interface class NSCollectionViewSectionHeaderView$Builder {
       NSCollectionViewSectionHeaderView$Builder
                   .sectionCollapseButton
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSCollectionViewSectionHeaderView$Builder.sectionCollapseButton,
+              )
           ? () => optionalImplementation.sectionCollapseButton
           : null,
     );
@@ -77833,7 +79128,11 @@ interface class NSCollectionViewSectionHeaderView$Builder {
           NSCollectionViewSectionHeaderView$Builder
                       .setSectionCollapseButton_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewSectionHeaderView$Builder
+                        .setSectionCollapseButton_,
+                  )
               ? (NSButton? value) {
                   optionalImplementation.sectionCollapseButton = value;
                 }
@@ -77845,7 +79144,11 @@ interface class NSCollectionViewSectionHeaderView$Builder {
           NSCollectionViewSectionHeaderView$Builder
                       .willTransitionFromLayout_toLayout_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSCollectionViewSectionHeaderView$Builder
+                        .willTransitionFromLayout_toLayout_,
+                  )
               ? (
                   NSCollectionViewLayout oldLayout,
                   NSCollectionViewLayout toLayout,
@@ -80323,9 +81626,6 @@ interface class NSColorChanging$Builder {
 
   /// Builds an object that implements the NSColorChanging protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSColorChangingOptional].
   static NSColorChanging implementFrom(
     NSColorChangingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -82092,9 +83392,6 @@ interface class NSColorPickingCustom$Builder {
 
   /// Builds an object that implements the NSColorPickingCustom protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSColorPickingCustomOptional].
   static NSColorPickingCustom implementFrom(
     NSColorPickingCustomSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -82724,9 +84021,6 @@ interface class NSColorPickingDefault$Builder {
 
   /// Builds an object that implements the NSColorPickingDefault protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSColorPickingDefaultOptional].
   static NSColorPickingDefault implementFrom(
     NSColorPickingDefaultSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -85185,6 +86479,11 @@ extension NSComboBoxCellDataSource$Methods on NSComboBoxCellDataSource {
 abstract interface class NSComboBoxCellDataSourceSpec {}
 
 abstract interface class NSComboBoxCellDataSourceOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString? comboBoxCell(
     NSComboBoxCell comboBoxCell, {
     required objc.NSString completedString,
@@ -85203,6 +86502,10 @@ abstract interface class NSComboBoxCellDataSourceOptional {
 mixin NSComboBoxCellDataSourceDefaults
     implements NSComboBoxCellDataSourceOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -85216,6 +86519,9 @@ interface class NSComboBoxCellDataSource$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSComboBoxCellDataSourceOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSComboBoxCellDataSourceOptional.$implementedOptionalMethods].
   static NSComboBoxCellDataSource implementFrom(
     NSComboBoxCellDataSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -85244,7 +86550,10 @@ interface class NSComboBoxCellDataSource$Builder {
       NSComboBoxCellDataSource$Builder
                   .comboBoxCell_completedString_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxCellDataSource$Builder.comboBoxCell_completedString_,
+              )
           ? (NSComboBoxCell comboBoxCell, objc.NSString completedString) =>
                 optionalImplementation.comboBoxCell(
                   comboBoxCell,
@@ -85258,7 +86567,11 @@ interface class NSComboBoxCellDataSource$Builder {
           NSComboBoxCellDataSource$Builder
                       .comboBoxCell_indexOfItemWithStringValue_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxCellDataSource$Builder
+                        .comboBoxCell_indexOfItemWithStringValue_,
+                  )
               ? (
                   NSComboBoxCell comboBoxCell,
                   objc.NSString indexOfItemWithStringValue,
@@ -85275,7 +86588,11 @@ interface class NSComboBoxCellDataSource$Builder {
           NSComboBoxCellDataSource$Builder
                       .comboBoxCell_objectValueForItemAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxCellDataSource$Builder
+                        .comboBoxCell_objectValueForItemAtIndex_,
+                  )
               ? (NSComboBoxCell comboBoxCell, int objectValueForItemAtIndex) =>
                     optionalImplementation
                         .comboBoxCellObjectValueForItemAtIndex(
@@ -85289,7 +86606,10 @@ interface class NSComboBoxCellDataSource$Builder {
       NSComboBoxCellDataSource$Builder
                   .numberOfItemsInComboBoxCell_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxCellDataSource$Builder.numberOfItemsInComboBoxCell_,
+              )
           ? (NSComboBoxCell comboBoxCell) =>
                 optionalImplementation.numberOfItemsInComboBoxCell(comboBoxCell)
           : null,
@@ -85550,6 +86870,11 @@ extension NSComboBoxDataSource$Methods on NSComboBoxDataSource {
 abstract interface class NSComboBoxDataSourceSpec {}
 
 abstract interface class NSComboBoxDataSourceOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSString? comboBox(
     NSComboBox comboBox, {
     required objc.NSString completedString,
@@ -85567,6 +86892,10 @@ abstract interface class NSComboBoxDataSourceOptional {
 
 mixin NSComboBoxDataSourceDefaults implements NSComboBoxDataSourceOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -85580,6 +86909,9 @@ interface class NSComboBoxDataSource$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSComboBoxDataSourceOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSComboBoxDataSourceOptional.$implementedOptionalMethods].
   static NSComboBoxDataSource implementFrom(
     NSComboBoxDataSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -85604,7 +86936,10 @@ interface class NSComboBoxDataSource$Builder {
     NSComboBoxDataSource$Builder.comboBox_completedString_.implement(
       builder,
       NSComboBoxDataSource$Builder.comboBox_completedString_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDataSource$Builder.comboBox_completedString_,
+              )
           ? (NSComboBox comboBox, objc.NSString completedString) =>
                 optionalImplementation.comboBox(
                   comboBox,
@@ -85617,7 +86952,11 @@ interface class NSComboBoxDataSource$Builder {
       NSComboBoxDataSource$Builder
                   .comboBox_indexOfItemWithStringValue_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDataSource$Builder
+                    .comboBox_indexOfItemWithStringValue_,
+              )
           ? (NSComboBox comboBox, objc.NSString indexOfItemWithStringValue) =>
                 optionalImplementation.comboBoxIndexOfItemWithStringValue(
                   comboBox,
@@ -85630,7 +86969,11 @@ interface class NSComboBoxDataSource$Builder {
       NSComboBoxDataSource$Builder
                   .comboBox_objectValueForItemAtIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDataSource$Builder
+                    .comboBox_objectValueForItemAtIndex_,
+              )
           ? (NSComboBox comboBox, int objectValueForItemAtIndex) =>
                 optionalImplementation.comboBoxObjectValueForItemAtIndex(
                   comboBox,
@@ -85641,7 +86984,10 @@ interface class NSComboBoxDataSource$Builder {
     NSComboBoxDataSource$Builder.numberOfItemsInComboBox_.implement(
       builder,
       NSComboBoxDataSource$Builder.numberOfItemsInComboBox_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDataSource$Builder.numberOfItemsInComboBox_,
+              )
           ? (NSComboBox comboBox) =>
                 optionalImplementation.numberOfItemsInComboBox(comboBox)
           : null,
@@ -86219,6 +87565,11 @@ extension NSComboBoxDelegate$Methods on NSComboBoxDelegate {
 abstract interface class NSComboBoxDelegateSpec {}
 
 abstract interface class NSComboBoxDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void comboBoxSelectionDidChange(objc.NSNotification notification);
   void comboBoxSelectionIsChanging(objc.NSNotification notification);
   void comboBoxWillDismiss(objc.NSNotification notification);
@@ -86280,6 +87631,10 @@ abstract interface class NSComboBoxDelegateOptional {
 
 mixin NSComboBoxDelegateDefaults implements NSComboBoxDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -86293,6 +87648,9 @@ interface class NSComboBoxDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSComboBoxDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSComboBoxDelegateOptional.$implementedOptionalMethods].
   static NSComboBoxDelegate implementFrom(
     NSComboBoxDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -86317,7 +87675,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.comboBoxSelectionDidChange_.implement(
       builder,
       NSComboBoxDelegate$Builder.comboBoxSelectionDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.comboBoxSelectionDidChange_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.comboBoxSelectionDidChange(notification);
             }
@@ -86326,7 +87687,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.comboBoxSelectionIsChanging_.implement(
       builder,
       NSComboBoxDelegate$Builder.comboBoxSelectionIsChanging_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.comboBoxSelectionIsChanging_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.comboBoxSelectionIsChanging(notification);
             }
@@ -86335,7 +87699,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.comboBoxWillDismiss_.implement(
       builder,
       NSComboBoxDelegate$Builder.comboBoxWillDismiss_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.comboBoxWillDismiss_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.comboBoxWillDismiss(notification);
             }
@@ -86344,7 +87711,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.comboBoxWillPopUp_.implement(
       builder,
       NSComboBoxDelegate$Builder.comboBoxWillPopUp_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.comboBoxWillPopUp_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.comboBoxWillPopUp(notification);
             }
@@ -86356,7 +87726,11 @@ interface class NSComboBoxDelegate$Builder {
           NSComboBoxDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -86376,7 +87750,11 @@ interface class NSComboBoxDelegate$Builder {
           NSComboBoxDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -86395,7 +87773,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSComboBoxDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -86406,7 +87787,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.control_textShouldBeginEditing_.implement(
       builder,
       NSComboBoxDelegate$Builder.control_textShouldBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.control_textShouldBeginEditing_,
+              )
           ? (NSControl control, NSText textShouldBeginEditing) =>
                 optionalImplementation.controlTextShouldBeginEditing(
                   control,
@@ -86417,7 +87801,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.control_textShouldEndEditing_.implement(
       builder,
       NSComboBoxDelegate$Builder.control_textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.control_textShouldEndEditing_,
+              )
           ? (NSControl control, NSText textShouldEndEditing) =>
                 optionalImplementation.controlTextShouldEndEditing(
                   control,
@@ -86432,7 +87819,11 @@ interface class NSComboBoxDelegate$Builder {
           NSComboBoxDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -86453,7 +87844,11 @@ interface class NSComboBoxDelegate$Builder {
       NSComboBoxDelegate$Builder
                   .control_textView_doCommandBySelector_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder
+                    .control_textView_doCommandBySelector_,
+              )
           ? (
               NSControl control,
               NSTextView textView,
@@ -86468,7 +87863,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.controlTextDidBeginEditing_.implement(
       builder,
       NSComboBoxDelegate$Builder.controlTextDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -86477,7 +87875,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSComboBoxDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -86486,7 +87887,10 @@ interface class NSComboBoxDelegate$Builder {
     NSComboBoxDelegate$Builder.controlTextDidEndEditing_.implement(
       builder,
       NSComboBoxDelegate$Builder.controlTextDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSComboBoxDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -86498,7 +87902,11 @@ interface class NSComboBoxDelegate$Builder {
           NSComboBoxDelegate$Builder
                       .textField_textView_candidates_forSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxDelegate$Builder
+                        .textField_textView_candidates_forSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -86519,7 +87927,11 @@ interface class NSComboBoxDelegate$Builder {
           NSComboBoxDelegate$Builder
                       .textField_textView_candidatesForSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxDelegate$Builder
+                        .textField_textView_candidatesForSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -86538,7 +87950,11 @@ interface class NSComboBoxDelegate$Builder {
           NSComboBoxDelegate$Builder
                       .textField_textView_shouldSelectCandidateAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSComboBoxDelegate$Builder
+                        .textField_textView_shouldSelectCandidateAtIndex_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -89497,6 +90913,11 @@ extension NSControlTextEditingDelegate$Methods on NSControlTextEditingDelegate {
 abstract interface class NSControlTextEditingDelegateSpec {}
 
 abstract interface class NSControlTextEditingDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool controlDidFailToFormatStringErrorDescription(
     NSControl control, {
     required objc.NSString didFailToFormatString,
@@ -89539,6 +90960,10 @@ abstract interface class NSControlTextEditingDelegateOptional {
 mixin NSControlTextEditingDelegateDefaults
     implements NSControlTextEditingDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -89552,6 +90977,9 @@ interface class NSControlTextEditingDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSControlTextEditingDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSControlTextEditingDelegateOptional.$implementedOptionalMethods].
   static NSControlTextEditingDelegate implementFrom(
     NSControlTextEditingDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -89582,7 +91010,11 @@ interface class NSControlTextEditingDelegate$Builder {
           NSControlTextEditingDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSControlTextEditingDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -89602,7 +91034,11 @@ interface class NSControlTextEditingDelegate$Builder {
           NSControlTextEditingDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSControlTextEditingDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -89621,7 +91057,10 @@ interface class NSControlTextEditingDelegate$Builder {
     NSControlTextEditingDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSControlTextEditingDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSControlTextEditingDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -89635,7 +91074,11 @@ interface class NSControlTextEditingDelegate$Builder {
           NSControlTextEditingDelegate$Builder
                       .control_textShouldBeginEditing_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSControlTextEditingDelegate$Builder
+                        .control_textShouldBeginEditing_,
+                  )
               ? (NSControl control, NSText textShouldBeginEditing) =>
                     optionalImplementation.controlTextShouldBeginEditing(
                       control,
@@ -89649,7 +91092,11 @@ interface class NSControlTextEditingDelegate$Builder {
           NSControlTextEditingDelegate$Builder
                       .control_textShouldEndEditing_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSControlTextEditingDelegate$Builder
+                        .control_textShouldEndEditing_,
+                  )
               ? (NSControl control, NSText textShouldEndEditing) =>
                     optionalImplementation.controlTextShouldEndEditing(
                       control,
@@ -89664,7 +91111,11 @@ interface class NSControlTextEditingDelegate$Builder {
           NSControlTextEditingDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSControlTextEditingDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -89686,7 +91137,11 @@ interface class NSControlTextEditingDelegate$Builder {
           NSControlTextEditingDelegate$Builder
                       .control_textView_doCommandBySelector_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSControlTextEditingDelegate$Builder
+                        .control_textView_doCommandBySelector_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -89703,7 +91158,11 @@ interface class NSControlTextEditingDelegate$Builder {
       NSControlTextEditingDelegate$Builder
                   .controlTextDidBeginEditing_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSControlTextEditingDelegate$Builder
+                    .controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -89712,7 +91171,10 @@ interface class NSControlTextEditingDelegate$Builder {
     NSControlTextEditingDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSControlTextEditingDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSControlTextEditingDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -89723,7 +91185,10 @@ interface class NSControlTextEditingDelegate$Builder {
       NSControlTextEditingDelegate$Builder
                   .controlTextDidEndEditing_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSControlTextEditingDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -92565,6 +94030,11 @@ extension NSDatePickerCellDelegate$Methods on NSDatePickerCellDelegate {
 abstract interface class NSDatePickerCellDelegateSpec {}
 
 abstract interface class NSDatePickerCellDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void datePickerCell(
     NSDatePickerCell datePickerCell, {
     required ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>
@@ -92575,6 +94045,10 @@ abstract interface class NSDatePickerCellDelegateOptional {
 
 mixin NSDatePickerCellDelegateDefaults
     implements NSDatePickerCellDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -92589,6 +94063,9 @@ interface class NSDatePickerCellDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSDatePickerCellDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSDatePickerCellDelegateOptional.$implementedOptionalMethods].
   static NSDatePickerCellDelegate implementFrom(
     NSDatePickerCellDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -92619,7 +94096,11 @@ interface class NSDatePickerCellDelegate$Builder {
           NSDatePickerCellDelegate$Builder
                       .datePickerCell_validateProposedDateValue_timeInterval_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSDatePickerCellDelegate$Builder
+                        .datePickerCell_validateProposedDateValue_timeInterval_,
+                  )
               ? (
                   NSDatePickerCell datePickerCell,
                   ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>>
@@ -99260,10 +100741,19 @@ abstract interface class NSDockTilePlugInSpec {
 }
 
 abstract interface class NSDockTilePlugInOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSMenu? dockMenu();
 }
 
 mixin NSDockTilePlugInDefaults implements NSDockTilePlugInOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -99278,6 +100768,9 @@ interface class NSDockTilePlugIn$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSDockTilePlugInOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSDockTilePlugInOptional.$implementedOptionalMethods].
   static NSDockTilePlugIn implementFrom(
     NSDockTilePlugInSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -99302,7 +100795,10 @@ interface class NSDockTilePlugIn$Builder {
     NSDockTilePlugIn$Builder.dockMenu.implement(
       builder,
       NSDockTilePlugIn$Builder.dockMenu.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDockTilePlugIn$Builder.dockMenu,
+              )
           ? () => optionalImplementation.dockMenu()
           : null,
     );
@@ -102637,6 +104133,11 @@ extension NSDraggingDestination$Methods on NSDraggingDestination {
 abstract interface class NSDraggingDestinationSpec {}
 
 abstract interface class NSDraggingDestinationOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void concludeDragOperation(NSDraggingInfo? sender);
   void draggingEnded(NSDraggingInfo sender);
   int draggingEntered(NSDraggingInfo sender);
@@ -102649,6 +104150,10 @@ abstract interface class NSDraggingDestinationOptional {
 }
 
 mixin NSDraggingDestinationDefaults implements NSDraggingDestinationOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -102663,6 +104168,9 @@ interface class NSDraggingDestination$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSDraggingDestinationOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSDraggingDestinationOptional.$implementedOptionalMethods].
   static NSDraggingDestination implementFrom(
     NSDraggingDestinationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -102689,7 +104197,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.concludeDragOperation_.implement(
       builder,
       NSDraggingDestination$Builder.concludeDragOperation_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.concludeDragOperation_,
+              )
           ? (NSDraggingInfo? sender) {
               optionalImplementation.concludeDragOperation(sender);
             }
@@ -102698,7 +104209,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.draggingEnded_.implement(
       builder,
       NSDraggingDestination$Builder.draggingEnded_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.draggingEnded_,
+              )
           ? (NSDraggingInfo sender) {
               optionalImplementation.draggingEnded(sender);
             }
@@ -102707,7 +104221,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.draggingEntered_.implement(
       builder,
       NSDraggingDestination$Builder.draggingEntered_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.draggingEntered_,
+              )
           ? (NSDraggingInfo sender) =>
                 optionalImplementation.draggingEntered(sender)
           : null,
@@ -102715,7 +104232,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.draggingExited_.implement(
       builder,
       NSDraggingDestination$Builder.draggingExited_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.draggingExited_,
+              )
           ? (NSDraggingInfo? sender) {
               optionalImplementation.draggingExited(sender);
             }
@@ -102724,7 +104244,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.draggingUpdated_.implement(
       builder,
       NSDraggingDestination$Builder.draggingUpdated_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.draggingUpdated_,
+              )
           ? (NSDraggingInfo sender) =>
                 optionalImplementation.draggingUpdated(sender)
           : null,
@@ -102732,7 +104255,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.performDragOperation_.implement(
       builder,
       NSDraggingDestination$Builder.performDragOperation_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.performDragOperation_,
+              )
           ? (NSDraggingInfo sender) =>
                 optionalImplementation.performDragOperation(sender)
           : null,
@@ -102740,7 +104266,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.prepareForDragOperation_.implement(
       builder,
       NSDraggingDestination$Builder.prepareForDragOperation_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.prepareForDragOperation_,
+              )
           ? (NSDraggingInfo sender) =>
                 optionalImplementation.prepareForDragOperation(sender)
           : null,
@@ -102748,7 +104277,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.updateDraggingItemsForDrag_.implement(
       builder,
       NSDraggingDestination$Builder.updateDraggingItemsForDrag_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.updateDraggingItemsForDrag_,
+              )
           ? (NSDraggingInfo? sender) {
               optionalImplementation.updateDraggingItemsForDrag(sender);
             }
@@ -102757,7 +104289,10 @@ interface class NSDraggingDestination$Builder {
     NSDraggingDestination$Builder.wantsPeriodicDraggingUpdates.implement(
       builder,
       NSDraggingDestination$Builder.wantsPeriodicDraggingUpdates.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingDestination$Builder.wantsPeriodicDraggingUpdates,
+              )
           ? () => optionalImplementation.wantsPeriodicDraggingUpdates()
           : null,
     );
@@ -103602,9 +105137,6 @@ interface class NSDraggingInfo$Builder {
 
   /// Builds an object that implements the NSDraggingInfo protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSDraggingInfoOptional].
   static NSDraggingInfo implementFrom(
     NSDraggingInfoSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -104803,6 +106335,11 @@ abstract interface class NSDraggingSourceSpec {
 }
 
 abstract interface class NSDraggingSourceOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void draggingSessionEndedAtPointOperation(
     NSDraggingSession session, {
     required objc.CGPoint endedAtPoint,
@@ -104821,6 +106358,10 @@ abstract interface class NSDraggingSourceOptional {
 
 mixin NSDraggingSourceDefaults implements NSDraggingSourceOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -104834,6 +106375,9 @@ interface class NSDraggingSource$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSDraggingSourceOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSDraggingSourceOptional.$implementedOptionalMethods].
   static NSDraggingSource implementFrom(
     NSDraggingSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -104860,7 +106404,11 @@ interface class NSDraggingSource$Builder {
       NSDraggingSource$Builder
                   .draggingSession_endedAtPoint_operation_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingSource$Builder
+                    .draggingSession_endedAtPoint_operation_,
+              )
           ? (
               NSDraggingSession session,
               objc.CGPoint endedAtPoint,
@@ -104877,7 +106425,10 @@ interface class NSDraggingSource$Builder {
     NSDraggingSource$Builder.draggingSession_movedToPoint_.implement(
       builder,
       NSDraggingSource$Builder.draggingSession_movedToPoint_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingSource$Builder.draggingSession_movedToPoint_,
+              )
           ? (NSDraggingSession session, objc.CGPoint movedToPoint) {
               optionalImplementation.draggingSessionMovedToPoint(
                 session,
@@ -104903,7 +106454,10 @@ interface class NSDraggingSource$Builder {
     NSDraggingSource$Builder.draggingSession_willBeginAtPoint_.implement(
       builder,
       NSDraggingSource$Builder.draggingSession_willBeginAtPoint_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingSource$Builder.draggingSession_willBeginAtPoint_,
+              )
           ? (NSDraggingSession session, objc.CGPoint willBeginAtPoint) {
               optionalImplementation.draggingSessionWillBeginAtPoint(
                 session,
@@ -104917,7 +106471,10 @@ interface class NSDraggingSource$Builder {
       NSDraggingSource$Builder
                   .ignoreModifierKeysForDraggingSession_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDraggingSource$Builder.ignoreModifierKeysForDraggingSession_,
+              )
           ? (NSDraggingSession session) => optionalImplementation
                 .ignoreModifierKeysForDraggingSession(session)
           : null,
@@ -105864,6 +107421,11 @@ extension NSDrawerDelegate$Methods on NSDrawerDelegate {
 abstract interface class NSDrawerDelegateSpec {}
 
 abstract interface class NSDrawerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void drawerDidClose(objc.NSNotification notification);
   void drawerDidOpen(objc.NSNotification notification);
   bool drawerShouldClose(NSDrawer sender);
@@ -105878,6 +107440,10 @@ abstract interface class NSDrawerDelegateOptional {
 
 mixin NSDrawerDelegateDefaults implements NSDrawerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -105891,6 +107457,9 @@ interface class NSDrawerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSDrawerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSDrawerDelegateOptional.$implementedOptionalMethods].
   static NSDrawerDelegate implementFrom(
     NSDrawerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -105915,7 +107484,10 @@ interface class NSDrawerDelegate$Builder {
     NSDrawerDelegate$Builder.drawerDidClose_.implement(
       builder,
       NSDrawerDelegate$Builder.drawerDidClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDrawerDelegate$Builder.drawerDidClose_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.drawerDidClose(notification);
             }
@@ -105924,7 +107496,10 @@ interface class NSDrawerDelegate$Builder {
     NSDrawerDelegate$Builder.drawerDidOpen_.implement(
       builder,
       NSDrawerDelegate$Builder.drawerDidOpen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDrawerDelegate$Builder.drawerDidOpen_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.drawerDidOpen(notification);
             }
@@ -105933,7 +107508,10 @@ interface class NSDrawerDelegate$Builder {
     NSDrawerDelegate$Builder.drawerShouldClose_.implement(
       builder,
       NSDrawerDelegate$Builder.drawerShouldClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDrawerDelegate$Builder.drawerShouldClose_,
+              )
           ? (NSDrawer sender) =>
                 optionalImplementation.drawerShouldClose(sender)
           : null,
@@ -105941,14 +107519,20 @@ interface class NSDrawerDelegate$Builder {
     NSDrawerDelegate$Builder.drawerShouldOpen_.implement(
       builder,
       NSDrawerDelegate$Builder.drawerShouldOpen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDrawerDelegate$Builder.drawerShouldOpen_,
+              )
           ? (NSDrawer sender) => optionalImplementation.drawerShouldOpen(sender)
           : null,
     );
     NSDrawerDelegate$Builder.drawerWillClose_.implement(
       builder,
       NSDrawerDelegate$Builder.drawerWillClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDrawerDelegate$Builder.drawerWillClose_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.drawerWillClose(notification);
             }
@@ -105957,7 +107541,10 @@ interface class NSDrawerDelegate$Builder {
     NSDrawerDelegate$Builder.drawerWillOpen_.implement(
       builder,
       NSDrawerDelegate$Builder.drawerWillOpen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDrawerDelegate$Builder.drawerWillOpen_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.drawerWillOpen(notification);
             }
@@ -105966,7 +107553,10 @@ interface class NSDrawerDelegate$Builder {
     NSDrawerDelegate$Builder.drawerWillResizeContents_toSize_.implement(
       builder,
       NSDrawerDelegate$Builder.drawerWillResizeContents_toSize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSDrawerDelegate$Builder.drawerWillResizeContents_toSize_,
+              )
           ? (NSDrawer sender, objc.CGSize toSize) => optionalImplementation
                 .drawerWillResizeContents(sender, toSize: toSize)
           : null,
@@ -106714,9 +108304,6 @@ interface class NSEditor$Builder {
 
   /// Builds an object that implements the NSEditor protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSEditorOptional].
   static NSEditor implementFrom(
     NSEditorSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -107140,11 +108727,20 @@ extension NSEditorRegistration$1$Methods on NSEditorRegistration$1 {
 abstract interface class NSEditorRegistration$1Spec {}
 
 abstract interface class NSEditorRegistration$1Optional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void objectDidBeginEditing(NSEditor editor);
   void objectDidEndEditing(NSEditor editor);
 }
 
 mixin NSEditorRegistration$1Defaults implements NSEditorRegistration$1Optional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -107159,6 +108755,9 @@ interface class NSEditorRegistration$1$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSEditorRegistration$1Optional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSEditorRegistration$1Optional.$implementedOptionalMethods].
   static NSEditorRegistration$1 implementFrom(
     NSEditorRegistration$1Spec implementation, {
     bool $keepIsolateAlive = true,
@@ -107183,7 +108782,10 @@ interface class NSEditorRegistration$1$Builder {
     NSEditorRegistration$1$Builder.objectDidBeginEditing_.implement(
       builder,
       NSEditorRegistration$1$Builder.objectDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSEditorRegistration$1$Builder.objectDidBeginEditing_,
+              )
           ? (NSEditor editor) {
               optionalImplementation.objectDidBeginEditing(editor);
             }
@@ -107192,7 +108794,10 @@ interface class NSEditorRegistration$1$Builder {
     NSEditorRegistration$1$Builder.objectDidEndEditing_.implement(
       builder,
       NSEditorRegistration$1$Builder.objectDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSEditorRegistration$1$Builder.objectDidEndEditing_,
+              )
           ? (NSEditor editor) {
               optionalImplementation.objectDidEndEditing(editor);
             }
@@ -109515,6 +111120,11 @@ abstract interface class NSFilePromiseProviderDelegateSpec {
 }
 
 abstract interface class NSFilePromiseProviderDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   foundation0.NSOperationQueue operationQueueForFilePromiseProvider(
     NSFilePromiseProvider filePromiseProvider,
   );
@@ -109522,6 +111132,10 @@ abstract interface class NSFilePromiseProviderDelegateOptional {
 
 mixin NSFilePromiseProviderDelegateDefaults
     implements NSFilePromiseProviderDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -109536,6 +111150,9 @@ interface class NSFilePromiseProviderDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSFilePromiseProviderDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSFilePromiseProviderDelegateOptional.$implementedOptionalMethods].
   static NSFilePromiseProviderDelegate implementFrom(
     NSFilePromiseProviderDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -109589,7 +111206,11 @@ interface class NSFilePromiseProviderDelegate$Builder {
           NSFilePromiseProviderDelegate$Builder
                       .operationQueueForFilePromiseProvider_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFilePromiseProviderDelegate$Builder
+                        .operationQueueForFilePromiseProvider_,
+                  )
               ? (NSFilePromiseProvider filePromiseProvider) =>
                     optionalImplementation.operationQueueForFilePromiseProvider(
                       filePromiseProvider,
@@ -110916,11 +112537,20 @@ extension NSFontChanging$Methods on NSFontChanging {
 abstract interface class NSFontChangingSpec {}
 
 abstract interface class NSFontChangingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void changeFont(NSFontManager? sender);
   int validModesForFontPanel(NSFontPanel fontPanel);
 }
 
 mixin NSFontChangingDefaults implements NSFontChangingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -110935,6 +112565,9 @@ interface class NSFontChanging$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSFontChangingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSFontChangingOptional.$implementedOptionalMethods].
   static NSFontChanging implementFrom(
     NSFontChangingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -110959,7 +112592,10 @@ interface class NSFontChanging$Builder {
     NSFontChanging$Builder.changeFont_.implement(
       builder,
       NSFontChanging$Builder.changeFont_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFontChanging$Builder.changeFont_,
+              )
           ? (NSFontManager? sender) {
               optionalImplementation.changeFont(sender);
             }
@@ -110968,7 +112604,10 @@ interface class NSFontChanging$Builder {
     NSFontChanging$Builder.validModesForFontPanel_.implement(
       builder,
       NSFontChanging$Builder.validModesForFontPanel_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFontChanging$Builder.validModesForFontPanel_,
+              )
           ? (NSFontPanel fontPanel) =>
                 optionalImplementation.validModesForFontPanel(fontPanel)
           : null,
@@ -114703,6 +116342,11 @@ extension NSGestureRecognizerDelegate$Methods on NSGestureRecognizerDelegate {
 abstract interface class NSGestureRecognizerDelegateSpec {}
 
 abstract interface class NSGestureRecognizerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool gestureRecognizerShouldAttemptToRecognizeWithEvent(
     NSGestureRecognizer$1 gestureRecognizer, {
     required NSEvent shouldAttemptToRecognizeWithEvent,
@@ -114730,6 +116374,10 @@ abstract interface class NSGestureRecognizerDelegateOptional {
 mixin NSGestureRecognizerDelegateDefaults
     implements NSGestureRecognizerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -114743,6 +116391,9 @@ interface class NSGestureRecognizerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSGestureRecognizerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSGestureRecognizerDelegateOptional.$implementedOptionalMethods].
   static NSGestureRecognizerDelegate implementFrom(
     NSGestureRecognizerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -114773,7 +116424,11 @@ interface class NSGestureRecognizerDelegate$Builder {
           NSGestureRecognizerDelegate$Builder
                       .gestureRecognizer_shouldAttemptToRecognizeWithEvent_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSGestureRecognizerDelegate$Builder
+                        .gestureRecognizer_shouldAttemptToRecognizeWithEvent_,
+                  )
               ? (
                   NSGestureRecognizer$1 gestureRecognizer,
                   NSEvent shouldAttemptToRecognizeWithEvent,
@@ -114792,7 +116447,11 @@ interface class NSGestureRecognizerDelegate$Builder {
           NSGestureRecognizerDelegate$Builder
                       .gestureRecognizer_shouldBeRequiredToFailByGestureRecognizer_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSGestureRecognizerDelegate$Builder
+                        .gestureRecognizer_shouldBeRequiredToFailByGestureRecognizer_,
+                  )
               ? (
                   NSGestureRecognizer$1 gestureRecognizer,
                   NSGestureRecognizer$1
@@ -114811,7 +116470,11 @@ interface class NSGestureRecognizerDelegate$Builder {
           NSGestureRecognizerDelegate$Builder
                       .gestureRecognizer_shouldReceiveTouch_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSGestureRecognizerDelegate$Builder
+                        .gestureRecognizer_shouldReceiveTouch_,
+                  )
               ? (
                   NSGestureRecognizer$1 gestureRecognizer,
                   NSTouch shouldReceiveTouch,
@@ -114828,7 +116491,11 @@ interface class NSGestureRecognizerDelegate$Builder {
           NSGestureRecognizerDelegate$Builder
                       .gestureRecognizer_shouldRecognizeSimultaneouslyWithGestureRecognizer_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSGestureRecognizerDelegate$Builder
+                        .gestureRecognizer_shouldRecognizeSimultaneouslyWithGestureRecognizer_,
+                  )
               ? (
                   NSGestureRecognizer$1 gestureRecognizer,
                   NSGestureRecognizer$1
@@ -114848,7 +116515,11 @@ interface class NSGestureRecognizerDelegate$Builder {
           NSGestureRecognizerDelegate$Builder
                       .gestureRecognizer_shouldRequireFailureOfGestureRecognizer_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSGestureRecognizerDelegate$Builder
+                        .gestureRecognizer_shouldRequireFailureOfGestureRecognizer_,
+                  )
               ? (
                   NSGestureRecognizer$1 gestureRecognizer,
                   NSGestureRecognizer$1 shouldRequireFailureOfGestureRecognizer,
@@ -114865,7 +116536,11 @@ interface class NSGestureRecognizerDelegate$Builder {
       NSGestureRecognizerDelegate$Builder
                   .gestureRecognizerShouldBegin_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSGestureRecognizerDelegate$Builder
+                    .gestureRecognizerShouldBegin_,
+              )
           ? (NSGestureRecognizer$1 gestureRecognizer) => optionalImplementation
                 .gestureRecognizerShouldBegin(gestureRecognizer)
           : null,
@@ -116037,9 +117712,6 @@ interface class NSGlyphStorage$Builder {
 
   /// Builds an object that implements the NSGlyphStorage protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSGlyphStorageOptional].
   static NSGlyphStorage implementFrom(
     NSGlyphStorageSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -118790,9 +120462,6 @@ interface class NSHapticFeedbackPerformer$Builder {
 
   /// Builds an object that implements the NSHapticFeedbackPerformer protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSHapticFeedbackPerformerOptional].
   static NSHapticFeedbackPerformer implementFrom(
     NSHapticFeedbackPerformerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -119162,9 +120831,6 @@ interface class NSIgnoreMisspelledWords$Builder {
 
   /// Builds an object that implements the NSIgnoreMisspelledWords protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSIgnoreMisspelledWordsOptional].
   static NSIgnoreMisspelledWords implementFrom(
     NSIgnoreMisspelledWordsSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -120677,6 +122343,11 @@ extension NSImageDelegate$Methods on NSImageDelegate {
 abstract interface class NSImageDelegateSpec {}
 
 abstract interface class NSImageDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void imageDidLoadPartOfRepresentationWithValidRows(
     NSImage$1 image, {
     required NSImageRep didLoadPartOfRepresentation,
@@ -120700,6 +122371,10 @@ abstract interface class NSImageDelegateOptional {
 
 mixin NSImageDelegateDefaults implements NSImageDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -120713,6 +122388,9 @@ interface class NSImageDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSImageDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSImageDelegateOptional.$implementedOptionalMethods].
   static NSImageDelegate implementFrom(
     NSImageDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -120740,7 +122418,11 @@ interface class NSImageDelegate$Builder {
           NSImageDelegate$Builder
                       .image_didLoadPartOfRepresentation_withValidRows_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSImageDelegate$Builder
+                        .image_didLoadPartOfRepresentation_withValidRows_,
+                  )
               ? (
                   NSImage$1 image,
                   NSImageRep didLoadPartOfRepresentation,
@@ -120761,7 +122443,10 @@ interface class NSImageDelegate$Builder {
       NSImageDelegate$Builder
                   .image_didLoadRepresentation_withStatus_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSImageDelegate$Builder.image_didLoadRepresentation_withStatus_,
+              )
           ? (
               NSImage$1 image,
               NSImageRep didLoadRepresentation,
@@ -120778,7 +122463,10 @@ interface class NSImageDelegate$Builder {
     NSImageDelegate$Builder.image_didLoadRepresentationHeader_.implement(
       builder,
       NSImageDelegate$Builder.image_didLoadRepresentationHeader_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSImageDelegate$Builder.image_didLoadRepresentationHeader_,
+              )
           ? (NSImage$1 image, NSImageRep didLoadRepresentationHeader) {
               optionalImplementation.imageDidLoadRepresentationHeader(
                 image,
@@ -120790,7 +122478,10 @@ interface class NSImageDelegate$Builder {
     NSImageDelegate$Builder.image_willLoadRepresentation_.implement(
       builder,
       NSImageDelegate$Builder.image_willLoadRepresentation_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSImageDelegate$Builder.image_willLoadRepresentation_,
+              )
           ? (NSImage$1 image, NSImageRep willLoadRepresentation) {
               optionalImplementation.imageWillLoadRepresentation(
                 image,
@@ -120802,7 +122493,10 @@ interface class NSImageDelegate$Builder {
     NSImageDelegate$Builder.imageDidNotDraw_inRect_.implement(
       builder,
       NSImageDelegate$Builder.imageDidNotDraw_inRect_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSImageDelegate$Builder.imageDidNotDraw_inRect_,
+              )
           ? (NSImage$1 sender, objc.CGRect inRect) =>
                 optionalImplementation.imageDidNotDraw(sender, inRect: inRect)
           : null,
@@ -123104,9 +124798,6 @@ interface class NSInputServerMouseTracker$Builder {
 
   /// Builds an object that implements the NSInputServerMouseTracker protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSInputServerMouseTrackerOptional].
   static NSInputServerMouseTracker implementFrom(
     NSInputServerMouseTrackerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -123562,9 +125253,6 @@ interface class NSInputServiceProvider$Builder {
 
   /// Builds an object that implements the NSInputServiceProvider protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSInputServiceProviderOptional].
   static NSInputServiceProvider implementFrom(
     NSInputServiceProviderSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -128607,6 +130295,11 @@ extension NSLayoutManagerDelegate$Methods on NSLayoutManagerDelegate {
 abstract interface class NSLayoutManagerDelegateSpec {}
 
 abstract interface class NSLayoutManagerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.CGRect
   layoutManagerBoundingBoxForControlGlyphAtIndexForTextContainerProposedLineFragmentGlyphPositionCharacterIndex(
     NSLayoutManager layoutManager, {
@@ -128688,6 +130381,10 @@ abstract interface class NSLayoutManagerDelegateOptional {
 mixin NSLayoutManagerDelegateDefaults
     implements NSLayoutManagerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -128701,6 +130398,9 @@ interface class NSLayoutManagerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSLayoutManagerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSLayoutManagerDelegateOptional.$implementedOptionalMethods].
   static NSLayoutManagerDelegate implementFrom(
     NSLayoutManagerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -128731,7 +130431,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_boundingBoxForControlGlyphAtIndex_forTextContainer_proposedLineFragment_glyphPosition_characterIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_boundingBoxForControlGlyphAtIndex_forTextContainer_proposedLineFragment_glyphPosition_characterIndex_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   int boundingBoxForControlGlyphAtIndex,
@@ -128758,7 +130462,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_didCompleteLayoutForTextContainer_atEnd_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_didCompleteLayoutForTextContainer_atEnd_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   NSTextContainer? didCompleteLayoutForTextContainer,
@@ -128781,7 +130489,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_lineSpacingAfterGlyphAtIndex_withProposedLineFragmentRect_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_lineSpacingAfterGlyphAtIndex_withProposedLineFragmentRect_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   int lineSpacingAfterGlyphAtIndex,
@@ -128803,7 +130515,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_paragraphSpacingAfterGlyphAtIndex_withProposedLineFragmentRect_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_paragraphSpacingAfterGlyphAtIndex_withProposedLineFragmentRect_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   int paragraphSpacingAfterGlyphAtIndex,
@@ -128825,7 +130541,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_paragraphSpacingBeforeGlyphAtIndex_withProposedLineFragmentRect_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_paragraphSpacingBeforeGlyphAtIndex_withProposedLineFragmentRect_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   int paragraphSpacingBeforeGlyphAtIndex,
@@ -128847,7 +130567,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_shouldBreakLineByHyphenatingBeforeCharacterAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_shouldBreakLineByHyphenatingBeforeCharacterAtIndex_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   int shouldBreakLineByHyphenatingBeforeCharacterAtIndex,
@@ -128866,7 +130590,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_shouldBreakLineByWordBeforeCharacterAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_shouldBreakLineByWordBeforeCharacterAtIndex_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   int shouldBreakLineByWordBeforeCharacterAtIndex,
@@ -128885,7 +130613,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_shouldGenerateGlyphs_properties_characterIndexes_font_forGlyphRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_shouldGenerateGlyphs_properties_characterIndexes_font_forGlyphRange_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   ffi.Pointer<ffi.UnsignedShort> shouldGenerateGlyphs,
@@ -128911,7 +130643,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_shouldSetLineFragmentRect_lineFragmentUsedRect_baselineOffset_inTextContainer_forGlyphRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_shouldSetLineFragmentRect_lineFragmentUsedRect_baselineOffset_inTextContainer_forGlyphRange_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   ffi.Pointer<objc.CGRect> shouldSetLineFragmentRect,
@@ -128937,7 +130673,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_shouldUseAction_forControlCharacterAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_shouldUseAction_forControlCharacterAtIndex_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   int shouldUseAction,
@@ -128957,7 +130697,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_shouldUseTemporaryAttributes_forDrawingToScreen_atCharacterIndex_effectiveRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_shouldUseTemporaryAttributes_forDrawingToScreen_atCharacterIndex_effectiveRange_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   objc.NSDictionary shouldUseTemporaryAttributes,
@@ -128982,7 +130726,11 @@ interface class NSLayoutManagerDelegate$Builder {
           NSLayoutManagerDelegate$Builder
                       .layoutManager_textContainer_didChangeGeometryFromSize_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSLayoutManagerDelegate$Builder
+                        .layoutManager_textContainer_didChangeGeometryFromSize_,
+                  )
               ? (
                   NSLayoutManager layoutManager,
                   NSTextContainer textContainer,
@@ -129002,7 +130750,11 @@ interface class NSLayoutManagerDelegate$Builder {
       NSLayoutManagerDelegate$Builder
                   .layoutManagerDidInvalidateLayout_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSLayoutManagerDelegate$Builder
+                    .layoutManagerDidInvalidateLayout_,
+              )
           ? (NSLayoutManager sender) {
               optionalImplementation.layoutManagerDidInvalidateLayout(sender);
             }
@@ -134291,6 +136043,11 @@ extension NSMatrixDelegate$Methods on NSMatrixDelegate {
 abstract interface class NSMatrixDelegateSpec {}
 
 abstract interface class NSMatrixDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool controlDidFailToFormatStringErrorDescription(
     NSControl control, {
     required objc.NSString didFailToFormatString,
@@ -134332,6 +136089,10 @@ abstract interface class NSMatrixDelegateOptional {
 
 mixin NSMatrixDelegateDefaults implements NSMatrixDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -134345,6 +136106,9 @@ interface class NSMatrixDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSMatrixDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSMatrixDelegateOptional.$implementedOptionalMethods].
   static NSMatrixDelegate implementFrom(
     NSMatrixDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -134372,7 +136136,11 @@ interface class NSMatrixDelegate$Builder {
           NSMatrixDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSMatrixDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -134392,7 +136160,11 @@ interface class NSMatrixDelegate$Builder {
           NSMatrixDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSMatrixDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -134411,7 +136183,10 @@ interface class NSMatrixDelegate$Builder {
     NSMatrixDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSMatrixDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMatrixDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -134422,7 +136197,10 @@ interface class NSMatrixDelegate$Builder {
     NSMatrixDelegate$Builder.control_textShouldBeginEditing_.implement(
       builder,
       NSMatrixDelegate$Builder.control_textShouldBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMatrixDelegate$Builder.control_textShouldBeginEditing_,
+              )
           ? (NSControl control, NSText textShouldBeginEditing) =>
                 optionalImplementation.controlTextShouldBeginEditing(
                   control,
@@ -134433,7 +136211,10 @@ interface class NSMatrixDelegate$Builder {
     NSMatrixDelegate$Builder.control_textShouldEndEditing_.implement(
       builder,
       NSMatrixDelegate$Builder.control_textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMatrixDelegate$Builder.control_textShouldEndEditing_,
+              )
           ? (NSControl control, NSText textShouldEndEditing) =>
                 optionalImplementation.controlTextShouldEndEditing(
                   control,
@@ -134448,7 +136229,11 @@ interface class NSMatrixDelegate$Builder {
           NSMatrixDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSMatrixDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -134469,7 +136254,10 @@ interface class NSMatrixDelegate$Builder {
       NSMatrixDelegate$Builder
                   .control_textView_doCommandBySelector_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMatrixDelegate$Builder.control_textView_doCommandBySelector_,
+              )
           ? (
               NSControl control,
               NSTextView textView,
@@ -134484,7 +136272,10 @@ interface class NSMatrixDelegate$Builder {
     NSMatrixDelegate$Builder.controlTextDidBeginEditing_.implement(
       builder,
       NSMatrixDelegate$Builder.controlTextDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMatrixDelegate$Builder.controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -134493,7 +136284,10 @@ interface class NSMatrixDelegate$Builder {
     NSMatrixDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSMatrixDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMatrixDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -134502,7 +136296,10 @@ interface class NSMatrixDelegate$Builder {
     NSMatrixDelegate$Builder.controlTextDidEndEditing_.implement(
       builder,
       NSMatrixDelegate$Builder.controlTextDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMatrixDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -136153,6 +137950,11 @@ extension NSMenuDelegate$Methods on NSMenuDelegate {
 abstract interface class NSMenuDelegateSpec {}
 
 abstract interface class NSMenuDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.CGRect confinementRectForMenu(NSMenu menu, {NSScreen? onScreen});
   bool menuUpdateItemAtIndexShouldCancel(
     NSMenu menu, {
@@ -136175,6 +137977,10 @@ abstract interface class NSMenuDelegateOptional {
 
 mixin NSMenuDelegateDefaults implements NSMenuDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -136188,6 +137994,9 @@ interface class NSMenuDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSMenuDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSMenuDelegateOptional.$implementedOptionalMethods].
   static NSMenuDelegate implementFrom(
     NSMenuDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -136212,7 +138021,10 @@ interface class NSMenuDelegate$Builder {
     NSMenuDelegate$Builder.confinementRectForMenu_onScreen_.implement(
       builder,
       NSMenuDelegate$Builder.confinementRectForMenu_onScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMenuDelegate$Builder.confinementRectForMenu_onScreen_,
+              )
           ? (NSMenu menu, NSScreen? onScreen) => optionalImplementation
                 .confinementRectForMenu(menu, onScreen: onScreen)
           : null,
@@ -136222,7 +138034,10 @@ interface class NSMenuDelegate$Builder {
       NSMenuDelegate$Builder
                   .menu_updateItem_atIndex_shouldCancel_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMenuDelegate$Builder.menu_updateItem_atIndex_shouldCancel_,
+              )
           ? (
               NSMenu menu,
               NSMenuItem updateItem,
@@ -136239,7 +138054,10 @@ interface class NSMenuDelegate$Builder {
     NSMenuDelegate$Builder.menu_willHighlightItem_.implement(
       builder,
       NSMenuDelegate$Builder.menu_willHighlightItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMenuDelegate$Builder.menu_willHighlightItem_,
+              )
           ? (NSMenu menu, NSMenuItem? willHighlightItem) {
               optionalImplementation.menuWillHighlightItem(
                 menu,
@@ -136251,7 +138069,10 @@ interface class NSMenuDelegate$Builder {
     NSMenuDelegate$Builder.menuDidClose_.implement(
       builder,
       NSMenuDelegate$Builder.menuDidClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMenuDelegate$Builder.menuDidClose_,
+              )
           ? (NSMenu menu) {
               optionalImplementation.menuDidClose(menu);
             }
@@ -136263,7 +138084,11 @@ interface class NSMenuDelegate$Builder {
           NSMenuDelegate$Builder
                       .menuHasKeyEquivalent_forEvent_target_action_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSMenuDelegate$Builder
+                        .menuHasKeyEquivalent_forEvent_target_action_,
+                  )
               ? (
                   NSMenu menu,
                   NSEvent forEvent,
@@ -136280,7 +138105,10 @@ interface class NSMenuDelegate$Builder {
     NSMenuDelegate$Builder.menuNeedsUpdate_.implement(
       builder,
       NSMenuDelegate$Builder.menuNeedsUpdate_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMenuDelegate$Builder.menuNeedsUpdate_,
+              )
           ? (NSMenu menu) {
               optionalImplementation.menuNeedsUpdate(menu);
             }
@@ -136289,7 +138117,10 @@ interface class NSMenuDelegate$Builder {
     NSMenuDelegate$Builder.menuWillOpen_.implement(
       builder,
       NSMenuDelegate$Builder.menuWillOpen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMenuDelegate$Builder.menuWillOpen_,
+              )
           ? (NSMenu menu) {
               optionalImplementation.menuWillOpen(menu);
             }
@@ -136298,7 +138129,10 @@ interface class NSMenuDelegate$Builder {
     NSMenuDelegate$Builder.numberOfItemsInMenu_.implement(
       builder,
       NSMenuDelegate$Builder.numberOfItemsInMenu_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMenuDelegate$Builder.numberOfItemsInMenu_,
+              )
           ? (NSMenu menu) => optionalImplementation.numberOfItemsInMenu(menu)
           : null,
     );
@@ -138123,9 +139957,6 @@ interface class NSMenuItemValidation$Builder {
 
   /// Builds an object that implements the NSMenuItemValidation protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSMenuItemValidationOptional].
   static NSMenuItemValidation implementFrom(
     NSMenuItemValidationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -142445,6 +144276,11 @@ extension NSOpenSavePanelDelegate$Methods on NSOpenSavePanelDelegate {
 abstract interface class NSOpenSavePanelDelegateSpec {}
 
 abstract interface class NSOpenSavePanelDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void panelDidChangeToDirectoryURL(
     objc.ObjCObject sender, {
     objc.NSURL? didChangeToDirectoryURL,
@@ -142474,6 +144310,10 @@ abstract interface class NSOpenSavePanelDelegateOptional {
 mixin NSOpenSavePanelDelegateDefaults
     implements NSOpenSavePanelDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -142487,6 +144327,9 @@ interface class NSOpenSavePanelDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSOpenSavePanelDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSOpenSavePanelDelegateOptional.$implementedOptionalMethods].
   static NSOpenSavePanelDelegate implementFrom(
     NSOpenSavePanelDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -142515,7 +144358,10 @@ interface class NSOpenSavePanelDelegate$Builder {
       NSOpenSavePanelDelegate$Builder
                   .panel_didChangeToDirectoryURL_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOpenSavePanelDelegate$Builder.panel_didChangeToDirectoryURL_,
+              )
           ? (objc.ObjCObject sender, objc.NSURL? didChangeToDirectoryURL) {
               optionalImplementation.panelDidChangeToDirectoryURL(
                 sender,
@@ -142527,7 +144373,10 @@ interface class NSOpenSavePanelDelegate$Builder {
     NSOpenSavePanelDelegate$Builder.panel_didSelectType_.implement(
       builder,
       NSOpenSavePanelDelegate$Builder.panel_didSelectType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOpenSavePanelDelegate$Builder.panel_didSelectType_,
+              )
           ? (objc.ObjCObject sender, UTType? didSelectType) {
               optionalImplementation.panel(
                 sender,
@@ -142539,7 +144388,10 @@ interface class NSOpenSavePanelDelegate$Builder {
     NSOpenSavePanelDelegate$Builder.panel_displayNameForType_.implement(
       builder,
       NSOpenSavePanelDelegate$Builder.panel_displayNameForType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOpenSavePanelDelegate$Builder.panel_displayNameForType_,
+              )
           ? (objc.ObjCObject sender, UTType displayNameForType) =>
                 optionalImplementation.panelDisplayNameForType(
                   sender,
@@ -142550,7 +144402,10 @@ interface class NSOpenSavePanelDelegate$Builder {
     NSOpenSavePanelDelegate$Builder.panel_shouldEnableURL_.implement(
       builder,
       NSOpenSavePanelDelegate$Builder.panel_shouldEnableURL_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOpenSavePanelDelegate$Builder.panel_shouldEnableURL_,
+              )
           ? (objc.ObjCObject sender, objc.NSURL shouldEnableURL) =>
                 optionalImplementation.panelShouldEnableURL(
                   sender,
@@ -142564,7 +144419,11 @@ interface class NSOpenSavePanelDelegate$Builder {
           NSOpenSavePanelDelegate$Builder
                       .panel_userEnteredFilename_confirmed_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOpenSavePanelDelegate$Builder
+                        .panel_userEnteredFilename_confirmed_,
+                  )
               ? (
                   objc.ObjCObject sender,
                   objc.NSString userEnteredFilename,
@@ -142579,7 +144438,10 @@ interface class NSOpenSavePanelDelegate$Builder {
     NSOpenSavePanelDelegate$Builder.panel_validateURL_error_.implement(
       builder,
       NSOpenSavePanelDelegate$Builder.panel_validateURL_error_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOpenSavePanelDelegate$Builder.panel_validateURL_error_,
+              )
           ? (
               objc.ObjCObject sender,
               objc.NSURL validateURL,
@@ -142593,7 +144455,10 @@ interface class NSOpenSavePanelDelegate$Builder {
     NSOpenSavePanelDelegate$Builder.panel_willExpand_.implement(
       builder,
       NSOpenSavePanelDelegate$Builder.panel_willExpand_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOpenSavePanelDelegate$Builder.panel_willExpand_,
+              )
           ? (objc.ObjCObject sender, bool willExpand) {
               optionalImplementation.panelWillExpand(
                 sender,
@@ -142605,7 +144470,10 @@ interface class NSOpenSavePanelDelegate$Builder {
     NSOpenSavePanelDelegate$Builder.panelSelectionDidChange_.implement(
       builder,
       NSOpenSavePanelDelegate$Builder.panelSelectionDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOpenSavePanelDelegate$Builder.panelSelectionDidChange_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.panelSelectionDidChange(sender);
             }
@@ -144513,6 +146381,11 @@ extension NSOutlineViewDataSource$Methods on NSOutlineViewDataSource {
 abstract interface class NSOutlineViewDataSourceSpec {}
 
 abstract interface class NSOutlineViewDataSourceOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool outlineViewAcceptDropItemChildIndex(
     NSOutlineView outlineView, {
     required NSDraggingInfo acceptDrop,
@@ -144597,6 +146470,10 @@ abstract interface class NSOutlineViewDataSourceOptional {
 mixin NSOutlineViewDataSourceDefaults
     implements NSOutlineViewDataSourceOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -144610,6 +146487,9 @@ interface class NSOutlineViewDataSource$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSOutlineViewDataSourceOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSOutlineViewDataSourceOptional.$implementedOptionalMethods].
   static NSOutlineViewDataSource implementFrom(
     NSOutlineViewDataSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -144639,7 +146519,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_acceptDrop_item_childIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_acceptDrop_item_childIndex_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSDraggingInfo acceptDrop,
@@ -144656,7 +146540,10 @@ interface class NSOutlineViewDataSource$Builder {
     NSOutlineViewDataSource$Builder.outlineView_child_ofItem_.implement(
       builder,
       NSOutlineViewDataSource$Builder.outlineView_child_ofItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDataSource$Builder.outlineView_child_ofItem_,
+              )
           ? (NSOutlineView outlineView, int child, objc.ObjCObject? ofItem) =>
                 optionalImplementation.outlineViewChildOfItem(
                   outlineView,
@@ -144672,7 +146559,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_draggingSession_endedAtPoint_operation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_draggingSession_endedAtPoint_operation_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSDraggingSession draggingSession,
@@ -144696,7 +146587,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_draggingSession_willBeginAtPoint_forItems_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_draggingSession_willBeginAtPoint_forItems_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSDraggingSession draggingSession,
@@ -144718,7 +146613,10 @@ interface class NSOutlineViewDataSource$Builder {
       NSOutlineViewDataSource$Builder
                   .outlineView_isItemExpandable_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDataSource$Builder.outlineView_isItemExpandable_,
+              )
           ? (NSOutlineView outlineView, objc.ObjCObject isItemExpandable) =>
                 optionalImplementation.outlineViewIsItemExpandable(
                   outlineView,
@@ -144732,7 +146630,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_itemForPersistentObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_itemForPersistentObject_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject itemForPersistentObject,
@@ -144749,7 +146651,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_namesOfPromisedFilesDroppedAtDestination_forDraggedItems_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_namesOfPromisedFilesDroppedAtDestination_forDraggedItems_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.NSURL namesOfPromisedFilesDroppedAtDestination,
@@ -144769,7 +146675,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_numberOfChildrenOfItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_numberOfChildrenOfItem_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject? numberOfChildrenOfItem,
@@ -144786,7 +146696,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_objectValueForTableColumn_byItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_objectValueForTableColumn_byItem_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn? objectValueForTableColumn,
@@ -144805,7 +146719,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_pasteboardWriterForItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_pasteboardWriterForItem_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject pasteboardWriterForItem,
@@ -144821,7 +146739,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_persistentObjectForItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_persistentObjectForItem_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject? persistentObjectForItem,
@@ -144838,7 +146760,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_setObjectValue_forTableColumn_byItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_setObjectValue_forTableColumn_byItem_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject? setObjectValue,
@@ -144861,7 +146787,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_sortDescriptorsDidChange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_sortDescriptorsDidChange_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.NSArray sortDescriptorsDidChange,
@@ -144879,7 +146809,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_updateDraggingItemsForDrag_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_updateDraggingItemsForDrag_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSDraggingInfo updateDraggingItemsForDrag,
@@ -144898,7 +146832,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_validateDrop_proposedItem_proposedChildIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_validateDrop_proposedItem_proposedChildIndex_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSDraggingInfo validateDrop,
@@ -144919,7 +146857,11 @@ interface class NSOutlineViewDataSource$Builder {
           NSOutlineViewDataSource$Builder
                       .outlineView_writeItems_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDataSource$Builder
+                        .outlineView_writeItems_toPasteboard_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.NSArray writeItems,
@@ -146832,6 +148774,11 @@ extension NSOutlineViewDelegate$Methods on NSOutlineViewDelegate {
 abstract interface class NSOutlineViewDelegateSpec {}
 
 abstract interface class NSOutlineViewDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool controlDidFailToFormatStringErrorDescription(
     NSControl control, {
     required objc.NSString didFailToFormatString,
@@ -147023,6 +148970,10 @@ abstract interface class NSOutlineViewDelegateOptional {
 
 mixin NSOutlineViewDelegateDefaults implements NSOutlineViewDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -147036,6 +148987,9 @@ interface class NSOutlineViewDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSOutlineViewDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSOutlineViewDelegateOptional.$implementedOptionalMethods].
   static NSOutlineViewDelegate implementFrom(
     NSOutlineViewDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -147066,7 +149020,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -147086,7 +149044,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -147105,7 +149067,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSOutlineViewDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -147118,7 +149083,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .control_textShouldBeginEditing_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.control_textShouldBeginEditing_,
+              )
           ? (NSControl control, NSText textShouldBeginEditing) =>
                 optionalImplementation.controlTextShouldBeginEditing(
                   control,
@@ -147129,7 +149097,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.control_textShouldEndEditing_.implement(
       builder,
       NSOutlineViewDelegate$Builder.control_textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.control_textShouldEndEditing_,
+              )
           ? (NSControl control, NSText textShouldEndEditing) =>
                 optionalImplementation.controlTextShouldEndEditing(
                   control,
@@ -147144,7 +149115,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -147166,7 +149141,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .control_textView_doCommandBySelector_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .control_textView_doCommandBySelector_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -147181,7 +149160,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.controlTextDidBeginEditing_.implement(
       builder,
       NSOutlineViewDelegate$Builder.controlTextDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -147190,7 +149172,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSOutlineViewDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -147199,7 +149184,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.controlTextDidEndEditing_.implement(
       builder,
       NSOutlineViewDelegate$Builder.controlTextDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -147211,7 +149199,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_dataCellForTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_dataCellForTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn? dataCellForTableColumn,
@@ -147229,7 +149221,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineView_didAddRowView_forRow_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_didAddRowView_forRow_,
+              )
           ? (
               NSOutlineView outlineView,
               NSTableRowView didAddRowView,
@@ -147248,7 +149243,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineView_didClickTableColumn_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_didClickTableColumn_,
+              )
           ? (NSOutlineView outlineView, NSTableColumn didClickTableColumn) {
               optionalImplementation.outlineViewDidClickTableColumn(
                 outlineView,
@@ -147262,7 +149260,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineView_didDragTableColumn_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_didDragTableColumn_,
+              )
           ? (NSOutlineView outlineView, NSTableColumn didDragTableColumn) {
               optionalImplementation.outlineViewDidDragTableColumn(
                 outlineView,
@@ -147277,7 +149278,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_didRemoveRowView_forRow_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_didRemoveRowView_forRow_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableRowView didRemoveRowView,
@@ -147296,7 +149301,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineView_heightOfRowByItem_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_heightOfRowByItem_,
+              )
           ? (NSOutlineView outlineView, objc.ObjCObject heightOfRowByItem) =>
                 optionalImplementation.outlineViewHeightOfRowByItem(
                   outlineView,
@@ -147307,7 +149315,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineView_isGroupItem_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineView_isGroupItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_isGroupItem_,
+              )
           ? (NSOutlineView outlineView, objc.ObjCObject isGroupItem) =>
                 optionalImplementation.outlineViewIsGroupItem(
                   outlineView,
@@ -147321,7 +149332,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_mouseDownInHeaderOfTableColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_mouseDownInHeaderOfTableColumn_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn mouseDownInHeaderOfTableColumn,
@@ -147342,7 +149357,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_nextTypeSelectMatchFromItem_toItem_forString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_nextTypeSelectMatchFromItem_toItem_forString_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject nextTypeSelectMatchFromItem,
@@ -147360,7 +149379,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineView_rowViewForItem_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineView_rowViewForItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_rowViewForItem_,
+              )
           ? (NSOutlineView outlineView, objc.ObjCObject rowViewForItem) =>
                 optionalImplementation.outlineViewRowViewForItem(
                   outlineView,
@@ -147375,7 +149397,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_selectionIndexesForProposedSelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_selectionIndexesForProposedSelection_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.NSIndexSet selectionIndexesForProposedSelection,
@@ -147392,7 +149418,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineView_shouldCollapseItem_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_shouldCollapseItem_,
+              )
           ? (NSOutlineView outlineView, objc.ObjCObject shouldCollapseItem) =>
                 optionalImplementation.outlineViewShouldCollapseItem(
                   outlineView,
@@ -147406,7 +149435,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_shouldEditTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_shouldEditTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn? shouldEditTableColumn,
@@ -147422,7 +149455,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineView_shouldExpandItem_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineView_shouldExpandItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_shouldExpandItem_,
+              )
           ? (NSOutlineView outlineView, objc.ObjCObject shouldExpandItem) =>
                 optionalImplementation.outlineViewShouldExpandItem(
                   outlineView,
@@ -147436,7 +149472,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_shouldReorderColumn_toColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_shouldReorderColumn_toColumn_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   int shouldReorderColumn,
@@ -147452,7 +149492,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineView_shouldSelectItem_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineView_shouldSelectItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineView_shouldSelectItem_,
+              )
           ? (NSOutlineView outlineView, objc.ObjCObject shouldSelectItem) =>
                 optionalImplementation.outlineViewShouldSelectItem(
                   outlineView,
@@ -147466,7 +149509,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_shouldSelectTableColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_shouldSelectTableColumn_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn? shouldSelectTableColumn,
@@ -147483,7 +149530,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_shouldShowCellExpansionForTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_shouldShowCellExpansionForTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn? shouldShowCellExpansionForTableColumn,
@@ -147503,7 +149554,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_shouldShowOutlineCellForItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_shouldShowOutlineCellForItem_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject shouldShowOutlineCellForItem,
@@ -147522,7 +149577,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_shouldTrackCell_forTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_shouldTrackCell_forTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSCell shouldTrackCell,
@@ -147544,7 +149603,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_shouldTypeSelectForEvent_withCurrentSearchString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_shouldTypeSelectForEvent_withCurrentSearchString_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSEvent shouldTypeSelectForEvent,
@@ -147562,7 +149625,11 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineView_sizeToFitWidthOfColumn_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder
+                    .outlineView_sizeToFitWidthOfColumn_,
+              )
           ? (NSOutlineView outlineView, int sizeToFitWidthOfColumn) =>
                 optionalImplementation.outlineViewSizeToFitWidthOfColumn(
                   outlineView,
@@ -147576,7 +149643,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_tintConfigurationForItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_tintConfigurationForItem_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject tintConfigurationForItem,
@@ -147593,7 +149664,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_toolTipForCell_rect_tableColumn_item_mouseLocation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_toolTipForCell_rect_tableColumn_item_mouseLocation_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSCell toolTipForCell,
@@ -147619,7 +149694,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_typeSelectStringForTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_typeSelectStringForTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn? typeSelectStringForTableColumn,
@@ -147640,7 +149719,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_userCanChangeVisibilityOfTableColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_userCanChangeVisibilityOfTableColumn_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn userCanChangeVisibilityOfTableColumn,
@@ -147659,7 +149742,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_userDidChangeVisibilityOfTableColumns_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_userDidChangeVisibilityOfTableColumns_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.NSArray userDidChangeVisibilityOfTableColumns,
@@ -147679,7 +149766,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_viewForTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_viewForTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   NSTableColumn? viewForTableColumn,
@@ -147698,7 +149789,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_willDisplayCell_forTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_willDisplayCell_forTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject willDisplayCell,
@@ -147722,7 +149817,11 @@ interface class NSOutlineViewDelegate$Builder {
           NSOutlineViewDelegate$Builder
                       .outlineView_willDisplayOutlineCell_forTableColumn_item_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSOutlineViewDelegate$Builder
+                        .outlineView_willDisplayOutlineCell_forTableColumn_item_,
+                  )
               ? (
                   NSOutlineView outlineView,
                   objc.ObjCObject willDisplayOutlineCell,
@@ -147742,7 +149841,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineViewColumnDidMove_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineViewColumnDidMove_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewColumnDidMove_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewColumnDidMove(notification);
             }
@@ -147751,7 +149853,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineViewColumnDidResize_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineViewColumnDidResize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewColumnDidResize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewColumnDidResize(notification);
             }
@@ -147760,7 +149865,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineViewItemDidCollapse_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineViewItemDidCollapse_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewItemDidCollapse_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewItemDidCollapse(notification);
             }
@@ -147769,7 +149877,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineViewItemDidExpand_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineViewItemDidExpand_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewItemDidExpand_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewItemDidExpand(notification);
             }
@@ -147778,7 +149889,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineViewItemWillCollapse_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineViewItemWillCollapse_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewItemWillCollapse_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewItemWillCollapse(notification);
             }
@@ -147787,7 +149901,10 @@ interface class NSOutlineViewDelegate$Builder {
     NSOutlineViewDelegate$Builder.outlineViewItemWillExpand_.implement(
       builder,
       NSOutlineViewDelegate$Builder.outlineViewItemWillExpand_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewItemWillExpand_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewItemWillExpand(notification);
             }
@@ -147798,7 +149915,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineViewSelectionDidChange_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewSelectionDidChange_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewSelectionDidChange(
                 notification,
@@ -147811,7 +149931,10 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .outlineViewSelectionIsChanging_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder.outlineViewSelectionIsChanging_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.outlineViewSelectionIsChanging(
                 notification,
@@ -147824,7 +149947,11 @@ interface class NSOutlineViewDelegate$Builder {
       NSOutlineViewDelegate$Builder
                   .selectionShouldChangeInOutlineView_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSOutlineViewDelegate$Builder
+                    .selectionShouldChangeInOutlineView_,
+              )
           ? (NSOutlineView outlineView) => optionalImplementation
                 .selectionShouldChangeInOutlineView(outlineView)
           : null,
@@ -151145,6 +153272,11 @@ extension NSPageControllerDelegate$Methods on NSPageControllerDelegate {
 abstract interface class NSPageControllerDelegateSpec {}
 
 abstract interface class NSPageControllerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void pageController(
     NSPageController pageController, {
     required objc.ObjCObject didTransitionToObject,
@@ -151173,6 +153305,10 @@ abstract interface class NSPageControllerDelegateOptional {
 mixin NSPageControllerDelegateDefaults
     implements NSPageControllerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -151186,6 +153322,9 @@ interface class NSPageControllerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPageControllerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPageControllerDelegateOptional.$implementedOptionalMethods].
   static NSPageControllerDelegate implementFrom(
     NSPageControllerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -151215,7 +153354,11 @@ interface class NSPageControllerDelegate$Builder {
           NSPageControllerDelegate$Builder
                       .pageController_didTransitionToObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPageControllerDelegate$Builder
+                        .pageController_didTransitionToObject_,
+                  )
               ? (
                   NSPageController pageController,
                   objc.ObjCObject didTransitionToObject,
@@ -151232,7 +153375,10 @@ interface class NSPageControllerDelegate$Builder {
       NSPageControllerDelegate$Builder
                   .pageController_frameForObject_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPageControllerDelegate$Builder.pageController_frameForObject_,
+              )
           ? (
               NSPageController pageController,
               objc.ObjCObject? frameForObject,
@@ -151248,7 +153394,11 @@ interface class NSPageControllerDelegate$Builder {
           NSPageControllerDelegate$Builder
                       .pageController_identifierForObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPageControllerDelegate$Builder
+                        .pageController_identifierForObject_,
+                  )
               ? (
                   NSPageController pageController,
                   objc.ObjCObject identifierForObject,
@@ -151265,7 +153415,11 @@ interface class NSPageControllerDelegate$Builder {
           NSPageControllerDelegate$Builder
                       .pageController_prepareViewController_withObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPageControllerDelegate$Builder
+                        .pageController_prepareViewController_withObject_,
+                  )
               ? (
                   NSPageController pageController,
                   NSViewController prepareViewController,
@@ -151286,7 +153440,11 @@ interface class NSPageControllerDelegate$Builder {
           NSPageControllerDelegate$Builder
                       .pageController_viewControllerForIdentifier_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPageControllerDelegate$Builder
+                        .pageController_viewControllerForIdentifier_,
+                  )
               ? (
                   NSPageController pageController,
                   objc.NSString viewControllerForIdentifier,
@@ -151303,7 +153461,11 @@ interface class NSPageControllerDelegate$Builder {
           NSPageControllerDelegate$Builder
                       .pageControllerDidEndLiveTransition_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPageControllerDelegate$Builder
+                        .pageControllerDidEndLiveTransition_,
+                  )
               ? (NSPageController pageController) {
                   optionalImplementation.pageControllerDidEndLiveTransition(
                     pageController,
@@ -151317,7 +153479,11 @@ interface class NSPageControllerDelegate$Builder {
           NSPageControllerDelegate$Builder
                       .pageControllerWillStartLiveTransition_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPageControllerDelegate$Builder
+                        .pageControllerWillStartLiveTransition_,
+                  )
               ? (NSPageController pageController) {
                   optionalImplementation.pageControllerWillStartLiveTransition(
                     pageController,
@@ -153879,11 +156045,20 @@ abstract interface class NSPasteboardItemDataProviderSpec {
 }
 
 abstract interface class NSPasteboardItemDataProviderOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void pasteboardFinishedWithDataProvider(NSPasteboard pasteboard);
 }
 
 mixin NSPasteboardItemDataProviderDefaults
     implements NSPasteboardItemDataProviderOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -153898,6 +156073,9 @@ interface class NSPasteboardItemDataProvider$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPasteboardItemDataProviderOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPasteboardItemDataProviderOptional.$implementedOptionalMethods].
   static NSPasteboardItemDataProvider implementFrom(
     NSPasteboardItemDataProviderSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -153939,7 +156117,11 @@ interface class NSPasteboardItemDataProvider$Builder {
           NSPasteboardItemDataProvider$Builder
                       .pasteboardFinishedWithDataProvider_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPasteboardItemDataProvider$Builder
+                        .pasteboardFinishedWithDataProvider_,
+                  )
               ? (NSPasteboard pasteboard) {
                   optionalImplementation.pasteboardFinishedWithDataProvider(
                     pasteboard,
@@ -154106,6 +156288,11 @@ extension NSPasteboardReading$Methods on NSPasteboardReading {
 abstract interface class NSPasteboardReadingSpec {}
 
 abstract interface class NSPasteboardReadingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.ObjCObject? initWithPasteboardPropertyList(
     objc.ObjCObject propertyList, {
     required objc.NSString ofType,
@@ -154113,6 +156300,10 @@ abstract interface class NSPasteboardReadingOptional {
 }
 
 mixin NSPasteboardReadingDefaults implements NSPasteboardReadingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -154127,6 +156318,9 @@ interface class NSPasteboardReading$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPasteboardReadingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPasteboardReadingOptional.$implementedOptionalMethods].
   static NSPasteboardReading implementFrom(
     NSPasteboardReadingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -154154,7 +156348,11 @@ interface class NSPasteboardReading$Builder {
           NSPasteboardReading$Builder
                       .initWithPasteboardPropertyList_ofType_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPasteboardReading$Builder
+                        .initWithPasteboardPropertyList_ofType_,
+                  )
               ? (objc.ObjCObject propertyList, objc.NSString ofType) =>
                     optionalImplementation.initWithPasteboardPropertyList(
                       propertyList,
@@ -154546,10 +156744,19 @@ abstract interface class NSPasteboardTypeOwnerSpec {
 }
 
 abstract interface class NSPasteboardTypeOwnerOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void pasteboardChangedOwner(NSPasteboard sender);
 }
 
 mixin NSPasteboardTypeOwnerDefaults implements NSPasteboardTypeOwnerOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -154564,6 +156771,9 @@ interface class NSPasteboardTypeOwner$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPasteboardTypeOwnerOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPasteboardTypeOwnerOptional.$implementedOptionalMethods].
   static NSPasteboardTypeOwner implementFrom(
     NSPasteboardTypeOwnerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -154599,7 +156809,10 @@ interface class NSPasteboardTypeOwner$Builder {
     NSPasteboardTypeOwner$Builder.pasteboardChangedOwner_.implement(
       builder,
       NSPasteboardTypeOwner$Builder.pasteboardChangedOwner_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPasteboardTypeOwner$Builder.pasteboardChangedOwner_,
+              )
           ? (NSPasteboard sender) {
               optionalImplementation.pasteboardChangedOwner(sender);
             }
@@ -154756,6 +156969,11 @@ abstract interface class NSPasteboardWritingSpec {
 }
 
 abstract interface class NSPasteboardWritingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   int writingOptionsForType(
     objc.NSString type, {
     required NSPasteboard pasteboard,
@@ -154763,6 +156981,10 @@ abstract interface class NSPasteboardWritingOptional {
 }
 
 mixin NSPasteboardWritingDefaults implements NSPasteboardWritingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -154777,6 +156999,9 @@ interface class NSPasteboardWriting$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPasteboardWritingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPasteboardWritingOptional.$implementedOptionalMethods].
   static NSPasteboardWriting implementFrom(
     NSPasteboardWritingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -154813,7 +157038,10 @@ interface class NSPasteboardWriting$Builder {
       NSPasteboardWriting$Builder
                   .writingOptionsForType_pasteboard_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPasteboardWriting$Builder.writingOptionsForType_pasteboard_,
+              )
           ? (objc.NSString type, NSPasteboard pasteboard) =>
                 optionalImplementation.writingOptionsForType(
                   type,
@@ -155472,6 +157700,11 @@ extension NSPathCellDelegate$Methods on NSPathCellDelegate {
 abstract interface class NSPathCellDelegateSpec {}
 
 abstract interface class NSPathCellDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void pathCellWillDisplayOpenPanel(
     NSPathCell pathCell, {
     required NSOpenPanel willDisplayOpenPanel,
@@ -155483,6 +157716,10 @@ abstract interface class NSPathCellDelegateOptional {
 }
 
 mixin NSPathCellDelegateDefaults implements NSPathCellDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -155497,6 +157734,9 @@ interface class NSPathCellDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPathCellDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPathCellDelegateOptional.$implementedOptionalMethods].
   static NSPathCellDelegate implementFrom(
     NSPathCellDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -155521,7 +157761,10 @@ interface class NSPathCellDelegate$Builder {
     NSPathCellDelegate$Builder.pathCell_willDisplayOpenPanel_.implement(
       builder,
       NSPathCellDelegate$Builder.pathCell_willDisplayOpenPanel_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPathCellDelegate$Builder.pathCell_willDisplayOpenPanel_,
+              )
           ? (NSPathCell pathCell, NSOpenPanel willDisplayOpenPanel) {
               optionalImplementation.pathCellWillDisplayOpenPanel(
                 pathCell,
@@ -155533,7 +157776,10 @@ interface class NSPathCellDelegate$Builder {
     NSPathCellDelegate$Builder.pathCell_willPopUpMenu_.implement(
       builder,
       NSPathCellDelegate$Builder.pathCell_willPopUpMenu_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPathCellDelegate$Builder.pathCell_willPopUpMenu_,
+              )
           ? (NSPathCell pathCell, NSMenu willPopUpMenu) {
               optionalImplementation.pathCellWillPopUpMenu(
                 pathCell,
@@ -156407,6 +158653,11 @@ extension NSPathControlDelegate$Methods on NSPathControlDelegate {
 abstract interface class NSPathControlDelegateSpec {}
 
 abstract interface class NSPathControlDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool pathControlAcceptDrop(
     NSPathControl pathControl, {
     required NSDraggingInfo acceptDrop,
@@ -156437,6 +158688,10 @@ abstract interface class NSPathControlDelegateOptional {
 
 mixin NSPathControlDelegateDefaults implements NSPathControlDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -156450,6 +158705,9 @@ interface class NSPathControlDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPathControlDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPathControlDelegateOptional.$implementedOptionalMethods].
   static NSPathControlDelegate implementFrom(
     NSPathControlDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -156476,7 +158734,10 @@ interface class NSPathControlDelegate$Builder {
     NSPathControlDelegate$Builder.pathControl_acceptDrop_.implement(
       builder,
       NSPathControlDelegate$Builder.pathControl_acceptDrop_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPathControlDelegate$Builder.pathControl_acceptDrop_,
+              )
           ? (NSPathControl pathControl, NSDraggingInfo acceptDrop) =>
                 optionalImplementation.pathControlAcceptDrop(
                   pathControl,
@@ -156490,7 +158751,11 @@ interface class NSPathControlDelegate$Builder {
           NSPathControlDelegate$Builder
                       .pathControl_shouldDragItem_withPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPathControlDelegate$Builder
+                        .pathControl_shouldDragItem_withPasteboard_,
+                  )
               ? (
                   NSPathControl pathControl,
                   NSPathControlItem shouldDragItem,
@@ -156510,7 +158775,11 @@ interface class NSPathControlDelegate$Builder {
           NSPathControlDelegate$Builder
                       .pathControl_shouldDragPathComponentCell_withPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPathControlDelegate$Builder
+                        .pathControl_shouldDragPathComponentCell_withPasteboard_,
+                  )
               ? (
                   NSPathControl pathControl,
                   NSPathComponentCell shouldDragPathComponentCell,
@@ -156526,7 +158795,10 @@ interface class NSPathControlDelegate$Builder {
     NSPathControlDelegate$Builder.pathControl_validateDrop_.implement(
       builder,
       NSPathControlDelegate$Builder.pathControl_validateDrop_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPathControlDelegate$Builder.pathControl_validateDrop_,
+              )
           ? (NSPathControl pathControl, NSDraggingInfo validateDrop) =>
                 optionalImplementation.pathControlValidateDrop(
                   pathControl,
@@ -156539,7 +158811,10 @@ interface class NSPathControlDelegate$Builder {
       NSPathControlDelegate$Builder
                   .pathControl_willDisplayOpenPanel_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPathControlDelegate$Builder.pathControl_willDisplayOpenPanel_,
+              )
           ? (NSPathControl pathControl, NSOpenPanel willDisplayOpenPanel) {
               optionalImplementation.pathControlWillDisplayOpenPanel(
                 pathControl,
@@ -156551,7 +158826,10 @@ interface class NSPathControlDelegate$Builder {
     NSPathControlDelegate$Builder.pathControl_willPopUpMenu_.implement(
       builder,
       NSPathControlDelegate$Builder.pathControl_willPopUpMenu_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPathControlDelegate$Builder.pathControl_willPopUpMenu_,
+              )
           ? (NSPathControl pathControl, NSMenu willPopUpMenu) {
               optionalImplementation.pathControlWillPopUpMenu(
                 pathControl,
@@ -160179,6 +162457,11 @@ extension NSPopoverDelegate$Methods on NSPopoverDelegate {
 abstract interface class NSPopoverDelegateSpec {}
 
 abstract interface class NSPopoverDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSWindow? detachableWindowForPopover(NSPopover popover);
   void popoverDidClose(objc.NSNotification notification);
   void popoverDidDetach(NSPopover popover);
@@ -160190,6 +162473,10 @@ abstract interface class NSPopoverDelegateOptional {
 }
 
 mixin NSPopoverDelegateDefaults implements NSPopoverDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -160204,6 +162491,9 @@ interface class NSPopoverDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPopoverDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPopoverDelegateOptional.$implementedOptionalMethods].
   static NSPopoverDelegate implementFrom(
     NSPopoverDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -160228,7 +162518,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.detachableWindowForPopover_.implement(
       builder,
       NSPopoverDelegate$Builder.detachableWindowForPopover_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.detachableWindowForPopover_,
+              )
           ? (NSPopover popover) =>
                 optionalImplementation.detachableWindowForPopover(popover)
           : null,
@@ -160236,7 +162529,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.popoverDidClose_.implement(
       builder,
       NSPopoverDelegate$Builder.popoverDidClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.popoverDidClose_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.popoverDidClose(notification);
             }
@@ -160245,7 +162541,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.popoverDidDetach_.implement(
       builder,
       NSPopoverDelegate$Builder.popoverDidDetach_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.popoverDidDetach_,
+              )
           ? (NSPopover popover) {
               optionalImplementation.popoverDidDetach(popover);
             }
@@ -160254,7 +162553,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.popoverDidShow_.implement(
       builder,
       NSPopoverDelegate$Builder.popoverDidShow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.popoverDidShow_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.popoverDidShow(notification);
             }
@@ -160263,7 +162565,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.popoverShouldClose_.implement(
       builder,
       NSPopoverDelegate$Builder.popoverShouldClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.popoverShouldClose_,
+              )
           ? (NSPopover popover) =>
                 optionalImplementation.popoverShouldClose(popover)
           : null,
@@ -160271,7 +162576,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.popoverShouldDetach_.implement(
       builder,
       NSPopoverDelegate$Builder.popoverShouldDetach_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.popoverShouldDetach_,
+              )
           ? (NSPopover popover) =>
                 optionalImplementation.popoverShouldDetach(popover)
           : null,
@@ -160279,7 +162587,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.popoverWillClose_.implement(
       builder,
       NSPopoverDelegate$Builder.popoverWillClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.popoverWillClose_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.popoverWillClose(notification);
             }
@@ -160288,7 +162599,10 @@ interface class NSPopoverDelegate$Builder {
     NSPopoverDelegate$Builder.popoverWillShow_.implement(
       builder,
       NSPopoverDelegate$Builder.popoverWillShow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPopoverDelegate$Builder.popoverWillShow_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.popoverWillShow(notification);
             }
@@ -161904,6 +164218,11 @@ abstract interface class NSPreviewRepresentableActivityItemSpec {
 }
 
 abstract interface class NSPreviewRepresentableActivityItemOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   /// iconProvider
   objc.NSItemProvider? get iconProvider;
 
@@ -161916,6 +164235,10 @@ abstract interface class NSPreviewRepresentableActivityItemOptional {
 
 mixin NSPreviewRepresentableActivityItemDefaults
     implements NSPreviewRepresentableActivityItemOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -161931,6 +164254,9 @@ interface class NSPreviewRepresentableActivityItem$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPreviewRepresentableActivityItemOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPreviewRepresentableActivityItemOptional.$implementedOptionalMethods].
   static NSPreviewRepresentableActivityItem implementFrom(
     NSPreviewRepresentableActivityItemSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -161957,14 +164283,20 @@ interface class NSPreviewRepresentableActivityItem$Builder {
     NSPreviewRepresentableActivityItem$Builder.iconProvider.implement(
       builder,
       NSPreviewRepresentableActivityItem$Builder.iconProvider.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPreviewRepresentableActivityItem$Builder.iconProvider,
+              )
           ? () => optionalImplementation.iconProvider
           : null,
     );
     NSPreviewRepresentableActivityItem$Builder.imageProvider.implement(
       builder,
       NSPreviewRepresentableActivityItem$Builder.imageProvider.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPreviewRepresentableActivityItem$Builder.imageProvider,
+              )
           ? () => optionalImplementation.imageProvider
           : null,
     );
@@ -161975,7 +164307,10 @@ interface class NSPreviewRepresentableActivityItem$Builder {
     NSPreviewRepresentableActivityItem$Builder.title.implement(
       builder,
       NSPreviewRepresentableActivityItem$Builder.title.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPreviewRepresentableActivityItem$Builder.title,
+              )
           ? () => optionalImplementation.title
           : null,
     );
@@ -164007,11 +166342,20 @@ abstract interface class NSPrintPanelAccessorizingSpec {
 }
 
 abstract interface class NSPrintPanelAccessorizingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSSet keyPathsForValuesAffectingPreview();
 }
 
 mixin NSPrintPanelAccessorizingDefaults
     implements NSPrintPanelAccessorizingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -164026,6 +166370,9 @@ interface class NSPrintPanelAccessorizing$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPrintPanelAccessorizingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPrintPanelAccessorizingOptional.$implementedOptionalMethods].
   static NSPrintPanelAccessorizing implementFrom(
     NSPrintPanelAccessorizingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -164055,7 +166402,11 @@ interface class NSPrintPanelAccessorizing$Builder {
           NSPrintPanelAccessorizing$Builder
                       .keyPathsForValuesAffectingPreview
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPrintPanelAccessorizing$Builder
+                        .keyPathsForValuesAffectingPreview,
+                  )
               ? () => optionalImplementation.keyPathsForValuesAffectingPreview()
               : null,
         );
@@ -167861,6 +170212,11 @@ abstract interface class NSRuleEditorDelegateSpec {
 }
 
 abstract interface class NSRuleEditorDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSDictionary? ruleEditorPredicatePartsForCriterionWithDisplayValueInRow(
     NSRuleEditor editor, {
     required objc.ObjCObject predicatePartsForCriterion,
@@ -167871,6 +170227,10 @@ abstract interface class NSRuleEditorDelegateOptional {
 }
 
 mixin NSRuleEditorDelegateDefaults implements NSRuleEditorDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -167885,6 +170245,9 @@ interface class NSRuleEditorDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSRuleEditorDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSRuleEditorDelegateOptional.$implementedOptionalMethods].
   static NSRuleEditorDelegate implementFrom(
     NSRuleEditorDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -167955,7 +170318,11 @@ interface class NSRuleEditorDelegate$Builder {
           NSRuleEditorDelegate$Builder
                       .ruleEditor_predicatePartsForCriterion_withDisplayValue_inRow_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSRuleEditorDelegate$Builder
+                        .ruleEditor_predicatePartsForCriterion_withDisplayValue_inRow_,
+                  )
               ? (
                   NSRuleEditor editor,
                   objc.ObjCObject predicatePartsForCriterion,
@@ -167973,7 +170340,10 @@ interface class NSRuleEditorDelegate$Builder {
     NSRuleEditorDelegate$Builder.ruleEditorRowsDidChange_.implement(
       builder,
       NSRuleEditorDelegate$Builder.ruleEditorRowsDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSRuleEditorDelegate$Builder.ruleEditorRowsDidChange_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.ruleEditorRowsDidChange(notification);
             }
@@ -174296,9 +176666,6 @@ interface class NSScrubberDataSource$Builder {
 
   /// Builds an object that implements the NSScrubberDataSource protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSScrubberDataSourceOptional].
   static NSScrubberDataSource implementFrom(
     NSScrubberDataSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -174564,6 +176931,11 @@ extension NSScrubberDelegate$Methods on NSScrubberDelegate {
 abstract interface class NSScrubberDelegateSpec {}
 
 abstract interface class NSScrubberDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void didBeginInteractingWithScrubber(NSScrubber scrubber);
   void didCancelInteractingWithScrubber(NSScrubber scrubber);
   void didFinishInteractingWithScrubber(NSScrubber scrubber);
@@ -174583,6 +176955,10 @@ abstract interface class NSScrubberDelegateOptional {
 
 mixin NSScrubberDelegateDefaults implements NSScrubberDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -174596,6 +176972,9 @@ interface class NSScrubberDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSScrubberDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSScrubberDelegateOptional.$implementedOptionalMethods].
   static NSScrubberDelegate implementFrom(
     NSScrubberDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -174620,7 +176999,10 @@ interface class NSScrubberDelegate$Builder {
     NSScrubberDelegate$Builder.didBeginInteractingWithScrubber_.implement(
       builder,
       NSScrubberDelegate$Builder.didBeginInteractingWithScrubber_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSScrubberDelegate$Builder.didBeginInteractingWithScrubber_,
+              )
           ? (NSScrubber scrubber) {
               optionalImplementation.didBeginInteractingWithScrubber(scrubber);
             }
@@ -174631,7 +177013,10 @@ interface class NSScrubberDelegate$Builder {
       NSScrubberDelegate$Builder
                   .didCancelInteractingWithScrubber_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSScrubberDelegate$Builder.didCancelInteractingWithScrubber_,
+              )
           ? (NSScrubber scrubber) {
               optionalImplementation.didCancelInteractingWithScrubber(scrubber);
             }
@@ -174642,7 +177027,10 @@ interface class NSScrubberDelegate$Builder {
       NSScrubberDelegate$Builder
                   .didFinishInteractingWithScrubber_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSScrubberDelegate$Builder.didFinishInteractingWithScrubber_,
+              )
           ? (NSScrubber scrubber) {
               optionalImplementation.didFinishInteractingWithScrubber(scrubber);
             }
@@ -174651,7 +177039,10 @@ interface class NSScrubberDelegate$Builder {
     NSScrubberDelegate$Builder.scrubber_didChangeVisibleRange_.implement(
       builder,
       NSScrubberDelegate$Builder.scrubber_didChangeVisibleRange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSScrubberDelegate$Builder.scrubber_didChangeVisibleRange_,
+              )
           ? (NSScrubber scrubber, objc.NSRange didChangeVisibleRange) {
               optionalImplementation.scrubber(
                 scrubber,
@@ -174665,7 +177056,10 @@ interface class NSScrubberDelegate$Builder {
       NSScrubberDelegate$Builder
                   .scrubber_didHighlightItemAtIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSScrubberDelegate$Builder.scrubber_didHighlightItemAtIndex_,
+              )
           ? (NSScrubber scrubber, int didHighlightItemAtIndex) {
               optionalImplementation.scrubberDidHighlightItemAtIndex(
                 scrubber,
@@ -174677,7 +177071,10 @@ interface class NSScrubberDelegate$Builder {
     NSScrubberDelegate$Builder.scrubber_didSelectItemAtIndex_.implement(
       builder,
       NSScrubberDelegate$Builder.scrubber_didSelectItemAtIndex_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSScrubberDelegate$Builder.scrubber_didSelectItemAtIndex_,
+              )
           ? (NSScrubber scrubber, int didSelectItemAtIndex) {
               optionalImplementation.scrubberDidSelectItemAtIndex(
                 scrubber,
@@ -175223,6 +177620,11 @@ extension NSScrubberFlowLayoutDelegate$Methods on NSScrubberFlowLayoutDelegate {
 abstract interface class NSScrubberFlowLayoutDelegateSpec {}
 
 abstract interface class NSScrubberFlowLayoutDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void didBeginInteractingWithScrubber(NSScrubber scrubber);
   void didCancelInteractingWithScrubber(NSScrubber scrubber);
   void didFinishInteractingWithScrubber(NSScrubber scrubber);
@@ -175248,6 +177650,10 @@ abstract interface class NSScrubberFlowLayoutDelegateOptional {
 mixin NSScrubberFlowLayoutDelegateDefaults
     implements NSScrubberFlowLayoutDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -175261,6 +177667,9 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSScrubberFlowLayoutDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSScrubberFlowLayoutDelegateOptional.$implementedOptionalMethods].
   static NSScrubberFlowLayoutDelegate implementFrom(
     NSScrubberFlowLayoutDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -175290,7 +177699,11 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
           NSScrubberFlowLayoutDelegate$Builder
                       .didBeginInteractingWithScrubber_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSScrubberFlowLayoutDelegate$Builder
+                        .didBeginInteractingWithScrubber_,
+                  )
               ? (NSScrubber scrubber) {
                   optionalImplementation.didBeginInteractingWithScrubber(
                     scrubber,
@@ -175304,7 +177717,11 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
           NSScrubberFlowLayoutDelegate$Builder
                       .didCancelInteractingWithScrubber_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSScrubberFlowLayoutDelegate$Builder
+                        .didCancelInteractingWithScrubber_,
+                  )
               ? (NSScrubber scrubber) {
                   optionalImplementation.didCancelInteractingWithScrubber(
                     scrubber,
@@ -175318,7 +177735,11 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
           NSScrubberFlowLayoutDelegate$Builder
                       .didFinishInteractingWithScrubber_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSScrubberFlowLayoutDelegate$Builder
+                        .didFinishInteractingWithScrubber_,
+                  )
               ? (NSScrubber scrubber) {
                   optionalImplementation.didFinishInteractingWithScrubber(
                     scrubber,
@@ -175332,7 +177753,11 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
           NSScrubberFlowLayoutDelegate$Builder
                       .scrubber_didChangeVisibleRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSScrubberFlowLayoutDelegate$Builder
+                        .scrubber_didChangeVisibleRange_,
+                  )
               ? (NSScrubber scrubber, objc.NSRange didChangeVisibleRange) {
                   optionalImplementation.scrubberDidChangeVisibleRange(
                     scrubber,
@@ -175347,7 +177772,11 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
           NSScrubberFlowLayoutDelegate$Builder
                       .scrubber_didHighlightItemAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSScrubberFlowLayoutDelegate$Builder
+                        .scrubber_didHighlightItemAtIndex_,
+                  )
               ? (NSScrubber scrubber, int didHighlightItemAtIndex) {
                   optionalImplementation.scrubberDidHighlightItemAtIndex(
                     scrubber,
@@ -175362,7 +177791,11 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
           NSScrubberFlowLayoutDelegate$Builder
                       .scrubber_didSelectItemAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSScrubberFlowLayoutDelegate$Builder
+                        .scrubber_didSelectItemAtIndex_,
+                  )
               ? (NSScrubber scrubber, int didSelectItemAtIndex) {
                   optionalImplementation.scrubberDidSelectItemAtIndex(
                     scrubber,
@@ -175377,7 +177810,11 @@ interface class NSScrubberFlowLayoutDelegate$Builder {
           NSScrubberFlowLayoutDelegate$Builder
                       .scrubber_layout_sizeForItemAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSScrubberFlowLayoutDelegate$Builder
+                        .scrubber_layout_sizeForItemAtIndex_,
+                  )
               ? (
                   NSScrubber scrubber,
                   NSScrubberFlowLayout layout,
@@ -178422,6 +180859,11 @@ extension NSSearchFieldDelegate$Methods on NSSearchFieldDelegate {
 abstract interface class NSSearchFieldDelegateSpec {}
 
 abstract interface class NSSearchFieldDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool controlDidFailToFormatStringErrorDescription(
     NSControl control, {
     required objc.NSString didFailToFormatString,
@@ -178481,6 +180923,10 @@ abstract interface class NSSearchFieldDelegateOptional {
 
 mixin NSSearchFieldDelegateDefaults implements NSSearchFieldDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -178494,6 +180940,9 @@ interface class NSSearchFieldDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSearchFieldDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSearchFieldDelegateOptional.$implementedOptionalMethods].
   static NSSearchFieldDelegate implementFrom(
     NSSearchFieldDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -178524,7 +180973,11 @@ interface class NSSearchFieldDelegate$Builder {
           NSSearchFieldDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSearchFieldDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -178544,7 +180997,11 @@ interface class NSSearchFieldDelegate$Builder {
           NSSearchFieldDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSearchFieldDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -178563,7 +181020,10 @@ interface class NSSearchFieldDelegate$Builder {
     NSSearchFieldDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSSearchFieldDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -178576,7 +181036,10 @@ interface class NSSearchFieldDelegate$Builder {
       NSSearchFieldDelegate$Builder
                   .control_textShouldBeginEditing_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.control_textShouldBeginEditing_,
+              )
           ? (NSControl control, NSText textShouldBeginEditing) =>
                 optionalImplementation.controlTextShouldBeginEditing(
                   control,
@@ -178587,7 +181050,10 @@ interface class NSSearchFieldDelegate$Builder {
     NSSearchFieldDelegate$Builder.control_textShouldEndEditing_.implement(
       builder,
       NSSearchFieldDelegate$Builder.control_textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.control_textShouldEndEditing_,
+              )
           ? (NSControl control, NSText textShouldEndEditing) =>
                 optionalImplementation.controlTextShouldEndEditing(
                   control,
@@ -178602,7 +181068,11 @@ interface class NSSearchFieldDelegate$Builder {
           NSSearchFieldDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSearchFieldDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -178624,7 +181094,11 @@ interface class NSSearchFieldDelegate$Builder {
           NSSearchFieldDelegate$Builder
                       .control_textView_doCommandBySelector_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSearchFieldDelegate$Builder
+                        .control_textView_doCommandBySelector_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -178639,7 +181113,10 @@ interface class NSSearchFieldDelegate$Builder {
     NSSearchFieldDelegate$Builder.controlTextDidBeginEditing_.implement(
       builder,
       NSSearchFieldDelegate$Builder.controlTextDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -178648,7 +181125,10 @@ interface class NSSearchFieldDelegate$Builder {
     NSSearchFieldDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSSearchFieldDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -178657,7 +181137,10 @@ interface class NSSearchFieldDelegate$Builder {
     NSSearchFieldDelegate$Builder.controlTextDidEndEditing_.implement(
       builder,
       NSSearchFieldDelegate$Builder.controlTextDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -178666,7 +181149,10 @@ interface class NSSearchFieldDelegate$Builder {
     NSSearchFieldDelegate$Builder.searchFieldDidEndSearching_.implement(
       builder,
       NSSearchFieldDelegate$Builder.searchFieldDidEndSearching_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.searchFieldDidEndSearching_,
+              )
           ? (NSSearchField sender) {
               optionalImplementation.searchFieldDidEndSearching(sender);
             }
@@ -178675,7 +181161,10 @@ interface class NSSearchFieldDelegate$Builder {
     NSSearchFieldDelegate$Builder.searchFieldDidStartSearching_.implement(
       builder,
       NSSearchFieldDelegate$Builder.searchFieldDidStartSearching_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSearchFieldDelegate$Builder.searchFieldDidStartSearching_,
+              )
           ? (NSSearchField sender) {
               optionalImplementation.searchFieldDidStartSearching(sender);
             }
@@ -178688,7 +181177,11 @@ interface class NSSearchFieldDelegate$Builder {
           NSSearchFieldDelegate$Builder
                       .textField_textView_candidates_forSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSearchFieldDelegate$Builder
+                        .textField_textView_candidates_forSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -178709,7 +181202,11 @@ interface class NSSearchFieldDelegate$Builder {
           NSSearchFieldDelegate$Builder
                       .textField_textView_candidatesForSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSearchFieldDelegate$Builder
+                        .textField_textView_candidatesForSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -178729,7 +181226,11 @@ interface class NSSearchFieldDelegate$Builder {
           NSSearchFieldDelegate$Builder
                       .textField_textView_shouldSelectCandidateAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSearchFieldDelegate$Builder
+                        .textField_textView_shouldSelectCandidateAtIndex_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -181418,6 +183919,11 @@ extension NSSeguePerforming$Methods on NSSeguePerforming {
 abstract interface class NSSeguePerformingSpec {}
 
 abstract interface class NSSeguePerformingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void performSegueWithIdentifier(
     objc.NSString identifier, {
     objc.ObjCObject? sender,
@@ -181430,6 +183936,10 @@ abstract interface class NSSeguePerformingOptional {
 }
 
 mixin NSSeguePerformingDefaults implements NSSeguePerformingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -181444,6 +183954,9 @@ interface class NSSeguePerforming$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSeguePerformingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSeguePerformingOptional.$implementedOptionalMethods].
   static NSSeguePerforming implementFrom(
     NSSeguePerformingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -181470,7 +183983,10 @@ interface class NSSeguePerforming$Builder {
       NSSeguePerforming$Builder
                   .performSegueWithIdentifier_sender_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSeguePerforming$Builder.performSegueWithIdentifier_sender_,
+              )
           ? (objc.NSString identifier, objc.ObjCObject? sender) {
               optionalImplementation.performSegueWithIdentifier(
                 identifier,
@@ -181482,7 +183998,10 @@ interface class NSSeguePerforming$Builder {
     NSSeguePerforming$Builder.prepareForSegue_sender_.implement(
       builder,
       NSSeguePerforming$Builder.prepareForSegue_sender_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSeguePerforming$Builder.prepareForSegue_sender_,
+              )
           ? (NSStoryboardSegue segue, objc.ObjCObject? sender) {
               optionalImplementation.prepareForSegue(segue, sender: sender);
             }
@@ -181494,7 +184013,11 @@ interface class NSSeguePerforming$Builder {
           NSSeguePerforming$Builder
                       .shouldPerformSegueWithIdentifier_sender_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSeguePerforming$Builder
+                        .shouldPerformSegueWithIdentifier_sender_,
+                  )
               ? (objc.NSString identifier, objc.ObjCObject? sender) =>
                     optionalImplementation.shouldPerformSegueWithIdentifier(
                       identifier,
@@ -181799,6 +184322,11 @@ extension NSServicesMenuRequestor$Methods on NSServicesMenuRequestor {
 abstract interface class NSServicesMenuRequestorSpec {}
 
 abstract interface class NSServicesMenuRequestorOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool readSelectionFromPasteboard(NSPasteboard pboard);
   bool writeSelectionToPasteboard(
     NSPasteboard pboard, {
@@ -181808,6 +184336,10 @@ abstract interface class NSServicesMenuRequestorOptional {
 
 mixin NSServicesMenuRequestorDefaults
     implements NSServicesMenuRequestorOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -181822,6 +184354,9 @@ interface class NSServicesMenuRequestor$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSServicesMenuRequestorOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSServicesMenuRequestorOptional.$implementedOptionalMethods].
   static NSServicesMenuRequestor implementFrom(
     NSServicesMenuRequestorSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -181850,7 +184385,10 @@ interface class NSServicesMenuRequestor$Builder {
       NSServicesMenuRequestor$Builder
                   .readSelectionFromPasteboard_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSServicesMenuRequestor$Builder.readSelectionFromPasteboard_,
+              )
           ? (NSPasteboard pboard) =>
                 optionalImplementation.readSelectionFromPasteboard(pboard)
           : null,
@@ -181860,7 +184398,11 @@ interface class NSServicesMenuRequestor$Builder {
       NSServicesMenuRequestor$Builder
                   .writeSelectionToPasteboard_types_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSServicesMenuRequestor$Builder
+                    .writeSelectionToPasteboard_types_,
+              )
           ? (NSPasteboard pboard, objc.NSArray types) => optionalImplementation
                 .writeSelectionToPasteboard(pboard, types: types)
           : null,
@@ -183983,6 +186525,11 @@ extension NSSharingServiceDelegate$Methods on NSSharingServiceDelegate {
 abstract interface class NSSharingServiceDelegateSpec {}
 
 abstract interface class NSSharingServiceDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSView? anchoringViewForSharingService(
     NSSharingService sharingService, {
     required ffi.Pointer<objc.CGRect> showRelativeToRect,
@@ -184020,6 +186567,10 @@ abstract interface class NSSharingServiceDelegateOptional {
 mixin NSSharingServiceDelegateDefaults
     implements NSSharingServiceDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -184033,6 +186584,9 @@ interface class NSSharingServiceDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSharingServiceDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSharingServiceDelegateOptional.$implementedOptionalMethods].
   static NSSharingServiceDelegate implementFrom(
     NSSharingServiceDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -184063,7 +186617,11 @@ interface class NSSharingServiceDelegate$Builder {
           NSSharingServiceDelegate$Builder
                       .anchoringViewForSharingService_showRelativeToRect_preferredEdge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServiceDelegate$Builder
+                        .anchoringViewForSharingService_showRelativeToRect_preferredEdge_,
+                  )
               ? (
                   NSSharingService sharingService,
                   ffi.Pointer<objc.CGRect> showRelativeToRect,
@@ -184081,7 +186639,11 @@ interface class NSSharingServiceDelegate$Builder {
           NSSharingServiceDelegate$Builder
                       .sharingService_didFailToShareItems_error_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServiceDelegate$Builder
+                        .sharingService_didFailToShareItems_error_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.NSArray didFailToShareItems,
@@ -184100,7 +186662,10 @@ interface class NSSharingServiceDelegate$Builder {
       NSSharingServiceDelegate$Builder
                   .sharingService_didShareItems_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSharingServiceDelegate$Builder.sharingService_didShareItems_,
+              )
           ? (NSSharingService sharingService, objc.NSArray didShareItems) {
               optionalImplementation.sharingServiceDidShareItems(
                 sharingService,
@@ -184116,7 +186681,11 @@ interface class NSSharingServiceDelegate$Builder {
           NSSharingServiceDelegate$Builder
                       .sharingService_sourceFrameOnScreenForShareItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServiceDelegate$Builder
+                        .sharingService_sourceFrameOnScreenForShareItem_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.ObjCObject sourceFrameOnScreenForShareItem,
@@ -184135,7 +186704,11 @@ interface class NSSharingServiceDelegate$Builder {
           NSSharingServiceDelegate$Builder
                       .sharingService_sourceWindowForShareItems_sharingContentScope_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServiceDelegate$Builder
+                        .sharingService_sourceWindowForShareItems_sharingContentScope_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.NSArray sourceWindowForShareItems,
@@ -184155,7 +186728,11 @@ interface class NSSharingServiceDelegate$Builder {
           NSSharingServiceDelegate$Builder
                       .sharingService_transitionImageForShareItem_contentRect_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServiceDelegate$Builder
+                        .sharingService_transitionImageForShareItem_contentRect_,
+                  )
               ? (
                   NSSharingService sharingService,
                   objc.ObjCObject transitionImageForShareItem,
@@ -184173,7 +186750,10 @@ interface class NSSharingServiceDelegate$Builder {
       NSSharingServiceDelegate$Builder
                   .sharingService_willShareItems_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSharingServiceDelegate$Builder.sharingService_willShareItems_,
+              )
           ? (NSSharingService sharingService, objc.NSArray willShareItems) {
               optionalImplementation.sharingServiceWillShareItems(
                 sharingService,
@@ -184775,6 +187355,11 @@ extension NSSharingServicePickerDelegate$Methods
 abstract interface class NSSharingServicePickerDelegateSpec {}
 
 abstract interface class NSSharingServicePickerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSSharingServiceDelegate? sharingServicePickerDelegateForSharingService(
     NSSharingServicePicker sharingServicePicker, {
     required NSSharingService delegateForSharingService,
@@ -184797,6 +187382,10 @@ abstract interface class NSSharingServicePickerDelegateOptional {
 mixin NSSharingServicePickerDelegateDefaults
     implements NSSharingServicePickerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -184811,6 +187400,9 @@ interface class NSSharingServicePickerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSharingServicePickerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSharingServicePickerDelegateOptional.$implementedOptionalMethods].
   static NSSharingServicePickerDelegate implementFrom(
     NSSharingServicePickerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -184841,7 +187433,11 @@ interface class NSSharingServicePickerDelegate$Builder {
           NSSharingServicePickerDelegate$Builder
                       .sharingServicePicker_delegateForSharingService_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerDelegate$Builder
+                        .sharingServicePicker_delegateForSharingService_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   NSSharingService delegateForSharingService,
@@ -184859,7 +187455,11 @@ interface class NSSharingServicePickerDelegate$Builder {
           NSSharingServicePickerDelegate$Builder
                       .sharingServicePicker_didChooseSharingService_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerDelegate$Builder
+                        .sharingServicePicker_didChooseSharingService_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   NSSharingService? didChooseSharingService,
@@ -184878,7 +187478,11 @@ interface class NSSharingServicePickerDelegate$Builder {
           NSSharingServicePickerDelegate$Builder
                       .sharingServicePicker_sharingServicesForItems_proposedSharingServices_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerDelegate$Builder
+                        .sharingServicePicker_sharingServicesForItems_proposedSharingServices_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   objc.NSArray sharingServicesForItems,
@@ -184898,7 +187502,11 @@ interface class NSSharingServicePickerDelegate$Builder {
           NSSharingServicePickerDelegate$Builder
                       .sharingServicePickerCollaborationModeRestrictions_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerDelegate$Builder
+                        .sharingServicePickerCollaborationModeRestrictions_,
+                  )
               ? (NSSharingServicePicker sharingServicePicker) =>
                     optionalImplementation
                         .sharingServicePickerCollaborationModeRestrictions(
@@ -185371,6 +187979,11 @@ abstract interface class NSSharingServicePickerToolbarItemDelegateSpec {
 }
 
 abstract interface class NSSharingServicePickerToolbarItemDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSSharingServiceDelegate? sharingServicePickerDelegateForSharingService(
     NSSharingServicePicker sharingServicePicker, {
     required NSSharingService delegateForSharingService,
@@ -185393,6 +188006,10 @@ abstract interface class NSSharingServicePickerToolbarItemDelegateOptional {
 mixin NSSharingServicePickerToolbarItemDelegateDefaults
     implements NSSharingServicePickerToolbarItemDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -185407,6 +188024,9 @@ interface class NSSharingServicePickerToolbarItemDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSharingServicePickerToolbarItemDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSharingServicePickerToolbarItemDelegateOptional.$implementedOptionalMethods].
   static NSSharingServicePickerToolbarItemDelegate implementFrom(
     NSSharingServicePickerToolbarItemDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -185447,7 +188067,11 @@ interface class NSSharingServicePickerToolbarItemDelegate$Builder {
           NSSharingServicePickerToolbarItemDelegate$Builder
                       .sharingServicePicker_delegateForSharingService_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerToolbarItemDelegate$Builder
+                        .sharingServicePicker_delegateForSharingService_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   NSSharingService delegateForSharingService,
@@ -185465,7 +188089,11 @@ interface class NSSharingServicePickerToolbarItemDelegate$Builder {
           NSSharingServicePickerToolbarItemDelegate$Builder
                       .sharingServicePicker_didChooseSharingService_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerToolbarItemDelegate$Builder
+                        .sharingServicePicker_didChooseSharingService_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   NSSharingService? didChooseSharingService,
@@ -185484,7 +188112,11 @@ interface class NSSharingServicePickerToolbarItemDelegate$Builder {
           NSSharingServicePickerToolbarItemDelegate$Builder
                       .sharingServicePicker_sharingServicesForItems_proposedSharingServices_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerToolbarItemDelegate$Builder
+                        .sharingServicePicker_sharingServicesForItems_proposedSharingServices_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   objc.NSArray sharingServicesForItems,
@@ -185504,7 +188136,11 @@ interface class NSSharingServicePickerToolbarItemDelegate$Builder {
           NSSharingServicePickerToolbarItemDelegate$Builder
                       .sharingServicePickerCollaborationModeRestrictions_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerToolbarItemDelegate$Builder
+                        .sharingServicePickerCollaborationModeRestrictions_,
+                  )
               ? (NSSharingServicePicker sharingServicePicker) =>
                     optionalImplementation
                         .sharingServicePickerCollaborationModeRestrictions(
@@ -186095,6 +188731,11 @@ abstract interface class NSSharingServicePickerTouchBarItemDelegateSpec {
 }
 
 abstract interface class NSSharingServicePickerTouchBarItemDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSSharingServiceDelegate? sharingServicePickerDelegateForSharingService(
     NSSharingServicePicker sharingServicePicker, {
     required NSSharingService delegateForSharingService,
@@ -186117,6 +188758,10 @@ abstract interface class NSSharingServicePickerTouchBarItemDelegateOptional {
 mixin NSSharingServicePickerTouchBarItemDelegateDefaults
     implements NSSharingServicePickerTouchBarItemDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -186131,6 +188776,9 @@ interface class NSSharingServicePickerTouchBarItemDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSharingServicePickerTouchBarItemDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSharingServicePickerTouchBarItemDelegateOptional.$implementedOptionalMethods].
   static NSSharingServicePickerTouchBarItemDelegate implementFrom(
     NSSharingServicePickerTouchBarItemDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -186171,7 +188819,11 @@ interface class NSSharingServicePickerTouchBarItemDelegate$Builder {
           NSSharingServicePickerTouchBarItemDelegate$Builder
                       .sharingServicePicker_delegateForSharingService_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerTouchBarItemDelegate$Builder
+                        .sharingServicePicker_delegateForSharingService_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   NSSharingService delegateForSharingService,
@@ -186189,7 +188841,11 @@ interface class NSSharingServicePickerTouchBarItemDelegate$Builder {
           NSSharingServicePickerTouchBarItemDelegate$Builder
                       .sharingServicePicker_didChooseSharingService_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerTouchBarItemDelegate$Builder
+                        .sharingServicePicker_didChooseSharingService_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   NSSharingService? didChooseSharingService,
@@ -186208,7 +188864,11 @@ interface class NSSharingServicePickerTouchBarItemDelegate$Builder {
           NSSharingServicePickerTouchBarItemDelegate$Builder
                       .sharingServicePicker_sharingServicesForItems_proposedSharingServices_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerTouchBarItemDelegate$Builder
+                        .sharingServicePicker_sharingServicesForItems_proposedSharingServices_,
+                  )
               ? (
                   NSSharingServicePicker sharingServicePicker,
                   objc.NSArray sharingServicesForItems,
@@ -186228,7 +188888,11 @@ interface class NSSharingServicePickerTouchBarItemDelegate$Builder {
           NSSharingServicePickerTouchBarItemDelegate$Builder
                       .sharingServicePickerCollaborationModeRestrictions_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSharingServicePickerTouchBarItemDelegate$Builder
+                        .sharingServicePickerCollaborationModeRestrictions_,
+                  )
               ? (NSSharingServicePicker sharingServicePicker) =>
                     optionalImplementation
                         .sharingServicePickerCollaborationModeRestrictions(
@@ -188660,10 +191324,19 @@ extension NSSoundDelegate$Methods on NSSoundDelegate {
 abstract interface class NSSoundDelegateSpec {}
 
 abstract interface class NSSoundDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void sound(NSSound sound, {required bool didFinishPlaying});
 }
 
 mixin NSSoundDelegateDefaults implements NSSoundDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -188678,6 +191351,9 @@ interface class NSSoundDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSoundDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSoundDelegateOptional.$implementedOptionalMethods].
   static NSSoundDelegate implementFrom(
     NSSoundDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -188702,7 +191378,10 @@ interface class NSSoundDelegate$Builder {
     NSSoundDelegate$Builder.sound_didFinishPlaying_.implement(
       builder,
       NSSoundDelegate$Builder.sound_didFinishPlaying_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSoundDelegate$Builder.sound_didFinishPlaying_,
+              )
           ? (NSSound sound, bool didFinishPlaying) {
               optionalImplementation.sound(
                 sound,
@@ -189030,6 +191709,11 @@ extension NSSpeechRecognizerDelegate$Methods on NSSpeechRecognizerDelegate {
 abstract interface class NSSpeechRecognizerDelegateSpec {}
 
 abstract interface class NSSpeechRecognizerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void speechRecognizer(
     NSSpeechRecognizer sender, {
     required objc.NSString didRecognizeCommand,
@@ -189038,6 +191722,10 @@ abstract interface class NSSpeechRecognizerDelegateOptional {
 
 mixin NSSpeechRecognizerDelegateDefaults
     implements NSSpeechRecognizerDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -189052,6 +191740,9 @@ interface class NSSpeechRecognizerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSpeechRecognizerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSpeechRecognizerDelegateOptional.$implementedOptionalMethods].
   static NSSpeechRecognizerDelegate implementFrom(
     NSSpeechRecognizerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -189081,7 +191772,11 @@ interface class NSSpeechRecognizerDelegate$Builder {
           NSSpeechRecognizerDelegate$Builder
                       .speechRecognizer_didRecognizeCommand_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpeechRecognizerDelegate$Builder
+                        .speechRecognizer_didRecognizeCommand_,
+                  )
               ? (NSSpeechRecognizer sender, objc.NSString didRecognizeCommand) {
                   optionalImplementation.speechRecognizer(
                     sender,
@@ -189723,6 +192418,11 @@ extension NSSpeechSynthesizerDelegate$Methods on NSSpeechSynthesizerDelegate {
 abstract interface class NSSpeechSynthesizerDelegateSpec {}
 
 abstract interface class NSSpeechSynthesizerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void speechSynthesizerDidEncounterErrorAtIndexOfStringMessage(
     NSSpeechSynthesizer sender, {
     required int didEncounterErrorAtIndex,
@@ -189751,6 +192451,10 @@ abstract interface class NSSpeechSynthesizerDelegateOptional {
 mixin NSSpeechSynthesizerDelegateDefaults
     implements NSSpeechSynthesizerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -189764,6 +192468,9 @@ interface class NSSpeechSynthesizerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSpeechSynthesizerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSpeechSynthesizerDelegateOptional.$implementedOptionalMethods].
   static NSSpeechSynthesizerDelegate implementFrom(
     NSSpeechSynthesizerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -189794,7 +192501,11 @@ interface class NSSpeechSynthesizerDelegate$Builder {
           NSSpeechSynthesizerDelegate$Builder
                       .speechSynthesizer_didEncounterErrorAtIndex_ofString_message_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpeechSynthesizerDelegate$Builder
+                        .speechSynthesizer_didEncounterErrorAtIndex_ofString_message_,
+                  )
               ? (
                   NSSpeechSynthesizer sender,
                   int didEncounterErrorAtIndex,
@@ -189818,7 +192529,11 @@ interface class NSSpeechSynthesizerDelegate$Builder {
           NSSpeechSynthesizerDelegate$Builder
                       .speechSynthesizer_didEncounterSyncMessage_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpeechSynthesizerDelegate$Builder
+                        .speechSynthesizer_didEncounterSyncMessage_,
+                  )
               ? (
                   NSSpeechSynthesizer sender,
                   objc.NSString didEncounterSyncMessage,
@@ -189836,7 +192551,11 @@ interface class NSSpeechSynthesizerDelegate$Builder {
           NSSpeechSynthesizerDelegate$Builder
                       .speechSynthesizer_didFinishSpeaking_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpeechSynthesizerDelegate$Builder
+                        .speechSynthesizer_didFinishSpeaking_,
+                  )
               ? (NSSpeechSynthesizer sender, bool didFinishSpeaking) {
                   optionalImplementation.speechSynthesizerDidFinishSpeaking(
                     sender,
@@ -189851,7 +192570,11 @@ interface class NSSpeechSynthesizerDelegate$Builder {
           NSSpeechSynthesizerDelegate$Builder
                       .speechSynthesizer_willSpeakPhoneme_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpeechSynthesizerDelegate$Builder
+                        .speechSynthesizer_willSpeakPhoneme_,
+                  )
               ? (NSSpeechSynthesizer sender, int willSpeakPhoneme) {
                   optionalImplementation.speechSynthesizerWillSpeakPhoneme(
                     sender,
@@ -189867,7 +192590,11 @@ interface class NSSpeechSynthesizerDelegate$Builder {
           NSSpeechSynthesizerDelegate$Builder
                       .speechSynthesizer_willSpeakWord_ofString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpeechSynthesizerDelegate$Builder
+                        .speechSynthesizer_willSpeakWord_ofString_,
+                  )
               ? (
                   NSSpeechSynthesizer sender,
                   objc.NSRange willSpeakWord,
@@ -192284,6 +195011,11 @@ extension NSSplitViewDelegate$Methods on NSSplitViewDelegate {
 abstract interface class NSSplitViewDelegateSpec {}
 
 abstract interface class NSSplitViewDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.CGRect splitViewAdditionalEffectiveRectOfDividerAtIndex(
     NSSplitView splitView, {
     required int additionalEffectiveRectOfDividerAtIndex,
@@ -192336,6 +195068,10 @@ abstract interface class NSSplitViewDelegateOptional {
 
 mixin NSSplitViewDelegateDefaults implements NSSplitViewDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -192349,6 +195085,9 @@ interface class NSSplitViewDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSplitViewDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSplitViewDelegateOptional.$implementedOptionalMethods].
   static NSSplitViewDelegate implementFrom(
     NSSplitViewDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -192377,7 +195116,11 @@ interface class NSSplitViewDelegate$Builder {
           NSSplitViewDelegate$Builder
                       .splitView_additionalEffectiveRectOfDividerAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSplitViewDelegate$Builder
+                        .splitView_additionalEffectiveRectOfDividerAtIndex_,
+                  )
               ? (
                   NSSplitView splitView,
                   int additionalEffectiveRectOfDividerAtIndex,
@@ -192392,7 +195135,10 @@ interface class NSSplitViewDelegate$Builder {
     NSSplitViewDelegate$Builder.splitView_canCollapseSubview_.implement(
       builder,
       NSSplitViewDelegate$Builder.splitView_canCollapseSubview_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSplitViewDelegate$Builder.splitView_canCollapseSubview_,
+              )
           ? (NSSplitView splitView, NSView canCollapseSubview) =>
                 optionalImplementation.splitViewCanCollapseSubview(
                   splitView,
@@ -192406,7 +195152,11 @@ interface class NSSplitViewDelegate$Builder {
           NSSplitViewDelegate$Builder
                       .splitView_constrainMaxCoordinate_ofSubviewAt_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSplitViewDelegate$Builder
+                        .splitView_constrainMaxCoordinate_ofSubviewAt_,
+                  )
               ? (
                   NSSplitView splitView,
                   double constrainMaxCoordinate,
@@ -192425,7 +195175,11 @@ interface class NSSplitViewDelegate$Builder {
           NSSplitViewDelegate$Builder
                       .splitView_constrainMinCoordinate_ofSubviewAt_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSplitViewDelegate$Builder
+                        .splitView_constrainMinCoordinate_ofSubviewAt_,
+                  )
               ? (
                   NSSplitView splitView,
                   double constrainMinCoordinate,
@@ -192444,7 +195198,11 @@ interface class NSSplitViewDelegate$Builder {
           NSSplitViewDelegate$Builder
                       .splitView_constrainSplitPosition_ofSubviewAt_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSplitViewDelegate$Builder
+                        .splitView_constrainSplitPosition_ofSubviewAt_,
+                  )
               ? (
                   NSSplitView splitView,
                   double constrainSplitPosition,
@@ -192464,7 +195222,11 @@ interface class NSSplitViewDelegate$Builder {
           NSSplitViewDelegate$Builder
                       .splitView_effectiveRect_forDrawnRect_ofDividerAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSplitViewDelegate$Builder
+                        .splitView_effectiveRect_forDrawnRect_ofDividerAtIndex_,
+                  )
               ? (
                   NSSplitView splitView,
                   objc.CGRect effectiveRect,
@@ -192484,7 +195246,11 @@ interface class NSSplitViewDelegate$Builder {
       NSSplitViewDelegate$Builder
                   .splitView_resizeSubviewsWithOldSize_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSplitViewDelegate$Builder
+                    .splitView_resizeSubviewsWithOldSize_,
+              )
           ? (NSSplitView splitView, objc.CGSize resizeSubviewsWithOldSize) {
               optionalImplementation.splitViewResizeSubviewsWithOldSize(
                 splitView,
@@ -192498,7 +195264,11 @@ interface class NSSplitViewDelegate$Builder {
       NSSplitViewDelegate$Builder
                   .splitView_shouldAdjustSizeOfSubview_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSplitViewDelegate$Builder
+                    .splitView_shouldAdjustSizeOfSubview_,
+              )
           ? (NSSplitView splitView, NSView shouldAdjustSizeOfSubview) =>
                 optionalImplementation.splitViewShouldAdjustSizeOfSubview(
                   splitView,
@@ -192513,7 +195283,11 @@ interface class NSSplitViewDelegate$Builder {
           NSSplitViewDelegate$Builder
                       .splitView_shouldCollapseSubview_forDoubleClickOnDividerAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSplitViewDelegate$Builder
+                        .splitView_shouldCollapseSubview_forDoubleClickOnDividerAtIndex_,
+                  )
               ? (
                   NSSplitView splitView,
                   NSView shouldCollapseSubview,
@@ -192532,7 +195306,10 @@ interface class NSSplitViewDelegate$Builder {
       NSSplitViewDelegate$Builder
                   .splitView_shouldHideDividerAtIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSplitViewDelegate$Builder.splitView_shouldHideDividerAtIndex_,
+              )
           ? (NSSplitView splitView, int shouldHideDividerAtIndex) =>
                 optionalImplementation.splitViewShouldHideDividerAtIndex(
                   splitView,
@@ -192543,7 +195320,10 @@ interface class NSSplitViewDelegate$Builder {
     NSSplitViewDelegate$Builder.splitViewDidResizeSubviews_.implement(
       builder,
       NSSplitViewDelegate$Builder.splitViewDidResizeSubviews_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSplitViewDelegate$Builder.splitViewDidResizeSubviews_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.splitViewDidResizeSubviews(notification);
             }
@@ -192552,7 +195332,10 @@ interface class NSSplitViewDelegate$Builder {
     NSSplitViewDelegate$Builder.splitViewWillResizeSubviews_.implement(
       builder,
       NSSplitViewDelegate$Builder.splitViewWillResizeSubviews_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSplitViewDelegate$Builder.splitViewWillResizeSubviews_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.splitViewWillResizeSubviews(notification);
             }
@@ -194025,6 +196808,11 @@ abstract interface class NSSpringLoadingDestinationSpec {
 }
 
 abstract interface class NSSpringLoadingDestinationOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void draggingEnded(NSDraggingInfo draggingInfo);
   int springLoadingEntered(NSDraggingInfo draggingInfo);
   void springLoadingExited(NSDraggingInfo draggingInfo);
@@ -194033,6 +196821,10 @@ abstract interface class NSSpringLoadingDestinationOptional {
 
 mixin NSSpringLoadingDestinationDefaults
     implements NSSpringLoadingDestinationOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -194047,6 +196839,9 @@ interface class NSSpringLoadingDestination$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSpringLoadingDestinationOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSpringLoadingDestinationOptional.$implementedOptionalMethods].
   static NSSpringLoadingDestination implementFrom(
     NSSpringLoadingDestinationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -194073,7 +196868,10 @@ interface class NSSpringLoadingDestination$Builder {
     NSSpringLoadingDestination$Builder.draggingEnded_.implement(
       builder,
       NSSpringLoadingDestination$Builder.draggingEnded_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSpringLoadingDestination$Builder.draggingEnded_,
+              )
           ? (NSDraggingInfo draggingInfo) {
               optionalImplementation.draggingEnded(draggingInfo);
             }
@@ -194089,7 +196887,10 @@ interface class NSSpringLoadingDestination$Builder {
     NSSpringLoadingDestination$Builder.springLoadingEntered_.implement(
       builder,
       NSSpringLoadingDestination$Builder.springLoadingEntered_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSpringLoadingDestination$Builder.springLoadingEntered_,
+              )
           ? (NSDraggingInfo draggingInfo) =>
                 optionalImplementation.springLoadingEntered(draggingInfo)
           : null,
@@ -194097,7 +196898,10 @@ interface class NSSpringLoadingDestination$Builder {
     NSSpringLoadingDestination$Builder.springLoadingExited_.implement(
       builder,
       NSSpringLoadingDestination$Builder.springLoadingExited_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSpringLoadingDestination$Builder.springLoadingExited_,
+              )
           ? (NSDraggingInfo draggingInfo) {
               optionalImplementation.springLoadingExited(draggingInfo);
             }
@@ -194112,7 +196916,10 @@ interface class NSSpringLoadingDestination$Builder {
     NSSpringLoadingDestination$Builder.springLoadingUpdated_.implement(
       builder,
       NSSpringLoadingDestination$Builder.springLoadingUpdated_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSSpringLoadingDestination$Builder.springLoadingUpdated_,
+              )
           ? (NSDraggingInfo draggingInfo) =>
                 optionalImplementation.springLoadingUpdated(draggingInfo)
           : null,
@@ -194862,6 +197669,11 @@ extension NSStackViewDelegate$Methods on NSStackViewDelegate {
 abstract interface class NSStackViewDelegateSpec {}
 
 abstract interface class NSStackViewDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void stackViewDidReattachViews(
     NSStackView stackView, {
     required objc.NSArray didReattachViews,
@@ -194873,6 +197685,10 @@ abstract interface class NSStackViewDelegateOptional {
 }
 
 mixin NSStackViewDelegateDefaults implements NSStackViewDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -194887,6 +197703,9 @@ interface class NSStackViewDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSStackViewDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSStackViewDelegateOptional.$implementedOptionalMethods].
   static NSStackViewDelegate implementFrom(
     NSStackViewDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -194911,7 +197730,10 @@ interface class NSStackViewDelegate$Builder {
     NSStackViewDelegate$Builder.stackView_didReattachViews_.implement(
       builder,
       NSStackViewDelegate$Builder.stackView_didReattachViews_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStackViewDelegate$Builder.stackView_didReattachViews_,
+              )
           ? (NSStackView stackView, objc.NSArray didReattachViews) {
               optionalImplementation.stackViewDidReattachViews(
                 stackView,
@@ -194923,7 +197745,10 @@ interface class NSStackViewDelegate$Builder {
     NSStackViewDelegate$Builder.stackView_willDetachViews_.implement(
       builder,
       NSStackViewDelegate$Builder.stackView_willDetachViews_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStackViewDelegate$Builder.stackView_willDetachViews_,
+              )
           ? (NSStackView stackView, objc.NSArray willDetachViews) {
               optionalImplementation.stackViewWillDetachViews(
                 stackView,
@@ -198936,6 +201761,11 @@ extension NSStandardKeyBindingResponding$Methods
 abstract interface class NSStandardKeyBindingRespondingSpec {}
 
 abstract interface class NSStandardKeyBindingRespondingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void cancelOperation(objc.ObjCObject? sender);
   void capitalizeWord(objc.ObjCObject? sender);
   void centerSelectionInVisibleArea(objc.ObjCObject? sender);
@@ -199037,6 +201867,10 @@ abstract interface class NSStandardKeyBindingRespondingOptional {
 mixin NSStandardKeyBindingRespondingDefaults
     implements NSStandardKeyBindingRespondingOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -199051,6 +201885,9 @@ interface class NSStandardKeyBindingResponding$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSStandardKeyBindingRespondingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSStandardKeyBindingRespondingOptional.$implementedOptionalMethods].
   static NSStandardKeyBindingResponding implementFrom(
     NSStandardKeyBindingRespondingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -199077,7 +201914,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.cancelOperation_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.cancelOperation_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.cancelOperation_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.cancelOperation(sender);
             }
@@ -199086,7 +201926,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.capitalizeWord_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.capitalizeWord_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.capitalizeWord_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.capitalizeWord(sender);
             }
@@ -199098,7 +201941,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .centerSelectionInVisibleArea_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .centerSelectionInVisibleArea_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.centerSelectionInVisibleArea(sender);
                 }
@@ -199107,7 +201954,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.changeCaseOfLetter_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.changeCaseOfLetter_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.changeCaseOfLetter_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.changeCaseOfLetter(sender);
             }
@@ -199116,7 +201966,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.complete_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.complete_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.complete_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.complete(sender);
             }
@@ -199125,7 +201978,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.deleteBackward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.deleteBackward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteBackward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteBackward(sender);
             }
@@ -199138,7 +201994,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .deleteBackwardByDecomposingPreviousCharacter_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .deleteBackwardByDecomposingPreviousCharacter_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation
                       .deleteBackwardByDecomposingPreviousCharacter(sender);
@@ -199148,7 +202008,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.deleteForward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.deleteForward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteForward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteForward(sender);
             }
@@ -199159,7 +202022,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .deleteToBeginningOfLine_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteToBeginningOfLine_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteToBeginningOfLine(sender);
             }
@@ -199171,7 +202037,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .deleteToBeginningOfParagraph_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .deleteToBeginningOfParagraph_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.deleteToBeginningOfParagraph(sender);
                 }
@@ -199180,7 +202050,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.deleteToEndOfLine_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.deleteToEndOfLine_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteToEndOfLine_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteToEndOfLine(sender);
             }
@@ -199191,7 +202064,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .deleteToEndOfParagraph_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteToEndOfParagraph_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteToEndOfParagraph(sender);
             }
@@ -199200,7 +202076,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.deleteToMark_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.deleteToMark_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteToMark_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteToMark(sender);
             }
@@ -199209,7 +202088,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.deleteWordBackward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.deleteWordBackward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteWordBackward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteWordBackward(sender);
             }
@@ -199218,7 +202100,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.deleteWordForward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.deleteWordForward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.deleteWordForward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.deleteWordForward(sender);
             }
@@ -199227,7 +202112,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.doCommandBySelector_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.doCommandBySelector_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.doCommandBySelector_,
+              )
           ? (ffi.Pointer<objc.ObjCSelector> selector) {
               optionalImplementation.doCommandBySelector(selector);
             }
@@ -199236,7 +202124,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.indent_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.indent_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.indent_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.indent(sender);
             }
@@ -199245,7 +202136,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.insertBacktab_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.insertBacktab_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.insertBacktab_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.insertBacktab(sender);
             }
@@ -199256,7 +202150,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .insertContainerBreak_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.insertContainerBreak_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.insertContainerBreak(sender);
             }
@@ -199269,7 +202166,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .insertDoubleQuoteIgnoringSubstitution_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .insertDoubleQuoteIgnoringSubstitution_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.insertDoubleQuoteIgnoringSubstitution(
                     sender,
@@ -199280,7 +202181,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.insertLineBreak_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.insertLineBreak_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.insertLineBreak_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.insertLineBreak(sender);
             }
@@ -199289,7 +202193,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.insertNewline_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.insertNewline_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.insertNewline_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.insertNewline(sender);
             }
@@ -199301,7 +202208,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .insertNewlineIgnoringFieldEditor_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .insertNewlineIgnoringFieldEditor_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.insertNewlineIgnoringFieldEditor(
                     sender,
@@ -199314,7 +202225,11 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .insertParagraphSeparator_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder
+                    .insertParagraphSeparator_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.insertParagraphSeparator(sender);
             }
@@ -199327,7 +202242,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .insertSingleQuoteIgnoringSubstitution_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .insertSingleQuoteIgnoringSubstitution_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.insertSingleQuoteIgnoringSubstitution(
                     sender,
@@ -199338,7 +202257,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.insertTab_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.insertTab_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.insertTab_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.insertTab(sender);
             }
@@ -199350,7 +202272,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .insertTabIgnoringFieldEditor_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .insertTabIgnoringFieldEditor_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.insertTabIgnoringFieldEditor(sender);
                 }
@@ -199359,7 +202285,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.insertText_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.insertText_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.insertText_,
+              )
           ? (objc.ObjCObject insertString) {
               optionalImplementation.insertText(insertString);
             }
@@ -199368,7 +202297,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.lowercaseWord_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.lowercaseWord_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.lowercaseWord_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.lowercaseWord(sender);
             }
@@ -199380,7 +202312,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .makeBaseWritingDirectionLeftToRight_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .makeBaseWritingDirectionLeftToRight_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.makeBaseWritingDirectionLeftToRight(
                     sender,
@@ -199394,7 +202330,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .makeBaseWritingDirectionNatural_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .makeBaseWritingDirectionNatural_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.makeBaseWritingDirectionNatural(
                     sender,
@@ -199408,7 +202348,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .makeBaseWritingDirectionRightToLeft_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .makeBaseWritingDirectionRightToLeft_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.makeBaseWritingDirectionRightToLeft(
                     sender,
@@ -199422,7 +202366,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .makeTextWritingDirectionLeftToRight_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .makeTextWritingDirectionLeftToRight_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.makeTextWritingDirectionLeftToRight(
                     sender,
@@ -199436,7 +202384,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .makeTextWritingDirectionNatural_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .makeTextWritingDirectionNatural_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.makeTextWritingDirectionNatural(
                     sender,
@@ -199450,7 +202402,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .makeTextWritingDirectionRightToLeft_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .makeTextWritingDirectionRightToLeft_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.makeTextWritingDirectionRightToLeft(
                     sender,
@@ -199461,7 +202417,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveBackward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveBackward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveBackward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveBackward(sender);
             }
@@ -199473,7 +202432,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveBackwardAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveBackwardAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveBackwardAndModifySelection(sender);
                 }
@@ -199482,7 +202445,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveDown_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveDown_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveDown_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveDown(sender);
             }
@@ -199494,7 +202460,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveDownAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveDownAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveDownAndModifySelection(sender);
                 }
@@ -199503,7 +202473,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveForward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveForward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveForward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveForward(sender);
             }
@@ -199515,7 +202488,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveForwardAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveForwardAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveForwardAndModifySelection(sender);
                 }
@@ -199524,7 +202501,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveLeft_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveLeft_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveLeft_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveLeft(sender);
             }
@@ -199536,7 +202516,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveLeftAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveLeftAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveLeftAndModifySelection(sender);
                 }
@@ -199549,7 +202533,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveParagraphBackwardAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveParagraphBackwardAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation
                       .moveParagraphBackwardAndModifySelection(sender);
@@ -199563,7 +202551,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveParagraphForwardAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveParagraphForwardAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveParagraphForwardAndModifySelection(
                     sender,
@@ -199574,7 +202566,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveRight_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveRight_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveRight_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveRight(sender);
             }
@@ -199586,7 +202581,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveRightAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveRightAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveRightAndModifySelection(sender);
                 }
@@ -199597,7 +202596,11 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .moveToBeginningOfDocument_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder
+                    .moveToBeginningOfDocument_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveToBeginningOfDocument(sender);
             }
@@ -199610,7 +202613,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToBeginningOfDocumentAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToBeginningOfDocumentAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation
                       .moveToBeginningOfDocumentAndModifySelection(sender);
@@ -199622,7 +202629,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .moveToBeginningOfLine_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveToBeginningOfLine_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveToBeginningOfLine(sender);
             }
@@ -199635,7 +202645,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToBeginningOfLineAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToBeginningOfLineAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation
                       .moveToBeginningOfLineAndModifySelection(sender);
@@ -199648,7 +202662,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToBeginningOfParagraph_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToBeginningOfParagraph_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveToBeginningOfParagraph(sender);
                 }
@@ -199661,7 +202679,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToBeginningOfParagraphAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToBeginningOfParagraphAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation
                       .moveToBeginningOfParagraphAndModifySelection(sender);
@@ -199671,7 +202693,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveToEndOfDocument_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveToEndOfDocument_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveToEndOfDocument_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveToEndOfDocument(sender);
             }
@@ -199684,7 +202709,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToEndOfDocumentAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToEndOfDocumentAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveToEndOfDocumentAndModifySelection(
                     sender,
@@ -199695,7 +202724,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveToEndOfLine_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveToEndOfLine_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveToEndOfLine_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveToEndOfLine(sender);
             }
@@ -199707,7 +202739,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToEndOfLineAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToEndOfLineAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveToEndOfLineAndModifySelection(
                     sender,
@@ -199720,7 +202756,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .moveToEndOfParagraph_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveToEndOfParagraph_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveToEndOfParagraph(sender);
             }
@@ -199733,7 +202772,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToEndOfParagraphAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToEndOfParagraphAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveToEndOfParagraphAndModifySelection(
                     sender,
@@ -199744,7 +202787,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveToLeftEndOfLine_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveToLeftEndOfLine_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveToLeftEndOfLine_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveToLeftEndOfLine(sender);
             }
@@ -199757,7 +202803,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToLeftEndOfLineAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToLeftEndOfLineAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveToLeftEndOfLineAndModifySelection(
                     sender,
@@ -199770,7 +202820,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .moveToRightEndOfLine_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveToRightEndOfLine_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveToRightEndOfLine(sender);
             }
@@ -199783,7 +202836,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveToRightEndOfLineAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveToRightEndOfLineAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveToRightEndOfLineAndModifySelection(
                     sender,
@@ -199794,7 +202851,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveUp_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveUp_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveUp_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveUp(sender);
             }
@@ -199805,7 +202865,11 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .moveUpAndModifySelection_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder
+                    .moveUpAndModifySelection_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveUpAndModifySelection(sender);
             }
@@ -199814,7 +202878,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveWordBackward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveWordBackward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveWordBackward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveWordBackward(sender);
             }
@@ -199826,7 +202893,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveWordBackwardAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveWordBackwardAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveWordBackwardAndModifySelection(
                     sender,
@@ -199837,7 +202908,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveWordForward_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveWordForward_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveWordForward_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveWordForward(sender);
             }
@@ -199849,7 +202923,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveWordForwardAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveWordForwardAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveWordForwardAndModifySelection(
                     sender,
@@ -199860,7 +202938,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveWordLeft_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveWordLeft_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveWordLeft_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveWordLeft(sender);
             }
@@ -199872,7 +202953,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveWordLeftAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveWordLeftAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveWordLeftAndModifySelection(sender);
                 }
@@ -199881,7 +202966,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.moveWordRight_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.moveWordRight_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.moveWordRight_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.moveWordRight(sender);
             }
@@ -199893,7 +202981,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .moveWordRightAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .moveWordRightAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.moveWordRightAndModifySelection(
                     sender,
@@ -199904,7 +202996,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.pageDown_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.pageDown_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.pageDown_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.pageDown(sender);
             }
@@ -199916,7 +203011,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .pageDownAndModifySelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .pageDownAndModifySelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.pageDownAndModifySelection(sender);
                 }
@@ -199925,7 +203024,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.pageUp_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.pageUp_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.pageUp_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.pageUp(sender);
             }
@@ -199936,7 +203038,11 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .pageUpAndModifySelection_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder
+                    .pageUpAndModifySelection_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.pageUpAndModifySelection(sender);
             }
@@ -199947,7 +203053,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .quickLookPreviewItems_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.quickLookPreviewItems_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.quickLookPreviewItems(sender);
             }
@@ -199956,7 +203065,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.scrollLineDown_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.scrollLineDown_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.scrollLineDown_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.scrollLineDown(sender);
             }
@@ -199965,7 +203077,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.scrollLineUp_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.scrollLineUp_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.scrollLineUp_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.scrollLineUp(sender);
             }
@@ -199974,7 +203089,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.scrollPageDown_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.scrollPageDown_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.scrollPageDown_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.scrollPageDown(sender);
             }
@@ -199983,7 +203101,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.scrollPageUp_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.scrollPageUp_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.scrollPageUp_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.scrollPageUp(sender);
             }
@@ -199995,7 +203116,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .scrollToBeginningOfDocument_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .scrollToBeginningOfDocument_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.scrollToBeginningOfDocument(sender);
                 }
@@ -200006,7 +203131,10 @@ interface class NSStandardKeyBindingResponding$Builder {
       NSStandardKeyBindingResponding$Builder
                   .scrollToEndOfDocument_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.scrollToEndOfDocument_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.scrollToEndOfDocument(sender);
             }
@@ -200015,7 +203143,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.selectAll_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.selectAll_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.selectAll_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.selectAll(sender);
             }
@@ -200024,7 +203155,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.selectLine_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.selectLine_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.selectLine_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.selectLine(sender);
             }
@@ -200033,7 +203167,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.selectParagraph_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.selectParagraph_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.selectParagraph_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.selectParagraph(sender);
             }
@@ -200042,7 +203179,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.selectToMark_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.selectToMark_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.selectToMark_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.selectToMark(sender);
             }
@@ -200051,7 +203191,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.selectWord_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.selectWord_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.selectWord_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.selectWord(sender);
             }
@@ -200060,7 +203203,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.setMark_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.setMark_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.setMark_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.setMark(sender);
             }
@@ -200072,7 +203218,11 @@ interface class NSStandardKeyBindingResponding$Builder {
           NSStandardKeyBindingResponding$Builder
                       .showContextMenuForSelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSStandardKeyBindingResponding$Builder
+                        .showContextMenuForSelection_,
+                  )
               ? (objc.ObjCObject? sender) {
                   optionalImplementation.showContextMenuForSelection(sender);
                 }
@@ -200081,7 +203231,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.swapWithMark_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.swapWithMark_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.swapWithMark_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.swapWithMark(sender);
             }
@@ -200090,7 +203243,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.transpose_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.transpose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.transpose_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.transpose(sender);
             }
@@ -200099,7 +203255,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.transposeWords_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.transposeWords_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.transposeWords_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.transposeWords(sender);
             }
@@ -200108,7 +203267,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.uppercaseWord_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.uppercaseWord_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.uppercaseWord_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.uppercaseWord(sender);
             }
@@ -200117,7 +203279,10 @@ interface class NSStandardKeyBindingResponding$Builder {
     NSStandardKeyBindingResponding$Builder.yank_.implement(
       builder,
       NSStandardKeyBindingResponding$Builder.yank_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSStandardKeyBindingResponding$Builder.yank_,
+              )
           ? (objc.ObjCObject? sender) {
               optionalImplementation.yank(sender);
             }
@@ -208054,6 +211219,11 @@ extension NSTabViewDelegate$Methods on NSTabViewDelegate {
 abstract interface class NSTabViewDelegateSpec {}
 
 abstract interface class NSTabViewDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void tabView(NSTabView tabView, {NSTabViewItem? didSelectTabViewItem});
   bool tabViewShouldSelectTabViewItem(
     NSTabView tabView, {
@@ -208068,6 +211238,10 @@ abstract interface class NSTabViewDelegateOptional {
 
 mixin NSTabViewDelegateDefaults implements NSTabViewDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -208081,6 +211255,9 @@ interface class NSTabViewDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTabViewDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTabViewDelegateOptional.$implementedOptionalMethods].
   static NSTabViewDelegate implementFrom(
     NSTabViewDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -208105,7 +211282,10 @@ interface class NSTabViewDelegate$Builder {
     NSTabViewDelegate$Builder.tabView_didSelectTabViewItem_.implement(
       builder,
       NSTabViewDelegate$Builder.tabView_didSelectTabViewItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTabViewDelegate$Builder.tabView_didSelectTabViewItem_,
+              )
           ? (NSTabView tabView, NSTabViewItem? didSelectTabViewItem) {
               optionalImplementation.tabView(
                 tabView,
@@ -208117,7 +211297,10 @@ interface class NSTabViewDelegate$Builder {
     NSTabViewDelegate$Builder.tabView_shouldSelectTabViewItem_.implement(
       builder,
       NSTabViewDelegate$Builder.tabView_shouldSelectTabViewItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTabViewDelegate$Builder.tabView_shouldSelectTabViewItem_,
+              )
           ? (NSTabView tabView, NSTabViewItem? shouldSelectTabViewItem) =>
                 optionalImplementation.tabViewShouldSelectTabViewItem(
                   tabView,
@@ -208128,7 +211311,10 @@ interface class NSTabViewDelegate$Builder {
     NSTabViewDelegate$Builder.tabView_willSelectTabViewItem_.implement(
       builder,
       NSTabViewDelegate$Builder.tabView_willSelectTabViewItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTabViewDelegate$Builder.tabView_willSelectTabViewItem_,
+              )
           ? (NSTabView tabView, NSTabViewItem? willSelectTabViewItem) {
               optionalImplementation.tabViewWillSelectTabViewItem(
                 tabView,
@@ -208142,7 +211328,10 @@ interface class NSTabViewDelegate$Builder {
       NSTabViewDelegate$Builder
                   .tabViewDidChangeNumberOfTabViewItems_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTabViewDelegate$Builder.tabViewDidChangeNumberOfTabViewItems_,
+              )
           ? (NSTabView tabView) {
               optionalImplementation.tabViewDidChangeNumberOfTabViewItems(
                 tabView,
@@ -212979,6 +216168,11 @@ extension NSTableViewDataSource$Methods on NSTableViewDataSource {
 abstract interface class NSTableViewDataSourceSpec {}
 
 abstract interface class NSTableViewDataSourceOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   int numberOfRowsInTableView(NSTableView tableView);
   bool tableViewAcceptDropRowDropOperation(
     NSTableView tableView, {
@@ -213041,6 +216235,10 @@ abstract interface class NSTableViewDataSourceOptional {
 
 mixin NSTableViewDataSourceDefaults implements NSTableViewDataSourceOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -213054,6 +216252,9 @@ interface class NSTableViewDataSource$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTableViewDataSourceOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTableViewDataSourceOptional.$implementedOptionalMethods].
   static NSTableViewDataSource implementFrom(
     NSTableViewDataSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -213080,7 +216281,10 @@ interface class NSTableViewDataSource$Builder {
     NSTableViewDataSource$Builder.numberOfRowsInTableView_.implement(
       builder,
       NSTableViewDataSource$Builder.numberOfRowsInTableView_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDataSource$Builder.numberOfRowsInTableView_,
+              )
           ? (NSTableView tableView) =>
                 optionalImplementation.numberOfRowsInTableView(tableView)
           : null,
@@ -213091,7 +216295,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_acceptDrop_row_dropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_acceptDrop_row_dropOperation_,
+                  )
               ? (
                   NSTableView tableView,
                   NSDraggingInfo acceptDrop,
@@ -213112,7 +216320,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_draggingSession_endedAtPoint_operation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_draggingSession_endedAtPoint_operation_,
+                  )
               ? (
                   NSTableView tableView,
                   NSDraggingSession draggingSession,
@@ -213136,7 +216348,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_draggingSession_willBeginAtPoint_forRowIndexes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_draggingSession_willBeginAtPoint_forRowIndexes_,
+                  )
               ? (
                   NSTableView tableView,
                   NSDraggingSession draggingSession,
@@ -213160,7 +216376,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes_,
+                  )
               ? (
                   NSTableView tableView,
                   objc.NSURL namesOfPromisedFilesDroppedAtDestination,
@@ -213179,7 +216399,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_objectValueForTableColumn_row_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_objectValueForTableColumn_row_,
+                  )
               ? (
                   NSTableView tableView,
                   NSTableColumn? objectValueForTableColumn,
@@ -213197,7 +216421,10 @@ interface class NSTableViewDataSource$Builder {
       NSTableViewDataSource$Builder
                   .tableView_pasteboardWriterForRow_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDataSource$Builder.tableView_pasteboardWriterForRow_,
+              )
           ? (NSTableView tableView, int pasteboardWriterForRow) =>
                 optionalImplementation.tableViewPasteboardWriterForRow(
                   tableView,
@@ -213211,7 +216438,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_setObjectValue_forTableColumn_row_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_setObjectValue_forTableColumn_row_,
+                  )
               ? (
                   NSTableView tableView,
                   objc.ObjCObject? setObjectValue,
@@ -213233,7 +216464,11 @@ interface class NSTableViewDataSource$Builder {
       NSTableViewDataSource$Builder
                   .tableView_sortDescriptorsDidChange_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDataSource$Builder
+                    .tableView_sortDescriptorsDidChange_,
+              )
           ? (NSTableView tableView, objc.NSArray sortDescriptorsDidChange) {
               optionalImplementation.tableViewSortDescriptorsDidChange(
                 tableView,
@@ -213248,7 +216483,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_updateDraggingItemsForDrag_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_updateDraggingItemsForDrag_,
+                  )
               ? (
                   NSTableView tableView,
                   NSDraggingInfo updateDraggingItemsForDrag,
@@ -213267,7 +216506,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_validateDrop_proposedRow_proposedDropOperation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_validateDrop_proposedRow_proposedDropOperation_,
+                  )
               ? (
                   NSTableView tableView,
                   NSDraggingInfo validateDrop,
@@ -213288,7 +216531,11 @@ interface class NSTableViewDataSource$Builder {
           NSTableViewDataSource$Builder
                       .tableView_writeRowsWithIndexes_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDataSource$Builder
+                        .tableView_writeRowsWithIndexes_toPasteboard_,
+                  )
               ? (
                   NSTableView tableView,
                   objc.NSIndexSet writeRowsWithIndexes,
@@ -214883,6 +218130,11 @@ extension NSTableViewDelegate$Methods on NSTableViewDelegate {
 abstract interface class NSTableViewDelegateSpec {}
 
 abstract interface class NSTableViewDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool controlDidFailToFormatStringErrorDescription(
     NSControl control, {
     required objc.NSString didFailToFormatString,
@@ -215050,6 +218302,10 @@ abstract interface class NSTableViewDelegateOptional {
 
 mixin NSTableViewDelegateDefaults implements NSTableViewDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -215063,6 +218319,9 @@ interface class NSTableViewDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTableViewDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTableViewDelegateOptional.$implementedOptionalMethods].
   static NSTableViewDelegate implementFrom(
     NSTableViewDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -215090,7 +218349,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -215110,7 +218373,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -215129,7 +218396,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSTableViewDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -215140,7 +218410,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.control_textShouldBeginEditing_.implement(
       builder,
       NSTableViewDelegate$Builder.control_textShouldBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.control_textShouldBeginEditing_,
+              )
           ? (NSControl control, NSText textShouldBeginEditing) =>
                 optionalImplementation.controlTextShouldBeginEditing(
                   control,
@@ -215151,7 +218424,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.control_textShouldEndEditing_.implement(
       builder,
       NSTableViewDelegate$Builder.control_textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.control_textShouldEndEditing_,
+              )
           ? (NSControl control, NSText textShouldEndEditing) =>
                 optionalImplementation.controlTextShouldEndEditing(
                   control,
@@ -215166,7 +218442,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -215187,7 +218467,11 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .control_textView_doCommandBySelector_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder
+                    .control_textView_doCommandBySelector_,
+              )
           ? (
               NSControl control,
               NSTextView textView,
@@ -215202,7 +218486,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.controlTextDidBeginEditing_.implement(
       builder,
       NSTableViewDelegate$Builder.controlTextDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -215211,7 +218498,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSTableViewDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -215220,7 +218510,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.controlTextDidEndEditing_.implement(
       builder,
       NSTableViewDelegate$Builder.controlTextDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -215231,7 +218524,10 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .selectionShouldChangeInTableView_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.selectionShouldChangeInTableView_,
+              )
           ? (NSTableView tableView) => optionalImplementation
                 .selectionShouldChangeInTableView(tableView)
           : null,
@@ -215241,7 +218537,11 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .tableView_dataCellForTableColumn_row_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder
+                    .tableView_dataCellForTableColumn_row_,
+              )
           ? (
               NSTableView tableView,
               NSTableColumn? dataCellForTableColumn,
@@ -215256,7 +218556,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableView_didAddRowView_forRow_.implement(
       builder,
       NSTableViewDelegate$Builder.tableView_didAddRowView_forRow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_didAddRowView_forRow_,
+              )
           ? (NSTableView tableView, NSTableRowView didAddRowView, int forRow) {
               optionalImplementation.tableViewDidAddRowViewForRow(
                 tableView,
@@ -215269,7 +218572,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableView_didClickTableColumn_.implement(
       builder,
       NSTableViewDelegate$Builder.tableView_didClickTableColumn_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_didClickTableColumn_,
+              )
           ? (NSTableView tableView, NSTableColumn didClickTableColumn) {
               optionalImplementation.tableViewDidClickTableColumn(
                 tableView,
@@ -215281,7 +218587,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableView_didDragTableColumn_.implement(
       builder,
       NSTableViewDelegate$Builder.tableView_didDragTableColumn_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_didDragTableColumn_,
+              )
           ? (NSTableView tableView, NSTableColumn didDragTableColumn) {
               optionalImplementation.tableViewDidDragTableColumn(
                 tableView,
@@ -215295,7 +218604,10 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .tableView_didRemoveRowView_forRow_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_didRemoveRowView_forRow_,
+              )
           ? (
               NSTableView tableView,
               NSTableRowView didRemoveRowView,
@@ -215312,7 +218624,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableView_heightOfRow_.implement(
       builder,
       NSTableViewDelegate$Builder.tableView_heightOfRow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_heightOfRow_,
+              )
           ? (NSTableView tableView, int heightOfRow) => optionalImplementation
                 .tableViewHeightOfRow(tableView, heightOfRow: heightOfRow)
           : null,
@@ -215320,7 +218635,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableView_isGroupRow_.implement(
       builder,
       NSTableViewDelegate$Builder.tableView_isGroupRow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_isGroupRow_,
+              )
           ? (NSTableView tableView, int isGroupRow) => optionalImplementation
                 .tableViewIsGroupRow(tableView, isGroupRow: isGroupRow)
           : null,
@@ -215331,7 +218649,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_mouseDownInHeaderOfTableColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_mouseDownInHeaderOfTableColumn_,
+                  )
               ? (
                   NSTableView tableView,
                   NSTableColumn mouseDownInHeaderOfTableColumn,
@@ -215352,7 +218674,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_nextTypeSelectMatchFromRow_toRow_forString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_nextTypeSelectMatchFromRow_toRow_forString_,
+                  )
               ? (
                   NSTableView tableView,
                   int nextTypeSelectMatchFromRow,
@@ -215372,7 +218698,10 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .tableView_rowActionsForRow_edge_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_rowActionsForRow_edge_,
+              )
           ? (
               NSTableView tableView,
               int rowActionsForRow,
@@ -215387,7 +218716,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableView_rowViewForRow_.implement(
       builder,
       NSTableViewDelegate$Builder.tableView_rowViewForRow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_rowViewForRow_,
+              )
           ? (NSTableView tableView, int rowViewForRow) => optionalImplementation
                 .tableViewRowViewForRow(tableView, rowViewForRow: rowViewForRow)
           : null,
@@ -215398,7 +218730,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_selectionIndexesForProposedSelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_selectionIndexesForProposedSelection_,
+                  )
               ? (
                   NSTableView tableView,
                   objc.NSIndexSet selectionIndexesForProposedSelection,
@@ -215415,7 +218751,11 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .tableView_shouldEditTableColumn_row_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder
+                    .tableView_shouldEditTableColumn_row_,
+              )
           ? (
               NSTableView tableView,
               NSTableColumn? shouldEditTableColumn,
@@ -215433,7 +218773,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_shouldReorderColumn_toColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_shouldReorderColumn_toColumn_,
+                  )
               ? (
                   NSTableView tableView,
                   int shouldReorderColumn,
@@ -215449,7 +218793,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableView_shouldSelectRow_.implement(
       builder,
       NSTableViewDelegate$Builder.tableView_shouldSelectRow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_shouldSelectRow_,
+              )
           ? (NSTableView tableView, int shouldSelectRow) =>
                 optionalImplementation.tableViewShouldSelectRow(
                   tableView,
@@ -215462,7 +218809,10 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .tableView_shouldSelectTableColumn_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_shouldSelectTableColumn_,
+              )
           ? (NSTableView tableView, NSTableColumn? shouldSelectTableColumn) =>
                 optionalImplementation.tableViewShouldSelectTableColumn(
                   tableView,
@@ -215477,7 +218827,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_shouldShowCellExpansionForTableColumn_row_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_shouldShowCellExpansionForTableColumn_row_,
+                  )
               ? (
                   NSTableView tableView,
                   NSTableColumn? shouldShowCellExpansionForTableColumn,
@@ -215497,7 +218851,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_shouldTrackCell_forTableColumn_row_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_shouldTrackCell_forTableColumn_row_,
+                  )
               ? (
                   NSTableView tableView,
                   NSCell shouldTrackCell,
@@ -215519,7 +218877,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_shouldTypeSelectForEvent_withCurrentSearchString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_shouldTypeSelectForEvent_withCurrentSearchString_,
+                  )
               ? (
                   NSTableView tableView,
                   NSEvent shouldTypeSelectForEvent,
@@ -215537,7 +218899,10 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .tableView_sizeToFitWidthOfColumn_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_sizeToFitWidthOfColumn_,
+              )
           ? (NSTableView tableView, int sizeToFitWidthOfColumn) =>
                 optionalImplementation.tableViewSizeToFitWidthOfColumn(
                   tableView,
@@ -215552,7 +218917,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_toolTipForCell_rect_tableColumn_row_mouseLocation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_toolTipForCell_rect_tableColumn_row_mouseLocation_,
+                  )
               ? (
                   NSTableView tableView,
                   NSCell toolTipForCell,
@@ -215577,7 +218946,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_typeSelectStringForTableColumn_row_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_typeSelectStringForTableColumn_row_,
+                  )
               ? (
                   NSTableView tableView,
                   NSTableColumn? typeSelectStringForTableColumn,
@@ -215597,7 +218970,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_userCanChangeVisibilityOfTableColumn_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_userCanChangeVisibilityOfTableColumn_,
+                  )
               ? (
                   NSTableView tableView,
                   NSTableColumn userCanChangeVisibilityOfTableColumn,
@@ -215615,7 +218992,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_userDidChangeVisibilityOfTableColumns_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_userDidChangeVisibilityOfTableColumns_,
+                  )
               ? (
                   NSTableView tableView,
                   objc.NSArray userDidChangeVisibilityOfTableColumns,
@@ -215634,7 +219015,10 @@ interface class NSTableViewDelegate$Builder {
       NSTableViewDelegate$Builder
                   .tableView_viewForTableColumn_row_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableView_viewForTableColumn_row_,
+              )
           ? (
               NSTableView tableView,
               NSTableColumn? viewForTableColumn,
@@ -215652,7 +219036,11 @@ interface class NSTableViewDelegate$Builder {
           NSTableViewDelegate$Builder
                       .tableView_willDisplayCell_forTableColumn_row_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTableViewDelegate$Builder
+                        .tableView_willDisplayCell_forTableColumn_row_,
+                  )
               ? (
                   NSTableView tableView,
                   objc.ObjCObject willDisplayCell,
@@ -215672,7 +219060,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableViewColumnDidMove_.implement(
       builder,
       NSTableViewDelegate$Builder.tableViewColumnDidMove_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableViewColumnDidMove_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.tableViewColumnDidMove(notification);
             }
@@ -215681,7 +219072,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableViewColumnDidResize_.implement(
       builder,
       NSTableViewDelegate$Builder.tableViewColumnDidResize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableViewColumnDidResize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.tableViewColumnDidResize(notification);
             }
@@ -215690,7 +219084,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableViewSelectionDidChange_.implement(
       builder,
       NSTableViewDelegate$Builder.tableViewSelectionDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableViewSelectionDidChange_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.tableViewSelectionDidChange(notification);
             }
@@ -215699,7 +219096,10 @@ interface class NSTableViewDelegate$Builder {
     NSTableViewDelegate$Builder.tableViewSelectionIsChanging_.implement(
       builder,
       NSTableViewDelegate$Builder.tableViewSelectionIsChanging_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTableViewDelegate$Builder.tableViewSelectionIsChanging_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.tableViewSelectionIsChanging(notification);
             }
@@ -219253,9 +222653,6 @@ interface class NSTextAttachmentCell$Builder {
 
   /// Builds an object that implements the NSTextAttachmentCell protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextAttachmentCellOptional].
   static NSTextAttachmentCell implementFrom(
     NSTextAttachmentCellSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -220156,9 +223553,6 @@ interface class NSTextAttachmentContainer$Builder {
 
   /// Builds an object that implements the NSTextAttachmentContainer protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextAttachmentContainerOptional].
   static NSTextAttachmentContainer implementFrom(
     NSTextAttachmentContainerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -220438,9 +223832,6 @@ interface class NSTextAttachmentLayout$Builder {
 
   /// Builds an object that implements the NSTextAttachmentLayout protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextAttachmentLayoutOptional].
   static NSTextAttachmentLayout implementFrom(
     NSTextAttachmentLayoutSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -223251,6 +226642,11 @@ abstract interface class NSTextCheckingClientSpec {
 }
 
 abstract interface class NSTextCheckingClientOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   /// allowedWritingToolsResultOptions
   int get allowedWritingToolsResultOptions;
   objc.NSAttributedString attributedString();
@@ -223357,6 +226753,10 @@ abstract interface class NSTextCheckingClientOptional {
 
 mixin NSTextCheckingClientDefaults implements NSTextCheckingClientOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -223370,6 +226770,9 @@ interface class NSTextCheckingClient$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextCheckingClientOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextCheckingClientOptional.$implementedOptionalMethods].
   static NSTextCheckingClient implementFrom(
     NSTextCheckingClientSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -223402,7 +226805,10 @@ interface class NSTextCheckingClient$Builder {
       NSTextCheckingClient$Builder
                   .allowedWritingToolsResultOptions
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.allowedWritingToolsResultOptions,
+              )
           ? () => optionalImplementation.allowedWritingToolsResultOptions
           : null,
     );
@@ -223418,7 +226824,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.attributedString.implement(
       builder,
       NSTextCheckingClient$Builder.attributedString.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.attributedString,
+              )
           ? () => optionalImplementation.attributedString()
           : null,
     );
@@ -223435,7 +226844,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.autocorrectionType.implement(
       builder,
       NSTextCheckingClient$Builder.autocorrectionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.autocorrectionType,
+              )
           ? () => optionalImplementation.autocorrectionType
           : null,
     );
@@ -223444,7 +226856,10 @@ interface class NSTextCheckingClient$Builder {
       NSTextCheckingClient$Builder
                   .baselineDeltaForCharacterAtIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.baselineDeltaForCharacterAtIndex_,
+              )
           ? (int anIndex) =>
                 optionalImplementation.baselineDeltaForCharacterAtIndex(anIndex)
           : null,
@@ -223460,7 +226875,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.dataDetectionType.implement(
       builder,
       NSTextCheckingClient$Builder.dataDetectionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.dataDetectionType,
+              )
           ? () => optionalImplementation.dataDetectionType
           : null,
     );
@@ -223472,7 +226890,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.documentVisibleRect.implement(
       builder,
       NSTextCheckingClient$Builder.documentVisibleRect.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.documentVisibleRect,
+              )
           ? () => optionalImplementation.documentVisibleRect
           : null,
     );
@@ -223481,7 +226902,11 @@ interface class NSTextCheckingClient$Builder {
       NSTextCheckingClient$Builder
                   .drawsVerticallyForCharacterAtIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder
+                    .drawsVerticallyForCharacterAtIndex_,
+              )
           ? (int charIndex) => optionalImplementation
                 .drawsVerticallyForCharacterAtIndex(charIndex)
           : null,
@@ -223501,7 +226926,11 @@ interface class NSTextCheckingClient$Builder {
           NSTextCheckingClient$Builder
                       .fractionOfDistanceThroughGlyphForPoint_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextCheckingClient$Builder
+                        .fractionOfDistanceThroughGlyphForPoint_,
+                  )
               ? (objc.CGPoint point) => optionalImplementation
                     .fractionOfDistanceThroughGlyphForPoint(point)
               : null,
@@ -223509,7 +226938,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.grammarCheckingType.implement(
       builder,
       NSTextCheckingClient$Builder.grammarCheckingType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.grammarCheckingType,
+              )
           ? () => optionalImplementation.grammarCheckingType
           : null,
     );
@@ -223520,7 +226952,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.inlinePredictionType.implement(
       builder,
       NSTextCheckingClient$Builder.inlinePredictionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.inlinePredictionType,
+              )
           ? () => optionalImplementation.inlinePredictionType
           : null,
     );
@@ -223530,7 +226965,11 @@ interface class NSTextCheckingClient$Builder {
           NSTextCheckingClient$Builder
                       .insertAdaptiveImageGlyph_replacementRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextCheckingClient$Builder
+                        .insertAdaptiveImageGlyph_replacementRange_,
+                  )
               ? (
                   NSAdaptiveImageGlyph adaptiveImageGlyph,
                   objc.NSRange replacementRange,
@@ -223551,7 +226990,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.linkDetectionType.implement(
       builder,
       NSTextCheckingClient$Builder.linkDetectionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.linkDetectionType,
+              )
           ? () => optionalImplementation.linkDetectionType
           : null,
     );
@@ -223562,7 +227004,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.mathExpressionCompletionType.implement(
       builder,
       NSTextCheckingClient$Builder.mathExpressionCompletionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.mathExpressionCompletionType,
+              )
           ? () => optionalImplementation.mathExpressionCompletionType
           : null,
     );
@@ -223571,7 +227016,10 @@ interface class NSTextCheckingClient$Builder {
       NSTextCheckingClient$Builder
                   .preferredTextAccessoryPlacement
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.preferredTextAccessoryPlacement,
+              )
           ? () => optionalImplementation.preferredTextAccessoryPlacement()
           : null,
     );
@@ -223605,7 +227053,11 @@ interface class NSTextCheckingClient$Builder {
       NSTextCheckingClient$Builder
                   .setAllowedWritingToolsResultOptions_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder
+                    .setAllowedWritingToolsResultOptions_,
+              )
           ? (int value) {
               optionalImplementation.allowedWritingToolsResultOptions = value;
             }
@@ -223620,7 +227072,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setAutocorrectionType_.implement(
       builder,
       NSTextCheckingClient$Builder.setAutocorrectionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setAutocorrectionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.autocorrectionType = value;
             }
@@ -223629,7 +227084,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setDataDetectionType_.implement(
       builder,
       NSTextCheckingClient$Builder.setDataDetectionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setDataDetectionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.dataDetectionType = value;
             }
@@ -223638,7 +227096,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setGrammarCheckingType_.implement(
       builder,
       NSTextCheckingClient$Builder.setGrammarCheckingType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setGrammarCheckingType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.grammarCheckingType = value;
             }
@@ -223647,7 +227108,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setInlinePredictionType_.implement(
       builder,
       NSTextCheckingClient$Builder.setInlinePredictionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setInlinePredictionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.inlinePredictionType = value;
             }
@@ -223656,7 +227120,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setLinkDetectionType_.implement(
       builder,
       NSTextCheckingClient$Builder.setLinkDetectionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setLinkDetectionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.linkDetectionType = value;
             }
@@ -223679,7 +227146,10 @@ interface class NSTextCheckingClient$Builder {
       NSTextCheckingClient$Builder
                   .setMathExpressionCompletionType_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setMathExpressionCompletionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.mathExpressionCompletionType = value;
             }
@@ -223688,7 +227158,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setSmartDashesType_.implement(
       builder,
       NSTextCheckingClient$Builder.setSmartDashesType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setSmartDashesType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.smartDashesType = value;
             }
@@ -223697,7 +227170,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setSmartInsertDeleteType_.implement(
       builder,
       NSTextCheckingClient$Builder.setSmartInsertDeleteType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setSmartInsertDeleteType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.smartInsertDeleteType = value;
             }
@@ -223706,7 +227182,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setSmartQuotesType_.implement(
       builder,
       NSTextCheckingClient$Builder.setSmartQuotesType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setSmartQuotesType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.smartQuotesType = value;
             }
@@ -223715,7 +227194,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setSpellCheckingType_.implement(
       builder,
       NSTextCheckingClient$Builder.setSpellCheckingType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setSpellCheckingType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.spellCheckingType = value;
             }
@@ -223724,7 +227206,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setTextCompletionType_.implement(
       builder,
       NSTextCheckingClient$Builder.setTextCompletionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setTextCompletionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.textCompletionType = value;
             }
@@ -223733,7 +227218,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setTextReplacementType_.implement(
       builder,
       NSTextCheckingClient$Builder.setTextReplacementType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setTextReplacementType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.textReplacementType = value;
             }
@@ -223742,7 +227230,10 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.setWritingToolsBehavior_.implement(
       builder,
       NSTextCheckingClient$Builder.setWritingToolsBehavior_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.setWritingToolsBehavior_,
+              )
           ? (NSWritingToolsBehavior value) {
               optionalImplementation.writingToolsBehavior = value;
             }
@@ -223751,49 +227242,70 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.smartDashesType$1.implement(
       builder,
       NSTextCheckingClient$Builder.smartDashesType$1.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.smartDashesType$1,
+              )
           ? () => optionalImplementation.smartDashesType
           : null,
     );
     NSTextCheckingClient$Builder.smartInsertDeleteType$1.implement(
       builder,
       NSTextCheckingClient$Builder.smartInsertDeleteType$1.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.smartInsertDeleteType$1,
+              )
           ? () => optionalImplementation.smartInsertDeleteType
           : null,
     );
     NSTextCheckingClient$Builder.smartQuotesType$1.implement(
       builder,
       NSTextCheckingClient$Builder.smartQuotesType$1.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.smartQuotesType$1,
+              )
           ? () => optionalImplementation.smartQuotesType
           : null,
     );
     NSTextCheckingClient$Builder.spellCheckingType$1.implement(
       builder,
       NSTextCheckingClient$Builder.spellCheckingType$1.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.spellCheckingType$1,
+              )
           ? () => optionalImplementation.spellCheckingType
           : null,
     );
     NSTextCheckingClient$Builder.supportsAdaptiveImageGlyph.implement(
       builder,
       NSTextCheckingClient$Builder.supportsAdaptiveImageGlyph.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.supportsAdaptiveImageGlyph,
+              )
           ? () => optionalImplementation.supportsAdaptiveImageGlyph
           : null,
     );
     NSTextCheckingClient$Builder.textCompletionType$1.implement(
       builder,
       NSTextCheckingClient$Builder.textCompletionType$1.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.textCompletionType$1,
+              )
           ? () => optionalImplementation.textCompletionType
           : null,
     );
     NSTextCheckingClient$Builder.textReplacementType$1.implement(
       builder,
       NSTextCheckingClient$Builder.textReplacementType$1.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.textReplacementType$1,
+              )
           ? () => optionalImplementation.textReplacementType
           : null,
     );
@@ -223802,7 +227314,10 @@ interface class NSTextCheckingClient$Builder {
       NSTextCheckingClient$Builder
                   .unionRectInVisibleSelectedRange
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.unionRectInVisibleSelectedRange,
+              )
           ? () => optionalImplementation.unionRectInVisibleSelectedRange
           : null,
     );
@@ -223828,14 +227343,20 @@ interface class NSTextCheckingClient$Builder {
     NSTextCheckingClient$Builder.windowLevel.implement(
       builder,
       NSTextCheckingClient$Builder.windowLevel.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.windowLevel,
+              )
           ? () => optionalImplementation.windowLevel()
           : null,
     );
     NSTextCheckingClient$Builder.writingToolsBehavior$1.implement(
       builder,
       NSTextCheckingClient$Builder.writingToolsBehavior$1.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextCheckingClient$Builder.writingToolsBehavior$1,
+              )
           ? () => optionalImplementation.writingToolsBehavior
           : null,
     );
@@ -226342,9 +229863,6 @@ interface class NSTextContent$Builder {
 
   /// Builds an object that implements the NSTextContent protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextContentOptional].
   static NSTextContent implementFrom(
     NSTextContentSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -226836,6 +230354,11 @@ extension NSTextContentManagerDelegate$Methods on NSTextContentManagerDelegate {
 abstract interface class NSTextContentManagerDelegateSpec {}
 
 abstract interface class NSTextContentManagerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool textContentManagerShouldEnumerateTextElementOptions(
     NSTextContentManager textContentManager, {
     required NSTextElement shouldEnumerateTextElement,
@@ -226850,6 +230373,10 @@ abstract interface class NSTextContentManagerDelegateOptional {
 mixin NSTextContentManagerDelegateDefaults
     implements NSTextContentManagerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -226863,6 +230390,9 @@ interface class NSTextContentManagerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextContentManagerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextContentManagerDelegateOptional.$implementedOptionalMethods].
   static NSTextContentManagerDelegate implementFrom(
     NSTextContentManagerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -226893,7 +230423,11 @@ interface class NSTextContentManagerDelegate$Builder {
           NSTextContentManagerDelegate$Builder
                       .textContentManager_shouldEnumerateTextElement_options_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextContentManagerDelegate$Builder
+                        .textContentManager_shouldEnumerateTextElement_options_,
+                  )
               ? (
                   NSTextContentManager textContentManager,
                   NSTextElement shouldEnumerateTextElement,
@@ -226913,7 +230447,11 @@ interface class NSTextContentManagerDelegate$Builder {
           NSTextContentManagerDelegate$Builder
                       .textContentManager_textElementAtLocation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextContentManagerDelegate$Builder
+                        .textContentManager_textElementAtLocation_,
+                  )
               ? (
                   NSTextContentManager textContentManager,
                   NSTextLocation textElementAtLocation,
@@ -227399,6 +230937,11 @@ extension NSTextContentStorageDelegate$Methods on NSTextContentStorageDelegate {
 abstract interface class NSTextContentStorageDelegateSpec {}
 
 abstract interface class NSTextContentStorageDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool textContentManagerShouldEnumerateTextElementOptions(
     NSTextContentManager textContentManager, {
     required NSTextElement shouldEnumerateTextElement,
@@ -227417,6 +230960,10 @@ abstract interface class NSTextContentStorageDelegateOptional {
 mixin NSTextContentStorageDelegateDefaults
     implements NSTextContentStorageDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -227430,6 +230977,9 @@ interface class NSTextContentStorageDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextContentStorageDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextContentStorageDelegateOptional.$implementedOptionalMethods].
   static NSTextContentStorageDelegate implementFrom(
     NSTextContentStorageDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -227460,7 +231010,11 @@ interface class NSTextContentStorageDelegate$Builder {
           NSTextContentStorageDelegate$Builder
                       .textContentManager_shouldEnumerateTextElement_options_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextContentStorageDelegate$Builder
+                        .textContentManager_shouldEnumerateTextElement_options_,
+                  )
               ? (
                   NSTextContentManager textContentManager,
                   NSTextElement shouldEnumerateTextElement,
@@ -227480,7 +231034,11 @@ interface class NSTextContentStorageDelegate$Builder {
           NSTextContentStorageDelegate$Builder
                       .textContentManager_textElementAtLocation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextContentStorageDelegate$Builder
+                        .textContentManager_textElementAtLocation_,
+                  )
               ? (
                   NSTextContentManager textContentManager,
                   NSTextLocation textElementAtLocation,
@@ -227498,7 +231056,11 @@ interface class NSTextContentStorageDelegate$Builder {
           NSTextContentStorageDelegate$Builder
                       .textContentStorage_textParagraphWithRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextContentStorageDelegate$Builder
+                        .textContentStorage_textParagraphWithRange_,
+                  )
               ? (
                   NSTextContentStorage textContentStorage,
                   objc.NSRange textParagraphWithRange,
@@ -227758,6 +231320,11 @@ extension NSTextDelegate$Methods on NSTextDelegate {
 abstract interface class NSTextDelegateSpec {}
 
 abstract interface class NSTextDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void textDidBeginEditing(objc.NSNotification notification);
   void textDidChange(objc.NSNotification notification);
   void textDidEndEditing(objc.NSNotification notification);
@@ -227766,6 +231333,10 @@ abstract interface class NSTextDelegateOptional {
 }
 
 mixin NSTextDelegateDefaults implements NSTextDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -227780,6 +231351,9 @@ interface class NSTextDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextDelegateOptional.$implementedOptionalMethods].
   static NSTextDelegate implementFrom(
     NSTextDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -227804,7 +231378,10 @@ interface class NSTextDelegate$Builder {
     NSTextDelegate$Builder.textDidBeginEditing_.implement(
       builder,
       NSTextDelegate$Builder.textDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextDelegate$Builder.textDidBeginEditing_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textDidBeginEditing(notification);
             }
@@ -227813,7 +231390,10 @@ interface class NSTextDelegate$Builder {
     NSTextDelegate$Builder.textDidChange_.implement(
       builder,
       NSTextDelegate$Builder.textDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextDelegate$Builder.textDidChange_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textDidChange(notification);
             }
@@ -227822,7 +231402,10 @@ interface class NSTextDelegate$Builder {
     NSTextDelegate$Builder.textDidEndEditing_.implement(
       builder,
       NSTextDelegate$Builder.textDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextDelegate$Builder.textDidEndEditing_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textDidEndEditing(notification);
             }
@@ -227831,7 +231414,10 @@ interface class NSTextDelegate$Builder {
     NSTextDelegate$Builder.textShouldBeginEditing_.implement(
       builder,
       NSTextDelegate$Builder.textShouldBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextDelegate$Builder.textShouldBeginEditing_,
+              )
           ? (NSText textObject) =>
                 optionalImplementation.textShouldBeginEditing(textObject)
           : null,
@@ -227839,7 +231425,10 @@ interface class NSTextDelegate$Builder {
     NSTextDelegate$Builder.textShouldEndEditing_.implement(
       builder,
       NSTextDelegate$Builder.textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextDelegate$Builder.textShouldEndEditing_,
+              )
           ? (NSText textObject) =>
                 optionalImplementation.textShouldEndEditing(textObject)
           : null,
@@ -228351,6 +231940,11 @@ abstract interface class NSTextElementProviderSpec {
 }
 
 abstract interface class NSTextElementProviderOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSTextRange? adjustedRangeFromRange(
     NSTextRange textRange, {
     required bool forEditingTextSelection,
@@ -228367,6 +231961,10 @@ abstract interface class NSTextElementProviderOptional {
 
 mixin NSTextElementProviderDefaults implements NSTextElementProviderOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -228380,6 +231978,9 @@ interface class NSTextElementProvider$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextElementProviderOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextElementProviderOptional.$implementedOptionalMethods].
   static NSTextElementProvider implementFrom(
     NSTextElementProviderSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -228410,7 +232011,11 @@ interface class NSTextElementProvider$Builder {
           NSTextElementProvider$Builder
                       .adjustedRangeFromRange_forEditingTextSelection_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextElementProvider$Builder
+                        .adjustedRangeFromRange_forEditingTextSelection_,
+                  )
               ? (NSTextRange textRange, bool forEditingTextSelection) =>
                     optionalImplementation.adjustedRangeFromRange(
                       textRange,
@@ -228441,7 +232046,10 @@ interface class NSTextElementProvider$Builder {
       NSTextElementProvider$Builder
                   .locationFromLocation_withOffset_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextElementProvider$Builder.locationFromLocation_withOffset_,
+              )
           ? (NSTextLocation location, int withOffset) => optionalImplementation
                 .locationFromLocation(location, withOffset: withOffset)
           : null,
@@ -228451,7 +232059,10 @@ interface class NSTextElementProvider$Builder {
       NSTextElementProvider$Builder
                   .offsetFromLocation_toLocation_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextElementProvider$Builder.offsetFromLocation_toLocation_,
+              )
           ? (NSTextLocation from, NSTextLocation toLocation) =>
                 optionalImplementation.offsetFromLocation(
                   from,
@@ -230504,6 +234115,11 @@ extension NSTextFieldDelegate$Methods on NSTextFieldDelegate {
 abstract interface class NSTextFieldDelegateSpec {}
 
 abstract interface class NSTextFieldDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool controlDidFailToFormatStringErrorDescription(
     NSControl control, {
     required objc.NSString didFailToFormatString,
@@ -230561,6 +234177,10 @@ abstract interface class NSTextFieldDelegateOptional {
 
 mixin NSTextFieldDelegateDefaults implements NSTextFieldDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -230574,6 +234194,9 @@ interface class NSTextFieldDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextFieldDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextFieldDelegateOptional.$implementedOptionalMethods].
   static NSTextFieldDelegate implementFrom(
     NSTextFieldDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -230601,7 +234224,11 @@ interface class NSTextFieldDelegate$Builder {
           NSTextFieldDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFieldDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -230621,7 +234248,11 @@ interface class NSTextFieldDelegate$Builder {
           NSTextFieldDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFieldDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -230640,7 +234271,10 @@ interface class NSTextFieldDelegate$Builder {
     NSTextFieldDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSTextFieldDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFieldDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -230651,7 +234285,10 @@ interface class NSTextFieldDelegate$Builder {
     NSTextFieldDelegate$Builder.control_textShouldBeginEditing_.implement(
       builder,
       NSTextFieldDelegate$Builder.control_textShouldBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFieldDelegate$Builder.control_textShouldBeginEditing_,
+              )
           ? (NSControl control, NSText textShouldBeginEditing) =>
                 optionalImplementation.controlTextShouldBeginEditing(
                   control,
@@ -230662,7 +234299,10 @@ interface class NSTextFieldDelegate$Builder {
     NSTextFieldDelegate$Builder.control_textShouldEndEditing_.implement(
       builder,
       NSTextFieldDelegate$Builder.control_textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFieldDelegate$Builder.control_textShouldEndEditing_,
+              )
           ? (NSControl control, NSText textShouldEndEditing) =>
                 optionalImplementation.controlTextShouldEndEditing(
                   control,
@@ -230677,7 +234317,11 @@ interface class NSTextFieldDelegate$Builder {
           NSTextFieldDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFieldDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -230698,7 +234342,11 @@ interface class NSTextFieldDelegate$Builder {
       NSTextFieldDelegate$Builder
                   .control_textView_doCommandBySelector_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFieldDelegate$Builder
+                    .control_textView_doCommandBySelector_,
+              )
           ? (
               NSControl control,
               NSTextView textView,
@@ -230713,7 +234361,10 @@ interface class NSTextFieldDelegate$Builder {
     NSTextFieldDelegate$Builder.controlTextDidBeginEditing_.implement(
       builder,
       NSTextFieldDelegate$Builder.controlTextDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFieldDelegate$Builder.controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -230722,7 +234373,10 @@ interface class NSTextFieldDelegate$Builder {
     NSTextFieldDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSTextFieldDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFieldDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -230731,7 +234385,10 @@ interface class NSTextFieldDelegate$Builder {
     NSTextFieldDelegate$Builder.controlTextDidEndEditing_.implement(
       builder,
       NSTextFieldDelegate$Builder.controlTextDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFieldDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -230743,7 +234400,11 @@ interface class NSTextFieldDelegate$Builder {
           NSTextFieldDelegate$Builder
                       .textField_textView_candidates_forSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFieldDelegate$Builder
+                        .textField_textView_candidates_forSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -230764,7 +234425,11 @@ interface class NSTextFieldDelegate$Builder {
           NSTextFieldDelegate$Builder
                       .textField_textView_candidatesForSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFieldDelegate$Builder
+                        .textField_textView_candidatesForSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -230783,7 +234448,11 @@ interface class NSTextFieldDelegate$Builder {
           NSTextFieldDelegate$Builder
                       .textField_textView_shouldSelectCandidateAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFieldDelegate$Builder
+                        .textField_textView_shouldSelectCandidateAtIndex_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -231656,11 +235325,20 @@ abstract interface class NSTextFinderBarContainerSpec {
 }
 
 abstract interface class NSTextFinderBarContainerOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSView? contentView();
 }
 
 mixin NSTextFinderBarContainerDefaults
     implements NSTextFinderBarContainerOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -231675,6 +235353,9 @@ interface class NSTextFinderBarContainer$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextFinderBarContainerOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextFinderBarContainerOptional.$implementedOptionalMethods].
   static NSTextFinderBarContainer implementFrom(
     NSTextFinderBarContainerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -231701,7 +235382,10 @@ interface class NSTextFinderBarContainer$Builder {
     NSTextFinderBarContainer$Builder.contentView.implement(
       builder,
       NSTextFinderBarContainer$Builder.contentView.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderBarContainer$Builder.contentView,
+              )
           ? () => optionalImplementation.contentView()
           : null,
     );
@@ -232281,6 +235965,11 @@ extension NSTextFinderClient$Methods on NSTextFinderClient {
 abstract interface class NSTextFinderClientSpec {}
 
 abstract interface class NSTextFinderClientOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   /// allowsMultipleSelection
   bool get allowsMultipleSelection;
   NSView contentViewAtIndex(
@@ -232333,6 +236022,10 @@ abstract interface class NSTextFinderClientOptional {
 
 mixin NSTextFinderClientDefaults implements NSTextFinderClientOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -232346,6 +236039,9 @@ interface class NSTextFinderClient$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextFinderClientOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextFinderClientOptional.$implementedOptionalMethods].
   static NSTextFinderClient implementFrom(
     NSTextFinderClientSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -232370,7 +236066,10 @@ interface class NSTextFinderClient$Builder {
     NSTextFinderClient$Builder.allowsMultipleSelection.implement(
       builder,
       NSTextFinderClient$Builder.allowsMultipleSelection.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.allowsMultipleSelection,
+              )
           ? () => optionalImplementation.allowsMultipleSelection
           : null,
     );
@@ -232380,7 +236079,11 @@ interface class NSTextFinderClient$Builder {
           NSTextFinderClient$Builder
                       .contentViewAtIndex_effectiveCharacterRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFinderClient$Builder
+                        .contentViewAtIndex_effectiveCharacterRange_,
+                  )
               ? (
                   int index,
                   ffi.Pointer<objc.NSRange> effectiveCharacterRange,
@@ -232393,7 +236096,10 @@ interface class NSTextFinderClient$Builder {
     NSTextFinderClient$Builder.didReplaceCharacters.implement(
       builder,
       NSTextFinderClient$Builder.didReplaceCharacters.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.didReplaceCharacters,
+              )
           ? () {
               optionalImplementation.didReplaceCharacters();
             }
@@ -232404,7 +236110,11 @@ interface class NSTextFinderClient$Builder {
       NSTextFinderClient$Builder
                   .drawCharactersInRange_forContentView_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder
+                    .drawCharactersInRange_forContentView_,
+              )
           ? (objc.NSRange range, NSView forContentView) {
               optionalImplementation.drawCharactersInRange(
                 range,
@@ -232416,28 +236126,40 @@ interface class NSTextFinderClient$Builder {
     NSTextFinderClient$Builder.firstSelectedRange.implement(
       builder,
       NSTextFinderClient$Builder.firstSelectedRange.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.firstSelectedRange,
+              )
           ? () => optionalImplementation.firstSelectedRange
           : null,
     );
     NSTextFinderClient$Builder.isEditable.implement(
       builder,
       NSTextFinderClient$Builder.isEditable.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.isEditable,
+              )
           ? () => optionalImplementation.isEditable
           : null,
     );
     NSTextFinderClient$Builder.isSelectable.implement(
       builder,
       NSTextFinderClient$Builder.isSelectable.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.isSelectable,
+              )
           ? () => optionalImplementation.isSelectable
           : null,
     );
     NSTextFinderClient$Builder.rectsForCharacterRange_.implement(
       builder,
       NSTextFinderClient$Builder.rectsForCharacterRange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.rectsForCharacterRange_,
+              )
           ? (objc.NSRange range) =>
                 optionalImplementation.rectsForCharacterRange(range)
           : null,
@@ -232447,7 +236169,10 @@ interface class NSTextFinderClient$Builder {
       NSTextFinderClient$Builder
                   .replaceCharactersInRange_withString_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.replaceCharactersInRange_withString_,
+              )
           ? (objc.NSRange range, objc.NSString withString) {
               optionalImplementation.replaceCharactersInRange(
                 range,
@@ -232459,7 +236184,10 @@ interface class NSTextFinderClient$Builder {
     NSTextFinderClient$Builder.scrollRangeToVisible_.implement(
       builder,
       NSTextFinderClient$Builder.scrollRangeToVisible_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.scrollRangeToVisible_,
+              )
           ? (objc.NSRange range) {
               optionalImplementation.scrollRangeToVisible(range);
             }
@@ -232468,14 +236196,20 @@ interface class NSTextFinderClient$Builder {
     NSTextFinderClient$Builder.selectedRanges.implement(
       builder,
       NSTextFinderClient$Builder.selectedRanges.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.selectedRanges,
+              )
           ? () => optionalImplementation.selectedRanges
           : null,
     );
     NSTextFinderClient$Builder.setSelectedRanges_.implement(
       builder,
       NSTextFinderClient$Builder.setSelectedRanges_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.setSelectedRanges_,
+              )
           ? (objc.NSArray value) {
               optionalImplementation.selectedRanges = value;
             }
@@ -232487,7 +236221,11 @@ interface class NSTextFinderClient$Builder {
           NSTextFinderClient$Builder
                       .shouldReplaceCharactersInRanges_withStrings_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFinderClient$Builder
+                        .shouldReplaceCharactersInRanges_withStrings_,
+                  )
               ? (objc.NSArray ranges, objc.NSArray withStrings) =>
                     optionalImplementation.shouldReplaceCharactersInRanges(
                       ranges,
@@ -232498,7 +236236,10 @@ interface class NSTextFinderClient$Builder {
     NSTextFinderClient$Builder.string.implement(
       builder,
       NSTextFinderClient$Builder.string.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.string,
+              )
           ? () => optionalImplementation.string
           : null,
     );
@@ -232509,7 +236250,11 @@ interface class NSTextFinderClient$Builder {
           NSTextFinderClient$Builder
                       .stringAtIndex_effectiveRange_endsWithSearchBoundary_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextFinderClient$Builder
+                        .stringAtIndex_effectiveRange_endsWithSearchBoundary_,
+                  )
               ? (
                   int characterIndex,
                   ffi.Pointer<objc.NSRange> effectiveRange,
@@ -232524,14 +236269,20 @@ interface class NSTextFinderClient$Builder {
     NSTextFinderClient$Builder.stringLength.implement(
       builder,
       NSTextFinderClient$Builder.stringLength.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.stringLength,
+              )
           ? () => optionalImplementation.stringLength()
           : null,
     );
     NSTextFinderClient$Builder.visibleCharacterRanges.implement(
       builder,
       NSTextFinderClient$Builder.visibleCharacterRanges.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextFinderClient$Builder.visibleCharacterRanges,
+              )
           ? () => optionalImplementation.visibleCharacterRanges
           : null,
     );
@@ -233258,9 +237009,6 @@ interface class NSTextInput$Builder {
 
   /// Builds an object that implements the NSTextInput protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextInputOptional].
   static NSTextInput implementFrom(
     NSTextInputSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -234116,6 +237864,11 @@ abstract interface class NSTextInputClientSpec {
 }
 
 abstract interface class NSTextInputClientOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSAttributedString attributedString();
   double baselineDeltaForCharacterAtIndex(int anIndex);
 
@@ -234139,6 +237892,10 @@ abstract interface class NSTextInputClientOptional {
 
 mixin NSTextInputClientDefaults implements NSTextInputClientOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -234152,6 +237909,9 @@ interface class NSTextInputClient$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextInputClientOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextInputClientOptional.$implementedOptionalMethods].
   static NSTextInputClient implementFrom(
     NSTextInputClientSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -234176,7 +237936,10 @@ interface class NSTextInputClient$Builder {
     NSTextInputClient$Builder.attributedString.implement(
       builder,
       NSTextInputClient$Builder.attributedString.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.attributedString,
+              )
           ? () => optionalImplementation.attributedString()
           : null,
     );
@@ -234192,7 +237955,10 @@ interface class NSTextInputClient$Builder {
     NSTextInputClient$Builder.baselineDeltaForCharacterAtIndex_.implement(
       builder,
       NSTextInputClient$Builder.baselineDeltaForCharacterAtIndex_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.baselineDeltaForCharacterAtIndex_,
+              )
           ? (int anIndex) =>
                 optionalImplementation.baselineDeltaForCharacterAtIndex(anIndex)
           : null,
@@ -234209,7 +237975,10 @@ interface class NSTextInputClient$Builder {
     NSTextInputClient$Builder.documentVisibleRect.implement(
       builder,
       NSTextInputClient$Builder.documentVisibleRect.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.documentVisibleRect,
+              )
           ? () => optionalImplementation.documentVisibleRect
           : null,
     );
@@ -234218,7 +237987,10 @@ interface class NSTextInputClient$Builder {
       NSTextInputClient$Builder
                   .drawsVerticallyForCharacterAtIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.drawsVerticallyForCharacterAtIndex_,
+              )
           ? (int charIndex) => optionalImplementation
                 .drawsVerticallyForCharacterAtIndex(charIndex)
           : null,
@@ -234236,7 +238008,11 @@ interface class NSTextInputClient$Builder {
       NSTextInputClient$Builder
                   .fractionOfDistanceThroughGlyphForPoint_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder
+                    .fractionOfDistanceThroughGlyphForPoint_,
+              )
           ? (objc.CGPoint point) => optionalImplementation
                 .fractionOfDistanceThroughGlyphForPoint(point)
           : null,
@@ -234251,7 +238027,11 @@ interface class NSTextInputClient$Builder {
           NSTextInputClient$Builder
                       .insertAdaptiveImageGlyph_replacementRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextInputClient$Builder
+                        .insertAdaptiveImageGlyph_replacementRange_,
+                  )
               ? (
                   NSAdaptiveImageGlyph adaptiveImageGlyph,
                   objc.NSRange replacementRange,
@@ -234276,7 +238056,10 @@ interface class NSTextInputClient$Builder {
     NSTextInputClient$Builder.preferredTextAccessoryPlacement.implement(
       builder,
       NSTextInputClient$Builder.preferredTextAccessoryPlacement.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.preferredTextAccessoryPlacement,
+              )
           ? () => optionalImplementation.preferredTextAccessoryPlacement()
           : null,
     );
@@ -234299,14 +238082,20 @@ interface class NSTextInputClient$Builder {
     NSTextInputClient$Builder.supportsAdaptiveImageGlyph.implement(
       builder,
       NSTextInputClient$Builder.supportsAdaptiveImageGlyph.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.supportsAdaptiveImageGlyph,
+              )
           ? () => optionalImplementation.supportsAdaptiveImageGlyph
           : null,
     );
     NSTextInputClient$Builder.unionRectInVisibleSelectedRange.implement(
       builder,
       NSTextInputClient$Builder.unionRectInVisibleSelectedRange.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.unionRectInVisibleSelectedRange,
+              )
           ? () => optionalImplementation.unionRectInVisibleSelectedRange
           : null,
     );
@@ -234320,7 +238109,10 @@ interface class NSTextInputClient$Builder {
     NSTextInputClient$Builder.windowLevel.implement(
       builder,
       NSTextInputClient$Builder.windowLevel.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputClient$Builder.windowLevel,
+              )
           ? () => optionalImplementation.windowLevel()
           : null,
     );
@@ -235848,6 +239640,11 @@ extension NSTextInputTraits$Methods on NSTextInputTraits {
 abstract interface class NSTextInputTraitsSpec {}
 
 abstract interface class NSTextInputTraitsOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   /// allowedWritingToolsResultOptions
   int get allowedWritingToolsResultOptions;
 
@@ -235935,6 +239732,10 @@ abstract interface class NSTextInputTraitsOptional {
 
 mixin NSTextInputTraitsDefaults implements NSTextInputTraitsOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -235948,6 +239749,9 @@ interface class NSTextInputTraits$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextInputTraitsOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextInputTraitsOptional.$implementedOptionalMethods].
   static NSTextInputTraits implementFrom(
     NSTextInputTraitsSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -235972,49 +239776,70 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.allowedWritingToolsResultOptions.implement(
       builder,
       NSTextInputTraits$Builder.allowedWritingToolsResultOptions.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.allowedWritingToolsResultOptions,
+              )
           ? () => optionalImplementation.allowedWritingToolsResultOptions
           : null,
     );
     NSTextInputTraits$Builder.autocorrectionType.implement(
       builder,
       NSTextInputTraits$Builder.autocorrectionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.autocorrectionType,
+              )
           ? () => optionalImplementation.autocorrectionType
           : null,
     );
     NSTextInputTraits$Builder.dataDetectionType.implement(
       builder,
       NSTextInputTraits$Builder.dataDetectionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.dataDetectionType,
+              )
           ? () => optionalImplementation.dataDetectionType
           : null,
     );
     NSTextInputTraits$Builder.grammarCheckingType.implement(
       builder,
       NSTextInputTraits$Builder.grammarCheckingType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.grammarCheckingType,
+              )
           ? () => optionalImplementation.grammarCheckingType
           : null,
     );
     NSTextInputTraits$Builder.inlinePredictionType.implement(
       builder,
       NSTextInputTraits$Builder.inlinePredictionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.inlinePredictionType,
+              )
           ? () => optionalImplementation.inlinePredictionType
           : null,
     );
     NSTextInputTraits$Builder.linkDetectionType.implement(
       builder,
       NSTextInputTraits$Builder.linkDetectionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.linkDetectionType,
+              )
           ? () => optionalImplementation.linkDetectionType
           : null,
     );
     NSTextInputTraits$Builder.mathExpressionCompletionType.implement(
       builder,
       NSTextInputTraits$Builder.mathExpressionCompletionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.mathExpressionCompletionType,
+              )
           ? () => optionalImplementation.mathExpressionCompletionType
           : null,
     );
@@ -236023,7 +239848,10 @@ interface class NSTextInputTraits$Builder {
       NSTextInputTraits$Builder
                   .setAllowedWritingToolsResultOptions_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setAllowedWritingToolsResultOptions_,
+              )
           ? (int value) {
               optionalImplementation.allowedWritingToolsResultOptions = value;
             }
@@ -236032,7 +239860,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setAutocorrectionType_.implement(
       builder,
       NSTextInputTraits$Builder.setAutocorrectionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setAutocorrectionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.autocorrectionType = value;
             }
@@ -236041,7 +239872,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setDataDetectionType_.implement(
       builder,
       NSTextInputTraits$Builder.setDataDetectionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setDataDetectionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.dataDetectionType = value;
             }
@@ -236050,7 +239884,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setGrammarCheckingType_.implement(
       builder,
       NSTextInputTraits$Builder.setGrammarCheckingType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setGrammarCheckingType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.grammarCheckingType = value;
             }
@@ -236059,7 +239896,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setInlinePredictionType_.implement(
       builder,
       NSTextInputTraits$Builder.setInlinePredictionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setInlinePredictionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.inlinePredictionType = value;
             }
@@ -236068,7 +239908,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setLinkDetectionType_.implement(
       builder,
       NSTextInputTraits$Builder.setLinkDetectionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setLinkDetectionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.linkDetectionType = value;
             }
@@ -236077,7 +239920,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setMathExpressionCompletionType_.implement(
       builder,
       NSTextInputTraits$Builder.setMathExpressionCompletionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setMathExpressionCompletionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.mathExpressionCompletionType = value;
             }
@@ -236086,7 +239932,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setSmartDashesType_.implement(
       builder,
       NSTextInputTraits$Builder.setSmartDashesType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setSmartDashesType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.smartDashesType = value;
             }
@@ -236095,7 +239944,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setSmartInsertDeleteType_.implement(
       builder,
       NSTextInputTraits$Builder.setSmartInsertDeleteType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setSmartInsertDeleteType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.smartInsertDeleteType = value;
             }
@@ -236104,7 +239956,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setSmartQuotesType_.implement(
       builder,
       NSTextInputTraits$Builder.setSmartQuotesType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setSmartQuotesType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.smartQuotesType = value;
             }
@@ -236113,7 +239968,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setSpellCheckingType_.implement(
       builder,
       NSTextInputTraits$Builder.setSpellCheckingType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setSpellCheckingType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.spellCheckingType = value;
             }
@@ -236122,7 +239980,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setTextCompletionType_.implement(
       builder,
       NSTextInputTraits$Builder.setTextCompletionType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setTextCompletionType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.textCompletionType = value;
             }
@@ -236131,7 +239992,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setTextReplacementType_.implement(
       builder,
       NSTextInputTraits$Builder.setTextReplacementType_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setTextReplacementType_,
+              )
           ? (NSTextInputTraitType value) {
               optionalImplementation.textReplacementType = value;
             }
@@ -236140,7 +240004,10 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.setWritingToolsBehavior_.implement(
       builder,
       NSTextInputTraits$Builder.setWritingToolsBehavior_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.setWritingToolsBehavior_,
+              )
           ? (NSWritingToolsBehavior value) {
               optionalImplementation.writingToolsBehavior = value;
             }
@@ -236149,49 +240016,70 @@ interface class NSTextInputTraits$Builder {
     NSTextInputTraits$Builder.smartDashesType.implement(
       builder,
       NSTextInputTraits$Builder.smartDashesType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.smartDashesType,
+              )
           ? () => optionalImplementation.smartDashesType
           : null,
     );
     NSTextInputTraits$Builder.smartInsertDeleteType.implement(
       builder,
       NSTextInputTraits$Builder.smartInsertDeleteType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.smartInsertDeleteType,
+              )
           ? () => optionalImplementation.smartInsertDeleteType
           : null,
     );
     NSTextInputTraits$Builder.smartQuotesType.implement(
       builder,
       NSTextInputTraits$Builder.smartQuotesType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.smartQuotesType,
+              )
           ? () => optionalImplementation.smartQuotesType
           : null,
     );
     NSTextInputTraits$Builder.spellCheckingType.implement(
       builder,
       NSTextInputTraits$Builder.spellCheckingType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.spellCheckingType,
+              )
           ? () => optionalImplementation.spellCheckingType
           : null,
     );
     NSTextInputTraits$Builder.textCompletionType.implement(
       builder,
       NSTextInputTraits$Builder.textCompletionType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.textCompletionType,
+              )
           ? () => optionalImplementation.textCompletionType
           : null,
     );
     NSTextInputTraits$Builder.textReplacementType.implement(
       builder,
       NSTextInputTraits$Builder.textReplacementType.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.textReplacementType,
+              )
           ? () => optionalImplementation.textReplacementType
           : null,
     );
     NSTextInputTraits$Builder.writingToolsBehavior.implement(
       builder,
       NSTextInputTraits$Builder.writingToolsBehavior.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextInputTraits$Builder.writingToolsBehavior,
+              )
           ? () => optionalImplementation.writingToolsBehavior
           : null,
     );
@@ -238535,6 +242423,11 @@ extension NSTextLayoutManagerDelegate$Methods on NSTextLayoutManagerDelegate {
 abstract interface class NSTextLayoutManagerDelegateSpec {}
 
 abstract interface class NSTextLayoutManagerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSDictionary? textLayoutManager(
     NSTextLayoutManager textLayoutManager, {
     required objc.ObjCObject renderingAttributesForLink,
@@ -238557,6 +242450,10 @@ abstract interface class NSTextLayoutManagerDelegateOptional {
 mixin NSTextLayoutManagerDelegateDefaults
     implements NSTextLayoutManagerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -238570,6 +242467,9 @@ interface class NSTextLayoutManagerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextLayoutManagerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextLayoutManagerDelegateOptional.$implementedOptionalMethods].
   static NSTextLayoutManagerDelegate implementFrom(
     NSTextLayoutManagerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -238600,7 +242500,11 @@ interface class NSTextLayoutManagerDelegate$Builder {
           NSTextLayoutManagerDelegate$Builder
                       .textLayoutManager_renderingAttributesForLink_atLocation_defaultAttributes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextLayoutManagerDelegate$Builder
+                        .textLayoutManager_renderingAttributesForLink_atLocation_defaultAttributes_,
+                  )
               ? (
                   NSTextLayoutManager textLayoutManager,
                   objc.ObjCObject renderingAttributesForLink,
@@ -238621,7 +242525,11 @@ interface class NSTextLayoutManagerDelegate$Builder {
           NSTextLayoutManagerDelegate$Builder
                       .textLayoutManager_shouldBreakLineBeforeLocation_hyphenating_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextLayoutManagerDelegate$Builder
+                        .textLayoutManager_shouldBreakLineBeforeLocation_hyphenating_,
+                  )
               ? (
                   NSTextLayoutManager textLayoutManager,
                   NSTextLocation shouldBreakLineBeforeLocation,
@@ -238642,7 +242550,11 @@ interface class NSTextLayoutManagerDelegate$Builder {
           NSTextLayoutManagerDelegate$Builder
                       .textLayoutManager_textLayoutFragmentForLocation_inTextElement_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextLayoutManagerDelegate$Builder
+                        .textLayoutManager_textLayoutFragmentForLocation_inTextElement_,
+                  )
               ? (
                   NSTextLayoutManager textLayoutManager,
                   NSTextLocation textLayoutFragmentForLocation,
@@ -238894,9 +242806,6 @@ interface class NSTextLayoutOrientationProvider$Builder {
 
   /// Builds an object that implements the NSTextLayoutOrientationProvider protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextLayoutOrientationProviderOptional].
   static NSTextLayoutOrientationProvider implementFrom(
     NSTextLayoutOrientationProviderSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -239780,9 +243689,6 @@ interface class NSTextLocation$Builder {
 
   /// Builds an object that implements the NSTextLocation protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextLocationOptional].
   static NSTextLocation implementFrom(
     NSTextLocationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -240985,6 +244891,11 @@ abstract interface class NSTextSelectionDataSourceSpec {
 }
 
 abstract interface class NSTextSelectionDataSourceOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void enumerateContainerBoundariesFromLocation(
     NSTextLocation location, {
     required bool reverse,
@@ -241001,6 +244912,10 @@ abstract interface class NSTextSelectionDataSourceOptional {
 mixin NSTextSelectionDataSourceDefaults
     implements NSTextSelectionDataSourceOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -241014,6 +244929,9 @@ interface class NSTextSelectionDataSource$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextSelectionDataSourceOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextSelectionDataSourceOptional.$implementedOptionalMethods].
   static NSTextSelectionDataSource implementFrom(
     NSTextSelectionDataSourceSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -241072,7 +244990,11 @@ interface class NSTextSelectionDataSource$Builder {
           NSTextSelectionDataSource$Builder
                       .enumerateContainerBoundariesFromLocation_reverse_usingBlock_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextSelectionDataSource$Builder
+                        .enumerateContainerBoundariesFromLocation_reverse_usingBlock_,
+                  )
               ? (
                   NSTextLocation location,
                   bool reverse,
@@ -241141,7 +245063,11 @@ interface class NSTextSelectionDataSource$Builder {
           NSTextSelectionDataSource$Builder
                       .textLayoutOrientationAtLocation_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextSelectionDataSource$Builder
+                        .textLayoutOrientationAtLocation_,
+                  )
               ? (NSTextLocation location) => optionalImplementation
                     .textLayoutOrientationAtLocation(location)
               : null,
@@ -242357,6 +246283,11 @@ extension NSTextStorageDelegate$Methods on NSTextStorageDelegate {
 abstract interface class NSTextStorageDelegateSpec {}
 
 abstract interface class NSTextStorageDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void textStorageDidProcessEditingRangeChangeInLength(
     NSTextStorage textStorage, {
     required int didProcessEditing,
@@ -242373,6 +246304,10 @@ abstract interface class NSTextStorageDelegateOptional {
 
 mixin NSTextStorageDelegateDefaults implements NSTextStorageDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -242386,6 +246321,9 @@ interface class NSTextStorageDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextStorageDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextStorageDelegateOptional.$implementedOptionalMethods].
   static NSTextStorageDelegate implementFrom(
     NSTextStorageDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -242416,7 +246354,11 @@ interface class NSTextStorageDelegate$Builder {
           NSTextStorageDelegate$Builder
                       .textStorage_didProcessEditing_range_changeInLength_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextStorageDelegate$Builder
+                        .textStorage_didProcessEditing_range_changeInLength_,
+                  )
               ? (
                   NSTextStorage textStorage,
                   int didProcessEditing,
@@ -242440,7 +246382,11 @@ interface class NSTextStorageDelegate$Builder {
           NSTextStorageDelegate$Builder
                       .textStorage_willProcessEditing_range_changeInLength_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextStorageDelegate$Builder
+                        .textStorage_willProcessEditing_range_changeInLength_,
+                  )
               ? (
                   NSTextStorage textStorage,
                   int willProcessEditing,
@@ -242667,9 +246613,6 @@ interface class NSTextStorageObserving$Builder {
 
   /// Builds an object that implements the NSTextStorageObserving protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTextStorageObservingOptional].
   static NSTextStorageObserving implementFrom(
     NSTextStorageObservingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -245991,6 +249934,11 @@ extension NSTextViewDelegate$Methods on NSTextViewDelegate {
 abstract interface class NSTextViewDelegateSpec {}
 
 abstract interface class NSTextViewDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void textDidBeginEditing(objc.NSNotification notification);
   void textDidChange(objc.NSNotification notification);
   void textDidEndEditing(objc.NSNotification notification);
@@ -246159,6 +250107,10 @@ abstract interface class NSTextViewDelegateOptional {
 
 mixin NSTextViewDelegateDefaults implements NSTextViewDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -246172,6 +250124,9 @@ interface class NSTextViewDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextViewDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextViewDelegateOptional.$implementedOptionalMethods].
   static NSTextViewDelegate implementFrom(
     NSTextViewDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -246196,7 +250151,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textDidBeginEditing_.implement(
       builder,
       NSTextViewDelegate$Builder.textDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textDidBeginEditing_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textDidBeginEditing(notification);
             }
@@ -246205,7 +250163,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textDidChange_.implement(
       builder,
       NSTextViewDelegate$Builder.textDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textDidChange_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textDidChange(notification);
             }
@@ -246214,7 +250175,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textDidEndEditing_.implement(
       builder,
       NSTextViewDelegate$Builder.textDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textDidEndEditing_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textDidEndEditing(notification);
             }
@@ -246223,7 +250187,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textShouldBeginEditing_.implement(
       builder,
       NSTextViewDelegate$Builder.textShouldBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textShouldBeginEditing_,
+              )
           ? (NSText textObject) =>
                 optionalImplementation.textShouldBeginEditing(textObject)
           : null,
@@ -246231,7 +250198,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textShouldEndEditing_.implement(
       builder,
       NSTextViewDelegate$Builder.textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textShouldEndEditing_,
+              )
           ? (NSText textObject) =>
                 optionalImplementation.textShouldEndEditing(textObject)
           : null,
@@ -246242,7 +250212,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_URLForContentsOfTextAttachment_atIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_URLForContentsOfTextAttachment_atIndex_,
+                  )
               ? (
                   NSTextView textView,
                   NSTextAttachment URLForContentsOfTextAttachment,
@@ -246261,7 +250235,11 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textView_candidates_forSelectedRange_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder
+                    .textView_candidates_forSelectedRange_,
+              )
           ? (
               NSTextView textView,
               objc.NSArray candidates,
@@ -246278,7 +250256,10 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textView_candidatesForSelectedRange_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_candidatesForSelectedRange_,
+              )
           ? (NSTextView textView, objc.NSRange candidatesForSelectedRange) =>
                 optionalImplementation.textViewCandidatesForSelectedRange(
                   textView,
@@ -246289,7 +250270,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textView_clickedOnCell_inRect_.implement(
       builder,
       NSTextViewDelegate$Builder.textView_clickedOnCell_inRect_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_clickedOnCell_inRect_,
+              )
           ? (
               NSTextView textView,
               NSTextAttachmentCell clickedOnCell,
@@ -246308,7 +250292,11 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textView_clickedOnCell_inRect_atIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder
+                    .textView_clickedOnCell_inRect_atIndex_,
+              )
           ? (
               NSTextView textView,
               NSTextAttachmentCell clickedOnCell,
@@ -246327,7 +250315,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textView_clickedOnLink_.implement(
       builder,
       NSTextViewDelegate$Builder.textView_clickedOnLink_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_clickedOnLink_,
+              )
           ? (NSTextView textView, objc.ObjCObject clickedOnLink) =>
                 optionalImplementation.textViewClickedOnLink(
                   textView,
@@ -246338,7 +250329,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textView_clickedOnLink_atIndex_.implement(
       builder,
       NSTextViewDelegate$Builder.textView_clickedOnLink_atIndex_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_clickedOnLink_atIndex_,
+              )
           ? (NSTextView textView, objc.ObjCObject clickedOnLink, int atIndex) =>
                 optionalImplementation.textViewClickedOnLinkAtIndex(
                   textView,
@@ -246354,7 +250348,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSArray completions,
@@ -246376,7 +250374,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_didCheckTextInRange_types_options_results_orthography_wordCount_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_didCheckTextInRange_types_options_results_orthography_wordCount_,
+                  )
               ? (
                   NSTextView view,
                   objc.NSRange didCheckTextInRange,
@@ -246400,7 +250402,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textView_doCommandBySelector_.implement(
       builder,
       NSTextViewDelegate$Builder.textView_doCommandBySelector_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_doCommandBySelector_,
+              )
           ? (
               NSTextView textView,
               ffi.Pointer<objc.ObjCSelector> doCommandBySelector,
@@ -246415,7 +250420,10 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textView_doubleClickedOnCell_inRect_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_doubleClickedOnCell_inRect_,
+              )
           ? (
               NSTextView textView,
               NSTextAttachmentCell doubleClickedOnCell,
@@ -246435,7 +250443,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_doubleClickedOnCell_inRect_atIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_doubleClickedOnCell_inRect_atIndex_,
+                  )
               ? (
                   NSTextView textView,
                   NSTextAttachmentCell doubleClickedOnCell,
@@ -246457,7 +250469,10 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textView_draggedCell_inRect_event_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_draggedCell_inRect_event_,
+              )
           ? (
               NSTextView view,
               NSTextAttachmentCell draggedCell,
@@ -246479,7 +250494,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_draggedCell_inRect_event_atIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_draggedCell_inRect_event_atIndex_,
+                  )
               ? (
                   NSTextView view,
                   NSTextAttachmentCell draggedCell,
@@ -246500,7 +250519,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textView_menu_forEvent_atIndex_.implement(
       builder,
       NSTextViewDelegate$Builder.textView_menu_forEvent_atIndex_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textView_menu_forEvent_atIndex_,
+              )
           ? (NSTextView view, NSMenu menu, NSEvent forEvent, int atIndex) =>
                 optionalImplementation.textViewMenuForEventAtIndex(
                   view,
@@ -246517,7 +250539,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_shouldChangeTextInRange_replacementString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_shouldChangeTextInRange_replacementString_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSRange shouldChangeTextInRange,
@@ -246537,7 +250563,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_shouldChangeTextInRanges_replacementStrings_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_shouldChangeTextInRanges_replacementStrings_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSArray shouldChangeTextInRanges,
@@ -246557,7 +250587,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_shouldChangeTypingAttributes_toAttributes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_shouldChangeTypingAttributes_toAttributes_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSDictionary shouldChangeTypingAttributes,
@@ -246576,7 +250610,11 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textView_shouldSelectCandidateAtIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder
+                    .textView_shouldSelectCandidateAtIndex_,
+              )
           ? (NSTextView textView, int shouldSelectCandidateAtIndex) =>
                 optionalImplementation.textViewShouldSelectCandidateAtIndex(
                   textView,
@@ -246589,7 +250627,11 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textView_shouldSetSpellingState_range_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder
+                    .textView_shouldSetSpellingState_range_,
+              )
           ? (
               NSTextView textView,
               int shouldSetSpellingState,
@@ -246607,7 +250649,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_shouldUpdateTouchBarItemIdentifiers_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_shouldUpdateTouchBarItemIdentifiers_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSArray shouldUpdateTouchBarItemIdentifiers,
@@ -246626,7 +250672,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_willChangeSelectionFromCharacterRange_toCharacterRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_willChangeSelectionFromCharacterRange_toCharacterRange_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSRange willChangeSelectionFromCharacterRange,
@@ -246647,7 +250697,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_willChangeSelectionFromCharacterRanges_toCharacterRanges_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_willChangeSelectionFromCharacterRanges_toCharacterRanges_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSArray willChangeSelectionFromCharacterRanges,
@@ -246667,7 +250721,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_willCheckTextInRange_options_types_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_willCheckTextInRange_options_types_,
+                  )
               ? (
                   NSTextView view,
                   objc.NSRange willCheckTextInRange,
@@ -246688,7 +250746,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_willDisplayToolTip_forCharacterAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_willDisplayToolTip_forCharacterAtIndex_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSString willDisplayToolTip,
@@ -246707,7 +250769,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_willShowSharingServicePicker_forItems_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_willShowSharingServicePicker_forItems_,
+                  )
               ? (
                   NSTextView textView,
                   NSSharingServicePicker willShowSharingServicePicker,
@@ -246727,7 +250793,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_writablePasteboardTypesForCell_atIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_writablePasteboardTypesForCell_atIndex_,
+                  )
               ? (
                   NSTextView view,
                   NSTextAttachmentCell writablePasteboardTypesForCell,
@@ -246747,7 +250817,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_writeCell_atIndex_toPasteboard_type_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_writeCell_atIndex_toPasteboard_type_,
+                  )
               ? (
                   NSTextView view,
                   NSTextAttachmentCell writeCell,
@@ -246771,7 +250845,11 @@ interface class NSTextViewDelegate$Builder {
           NSTextViewDelegate$Builder
                       .textView_writingToolsIgnoredRangesInEnclosingRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewDelegate$Builder
+                        .textView_writingToolsIgnoredRangesInEnclosingRange_,
+                  )
               ? (
                   NSTextView textView,
                   objc.NSRange writingToolsIgnoredRangesInEnclosingRange,
@@ -246786,7 +250864,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textViewDidChangeSelection_.implement(
       builder,
       NSTextViewDelegate$Builder.textViewDidChangeSelection_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textViewDidChangeSelection_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textViewDidChangeSelection(notification);
             }
@@ -246797,7 +250878,10 @@ interface class NSTextViewDelegate$Builder {
       NSTextViewDelegate$Builder
                   .textViewDidChangeTypingAttributes_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textViewDidChangeTypingAttributes_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.textViewDidChangeTypingAttributes(
                 notification,
@@ -246808,7 +250892,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textViewWritingToolsDidEnd_.implement(
       builder,
       NSTextViewDelegate$Builder.textViewWritingToolsDidEnd_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textViewWritingToolsDidEnd_,
+              )
           ? (NSTextView textView) {
               optionalImplementation.textViewWritingToolsDidEnd(textView);
             }
@@ -246817,7 +250904,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.textViewWritingToolsWillBegin_.implement(
       builder,
       NSTextViewDelegate$Builder.textViewWritingToolsWillBegin_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.textViewWritingToolsWillBegin_,
+              )
           ? (NSTextView textView) {
               optionalImplementation.textViewWritingToolsWillBegin(textView);
             }
@@ -246826,7 +250916,10 @@ interface class NSTextViewDelegate$Builder {
     NSTextViewDelegate$Builder.undoManagerForTextView_.implement(
       builder,
       NSTextViewDelegate$Builder.undoManagerForTextView_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTextViewDelegate$Builder.undoManagerForTextView_,
+              )
           ? (NSTextView view) =>
                 optionalImplementation.undoManagerForTextView(view)
           : null,
@@ -249009,6 +253102,11 @@ abstract interface class NSTextViewportLayoutControllerDelegateSpec {
 }
 
 abstract interface class NSTextViewportLayoutControllerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void textViewportLayoutControllerDidLayout(
     NSTextViewportLayoutController textViewportLayoutController,
   );
@@ -249019,6 +253117,10 @@ abstract interface class NSTextViewportLayoutControllerDelegateOptional {
 
 mixin NSTextViewportLayoutControllerDelegateDefaults
     implements NSTextViewportLayoutControllerDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -249034,6 +253136,9 @@ interface class NSTextViewportLayoutControllerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTextViewportLayoutControllerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTextViewportLayoutControllerDelegateOptional.$implementedOptionalMethods].
   static NSTextViewportLayoutControllerDelegate implementFrom(
     NSTextViewportLayoutControllerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -249077,7 +253182,11 @@ interface class NSTextViewportLayoutControllerDelegate$Builder {
           NSTextViewportLayoutControllerDelegate$Builder
                       .textViewportLayoutControllerDidLayout_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewportLayoutControllerDelegate$Builder
+                        .textViewportLayoutControllerDidLayout_,
+                  )
               ? (NSTextViewportLayoutController textViewportLayoutController) {
                   optionalImplementation.textViewportLayoutControllerDidLayout(
                     textViewportLayoutController,
@@ -249092,7 +253201,11 @@ interface class NSTextViewportLayoutControllerDelegate$Builder {
           NSTextViewportLayoutControllerDelegate$Builder
                       .textViewportLayoutControllerWillLayout_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTextViewportLayoutControllerDelegate$Builder
+                        .textViewportLayoutControllerWillLayout_,
+                  )
               ? (NSTextViewportLayoutController textViewportLayoutController) {
                   optionalImplementation.textViewportLayoutControllerWillLayout(
                     textViewportLayoutController,
@@ -250971,6 +255084,11 @@ extension NSTokenFieldCellDelegate$Methods on NSTokenFieldCellDelegate {
 abstract interface class NSTokenFieldCellDelegateSpec {}
 
 abstract interface class NSTokenFieldCellDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSArray
   tokenFieldCellCompletionsForSubstringIndexOfTokenIndexOfSelectedItem(
     NSTokenFieldCell tokenFieldCell, {
@@ -251021,6 +255139,10 @@ abstract interface class NSTokenFieldCellDelegateOptional {
 mixin NSTokenFieldCellDelegateDefaults
     implements NSTokenFieldCellDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -251034,6 +255156,9 @@ interface class NSTokenFieldCellDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTokenFieldCellDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTokenFieldCellDelegateOptional.$implementedOptionalMethods].
   static NSTokenFieldCellDelegate implementFrom(
     NSTokenFieldCellDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -251064,7 +255189,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_completionsForSubstring_indexOfToken_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_completionsForSubstring_indexOfToken_indexOfSelectedItem_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.NSString completionsForSubstring,
@@ -251086,7 +255215,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_displayStringForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_displayStringForRepresentedObject_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.ObjCObject displayStringForRepresentedObject,
@@ -251105,7 +255238,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_editingStringForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_editingStringForRepresentedObject_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.ObjCObject editingStringForRepresentedObject,
@@ -251123,7 +255260,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_hasMenuForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_hasMenuForRepresentedObject_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.ObjCObject hasMenuForRepresentedObject,
@@ -251140,7 +255281,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_menuForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_menuForRepresentedObject_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.ObjCObject menuForRepresentedObject,
@@ -251157,7 +255302,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_readFromPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_readFromPasteboard_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   NSPasteboard readFromPasteboard,
@@ -251174,7 +255323,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_representedObjectForEditingString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_representedObjectForEditingString_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.NSString representedObjectForEditingString,
@@ -251192,7 +255345,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_shouldAddObjects_atIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_shouldAddObjects_atIndex_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.NSArray shouldAddObjects,
@@ -251211,7 +255368,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_styleForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_styleForRepresentedObject_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.ObjCObject styleForRepresentedObject,
@@ -251229,7 +255390,11 @@ interface class NSTokenFieldCellDelegate$Builder {
           NSTokenFieldCellDelegate$Builder
                       .tokenFieldCell_writeRepresentedObjects_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldCellDelegate$Builder
+                        .tokenFieldCell_writeRepresentedObjects_toPasteboard_,
+                  )
               ? (
                   NSTokenFieldCell tokenFieldCell,
                   objc.NSArray writeRepresentedObjects,
@@ -252241,6 +256406,11 @@ extension NSTokenFieldDelegate$Methods on NSTokenFieldDelegate {
 abstract interface class NSTokenFieldDelegateSpec {}
 
 abstract interface class NSTokenFieldDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool controlDidFailToFormatStringErrorDescription(
     NSControl control, {
     required objc.NSString didFailToFormatString,
@@ -252343,6 +256513,10 @@ abstract interface class NSTokenFieldDelegateOptional {
 
 mixin NSTokenFieldDelegateDefaults implements NSTokenFieldDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -252356,6 +256530,9 @@ interface class NSTokenFieldDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTokenFieldDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTokenFieldDelegateOptional.$implementedOptionalMethods].
   static NSTokenFieldDelegate implementFrom(
     NSTokenFieldDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -252383,7 +256560,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .control_didFailToFormatString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .control_didFailToFormatString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToFormatString,
@@ -252403,7 +256584,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .control_didFailToValidatePartialString_errorDescription_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .control_didFailToValidatePartialString_errorDescription_,
+                  )
               ? (
                   NSControl control,
                   objc.NSString didFailToValidatePartialString,
@@ -252422,7 +256607,10 @@ interface class NSTokenFieldDelegate$Builder {
     NSTokenFieldDelegate$Builder.control_isValidObject_.implement(
       builder,
       NSTokenFieldDelegate$Builder.control_isValidObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder.control_isValidObject_,
+              )
           ? (NSControl control, objc.ObjCObject? isValidObject) =>
                 optionalImplementation.controlIsValidObject(
                   control,
@@ -252435,7 +256623,10 @@ interface class NSTokenFieldDelegate$Builder {
       NSTokenFieldDelegate$Builder
                   .control_textShouldBeginEditing_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder.control_textShouldBeginEditing_,
+              )
           ? (NSControl control, NSText textShouldBeginEditing) =>
                 optionalImplementation.controlTextShouldBeginEditing(
                   control,
@@ -252446,7 +256637,10 @@ interface class NSTokenFieldDelegate$Builder {
     NSTokenFieldDelegate$Builder.control_textShouldEndEditing_.implement(
       builder,
       NSTokenFieldDelegate$Builder.control_textShouldEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder.control_textShouldEndEditing_,
+              )
           ? (NSControl control, NSText textShouldEndEditing) =>
                 optionalImplementation.controlTextShouldEndEditing(
                   control,
@@ -252461,7 +256655,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .control_textView_completions_forPartialWordRange_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .control_textView_completions_forPartialWordRange_indexOfSelectedItem_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -252483,7 +256681,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .control_textView_doCommandBySelector_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .control_textView_doCommandBySelector_,
+                  )
               ? (
                   NSControl control,
                   NSTextView textView,
@@ -252498,7 +256700,10 @@ interface class NSTokenFieldDelegate$Builder {
     NSTokenFieldDelegate$Builder.controlTextDidBeginEditing_.implement(
       builder,
       NSTokenFieldDelegate$Builder.controlTextDidBeginEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder.controlTextDidBeginEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidBeginEditing(obj);
             }
@@ -252507,7 +256712,10 @@ interface class NSTokenFieldDelegate$Builder {
     NSTokenFieldDelegate$Builder.controlTextDidChange_.implement(
       builder,
       NSTokenFieldDelegate$Builder.controlTextDidChange_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder.controlTextDidChange_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidChange(obj);
             }
@@ -252516,7 +256724,10 @@ interface class NSTokenFieldDelegate$Builder {
     NSTokenFieldDelegate$Builder.controlTextDidEndEditing_.implement(
       builder,
       NSTokenFieldDelegate$Builder.controlTextDidEndEditing_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder.controlTextDidEndEditing_,
+              )
           ? (objc.NSNotification obj) {
               optionalImplementation.controlTextDidEndEditing(obj);
             }
@@ -252528,7 +256739,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .textField_textView_candidates_forSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .textField_textView_candidates_forSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -252549,7 +256764,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .textField_textView_candidatesForSelectedRange_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .textField_textView_candidatesForSelectedRange_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -252569,7 +256788,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .textField_textView_shouldSelectCandidateAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .textField_textView_shouldSelectCandidateAtIndex_,
+                  )
               ? (
                   NSTextField textField,
                   NSTextView textView,
@@ -252588,7 +256811,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .tokenField_completionsForSubstring_indexOfToken_indexOfSelectedItem_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .tokenField_completionsForSubstring_indexOfToken_indexOfSelectedItem_,
+                  )
               ? (
                   NSTokenField tokenField,
                   objc.NSString completionsForSubstring,
@@ -252609,7 +256836,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .tokenField_displayStringForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .tokenField_displayStringForRepresentedObject_,
+                  )
               ? (
                   NSTokenField tokenField,
                   objc.ObjCObject displayStringForRepresentedObject,
@@ -252627,7 +256858,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .tokenField_editingStringForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .tokenField_editingStringForRepresentedObject_,
+                  )
               ? (
                   NSTokenField tokenField,
                   objc.ObjCObject editingStringForRepresentedObject,
@@ -252645,7 +256880,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .tokenField_hasMenuForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .tokenField_hasMenuForRepresentedObject_,
+                  )
               ? (
                   NSTokenField tokenField,
                   objc.ObjCObject hasMenuForRepresentedObject,
@@ -252661,7 +256900,11 @@ interface class NSTokenFieldDelegate$Builder {
       NSTokenFieldDelegate$Builder
                   .tokenField_menuForRepresentedObject_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder
+                    .tokenField_menuForRepresentedObject_,
+              )
           ? (
               NSTokenField tokenField,
               objc.ObjCObject menuForRepresentedObject,
@@ -252674,7 +256917,10 @@ interface class NSTokenFieldDelegate$Builder {
     NSTokenFieldDelegate$Builder.tokenField_readFromPasteboard_.implement(
       builder,
       NSTokenFieldDelegate$Builder.tokenField_readFromPasteboard_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder.tokenField_readFromPasteboard_,
+              )
           ? (NSTokenField tokenField, NSPasteboard readFromPasteboard) =>
                 optionalImplementation.tokenFieldReadFromPasteboard(
                   tokenField,
@@ -252688,7 +256934,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .tokenField_representedObjectForEditingString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .tokenField_representedObjectForEditingString_,
+                  )
               ? (
                   NSTokenField tokenField,
                   objc.NSString representedObjectForEditingString,
@@ -252705,7 +256955,11 @@ interface class NSTokenFieldDelegate$Builder {
       NSTokenFieldDelegate$Builder
                   .tokenField_shouldAddObjects_atIndex_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTokenFieldDelegate$Builder
+                    .tokenField_shouldAddObjects_atIndex_,
+              )
           ? (
               NSTokenField tokenField,
               objc.NSArray shouldAddObjects,
@@ -252723,7 +256977,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .tokenField_styleForRepresentedObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .tokenField_styleForRepresentedObject_,
+                  )
               ? (
                   NSTokenField tokenField,
                   objc.ObjCObject styleForRepresentedObject,
@@ -252740,7 +256998,11 @@ interface class NSTokenFieldDelegate$Builder {
           NSTokenFieldDelegate$Builder
                       .tokenField_writeRepresentedObjects_toPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSTokenFieldDelegate$Builder
+                        .tokenField_writeRepresentedObjects_toPasteboard_,
+                  )
               ? (
                   NSTokenField tokenField,
                   objc.NSArray writeRepresentedObjects,
@@ -254215,6 +258477,11 @@ extension NSToolbarDelegate$Methods on NSToolbarDelegate {
 abstract interface class NSToolbarDelegateSpec {}
 
 abstract interface class NSToolbarDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSToolbarItem? toolbarItemForItemIdentifierWillBeInsertedIntoToolbar(
     NSToolbar toolbar, {
     required objc.NSString itemForItemIdentifier,
@@ -254235,6 +258502,10 @@ abstract interface class NSToolbarDelegateOptional {
 
 mixin NSToolbarDelegateDefaults implements NSToolbarDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -254248,6 +258519,9 @@ interface class NSToolbarDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSToolbarDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSToolbarDelegateOptional.$implementedOptionalMethods].
   static NSToolbarDelegate implementFrom(
     NSToolbarDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -254276,7 +258550,11 @@ interface class NSToolbarDelegate$Builder {
           NSToolbarDelegate$Builder
                       .toolbar_itemForItemIdentifier_willBeInsertedIntoToolbar_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSToolbarDelegate$Builder
+                        .toolbar_itemForItemIdentifier_willBeInsertedIntoToolbar_,
+                  )
               ? (
                   NSToolbar toolbar,
                   objc.NSString itemForItemIdentifier,
@@ -254295,7 +258573,11 @@ interface class NSToolbarDelegate$Builder {
           NSToolbarDelegate$Builder
                       .toolbar_itemIdentifier_canBeInsertedAtIndex_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSToolbarDelegate$Builder
+                        .toolbar_itemIdentifier_canBeInsertedAtIndex_,
+                  )
               ? (
                   NSToolbar toolbar,
                   objc.NSString itemIdentifier,
@@ -254311,7 +258593,10 @@ interface class NSToolbarDelegate$Builder {
     NSToolbarDelegate$Builder.toolbarAllowedItemIdentifiers_.implement(
       builder,
       NSToolbarDelegate$Builder.toolbarAllowedItemIdentifiers_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSToolbarDelegate$Builder.toolbarAllowedItemIdentifiers_,
+              )
           ? (NSToolbar toolbar) =>
                 optionalImplementation.toolbarAllowedItemIdentifiers(toolbar)
           : null,
@@ -254319,7 +258604,10 @@ interface class NSToolbarDelegate$Builder {
     NSToolbarDelegate$Builder.toolbarDefaultItemIdentifiers_.implement(
       builder,
       NSToolbarDelegate$Builder.toolbarDefaultItemIdentifiers_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSToolbarDelegate$Builder.toolbarDefaultItemIdentifiers_,
+              )
           ? (NSToolbar toolbar) =>
                 optionalImplementation.toolbarDefaultItemIdentifiers(toolbar)
           : null,
@@ -254327,7 +258615,10 @@ interface class NSToolbarDelegate$Builder {
     NSToolbarDelegate$Builder.toolbarDidRemoveItem_.implement(
       builder,
       NSToolbarDelegate$Builder.toolbarDidRemoveItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSToolbarDelegate$Builder.toolbarDidRemoveItem_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.toolbarDidRemoveItem(notification);
             }
@@ -254336,7 +258627,10 @@ interface class NSToolbarDelegate$Builder {
     NSToolbarDelegate$Builder.toolbarImmovableItemIdentifiers_.implement(
       builder,
       NSToolbarDelegate$Builder.toolbarImmovableItemIdentifiers_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSToolbarDelegate$Builder.toolbarImmovableItemIdentifiers_,
+              )
           ? (NSToolbar toolbar) =>
                 optionalImplementation.toolbarImmovableItemIdentifiers(toolbar)
           : null,
@@ -254344,7 +258638,10 @@ interface class NSToolbarDelegate$Builder {
     NSToolbarDelegate$Builder.toolbarSelectableItemIdentifiers_.implement(
       builder,
       NSToolbarDelegate$Builder.toolbarSelectableItemIdentifiers_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSToolbarDelegate$Builder.toolbarSelectableItemIdentifiers_,
+              )
           ? (NSToolbar toolbar) =>
                 optionalImplementation.toolbarSelectableItemIdentifiers(toolbar)
           : null,
@@ -254352,7 +258649,10 @@ interface class NSToolbarDelegate$Builder {
     NSToolbarDelegate$Builder.toolbarWillAddItem_.implement(
       builder,
       NSToolbarDelegate$Builder.toolbarWillAddItem_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSToolbarDelegate$Builder.toolbarWillAddItem_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.toolbarWillAddItem(notification);
             }
@@ -255603,9 +259903,6 @@ interface class NSToolbarItemValidation$1$Builder {
 
   /// Builds an object that implements the NSToolbarItemValidation protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSToolbarItemValidation$1Optional].
   static NSToolbarItemValidation$1 implementFrom(
     NSToolbarItemValidation$1Spec implementation, {
     bool $keepIsolateAlive = true,
@@ -256474,6 +260771,11 @@ extension NSTouchBarDelegate$Methods on NSTouchBarDelegate {
 abstract interface class NSTouchBarDelegateSpec {}
 
 abstract interface class NSTouchBarDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   NSTouchBarItem? touchBar(
     NSTouchBar$1 touchBar, {
     required objc.NSString makeItemForIdentifier,
@@ -256481,6 +260783,10 @@ abstract interface class NSTouchBarDelegateOptional {
 }
 
 mixin NSTouchBarDelegateDefaults implements NSTouchBarDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -256495,6 +260801,9 @@ interface class NSTouchBarDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSTouchBarDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSTouchBarDelegateOptional.$implementedOptionalMethods].
   static NSTouchBarDelegate implementFrom(
     NSTouchBarDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -256519,7 +260828,10 @@ interface class NSTouchBarDelegate$Builder {
     NSTouchBarDelegate$Builder.touchBar_makeItemForIdentifier_.implement(
       builder,
       NSTouchBarDelegate$Builder.touchBar_makeItemForIdentifier_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSTouchBarDelegate$Builder.touchBar_makeItemForIdentifier_,
+              )
           ? (NSTouchBar$1 touchBar, objc.NSString makeItemForIdentifier) =>
                 optionalImplementation.touchBar(
                   touchBar,
@@ -256842,9 +261154,6 @@ interface class NSTouchBarProvider$1$Builder {
 
   /// Builds an object that implements the NSTouchBarProvider protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSTouchBarProvider$1Optional].
   static NSTouchBarProvider$1 implementFrom(
     NSTouchBarProvider$1Spec implementation, {
     bool $keepIsolateAlive = true,
@@ -259403,9 +263712,6 @@ interface class NSUserActivityRestoring$Builder {
 
   /// Builds an object that implements the NSUserActivityRestoring protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSUserActivityRestoringOptional].
   static NSUserActivityRestoring implementFrom(
     NSUserActivityRestoringSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -259832,9 +264138,6 @@ interface class NSUserInterfaceCompression$Builder {
 
   /// Builds an object that implements the NSUserInterfaceCompression protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSUserInterfaceCompressionOptional].
   static NSUserInterfaceCompression implementFrom(
     NSUserInterfaceCompressionSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -260338,9 +264641,6 @@ interface class NSUserInterfaceItemIdentification$Builder {
 
   /// Builds an object that implements the NSUserInterfaceItemIdentification protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSUserInterfaceItemIdentificationOptional].
   static NSUserInterfaceItemIdentification implementFrom(
     NSUserInterfaceItemIdentificationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -260595,12 +264895,21 @@ abstract interface class NSUserInterfaceItemSearching$1Spec {
 }
 
 abstract interface class NSUserInterfaceItemSearching$1Optional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void performActionForItem(objc.ObjCObject item);
   void showAllHelpTopicsForSearchString(objc.NSString searchString);
 }
 
 mixin NSUserInterfaceItemSearching$1Defaults
     implements NSUserInterfaceItemSearching$1Optional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -260615,6 +264924,9 @@ interface class NSUserInterfaceItemSearching$1$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSUserInterfaceItemSearching$1Optional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSUserInterfaceItemSearching$1Optional.$implementedOptionalMethods].
   static NSUserInterfaceItemSearching$1 implementFrom(
     NSUserInterfaceItemSearching$1Spec implementation, {
     bool $keepIsolateAlive = true,
@@ -260647,7 +264959,10 @@ interface class NSUserInterfaceItemSearching$1$Builder {
       NSUserInterfaceItemSearching$1$Builder
                   .performActionForItem_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSUserInterfaceItemSearching$1$Builder.performActionForItem_,
+              )
           ? (objc.ObjCObject item) {
               optionalImplementation.performActionForItem(item);
             }
@@ -260672,7 +264987,11 @@ interface class NSUserInterfaceItemSearching$1$Builder {
           NSUserInterfaceItemSearching$1$Builder
                       .showAllHelpTopicsForSearchString_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSUserInterfaceItemSearching$1$Builder
+                        .showAllHelpTopicsForSearchString_,
+                  )
               ? (objc.NSString searchString) {
                   optionalImplementation.showAllHelpTopicsForSearchString(
                     searchString,
@@ -260963,9 +265282,6 @@ interface class NSUserInterfaceValidations$Builder {
 
   /// Builds an object that implements the NSUserInterfaceValidations protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSUserInterfaceValidationsOptional].
   static NSUserInterfaceValidations implementFrom(
     NSUserInterfaceValidationsSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -261088,9 +265404,6 @@ interface class NSValidatedUserInterfaceItem$Builder {
 
   /// Builds an object that implements the NSValidatedUserInterfaceItem protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSValidatedUserInterfaceItemOptional].
   static NSValidatedUserInterfaceItem implementFrom(
     NSValidatedUserInterfaceItemSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -263921,12 +268234,21 @@ extension NSViewContentSelectionInfo$Methods on NSViewContentSelectionInfo {
 abstract interface class NSViewContentSelectionInfoSpec {}
 
 abstract interface class NSViewContentSelectionInfoOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   /// selectionAnchorRect
   objc.CGRect get selectionAnchorRect;
 }
 
 mixin NSViewContentSelectionInfoDefaults
     implements NSViewContentSelectionInfoOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -263941,6 +268263,9 @@ interface class NSViewContentSelectionInfo$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSViewContentSelectionInfoOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSViewContentSelectionInfoOptional.$implementedOptionalMethods].
   static NSViewContentSelectionInfo implementFrom(
     NSViewContentSelectionInfoSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -263967,7 +268292,10 @@ interface class NSViewContentSelectionInfo$Builder {
     NSViewContentSelectionInfo$Builder.selectionAnchorRect.implement(
       builder,
       NSViewContentSelectionInfo$Builder.selectionAnchorRect.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSViewContentSelectionInfo$Builder.selectionAnchorRect,
+              )
           ? () => optionalImplementation.selectionAnchorRect
           : null,
     );
@@ -265701,9 +270029,6 @@ interface class NSViewControllerPresentationAnimator$Builder {
 
   /// Builds an object that implements the NSViewControllerPresentationAnimator protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSViewControllerPresentationAnimatorOptional].
   static NSViewControllerPresentationAnimator implementFrom(
     NSViewControllerPresentationAnimatorSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -265924,6 +270249,11 @@ extension NSViewLayerContentScaleDelegate$Methods
 abstract interface class NSViewLayerContentScaleDelegateSpec {}
 
 abstract interface class NSViewLayerContentScaleDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool layer(
     CALayer layer, {
     required double shouldInheritContentsScale,
@@ -265933,6 +270263,10 @@ abstract interface class NSViewLayerContentScaleDelegateOptional {
 
 mixin NSViewLayerContentScaleDelegateDefaults
     implements NSViewLayerContentScaleDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -265948,6 +270282,9 @@ interface class NSViewLayerContentScaleDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSViewLayerContentScaleDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSViewLayerContentScaleDelegateOptional.$implementedOptionalMethods].
   static NSViewLayerContentScaleDelegate implementFrom(
     NSViewLayerContentScaleDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -265978,7 +270315,11 @@ interface class NSViewLayerContentScaleDelegate$Builder {
           NSViewLayerContentScaleDelegate$Builder
                       .layer_shouldInheritContentsScale_fromWindow_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSViewLayerContentScaleDelegate$Builder
+                        .layer_shouldInheritContentsScale_fromWindow_,
+                  )
               ? (
                   CALayer layer,
                   double shouldInheritContentsScale,
@@ -266279,9 +270620,6 @@ interface class NSViewToolTipOwner$Builder {
 
   /// Builds an object that implements the NSViewToolTipOwner protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSViewToolTipOwnerOptional].
   static NSViewToolTipOwner implementFrom(
     NSViewToolTipOwnerSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -272212,6 +276550,11 @@ extension NSWindowDelegate$Methods on NSWindowDelegate {
 abstract interface class NSWindowDelegateSpec {}
 
 abstract interface class NSWindowDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSArray? customWindowsToEnterFullScreenForWindow(NSWindow window);
   objc.NSArray? customWindowsToEnterFullScreenForWindowOnScreen(
     NSWindow window, {
@@ -272317,6 +276660,10 @@ abstract interface class NSWindowDelegateOptional {
 
 mixin NSWindowDelegateDefaults implements NSWindowDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -272330,6 +276677,9 @@ interface class NSWindowDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSWindowDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSWindowDelegateOptional.$implementedOptionalMethods].
   static NSWindowDelegate implementFrom(
     NSWindowDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -272356,7 +276706,11 @@ interface class NSWindowDelegate$Builder {
       NSWindowDelegate$Builder
                   .customWindowsToEnterFullScreenForWindow_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder
+                    .customWindowsToEnterFullScreenForWindow_,
+              )
           ? (NSWindow window) => optionalImplementation
                 .customWindowsToEnterFullScreenForWindow(window)
           : null,
@@ -272367,7 +276721,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .customWindowsToEnterFullScreenForWindow_onScreen_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .customWindowsToEnterFullScreenForWindow_onScreen_,
+                  )
               ? (NSWindow window, NSScreen onScreen) => optionalImplementation
                     .customWindowsToEnterFullScreenForWindowOnScreen(
                       window,
@@ -272380,7 +276738,11 @@ interface class NSWindowDelegate$Builder {
       NSWindowDelegate$Builder
                   .customWindowsToExitFullScreenForWindow_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder
+                    .customWindowsToExitFullScreenForWindow_,
+              )
           ? (NSWindow window) => optionalImplementation
                 .customWindowsToExitFullScreenForWindow(window)
           : null,
@@ -272391,7 +276753,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .previewRepresentableActivityItemsForWindow_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .previewRepresentableActivityItemsForWindow_,
+                  )
               ? (NSWindow window) => optionalImplementation
                     .previewRepresentableActivityItemsForWindow(window)
               : null,
@@ -272399,7 +276765,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.window_didDecodeRestorableState_.implement(
       builder,
       NSWindowDelegate$Builder.window_didDecodeRestorableState_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.window_didDecodeRestorableState_,
+              )
           ? (NSWindow window, objc.NSCoder didDecodeRestorableState) {
               optionalImplementation.window(
                 window,
@@ -272415,7 +276784,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .window_shouldDragDocumentWithEvent_from_withPasteboard_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .window_shouldDragDocumentWithEvent_from_withPasteboard_,
+                  )
               ? (
                   NSWindow window,
                   NSEvent shouldDragDocumentWithEvent,
@@ -272435,7 +276808,10 @@ interface class NSWindowDelegate$Builder {
       NSWindowDelegate$Builder
                   .window_shouldPopUpDocumentPathMenu_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.window_shouldPopUpDocumentPathMenu_,
+              )
           ? (NSWindow window, NSMenu shouldPopUpDocumentPathMenu) =>
                 optionalImplementation.windowShouldPopUpDocumentPathMenu(
                   window,
@@ -272450,7 +276826,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .window_startCustomAnimationToEnterFullScreenOnScreen_withDuration_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .window_startCustomAnimationToEnterFullScreenOnScreen_withDuration_,
+                  )
               ? (
                   NSWindow window,
                   NSScreen startCustomAnimationToEnterFullScreenOnScreen,
@@ -272473,7 +276853,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .window_startCustomAnimationToEnterFullScreenWithDuration_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .window_startCustomAnimationToEnterFullScreenWithDuration_,
+                  )
               ? (
                   NSWindow window,
                   double startCustomAnimationToEnterFullScreenWithDuration,
@@ -272494,7 +276878,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .window_startCustomAnimationToExitFullScreenWithDuration_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .window_startCustomAnimationToExitFullScreenWithDuration_,
+                  )
               ? (
                   NSWindow window,
                   double startCustomAnimationToExitFullScreenWithDuration,
@@ -272511,7 +276899,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.window_willEncodeRestorableState_.implement(
       builder,
       NSWindowDelegate$Builder.window_willEncodeRestorableState_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.window_willEncodeRestorableState_,
+              )
           ? (NSWindow window, objc.NSCoder willEncodeRestorableState) {
               optionalImplementation.windowWillEncodeRestorableState(
                 window,
@@ -272525,7 +276916,10 @@ interface class NSWindowDelegate$Builder {
       NSWindowDelegate$Builder
                   .window_willPositionSheet_usingRect_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.window_willPositionSheet_usingRect_,
+              )
           ? (
               NSWindow window,
               NSWindow willPositionSheet,
@@ -272544,7 +276938,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .window_willResizeForVersionBrowserWithMaxPreferredSize_maxAllowedSize_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .window_willResizeForVersionBrowserWithMaxPreferredSize_maxAllowedSize_,
+                  )
               ? (
                   NSWindow window,
                   objc.CGSize willResizeForVersionBrowserWithMaxPreferredSize,
@@ -272563,7 +276961,10 @@ interface class NSWindowDelegate$Builder {
       NSWindowDelegate$Builder
                   .window_willUseFullScreenContentSize_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.window_willUseFullScreenContentSize_,
+              )
           ? (NSWindow window, objc.CGSize willUseFullScreenContentSize) =>
                 optionalImplementation.windowWillUseFullScreenContentSize(
                   window,
@@ -272577,7 +276978,11 @@ interface class NSWindowDelegate$Builder {
           NSWindowDelegate$Builder
                       .window_willUseFullScreenPresentationOptions_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWindowDelegate$Builder
+                        .window_willUseFullScreenPresentationOptions_,
+                  )
               ? (NSWindow window, int willUseFullScreenPresentationOptions) =>
                     optionalImplementation
                         .windowWillUseFullScreenPresentationOptions(
@@ -272590,7 +276995,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidBecomeKey_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidBecomeKey_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidBecomeKey_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidBecomeKey(notification);
             }
@@ -272599,7 +277007,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidBecomeMain_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidBecomeMain_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidBecomeMain_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidBecomeMain(notification);
             }
@@ -272608,7 +277019,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidChangeBackingProperties_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidChangeBackingProperties_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidChangeBackingProperties_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidChangeBackingProperties(
                 notification,
@@ -272619,7 +277033,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidChangeOcclusionState_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidChangeOcclusionState_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidChangeOcclusionState_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidChangeOcclusionState(
                 notification,
@@ -272630,7 +277047,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidChangeScreen_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidChangeScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidChangeScreen_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidChangeScreen(notification);
             }
@@ -272639,7 +277059,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidChangeScreenProfile_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidChangeScreenProfile_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidChangeScreenProfile_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidChangeScreenProfile(notification);
             }
@@ -272648,7 +277071,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidDeminiaturize_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidDeminiaturize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidDeminiaturize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidDeminiaturize(notification);
             }
@@ -272657,7 +277083,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidEndLiveResize_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidEndLiveResize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidEndLiveResize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidEndLiveResize(notification);
             }
@@ -272666,7 +277095,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidEndSheet_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidEndSheet_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidEndSheet_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidEndSheet(notification);
             }
@@ -272675,7 +277107,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidEnterFullScreen_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidEnterFullScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidEnterFullScreen_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidEnterFullScreen(notification);
             }
@@ -272684,7 +277119,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidEnterVersionBrowser_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidEnterVersionBrowser_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidEnterVersionBrowser_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidEnterVersionBrowser(notification);
             }
@@ -272693,7 +277131,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidExitFullScreen_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidExitFullScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidExitFullScreen_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidExitFullScreen(notification);
             }
@@ -272702,7 +277143,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidExitVersionBrowser_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidExitVersionBrowser_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidExitVersionBrowser_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidExitVersionBrowser(notification);
             }
@@ -272711,7 +277155,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidExpose_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidExpose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidExpose_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidExpose(notification);
             }
@@ -272720,7 +277167,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidFailToEnterFullScreen_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidFailToEnterFullScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidFailToEnterFullScreen_,
+              )
           ? (NSWindow window) {
               optionalImplementation.windowDidFailToEnterFullScreen(window);
             }
@@ -272729,7 +277179,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidFailToExitFullScreen_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidFailToExitFullScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidFailToExitFullScreen_,
+              )
           ? (NSWindow window) {
               optionalImplementation.windowDidFailToExitFullScreen(window);
             }
@@ -272738,7 +277191,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidMiniaturize_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidMiniaturize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidMiniaturize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidMiniaturize(notification);
             }
@@ -272747,7 +277203,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidMove_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidMove_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidMove_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidMove(notification);
             }
@@ -272756,7 +277215,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidResignKey_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidResignKey_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidResignKey_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidResignKey(notification);
             }
@@ -272765,7 +277227,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidResignMain_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidResignMain_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidResignMain_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidResignMain(notification);
             }
@@ -272774,7 +277239,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidResize_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidResize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidResize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidResize(notification);
             }
@@ -272783,7 +277251,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowDidUpdate_.implement(
       builder,
       NSWindowDelegate$Builder.windowDidUpdate_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowDidUpdate_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowDidUpdate(notification);
             }
@@ -272792,7 +277263,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowForSharingRequestFromWindow_.implement(
       builder,
       NSWindowDelegate$Builder.windowForSharingRequestFromWindow_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowForSharingRequestFromWindow_,
+              )
           ? (NSWindow window) =>
                 optionalImplementation.windowForSharingRequestFromWindow(window)
           : null,
@@ -272800,7 +277274,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowShouldClose_.implement(
       builder,
       NSWindowDelegate$Builder.windowShouldClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowShouldClose_,
+              )
           ? (NSWindow sender) =>
                 optionalImplementation.windowShouldClose(sender)
           : null,
@@ -272808,7 +277285,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowShouldZoom_toFrame_.implement(
       builder,
       NSWindowDelegate$Builder.windowShouldZoom_toFrame_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowShouldZoom_toFrame_,
+              )
           ? (NSWindow window, objc.CGRect toFrame) => optionalImplementation
                 .windowShouldZoom(window, toFrame: toFrame)
           : null,
@@ -272816,7 +277296,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillBeginSheet_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillBeginSheet_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillBeginSheet_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillBeginSheet(notification);
             }
@@ -272825,7 +277308,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillClose_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillClose_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillClose_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillClose(notification);
             }
@@ -272834,7 +277320,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillEnterFullScreen_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillEnterFullScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillEnterFullScreen_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillEnterFullScreen(notification);
             }
@@ -272843,7 +277332,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillEnterVersionBrowser_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillEnterVersionBrowser_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillEnterVersionBrowser_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillEnterVersionBrowser(
                 notification,
@@ -272854,7 +277346,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillExitFullScreen_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillExitFullScreen_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillExitFullScreen_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillExitFullScreen(notification);
             }
@@ -272863,7 +277358,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillExitVersionBrowser_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillExitVersionBrowser_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillExitVersionBrowser_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillExitVersionBrowser(notification);
             }
@@ -272872,7 +277370,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillMiniaturize_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillMiniaturize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillMiniaturize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillMiniaturize(notification);
             }
@@ -272881,7 +277382,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillMove_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillMove_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillMove_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillMove(notification);
             }
@@ -272890,7 +277394,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillResize_toSize_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillResize_toSize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillResize_toSize_,
+              )
           ? (NSWindow sender, objc.CGSize toSize) =>
                 optionalImplementation.windowWillResize(sender, toSize: toSize)
           : null,
@@ -272900,7 +277407,10 @@ interface class NSWindowDelegate$Builder {
       NSWindowDelegate$Builder
                   .windowWillReturnFieldEditor_toObject_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillReturnFieldEditor_toObject_,
+              )
           ? (NSWindow sender, objc.ObjCObject? toObject) =>
                 optionalImplementation.windowWillReturnFieldEditor(
                   sender,
@@ -272911,7 +277421,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillReturnUndoManager_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillReturnUndoManager_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillReturnUndoManager_,
+              )
           ? (NSWindow window) =>
                 optionalImplementation.windowWillReturnUndoManager(window)
           : null,
@@ -272919,7 +277432,10 @@ interface class NSWindowDelegate$Builder {
     NSWindowDelegate$Builder.windowWillStartLiveResize_.implement(
       builder,
       NSWindowDelegate$Builder.windowWillStartLiveResize_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder.windowWillStartLiveResize_,
+              )
           ? (objc.NSNotification notification) {
               optionalImplementation.windowWillStartLiveResize(notification);
             }
@@ -272930,7 +277446,11 @@ interface class NSWindowDelegate$Builder {
       NSWindowDelegate$Builder
                   .windowWillUseStandardFrame_defaultFrame_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSWindowDelegate$Builder
+                    .windowWillUseStandardFrame_defaultFrame_,
+              )
           ? (NSWindow window, objc.CGRect defaultFrame) =>
                 optionalImplementation.windowWillUseStandardFrame(
                   window,
@@ -274416,9 +278936,6 @@ interface class NSWindowRestoration$Builder {
 
   /// Builds an object that implements the NSWindowRestoration protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSWindowRestorationOptional].
   static NSWindowRestoration implementFrom(
     NSWindowRestorationSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -277588,6 +282105,11 @@ abstract interface class NSWritingToolsCoordinatorDelegateSpec {
 }
 
 abstract interface class NSWritingToolsCoordinatorDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void
   writingToolsCoordinatorRequestsDecorationContainerViewForRangeInContextCompletion(
     NSWritingToolsCoordinator$1 writingToolsCoordinator, {
@@ -277618,6 +282140,10 @@ abstract interface class NSWritingToolsCoordinatorDelegateOptional {
 mixin NSWritingToolsCoordinatorDelegateDefaults
     implements NSWritingToolsCoordinatorDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -277632,6 +282158,9 @@ interface class NSWritingToolsCoordinatorDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSWritingToolsCoordinatorDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSWritingToolsCoordinatorDelegateOptional.$implementedOptionalMethods].
   static NSWritingToolsCoordinatorDelegate implementFrom(
     NSWritingToolsCoordinatorDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -277752,7 +282281,11 @@ interface class NSWritingToolsCoordinatorDelegate$Builder {
           NSWritingToolsCoordinatorDelegate$Builder
                       .writingToolsCoordinator_requestsDecorationContainerViewForRange_inContext_completion_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWritingToolsCoordinatorDelegate$Builder
+                        .writingToolsCoordinator_requestsDecorationContainerViewForRange_inContext_completion_,
+                  )
               ? (
                   NSWritingToolsCoordinator$1 writingToolsCoordinator,
                   objc.NSRange requestsDecorationContainerViewForRange,
@@ -277813,7 +282346,11 @@ interface class NSWritingToolsCoordinatorDelegate$Builder {
           NSWritingToolsCoordinatorDelegate$Builder
                       .writingToolsCoordinator_requestsRangeInContextWithIdentifierForPoint_completion_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWritingToolsCoordinatorDelegate$Builder
+                        .writingToolsCoordinator_requestsRangeInContextWithIdentifierForPoint_completion_,
+                  )
               ? (
                   NSWritingToolsCoordinator$1 writingToolsCoordinator,
                   objc.CGPoint requestsRangeInContextWithIdentifierForPoint,
@@ -277838,7 +282375,11 @@ interface class NSWritingToolsCoordinatorDelegate$Builder {
           NSWritingToolsCoordinatorDelegate$Builder
                       .writingToolsCoordinator_requestsSingleContainerSubrangesOfRange_inContext_completion_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWritingToolsCoordinatorDelegate$Builder
+                        .writingToolsCoordinator_requestsSingleContainerSubrangesOfRange_inContext_completion_,
+                  )
               ? (
                   NSWritingToolsCoordinator$1 writingToolsCoordinator,
                   objc.NSRange requestsSingleContainerSubrangesOfRange,
@@ -277894,7 +282435,11 @@ interface class NSWritingToolsCoordinatorDelegate$Builder {
           NSWritingToolsCoordinatorDelegate$Builder
                       .writingToolsCoordinator_willChangeToState_completion_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSWritingToolsCoordinatorDelegate$Builder
+                        .writingToolsCoordinator_willChangeToState_completion_,
+                  )
               ? (
                   NSWritingToolsCoordinator$1 writingToolsCoordinator,
                   NSWritingToolsCoordinatorState willChangeToState,

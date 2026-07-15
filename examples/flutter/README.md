@@ -5,8 +5,8 @@ Flutter demo that embeds Dart-built native host views on Darwin.
 The macOS app demonstrates three incremental adoption patterns:
 
 - an `NSView` hierarchy created in Dart and mounted in Flutter;
-- a real `NSTextView`/`NSScrollView` editor whose typed delegate updates
-  Flutter state;
+- a real `NSTextView`/`NSScrollView` editor where AppKit owns editing and
+  selection while a typed delegate updates Flutter state;
 - a typed `NSOpenPanel` completion block that returns a selected native
   `NSURL` without an app-specific platform channel.
 
@@ -46,6 +46,7 @@ From the repo root:
 The Flutter-specific verification that matters here is:
 
 - `flutter analyze lib`
+- `flutter test`
 - `flutter build macos`
 - `flutter build ios --simulator --debug --no-codesign`
 
