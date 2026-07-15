@@ -291,13 +291,16 @@ String _firstLineOfStdout(String command, List<String> args) {
 ObjectiveC _objectiveCConfig(_FrameworkSpec spec) {
   if (spec.key == 'metalkit') {
     bool includeMtk(Declaration decl) => decl.originalName.startsWith('MTK');
+    bool includeListenerHelpers(Declaration decl) =>
+        decl.originalName == 'MTKViewDelegate';
     return ObjectiveC(
       interfaces: Interfaces(include: includeMtk, includeTransitive: false),
       protocols: Protocols(
         include: includeMtk,
         includeTransitive: false,
         generateFunctionHelpers: false,
-        generateListenerHelpers: false,
+        generateListenerHelpers: true,
+        includeListenerHelpers: includeListenerHelpers,
       ),
       categories: Categories(include: includeMtk, includeTransitive: false),
     );
@@ -326,6 +329,8 @@ ObjectiveC _objectiveCConfig(_FrameworkSpec spec) {
   if (spec.key == 'uikit') {
     bool includeSubclassHelpers(Declaration decl) =>
         decl.originalName == 'UIViewController';
+    bool includeListenerHelpers(Declaration decl) =>
+        decl.originalName == 'UITabBarDelegate';
     bool includeMember(Declaration decl, String member) {
       if (decl.originalName == 'UIViewController' &&
           member == 'preferredContainerBackgroundStyle') {
@@ -349,7 +354,8 @@ ObjectiveC _objectiveCConfig(_FrameworkSpec spec) {
         include: Declarations.includeAll,
         includeTransitive: true,
         generateFunctionHelpers: false,
-        generateListenerHelpers: false,
+        generateListenerHelpers: true,
+        includeListenerHelpers: includeListenerHelpers,
       ),
       categories: Categories(
         include: Declarations.includeAll,
