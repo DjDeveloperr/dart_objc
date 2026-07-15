@@ -1627,6 +1627,14 @@ extension type NSAffineTransform._(objc.ObjCObject object$)
     return NSAffineTransform.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSAffineTransform,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   static NSAffineTransform transform() {
     final $ret = _objc_msgSend_151sglz(
       _class_NSAffineTransform,
@@ -2158,6 +2166,14 @@ extension type NSAppleEventDescriptor._(objc.ObjCObject object$)
       $ret,
       retain: true,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSAppleEventDescriptor,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -3851,6 +3867,14 @@ extension type NSAttributedStringMarkdownSourcePosition._(
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSAttributedStringMarkdownSourcePosition,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSAttributedStringMarkdownSourcePosition constructed with the default `new` method.
   NSAttributedStringMarkdownSourcePosition() : this.as(new$().object$);
 }
@@ -5423,10 +5447,19 @@ extension NSCacheDelegate$Methods on NSCacheDelegate {
 abstract interface class NSCacheDelegateSpec {}
 
 abstract interface class NSCacheDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void cache(NSCache cache, {required objc.ObjCObject willEvictObject});
 }
 
 mixin NSCacheDelegateDefaults implements NSCacheDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -5441,6 +5474,9 @@ interface class NSCacheDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSCacheDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSCacheDelegateOptional.$implementedOptionalMethods].
   static NSCacheDelegate implementFrom(
     NSCacheDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -5465,7 +5501,10 @@ interface class NSCacheDelegate$Builder {
     NSCacheDelegate$Builder.cache_willEvictObject_.implement(
       builder,
       NSCacheDelegate$Builder.cache_willEvictObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSCacheDelegate$Builder.cache_willEvictObject_,
+              )
           ? (NSCache cache, objc.ObjCObject willEvictObject) {
               optionalImplementation.cache(
                 cache,
@@ -5568,6 +5607,14 @@ extension type NSCachedURLResponse._(objc.ObjCObject object$)
   static NSCachedURLResponse new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSCachedURLResponse, _sel_new);
     return NSCachedURLResponse.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSCachedURLResponse,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSCachedURLResponse constructed with the default `new` method.
@@ -5779,6 +5826,11 @@ extension type NSCalendar._(objc.ObjCObject object$)
   static NSCalendar new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSCalendar, _sel_new);
     return NSCalendar.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSCalendar, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSCalendar constructed with the default `new` method.
@@ -7003,6 +7055,14 @@ extension type NSCalendarDate._(objc.ObjCObject object$)
   static NSCalendarDate new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSCalendarDate, _sel_new);
     return NSCalendarDate.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSCalendarDate,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSCalendarDate constructed with the default `new` method.
@@ -8388,6 +8448,14 @@ extension type NSComparisonPredicate._(objc.ObjCObject object$)
     return NSPredicate.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSComparisonPredicate,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSComparisonPredicate constructed with the default `new` method.
   NSComparisonPredicate() : this.as(new$().object$);
 }
@@ -8797,6 +8865,14 @@ extension type NSCompoundPredicate._(objc.ObjCObject object$)
       value,
     );
     return NSPredicate.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSCompoundPredicate,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSCompoundPredicate constructed with the default `new` method.
@@ -10005,6 +10081,11 @@ extension NSConnectionDelegate$Methods on NSConnectionDelegate {
 abstract interface class NSConnectionDelegateSpec {}
 
 abstract interface class NSConnectionDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool authenticateComponents(
     objc.NSArray components, {
     required objc.NSData withData,
@@ -10024,6 +10105,10 @@ abstract interface class NSConnectionDelegateOptional {
 
 mixin NSConnectionDelegateDefaults implements NSConnectionDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -10037,6 +10122,9 @@ interface class NSConnectionDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSConnectionDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSConnectionDelegateOptional.$implementedOptionalMethods].
   static NSConnectionDelegate implementFrom(
     NSConnectionDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -10063,7 +10151,10 @@ interface class NSConnectionDelegate$Builder {
       NSConnectionDelegate$Builder
                   .authenticateComponents_withData_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSConnectionDelegate$Builder.authenticateComponents_withData_,
+              )
           ? (objc.NSArray components, objc.NSData withData) =>
                 optionalImplementation.authenticateComponents(
                   components,
@@ -10076,7 +10167,10 @@ interface class NSConnectionDelegate$Builder {
       NSConnectionDelegate$Builder
                   .authenticationDataForComponents_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSConnectionDelegate$Builder.authenticationDataForComponents_,
+              )
           ? (objc.NSArray components) => optionalImplementation
                 .authenticationDataForComponents(components)
           : null,
@@ -10084,7 +10178,10 @@ interface class NSConnectionDelegate$Builder {
     NSConnectionDelegate$Builder.connection_handleRequest_.implement(
       builder,
       NSConnectionDelegate$Builder.connection_handleRequest_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSConnectionDelegate$Builder.connection_handleRequest_,
+              )
           ? (NSConnection connection, NSDistantObjectRequest handleRequest) =>
                 optionalImplementation.connectionHandleRequest(
                   connection,
@@ -10097,7 +10194,11 @@ interface class NSConnectionDelegate$Builder {
       NSConnectionDelegate$Builder
                   .connection_shouldMakeNewConnection_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSConnectionDelegate$Builder
+                    .connection_shouldMakeNewConnection_,
+              )
           ? (NSConnection ancestor, NSConnection shouldMakeNewConnection) =>
                 optionalImplementation.connectionShouldMakeNewConnection(
                   ancestor,
@@ -10110,7 +10211,10 @@ interface class NSConnectionDelegate$Builder {
       NSConnectionDelegate$Builder
                   .createConversationForConnection_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSConnectionDelegate$Builder.createConversationForConnection_,
+              )
           ? (NSConnection conn) =>
                 optionalImplementation.createConversationForConnection(conn)
           : null,
@@ -10118,7 +10222,10 @@ interface class NSConnectionDelegate$Builder {
     NSConnectionDelegate$Builder.makeNewConnection_sender_.implement(
       builder,
       NSConnectionDelegate$Builder.makeNewConnection_sender_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSConnectionDelegate$Builder.makeNewConnection_sender_,
+              )
           ? (NSConnection conn, NSConnection sender) =>
                 optionalImplementation.makeNewConnection(conn, sender: sender)
           : null,
@@ -10343,6 +10450,14 @@ extension type NSConstantString._(objc.ObjCObject object$)
     return NSConstantString.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSConstantString,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSConstantString constructed with the default `new` method.
   NSConstantString() : this.as(new$().object$);
 }
@@ -10546,6 +10661,11 @@ extension type NSCountedSet._(objc.ObjCObject object$)
   static NSCountedSet new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSCountedSet, _sel_new);
     return NSCountedSet.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSCountedSet, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSCountedSet constructed with the default `new` method.
@@ -11054,6 +11174,14 @@ extension type NSDataDetector._(objc.ObjCObject object$)
     }
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSDataDetector,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSDataDetector constructed with the default `new` method.
   NSDataDetector() : this.as(new$().object$);
 }
@@ -11179,6 +11307,14 @@ extension type NSDateComponents._(objc.ObjCObject object$)
   static NSDateComponents new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSDateComponents, _sel_new);
     return NSDateComponents.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSDateComponents,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSDateComponents constructed with the default `new` method.
@@ -13235,6 +13371,14 @@ extension type NSDateInterval._(objc.ObjCObject object$)
     return NSDateInterval.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSDateInterval,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSDateInterval constructed with the default `new` method.
   NSDateInterval() : this.as(new$().object$);
 }
@@ -13835,6 +13979,14 @@ extension type NSDecimalNumber._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSDecimalNumber,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// zero
   static NSDecimalNumber getZero() {
     final $ret = _objc_msgSend_151sglz(_class_NSDecimalNumber, _sel_zero);
@@ -14166,9 +14318,6 @@ interface class NSDecimalNumberBehaviors$Builder {
 
   /// Builds an object that implements the NSDecimalNumberBehaviors protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSDecimalNumberBehaviorsOptional].
   static NSDecimalNumberBehaviors implementFrom(
     NSDecimalNumberBehaviorsSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -15657,6 +15806,11 @@ extension type NSDimension._(objc.ObjCObject object$)
     return NSDimension.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSDimension, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSDimension constructed with the default `new` method.
   NSDimension() : this.as(new$().object$);
 }
@@ -15923,9 +16077,6 @@ interface class NSDiscardableContent$Builder {
 
   /// Builds an object that implements the NSDiscardableContent protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSDiscardableContentOptional].
   static NSDiscardableContent implementFrom(
     NSDiscardableContentSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -17102,6 +17253,11 @@ extension type NSException._(objc.ObjCObject object$)
     return NSException.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSException, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSException constructed with the default `new` method.
   NSException() : this.as(new$().object$);
 }
@@ -17655,6 +17811,11 @@ extension type NSExpression._(objc.ObjCObject object$)
   static NSExpression new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSExpression, _sel_new);
     return NSExpression.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSExpression, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSExpression constructed with the default `new` method.
@@ -19966,6 +20127,14 @@ extension type NSExtensionItem._(objc.ObjCObject object$)
     return NSExtensionItem.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSExtensionItem,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSExtensionItem constructed with the default `new` method.
   NSExtensionItem() : this.as(new$().object$);
 }
@@ -20152,9 +20321,6 @@ interface class NSExtensionRequestHandling$Builder {
 
   /// Builds an object that implements the NSExtensionRequestHandling protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSExtensionRequestHandlingOptional].
   static NSExtensionRequestHandling implementFrom(
     NSExtensionRequestHandlingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -20956,6 +21122,11 @@ extension type NSFileHandle._(objc.ObjCObject object$)
   static NSFileHandle new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSFileHandle, _sel_new);
     return NSFileHandle.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSFileHandle, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSFileHandle constructed with the default `new` method.
@@ -23311,6 +23482,11 @@ extension NSFileManagerDelegate$Methods on NSFileManagerDelegate {
 abstract interface class NSFileManagerDelegateSpec {}
 
 abstract interface class NSFileManagerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool fileManagerShouldCopyItemAtPathToPath(
     NSFileManager fileManager, {
     required objc.NSString shouldCopyItemAtPath,
@@ -23399,6 +23575,10 @@ abstract interface class NSFileManagerDelegateOptional {
 
 mixin NSFileManagerDelegateDefaults implements NSFileManagerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -23412,6 +23592,9 @@ interface class NSFileManagerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSFileManagerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSFileManagerDelegateOptional.$implementedOptionalMethods].
   static NSFileManagerDelegate implementFrom(
     NSFileManagerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -23441,7 +23624,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldCopyItemAtPath_toPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldCopyItemAtPath_toPath_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSString shouldCopyItemAtPath,
@@ -23460,7 +23647,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldCopyItemAtURL_toURL_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldCopyItemAtURL_toURL_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSURL shouldCopyItemAtURL,
@@ -23478,7 +23669,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldLinkItemAtPath_toPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldLinkItemAtPath_toPath_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSString shouldLinkItemAtPath,
@@ -23497,7 +23692,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldLinkItemAtURL_toURL_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldLinkItemAtURL_toURL_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSURL shouldLinkItemAtURL,
@@ -23515,7 +23714,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldMoveItemAtPath_toPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldMoveItemAtPath_toPath_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSString shouldMoveItemAtPath,
@@ -23534,7 +23737,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldMoveItemAtURL_toURL_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldMoveItemAtURL_toURL_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSURL shouldMoveItemAtURL,
@@ -23553,7 +23760,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_copyingItemAtPath_toPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_copyingItemAtPath_toPath_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23575,7 +23786,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_copyingItemAtURL_toURL_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_copyingItemAtURL_toURL_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23597,7 +23812,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_linkingItemAtPath_toPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_linkingItemAtPath_toPath_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23619,7 +23838,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_linkingItemAtURL_toURL_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_linkingItemAtURL_toURL_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23641,7 +23864,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_movingItemAtPath_toPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_movingItemAtPath_toPath_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23663,7 +23890,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_movingItemAtURL_toURL_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_movingItemAtURL_toURL_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23685,7 +23916,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_removingItemAtPath_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_removingItemAtPath_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23705,7 +23940,11 @@ interface class NSFileManagerDelegate$Builder {
           NSFileManagerDelegate$Builder
                       .fileManager_shouldProceedAfterError_removingItemAtURL_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFileManagerDelegate$Builder
+                        .fileManager_shouldProceedAfterError_removingItemAtURL_,
+                  )
               ? (
                   NSFileManager fileManager,
                   objc.NSError shouldProceedAfterError,
@@ -23723,7 +23962,11 @@ interface class NSFileManagerDelegate$Builder {
       NSFileManagerDelegate$Builder
                   .fileManager_shouldRemoveItemAtPath_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFileManagerDelegate$Builder
+                    .fileManager_shouldRemoveItemAtPath_,
+              )
           ? (NSFileManager fileManager, objc.NSString shouldRemoveItemAtPath) =>
                 optionalImplementation.fileManagerShouldRemoveItemAtPath(
                   fileManager,
@@ -23736,7 +23979,11 @@ interface class NSFileManagerDelegate$Builder {
       NSFileManagerDelegate$Builder
                   .fileManager_shouldRemoveItemAtURL_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFileManagerDelegate$Builder
+                    .fileManager_shouldRemoveItemAtURL_,
+              )
           ? (NSFileManager fileManager, objc.NSURL shouldRemoveItemAtURL) =>
                 optionalImplementation.fileManagerShouldRemoveItemAtURL(
                   fileManager,
@@ -24827,6 +25074,11 @@ abstract interface class NSFilePresenterSpec {
 }
 
 abstract interface class NSFilePresenterOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void accommodatePresentedItemDeletionWithCompletionHandler(
     objc.ObjCBlock<ffi.Void Function(objc.NSError?)> completionHandler,
   );
@@ -24882,6 +25134,10 @@ abstract interface class NSFilePresenterOptional {
 
 mixin NSFilePresenterDefaults implements NSFilePresenterOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -24895,6 +25151,9 @@ interface class NSFilePresenter$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSFilePresenterOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSFilePresenterOptional.$implementedOptionalMethods].
   static NSFilePresenter implementFrom(
     NSFilePresenterSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -24923,7 +25182,11 @@ interface class NSFilePresenter$Builder {
           NSFilePresenter$Builder
                       .accommodatePresentedItemDeletionWithCompletionHandler_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFilePresenter$Builder
+                        .accommodatePresentedItemDeletionWithCompletionHandler_,
+                  )
               ? (
                   objc.ObjCBlock<ffi.Void Function(objc.NSError?)>
                   completionHandler,
@@ -24942,7 +25205,11 @@ interface class NSFilePresenter$Builder {
           NSFilePresenter$Builder
                       .accommodatePresentedItemEvictionWithCompletionHandler_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFilePresenter$Builder
+                        .accommodatePresentedItemEvictionWithCompletionHandler_,
+                  )
               ? (
                   objc.ObjCBlock<ffi.Void Function(objc.NSError?)>
                   completionHandler,
@@ -24961,7 +25228,11 @@ interface class NSFilePresenter$Builder {
           NSFilePresenter$Builder
                       .accommodatePresentedSubitemDeletionAtURL_completionHandler_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFilePresenter$Builder
+                        .accommodatePresentedSubitemDeletionAtURL_completionHandler_,
+                  )
               ? (
                   objc.NSURL url,
                   objc.ObjCBlock<ffi.Void Function(objc.NSError?)>
@@ -24980,14 +25251,20 @@ interface class NSFilePresenter$Builder {
       NSFilePresenter$Builder
                   .observedPresentedItemUbiquityAttributes
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.observedPresentedItemUbiquityAttributes,
+              )
           ? () => optionalImplementation.observedPresentedItemUbiquityAttributes
           : null,
     );
     NSFilePresenter$Builder.presentedItemDidChange.implement(
       builder,
       NSFilePresenter$Builder.presentedItemDidChange.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedItemDidChange,
+              )
           ? () {
               optionalImplementation.presentedItemDidChange();
             }
@@ -24998,7 +25275,11 @@ interface class NSFilePresenter$Builder {
       NSFilePresenter$Builder
                   .presentedItemDidChangeUbiquityAttributes_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder
+                    .presentedItemDidChangeUbiquityAttributes_,
+              )
           ? (objc.NSSet attributes) {
               optionalImplementation.presentedItemDidChangeUbiquityAttributes(
                 attributes,
@@ -25009,7 +25290,10 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.presentedItemDidGainVersion_.implement(
       builder,
       NSFilePresenter$Builder.presentedItemDidGainVersion_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedItemDidGainVersion_,
+              )
           ? (NSFileVersion version) {
               optionalImplementation.presentedItemDidGainVersion(version);
             }
@@ -25018,7 +25302,10 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.presentedItemDidLoseVersion_.implement(
       builder,
       NSFilePresenter$Builder.presentedItemDidLoseVersion_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedItemDidLoseVersion_,
+              )
           ? (NSFileVersion version) {
               optionalImplementation.presentedItemDidLoseVersion(version);
             }
@@ -25027,7 +25314,10 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.presentedItemDidMoveToURL_.implement(
       builder,
       NSFilePresenter$Builder.presentedItemDidMoveToURL_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedItemDidMoveToURL_,
+              )
           ? (objc.NSURL newURL) {
               optionalImplementation.presentedItemDidMoveToURL(newURL);
             }
@@ -25038,7 +25328,10 @@ interface class NSFilePresenter$Builder {
       NSFilePresenter$Builder
                   .presentedItemDidResolveConflictVersion_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedItemDidResolveConflictVersion_,
+              )
           ? (NSFileVersion version) {
               optionalImplementation.presentedItemDidResolveConflictVersion(
                 version,
@@ -25059,7 +25352,10 @@ interface class NSFilePresenter$Builder {
       NSFilePresenter$Builder
                   .presentedSubitemAtURL_didGainVersion_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedSubitemAtURL_didGainVersion_,
+              )
           ? (objc.NSURL url, NSFileVersion didGainVersion) {
               optionalImplementation.presentedSubitemAtURLDidGainVersion(
                 url,
@@ -25073,7 +25369,10 @@ interface class NSFilePresenter$Builder {
       NSFilePresenter$Builder
                   .presentedSubitemAtURL_didLoseVersion_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedSubitemAtURL_didLoseVersion_,
+              )
           ? (objc.NSURL url, NSFileVersion didLoseVersion) {
               optionalImplementation.presentedSubitemAtURLDidLoseVersion(
                 url,
@@ -25085,7 +25384,10 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.presentedSubitemAtURL_didMoveToURL_.implement(
       builder,
       NSFilePresenter$Builder.presentedSubitemAtURL_didMoveToURL_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedSubitemAtURL_didMoveToURL_,
+              )
           ? (objc.NSURL oldURL, objc.NSURL didMoveToURL) {
               optionalImplementation.presentedSubitemAtURLDidMoveToURL(
                 oldURL,
@@ -25100,7 +25402,11 @@ interface class NSFilePresenter$Builder {
           NSFilePresenter$Builder
                       .presentedSubitemAtURL_didResolveConflictVersion_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFilePresenter$Builder
+                        .presentedSubitemAtURL_didResolveConflictVersion_,
+                  )
               ? (objc.NSURL url, NSFileVersion didResolveConflictVersion) {
                   optionalImplementation
                       .presentedSubitemAtURLDidResolveConflictVersion(
@@ -25113,7 +25419,10 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.presentedSubitemDidAppearAtURL_.implement(
       builder,
       NSFilePresenter$Builder.presentedSubitemDidAppearAtURL_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedSubitemDidAppearAtURL_,
+              )
           ? (objc.NSURL url) {
               optionalImplementation.presentedSubitemDidAppearAtURL(url);
             }
@@ -25122,7 +25431,10 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.presentedSubitemDidChangeAtURL_.implement(
       builder,
       NSFilePresenter$Builder.presentedSubitemDidChangeAtURL_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.presentedSubitemDidChangeAtURL_,
+              )
           ? (objc.NSURL url) {
               optionalImplementation.presentedSubitemDidChangeAtURL(url);
             }
@@ -25131,14 +25443,20 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.primaryPresentedItemURL.implement(
       builder,
       NSFilePresenter$Builder.primaryPresentedItemURL.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.primaryPresentedItemURL,
+              )
           ? () => optionalImplementation.primaryPresentedItemURL
           : null,
     );
     NSFilePresenter$Builder.relinquishPresentedItemToReader_.implement(
       builder,
       NSFilePresenter$Builder.relinquishPresentedItemToReader_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.relinquishPresentedItemToReader_,
+              )
           ? (
               objc.ObjCBlock<
                 ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>?)
@@ -25152,7 +25470,10 @@ interface class NSFilePresenter$Builder {
     NSFilePresenter$Builder.relinquishPresentedItemToWriter_.implement(
       builder,
       NSFilePresenter$Builder.relinquishPresentedItemToWriter_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSFilePresenter$Builder.relinquishPresentedItemToWriter_,
+              )
           ? (
               objc.ObjCBlock<
                 ffi.Void Function(objc.ObjCBlock<ffi.Void Function()>?)
@@ -25169,7 +25490,11 @@ interface class NSFilePresenter$Builder {
           NSFilePresenter$Builder
                       .savePresentedItemChangesWithCompletionHandler_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSFilePresenter$Builder
+                        .savePresentedItemChangesWithCompletionHandler_,
+                  )
               ? (
                   objc.ObjCBlock<ffi.Void Function(objc.NSError?)>
                   completionHandler,
@@ -25995,6 +26320,14 @@ extension type NSFileSecurity._(objc.ObjCObject object$)
     return NSFileSecurity.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSFileSecurity,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSFileSecurity constructed with the default `new` method.
   NSFileSecurity() : this.as(new$().object$);
 }
@@ -26515,6 +26848,14 @@ extension type NSFileWrapper._(objc.ObjCObject object$)
   static NSFileWrapper new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSFileWrapper, _sel_new);
     return NSFileWrapper.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSFileWrapper,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSFileWrapper constructed with the default `new` method.
@@ -28496,6 +28837,14 @@ extension type NSHTTPURLResponse._(objc.ObjCObject object$)
     return NSHTTPURLResponse.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSHTTPURLResponse,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSHTTPURLResponse constructed with the default `new` method.
   NSHTTPURLResponse() : this.as(new$().object$);
 }
@@ -28685,6 +29034,11 @@ extension type NSHashTable._(objc.ObjCObject object$)
   static NSHashTable new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSHashTable, _sel_new);
     return NSHashTable.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSHashTable, _sel_supportsSecureCoding);
   }
 
   static NSHashTable weakObjectsHashTable() {
@@ -29287,6 +29641,14 @@ extension type NSISO8601DateFormatter._(objc.ObjCObject object$)
     return objc.NSString.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSISO8601DateFormatter,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSISO8601DateFormatter constructed with the default `new` method.
   NSISO8601DateFormatter() : this.as(new$().object$);
 }
@@ -29480,6 +29842,11 @@ extension type NSIndexPath._(objc.ObjCObject object$)
   static NSIndexPath new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSIndexPath, _sel_new);
     return NSIndexPath.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSIndexPath, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSIndexPath constructed with the default `new` method.
@@ -29830,6 +30197,14 @@ extension type NSInflectionRule._(objc.ObjCObject object$)
     return NSInflectionRule.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSInflectionRule,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSInflectionRule constructed with the default `new` method.
   NSInflectionRule() : this.as(new$().object$);
 }
@@ -29932,6 +30307,14 @@ extension type NSInflectionRuleExplicit._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSInflectionRuleExplicit,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -30272,7 +30655,7 @@ extension NSInvocationOperation$Methods on NSInvocationOperation {
   }
 }
 
-extension NSItemProvider on objc.NSString {
+extension NSItemProvider$1 on objc.NSString {
   objc.NSItemProviderRepresentationVisibility
   itemProviderVisibilityForRepresentationWithTypeIdentifier2(
     objc.NSString typeIdentifier,
@@ -30425,7 +30808,7 @@ extension NSItemProvider on objc.NSString {
   }
 }
 
-extension NSItemProvider$1 on objc.NSURL {
+extension NSItemProvider$2 on objc.NSURL {
   objc.NSItemProviderRepresentationVisibility
   itemProviderVisibilityForRepresentationWithTypeIdentifier2(
     objc.NSString typeIdentifier,
@@ -32422,6 +32805,11 @@ extension NSKeyedArchiverDelegate$Methods on NSKeyedArchiverDelegate {
 abstract interface class NSKeyedArchiverDelegateSpec {}
 
 abstract interface class NSKeyedArchiverDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void archiverDidEncodeObject(
     NSKeyedArchiver archiver, {
     objc.ObjCObject? didEncodeObject,
@@ -32442,6 +32830,10 @@ abstract interface class NSKeyedArchiverDelegateOptional {
 mixin NSKeyedArchiverDelegateDefaults
     implements NSKeyedArchiverDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -32455,6 +32847,9 @@ interface class NSKeyedArchiverDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSKeyedArchiverDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSKeyedArchiverDelegateOptional.$implementedOptionalMethods].
   static NSKeyedArchiverDelegate implementFrom(
     NSKeyedArchiverDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -32481,7 +32876,10 @@ interface class NSKeyedArchiverDelegate$Builder {
     NSKeyedArchiverDelegate$Builder.archiver_didEncodeObject_.implement(
       builder,
       NSKeyedArchiverDelegate$Builder.archiver_didEncodeObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSKeyedArchiverDelegate$Builder.archiver_didEncodeObject_,
+              )
           ? (NSKeyedArchiver archiver, objc.ObjCObject? didEncodeObject) {
               optionalImplementation.archiverDidEncodeObject(
                 archiver,
@@ -32493,7 +32891,10 @@ interface class NSKeyedArchiverDelegate$Builder {
     NSKeyedArchiverDelegate$Builder.archiver_willEncodeObject_.implement(
       builder,
       NSKeyedArchiverDelegate$Builder.archiver_willEncodeObject_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSKeyedArchiverDelegate$Builder.archiver_willEncodeObject_,
+              )
           ? (NSKeyedArchiver archiver, objc.ObjCObject willEncodeObject) =>
                 optionalImplementation.archiverWillEncodeObject(
                   archiver,
@@ -32507,7 +32908,11 @@ interface class NSKeyedArchiverDelegate$Builder {
           NSKeyedArchiverDelegate$Builder
                       .archiver_willReplaceObject_withObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSKeyedArchiverDelegate$Builder
+                        .archiver_willReplaceObject_withObject_,
+                  )
               ? (
                   NSKeyedArchiver archiver,
                   objc.ObjCObject? willReplaceObject,
@@ -32524,7 +32929,10 @@ interface class NSKeyedArchiverDelegate$Builder {
     NSKeyedArchiverDelegate$Builder.archiverDidFinish_.implement(
       builder,
       NSKeyedArchiverDelegate$Builder.archiverDidFinish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSKeyedArchiverDelegate$Builder.archiverDidFinish_,
+              )
           ? (NSKeyedArchiver archiver) {
               optionalImplementation.archiverDidFinish(archiver);
             }
@@ -32533,7 +32941,10 @@ interface class NSKeyedArchiverDelegate$Builder {
     NSKeyedArchiverDelegate$Builder.archiverWillFinish_.implement(
       builder,
       NSKeyedArchiverDelegate$Builder.archiverWillFinish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSKeyedArchiverDelegate$Builder.archiverWillFinish_,
+              )
           ? (NSKeyedArchiver archiver) {
               optionalImplementation.archiverWillFinish(archiver);
             }
@@ -33416,6 +33827,11 @@ extension NSKeyedUnarchiverDelegate$Methods on NSKeyedUnarchiverDelegate {
 abstract interface class NSKeyedUnarchiverDelegateSpec {}
 
 abstract interface class NSKeyedUnarchiverDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.ObjCObject? unarchiverCannotDecodeObjectOfClassNameOriginalClasses(
     NSKeyedUnarchiver unarchiver, {
     required objc.NSString cannotDecodeObjectOfClassName,
@@ -33437,6 +33853,10 @@ abstract interface class NSKeyedUnarchiverDelegateOptional {
 mixin NSKeyedUnarchiverDelegateDefaults
     implements NSKeyedUnarchiverDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -33450,6 +33870,9 @@ interface class NSKeyedUnarchiverDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSKeyedUnarchiverDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSKeyedUnarchiverDelegateOptional.$implementedOptionalMethods].
   static NSKeyedUnarchiverDelegate implementFrom(
     NSKeyedUnarchiverDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -33480,7 +33903,11 @@ interface class NSKeyedUnarchiverDelegate$Builder {
           NSKeyedUnarchiverDelegate$Builder
                       .unarchiver_cannotDecodeObjectOfClassName_originalClasses_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSKeyedUnarchiverDelegate$Builder
+                        .unarchiver_cannotDecodeObjectOfClassName_originalClasses_,
+                  )
               ? (
                   NSKeyedUnarchiver unarchiver,
                   objc.NSString cannotDecodeObjectOfClassName,
@@ -33499,7 +33926,10 @@ interface class NSKeyedUnarchiverDelegate$Builder {
       NSKeyedUnarchiverDelegate$Builder
                   .unarchiver_didDecodeObject_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSKeyedUnarchiverDelegate$Builder.unarchiver_didDecodeObject_,
+              )
           ? (NSKeyedUnarchiver unarchiver, objc.ObjCObject? didDecodeObject) =>
                 optionalImplementation.unarchiverDidDecodeObject(
                   unarchiver,
@@ -33513,7 +33943,11 @@ interface class NSKeyedUnarchiverDelegate$Builder {
           NSKeyedUnarchiverDelegate$Builder
                       .unarchiver_willReplaceObject_withObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSKeyedUnarchiverDelegate$Builder
+                        .unarchiver_willReplaceObject_withObject_,
+                  )
               ? (
                   NSKeyedUnarchiver unarchiver,
                   objc.ObjCObject willReplaceObject,
@@ -33530,7 +33964,10 @@ interface class NSKeyedUnarchiverDelegate$Builder {
     NSKeyedUnarchiverDelegate$Builder.unarchiverDidFinish_.implement(
       builder,
       NSKeyedUnarchiverDelegate$Builder.unarchiverDidFinish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSKeyedUnarchiverDelegate$Builder.unarchiverDidFinish_,
+              )
           ? (NSKeyedUnarchiver unarchiver) {
               optionalImplementation.unarchiverDidFinish(unarchiver);
             }
@@ -33539,7 +33976,10 @@ interface class NSKeyedUnarchiverDelegate$Builder {
     NSKeyedUnarchiverDelegate$Builder.unarchiverWillFinish_.implement(
       builder,
       NSKeyedUnarchiverDelegate$Builder.unarchiverWillFinish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSKeyedUnarchiverDelegate$Builder.unarchiverWillFinish_,
+              )
           ? (NSKeyedUnarchiver unarchiver) {
               optionalImplementation.unarchiverWillFinish(unarchiver);
             }
@@ -35115,6 +35555,14 @@ extension type NSLocalizedNumberFormatRule._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSLocalizedNumberFormatRule,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSLocalizedNumberFormatRule constructed with the default `new` method.
   NSLocalizedNumberFormatRule() : this.as(new$().object$);
 }
@@ -35286,9 +35734,6 @@ interface class NSLocking$Builder {
 
   /// Builds an object that implements the NSLocking protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSLockingOptional].
   static NSLocking implementFrom(
     NSLockingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -35868,11 +36313,20 @@ extension NSMachPortDelegate$Methods on NSMachPortDelegate {
 abstract interface class NSMachPortDelegateSpec {}
 
 abstract interface class NSMachPortDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void handleMachMessage(ffi.Pointer<ffi.Void> msg);
   void handlePortMessage(objc.NSPortMessage message);
 }
 
 mixin NSMachPortDelegateDefaults implements NSMachPortDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -35887,6 +36341,9 @@ interface class NSMachPortDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSMachPortDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSMachPortDelegateOptional.$implementedOptionalMethods].
   static NSMachPortDelegate implementFrom(
     NSMachPortDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -35911,7 +36368,10 @@ interface class NSMachPortDelegate$Builder {
     NSMachPortDelegate$Builder.handleMachMessage_.implement(
       builder,
       NSMachPortDelegate$Builder.handleMachMessage_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMachPortDelegate$Builder.handleMachMessage_,
+              )
           ? (ffi.Pointer<ffi.Void> msg) {
               optionalImplementation.handleMachMessage(msg);
             }
@@ -35920,7 +36380,10 @@ interface class NSMachPortDelegate$Builder {
     NSMachPortDelegate$Builder.handlePortMessage_.implement(
       builder,
       NSMachPortDelegate$Builder.handlePortMessage_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSMachPortDelegate$Builder.handlePortMessage_,
+              )
           ? (objc.NSPortMessage message) {
               optionalImplementation.handlePortMessage(message);
             }
@@ -36147,6 +36610,11 @@ extension type NSMapTable._(objc.ObjCObject object$)
       _sel_strongToWeakObjectsMapTable,
     );
     return NSMapTable.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSMapTable, _sel_supportsSecureCoding);
   }
 
   static NSMapTable weakToStrongObjectsMapTable() {
@@ -36814,6 +37282,14 @@ extension type NSMeasurement._(objc.ObjCObject object$)
     return NSMeasurement.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSMeasurement,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSMeasurement constructed with the default `new` method.
   NSMeasurement() : this.as(new$().object$);
 }
@@ -36995,6 +37471,14 @@ extension type NSMeasurementFormatter._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSMeasurementFormatter,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -38245,6 +38729,11 @@ extension NSMetadataQueryDelegate$Methods on NSMetadataQueryDelegate {
 abstract interface class NSMetadataQueryDelegateSpec {}
 
 abstract interface class NSMetadataQueryDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.ObjCObject metadataQueryReplacementObjectForResultObject(
     NSMetadataQuery query, {
     required NSMetadataItem replacementObjectForResultObject,
@@ -38259,6 +38748,10 @@ abstract interface class NSMetadataQueryDelegateOptional {
 mixin NSMetadataQueryDelegateDefaults
     implements NSMetadataQueryDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -38272,6 +38765,9 @@ interface class NSMetadataQueryDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSMetadataQueryDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSMetadataQueryDelegateOptional.$implementedOptionalMethods].
   static NSMetadataQueryDelegate implementFrom(
     NSMetadataQueryDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -38302,7 +38798,11 @@ interface class NSMetadataQueryDelegate$Builder {
           NSMetadataQueryDelegate$Builder
                       .metadataQuery_replacementObjectForResultObject_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSMetadataQueryDelegate$Builder
+                        .metadataQuery_replacementObjectForResultObject_,
+                  )
               ? (
                   NSMetadataQuery query,
                   NSMetadataItem replacementObjectForResultObject,
@@ -38321,7 +38821,11 @@ interface class NSMetadataQueryDelegate$Builder {
           NSMetadataQueryDelegate$Builder
                       .metadataQuery_replacementValueForAttribute_value_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSMetadataQueryDelegate$Builder
+                        .metadataQuery_replacementValueForAttribute_value_,
+                  )
               ? (
                   NSMetadataQuery query,
                   objc.NSString replacementValueForAttribute,
@@ -38792,6 +39296,11 @@ extension type NSMorphology$1._(objc.ObjCObject object$)
     return NSMorphology$1.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSMorphology, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSMorphology$1 constructed with the default `new` method.
   NSMorphology$1() : this.as(new$().object$);
 }
@@ -39121,6 +39630,14 @@ extension type NSMorphologyCustomPronoun._(objc.ObjCObject object$)
     return objc.NSArray.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSMorphologyCustomPronoun,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSMorphologyCustomPronoun constructed with the default `new` method.
   NSMorphologyCustomPronoun() : this.as(new$().object$);
 }
@@ -39341,6 +39858,14 @@ extension type NSMorphologyPronoun._(objc.ObjCObject object$)
   static NSMorphologyPronoun new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSMorphologyPronoun, _sel_new);
     return NSMorphologyPronoun.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSMorphologyPronoun,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSMorphologyPronoun constructed with the default `new` method.
@@ -39703,6 +40228,14 @@ extension type NSMutableAttributedString._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSMutableAttributedString,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSMutableAttributedString constructed with the default `new` method.
   NSMutableAttributedString() : this.as(new$().object$);
 }
@@ -39982,6 +40515,14 @@ extension type NSMutableCharacterSet._(objc.ObjCObject object$)
       _sel_punctuationCharacterSet,
     );
     return objc.NSCharacterSet.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSMutableCharacterSet,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// symbolCharacterSet
@@ -40711,11 +41252,6 @@ extension type NSMutableURLRequest._(objc.ObjCObject object$)
 
   /// supportsSecureCoding
   static bool getSupportsSecureCoding() {
-    objc.checkOsVersionInternal(
-      'NSMutableURLRequest.supportsSecureCoding',
-      iOS: (false, (2, 0, 0)),
-      macOS: (false, (10, 2, 0)),
-    );
     return _objc_msgSend_91o635(
       _class_NSMutableURLRequest,
       _sel_supportsSecureCoding,
@@ -42124,6 +42660,11 @@ extension NSNetServiceBrowserDelegate$Methods on NSNetServiceBrowserDelegate {
 abstract interface class NSNetServiceBrowserDelegateSpec {}
 
 abstract interface class NSNetServiceBrowserDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void netServiceBrowserDidFindDomainMoreComing(
     NSNetServiceBrowser browser, {
     required objc.NSString didFindDomain,
@@ -42155,6 +42696,10 @@ abstract interface class NSNetServiceBrowserDelegateOptional {
 mixin NSNetServiceBrowserDelegateDefaults
     implements NSNetServiceBrowserDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -42168,6 +42713,9 @@ interface class NSNetServiceBrowserDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSNetServiceBrowserDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSNetServiceBrowserDelegateOptional.$implementedOptionalMethods].
   static NSNetServiceBrowserDelegate implementFrom(
     NSNetServiceBrowserDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -42198,7 +42746,11 @@ interface class NSNetServiceBrowserDelegate$Builder {
           NSNetServiceBrowserDelegate$Builder
                       .netServiceBrowser_didFindDomain_moreComing_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSNetServiceBrowserDelegate$Builder
+                        .netServiceBrowser_didFindDomain_moreComing_,
+                  )
               ? (
                   NSNetServiceBrowser browser,
                   objc.NSString didFindDomain,
@@ -42220,7 +42772,11 @@ interface class NSNetServiceBrowserDelegate$Builder {
           NSNetServiceBrowserDelegate$Builder
                       .netServiceBrowser_didFindService_moreComing_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSNetServiceBrowserDelegate$Builder
+                        .netServiceBrowser_didFindService_moreComing_,
+                  )
               ? (
                   NSNetServiceBrowser browser,
                   NSNetService didFindService,
@@ -42241,7 +42797,11 @@ interface class NSNetServiceBrowserDelegate$Builder {
           NSNetServiceBrowserDelegate$Builder
                       .netServiceBrowser_didNotSearch_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSNetServiceBrowserDelegate$Builder
+                        .netServiceBrowser_didNotSearch_,
+                  )
               ? (NSNetServiceBrowser browser, objc.NSDictionary didNotSearch) {
                   optionalImplementation.netServiceBrowserDidNotSearch(
                     browser,
@@ -42257,7 +42817,11 @@ interface class NSNetServiceBrowserDelegate$Builder {
           NSNetServiceBrowserDelegate$Builder
                       .netServiceBrowser_didRemoveDomain_moreComing_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSNetServiceBrowserDelegate$Builder
+                        .netServiceBrowser_didRemoveDomain_moreComing_,
+                  )
               ? (
                   NSNetServiceBrowser browser,
                   objc.NSString didRemoveDomain,
@@ -42279,7 +42843,11 @@ interface class NSNetServiceBrowserDelegate$Builder {
           NSNetServiceBrowserDelegate$Builder
                       .netServiceBrowser_didRemoveService_moreComing_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSNetServiceBrowserDelegate$Builder
+                        .netServiceBrowser_didRemoveService_moreComing_,
+                  )
               ? (
                   NSNetServiceBrowser browser,
                   NSNetService didRemoveService,
@@ -42299,7 +42867,11 @@ interface class NSNetServiceBrowserDelegate$Builder {
           NSNetServiceBrowserDelegate$Builder
                       .netServiceBrowserDidStopSearch_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSNetServiceBrowserDelegate$Builder
+                        .netServiceBrowserDidStopSearch_,
+                  )
               ? (NSNetServiceBrowser browser) {
                   optionalImplementation.netServiceBrowserDidStopSearch(
                     browser,
@@ -42312,7 +42884,11 @@ interface class NSNetServiceBrowserDelegate$Builder {
       NSNetServiceBrowserDelegate$Builder
                   .netServiceBrowserWillSearch_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceBrowserDelegate$Builder
+                    .netServiceBrowserWillSearch_,
+              )
           ? (NSNetServiceBrowser browser) {
               optionalImplementation.netServiceBrowserWillSearch(browser);
             }
@@ -42792,6 +43368,11 @@ extension NSNetServiceDelegate$Methods on NSNetServiceDelegate {
 abstract interface class NSNetServiceDelegateSpec {}
 
 abstract interface class NSNetServiceDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void netServiceDidAcceptConnectionWithInputStreamOutputStream(
     NSNetService sender, {
     required objc.NSInputStream didAcceptConnectionWithInputStream,
@@ -42818,6 +43399,10 @@ abstract interface class NSNetServiceDelegateOptional {
 
 mixin NSNetServiceDelegateDefaults implements NSNetServiceDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -42831,6 +43416,9 @@ interface class NSNetServiceDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSNetServiceDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSNetServiceDelegateOptional.$implementedOptionalMethods].
   static NSNetServiceDelegate implementFrom(
     NSNetServiceDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -42859,7 +43447,11 @@ interface class NSNetServiceDelegate$Builder {
           NSNetServiceDelegate$Builder
                       .netService_didAcceptConnectionWithInputStream_outputStream_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSNetServiceDelegate$Builder
+                        .netService_didAcceptConnectionWithInputStream_outputStream_,
+                  )
               ? (
                   NSNetService sender,
                   objc.NSInputStream didAcceptConnectionWithInputStream,
@@ -42878,7 +43470,10 @@ interface class NSNetServiceDelegate$Builder {
     NSNetServiceDelegate$Builder.netService_didNotPublish_.implement(
       builder,
       NSNetServiceDelegate$Builder.netService_didNotPublish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netService_didNotPublish_,
+              )
           ? (NSNetService sender, objc.NSDictionary didNotPublish) {
               optionalImplementation.netServiceDidNotPublish(
                 sender,
@@ -42890,7 +43485,10 @@ interface class NSNetServiceDelegate$Builder {
     NSNetServiceDelegate$Builder.netService_didNotResolve_.implement(
       builder,
       NSNetServiceDelegate$Builder.netService_didNotResolve_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netService_didNotResolve_,
+              )
           ? (NSNetService sender, objc.NSDictionary didNotResolve) {
               optionalImplementation.netServiceDidNotResolve(
                 sender,
@@ -42904,7 +43502,10 @@ interface class NSNetServiceDelegate$Builder {
       NSNetServiceDelegate$Builder
                   .netService_didUpdateTXTRecordData_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netService_didUpdateTXTRecordData_,
+              )
           ? (NSNetService sender, objc.NSData didUpdateTXTRecordData) {
               optionalImplementation.netServiceDidUpdateTXTRecordData(
                 sender,
@@ -42916,7 +43517,10 @@ interface class NSNetServiceDelegate$Builder {
     NSNetServiceDelegate$Builder.netServiceDidPublish_.implement(
       builder,
       NSNetServiceDelegate$Builder.netServiceDidPublish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netServiceDidPublish_,
+              )
           ? (NSNetService sender) {
               optionalImplementation.netServiceDidPublish(sender);
             }
@@ -42925,7 +43529,10 @@ interface class NSNetServiceDelegate$Builder {
     NSNetServiceDelegate$Builder.netServiceDidResolveAddress_.implement(
       builder,
       NSNetServiceDelegate$Builder.netServiceDidResolveAddress_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netServiceDidResolveAddress_,
+              )
           ? (NSNetService sender) {
               optionalImplementation.netServiceDidResolveAddress(sender);
             }
@@ -42934,7 +43541,10 @@ interface class NSNetServiceDelegate$Builder {
     NSNetServiceDelegate$Builder.netServiceDidStop_.implement(
       builder,
       NSNetServiceDelegate$Builder.netServiceDidStop_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netServiceDidStop_,
+              )
           ? (NSNetService sender) {
               optionalImplementation.netServiceDidStop(sender);
             }
@@ -42943,7 +43553,10 @@ interface class NSNetServiceDelegate$Builder {
     NSNetServiceDelegate$Builder.netServiceWillPublish_.implement(
       builder,
       NSNetServiceDelegate$Builder.netServiceWillPublish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netServiceWillPublish_,
+              )
           ? (NSNetService sender) {
               optionalImplementation.netServiceWillPublish(sender);
             }
@@ -42952,7 +43565,10 @@ interface class NSNetServiceDelegate$Builder {
     NSNetServiceDelegate$Builder.netServiceWillResolve_.implement(
       builder,
       NSNetServiceDelegate$Builder.netServiceWillResolve_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSNetServiceDelegate$Builder.netServiceWillResolve_,
+              )
           ? (NSNetService sender) {
               optionalImplementation.netServiceWillResolve(sender);
             }
@@ -46267,6 +46883,14 @@ extension type NSOrthography._(objc.ObjCObject object$)
     return NSOrthography.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSOrthography,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSOrthography constructed with the default `new` method.
   NSOrthography() : this.as(new$().object$);
 }
@@ -46558,6 +47182,14 @@ extension type NSPersonNameComponents._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSPersonNameComponents,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -47231,6 +47863,14 @@ extension type NSPointerArray._(objc.ObjCObject object$)
       functions.ref.pointer,
     );
     return NSPointerArray.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSPointerArray,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSPointerArray constructed with the default `new` method.
@@ -48535,6 +49175,11 @@ extension type NSPredicate._(objc.ObjCObject object$)
     return NSPredicate.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSPredicate, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSPredicate constructed with the default `new` method.
   NSPredicate() : this.as(new$().object$);
 }
@@ -48918,6 +49563,11 @@ extension NSPredicateValidating$Methods on NSPredicateValidating {
 abstract interface class NSPredicateValidatingSpec {}
 
 abstract interface class NSPredicateValidatingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool visitExpression(NSExpression expression);
   bool visitExpressionKeyPath(
     NSExpression expression, {
@@ -48929,6 +49579,10 @@ abstract interface class NSPredicateValidatingOptional {
 }
 
 mixin NSPredicateValidatingDefaults implements NSPredicateValidatingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -48943,6 +49597,9 @@ interface class NSPredicateValidating$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSPredicateValidatingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSPredicateValidatingOptional.$implementedOptionalMethods].
   static NSPredicateValidating implementFrom(
     NSPredicateValidatingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -48969,7 +49626,10 @@ interface class NSPredicateValidating$Builder {
     NSPredicateValidating$Builder.visitExpression_error_.implement(
       builder,
       NSPredicateValidating$Builder.visitExpression_error_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPredicateValidating$Builder.visitExpression_error_,
+              )
           ? (
               NSExpression expression,
               ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>> error,
@@ -48982,7 +49642,11 @@ interface class NSPredicateValidating$Builder {
           NSPredicateValidating$Builder
                       .visitExpressionKeyPath_scope_key_error_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSPredicateValidating$Builder
+                        .visitExpressionKeyPath_scope_key_error_,
+                  )
               ? (
                   NSExpression expression,
                   objc.NSString? scope,
@@ -48998,7 +49662,10 @@ interface class NSPredicateValidating$Builder {
     NSPredicateValidating$Builder.visitOperatorType_error_.implement(
       builder,
       NSPredicateValidating$Builder.visitOperatorType_error_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPredicateValidating$Builder.visitOperatorType_error_,
+              )
           ? (
               NSPredicateOperatorType operatorType,
               ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>> error,
@@ -49008,7 +49675,10 @@ interface class NSPredicateValidating$Builder {
     NSPredicateValidating$Builder.visitPredicate_error_.implement(
       builder,
       NSPredicateValidating$Builder.visitPredicate_error_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSPredicateValidating$Builder.visitPredicate_error_,
+              )
           ? (
               NSPredicate predicate,
               ffi.Pointer<ffi.Pointer<objc.ObjCObjectImpl>> error,
@@ -49368,6 +50038,14 @@ extension type NSPresentationIntent._(objc.ObjCObject object$)
       nestedInsideIntent?.ref.pointer ?? ffi.nullptr,
     );
     return NSPresentationIntent.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSPresentationIntent,
+      _sel_supportsSecureCoding,
+    );
   }
 
   static NSPresentationIntent tableCellIntentWithIdentity(
@@ -50244,9 +50922,6 @@ interface class NSProgressReporting$Builder {
 
   /// Builds an object that implements the NSProgressReporting protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSProgressReportingOptional].
   static NSProgressReporting implementFrom(
     NSProgressReportingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -51012,6 +51687,14 @@ extension type NSPurgeableData._(objc.ObjCObject object$)
     return NSPurgeableData.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSPurgeableData,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSPurgeableData constructed with the default `new` method.
   NSPurgeableData() : this.as(new$().object$);
 }
@@ -51644,6 +52327,14 @@ extension type NSRegularExpression._(objc.ObjCObject object$)
     } finally {
       pkg_ffi.calloc.free($err);
     }
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSRegularExpression,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSRegularExpression constructed with the default `new` method.
@@ -55422,6 +56113,14 @@ extension type NSSimpleCString._(objc.ObjCObject object$)
     return NSSimpleCString.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSSimpleCString,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSSimpleCString constructed with the default `new` method.
   NSSimpleCString() : this.as(new$().object$);
 }
@@ -56024,6 +56723,14 @@ extension type NSSortDescriptor._(objc.ObjCObject object$)
       selector,
     );
     return NSSortDescriptor.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSSortDescriptor,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSSortDescriptor constructed with the default `new` method.
@@ -56700,6 +57407,11 @@ extension NSSpellServerDelegate$Methods on NSSpellServerDelegate {
 abstract interface class NSSpellServerDelegateSpec {}
 
 abstract interface class NSSpellServerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.NSRange spellServerCheckGrammarInStringLanguageDetails(
     NSSpellServer sender, {
     required objc.NSString checkGrammarInString,
@@ -56755,6 +57467,10 @@ abstract interface class NSSpellServerDelegateOptional {
 
 mixin NSSpellServerDelegateDefaults implements NSSpellServerDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -56768,6 +57484,9 @@ interface class NSSpellServerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSSpellServerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSSpellServerDelegateOptional.$implementedOptionalMethods].
   static NSSpellServerDelegate implementFrom(
     NSSpellServerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -56798,7 +57517,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_checkGrammarInString_language_details_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_checkGrammarInString_language_details_,
+                  )
               ? (
                   NSSpellServer sender,
                   objc.NSString checkGrammarInString,
@@ -56820,7 +57543,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_checkString_offset_types_options_orthography_wordCount_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_checkString_offset_types_options_orthography_wordCount_,
+                  )
               ? (
                   NSSpellServer sender,
                   objc.NSString checkString,
@@ -56847,7 +57574,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_didForgetWord_inLanguage_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_didForgetWord_inLanguage_,
+                  )
               ? (
                   NSSpellServer sender,
                   objc.NSString didForgetWord,
@@ -56867,7 +57598,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_didLearnWord_inLanguage_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_didLearnWord_inLanguage_,
+                  )
               ? (
                   NSSpellServer sender,
                   objc.NSString didLearnWord,
@@ -56888,7 +57623,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_findMisspelledWordInString_language_wordCount_countOnly_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_findMisspelledWordInString_language_wordCount_countOnly_,
+                  )
               ? (
                   NSSpellServer sender,
                   objc.NSString findMisspelledWordInString,
@@ -56912,7 +57651,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_recordResponse_toCorrection_forWord_language_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_recordResponse_toCorrection_forWord_language_,
+                  )
               ? (
                   NSSpellServer sender,
                   int recordResponse,
@@ -56938,7 +57681,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_suggestCompletionsForPartialWordRange_inString_language_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_suggestCompletionsForPartialWordRange_inString_language_,
+                  )
               ? (
                   NSSpellServer sender,
                   objc.NSRange suggestCompletionsForPartialWordRange,
@@ -56960,7 +57707,11 @@ interface class NSSpellServerDelegate$Builder {
           NSSpellServerDelegate$Builder
                       .spellServer_suggestGuessesForWord_inLanguage_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSSpellServerDelegate$Builder
+                        .spellServer_suggestGuessesForWord_inLanguage_,
+                  )
               ? (
                   NSSpellServer sender,
                   objc.NSString suggestGuessesForWord,
@@ -58355,6 +59106,14 @@ extension type NSTermOfAddress._(objc.ObjCObject object$)
     return NSTermOfAddress.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTermOfAddress,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSTermOfAddress constructed with the default `new` method.
   NSTermOfAddress() : this.as(new$().object$);
 }
@@ -58487,6 +59246,14 @@ extension type NSTextCheckingResult._(objc.ObjCObject object$)
   static NSTextCheckingResult new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextCheckingResult, _sel_new);
     return NSTextCheckingResult.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextCheckingResult,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSTextCheckingResult constructed with the default `new` method.
@@ -59614,6 +60381,11 @@ extension type NSTimeZone._(objc.ObjCObject object$)
     return NSTimeZone.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSTimeZone, _sel_supportsSecureCoding);
+  }
+
   static NSTimeZone timeZoneForSecondsFromGMT(int seconds) {
     final $ret = _objc_msgSend_qugqlf(
       _class_NSTimeZone,
@@ -59901,6 +60673,14 @@ extension type NSURLAuthenticationChallenge._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSURLAuthenticationChallenge,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -60199,6 +60979,11 @@ abstract interface class NSURLAuthenticationChallengeSenderSpec {
 }
 
 abstract interface class NSURLAuthenticationChallengeSenderOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void performDefaultHandlingForAuthenticationChallenge(
     NSURLAuthenticationChallenge challenge,
   );
@@ -60209,6 +60994,10 @@ abstract interface class NSURLAuthenticationChallengeSenderOptional {
 
 mixin NSURLAuthenticationChallengeSenderDefaults
     implements NSURLAuthenticationChallengeSenderOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -60224,6 +61013,9 @@ interface class NSURLAuthenticationChallengeSender$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLAuthenticationChallengeSenderOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLAuthenticationChallengeSenderOptional.$implementedOptionalMethods].
   static NSURLAuthenticationChallengeSender implementFrom(
     NSURLAuthenticationChallengeSenderSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -60265,7 +61057,11 @@ interface class NSURLAuthenticationChallengeSender$Builder {
           NSURLAuthenticationChallengeSender$Builder
                       .performDefaultHandlingForAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLAuthenticationChallengeSender$Builder
+                        .performDefaultHandlingForAuthenticationChallenge_,
+                  )
               ? (NSURLAuthenticationChallenge challenge) {
                   optionalImplementation
                       .performDefaultHandlingForAuthenticationChallenge(
@@ -60281,7 +61077,11 @@ interface class NSURLAuthenticationChallengeSender$Builder {
           NSURLAuthenticationChallengeSender$Builder
                       .rejectProtectionSpaceAndContinueWithChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLAuthenticationChallengeSender$Builder
+                        .rejectProtectionSpaceAndContinueWithChallenge_,
+                  )
               ? (NSURLAuthenticationChallenge challenge) {
                   optionalImplementation
                       .rejectProtectionSpaceAndContinueWithChallenge(challenge);
@@ -62316,6 +63116,11 @@ extension NSURLConnectionDataDelegate$Methods on NSURLConnectionDataDelegate {
 abstract interface class NSURLConnectionDataDelegateSpec {}
 
 abstract interface class NSURLConnectionDataDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool connectionCanAuthenticateAgainstProtectionSpace(
     NSURLConnection connection, {
     required NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -62371,6 +63176,10 @@ abstract interface class NSURLConnectionDataDelegateOptional {
 mixin NSURLConnectionDataDelegateDefaults
     implements NSURLConnectionDataDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -62384,6 +63193,9 @@ interface class NSURLConnectionDataDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLConnectionDataDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLConnectionDataDelegateOptional.$implementedOptionalMethods].
   static NSURLConnectionDataDelegate implementFrom(
     NSURLConnectionDataDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -62414,7 +63226,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connection_canAuthenticateAgainstProtectionSpace_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connection_canAuthenticateAgainstProtectionSpace_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -62433,7 +63249,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connection_didCancelAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connection_didCancelAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge didCancelAuthenticationChallenge,
@@ -62451,7 +63271,11 @@ interface class NSURLConnectionDataDelegate$Builder {
       NSURLConnectionDataDelegate$Builder
                   .connection_didFailWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLConnectionDataDelegate$Builder
+                    .connection_didFailWithError_,
+              )
           ? (NSURLConnection connection, objc.NSError didFailWithError) {
               optionalImplementation.connectionDidFailWithError(
                 connection,
@@ -62467,7 +63291,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connection_didReceiveAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connection_didReceiveAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge
@@ -62487,7 +63315,10 @@ interface class NSURLConnectionDataDelegate$Builder {
       NSURLConnectionDataDelegate$Builder
                   .connection_didReceiveData_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLConnectionDataDelegate$Builder.connection_didReceiveData_,
+              )
           ? (NSURLConnection connection, objc.NSData didReceiveData) {
               optionalImplementation.connectionDidReceiveData(
                 connection,
@@ -62502,7 +63333,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connection_didReceiveResponse_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connection_didReceiveResponse_,
+                  )
               ? (NSURLConnection connection, NSURLResponse didReceiveResponse) {
                   optionalImplementation.connectionDidReceiveResponse(
                     connection,
@@ -62518,7 +63353,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connection_didSendBodyData_totalBytesWritten_totalBytesExpectedToWrite_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connection_didSendBodyData_totalBytesWritten_totalBytesExpectedToWrite_,
+                  )
               ? (
                   NSURLConnection connection,
                   int didSendBodyData,
@@ -62540,7 +63379,11 @@ interface class NSURLConnectionDataDelegate$Builder {
       NSURLConnectionDataDelegate$Builder
                   .connection_needNewBodyStream_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLConnectionDataDelegate$Builder
+                    .connection_needNewBodyStream_,
+              )
           ? (NSURLConnection connection, NSURLRequest needNewBodyStream) =>
                 optionalImplementation.connectionNeedNewBodyStream(
                   connection,
@@ -62553,7 +63396,11 @@ interface class NSURLConnectionDataDelegate$Builder {
       NSURLConnectionDataDelegate$Builder
                   .connection_willCacheResponse_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLConnectionDataDelegate$Builder
+                    .connection_willCacheResponse_,
+              )
           ? (
               NSURLConnection connection,
               NSCachedURLResponse willCacheResponse,
@@ -62570,7 +63417,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connection_willSendRequest_redirectResponse_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connection_willSendRequest_redirectResponse_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLRequest willSendRequest,
@@ -62590,7 +63441,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connection_willSendRequestForAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connection_willSendRequestForAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge
@@ -62610,7 +63465,10 @@ interface class NSURLConnectionDataDelegate$Builder {
       NSURLConnectionDataDelegate$Builder
                   .connectionDidFinishLoading_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLConnectionDataDelegate$Builder.connectionDidFinishLoading_,
+              )
           ? (NSURLConnection connection) {
               optionalImplementation.connectionDidFinishLoading(connection);
             }
@@ -62622,7 +63480,11 @@ interface class NSURLConnectionDataDelegate$Builder {
           NSURLConnectionDataDelegate$Builder
                       .connectionShouldUseCredentialStorage_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDataDelegate$Builder
+                        .connectionShouldUseCredentialStorage_,
+                  )
               ? (NSURLConnection connection) => optionalImplementation
                     .connectionShouldUseCredentialStorage(connection)
               : null,
@@ -63226,6 +64088,11 @@ extension NSURLConnectionDelegate$Methods on NSURLConnectionDelegate {
 abstract interface class NSURLConnectionDelegateSpec {}
 
 abstract interface class NSURLConnectionDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool connectionCanAuthenticateAgainstProtectionSpace(
     NSURLConnection connection, {
     required NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -63253,6 +64120,10 @@ abstract interface class NSURLConnectionDelegateOptional {
 mixin NSURLConnectionDelegateDefaults
     implements NSURLConnectionDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -63266,6 +64137,9 @@ interface class NSURLConnectionDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLConnectionDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLConnectionDelegateOptional.$implementedOptionalMethods].
   static NSURLConnectionDelegate implementFrom(
     NSURLConnectionDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -63296,7 +64170,11 @@ interface class NSURLConnectionDelegate$Builder {
           NSURLConnectionDelegate$Builder
                       .connection_canAuthenticateAgainstProtectionSpace_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDelegate$Builder
+                        .connection_canAuthenticateAgainstProtectionSpace_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -63314,7 +64192,11 @@ interface class NSURLConnectionDelegate$Builder {
           NSURLConnectionDelegate$Builder
                       .connection_didCancelAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDelegate$Builder
+                        .connection_didCancelAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge didCancelAuthenticationChallenge,
@@ -63332,7 +64214,10 @@ interface class NSURLConnectionDelegate$Builder {
       NSURLConnectionDelegate$Builder
                   .connection_didFailWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLConnectionDelegate$Builder.connection_didFailWithError_,
+              )
           ? (NSURLConnection connection, objc.NSError didFailWithError) {
               optionalImplementation.connectionDidFailWithError(
                 connection,
@@ -63348,7 +64233,11 @@ interface class NSURLConnectionDelegate$Builder {
           NSURLConnectionDelegate$Builder
                       .connection_didReceiveAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDelegate$Builder
+                        .connection_didReceiveAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge
@@ -63370,7 +64259,11 @@ interface class NSURLConnectionDelegate$Builder {
           NSURLConnectionDelegate$Builder
                       .connection_willSendRequestForAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDelegate$Builder
+                        .connection_willSendRequestForAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge
@@ -63391,7 +64284,11 @@ interface class NSURLConnectionDelegate$Builder {
           NSURLConnectionDelegate$Builder
                       .connectionShouldUseCredentialStorage_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDelegate$Builder
+                        .connectionShouldUseCredentialStorage_,
+                  )
               ? (NSURLConnection connection) => optionalImplementation
                     .connectionShouldUseCredentialStorage(connection)
               : null,
@@ -63853,6 +64750,11 @@ abstract interface class NSURLConnectionDownloadDelegateSpec {
 }
 
 abstract interface class NSURLConnectionDownloadDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool connectionCanAuthenticateAgainstProtectionSpace(
     NSURLConnection connection, {
     required NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -63891,6 +64793,10 @@ abstract interface class NSURLConnectionDownloadDelegateOptional {
 mixin NSURLConnectionDownloadDelegateDefaults
     implements NSURLConnectionDownloadDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -63905,6 +64811,9 @@ interface class NSURLConnectionDownloadDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLConnectionDownloadDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLConnectionDownloadDelegateOptional.$implementedOptionalMethods].
   static NSURLConnectionDownloadDelegate implementFrom(
     NSURLConnectionDownloadDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -63935,7 +64844,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connection_canAuthenticateAgainstProtectionSpace_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connection_canAuthenticateAgainstProtectionSpace_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -63954,7 +64867,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connection_didCancelAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connection_didCancelAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge didCancelAuthenticationChallenge,
@@ -63974,7 +64891,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connection_didFailWithError_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connection_didFailWithError_,
+                  )
               ? (NSURLConnection connection, objc.NSError didFailWithError) {
                   optionalImplementation.connectionDidFailWithError(
                     connection,
@@ -63990,7 +64911,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connection_didReceiveAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connection_didReceiveAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge
@@ -64012,7 +64937,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connection_didWriteData_totalBytesWritten_expectedTotalBytes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connection_didWriteData_totalBytesWritten_expectedTotalBytes_,
+                  )
               ? (
                   NSURLConnection connection,
                   int didWriteData,
@@ -64036,7 +64965,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connection_willSendRequestForAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connection_willSendRequestForAuthenticationChallenge_,
+                  )
               ? (
                   NSURLConnection connection,
                   NSURLAuthenticationChallenge
@@ -64069,7 +65002,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connectionDidResumeDownloading_totalBytesWritten_expectedTotalBytes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connectionDidResumeDownloading_totalBytesWritten_expectedTotalBytes_,
+                  )
               ? (
                   NSURLConnection connection,
                   int totalBytesWritten,
@@ -64090,7 +65027,11 @@ interface class NSURLConnectionDownloadDelegate$Builder {
           NSURLConnectionDownloadDelegate$Builder
                       .connectionShouldUseCredentialStorage_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLConnectionDownloadDelegate$Builder
+                        .connectionShouldUseCredentialStorage_,
+                  )
               ? (NSURLConnection connection) => optionalImplementation
                     .connectionShouldUseCredentialStorage(connection)
               : null,
@@ -64496,6 +65437,14 @@ extension type NSURLCredential._(objc.ObjCObject object$)
   static NSURLCredential new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSURLCredential, _sel_new);
     return NSURLCredential.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSURLCredential,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSURLCredential constructed with the default `new` method.
@@ -65413,6 +66362,11 @@ extension NSURLDownloadDelegate$Methods on NSURLDownloadDelegate {
 abstract interface class NSURLDownloadDelegateSpec {}
 
 abstract interface class NSURLDownloadDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool downloadCanAuthenticateAgainstProtectionSpace(
     NSURLDownload connection, {
     required NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -65466,6 +66420,10 @@ abstract interface class NSURLDownloadDelegateOptional {
 
 mixin NSURLDownloadDelegateDefaults implements NSURLDownloadDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -65479,6 +66437,9 @@ interface class NSURLDownloadDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLDownloadDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLDownloadDelegateOptional.$implementedOptionalMethods].
   static NSURLDownloadDelegate implementFrom(
     NSURLDownloadDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -65509,7 +66470,11 @@ interface class NSURLDownloadDelegate$Builder {
           NSURLDownloadDelegate$Builder
                       .download_canAuthenticateAgainstProtectionSpace_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLDownloadDelegate$Builder
+                        .download_canAuthenticateAgainstProtectionSpace_,
+                  )
               ? (
                   NSURLDownload connection,
                   NSURLProtectionSpace canAuthenticateAgainstProtectionSpace,
@@ -65528,7 +66493,11 @@ interface class NSURLDownloadDelegate$Builder {
           NSURLDownloadDelegate$Builder
                       .download_decideDestinationWithSuggestedFilename_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLDownloadDelegate$Builder
+                        .download_decideDestinationWithSuggestedFilename_,
+                  )
               ? (
                   NSURLDownload download,
                   objc.NSString decideDestinationWithSuggestedFilename,
@@ -65548,7 +66517,11 @@ interface class NSURLDownloadDelegate$Builder {
           NSURLDownloadDelegate$Builder
                       .download_didCancelAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLDownloadDelegate$Builder
+                        .download_didCancelAuthenticationChallenge_,
+                  )
               ? (
                   NSURLDownload download,
                   NSURLAuthenticationChallenge didCancelAuthenticationChallenge,
@@ -65567,7 +66540,10 @@ interface class NSURLDownloadDelegate$Builder {
       NSURLDownloadDelegate$Builder
                   .download_didCreateDestination_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLDownloadDelegate$Builder.download_didCreateDestination_,
+              )
           ? (NSURLDownload download, objc.NSString didCreateDestination) {
               optionalImplementation.downloadDidCreateDestination(
                 download,
@@ -65579,7 +66555,10 @@ interface class NSURLDownloadDelegate$Builder {
     NSURLDownloadDelegate$Builder.download_didFailWithError_.implement(
       builder,
       NSURLDownloadDelegate$Builder.download_didFailWithError_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLDownloadDelegate$Builder.download_didFailWithError_,
+              )
           ? (NSURLDownload download, objc.NSError didFailWithError) {
               optionalImplementation.download(
                 download,
@@ -65594,7 +66573,11 @@ interface class NSURLDownloadDelegate$Builder {
           NSURLDownloadDelegate$Builder
                       .download_didReceiveAuthenticationChallenge_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLDownloadDelegate$Builder
+                        .download_didReceiveAuthenticationChallenge_,
+                  )
               ? (
                   NSURLDownload download,
                   NSURLAuthenticationChallenge
@@ -65614,7 +66597,10 @@ interface class NSURLDownloadDelegate$Builder {
       NSURLDownloadDelegate$Builder
                   .download_didReceiveDataOfLength_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLDownloadDelegate$Builder.download_didReceiveDataOfLength_,
+              )
           ? (NSURLDownload download, int didReceiveDataOfLength) {
               optionalImplementation.downloadDidReceiveDataOfLength(
                 download,
@@ -65626,7 +66612,10 @@ interface class NSURLDownloadDelegate$Builder {
     NSURLDownloadDelegate$Builder.download_didReceiveResponse_.implement(
       builder,
       NSURLDownloadDelegate$Builder.download_didReceiveResponse_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLDownloadDelegate$Builder.download_didReceiveResponse_,
+              )
           ? (NSURLDownload download, NSURLResponse didReceiveResponse) {
               optionalImplementation.downloadDidReceiveResponse(
                 download,
@@ -65641,7 +66630,11 @@ interface class NSURLDownloadDelegate$Builder {
           NSURLDownloadDelegate$Builder
                       .download_shouldDecodeSourceDataOfMIMEType_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLDownloadDelegate$Builder
+                        .download_shouldDecodeSourceDataOfMIMEType_,
+                  )
               ? (
                   NSURLDownload download,
                   objc.NSString shouldDecodeSourceDataOfMIMEType,
@@ -65659,7 +66652,11 @@ interface class NSURLDownloadDelegate$Builder {
           NSURLDownloadDelegate$Builder
                       .download_willResumeWithResponse_fromByte_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLDownloadDelegate$Builder
+                        .download_willResumeWithResponse_fromByte_,
+                  )
               ? (
                   NSURLDownload download,
                   NSURLResponse willResumeWithResponse,
@@ -65679,7 +66676,11 @@ interface class NSURLDownloadDelegate$Builder {
           NSURLDownloadDelegate$Builder
                       .download_willSendRequest_redirectResponse_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSURLDownloadDelegate$Builder
+                        .download_willSendRequest_redirectResponse_,
+                  )
               ? (
                   NSURLDownload download,
                   NSURLRequest willSendRequest,
@@ -65695,7 +66696,10 @@ interface class NSURLDownloadDelegate$Builder {
     NSURLDownloadDelegate$Builder.downloadDidBegin_.implement(
       builder,
       NSURLDownloadDelegate$Builder.downloadDidBegin_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLDownloadDelegate$Builder.downloadDidBegin_,
+              )
           ? (NSURLDownload download) {
               optionalImplementation.downloadDidBegin(download);
             }
@@ -65704,7 +66708,10 @@ interface class NSURLDownloadDelegate$Builder {
     NSURLDownloadDelegate$Builder.downloadDidFinish_.implement(
       builder,
       NSURLDownloadDelegate$Builder.downloadDidFinish_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLDownloadDelegate$Builder.downloadDidFinish_,
+              )
           ? (NSURLDownload download) {
               optionalImplementation.downloadDidFinish(download);
             }
@@ -65715,7 +66722,11 @@ interface class NSURLDownloadDelegate$Builder {
       NSURLDownloadDelegate$Builder
                   .downloadShouldUseCredentialStorage_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLDownloadDelegate$Builder
+                    .downloadShouldUseCredentialStorage_,
+              )
           ? (NSURLDownload download) => optionalImplementation
                 .downloadShouldUseCredentialStorage(download)
           : null,
@@ -66270,9 +67281,6 @@ interface class NSURLHandleClient$Builder {
 
   /// Builds an object that implements the NSURLHandleClient protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSURLHandleClientOptional].
   static NSURLHandleClient implementFrom(
     NSURLHandleClientSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -66823,6 +67831,14 @@ extension type NSURLProtectionSpace._(objc.ObjCObject object$)
   static NSURLProtectionSpace new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSURLProtectionSpace, _sel_new);
     return NSURLProtectionSpace.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSURLProtectionSpace,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSURLProtectionSpace constructed with the default `new` method.
@@ -67489,9 +68505,6 @@ interface class NSURLProtocolClient$Builder {
 
   /// Builds an object that implements the NSURLProtocolClient protocol using members
   /// from [implementation].
-  ///
-  /// Optional methods are only implemented when [implementation] also
-  /// implements [NSURLProtocolClientOptional].
   static NSURLProtocolClient implementFrom(
     NSURLProtocolClientSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -67924,6 +68937,14 @@ extension type NSURLQueryItem._(objc.ObjCObject object$)
     return NSURLQueryItem.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSURLQueryItem,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSURLQueryItem constructed with the default `new` method.
   NSURLQueryItem() : this.as(new$().object$);
 }
@@ -68093,11 +69114,6 @@ extension type NSURLRequest._(objc.ObjCObject object$)
 
   /// supportsSecureCoding
   static bool getSupportsSecureCoding() {
-    objc.checkOsVersionInternal(
-      'NSURLRequest.supportsSecureCoding',
-      iOS: (false, (2, 0, 0)),
-      macOS: (false, (10, 2, 0)),
-    );
     return _objc_msgSend_91o635(_class_NSURLRequest, _sel_supportsSecureCoding);
   }
 
@@ -68465,6 +69481,14 @@ extension type NSURLResponse._(objc.ObjCObject object$)
   static NSURLResponse new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSURLResponse, _sel_new);
     return NSURLResponse.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSURLResponse,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSURLResponse constructed with the default `new` method.
@@ -70917,6 +71941,11 @@ extension NSURLSessionDataDelegate$Methods on NSURLSessionDataDelegate {
 abstract interface class NSURLSessionDataDelegateSpec {}
 
 abstract interface class NSURLSessionDataDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void URLSessionDataTaskDidBecomeDownloadTask(
     NSURLSession session, {
     required NSURLSessionDataTask dataTask,
@@ -71025,6 +72054,10 @@ abstract interface class NSURLSessionDataDelegateOptional {
 mixin NSURLSessionDataDelegateDefaults
     implements NSURLSessionDataDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -71038,6 +72071,9 @@ interface class NSURLSessionDataDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLSessionDataDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLSessionDataDelegateOptional.$implementedOptionalMethods].
   static NSURLSessionDataDelegate implementFrom(
     NSURLSessionDataDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -71067,7 +72103,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_dataTask_didBecomeDownloadTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_dataTask_didBecomeDownloadTask_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionDataTask dataTask,
@@ -71087,7 +72127,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_dataTask_didBecomeStreamTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_dataTask_didBecomeStreamTask_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionDataTask dataTask,
@@ -71107,7 +72151,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_dataTask_didReceiveData_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_dataTask_didReceiveData_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionDataTask dataTask,
@@ -71127,7 +72175,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_dataTask_didReceiveResponse_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_dataTask_didReceiveResponse_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionDataTask dataTask,
@@ -71149,7 +72201,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_dataTask_willCacheResponse_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_dataTask_willCacheResponse_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionDataTask dataTask,
@@ -71172,7 +72228,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_didBecomeInvalidWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_didBecomeInvalidWithError_,
+              )
           ? (NSURLSession session, objc.NSError? didBecomeInvalidWithError) {
               optionalImplementation.URLSessionDidBecomeInvalidWithError(
                 session,
@@ -71184,7 +72244,10 @@ interface class NSURLSessionDataDelegate$Builder {
     NSURLSessionDataDelegate$Builder.URLSession_didCreateTask_.implement(
       builder,
       NSURLSessionDataDelegate$Builder.URLSession_didCreateTask_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder.URLSession_didCreateTask_,
+              )
           ? (NSURLSession session, NSURLSessionTask didCreateTask) {
               optionalImplementation.URLSessionDidCreateTask(
                 session,
@@ -71199,7 +72262,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLAuthenticationChallenge didReceiveChallenge,
@@ -71220,7 +72287,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_didCompleteWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_didCompleteWithError_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71240,7 +72311,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_didFinishCollectingMetrics_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_didFinishCollectingMetrics_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71260,7 +72335,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71283,7 +72362,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_didReceiveInformationalResponse_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_didReceiveInformationalResponse_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71304,7 +72387,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71328,7 +72415,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_needNewBodyStream_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_needNewBodyStream_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71349,7 +72440,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_needNewBodyStreamFromOffset_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_needNewBodyStreamFromOffset_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71372,7 +72467,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_willBeginDelayedRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_willBeginDelayedRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71395,7 +72494,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -71420,7 +72523,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSession_taskIsWaitingForConnectivity_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSession_taskIsWaitingForConnectivity_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask taskIsWaitingForConnectivity,
@@ -71438,7 +72545,11 @@ interface class NSURLSessionDataDelegate$Builder {
       NSURLSessionDataDelegate$Builder
                   .URLSessionDidFinishEventsForBackgroundURLSession_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDataDelegate$Builder
+                    .URLSessionDidFinishEventsForBackgroundURLSession_,
+              )
           ? (NSURLSession session) {
               optionalImplementation.URLSessionDidFinishEventsForBackgroundURLSession(
                 session,
@@ -72429,6 +73540,11 @@ extension NSURLSessionDelegate$Methods on NSURLSessionDelegate {
 abstract interface class NSURLSessionDelegateSpec {}
 
 abstract interface class NSURLSessionDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void URLSessionDidBecomeInvalidWithError(
     NSURLSession session, {
     objc.NSError? didBecomeInvalidWithError,
@@ -72444,6 +73560,10 @@ abstract interface class NSURLSessionDelegateOptional {
 
 mixin NSURLSessionDelegateDefaults implements NSURLSessionDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -72457,6 +73577,9 @@ interface class NSURLSessionDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLSessionDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLSessionDelegateOptional.$implementedOptionalMethods].
   static NSURLSessionDelegate implementFrom(
     NSURLSessionDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -72484,7 +73607,11 @@ interface class NSURLSessionDelegate$Builder {
       NSURLSessionDelegate$Builder
                   .URLSession_didBecomeInvalidWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDelegate$Builder
+                    .URLSession_didBecomeInvalidWithError_,
+              )
           ? (NSURLSession session, objc.NSError? didBecomeInvalidWithError) {
               optionalImplementation.URLSessionDidBecomeInvalidWithError(
                 session,
@@ -72499,7 +73626,11 @@ interface class NSURLSessionDelegate$Builder {
       NSURLSessionDelegate$Builder
                   .URLSession_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDelegate$Builder
+                    .URLSession_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLAuthenticationChallenge didReceiveChallenge,
@@ -72520,7 +73651,11 @@ interface class NSURLSessionDelegate$Builder {
       NSURLSessionDelegate$Builder
                   .URLSessionDidFinishEventsForBackgroundURLSession_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDelegate$Builder
+                    .URLSessionDidFinishEventsForBackgroundURLSession_,
+              )
           ? (NSURLSession session) {
               optionalImplementation.URLSessionDidFinishEventsForBackgroundURLSession(
                 session,
@@ -73178,6 +74313,11 @@ abstract interface class NSURLSessionDownloadDelegateSpec {
 }
 
 abstract interface class NSURLSessionDownloadDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void URLSessionDidBecomeInvalidWithError(
     NSURLSession session, {
     objc.NSError? didBecomeInvalidWithError,
@@ -73272,6 +74412,10 @@ abstract interface class NSURLSessionDownloadDelegateOptional {
 mixin NSURLSessionDownloadDelegateDefaults
     implements NSURLSessionDownloadDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -73285,6 +74429,9 @@ interface class NSURLSessionDownloadDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLSessionDownloadDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLSessionDownloadDelegateOptional.$implementedOptionalMethods].
   static NSURLSessionDownloadDelegate implementFrom(
     NSURLSessionDownloadDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -73314,7 +74461,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_didBecomeInvalidWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_didBecomeInvalidWithError_,
+              )
           ? (NSURLSession session, objc.NSError? didBecomeInvalidWithError) {
               optionalImplementation.URLSessionDidBecomeInvalidWithError(
                 session,
@@ -73328,7 +74479,10 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_didCreateTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder.URLSession_didCreateTask_,
+              )
           ? (NSURLSession session, NSURLSessionTask didCreateTask) {
               optionalImplementation.URLSessionDidCreateTask(
                 session,
@@ -73343,7 +74497,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLAuthenticationChallenge didReceiveChallenge,
@@ -73376,7 +74534,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_downloadTask_didResumeAtOffset_expectedTotalBytes_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_downloadTask_didResumeAtOffset_expectedTotalBytes_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionDownloadTask downloadTask,
@@ -73398,7 +74560,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_downloadTask_didWriteData_totalBytesWritten_totalBytesExpectedToWrite_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_downloadTask_didWriteData_totalBytesWritten_totalBytesExpectedToWrite_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionDownloadTask downloadTask,
@@ -73422,7 +74588,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_didCompleteWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_didCompleteWithError_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73442,7 +74612,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_didFinishCollectingMetrics_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_didFinishCollectingMetrics_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73462,7 +74636,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73485,7 +74663,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_didReceiveInformationalResponse_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_didReceiveInformationalResponse_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73506,7 +74688,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73530,7 +74716,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_needNewBodyStream_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_needNewBodyStream_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73551,7 +74741,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_needNewBodyStreamFromOffset_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_needNewBodyStreamFromOffset_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73574,7 +74768,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_willBeginDelayedRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_willBeginDelayedRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73597,7 +74795,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -73622,7 +74824,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSession_taskIsWaitingForConnectivity_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSession_taskIsWaitingForConnectivity_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask taskIsWaitingForConnectivity,
@@ -73640,7 +74846,11 @@ interface class NSURLSessionDownloadDelegate$Builder {
       NSURLSessionDownloadDelegate$Builder
                   .URLSessionDidFinishEventsForBackgroundURLSession_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionDownloadDelegate$Builder
+                    .URLSessionDidFinishEventsForBackgroundURLSession_,
+              )
           ? (NSURLSession session) {
               optionalImplementation.URLSessionDidFinishEventsForBackgroundURLSession(
                 session,
@@ -75015,6 +76225,11 @@ extension NSURLSessionStreamDelegate$Methods on NSURLSessionStreamDelegate {
 abstract interface class NSURLSessionStreamDelegateSpec {}
 
 abstract interface class NSURLSessionStreamDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void URLSessionBetterRouteDiscoveredForStreamTask(
     NSURLSession session, {
     required NSURLSessionStreamTask betterRouteDiscoveredForStreamTask,
@@ -75113,6 +76328,10 @@ abstract interface class NSURLSessionStreamDelegateOptional {
 mixin NSURLSessionStreamDelegateDefaults
     implements NSURLSessionStreamDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -75126,6 +76345,9 @@ interface class NSURLSessionStreamDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLSessionStreamDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLSessionStreamDelegateOptional.$implementedOptionalMethods].
   static NSURLSessionStreamDelegate implementFrom(
     NSURLSessionStreamDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -75155,7 +76377,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_betterRouteDiscoveredForStreamTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_betterRouteDiscoveredForStreamTask_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionStreamTask betterRouteDiscoveredForStreamTask,
@@ -75174,7 +76400,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_didBecomeInvalidWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_didBecomeInvalidWithError_,
+              )
           ? (NSURLSession session, objc.NSError? didBecomeInvalidWithError) {
               optionalImplementation.URLSessionDidBecomeInvalidWithError(
                 session,
@@ -75188,7 +76418,10 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_didCreateTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder.URLSession_didCreateTask_,
+              )
           ? (NSURLSession session, NSURLSessionTask didCreateTask) {
               optionalImplementation.URLSessionDidCreateTask(
                 session,
@@ -75203,7 +76436,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLAuthenticationChallenge didReceiveChallenge,
@@ -75224,7 +76461,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_readClosedForStreamTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_readClosedForStreamTask_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionStreamTask readClosedForStreamTask,
@@ -75242,7 +76483,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_streamTask_didBecomeInputStream_outputStream_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_streamTask_didBecomeInputStream_outputStream_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionStreamTask streamTask,
@@ -75264,7 +76509,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_didCompleteWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_didCompleteWithError_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75284,7 +76533,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_didFinishCollectingMetrics_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_didFinishCollectingMetrics_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75304,7 +76557,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75327,7 +76584,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_didReceiveInformationalResponse_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_didReceiveInformationalResponse_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75348,7 +76609,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75372,7 +76637,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_needNewBodyStream_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_needNewBodyStream_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75393,7 +76662,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_needNewBodyStreamFromOffset_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_needNewBodyStreamFromOffset_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75416,7 +76689,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_willBeginDelayedRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_willBeginDelayedRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75439,7 +76716,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -75464,7 +76745,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_taskIsWaitingForConnectivity_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_taskIsWaitingForConnectivity_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask taskIsWaitingForConnectivity,
@@ -75482,7 +76767,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSession_writeClosedForStreamTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSession_writeClosedForStreamTask_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionStreamTask writeClosedForStreamTask,
@@ -75500,7 +76789,11 @@ interface class NSURLSessionStreamDelegate$Builder {
       NSURLSessionStreamDelegate$Builder
                   .URLSessionDidFinishEventsForBackgroundURLSession_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionStreamDelegate$Builder
+                    .URLSessionDidFinishEventsForBackgroundURLSession_,
+              )
           ? (NSURLSession session) {
               optionalImplementation.URLSessionDidFinishEventsForBackgroundURLSession(
                 session,
@@ -77470,6 +78763,11 @@ extension NSURLSessionTaskDelegate$Methods on NSURLSessionTaskDelegate {
 abstract interface class NSURLSessionTaskDelegateSpec {}
 
 abstract interface class NSURLSessionTaskDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void URLSessionDidBecomeInvalidWithError(
     NSURLSession session, {
     objc.NSError? didBecomeInvalidWithError,
@@ -77550,6 +78848,10 @@ abstract interface class NSURLSessionTaskDelegateOptional {
 mixin NSURLSessionTaskDelegateDefaults
     implements NSURLSessionTaskDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -77563,6 +78865,9 @@ interface class NSURLSessionTaskDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLSessionTaskDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLSessionTaskDelegateOptional.$implementedOptionalMethods].
   static NSURLSessionTaskDelegate implementFrom(
     NSURLSessionTaskDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -77592,7 +78897,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_didBecomeInvalidWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_didBecomeInvalidWithError_,
+              )
           ? (NSURLSession session, objc.NSError? didBecomeInvalidWithError) {
               optionalImplementation.URLSessionDidBecomeInvalidWithError(
                 session,
@@ -77604,7 +78913,10 @@ interface class NSURLSessionTaskDelegate$Builder {
     NSURLSessionTaskDelegate$Builder.URLSession_didCreateTask_.implement(
       builder,
       NSURLSessionTaskDelegate$Builder.URLSession_didCreateTask_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder.URLSession_didCreateTask_,
+              )
           ? (NSURLSession session, NSURLSessionTask didCreateTask) {
               optionalImplementation.URLSessionDidCreateTask(
                 session,
@@ -77619,7 +78931,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLAuthenticationChallenge didReceiveChallenge,
@@ -77640,7 +78956,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_didCompleteWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_didCompleteWithError_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77660,7 +78980,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_didFinishCollectingMetrics_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_didFinishCollectingMetrics_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77680,7 +79004,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77703,7 +79031,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_didReceiveInformationalResponse_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_didReceiveInformationalResponse_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77724,7 +79056,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77748,7 +79084,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_needNewBodyStream_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_needNewBodyStream_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77769,7 +79109,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_needNewBodyStreamFromOffset_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_needNewBodyStreamFromOffset_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77792,7 +79136,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_willBeginDelayedRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_willBeginDelayedRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77815,7 +79163,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -77840,7 +79192,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSession_taskIsWaitingForConnectivity_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSession_taskIsWaitingForConnectivity_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask taskIsWaitingForConnectivity,
@@ -77858,7 +79214,11 @@ interface class NSURLSessionTaskDelegate$Builder {
       NSURLSessionTaskDelegate$Builder
                   .URLSessionDidFinishEventsForBackgroundURLSession_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionTaskDelegate$Builder
+                    .URLSessionDidFinishEventsForBackgroundURLSession_,
+              )
           ? (NSURLSession session) {
               optionalImplementation.URLSessionDidFinishEventsForBackgroundURLSession(
                 session,
@@ -79819,6 +81179,11 @@ extension NSURLSessionWebSocketDelegate$Methods
 abstract interface class NSURLSessionWebSocketDelegateSpec {}
 
 abstract interface class NSURLSessionWebSocketDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void URLSessionDidBecomeInvalidWithError(
     NSURLSession session, {
     objc.NSError? didBecomeInvalidWithError,
@@ -79910,6 +81275,10 @@ abstract interface class NSURLSessionWebSocketDelegateOptional {
 mixin NSURLSessionWebSocketDelegateDefaults
     implements NSURLSessionWebSocketDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -79923,6 +81292,9 @@ interface class NSURLSessionWebSocketDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSURLSessionWebSocketDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSURLSessionWebSocketDelegateOptional.$implementedOptionalMethods].
   static NSURLSessionWebSocketDelegate implementFrom(
     NSURLSessionWebSocketDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -79952,7 +81324,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_didBecomeInvalidWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_didBecomeInvalidWithError_,
+              )
           ? (NSURLSession session, objc.NSError? didBecomeInvalidWithError) {
               optionalImplementation.URLSessionDidBecomeInvalidWithError(
                 session,
@@ -79966,7 +81342,10 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_didCreateTask_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder.URLSession_didCreateTask_,
+              )
           ? (NSURLSession session, NSURLSessionTask didCreateTask) {
               optionalImplementation.URLSessionDidCreateTask(
                 session,
@@ -79981,7 +81360,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLAuthenticationChallenge didReceiveChallenge,
@@ -80002,7 +81385,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_didCompleteWithError_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_didCompleteWithError_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80022,7 +81409,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_didFinishCollectingMetrics_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_didFinishCollectingMetrics_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80042,7 +81433,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_didReceiveChallenge_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_didReceiveChallenge_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80065,7 +81460,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_didReceiveInformationalResponse_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_didReceiveInformationalResponse_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80086,7 +81485,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80110,7 +81513,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_needNewBodyStream_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_needNewBodyStream_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80131,7 +81538,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_needNewBodyStreamFromOffset_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_needNewBodyStreamFromOffset_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80154,7 +81565,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_willBeginDelayedRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_willBeginDelayedRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80177,7 +81592,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_task_willPerformHTTPRedirection_newRequest_completionHandler_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask task,
@@ -80202,7 +81621,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_taskIsWaitingForConnectivity_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_taskIsWaitingForConnectivity_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionTask taskIsWaitingForConnectivity,
@@ -80220,7 +81643,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_webSocketTask_didCloseWithCode_reason_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_webSocketTask_didCloseWithCode_reason_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionWebSocketTask webSocketTask,
@@ -80242,7 +81669,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSession_webSocketTask_didOpenWithProtocol_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSession_webSocketTask_didOpenWithProtocol_,
+              )
           ? (
               NSURLSession session,
               NSURLSessionWebSocketTask webSocketTask,
@@ -80262,7 +81693,11 @@ interface class NSURLSessionWebSocketDelegate$Builder {
       NSURLSessionWebSocketDelegate$Builder
                   .URLSessionDidFinishEventsForBackgroundURLSession_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSURLSessionWebSocketDelegate$Builder
+                    .URLSessionDidFinishEventsForBackgroundURLSession_,
+              )
           ? (NSURLSession session) {
               optionalImplementation.URLSessionDidFinishEventsForBackgroundURLSession(
                 session,
@@ -81540,6 +82975,11 @@ extension type NSUUID._(objc.ObjCObject object$)
   static NSUUID new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSUUID, _sel_new);
     return NSUUID.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUUID, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSUUID constructed with the default `new` method.
@@ -83015,6 +84455,11 @@ extension type NSUnit._(objc.ObjCObject object$)
     return NSUnit.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnit, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSUnit constructed with the default `new` method.
   NSUnit() : this.as(new$().object$);
 }
@@ -83149,6 +84594,14 @@ extension type NSUnitAcceleration._(objc.ObjCObject object$)
   static NSUnitAcceleration new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSUnitAcceleration, _sel_new);
     return NSUnitAcceleration.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitAcceleration,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSUnitAcceleration constructed with the default `new` method.
@@ -83330,6 +84783,11 @@ extension type NSUnitAngle._(objc.ObjCObject object$)
     );
     final $ret = _objc_msgSend_151sglz(_class_NSUnitAngle, _sel_revolutions);
     return NSUnitAngle.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitAngle, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSUnitAngle constructed with the default `new` method.
@@ -83619,6 +85077,11 @@ extension type NSUnitArea._(objc.ObjCObject object$)
     return NSUnitArea.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitArea, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSUnitArea constructed with the default `new` method.
   NSUnitArea() : this.as(new$().object$);
 }
@@ -83812,6 +85275,14 @@ extension type NSUnitConcentrationMass._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitConcentrationMass,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -84058,6 +85529,14 @@ extension type NSUnitConverterLinear._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitConverterLinear,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSUnitConverterLinear constructed with the default `new` method.
   NSUnitConverterLinear() : this.as(new$().object$);
 }
@@ -84221,6 +85700,14 @@ extension type NSUnitDispersion._(objc.ObjCObject object$)
       _sel_partsPerMillion,
     );
     return NSUnitDispersion.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitDispersion,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSUnitDispersion constructed with the default `new` method.
@@ -84419,6 +85906,14 @@ extension type NSUnitDuration._(objc.ObjCObject object$)
     );
     final $ret = _objc_msgSend_151sglz(_class_NSUnitDuration, _sel_seconds);
     return NSUnitDuration.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitDuration,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSUnitDuration constructed with the default `new` method.
@@ -84623,6 +86118,14 @@ extension type NSUnitElectricCharge._(objc.ObjCObject object$)
     return NSUnitElectricCharge.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitElectricCharge,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSUnitElectricCharge constructed with the default `new` method.
   NSUnitElectricCharge() : this.as(new$().object$);
 }
@@ -84823,6 +86326,14 @@ extension type NSUnitElectricCurrent._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitElectricCurrent,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -85050,6 +86561,14 @@ extension type NSUnitElectricPotentialDifference._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitElectricPotentialDifference,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -85314,6 +86833,14 @@ extension type NSUnitElectricResistance._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitElectricResistance,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSUnitElectricResistance constructed with the default `new` method.
   NSUnitElectricResistance() : this.as(new$().object$);
 }
@@ -85494,6 +87021,11 @@ extension type NSUnitEnergy._(objc.ObjCObject object$)
   static NSUnitEnergy new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSUnitEnergy, _sel_new);
     return NSUnitEnergy.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitEnergy, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSUnitEnergy constructed with the default `new` method.
@@ -85702,6 +87234,14 @@ extension type NSUnitFrequency._(objc.ObjCObject object$)
     return NSUnitFrequency.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitFrequency,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// terahertz
   static NSUnitFrequency getTerahertz() {
     objc.checkOsVersionInternal(
@@ -85873,6 +87413,14 @@ extension type NSUnitFuelEfficiency._(objc.ObjCObject object$)
     return NSUnitFuelEfficiency.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitFuelEfficiency,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSUnitFuelEfficiency constructed with the default `new` method.
   NSUnitFuelEfficiency() : this.as(new$().object$);
 }
@@ -85997,6 +87545,14 @@ extension type NSUnitIlluminance._(objc.ObjCObject object$)
   static NSUnitIlluminance new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSUnitIlluminance, _sel_new);
     return NSUnitIlluminance.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitIlluminance,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSUnitIlluminance constructed with the default `new` method.
@@ -86550,6 +88106,14 @@ extension type NSUnitInformationStorage._(objc.ObjCObject object$)
       $ret,
       retain: true,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitInformationStorage,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -87133,6 +88697,11 @@ extension type NSUnitLength._(objc.ObjCObject object$)
     return NSUnitLength.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitLength, _sel_supportsSecureCoding);
+  }
+
   /// yards
   static NSUnitLength getYards() {
     objc.checkOsVersionInternal(
@@ -87435,6 +89004,11 @@ extension type NSUnitMass._(objc.ObjCObject object$)
     return NSUnitMass.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitMass, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSUnitMass constructed with the default `new` method.
   NSUnitMass() : this.as(new$().object$);
 }
@@ -87647,6 +89221,11 @@ extension type NSUnitPower._(objc.ObjCObject object$)
     );
     final $ret = _objc_msgSend_151sglz(_class_NSUnitPower, _sel_picowatts);
     return NSUnitPower.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitPower, _sel_supportsSecureCoding);
   }
 
   /// terawatts
@@ -87911,6 +89490,14 @@ extension type NSUnitPressure._(objc.ObjCObject object$)
     return NSUnitPressure.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitPressure,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSUnitPressure constructed with the default `new` method.
   NSUnitPressure() : this.as(new$().object$);
 }
@@ -88076,6 +89663,11 @@ extension type NSUnitSpeed._(objc.ObjCObject object$)
     return NSUnitSpeed.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitSpeed, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSUnitSpeed constructed with the default `new` method.
   NSUnitSpeed() : this.as(new$().object$);
 }
@@ -88225,6 +89817,14 @@ extension type NSUnitTemperature._(objc.ObjCObject object$)
   static NSUnitTemperature new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSUnitTemperature, _sel_new);
     return NSUnitTemperature.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSUnitTemperature,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSUnitTemperature constructed with the default `new` method.
@@ -88686,6 +90286,11 @@ extension type NSUnitVolume._(objc.ObjCObject object$)
     );
     final $ret = _objc_msgSend_151sglz(_class_NSUnitVolume, _sel_quarts);
     return NSUnitVolume.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSUnitVolume, _sel_supportsSecureCoding);
   }
 
   /// tablespoons
@@ -89481,6 +91086,11 @@ extension NSUserActivityDelegate$Methods on NSUserActivityDelegate {
 abstract interface class NSUserActivityDelegateSpec {}
 
 abstract interface class NSUserActivityDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void userActivity(
     NSUserActivity userActivity, {
     required objc.NSInputStream didReceiveInputStream,
@@ -89491,6 +91101,10 @@ abstract interface class NSUserActivityDelegateOptional {
 }
 
 mixin NSUserActivityDelegateDefaults implements NSUserActivityDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -89505,6 +91119,9 @@ interface class NSUserActivityDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSUserActivityDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSUserActivityDelegateOptional.$implementedOptionalMethods].
   static NSUserActivityDelegate implementFrom(
     NSUserActivityDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -89535,7 +91152,11 @@ interface class NSUserActivityDelegate$Builder {
           NSUserActivityDelegate$Builder
                       .userActivity_didReceiveInputStream_outputStream_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSUserActivityDelegate$Builder
+                        .userActivity_didReceiveInputStream_outputStream_,
+                  )
               ? (
                   NSUserActivity userActivity,
                   objc.NSInputStream didReceiveInputStream,
@@ -89552,7 +91173,10 @@ interface class NSUserActivityDelegate$Builder {
     NSUserActivityDelegate$Builder.userActivityWasContinued_.implement(
       builder,
       NSUserActivityDelegate$Builder.userActivityWasContinued_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSUserActivityDelegate$Builder.userActivityWasContinued_,
+              )
           ? (NSUserActivity userActivity) {
               optionalImplementation.userActivityWasContinued(userActivity);
             }
@@ -89561,7 +91185,10 @@ interface class NSUserActivityDelegate$Builder {
     NSUserActivityDelegate$Builder.userActivityWillSave_.implement(
       builder,
       NSUserActivityDelegate$Builder.userActivityWillSave_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSUserActivityDelegate$Builder.userActivityWillSave_,
+              )
           ? (NSUserActivity userActivity) {
               optionalImplementation.userActivityWillSave(userActivity);
             }
@@ -91576,6 +93203,11 @@ extension NSUserNotificationCenterDelegate$Methods
 abstract interface class NSUserNotificationCenterDelegateSpec {}
 
 abstract interface class NSUserNotificationCenterDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void userNotificationCenterDidActivateNotification(
     NSUserNotificationCenter center, {
     required NSUserNotification didActivateNotification,
@@ -91593,6 +93225,10 @@ abstract interface class NSUserNotificationCenterDelegateOptional {
 mixin NSUserNotificationCenterDelegateDefaults
     implements NSUserNotificationCenterDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -91607,6 +93243,9 @@ interface class NSUserNotificationCenterDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSUserNotificationCenterDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSUserNotificationCenterDelegateOptional.$implementedOptionalMethods].
   static NSUserNotificationCenterDelegate implementFrom(
     NSUserNotificationCenterDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -91637,7 +93276,11 @@ interface class NSUserNotificationCenterDelegate$Builder {
           NSUserNotificationCenterDelegate$Builder
                       .userNotificationCenter_didActivateNotification_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSUserNotificationCenterDelegate$Builder
+                        .userNotificationCenter_didActivateNotification_,
+                  )
               ? (
                   NSUserNotificationCenter center,
                   NSUserNotification didActivateNotification,
@@ -91657,7 +93300,11 @@ interface class NSUserNotificationCenterDelegate$Builder {
           NSUserNotificationCenterDelegate$Builder
                       .userNotificationCenter_didDeliverNotification_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSUserNotificationCenterDelegate$Builder
+                        .userNotificationCenter_didDeliverNotification_,
+                  )
               ? (
                   NSUserNotificationCenter center,
                   NSUserNotification didDeliverNotification,
@@ -91677,7 +93324,11 @@ interface class NSUserNotificationCenterDelegate$Builder {
           NSUserNotificationCenterDelegate$Builder
                       .userNotificationCenter_shouldPresentNotification_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSUserNotificationCenterDelegate$Builder
+                        .userNotificationCenter_shouldPresentNotification_,
+                  )
               ? (
                   NSUserNotificationCenter center,
                   NSUserNotification shouldPresentNotification,
@@ -96042,6 +97693,11 @@ extension NSXMLParserDelegate$Methods on NSXMLParserDelegate {
 abstract interface class NSXMLParserDelegateSpec {}
 
 abstract interface class NSXMLParserDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   void parserDidEndElementNamespaceURIQualifiedName(
     NSXMLParser parser, {
     required objc.NSString didEndElement,
@@ -96137,6 +97793,10 @@ abstract interface class NSXMLParserDelegateOptional {
 
 mixin NSXMLParserDelegateDefaults implements NSXMLParserDelegateOptional {
   @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
@@ -96150,6 +97810,9 @@ interface class NSXMLParserDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSXMLParserDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSXMLParserDelegateOptional.$implementedOptionalMethods].
   static NSXMLParserDelegate implementFrom(
     NSXMLParserDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -96177,7 +97840,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_didEndElement_namespaceURI_qualifiedName_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_didEndElement_namespaceURI_qualifiedName_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString didEndElement,
@@ -96197,7 +97864,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parser_didEndMappingPrefix_.implement(
       builder,
       NSXMLParserDelegate$Builder.parser_didEndMappingPrefix_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_didEndMappingPrefix_,
+              )
           ? (NSXMLParser parser, objc.NSString didEndMappingPrefix) {
               optionalImplementation.parserDidEndMappingPrefix(
                 parser,
@@ -96213,7 +97883,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_didStartElement_namespaceURI_qualifiedName_attributes_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_didStartElement_namespaceURI_qualifiedName_attributes_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString didStartElement,
@@ -96237,7 +97911,10 @@ interface class NSXMLParserDelegate$Builder {
       NSXMLParserDelegate$Builder
                   .parser_didStartMappingPrefix_toURI_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_didStartMappingPrefix_toURI_,
+              )
           ? (
               NSXMLParser parser,
               objc.NSString didStartMappingPrefix,
@@ -96258,7 +97935,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_foundAttributeDeclarationWithName_forElement_type_defaultValue_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_foundAttributeDeclarationWithName_forElement_type_defaultValue_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString foundAttributeDeclarationWithName,
@@ -96281,7 +97962,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parser_foundCDATA_.implement(
       builder,
       NSXMLParserDelegate$Builder.parser_foundCDATA_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_foundCDATA_,
+              )
           ? (NSXMLParser parser, objc.NSData foundCDATA) {
               optionalImplementation.parserFoundCDATA(
                 parser,
@@ -96293,7 +97977,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parser_foundCharacters_.implement(
       builder,
       NSXMLParserDelegate$Builder.parser_foundCharacters_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_foundCharacters_,
+              )
           ? (NSXMLParser parser, objc.NSString foundCharacters) {
               optionalImplementation.parserFoundCharacters(
                 parser,
@@ -96305,7 +97992,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parser_foundComment_.implement(
       builder,
       NSXMLParserDelegate$Builder.parser_foundComment_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_foundComment_,
+              )
           ? (NSXMLParser parser, objc.NSString foundComment) {
               optionalImplementation.parserFoundComment(
                 parser,
@@ -96320,7 +98010,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_foundElementDeclarationWithName_model_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_foundElementDeclarationWithName_model_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString foundElementDeclarationWithName,
@@ -96343,7 +98037,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_foundExternalEntityDeclarationWithName_publicID_systemID_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_foundExternalEntityDeclarationWithName_publicID_systemID_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString foundExternalEntityDeclarationWithName,
@@ -96366,7 +98064,10 @@ interface class NSXMLParserDelegate$Builder {
       NSXMLParserDelegate$Builder
                   .parser_foundIgnorableWhitespace_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_foundIgnorableWhitespace_,
+              )
           ? (NSXMLParser parser, objc.NSString foundIgnorableWhitespace) {
               optionalImplementation.parserFoundIgnorableWhitespace(
                 parser,
@@ -96382,7 +98083,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_foundInternalEntityDeclarationWithName_value_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_foundInternalEntityDeclarationWithName_value_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString foundInternalEntityDeclarationWithName,
@@ -96405,7 +98110,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_foundNotationDeclarationWithName_publicID_systemID_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_foundNotationDeclarationWithName_publicID_systemID_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString foundNotationDeclarationWithName,
@@ -96430,7 +98139,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_foundProcessingInstructionWithTarget_data_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_foundProcessingInstructionWithTarget_data_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString foundProcessingInstructionWithTarget,
@@ -96453,7 +98166,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_foundUnparsedEntityDeclarationWithName_publicID_systemID_notationName_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_foundUnparsedEntityDeclarationWithName_publicID_systemID_notationName_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString foundUnparsedEntityDeclarationWithName,
@@ -96476,7 +98193,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parser_parseErrorOccurred_.implement(
       builder,
       NSXMLParserDelegate$Builder.parser_parseErrorOccurred_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_parseErrorOccurred_,
+              )
           ? (NSXMLParser parser, objc.NSError parseErrorOccurred) {
               optionalImplementation.parserParseErrorOccurred(
                 parser,
@@ -96491,7 +98211,11 @@ interface class NSXMLParserDelegate$Builder {
           NSXMLParserDelegate$Builder
                       .parser_resolveExternalEntityName_systemID_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXMLParserDelegate$Builder
+                        .parser_resolveExternalEntityName_systemID_,
+                  )
               ? (
                   NSXMLParser parser,
                   objc.NSString resolveExternalEntityName,
@@ -96507,7 +98231,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parser_validationErrorOccurred_.implement(
       builder,
       NSXMLParserDelegate$Builder.parser_validationErrorOccurred_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parser_validationErrorOccurred_,
+              )
           ? (NSXMLParser parser, objc.NSError validationErrorOccurred) {
               optionalImplementation.parserValidationErrorOccurred(
                 parser,
@@ -96519,7 +98246,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parserDidEndDocument_.implement(
       builder,
       NSXMLParserDelegate$Builder.parserDidEndDocument_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parserDidEndDocument_,
+              )
           ? (NSXMLParser parser) {
               optionalImplementation.parserDidEndDocument(parser);
             }
@@ -96528,7 +98258,10 @@ interface class NSXMLParserDelegate$Builder {
     NSXMLParserDelegate$Builder.parserDidStartDocument_.implement(
       builder,
       NSXMLParserDelegate$Builder.parserDidStartDocument_.isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXMLParserDelegate$Builder.parserDidStartDocument_,
+              )
           ? (NSXMLParser parser) {
               optionalImplementation.parserDidStartDocument(parser);
             }
@@ -98414,6 +100147,11 @@ extension NSXPCListenerDelegate$Methods on NSXPCListenerDelegate {
 abstract interface class NSXPCListenerDelegateSpec {}
 
 abstract interface class NSXPCListenerDelegateOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   bool listener(
     NSXPCListener listener, {
     required NSXPCConnection shouldAcceptNewConnection,
@@ -98421,6 +100159,10 @@ abstract interface class NSXPCListenerDelegateOptional {
 }
 
 mixin NSXPCListenerDelegateDefaults implements NSXPCListenerDelegateOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -98435,6 +100177,9 @@ interface class NSXPCListenerDelegate$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSXPCListenerDelegateOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSXPCListenerDelegateOptional.$implementedOptionalMethods].
   static NSXPCListenerDelegate implementFrom(
     NSXPCListenerDelegateSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -98463,7 +100208,11 @@ interface class NSXPCListenerDelegate$Builder {
       NSXPCListenerDelegate$Builder
                   .listener_shouldAcceptNewConnection_
                   .isAvailable &&
-              optionalImplementation != null
+              optionalImplementation != null &&
+              optionalImplementation.$implementedOptionalMethods.contains(
+                NSXPCListenerDelegate$Builder
+                    .listener_shouldAcceptNewConnection_,
+              )
           ? (
               NSXPCListener listener,
               NSXPCConnection shouldAcceptNewConnection,
@@ -98585,6 +100334,14 @@ extension type NSXPCListenerEndpoint._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSXPCListenerEndpoint,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSXPCListenerEndpoint constructed with the default `new` method.
   NSXPCListenerEndpoint() : this.as(new$().object$);
 }
@@ -98684,12 +100441,21 @@ abstract interface class NSXPCProxyCreatingSpec {
 }
 
 abstract interface class NSXPCProxyCreatingOptional {
+  /// Optional protocol methods implemented by this Dart object.
+  ///
+  /// Only methods in this set are registered with the Objective-C runtime.
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods;
+
   objc.ObjCObject synchronousRemoteObjectProxyWithErrorHandler(
     objc.ObjCBlock<ffi.Void Function(objc.NSError)> handler,
   );
 }
 
 mixin NSXPCProxyCreatingDefaults implements NSXPCProxyCreatingOptional {
+  @override
+  Set<objc.ObjCProtocolMethod<dynamic>> get $implementedOptionalMethods =>
+      const {};
+
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
@@ -98704,6 +100470,9 @@ interface class NSXPCProxyCreating$Builder {
   ///
   /// Optional methods are only implemented when [implementation] also
   /// implements [NSXPCProxyCreatingOptional].
+  ///
+  /// The corresponding method from this builder must also be included in
+  /// [NSXPCProxyCreatingOptional.$implementedOptionalMethods].
   static NSXPCProxyCreating implementFrom(
     NSXPCProxyCreatingSpec implementation, {
     bool $keepIsolateAlive = true,
@@ -98740,7 +100509,11 @@ interface class NSXPCProxyCreating$Builder {
           NSXPCProxyCreating$Builder
                       .synchronousRemoteObjectProxyWithErrorHandler_
                       .isAvailable &&
-                  optionalImplementation != null
+                  optionalImplementation != null &&
+                  optionalImplementation.$implementedOptionalMethods.contains(
+                    NSXPCProxyCreating$Builder
+                        .synchronousRemoteObjectProxyWithErrorHandler_,
+                  )
               ? (objc.ObjCBlock<ffi.Void Function(objc.NSError)> handler) =>
                     optionalImplementation
                         .synchronousRemoteObjectProxyWithErrorHandler(handler)

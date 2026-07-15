@@ -6555,6 +6555,11 @@ extension type CALayer._(objc.ObjCObject object$)
     return CALayer.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_CALayer, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of CALayer constructed with the default `new` method.
   CALayer() : this.as(new$().object$);
 }
@@ -10177,6 +10182,14 @@ extension type CAOpenGLLayer._(objc.ObjCObject object$)
     return CAOpenGLLayer.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_CAOpenGLLayer,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of CAOpenGLLayer constructed with the default `new` method.
   CAOpenGLLayer() : this.as(new$().object$);
 }
@@ -10796,6 +10809,11 @@ extension type CIColor._(objc.ObjCObject object$)
     );
     final $ret = _objc_msgSend_151sglz(_class_CIColor, _sel_redColor);
     return CIColor.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_CIColor, _sel_supportsSecureCoding);
   }
 
   /// whiteColor
@@ -11575,6 +11593,11 @@ extension type CIImage._(objc.ObjCObject object$)
     );
     final $ret = _objc_msgSend_151sglz(_class_CIImage, _sel_redImage);
     return CIImage.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_CIImage, _sel_supportsSecureCoding);
   }
 
   /// whiteImage
@@ -39093,6 +39116,14 @@ extension type NSAdaptiveImageGlyph._(objc.ObjCObject object$)
     return NSAdaptiveImageGlyph.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSAdaptiveImageGlyph,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSAdaptiveImageGlyph constructed with the default `new` method.
   NSAdaptiveImageGlyph() : this.as(new$().object$);
 }
@@ -41503,6 +41534,11 @@ extension type NSAppearance._(objc.ObjCObject object$)
       _sel_setCurrentAppearance_,
       value.ref.pointer,
     );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSAppearance, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSAppearance constructed with the default `new` method.
@@ -47800,6 +47836,22 @@ extension type NSBackgroundExtensionView._(objc.ObjCObject object$)
     );
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSBackgroundExtensionView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSBackgroundExtensionView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -48371,6 +48423,11 @@ extension type NSBezierPath._(objc.ObjCObject object$)
   static void strokeRect(objc.CGRect rect) {
     objc.checkOsVersionInternal('NSBezierPath.strokeRect:', iOS: (true, null));
     _objc_msgSend_1okkq16(_class_NSBezierPath, _sel_strokeRect_, rect);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSBezierPath, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSBezierPath constructed with the default `new` method.
@@ -49834,6 +49891,14 @@ extension type NSBitmapImageRep._(objc.ObjCObject object$)
     return objc.NSArray.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSBitmapImageRep,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   static void unregisterImageRepClass(objc.ObjCObject imageRepClass) {
     objc.checkOsVersionInternal(
       'NSBitmapImageRep.unregisterImageRepClass:',
@@ -50378,6 +50443,22 @@ extension type NSBox._(objc.ObjCObject object$)
     return NSBox.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSBox.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSBox,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSBox.defaultMenu', iOS: (true, null));
@@ -50800,6 +50881,22 @@ extension type NSBrowser._(objc.ObjCObject object$)
     objc.checkOsVersionInternal('NSBrowser.cellClass', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(_class_NSBrowser, _sel_cellClass);
     return objc.ObjCObject($ret, retain: true, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSBrowser.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSBrowser,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -55673,6 +55770,22 @@ extension type NSButton._(objc.ObjCObject object$)
       action,
     );
     return NSButton.fromPointer($ret, retain: true, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSButton.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSButton,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -61485,6 +61598,22 @@ extension type NSClipView._(objc.ObjCObject object$)
     return NSClipView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSClipView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSClipView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSClipView.defaultMenu', iOS: (true, null));
@@ -67044,6 +67173,22 @@ extension type NSCollectionView._(objc.ObjCObject object$)
       zone,
     );
     return NSCollectionView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSCollectionView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSCollectionView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -80627,6 +80772,44 @@ extension type NSColor._(objc.ObjCObject object$)
     return NSColor.fromPointer($ret, retain: true, release: true);
   }
 
+  static objc.NSArray readableTypesForPasteboard(NSPasteboard pasteboard) {
+    objc.checkOsVersionInternal(
+      'NSColor.readableTypesForPasteboard:',
+      iOS: (true, null),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSColor,
+      _sel_readableTypesForPasteboard_,
+      pasteboard.ref.pointer,
+    );
+    return objc.NSArray.fromPointer($ret, retain: true, release: true);
+  }
+
+  static int readingOptionsForType(
+    objc.NSString type, {
+    required NSPasteboard pasteboard,
+  }) {
+    objc.checkOsVersionInternal(
+      'NSColor.readingOptionsForType:pasteboard:',
+      iOS: (true, null),
+    );
+    if (!objc.respondsToSelector(
+      _class_NSColor,
+      _sel_readingOptionsForType_pasteboard_,
+    )) {
+      throw objc.UnimplementedOptionalMethodException(
+        'NSColor',
+        'readingOptionsForType:pasteboard:',
+      );
+    }
+    return _objc_msgSend_9e06sb(
+      _class_NSColor,
+      _sel_readingOptionsForType_pasteboard_,
+      type.ref.pointer,
+      pasteboard.ref.pointer,
+    );
+  }
+
   /// redColor
   static NSColor getRedColor() {
     objc.checkOsVersionInternal('NSColor.redColor', iOS: (true, null));
@@ -80775,6 +80958,11 @@ extension type NSColor._(objc.ObjCObject object$)
     objc.checkOsVersionInternal('NSColor.shadowColor', iOS: (true, null));
     final $ret = _objc_msgSend_151sglz(_class_NSColor, _sel_shadowColor);
     return NSColor.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSColor, _sel_supportsSecureCoding);
   }
 
   /// systemBlueColor
@@ -81758,6 +81946,11 @@ extension type NSColorList._(objc.ObjCObject object$)
     return NSColorList.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSColorList, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSColorList constructed with the default `new` method.
   NSColorList() : this.as(new$().object$);
 }
@@ -82000,6 +82193,22 @@ extension type NSColorPanel._(objc.ObjCObject object$)
       finalizer: pkg_ffi.calloc.nativeFree,
     );
     return ffi.Struct.create<objc.CGRect>($finalizable);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSColorPanel.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSColorPanel,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultDepthLimit
@@ -84681,6 +84890,11 @@ extension type NSColorSpace._(objc.ObjCObject object$)
     return NSColorSpace.fromPointer($ret, retain: true, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSColorSpace, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSColorSpace constructed with the default `new` method.
   NSColorSpace() : this.as(new$().object$);
 }
@@ -84932,6 +85146,22 @@ extension type NSColorWell._(objc.ObjCObject object$)
       style.value,
     );
     return NSColorWell.fromPointer($ret, retain: true, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSColorWell.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSColorWell,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -85303,6 +85533,22 @@ extension type NSComboBox._(objc.ObjCObject object$)
       zone,
     );
     return NSComboBox.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSComboBox.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSComboBox,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -88622,6 +88868,22 @@ extension type NSComboButton._(objc.ObjCObject object$)
     return NSComboButton.fromPointer($ret, retain: true, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSComboButton.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSComboButton,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSComboButton.defaultMenu', iOS: (true, null));
@@ -89761,6 +90023,22 @@ extension type NSControl._(objc.ObjCObject object$)
       zone,
     );
     return NSControl.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSControl.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSControl,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -92034,6 +92312,11 @@ extension type NSCursor._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSCursor, _sel_supportsSecureCoding);
+  }
+
   static void unhide() {
     objc.checkOsVersionInternal(
       'NSCursor.unhide',
@@ -93078,6 +93361,22 @@ extension type NSDatePicker._(objc.ObjCObject object$)
       zone,
     );
     return NSDatePicker.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSDatePicker.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSDatePicker,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -111417,6 +111716,44 @@ extension type NSFilePromiseReceiver._(objc.ObjCObject object$)
     return objc.NSArray.fromPointer($ret, retain: true, release: true);
   }
 
+  static objc.NSArray readableTypesForPasteboard(NSPasteboard pasteboard) {
+    objc.checkOsVersionInternal(
+      'NSFilePromiseReceiver.readableTypesForPasteboard:',
+      iOS: (true, null),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSFilePromiseReceiver,
+      _sel_readableTypesForPasteboard_,
+      pasteboard.ref.pointer,
+    );
+    return objc.NSArray.fromPointer($ret, retain: true, release: true);
+  }
+
+  static int readingOptionsForType(
+    objc.NSString type, {
+    required NSPasteboard pasteboard,
+  }) {
+    objc.checkOsVersionInternal(
+      'NSFilePromiseReceiver.readingOptionsForType:pasteboard:',
+      iOS: (true, null),
+    );
+    if (!objc.respondsToSelector(
+      _class_NSFilePromiseReceiver,
+      _sel_readingOptionsForType_pasteboard_,
+    )) {
+      throw objc.UnimplementedOptionalMethodException(
+        'NSFilePromiseReceiver',
+        'readingOptionsForType:pasteboard:',
+      );
+    }
+    return _objc_msgSend_9e06sb(
+      _class_NSFilePromiseReceiver,
+      _sel_readingOptionsForType_pasteboard_,
+      type.ref.pointer,
+      pasteboard.ref.pointer,
+    );
+  }
+
   /// Returns a new instance of NSFilePromiseReceiver constructed with the default `new` method.
   NSFilePromiseReceiver() : this.as(new$().object$);
 }
@@ -111815,6 +112152,11 @@ extension type NSFont._(objc.ObjCObject object$)
     return objc.useMsgSendVariants
         ? _objc_msgSend_1ukqyt8Fpret(_class_NSFont, _sel_smallSystemFontSize)
         : _objc_msgSend_1ukqyt8(_class_NSFont, _sel_smallSystemFontSize);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSFont, _sel_supportsSecureCoding);
   }
 
   static NSFont systemFontOfSize(double fontSize) {
@@ -113120,6 +113462,14 @@ extension type NSFontDescriptor._(objc.ObjCObject object$)
     return NSFontDescriptor.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSFontDescriptor,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSFontDescriptor constructed with the default `new` method.
   NSFontDescriptor() : this.as(new$().object$);
 }
@@ -114261,6 +114611,22 @@ extension type NSFontPanel._(objc.ObjCObject object$)
     return ffi.Struct.create<objc.CGRect>($finalizable);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSFontPanel.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSFontPanel,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultDepthLimit
   static NSWindowDepth getDefaultDepthLimit() {
     objc.checkOsVersionInternal(
@@ -114904,6 +115270,22 @@ extension type NSForm._(objc.ObjCObject object$)
       zone,
     );
     return NSForm.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSForm.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSForm,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -116836,6 +117218,22 @@ extension type NSGlassEffectContainerView._(objc.ObjCObject object$)
     );
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSGlassEffectContainerView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSGlassEffectContainerView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -117042,6 +117440,22 @@ extension type NSGlassEffectView._(objc.ObjCObject object$)
       zone,
     );
     return NSGlassEffectView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSGlassEffectView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSGlassEffectView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -117473,6 +117887,11 @@ extension type NSGlyphInfo._(objc.ObjCObject object$)
   static NSGlyphInfo new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSGlyphInfo, _sel_new);
     return NSGlyphInfo.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSGlyphInfo, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSGlyphInfo constructed with the default `new` method.
@@ -118116,6 +118535,11 @@ extension type NSGradient._(objc.ObjCObject object$)
   static NSGradient new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSGradient, _sel_new);
     return NSGradient.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSGradient, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSGradient constructed with the default `new` method.
@@ -119538,6 +119962,22 @@ extension type NSGridView._(objc.ObjCObject object$)
       zone,
     );
     return NSGridView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSGridView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSGridView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -123691,6 +124131,14 @@ extension type NSImageSymbolConfiguration._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSImageSymbolConfiguration,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSImageSymbolConfiguration constructed with the default `new` method.
   NSImageSymbolConfiguration() : this.as(new$().object$);
 }
@@ -123811,6 +124259,22 @@ extension type NSImageView._(objc.ObjCObject object$)
       zone,
     );
     return NSImageView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSImageView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSImageView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -127629,6 +128093,14 @@ extension type NSLayoutManager._(objc.ObjCObject object$)
   static NSLayoutManager new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSLayoutManager, _sel_new);
     return NSLayoutManager.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSLayoutManager,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSLayoutManager constructed with the default `new` method.
@@ -132227,6 +132699,22 @@ extension type NSLevelIndicator._(objc.ObjCObject object$)
     return NSLevelIndicator.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSLevelIndicator.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSLevelIndicator,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -134700,6 +135188,22 @@ extension type NSMatrix._(objc.ObjCObject object$)
       zone,
     );
     return NSMatrix.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSMatrix.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSMatrix,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -140910,6 +141414,14 @@ extension type NSMutableParagraphStyle._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSMutableParagraphStyle,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSMutableParagraphStyle constructed with the default `new` method.
   NSMutableParagraphStyle() : this.as(new$().object$);
 }
@@ -142543,6 +143055,14 @@ extension type NSOpenGLLayer._(objc.ObjCObject object$)
     return NSOpenGLLayer.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSOpenGLLayer,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSOpenGLLayer constructed with the default `new` method.
   NSOpenGLLayer() : this.as(new$().object$);
 }
@@ -143276,6 +143796,22 @@ extension type NSOpenGLView._(objc.ObjCObject object$)
     return NSOpenGLView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSOpenGLView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSOpenGLView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSOpenGLView.defaultMenu', iOS: (true, null));
@@ -143599,6 +144135,22 @@ extension type NSOpenPanel._(objc.ObjCObject object$)
       finalizer: pkg_ffi.calloc.nativeFree,
     );
     return ffi.Struct.create<objc.CGRect>($finalizable);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSOpenPanel.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSOpenPanel,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultDepthLimit
@@ -144775,6 +145327,22 @@ extension type NSOutlineView._(objc.ObjCObject object$)
       zone,
     );
     return NSOutlineView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSOutlineView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSOutlineView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -152837,6 +153405,22 @@ extension type NSPageController._(objc.ObjCObject object$)
     return NSPageController.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSPageController.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSPageController,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   static NSPageController new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSPageController, _sel_new);
     return NSPageController.fromPointer($ret, retain: false, release: true);
@@ -154347,6 +154931,22 @@ extension type NSPanel._(objc.ObjCObject object$)
     return ffi.Struct.create<objc.CGRect>($finalizable);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSPanel.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSPanel,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultDepthLimit
   static NSWindowDepth getDefaultDepthLimit() {
     objc.checkOsVersionInternal('NSPanel.defaultDepthLimit', iOS: (true, null));
@@ -154780,6 +155380,14 @@ extension type NSParagraphStyle._(objc.ObjCObject object$)
   static NSParagraphStyle new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSParagraphStyle, _sel_new);
     return NSParagraphStyle.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSParagraphStyle,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSParagraphStyle constructed with the default `new` method.
@@ -155769,6 +156377,44 @@ extension type NSPasteboardItem._(objc.ObjCObject object$)
   static NSPasteboardItem new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSPasteboardItem, _sel_new);
     return NSPasteboardItem.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.NSArray readableTypesForPasteboard(NSPasteboard pasteboard) {
+    objc.checkOsVersionInternal(
+      'NSPasteboardItem.readableTypesForPasteboard:',
+      iOS: (true, null),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSPasteboardItem,
+      _sel_readableTypesForPasteboard_,
+      pasteboard.ref.pointer,
+    );
+    return objc.NSArray.fromPointer($ret, retain: true, release: true);
+  }
+
+  static int readingOptionsForType(
+    objc.NSString type, {
+    required NSPasteboard pasteboard,
+  }) {
+    objc.checkOsVersionInternal(
+      'NSPasteboardItem.readingOptionsForType:pasteboard:',
+      iOS: (true, null),
+    );
+    if (!objc.respondsToSelector(
+      _class_NSPasteboardItem,
+      _sel_readingOptionsForType_pasteboard_,
+    )) {
+      throw objc.UnimplementedOptionalMethodException(
+        'NSPasteboardItem',
+        'readingOptionsForType:pasteboard:',
+      );
+    }
+    return _objc_msgSend_9e06sb(
+      _class_NSPasteboardItem,
+      _sel_readingOptionsForType_pasteboard_,
+      type.ref.pointer,
+      pasteboard.ref.pointer,
+    );
   }
 
   /// Returns a new instance of NSPasteboardItem constructed with the default `new` method.
@@ -158100,6 +158746,22 @@ extension type NSPathControl._(objc.ObjCObject object$)
       zone,
     );
     return NSPathControl.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSPathControl.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSPathControl,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -160480,6 +161142,22 @@ extension type NSPopUpButton._(objc.ObjCObject object$)
       action,
     );
     return NSPopUpButton.fromPointer($ret, retain: true, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSPopUpButton.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSPopUpButton,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -163222,6 +163900,22 @@ extension type NSPredicateEditor._(objc.ObjCObject object$)
       zone,
     );
     return NSPredicateEditor.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSPredicateEditor.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSPredicateEditor,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -167041,6 +167735,22 @@ extension type NSProgressIndicator._(objc.ObjCObject object$)
     return NSProgressIndicator.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSProgressIndicator.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSProgressIndicator,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -169477,6 +170187,22 @@ extension type NSRuleEditor._(objc.ObjCObject object$)
     return NSRuleEditor.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSRuleEditor.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSRuleEditor,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSRuleEditor.defaultMenu', iOS: (true, null));
@@ -171323,6 +172049,22 @@ extension type NSRulerView._(objc.ObjCObject object$)
     return NSRulerView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSRulerView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSRulerView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSRulerView.defaultMenu', iOS: (true, null));
@@ -172347,6 +173089,22 @@ extension type NSSavePanel._(objc.ObjCObject object$)
       finalizer: pkg_ffi.calloc.nativeFree,
     );
     return ffi.Struct.create<objc.CGRect>($finalizable);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSavePanel.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSavePanel,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultDepthLimit
@@ -174312,6 +175070,22 @@ extension type NSScrollView._(objc.ObjCObject object$)
     return ffi.Struct.create<objc.CGSize>($finalizable);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScrollView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScrollView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSScrollView.defaultMenu', iOS: (true, null));
@@ -175402,6 +176176,22 @@ extension type NSScroller._(objc.ObjCObject object$)
     return NSScroller.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScroller.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScroller,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSScroller.defaultMenu', iOS: (true, null));
@@ -175809,6 +176599,22 @@ extension type NSScrubber._(objc.ObjCObject object$)
       zone,
     );
     return NSScrubber.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScrubber.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScrubber,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -176433,6 +177239,22 @@ extension type NSScrubberArrangedView._(objc.ObjCObject object$)
       retain: false,
       release: true,
     );
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScrubberArrangedView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScrubberArrangedView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -178089,6 +178911,22 @@ extension type NSScrubberImageItemView._(objc.ObjCObject object$)
     );
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScrubberImageItemView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScrubberImageItemView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -178306,6 +179144,22 @@ extension type NSScrubberItemView._(objc.ObjCObject object$)
       zone,
     );
     return NSScrubberItemView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScrubberItemView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScrubberItemView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -179242,6 +180096,22 @@ extension type NSScrubberSelectionView._(objc.ObjCObject object$)
     );
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScrubberSelectionView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScrubberSelectionView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -179414,6 +180284,22 @@ extension type NSScrubberTextItemView._(objc.ObjCObject object$)
       retain: false,
       release: true,
     );
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSScrubberTextItemView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSScrubberTextItemView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -179599,6 +180485,22 @@ extension type NSSearchField._(objc.ObjCObject object$)
       zone,
     );
     return NSSearchField.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSearchField.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSearchField,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -182083,6 +182985,22 @@ extension type NSSecureTextField._(objc.ObjCObject object$)
     return NSSecureTextField.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSecureTextField.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSecureTextField,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -183076,6 +183994,22 @@ extension type NSSegmentedControl._(objc.ObjCObject object$)
       zone,
     );
     return NSSegmentedControl.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSegmentedControl.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSegmentedControl,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -184530,6 +185464,11 @@ extension type NSShadow._(objc.ObjCObject object$)
     return NSShadow.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSShadow, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSShadow constructed with the default `new` method.
   NSShadow() : this.as(new$().object$);
 }
@@ -185735,6 +186674,14 @@ extension type NSSharingCollaborationModeRestriction._(objc.ObjCObject object$)
       $ret,
       retain: false,
       release: true,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSSharingCollaborationModeRestriction,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -189129,6 +190076,22 @@ extension type NSSlider._(objc.ObjCObject object$)
     return NSSlider.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSlider.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSlider,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSSlider.defaultMenu', iOS: (true, null));
@@ -190961,6 +191924,44 @@ extension type NSSound._(objc.ObjCObject object$)
     return NSSound.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.NSArray readableTypesForPasteboard(NSPasteboard pasteboard) {
+    objc.checkOsVersionInternal(
+      'NSSound.readableTypesForPasteboard:',
+      iOS: (true, null),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSound,
+      _sel_readableTypesForPasteboard_,
+      pasteboard.ref.pointer,
+    );
+    return objc.NSArray.fromPointer($ret, retain: true, release: true);
+  }
+
+  static int readingOptionsForType(
+    objc.NSString type, {
+    required NSPasteboard pasteboard,
+  }) {
+    objc.checkOsVersionInternal(
+      'NSSound.readingOptionsForType:pasteboard:',
+      iOS: (true, null),
+    );
+    if (!objc.respondsToSelector(
+      _class_NSSound,
+      _sel_readingOptionsForType_pasteboard_,
+    )) {
+      throw objc.UnimplementedOptionalMethodException(
+        'NSSound',
+        'readingOptionsForType:pasteboard:',
+      );
+    }
+    return _objc_msgSend_9e06sb(
+      _class_NSSound,
+      _sel_readingOptionsForType_pasteboard_,
+      type.ref.pointer,
+      pasteboard.ref.pointer,
+    );
+  }
+
   static NSSound? soundNamed(objc.NSString name) {
     objc.checkOsVersionInternal('NSSound.soundNamed:', iOS: (true, null));
     final $ret = _objc_msgSend_1sotr3r(
@@ -190985,6 +191986,11 @@ extension type NSSound._(objc.ObjCObject object$)
       _sel_soundUnfilteredTypes,
     );
     return objc.NSArray.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSSound, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSSound constructed with the default `new` method.
@@ -193804,6 +194810,22 @@ extension type NSSplitView._(objc.ObjCObject object$)
     return NSSplitView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSplitView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSplitView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSSplitView.defaultMenu', iOS: (true, null));
@@ -195792,6 +196814,22 @@ extension type NSSplitViewItem._(objc.ObjCObject object$)
     return NSSplitViewItem.fromPointer($ret, retain: true, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSplitViewItem.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSplitViewItem,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   static NSSplitViewItem inspectorWithViewController(
     NSViewController viewController,
   ) {
@@ -196431,6 +197469,22 @@ extension type NSSplitViewItemAccessoryViewController._(objc.ObjCObject object$)
       retain: false,
       release: true,
     );
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSplitViewItemAccessoryViewController.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSplitViewItemAccessoryViewController,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   static NSSplitViewItemAccessoryViewController new$() {
@@ -197161,6 +198215,22 @@ extension type NSStackView._(objc.ObjCObject object$)
       zone,
     );
     return NSStackView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSStackView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSStackView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -205949,6 +207019,22 @@ extension type NSStatusBarButton._(objc.ObjCObject object$)
     return NSStatusBarButton.fromPointer($ret, retain: true, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSStatusBarButton.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSStatusBarButton,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -206631,6 +207717,22 @@ extension type NSStepper._(objc.ObjCObject object$)
       zone,
     );
     return NSStepper.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSStepper.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSStepper,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -208906,6 +210008,22 @@ extension type NSSwitch._(objc.ObjCObject object$)
     return NSSwitch.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSSwitch.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSSwitch,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSSwitch.defaultMenu', iOS: (true, null));
@@ -209295,6 +210413,14 @@ extension type NSSymbolContentTransition._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSSymbolContentTransition,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSSymbolContentTransition constructed with the default `new` method.
   NSSymbolContentTransition() : this.as(new$().object$);
 }
@@ -209551,6 +210677,14 @@ extension type NSSymbolEffect$1._(objc.ObjCObject object$)
     return NSSymbolEffect$1.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSSymbolEffect,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSSymbolEffect$1 constructed with the default `new` method.
   NSSymbolEffect$1() : this.as(new$().object$);
 }
@@ -209724,6 +210858,14 @@ extension type NSSymbolEffectOptions._(objc.ObjCObject object$)
       speed,
     );
     return NSSymbolEffectOptions.fromPointer($ret, retain: true, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSSymbolEffectOptions,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSSymbolEffectOptions constructed with the default `new` method.
@@ -209994,6 +211136,14 @@ extension type NSSymbolEffectOptionsRepeatBehavior._(objc.ObjCObject object$)
     );
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSSymbolEffectOptionsRepeatBehavior,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSSymbolEffectOptionsRepeatBehavior constructed with the default `new` method.
   NSSymbolEffectOptionsRepeatBehavior() : this.as(new$().object$);
 }
@@ -210119,6 +211269,22 @@ extension type NSTabView._(objc.ObjCObject object$)
       zone,
     );
     return NSTabView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTabView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTabView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -211864,6 +213030,22 @@ extension type NSTableCellView._(objc.ObjCObject object$)
     return NSTableCellView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTableCellView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTableCellView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -212663,6 +213845,22 @@ extension type NSTableHeaderView._(objc.ObjCObject object$)
     return NSTableHeaderView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTableHeaderView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTableHeaderView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -212910,6 +214108,22 @@ extension type NSTableRowView._(objc.ObjCObject object$)
       zone,
     );
     return NSTableRowView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTableRowView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTableRowView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -213554,6 +214768,22 @@ extension type NSTableView._(objc.ObjCObject object$)
       zone,
     );
     return NSTableView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTableView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTableView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -221068,6 +222298,22 @@ extension type NSText._(objc.ObjCObject object$)
     return NSText.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSText.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSText,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSText.defaultMenu', iOS: (true, null));
@@ -221882,6 +223128,14 @@ extension type NSTextAlternatives._(objc.ObjCObject object$)
     return NSTextAlternatives.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextAlternatives,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSTextAlternatives constructed with the default `new` method.
   NSTextAlternatives() : this.as(new$().object$);
 }
@@ -222025,6 +223279,14 @@ extension type NSTextAttachment._(objc.ObjCObject object$)
       _sel_registerTextAttachmentViewProviderClass_forFileType_,
       textAttachmentViewProviderClass.ref.pointer,
       forFileType.ref.pointer,
+    );
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextAttachment,
+      _sel_supportsSecureCoding,
     );
   }
 
@@ -224435,6 +225697,11 @@ extension type NSTextBlock._(objc.ObjCObject object$)
   static NSTextBlock new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextBlock, _sel_new);
     return NSTextBlock.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSTextBlock, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSTextBlock constructed with the default `new` method.
@@ -229333,6 +230600,14 @@ extension type NSTextContainer._(objc.ObjCObject object$)
     return NSTextContainer.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextContainer,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSTextContainer constructed with the default `new` method.
   NSTextContainer() : this.as(new$().object$);
 }
@@ -230006,6 +231281,14 @@ extension type NSTextContentManager._(objc.ObjCObject object$)
     return NSTextContentManager.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextContentManager,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSTextContentManager constructed with the default `new` method.
   NSTextContentManager() : this.as(new$().object$);
 }
@@ -230598,6 +231881,14 @@ extension type NSTextContentStorage._(objc.ObjCObject object$)
   static NSTextContentStorage new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextContentStorage, _sel_new);
     return NSTextContentStorage.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextContentStorage,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSTextContentStorage constructed with the default `new` method.
@@ -232354,6 +233645,22 @@ extension type NSTextField._(objc.ObjCObject object$)
       zone,
     );
     return NSTextField.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTextField.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTextField,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -240908,6 +242215,22 @@ extension type NSTextInsertionIndicator._(objc.ObjCObject object$)
     );
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTextInsertionIndicator.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTextInsertionIndicator,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -241199,6 +242522,14 @@ extension type NSTextLayoutFragment._(objc.ObjCObject object$)
   static NSTextLayoutFragment new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextLayoutFragment, _sel_new);
     return NSTextLayoutFragment.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextLayoutFragment,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSTextLayoutFragment constructed with the default `new` method.
@@ -241656,6 +242987,14 @@ extension type NSTextLayoutManager._(objc.ObjCObject object$)
   static NSTextLayoutManager new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextLayoutManager, _sel_new);
     return NSTextLayoutManager.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextLayoutManager,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSTextLayoutManager constructed with the default `new` method.
@@ -242921,6 +244260,14 @@ extension type NSTextLineFragment._(objc.ObjCObject object$)
     return NSTextLineFragment.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextLineFragment,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSTextLineFragment constructed with the default `new` method.
   NSTextLineFragment() : this.as(new$().object$);
 }
@@ -243231,6 +244578,11 @@ extension type NSTextList._(objc.ObjCObject object$)
   static NSTextList new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextList, _sel_new);
     return NSTextList.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSTextList, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSTextList constructed with the default `new` method.
@@ -244329,6 +245681,14 @@ extension type NSTextSelection._(objc.ObjCObject object$)
   static NSTextSelection new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextSelection, _sel_new);
     return NSTextSelection.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextSelection,
+      _sel_supportsSecureCoding,
+    );
   }
 
   /// Returns a new instance of NSTextSelection constructed with the default `new` method.
@@ -245983,6 +247343,14 @@ extension type NSTextStorage._(objc.ObjCObject object$)
           _sel_isKindOfClass_,
           _class_NSTextStorage,
         );
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextStorage,
+      _sel_supportsSecureCoding,
+    );
+  }
 }
 
 extension NSTextStorage$Methods on NSTextStorage {
@@ -246884,6 +248252,11 @@ extension type NSTextTab._(objc.ObjCObject object$)
     return NSTextTab.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSTextTab, _sel_supportsSecureCoding);
+  }
+
   /// Returns a new instance of NSTextTab constructed with the default `new` method.
   NSTextTab() : this.as(new$().object$);
 }
@@ -247045,6 +248418,11 @@ extension type NSTextTable._(objc.ObjCObject object$)
   static NSTextTable new$() {
     final $ret = _objc_msgSend_151sglz(_class_NSTextTable, _sel_new);
     return NSTextTable.fromPointer($ret, retain: false, release: true);
+  }
+
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(_class_NSTextTable, _sel_supportsSecureCoding);
   }
 
   /// Returns a new instance of NSTextTable constructed with the default `new` method.
@@ -247250,6 +248628,14 @@ extension type NSTextTableBlock._(objc.ObjCObject object$)
     return NSTextTableBlock.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTextTableBlock,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   /// Returns a new instance of NSTextTableBlock constructed with the default `new` method.
   NSTextTableBlock() : this.as(new$().object$);
 }
@@ -247381,6 +248767,22 @@ extension type NSTextView._(objc.ObjCObject object$)
       zone,
     );
     return NSTextView.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTextView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTextView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultMenu
@@ -253763,6 +255165,14 @@ extension type NSTintConfiguration._(objc.ObjCObject object$)
     return NSTintConfiguration.fromPointer($ret, retain: false, release: true);
   }
 
+  /// supportsSecureCoding
+  static bool getSupportsSecureCoding() {
+    return _objc_msgSend_91o635(
+      _class_NSTintConfiguration,
+      _sel_supportsSecureCoding,
+    );
+  }
+
   static NSTintConfiguration tintConfigurationWithFixedColor(NSColor color) {
     objc.checkOsVersionInternal(
       'NSTintConfiguration.tintConfigurationWithFixedColor:',
@@ -253956,6 +255366,22 @@ extension type NSTitlebarAccessoryViewController._(objc.ObjCObject object$)
       retain: false,
       release: true,
     );
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTitlebarAccessoryViewController.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTitlebarAccessoryViewController,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   static NSTitlebarAccessoryViewController new$() {
@@ -254249,6 +255675,22 @@ extension type NSTokenField._(objc.ObjCObject object$)
       zone,
     );
     return NSTokenField.fromPointer($ret, retain: false, release: true);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSTokenField.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSTokenField,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultCompletionDelay
@@ -265548,6 +266990,22 @@ extension type NSView._(objc.ObjCObject object$)
     return NSView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal('NSView.defaultMenu', iOS: (true, null));
@@ -270837,6 +272295,22 @@ extension type NSVisualEffectView._(objc.ObjCObject object$)
     return NSVisualEffectView.fromPointer($ret, retain: false, release: true);
   }
 
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSVisualEffectView.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSVisualEffectView,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
+  }
+
   /// defaultMenu
   static NSMenu? getDefaultMenu() {
     objc.checkOsVersionInternal(
@@ -271173,6 +272647,22 @@ extension type NSWindow._(objc.ObjCObject object$)
       finalizer: pkg_ffi.calloc.nativeFree,
     );
     return ffi.Struct.create<objc.CGRect>($finalizable);
+  }
+
+  static objc.ObjCObject? defaultAnimationForKey(objc.NSString key) {
+    objc.checkOsVersionInternal(
+      'NSWindow.defaultAnimationForKey:',
+      iOS: (true, null),
+      macOS: (false, (10, 5, 0)),
+    );
+    final $ret = _objc_msgSend_1sotr3r(
+      _class_NSWindow,
+      _sel_defaultAnimationForKey_,
+      key.ref.pointer,
+    );
+    return $ret.address == 0
+        ? null
+        : objc.ObjCObject($ret, retain: true, release: true);
   }
 
   /// defaultDepthLimit
@@ -490743,6 +492233,9 @@ late final _sel_deepestScreen = objc.registerName("deepestScreen");
 late final _sel_defaultActionForKey_ = objc.registerName(
   "defaultActionForKey:",
 );
+late final _sel_defaultAnimationForKey_ = objc.registerName(
+  "defaultAnimationForKey:",
+);
 late final _sel_defaultAttachmentScaling = objc.registerName(
   "defaultAttachmentScaling",
 );
@@ -501260,6 +502753,9 @@ late final _sel_supportsAdaptiveImageGlyph = objc.registerName(
 );
 late final _sel_supportsAlpha = objc.registerName("supportsAlpha");
 late final _sel_supportsMode_ = objc.registerName("supportsMode:");
+late final _sel_supportsSecureCoding = objc.registerName(
+  "supportsSecureCoding",
+);
 late final _sel_suppressionButton = objc.registerName("suppressionButton");
 late final _sel_swapWithMark_ = objc.registerName("swapWithMark:");
 late final _sel_swipeWithEvent_ = objc.registerName("swipeWithEvent:");
